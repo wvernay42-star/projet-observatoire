@@ -1,0 +1,23 @@
+# Observatoire de la parole politique
+
+Spécification complète : docs/cadrage.md (à lire avant toute tâche).
+
+## Règles non négociables
+- L'outil ne produit jamais de verdict. Il reprend celui de la source.
+- Chaque entrée exportée a : url source, rating_original, rating_normalized,
+  claim_date (ou review_date avec date_is_fallback=1), source_id.
+- Verdict non convertible -> 'unrated'. Attribution incertaine -> 'to_review'.
+- Seules les entrées auto_sure ou validated vont dans data/export/.
+- Métadonnées uniquement : jamais le corps des articles.
+- Respect du robots.txt, 1 requête / 2 s par domaine.
+
+## Conventions
+- Python 3.12, typage, pytest. Un connecteur = une classe héritant de
+  connectors/base.py, testée sur des fixtures HTML/JSON locales.
+- Dates en ISO 8601. Parti = affiliation en vigueur à claim_date.
+- Ne jamais modifier rating_map.csv sans le signaler dans le résumé.
+
+## Commandes
+- python -m pipeline.run_daily      # routine complète
+- python -m pipeline.run_daily --connector jsonld_crawler --dry-run
+- pytest

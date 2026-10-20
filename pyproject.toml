@@ -1,0 +1,25 @@
+[project]
+name = "observatoire"
+version = "0.1.0"
+description = "Observatoire de la parole politique — agrégation de fact-checks sourcés"
+requires-python = ">=3.12,<3.13"
+dependencies = [
+  "httpx>=0.27",
+  "extruct>=0.17",
+  "feedparser>=6.0",
+  "rapidfuzz>=3.9",
+  "python-dotenv>=1.0",
+  "python-dateutil>=2.9",
+  "unidecode>=1.3",
+]
+
+[dependency-groups]
+dev = ["pytest>=8", "respx>=0.21", "ruff>=0.6"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
+
+[tool.ruff]
+line-length = 100
+target-version = "py312"
