@@ -1,0 +1,305 @@
+<title>Validation Observatoire</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,600&display=swap" rel="stylesheet">
+<style>
+/* Mise en page : bandeau, compteurs, onglets ; file à gauche, fiche de décision à droite (empilées sur téléphone). */
+:root {
+  --bg: #f4f5f7; --surface: #ffffff; --fg: #1a1a1a; --muted: #5a6068; --line: #dde0e4; --line-soft: #eceef1;
+  --navy: #1b3a5c; --navy-fg: #ffffff; --navy-soft: #e8edf3; --warn: #8a4a12; --ok: #1f5fa8; --sel: #eef3f8;
+  --v-true: #1f5fa8; --v-true-fg: #ffffff; --v-mtrue: #9dc0e6; --v-mtrue-fg: #0b2540; --v-half: #cfc8ba; --v-half-fg: #2b2b2b;
+  --v-mfalse: #f2b57e; --v-mfalse-fg: #3d1e00; --v-false: #b4500a; --v-false-fg: #ffffff; --v-unrated: #ffffff; --v-unrated-fg: #333333;
+  --serif: "Source Serif 4", Georgia, "Times New Roman", serif;
+  --sans: Inter, system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+  --bg: #12161b; --surface: #1b2128; --fg: #e8eaed; --muted: #a3abb5; --line: #333b45; --line-soft: #2a313a;
+  --navy: #9cc3ea; --navy-fg: #0e1b29; --navy-soft: #233140; --warn: #f0a868; --ok: #8ab8ea; --sel: #223040;
+  --v-true: #4f8fd6; --v-true-fg: #08111c; --v-mtrue: #9dc0e6; --v-mtrue-fg: #0b2540; --v-half: #cfc8ba; --v-half-fg: #2b2b2b;
+  --v-mfalse: #f2b57e; --v-mfalse-fg: #3d1e00; --v-false: #e07a32; --v-false-fg: #1a0b00; --v-unrated: #1b2128; --v-unrated-fg: #e8eaed;
+  color-scheme: dark } }
+:root[data-theme="dark"] {
+  --bg: #12161b; --surface: #1b2128; --fg: #e8eaed; --muted: #a3abb5; --line: #333b45; --line-soft: #2a313a;
+  --navy: #9cc3ea; --navy-fg: #0e1b29; --navy-soft: #233140; --warn: #f0a868; --ok: #8ab8ea; --sel: #223040;
+  --v-true: #4f8fd6; --v-true-fg: #08111c; --v-mtrue: #9dc0e6; --v-mtrue-fg: #0b2540; --v-half: #cfc8ba; --v-half-fg: #2b2b2b;
+  --v-mfalse: #f2b57e; --v-mfalse-fg: #3d1e00; --v-false: #e07a32; --v-false-fg: #1a0b00; --v-unrated: #1b2128; --v-unrated-fg: #e8eaed;
+  color-scheme: dark }
+
+body { background: var(--bg); color: var(--fg); font-family: var(--sans); font-size: 15px; line-height: 1.45; }
+.wrap { max-width: 1340px; margin: 0 auto; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+header { background: var(--surface); border-bottom: 1px solid var(--line); }
+header .wrap { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px 16px; padding-block: 12px; }
+.brand { display: flex; align-items: center; gap: 12px; }
+.brand strong { font-family: var(--serif); font-size: 20px; }
+.chip { font-size: 12px; font-weight: 600; padding: 3px 8px; border-radius: 4px; background: var(--navy-soft); color: var(--navy); }
+.sub { font-size: 13px; color: var(--muted); }
+main.wrap { display: flex; flex-direction: column; gap: 18px; padding-block: 20px 40px; }
+.kpis { display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); gap: 12px; }
+.kpi { background: var(--surface); border: 1px solid var(--line); border-radius: 8px; padding: 12px 16px; }
+.kpi .k { font-size: 12px; font-weight: 600; color: var(--muted); text-transform: uppercase; letter-spacing: .04em; }
+.kpi .v { font-size: 28px; font-weight: 700; font-variant-numeric: tabular-nums; }
+.tabs { display: flex; flex-wrap: wrap; gap: 8px; }
+.tab { min-height: 44px; padding: 0 16px; border-radius: 22px; border: 1px solid var(--navy); background: var(--surface); color: var(--navy); font: inherit; font-weight: 600; cursor: pointer; }
+.tab[aria-selected="true"] { background: var(--navy); color: var(--navy-fg); }
+.tab .n { font-variant-numeric: tabular-nums; opacity: .85; }
+.board { display: flex; flex-wrap: wrap; gap: 16px; align-items: flex-start; }
+.queue { flex: 1 1 320px; min-width: 0; background: var(--surface); border: 1px solid var(--line); border-radius: 8px; overflow: hidden; max-height: 78vh; overflow-y: auto; }
+.qi { display: flex; flex-direction: column; gap: 3px; width: 100%; text-align: left; padding: 12px 14px; border: 0; border-bottom: 1px solid var(--line-soft); border-left: 4px solid transparent; background: var(--surface); color: var(--fg); font: inherit; cursor: pointer; }
+.qi:hover { background: var(--sel); }
+.qi[aria-current="true"] { background: var(--sel); border-left-color: var(--navy); }
+.qi .t { font-weight: 600; font-size: 14px; }
+.qi .s { font-size: 13px; color: var(--muted); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.qi .r { font-size: 12px; font-weight: 600; color: var(--warn); }
+.detail { flex: 999 1 520px; min-width: 0; background: var(--surface); border: 1px solid var(--line); border-radius: 8px; padding: 22px; display: flex; flex-direction: column; gap: 16px; }
+.meta { font-size: 13px; color: var(--muted); display: flex; flex-wrap: wrap; gap: 4px 14px; }
+.claim { font-family: var(--serif); font-size: 21px; line-height: 1.35; margin: 0; text-wrap: balance; }
+.label-big { font-family: var(--serif); font-size: 26px; margin: 0; }
+.boxes { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 10px; }
+.box { background: var(--bg); border-radius: 6px; padding: 10px 12px; min-width: 0; }
+.box .k { font-size: 12px; font-weight: 600; color: var(--muted); text-transform: uppercase; letter-spacing: .04em; }
+.why { font-size: 14px; color: var(--muted); margin: 0; }
+.why strong { color: var(--warn); }
+fieldset { border: 0; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 8px; min-width: 0; }
+legend { font-weight: 600; font-size: 14px; margin-bottom: 8px; }
+.levels { display: flex; flex-wrap: wrap; gap: 6px; }
+.lv { min-height: 44px; padding: 0 14px; border-radius: 6px; font: inherit; font-size: 14px; font-weight: 600; cursor: pointer; background: var(--surface); color: var(--fg); border: 1px solid var(--line); }
+.lv[aria-pressed="true"] { outline: 2px solid var(--fg); outline-offset: 1px; }
+.lv-true[aria-pressed="true"] { background: var(--v-true); color: var(--v-true-fg); }
+.lv-mostly_true[aria-pressed="true"] { background: var(--v-mtrue); color: var(--v-mtrue-fg); }
+.lv-half_true[aria-pressed="true"] { background: var(--v-half); color: var(--v-half-fg); }
+.lv-mostly_false[aria-pressed="true"] { background: var(--v-mfalse); color: var(--v-mfalse-fg); }
+.lv-false[aria-pressed="true"] { background: var(--v-false); color: var(--v-false-fg); }
+.lv-unrated[aria-pressed="true"] { background: var(--v-unrated); color: var(--v-unrated-fg); border-style: dashed; }
+.opt { display: flex; gap: 10px; align-items: flex-start; padding: 10px 12px; border: 1px solid var(--line); border-radius: 6px; cursor: pointer; }
+.opt:has(input:checked) { border-color: var(--navy); background: var(--sel); }
+.opt input { margin-top: 3px; width: 18px; height: 18px; flex: none; }
+.opt small { display: block; color: var(--muted); font-size: 13px; }
+.reviews { display: flex; flex-direction: column; gap: 6px; font-size: 14px; }
+.reviews a { color: var(--navy); }
+.actions { display: flex; flex-wrap: wrap; gap: 10px; padding-top: 8px; border-top: 1px solid var(--line-soft); }
+.btn { min-height: 46px; padding: 0 20px; border-radius: 6px; font: inherit; font-size: 15px; font-weight: 600; cursor: pointer; border: 1px solid var(--line); background: var(--surface); color: var(--fg); }
+.btn.primary { background: var(--navy); color: var(--navy-fg); border-color: var(--navy); }
+.btn.reject { color: var(--warn); border-color: var(--warn); }
+.btn:disabled { opacity: .45; cursor: not-allowed; }
+.btn:focus-visible, .tab:focus-visible, .qi:focus-visible, .lv:focus-visible { outline: 3px solid var(--ok); outline-offset: 2px; }
+.empty { padding: 28px 16px; text-align: center; color: var(--muted); }
+.notice { background: var(--navy-soft); color: var(--fg); border-radius: 8px; padding: 12px 16px; font-size: 14px; }
+.hist { width: 100%; border-collapse: collapse; font-size: 14px; }
+.hist td, .hist th { padding: 8px 10px; border-bottom: 1px solid var(--line-soft); text-align: left; vertical-align: top; }
+.hist th { font-size: 12px; color: var(--muted); text-transform: uppercase; letter-spacing: .04em; }
+.toast { position: fixed; left: 50%; transform: translateX(-50%); bottom: calc(16px + env(safe-area-inset-bottom, 0px)); background: var(--fg); color: var(--bg); padding: 10px 16px; border-radius: 6px; font-size: 14px; }
+@media (prefers-reduced-motion: no-preference) { .qi, .tab, .btn { transition: background-color .12s ease; } }
+</style>
+
+<header>
+  <div class="wrap">
+    <div class="brand"><strong>Observatoire</strong><span class="chip">Validation · interne</span></div>
+    <span class="sub" id="gen">Files en cours de chargement…</span>
+  </div>
+</header>
+
+<main class="wrap">
+  <div class="notice" id="notice" hidden></div>
+  <section class="kpis" aria-label="Indicateurs">
+    <div class="kpi"><div class="k">À traiter</div><div class="v" id="k-pending">–</div></div>
+    <div class="kpi"><div class="k">Décidées aujourd'hui</div><div class="v" id="k-today">–</div></div>
+    <div class="kpi"><div class="k">Décisions à rapatrier</div><div class="v" id="k-total">–</div><div class="sub">appliquées au prochain lancement de la routine</div></div>
+  </section>
+  <div class="tabs" role="tablist" aria-label="Files de validation" id="tabs"></div>
+  <section class="board" id="board">
+    <div class="queue" id="queue" aria-label="File"><div class="empty">Chargement de la file…</div></div>
+    <div class="detail" id="detail"><p class="sub">Les éléments à valider apparaissent ici : libellés de verdict, attributions à une personnalité, partis à une date.</p></div>
+  </section>
+</main>
+<div class="toast" id="toast" role="status" hidden></div>
+
+<script>
+const TABS = [
+  { kind: "ratings", label: "Verdicts à convertir" },
+  { kind: "attributions", label: "Attributions" },
+  { kind: "parties", label: "Partis" },
+  { kind: "history", label: "Historique" },
+];
+const LEVELS = [
+  ["true", "Vrai"], ["mostly_true", "Plutôt vrai"], ["half_true", "À moitié vrai"],
+  ["mostly_false", "Plutôt faux"], ["false", "Faux"], ["unrated", "Non classable"],
+];
+const LEVEL_NAME = Object.fromEntries(LEVELS);
+const REASONS = { undated: "Affiliation sans date dans Wikidata", ambiguous: "Plusieurs partis possibles à cette date", none: "Aucun parti connu", no_date: "Date de déclaration inconnue" };
+
+const state = { tab: "ratings", queues: {}, decisions: {}, sel: {}, choice: {}, db: null, uid: null, canEdit: false };
+const $ = (id) => document.getElementById(id);
+const el = (tag, attrs = {}, ...kids) => {
+  const n = document.createElement(tag);
+  for (const [k, v] of Object.entries(attrs)) {
+    if (k === "on") for (const [e, f] of Object.entries(v)) n.addEventListener(e, f);
+    else if (k === "text") n.textContent = v;
+    else if (v !== false && v != null) n.setAttribute(k, v === true ? "" : v);
+  }
+  for (const k of kids.flat()) if (k != null) n.append(k.nodeType ? k : document.createTextNode(String(k)));
+  return n;
+};
+const frDate = (iso) => {
+  if (!iso) return "date inconnue";
+  const d = new Date(iso.length === 10 ? iso + "T12:00:00" : iso);
+  return isNaN(d) ? iso : d.toLocaleDateString("fr-FR", { day: "numeric", month: "short", year: "numeric" });
+};
+const toast = (msg) => { const t = $("toast"); t.textContent = msg; t.hidden = false; clearTimeout(toast.h); toast.h = setTimeout(() => (t.hidden = true), 2600); };
+
+function pending(kind) {
+  return (state.queues[kind]?.items || []).filter((i) => !state.decisions[i.id]);
+}
+
+function render() {
+  const today = new Date().toISOString().slice(0, 10);
+  const all = ["ratings", "attributions", "parties"];
+  $("k-pending").textContent = all.reduce((n, k) => n + pending(k).length, 0);
+  const decs = Object.values(state.decisions);
+  $("k-today").textContent = decs.filter((d) => (d.decided_at || "").startsWith(today)).length;
+  $("k-total").textContent = decs.length;
+  const gen = state.queues.attributions?.generated_at;
+  $("gen").textContent = gen ? "Files préparées le " + frDate(gen) : "Aucune file chargée";
+
+  $("tabs").replaceChildren(...TABS.map((t) => el("button", {
+    class: "tab", role: "tab", type: "button", "aria-selected": String(state.tab === t.kind),
+    on: { click: () => { state.tab = t.kind; render(); } },
+  }, t.label, " ", el("span", { class: "n", text: "· " + (t.kind === "history" ? decs.length : pending(t.kind).length) }))));
+
+  if (state.tab === "history") return renderHistory(decs);
+  const items = pending(state.tab);
+  if (!items.find((i) => i.id === state.sel[state.tab])) state.sel[state.tab] = items[0]?.id;
+  $("queue").replaceChildren(...(items.length ? items.map((i) => queueRow(i)) :
+    [el("div", { class: "empty", text: state.queues[state.tab] ? "File vide : rien à valider ici." : "Cette file n'a pas encore été déposée." })]));
+  const cur = items.find((i) => i.id === state.sel[state.tab]);
+  $("detail").replaceChildren(...(cur ? detail(cur) : [el("p", { class: "sub", text: "Rien à afficher." })]));
+}
+
+function queueRow(i) {
+  let t, s, r;
+  if (state.tab === "ratings") { t = "« " + i.label + " »"; s = i.source + " · " + i.occurrences + " occurrence(s)"; r = i.proposed ? "Proposé : " + LEVEL_NAME[i.proposed] : "Sans proposition"; }
+  if (state.tab === "attributions") { t = i.reviews[0]?.claimant || "Sans auteur"; s = i.claim_text || ""; r = i.reason; }
+  if (state.tab === "parties") { t = i.person.name; s = frDate(i.claim_date) + " · " + (i.claim_text || ""); r = REASONS[i.status] || i.status; }
+  return el("button", { class: "qi", type: "button", "aria-current": String(i.id === state.sel[state.tab]),
+    on: { click: () => { state.sel[state.tab] = i.id; render(); } } },
+    el("span", { class: "t", text: t }), el("span", { class: "s", text: s }), el("span", { class: "r", text: r }));
+}
+
+function reviewsBlock(reviews) {
+  return el("div", { class: "reviews" }, reviews.map((r) => el("div", {},
+    el("a", { href: r.url, target: "_blank", rel: "noopener", text: r.source }),
+    " · « " + (r.rating_original || "sans verdict") + " » · vérifié le " + frDate(r.review_date),
+    r.claimant ? el("span", { class: "sub", text: " · auteur indiqué : " + r.claimant }) : null)));
+}
+
+function detail(i) {
+  // Seul le verdict est présélectionné (c'est une proposition) ; personne et parti se choisissent toujours à la main.
+  const k = state.tab, choice = state.choice[i.id] ?? (k === "ratings" ? i.proposed : undefined);
+  const set = (v) => { state.choice[i.id] = v; render(); };
+  const ro = !state.canEdit;
+  if (k === "ratings") return [
+    el("div", { class: "meta" }, el("span", { text: i.source }), el("span", { text: i.occurrences + " vérification(s) portent ce libellé" })),
+    el("p", { class: "label-big", text: "« " + i.label + " »" }),
+    i.rationale ? el("p", { class: "why" }, "Proposition : ", el("strong", { text: LEVEL_NAME[i.proposed] }), " — " + i.rationale) : null,
+    el("fieldset", {}, el("legend", { text: "Niveau de l'échelle commune (s'applique à toutes les vérifications passées et futures)" }),
+      el("div", { class: "levels" }, LEVELS.map(([v, n]) => el("button", { type: "button", class: "lv lv-" + v, "aria-pressed": String(choice === v), on: { click: () => set(v) } }, n)))),
+    actions(i, [["Enregistrer la conversion", "primary", () => decide(i, choice), !choice]], ro),
+  ];
+  if (k === "attributions") return [
+    el("div", { class: "meta" }, el("span", { text: "Déclaration du " + frDate(i.claim_date) })),
+    el("p", { class: "claim", text: "« " + (i.claim_text || "") + " »" }),
+    el("p", { class: "why" }, "En file car : ", el("strong", { text: i.reason })),
+    reviewsBlock(i.reviews),
+    el("fieldset", {}, el("legend", { text: "À qui attribuer cette déclaration ?" }),
+      i.candidates.map((c) => el("label", { class: "opt" },
+        el("input", { type: "radio", name: "cand-" + i.id, id: "cand-" + i.id + "-" + c.id, checked: choice === c.id, on: { change: () => set(c.id) } }),
+        el("span", {}, el("strong", { text: c.name }), el("small", {}, c.role || "fonction inconnue", " · ",
+          el("a", { href: "https://www.wikidata.org/wiki/" + c.id, target: "_blank", rel: "noopener", text: c.id })))))),
+    actions(i, [["Attribuer", "primary", () => decide(i, choice), !choice], ["Ne pas attribuer", "reject", () => decide(i, "reject")]], ro),
+  ];
+  const opts = [...i.candidates];
+  for (const a of i.known_affiliations) if (!opts.find((o) => o.id === a.id)) opts.push(a);
+  return [
+    el("div", { class: "meta" }, el("span", { text: i.person.name }), el("span", { text: "Déclaration du " + frDate(i.claim_date) })),
+    el("p", { class: "claim", text: "« " + (i.claim_text || "") + " »" }),
+    el("p", { class: "why" }, "En file car : ", el("strong", { text: REASONS[i.status] || i.status })),
+    el("div", { class: "boxes" }, el("div", { class: "box" }, el("div", { class: "k", text: "Affiliations connues (Wikidata)" }),
+      i.known_affiliations.length ? i.known_affiliations.map((a) => el("div", {}, (a.short_name || a.name) + " — " + (a.start_date || "?") + " → " + (a.end_date || "…"))) : el("div", { text: "aucune" }))),
+    reviewsBlock(i.reviews),
+    el("fieldset", {}, el("legend", { text: "Parti de " + i.person.name + " le " + frDate(i.claim_date) }),
+      [...opts, { id: "none", name: "Sans étiquette à cette date" }].map((o) => el("label", { class: "opt" },
+        el("input", { type: "radio", name: "party-" + i.id, id: "party-" + i.id + "-" + o.id, checked: choice === o.id, on: { change: () => set(o.id) } }),
+        el("span", {}, el("strong", { text: o.name }), o.short_name ? el("small", { text: o.short_name }) : null)))),
+    actions(i, [["Valider le parti", "primary", () => decide(i, choice), !choice]], ro),
+  ];
+}
+
+function actions(i, buttons, ro) {
+  return el("div", { class: "actions" },
+    buttons.map(([label, cls, fn, disabled]) => el("button", { type: "button", class: "btn " + cls, disabled: ro || disabled, on: { click: fn } }, label)),
+    el("button", { type: "button", class: "btn", on: { click: () => skip(i) } }, "Passer"),
+    ro ? el("span", { class: "sub", text: "Lecture seule : seuls les éditeurs peuvent décider." }) : null);
+}
+
+function skip(i) {
+  const items = pending(state.tab), idx = items.findIndex((x) => x.id === i.id);
+  state.sel[state.tab] = items[(idx + 1) % items.length]?.id;
+  render();
+}
+
+async function decide(i, value) {
+  if (!state.db || !value) return;
+  const items = pending(state.tab), idx = items.findIndex((x) => x.id === i.id);
+  const label = state.tab === "ratings" ? "« " + i.label + " » (" + i.source + ")" : state.tab === "attributions" ? (i.claim_text || "").slice(0, 90) : i.person.name + ", " + frDate(i.claim_date);
+  const shown = value === "reject" ? "Non attribuée" : state.tab === "ratings" ? LEVEL_NAME[value]
+    : state.tab === "attributions" ? (i.candidates.find((c) => c.id === value)?.name || value)
+    : value === "none" ? "Sans étiquette" : ([...i.candidates, ...i.known_affiliations].find((c) => c.id === value)?.name || value);
+  try {
+    await state.db.doc("decisions/" + i.id).set({ kind: state.tab, item_id: i.id, value, label, shown, decided_at: new Date().toISOString(), decided_by: state.uid || null });
+    state.sel[state.tab] = items[idx + 1]?.id || items[idx - 1]?.id;
+    toast("Décision enregistrée : " + shown);
+  } catch (e) {
+    toast(e?.code === "invalid_argument" ? "Enregistrement refusé : il faut les droits d'édition." : "Enregistrement impossible, réessayez dans un instant.");
+  }
+}
+
+function renderHistory(decs) {
+  decs.sort((a, b) => (b.decided_at || "").localeCompare(a.decided_at || ""));
+  $("queue").replaceChildren(el("div", { class: "empty", text: "Décisions enregistrées, en attente d'être rapatriées dans le projet. Une décision annulée revient dans sa file." }));
+  const kindName = { ratings: "Verdict", attributions: "Attribution", parties: "Parti" };
+  $("detail").replaceChildren(decs.length ? el("div", { style: "overflow-x:auto" }, el("table", { class: "hist" },
+    el("thead", {}, el("tr", {}, ["Quand", "File", "Élément", "Décision", ""].map((h) => el("th", { text: h })))),
+    el("tbody", {}, decs.map((d) => el("tr", {},
+      el("td", { text: frDate(d.decided_at) }), el("td", { text: kindName[d.kind] || d.kind }),
+      el("td", { text: d.label || d.item_id }), el("td", {}, el("strong", { text: d.shown || d.value })),
+      el("td", {}, state.canEdit ? el("button", { type: "button", class: "btn", on: { click: () => undo(d) } }, "Annuler") : null)))))) :
+    el("p", { class: "sub", text: "Aucune décision pour l'instant." }));
+}
+
+async function undo(d) {
+  try { await state.db.doc("decisions/" + d.item_id).delete(); toast("Décision annulée"); }
+  catch { toast("Annulation impossible, réessayez dans un instant."); }
+}
+
+render();
+(async () => {
+  const [db, user] = await Promise.all([window.claude?.use("db"), window.claude?.use("user")]);
+  if (!db) {
+    const n = $("notice"); n.hidden = false;
+    n.textContent = "La base de validation n'est pas accessible depuis cette vue. Ouvrez la page depuis claude.ai, connecté au compte du projet.";
+    $("queue").replaceChildren(el("div", { class: "empty", text: "Files indisponibles." }));
+    return;
+  }
+  state.db = db;
+  state.canEdit = user ? await user.canEdit() : false;
+  state.uid = user ? await user.id() : null;
+  if (!state.canEdit) { const n = $("notice"); n.hidden = false; n.textContent = "Vous consultez en lecture seule : seuls les éditeurs du projet peuvent valider."; }
+  db.collection("queues").onSnapshot((snap) => {
+    state.queues = Object.fromEntries(snap.docs.map((d) => [d.id, d.data()]));
+    render();
+  }, () => toast("La file n'a pas pu être chargée."));
+  db.collection("decisions").onSnapshot((snap) => {
+    state.decisions = Object.fromEntries(snap.docs.map((d) => [d.id, d.data()]));
+    render();
+  }, () => toast("Les décisions n'ont pas pu être chargées."));
+})();
+</script>

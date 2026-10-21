@@ -15,7 +15,17 @@ Les décisions durables sont aussi consignées dans [decisions.md](decisions.md)
 | 5 | Autres sites FR, google_factcheck, datacommons_feed, dedupe.py | ✅ fait (21/10) |
 | 6 | run_daily.py + export.py, routine sur 90 jours | ✅ fait — 122 entrées exportées sur 2 ans (22/10) |
 | 7 | web/beta/index.html (maquette A) | ⏳ |
-| — | Page web de validation (maquette faite) | ⏳ |
+| — | Page web de validation | ✅ en ligne (22/10) — 147 éléments à traiter |
+
+## 2026-10-22 (suite) — tableau de validation en ligne
+
+- Page privée : https://claude.ai/artifact/At6BYDaT6SbwLv5P2LuSLU (option A retenue).
+  Base partagée : `queues` (déposées par Claude) et `decisions` (écrites par la page,
+  réservées aux éditeurs — vérifié : un simple lecteur ne peut pas écrire).
+- `pipeline/validation_sync.py` : `seed` (prépare les files) et `apply` (écrit les décisions
+  dans rating_map.csv, attributions.csv, affiliations_manual.csv ; idempotent).
+- Les partis validés à la main sont prioritaires sur Wikidata à la date validée seulement.
+- Files déposées : 12 libellés, 75 attributions, 60 partis. Procédure : docs/validation.md.
 
 ## 2026-10-22 — plus de déclarations exactes : historique 2 ans + Poligraph
 

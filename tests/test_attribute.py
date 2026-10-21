@@ -96,3 +96,10 @@ def test_undated_affiliation_is_never_used_automatically():
     ])
     result = ref.party_at("Q3", "2020-09-12")
     assert (result.party_id, result.status, result.candidates) == (None, "undated", ("PS",))
+
+
+def test_manual_affiliation_wins_on_its_date_only():
+    manual = [{"person_id": "Q2", "party_id": "RN", "start_date": "2026-09-13", "end_date": "2026-09-13", "source_url": ""}]
+    ref = Referential(PERSONS, AFFILIATIONS, manual)
+    assert ref.party_at("Q2", "2026-09-13").party_id == "RN"
+    assert ref.party_at("Q2", "2019-05-10").status == "undated"  # ailleurs, Wikidata reste la règle

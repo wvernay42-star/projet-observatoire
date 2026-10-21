@@ -30,7 +30,7 @@ def load(name):
 def test_keeps_only_reviews_from_referential_sources():
     afp = load("afp")
     reviews = [r for c in afp["claims"] for r in parse_claim(c, DOMAINS)]
-    assert reviews and {r.source_id for r in reviews} == {"afp_factuel"}  # Poligraph, DE FACTO écartés
+    assert reviews and {r.source_id for r in reviews} == {"afp_factuel", "poligraph_fr"}  # DE FACTO écarté
     assert all(r.rating_original and r.url.startswith("https://") for r in reviews)
 
 

@@ -23,4 +23,5 @@ le tableau d'état.
 ## Commandes
 - python -m pipeline.run_daily      # routine complète
 - python -m pipeline.run_daily --connector jsonld_crawler --dry-run
+- python -m pipeline.validation_sync seed|apply <dossier>   # tableau de validation (docs/validation.md)
 - pytest

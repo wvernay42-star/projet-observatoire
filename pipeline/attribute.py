@@ -54,7 +54,8 @@ class PartyAtDate:
 
 
 class Referential:
-    def __init__(self, persons: list[dict[str, str]], affiliations: list[dict[str, str]]):
+    def __init__(self, persons: list[dict[str, str]], affiliations: list[dict[str, str]],
+                 manual_affiliations: list[dict[str, str]] | None = None):
         self.names: dict[str, set[str]] = defaultdict(set)
         self.surnames: dict[str, set[str]] = defaultdict(set)
         self.full_names: dict[str, str] = {}
@@ -70,6 +71,10 @@ class Referential:
         self.affiliations: dict[str, list[dict[str, str]]] = defaultdict(list)
         for a in affiliations:
             self.affiliations[a["person_id"]].append(a)
+        # Affiliations validées à la main : prioritaires sur Wikidata aux dates qu'elles couvrent.
+        self.manual: dict[str, list[dict[str, str]]] = defaultdict(list)
+        for a in manual_affiliations or []:
+            self.manual[a["person_id"]].append(a)
 
     @classmethod
     def load(cls, seeds_dir: Path = SEEDS_DIR) -> "Referential":
@@ -77,14 +82,9 @@ class Referential:
             with (seeds_dir / name).open(encoding="utf-8") as f:
                 return list(csv.DictReader(f))
 
-        affiliations = read("affiliations.csv")
         manual_path = seeds_dir / "affiliations_manual.csv"
-        if manual_path.exists():
-            # Affiliations validées à la main : remplacent celles de Wikidata pour ces personnes.
-            manual = read("affiliations_manual.csv")
-            overridden = {a["person_id"] for a in manual}
-            affiliations = [a for a in affiliations if a["person_id"] not in overridden] + manual
-        return cls(read("persons.csv"), affiliations)
+        manual = read("affiliations_manual.csv") if manual_path.exists() else []
+        return cls(read("persons.csv"), read("affiliations.csv"), manual)
 
     def attribute(self, claimant: str | None) -> Attribution:
         if not claimant or not claimant.strip():
@@ -125,6 +125,12 @@ class Referential:
         def not_ended(end: str) -> bool:
             n = min(len(end), len(on))
             return not end or on[:n] <= end[:n]
+
+        manual = {a["party_id"] for a in self.manual.get(person_id, [])
+                  if started(a["start_date"]) and not_ended(a["end_date"])}
+        if len(manual) == 1:
+            party_id = next(iter(manual))
+            return PartyAtDate(None, "none") if party_id == "none" else PartyAtDate(party_id, "ok")
 
         matching = [
             a for a in self.affiliations.get(person_id, [])
