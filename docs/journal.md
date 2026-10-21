@@ -17,6 +17,18 @@ Les décisions durables sont aussi consignées dans [decisions.md](decisions.md)
 | 7 | web/beta/index.html (maquette A) | ✅ en ligne (22/10) — 119 déclarations |
 | — | Page web de validation | ✅ en ligne (22/10) — 147 éléments à traiter |
 
+## 2026-10-21 (fin d'après-midi) — couverture de l'API Google au-delà des 8 rédactions
+
+Recherche par nom de 360 personnalités (gouvernement, présidents, chefs de parti + personnes
+déjà exportées), toutes rédactions, langue fr, 2 ans : 337 vérifications uniques, dont ~90 % déjà
+couvertes par nos sources (TF1 Info 166, franceinfo 47, AFP 48, Poligraph 35, 20 Minutes 7).
+Non suivies : DE FACTO (20, observatoire collectif qui reprend des vérifications de ses membres,
+dont l'AFP → risque de doublons), dpa-factchecking (9, surtout réseaux sociaux), Science Feedback (2,
+dont une déclaration de Jordan Bardella), RTBF (2, Belgique). Le Monde, Libération et Les Surligneurs
+ne déclarent pas leurs vérifications à Google.
+Pistes : ajouter Science Feedback ; un balayage hebdomadaire par nom pour repérer les nouvelles
+rédactions (rapport, jamais d'ajout automatique) ; DE FACTO seulement avec dédoublonnage par URL d'origine.
+
 ## 2026-10-21 (après-midi) — validations appliquées, partis datés, suivi des sources
 
 **Validations du porteur** : 144 décisions appliquées (12 libellés, 75 attributions, 57 partis
