@@ -108,3 +108,15 @@ def test_manual_affiliation_wins_on_its_date_only():
 def test_manual_no_party_is_a_decision_not_a_gap():
     manual = [{"person_id": "Q3", "party_id": "none", "start_date": "2026-10-15", "end_date": "2026-10-15", "source_url": ""}]
     assert Referential(PERSONS, [], manual).party_at("Q3", "2026-10-15").status == "no_party"
+
+
+def test_affiliation_outside_party_lifetime_is_ignored():
+    parties = [{"id": "UMP", "inception": "2002-11-17", "dissolved": "2015-05-30"},
+               {"id": "LR", "inception": "2015-05-30", "dissolved": ""}]
+    affiliations = [{"person_id": "Q3", "party_id": "UMP", "start_date": "", "end_date": "", "source_url": ""},
+                    {"person_id": "Q3", "party_id": "LR", "start_date": "2015-05-30", "end_date": "", "source_url": ""}]
+    manual = [{"person_id": "Q3", "party_id": "UMP", "start_date": "2024-11-15", "end_date": "2024-11-15", "source_url": ""}]
+    ref = Referential(PERSONS, affiliations, manual, parties)
+    assert ref.party_at("Q3", "2024-11-15").party_id == "LR"  # UMP n'existait plus : validation ignorée
+    assert ref.party_at("Q3", "2010-01-01").status == "undated"  # UMP possible, mais sans date
+    assert not ref.party_existed("LR", "2012-03-01")

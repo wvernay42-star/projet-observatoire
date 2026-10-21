@@ -56,7 +56,8 @@ class PartyAtDate:
 
 class Referential:
     def __init__(self, persons: list[dict[str, str]], affiliations: list[dict[str, str]],
-                 manual_affiliations: list[dict[str, str]] | None = None):
+                 manual_affiliations: list[dict[str, str]] | None = None,
+                 parties: list[dict[str, str]] | None = None):
         self.names: dict[str, set[str]] = defaultdict(set)
         self.surnames: dict[str, set[str]] = defaultdict(set)
         self.full_names: dict[str, str] = {}
@@ -73,6 +74,8 @@ class Referential:
         for a in affiliations:
             self.affiliations[a["person_id"]].append(a)
         # Affiliations validées à la main : prioritaires sur Wikidata aux dates qu'elles couvrent.
+        # Période d'existence de chaque parti : une affiliation n'a pas de sens hors de cette période.
+        self.party_periods = {p["id"]: (p.get("inception", ""), p.get("dissolved", "")) for p in parties or []}
         self.manual: dict[str, list[dict[str, str]]] = defaultdict(list)
         for a in manual_affiliations or []:
             self.manual[a["person_id"]].append(a)
@@ -85,7 +88,7 @@ class Referential:
 
         manual_path = seeds_dir / "affiliations_manual.csv"
         manual = read("affiliations_manual.csv") if manual_path.exists() else []
-        return cls(read("persons.csv"), read("affiliations.csv"), manual)
+        return cls(read("persons.csv"), read("affiliations.csv"), manual, read("parties.csv"))
 
     def attribute(self, claimant: str | None) -> Attribution:
         if not claimant or not claimant.strip():
@@ -113,6 +116,13 @@ class Referential:
             return Attribution("to_review", candidates=tuple(sorted(found))[:20], reason="nom seul")
         return Attribution("rejected", reason="hors référentiel")
 
+    def party_existed(self, party_id: str, on: str) -> bool:
+        """Le parti existait-il à cette date ? Inconnu -> oui (on ne retire rien sans information)."""
+        inception, dissolved = self.party_periods.get(party_id, ("", ""))
+        n_start, n_end = min(len(inception), len(on)), min(len(dissolved), len(on))
+        return (not inception or inception[:n_start] <= on[:n_start]) and \
+            (not dissolved or on[:n_end] <= dissolved[:n_end])
+
     def party_at(self, person_id: str, on: str | None) -> PartyAtDate:
         """Parti en vigueur à la date `on` (ISO 8601, jour, mois ou année)."""
         if not on:
@@ -128,14 +138,15 @@ class Referential:
             return not end or on[:n] <= end[:n]
 
         manual = {a["party_id"] for a in self.manual.get(person_id, [])
-                  if started(a["start_date"]) and not_ended(a["end_date"])}
+                  if started(a["start_date"]) and not_ended(a["end_date"])
+                  and (a["party_id"] == "none" or self.party_existed(a["party_id"], on))}
         if len(manual) == 1:
             party_id = next(iter(manual))
             return PartyAtDate(None, "no_party") if party_id == "none" else PartyAtDate(party_id, "ok")
 
         matching = [
             a for a in self.affiliations.get(person_id, [])
-            if started(a["start_date"]) and not_ended(a["end_date"])
+            if started(a["start_date"]) and not_ended(a["end_date"]) and self.party_existed(a["party_id"], on)
         ]
         # Le cadrage exige des affiliations datées : une affiliation sans aucune date
         # ne sert jamais automatiquement, elle est seulement proposée à la validation.

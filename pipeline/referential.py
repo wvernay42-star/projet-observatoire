@@ -10,6 +10,7 @@ avec ses dates ; une affiliation sans date reste sans date (jamais inventée).
 
     python -m pipeline.referential              # tout reconstruire
     python -m pipeline.referential --roles depute senateur
+    python -m pipeline.referential --parties-only   # noms de partis datés, création, dissolution
 """
 
 import argparse
@@ -213,6 +214,52 @@ def fetch_parties(wd: Wikidata, party_ids: Iterable[str]) -> list[dict[str, str]
     return sorted(parties.values(), key=lambda p: p["id"])
 
 
+def fetch_party_history(wd: Wikidata, party_ids: Iterable[str]) -> tuple[dict[str, dict[str, str]], list[dict[str, str]]]:
+    """Création / dissolution de chaque parti et historique daté de ses noms officiels (P1448)."""
+    periods: dict[str, dict[str, str]] = {}
+    names: list[dict[str, str]] = []
+    for ids in batches(party_ids):
+        rows = wd.query(f"""SELECT ?party ?kind ?v ?prec ?start ?startPrec ?end ?endPrec WHERE {{
+  VALUES ?party {{ {values(ids)} }}
+  {{ ?party p:P571/psv:P571 [ wikibase:timeValue ?v; wikibase:timePrecision ?prec ]. BIND("inception" AS ?kind) }}
+  UNION {{ ?party p:P576/psv:P576 [ wikibase:timeValue ?v; wikibase:timePrecision ?prec ]. BIND("dissolved" AS ?kind) }}
+  UNION {{ ?party p:P1448 ?st. ?st ps:P1448 ?v. FILTER(LANG(?v) = "fr") BIND("name" AS ?kind)
+          OPTIONAL {{ ?st pqv:P580 [ wikibase:timeValue ?start; wikibase:timePrecision ?startPrec ] }}
+          OPTIONAL {{ ?st pqv:P582 [ wikibase:timeValue ?end; wikibase:timePrecision ?endPrec ] }} }}
+}}""")
+        for row in rows:
+            pid = qid(row["party"])
+            if row["kind"] in ("inception", "dissolved"):
+                value = day(row["v"], row.get("prec"))
+                current = periods.setdefault(pid, {"inception": "", "dissolved": ""})
+                # plusieurs valeurs : on garde la plus prudente (création la plus ancienne, dissolution la plus tardive)
+                if value and (not current[row["kind"]] or
+                              (value < current[row["kind"]]) == (row["kind"] == "inception")):
+                    current[row["kind"]] = value
+            elif not row["v"].isupper():  # les noms en capitales viennent des registres et doublonnent
+                names.append({"party_id": pid, "name": row["v"], "short_name": "",
+                              "start_date": day(row.get("start"), row.get("startPrec")),
+                              "end_date": day(row.get("end"), row.get("endPrec")),
+                              "source": f"https://www.wikidata.org/wiki/{pid}#P1448"})
+    return periods, sorted(names, key=lambda n: (n["party_id"], n["start_date"]))
+
+
+def update_parties(seeds_dir: Path = SEEDS_DIR, wd: Wikidata | None = None) -> None:
+    """Complète parties.csv (création, dissolution) et écrit party_names.csv, sans tout reconstruire."""
+    wd = wd or Wikidata()
+    with (seeds_dir / "parties.csv").open(encoding="utf-8") as f:
+        parties = list(csv.DictReader(f))
+    periods, names = fetch_party_history(wd, [p["id"] for p in parties])
+    for p in parties:
+        p.update(periods.get(p["id"], {"inception": "", "dissolved": ""}))
+    write_csv(seeds_dir / "parties.csv",
+              ["id", "name", "short_name", "country", "parlgov_id", "inception", "dissolved"], parties)
+    write_csv(seeds_dir / "party_names.csv",
+              ["party_id", "name", "short_name", "start_date", "end_date", "source"], names)
+    print(f"{len(parties)} partis (dates de création : {sum(1 for p in parties if p['inception'])}),"
+          f" {len(names)} noms officiels datés ou non")
+
+
 def write_csv(path: Path, fieldnames: list[str], rows: Iterable[dict[str, str]]) -> None:
     with path.open("w", newline="", encoding="utf-8") as f:
         writer = csv.DictWriter(f, fieldnames=fieldnames)
@@ -252,8 +299,14 @@ def build(roles: Iterable[str], seeds_dir: Path = SEEDS_DIR, wd: Wikidata | None
 def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     parser.add_argument("--roles", nargs="+", choices=list(ROLES), default=list(ROLES))
+    parser.add_argument("--parties-only", action="store_true",
+                        help="mettre à jour seulement l'historique des partis (noms datés, création, dissolution)")
     args = parser.parse_args()
-    build(args.roles)
+    if args.parties_only:
+        update_parties()
+    else:
+        build(args.roles)
+        update_parties()
 
 
 if __name__ == "__main__":

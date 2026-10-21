@@ -17,6 +17,37 @@ Les décisions durables sont aussi consignées dans [decisions.md](decisions.md)
 | 7 | web/beta/index.html (maquette A) | ✅ en ligne (22/10) — 119 déclarations |
 | — | Page web de validation | ✅ en ligne (22/10) — 147 éléments à traiter |
 
+## 2026-10-21 (après-midi) — validations appliquées, partis datés, suivi des sources
+
+**Validations du porteur** : 144 décisions appliquées (12 libellés, 75 attributions, 57 partis
+dont 6 « sans étiquette »), aucune ignorée. rating_map.csv : 12 lignes ajoutées (decided_by = human) :
+« En partie vrai » TF1 Info et Poligraph → à moitié vrai ; « En partie vrai » 20 Minutes → plutôt vrai ;
+« C'est plus compliqué » franceinfo et Poligraph → à moitié vrai ; « Infondé » AFP → faux ;
+« Partiellement faux », « Vidéo manipulée », « Photo manipulée » AFP et « FAUSSE LÉGENDE » Décodeurs
+→ plutôt faux ; « Image générée par IA » et « 1 » AFP → non classable.
+→ 186 déclarations exportées (80 personnalités) : vrai 23, plutôt vrai 31, à moitié vrai 42,
+plutôt faux 47, faux 38, non classable 5.
+
+**Partis selon la date** (demande du porteur) :
+- Contrôle d'existence : une affiliation (Wikidata ou manuelle) n'est jamais retenue avant la
+  création du parti ni après sa dissolution (parties.csv : colonnes inception / dissolved).
+  Cas trouvé : 2 validations « UMP » pour Laurent Wauquiez en 2024-2025 (UMP dissoute en 2015) →
+  écartées, de retour en file. Le tableau ne propose plus que des partis existant à la date.
+- Noms à la date : `party_names.csv` (noms officiels datés, Wikidata P1448) et
+  `party_names_manual.csv` (sigles FN, EM, LREM complétés à la main) : FN avant le 1/06/2018,
+  En marche ! → LREM (8/05/2017) → Renaissance (22/09/2022).
+- `python -m pipeline.referential --parties-only` met à jour cet historique sans tout reconstruire.
+
+**Corrections** : « sans étiquette » validé ne revient plus en file ; l'alerte « connecteur muet »
+compte des jours (3) et non des exécutions.
+
+**Module A, suivi des sources** (onglet du tableau de validation) — part de vrai/plutôt vrai sur
+les déclarations de personnalités : TF1 Info 35 % (104), franceinfo 30 % (60), Poligraph 21 % (28),
+AFP 0 % (23). 20 Minutes : aucune déclaration de personnalité.
+
+**Décisions du porteur** : capacité de validation ≈ 100 éléments par jour ; thème pilote du
+module B (V2) : finances publiques.
+
 ## 2026-10-22 (suite 3) — beta publique en ligne
 
 - Page de la beta : https://claude.ai/artifact/19UnNBtaqC927nk4tZR419 (privée tant qu'elle

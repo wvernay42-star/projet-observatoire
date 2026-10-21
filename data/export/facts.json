@@ -3028,7 +3028,7 @@
    "id": null,
    "name": null,
    "short_name": null,
-   "status": "undated"
+   "status": "none"
   },
   "claim_text": "\"On n'a jamais fait passer autant de textes au Parlement\" que sous François Bayrou",
   "claim_date": "2025-08-28",
@@ -3276,7 +3276,7 @@
    "id": null,
    "name": null,
    "short_name": null,
-   "status": "undated"
+   "status": "none"
   },
   "claim_text": "Les hausses d'impôts font-elles fuir les riches ?",
   "claim_date": "2025-07-18",
@@ -3304,10 +3304,10 @@
    "name": "François Bayrou"
   },
   "party": {
-   "id": null,
-   "name": null,
-   "short_name": null,
-   "status": "undated"
+   "id": "Q587370",
+   "name": "MoDem",
+   "short_name": "MoDem",
+   "status": "ok"
   },
   "claim_text": "La dette publique augmente-t-elle de 5 000 euros par seconde ?",
   "claim_date": "2025-07-16",
@@ -3471,7 +3471,7 @@
    "id": null,
    "name": null,
    "short_name": null,
-   "status": "undated"
+   "status": "none"
   },
   "claim_text": "L'acétamipride est \"autorisée partout en Europe parce que pas jugée dangereuse par les scientifiques européens\"",
   "claim_date": "2025-06-30",
@@ -3790,7 +3790,7 @@
    "id": null,
    "name": null,
    "short_name": null,
-   "status": "undated"
+   "status": "none"
   },
   "claim_text": "Y a-t-il de l'acétamipride dans les colliers anti-puces et dans les insecticides ménagers ?",
   "claim_date": "2025-05-27",
@@ -3920,10 +3920,10 @@
    "name": "Rachida Dati"
   },
   "party": {
-   "id": null,
-   "name": null,
-   "short_name": null,
-   "status": "undated"
+   "id": "Q20012759",
+   "name": "Les Républicains",
+   "short_name": "LR",
+   "status": "ok"
   },
   "claim_text": "\"Il n'y a pas eu de coupe budgétaire au ministère de la Culture. Sur le budget 2025, il n'y a pas eu de baisse, il y a eu une augmentation.\"",
   "claim_date": "2025-05-06",
@@ -4406,7 +4406,7 @@
    "id": null,
    "name": null,
    "short_name": null,
-   "status": "undated"
+   "status": "none"
   },
   "claim_text": "L'Italie vient de \"régulariser plus de 500.000 personnes\"",
   "claim_date": "2025-03-11",
@@ -4474,10 +4474,10 @@
    "name": "François Bayrou"
   },
   "party": {
-   "id": null,
-   "name": null,
-   "short_name": null,
-   "status": "undated"
+   "id": "Q587370",
+   "name": "MoDem",
+   "short_name": "MoDem",
+   "status": "ok"
   },
   "claim_text": "\"La trop grande complexité de la bureaucratie fait perdre à la France 4% de sa richesse nationale\"",
   "claim_date": "2025-03-06",
@@ -4908,10 +4908,10 @@
    "name": "François Bayrou"
   },
   "party": {
-   "id": null,
-   "name": null,
-   "short_name": null,
-   "status": "undated"
+   "id": "Q587370",
+   "name": "MoDem",
+   "short_name": "MoDem",
+   "status": "ok"
   },
   "claim_text": "\"La France s'approche d'un sentiment de submersion migratoire\"",
   "claim_date": "2025-01-29",
@@ -5134,10 +5134,10 @@
    "name": "Laurent Wauquiez"
   },
   "party": {
-   "id": "Q173152",
-   "name": "Union pour un mouvement populaire",
-   "short_name": "UMP",
-   "status": "ok"
+   "id": null,
+   "name": null,
+   "short_name": null,
+   "status": "undated"
   },
   "claim_text": "Les titres de séjour pour soins coûtent plusieurs centaines de millions d'euros par an et bénéficient aussi à des ressortissants de pays riches",
   "claim_date": "2025-01-12",
@@ -5695,7 +5695,7 @@
    "id": null,
    "name": null,
    "short_name": null,
-   "status": "undated"
+   "status": "none"
   },
   "claim_text": "L'utilisation des mines antipersonnel est interdite par le droit international",
   "claim_date": "2024-11-21",
@@ -5785,10 +5785,10 @@
    "name": "Laurent Wauquiez"
   },
   "party": {
-   "id": "Q173152",
-   "name": "Union pour un mouvement populaire",
-   "short_name": "UMP",
-   "status": "ok"
+   "id": null,
+   "name": null,
+   "short_name": null,
+   "status": "undated"
   },
   "claim_text": "L'équivalent de la population toulousaine est accueilli chaque année en France",
   "claim_date": "2024-11-15",
@@ -5974,7 +5974,7 @@
    "id": null,
    "name": null,
    "short_name": null,
-   "status": "undated"
+   "status": "none"
   },
   "claim_text": "La ville de Paris a plus de fonctionnaires que toutes les institutions de l’Union européenne",
   "claim_date": "2024-10-25",

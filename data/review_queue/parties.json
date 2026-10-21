@@ -315,10 +315,8 @@
    "id": "Q30378878",
    "name": "Patrick Mignola"
   },
-  "status": "undated",
-  "candidates": [
-   "Q827415"
-  ]
+  "status": "none",
+  "candidates": []
  },
  {
   "claim_id": "c_a8957ed6577219d1",
@@ -384,36 +382,8 @@
    "id": "Q445705",
    "name": "Philippe Juvin"
   },
-  "status": "undated",
-  "candidates": [
-   "Q1052584",
-   "Q173152"
-  ]
- },
- {
-  "claim_id": "c_01f9d47d54ac4162",
-  "claim_text": "La dette publique augmente-t-elle de 5 000 euros par seconde ?",
-  "claim_date": "2025-07-16",
-  "reviews": [
-   {
-    "url": "https://www.franceinfo.fr/replay-radio/le-vrai-du-faux/la-dette-publique-augmente-t-elle-de-5-000-euros-par-seconde_7350015.html",
-    "source_id": "franceinfo_vraioufake",
-    "claimant": "François Bayrou, Premier ministre",
-    "rating_original": "Vrai",
-    "rating_normalized": "true",
-    "review_date": "2025-07-16"
-   }
-  ],
-  "person": {
-   "id": "Q12963",
-   "name": "François Bayrou"
-  },
-  "status": "undated",
-  "candidates": [
-   "Q1054196",
-   "Q2037506",
-   "Q587370"
-  ]
+  "status": "none",
+  "candidates": []
  },
  {
   "claim_id": "c_10de33bfe63e2566",
@@ -483,10 +453,8 @@
    "id": "Q2414678",
    "name": "Annie Genevard"
   },
-  "status": "undated",
-  "candidates": [
-   "Q173152"
-  ]
+  "status": "none",
+  "candidates": []
  },
  {
   "claim_id": "c_4cc9f423e80b34ad",
@@ -575,10 +543,8 @@
    "id": "Q2414678",
    "name": "Annie Genevard"
   },
-  "status": "undated",
-  "candidates": [
-   "Q173152"
-  ]
+  "status": "none",
+  "candidates": []
  },
  {
   "claim_id": "c_8b4684307972ec76",
@@ -660,30 +626,6 @@
   ]
  },
  {
-  "claim_id": "c_75fce7d4ff1e45f8",
-  "claim_text": "\"Il n'y a pas eu de coupe budgétaire au ministère de la Culture. Sur le budget 2025, il n'y a pas eu de baisse, il y a eu une augmentation.\"",
-  "claim_date": "2025-05-06",
-  "reviews": [
-   {
-    "url": "https://www.franceinfo.fr/replay-radio/le-vrai-du-faux/le-budget-de-la-culture-est-il-en-hausse-ou-en-baisse_7221438.html",
-    "source_id": "franceinfo_vraioufake",
-    "claimant": "Rachida Dati, ministre de la Culture",
-    "rating_original": "C’est plus compliqué",
-    "rating_normalized": "half_true",
-    "review_date": "2025-05-08"
-   }
-  ],
-  "person": {
-   "id": "Q27182",
-   "name": "Rachida Dati"
-  },
-  "status": "undated",
-  "candidates": [
-   "Q173152",
-   "Q20012759"
-  ]
- },
- {
   "claim_id": "c_3028c9351f7566dc",
   "claim_text": "La France est \"championne du monde de la bureaucratie\" en matière d'organisation territoriale",
   "claim_date": "2025-05-04",
@@ -756,35 +698,8 @@
    "id": "Q12944",
    "name": "François-Noël Buffet"
   },
-  "status": "undated",
-  "candidates": [
-   "Q173152"
-  ]
- },
- {
-  "claim_id": "c_66921bb9fba0b944",
-  "claim_text": "\"La trop grande complexité de la bureaucratie fait perdre à la France 4% de sa richesse nationale\"",
-  "claim_date": "2025-03-06",
-  "reviews": [
-   {
-    "url": "https://www.franceinfo.fr/replay-radio/le-vrai-du-faux/les-lourdeurs-administratives-coutent-elles-4-du-pib-de-la-france-chaque-annee-comme-l-affirme-francois-bayrou_7092378.html",
-    "source_id": "franceinfo_vraioufake",
-    "claimant": "François Bayrou, Premier ministre",
-    "rating_original": "C’est plus compliqué",
-    "rating_normalized": "half_true",
-    "review_date": "2025-03-10"
-   }
-  ],
-  "person": {
-   "id": "Q12963",
-   "name": "François Bayrou"
-  },
-  "status": "undated",
-  "candidates": [
-   "Q1054196",
-   "Q2037506",
-   "Q587370"
-  ]
+  "status": "none",
+  "candidates": []
  },
  {
   "claim_id": "c_2ff48422b93f40c1",
@@ -835,28 +750,26 @@
   ]
  },
  {
-  "claim_id": "c_8866473849dccaa9",
-  "claim_text": "\"La France s'approche d'un sentiment de submersion migratoire\"",
-  "claim_date": "2025-01-29",
+  "claim_id": "c_224212e798dbef7d",
+  "claim_text": "Les titres de séjour pour soins coûtent plusieurs centaines de millions d'euros par an et bénéficient aussi à des ressortissants de pays riches",
+  "claim_date": "2025-01-12",
   "reviews": [
    {
-    "url": "https://www.franceinfo.fr/replay-radio/le-vrai-du-faux/submersion-migratoire-quelle-est-la-realite-des-chiffres-de-l-immigration-en-france_7014878.html",
-    "source_id": "franceinfo_vraioufake",
-    "claimant": "François Bayrou, Premier ministre",
-    "rating_original": "C’est plus compliqué",
+    "url": "https://www.tf1info.fr/sante/verif-des-etrangers-venus-de-pays-riches-viennent-ils-se-faire-soigner-en-france-avec-des-titres-de-sejour-pour-soins-2344562.html",
+    "source_id": "tf1info_verificateurs",
+    "claimant": "Laurent Wauquiez",
+    "rating_original": "En partie vrai",
     "rating_normalized": "half_true",
-    "review_date": "2025-01-29"
+    "review_date": "2025-01-13"
    }
   ],
   "person": {
-   "id": "Q12963",
-   "name": "François Bayrou"
+   "id": "Q984375",
+   "name": "Laurent Wauquiez"
   },
   "status": "undated",
   "candidates": [
-   "Q1054196",
-   "Q2037506",
-   "Q587370"
+   "Q20012759"
   ]
  },
  {
@@ -1014,9 +927,6 @@
   },
   "status": "undated",
   "candidates": [
-   "Q1052584",
-   "Q173152",
-   "Q1904825",
    "Q20012759"
   ]
  },
@@ -1062,10 +972,8 @@
    "id": "Q2829913",
    "name": "Alain Houpert"
   },
-  "status": "undated",
-  "candidates": [
-   "Q173152"
-  ]
+  "status": "none",
+  "candidates": []
  },
  {
   "claim_id": "c_2303f2730a743973",
@@ -1112,6 +1020,29 @@
   "candidates": [
    "Q192821",
    "Q62079328"
+  ]
+ },
+ {
+  "claim_id": "c_ff54fea684bc14c6",
+  "claim_text": "L'équivalent de la population toulousaine est accueilli chaque année en France",
+  "claim_date": "2024-11-15",
+  "reviews": [
+   {
+    "url": "https://www.tf1info.fr/politique/verif-immigration-l-equivalent-de-la-population-toulousaine-est-il-accueilli-chaque-annee-en-france-2336867.html",
+    "source_id": "tf1info_verificateurs",
+    "claimant": "Laurent Wauquiez",
+    "rating_original": "En partie vrai",
+    "rating_normalized": "half_true",
+    "review_date": "2024-11-29"
+   }
+  ],
+  "person": {
+   "id": "Q984375",
+   "name": "Laurent Wauquiez"
+  },
+  "status": "undated",
+  "candidates": [
+   "Q20012759"
   ]
  },
  {
@@ -1201,11 +1132,8 @@
    "id": "Q445705",
    "name": "Philippe Juvin"
   },
-  "status": "undated",
-  "candidates": [
-   "Q1052584",
-   "Q173152"
-  ]
+  "status": "none",
+  "candidates": []
  },
  {
   "claim_id": "c_b89a0ce1453b63cc",

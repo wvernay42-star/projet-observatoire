@@ -1134,19 +1134,6 @@
    "n_sources": 1,
    "last_review_date": "2026-09-01"
   },
-  "Q173152": {
-   "n_claims": 2,
-   "verdicts": {
-    "true": 0,
-    "mostly_true": 0,
-    "half_true": 2,
-    "mostly_false": 0,
-    "false": 0,
-    "unrated": 0
-   },
-   "n_sources": 1,
-   "last_review_date": "2025-01-13"
-  },
   "Q192821": {
    "n_claims": 1,
    "verdicts": {
@@ -1161,11 +1148,11 @@
    "last_review_date": "2025-04-10"
   },
   "Q20012759": {
-   "n_claims": 17,
+   "n_claims": 18,
    "verdicts": {
     "true": 2,
     "mostly_true": 3,
-    "half_true": 1,
+    "half_true": 2,
     "mostly_false": 7,
     "false": 3,
     "unrated": 1
@@ -1252,11 +1239,11 @@
    "last_review_date": "2026-08-24"
   },
   "Q587370": {
-   "n_claims": 9,
+   "n_claims": 12,
    "verdicts": {
-    "true": 2,
+    "true": 3,
     "mostly_true": 0,
-    "half_true": 4,
+    "half_true": 6,
     "mostly_false": 2,
     "false": 1,
     "unrated": 0

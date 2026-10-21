@@ -26,8 +26,35 @@ def _read(name: str) -> dict[str, dict[str, str]]:
         return {row["id"]: row for row in csv.DictReader(f)}
 
 
+def load_party_names() -> dict[str, list[dict[str, str]]]:
+    """Noms datés des partis : corrections manuelles d'abord, puis Wikidata (P1448)."""
+    names: dict[str, list[dict[str, str]]] = {}
+    for file in ("party_names_manual.csv", "party_names.csv"):
+        path = SEEDS_DIR / file
+        if not path.exists():
+            continue
+        manual_parties = set(names)  # le fichier manuel fait foi pour les partis qu'il couvre
+        with path.open(encoding="utf-8") as f:
+            for row in csv.DictReader(f):
+                if row["party_id"] not in manual_parties:
+                    names.setdefault(row["party_id"], []).append(row)
+    return names
+
+
+def party_name_at(party: dict[str, str], history: list[dict[str, str]], on: str | None) -> tuple[str, str]:
+    """(nom, sigle) du parti à la date de la déclaration ; à défaut, le nom actuel."""
+    if on:
+        for n in history:
+            k_start, k_end = min(len(n["start_date"]), len(on)), min(len(n["end_date"]), len(on))
+            if n["start_date"] and n["start_date"][:k_start] <= on[:k_start] and \
+                    (not n["end_date"] or on[:k_end] < n["end_date"][:k_end]):
+                return n["name"], n["short_name"] or (party.get("short_name", "") if not n["end_date"] else "")
+    return party.get("name", ""), party.get("short_name", "")
+
+
 def build_facts(conn: sqlite3.Connection, ref: Referential) -> list[dict[str, Any]]:
     sources, parties = _read("sources.csv"), _read("parties.csv")
+    party_names = load_party_names()
     conn.row_factory = sqlite3.Row
     claims = conn.execute(
         f"SELECT * FROM claims WHERE attribution_status IN ({','.join('?' * len(PUBLISHED))})"
@@ -38,11 +65,11 @@ def build_facts(conn: sqlite3.Connection, ref: Referential) -> list[dict[str, An
                                (c["id"],)).fetchall()
         party = ref.party_at(c["person_id"], c["claim_date"])
         p = parties.get(party.party_id or "", {})
+        name, short = party_name_at(p, party_names.get(party.party_id or "", []), c["claim_date"]) if p else (None, None)
         facts.append({
             "id": c["id"],
             "person": {"id": c["person_id"], "name": ref.full_names.get(c["person_id"], "")},
-            "party": {"id": party.party_id, "name": p.get("name"), "short_name": p.get("short_name"),
-                      "status": party.status},
+            "party": {"id": party.party_id, "name": name, "short_name": short, "status": party.status},
             "claim_text": c["text"],
             "claim_date": c["claim_date"],
             "date_precision": c["date_precision"],

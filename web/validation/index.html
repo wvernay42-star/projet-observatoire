@@ -87,6 +87,11 @@ legend { font-weight: 600; font-size: 14px; margin-bottom: 8px; }
 .hist { width: 100%; border-collapse: collapse; font-size: 14px; }
 .hist td, .hist th { padding: 8px 10px; border-bottom: 1px solid var(--line-soft); text-align: left; vertical-align: top; }
 .hist th { font-size: 12px; color: var(--muted); text-transform: uppercase; letter-spacing: .04em; }
+.num { text-align: right; font-variant-numeric: tabular-nums; }
+.stack { display: flex; height: 14px; gap: 1px; border-radius: 3px; overflow: hidden; background: var(--line-soft); }
+.seg-true { background: var(--v-true); } .seg-mostly_true { background: var(--v-mtrue); } .seg-half_true { background: var(--v-half); }
+.seg-mostly_false { background: var(--v-mfalse); } .seg-false { background: var(--v-false); }
+.seg-unrated { background: repeating-linear-gradient(45deg, var(--surface) 0 3px, var(--line) 3px 5px); }
 .toast { position: fixed; left: 50%; transform: translateX(-50%); bottom: calc(16px + env(safe-area-inset-bottom, 0px)); background: var(--fg); color: var(--bg); padding: 10px 16px; border-radius: 6px; font-size: 14px; }
 @media (prefers-reduced-motion: no-preference) { .qi, .tab, .btn { transition: background-color .12s ease; } }
 </style>
@@ -119,6 +124,7 @@ const TABS = [
   { kind: "attributions", label: "Attributions" },
   { kind: "parties", label: "Partis" },
   { kind: "history", label: "Historique" },
+  { kind: "sources", label: "Suivi des sources" },
 ];
 const LEVELS = [
   ["true", "Vrai"], ["mostly_true", "Plutôt vrai"], ["half_true", "À moitié vrai"],
@@ -163,9 +169,10 @@ function render() {
   $("tabs").replaceChildren(...TABS.map((t) => el("button", {
     class: "tab", role: "tab", type: "button", "aria-selected": String(state.tab === t.kind),
     on: { click: () => { state.tab = t.kind; render(); } },
-  }, t.label, " ", el("span", { class: "n", text: "· " + (t.kind === "history" ? decs.length : pending(t.kind).length) }))));
+  }, t.label, t.kind === "sources" ? null : " ", t.kind === "sources" ? null : el("span", { class: "n", text: "· " + (t.kind === "history" ? decs.length : pending(t.kind).length) }))));
 
   if (state.tab === "history") return renderHistory(decs);
+  if (state.tab === "sources") return renderSources();
   const items = pending(state.tab);
   if (!items.find((i) => i.id === state.sel[state.tab])) state.sel[state.tab] = items[0]?.id;
   $("queue").replaceChildren(...(items.length ? items.map((i) => queueRow(i)) :
@@ -260,6 +267,24 @@ async function decide(i, value) {
   } catch (e) {
     toast(e?.code === "invalid_argument" ? "Enregistrement refusé : il faut les droits d'édition." : "Enregistrement impossible, réessayez dans un instant.");
   }
+}
+
+function renderSources() {
+  const items = state.queues.sources?.items || [];
+  const pct = (x) => (x == null ? "—" : Math.round(x * 100) + " %");
+  $("queue").replaceChildren(el("div", { class: "empty", text: "Module A : part de verdicts positifs (vrai, plutôt vrai) par rédaction, pour décider des sources à ajouter. Les rédactions qui publient toute l'échelle sont prioritaires." }));
+  const bar = (counts, total) => el("div", { class: "stack", role: "img", "aria-label": LEVELS.map(([k, n]) => n + " " + (counts[k] || 0)).join(", ") },
+    total ? LEVELS.filter(([k]) => counts[k]).map(([k]) => el("span", { class: "seg seg-" + k, style: "flex:" + counts[k] + " 1 0" })) : el("span", { class: "sub", text: "aucune" }));
+  $("detail").replaceChildren(items.length ? el("div", { style: "overflow-x:auto" }, el("table", { class: "hist" },
+    el("thead", {}, el("tr", {}, ["Rédaction", "Toutes vérifications", "Part positive", "Personnalités", "Part positive", "Répartition (personnalités)", "30 derniers jours", "Dernière"].map((h) => el("th", { text: h })))),
+    el("tbody", {}, items.map((s) => el("tr", {},
+      el("td", {}, el("strong", { text: s.source }), s.full_scale ? el("div", { class: "sub", text: "échelle complète" }) : null),
+      el("td", { class: "num", text: String(s.all_total) }), el("td", { class: "num", text: pct(s.all_positive_share) }),
+      el("td", { class: "num", text: String(s.attributed_total) }), el("td", { class: "num" }, el("strong", { text: pct(s.attributed_positive_share) })),
+      el("td", { style: "min-width:180px" }, bar(s.attributed, s.attributed_total)),
+      el("td", { class: "num", text: String(s.last_30_days) }), el("td", { text: frDate(s.last_review_date) })))))) :
+    el("p", { class: "sub", text: "Le suivi des sources sera déposé à la prochaine routine." }),
+    el("p", { class: "sub", text: "Calculé le " + frDate(state.queues.sources?.generated_at) + ". Part positive = vrai + plutôt vrai, sur l'échelle commune." }));
 }
 
 function renderHistory(decs) {

@@ -3,8 +3,8 @@
     python -m pipeline.validation_sync seed            # prépare les files pour la page
     python -m pipeline.validation_sync apply <dossier>  # applique les décisions téléchargées
 
-`seed` écrit data/review_queue/validation/{ratings,attributions,parties}.json : un document
-par file, chacun avec ses éléments (ids stables). Claude les dépose dans la base de la page
+`seed` écrit data/review_queue/validation/{ratings,attributions,parties,sources}.json : un document
+par file, chacun avec ses éléments (ids stables) ; `sources` est le suivi des sources (module A). Claude les dépose dans la base de la page
 (collection `queues`). La page enregistre chaque décision dans la collection `decisions`
 (un document par élément). `apply` lit ces décisions (fichiers JSON téléchargés) et les écrit
 dans le repo :
@@ -85,11 +85,16 @@ def build_queues(queue_dir: Path = QUEUE_DIR, seeds_dir: Path = SEEDS_DIR) -> di
                         "role": persons.get(c["id"], {}).get("public_role", "")} for c in q["candidates"]],
     } for q in load("attributions")]
 
+    from pipeline.attribute import Referential
+    ref = Referential([], [], [], list(parties.values()))
     party_items = []
     for q in load("parties"):
         pid = q["person"]["id"]
+        on = q["claim_date"] or ""
+        # Seuls les partis qui existaient à la date de la déclaration sont proposés.
         known = [{**party(a["party_id"]), "start_date": a["start_date"], "end_date": a["end_date"]}
-                 for a in affiliations.get(pid, [])]
+                 for a in affiliations.get(pid, []) if not on or ref.party_existed(a["party_id"], on)]
+        q["candidates"] = [c for c in q["candidates"] if not on or ref.party_existed(c, on)]
         party_items.append({
             "id": "p-" + q["claim_id"], "claim_id": q["claim_id"], "claim_text": q["claim_text"],
             "claim_date": q["claim_date"], "person": q["person"], "status": q["status"],
@@ -98,8 +103,49 @@ def build_queues(queue_dir: Path = QUEUE_DIR, seeds_dir: Path = SEEDS_DIR) -> di
         })
 
     now = datetime.now(timezone.utc).isoformat(timespec="seconds")
-    return {kind: {"generated_at": now, "items": items}
-            for kind, items in (("ratings", ratings), ("attributions", attributions), ("parties", party_items))}
+    queues = {kind: {"generated_at": now, "items": items}
+              for kind, items in (("ratings", ratings), ("attributions", attributions), ("parties", party_items))}
+    queues["sources"] = {"generated_at": now, "items": source_stats(seeds_dir)}
+    return queues
+
+
+def source_stats(seeds_dir: Path = SEEDS_DIR, db_path: Path = ROOT / "data" / "observatoire.db") -> list[dict[str, Any]]:
+    """Module A, suivi interne : répartition des verdicts par source, part de verdicts positifs.
+
+    Deux périmètres : toutes les vérifications collectées, et celles rattachées à une
+    personnalité (celles qui comptent dans l'export)."""
+    import sqlite3
+
+    if not db_path.exists():
+        return []
+    sources = {s["id"]: s for s in _read_csv(seeds_dir / "sources.csv")}
+    conn = sqlite3.connect(db_path)
+    rows = conn.execute("""
+        SELECT r.source_id, r.rating_normalized, c.attribution_status IN ('auto_sure', 'validated') AS attributed,
+               COUNT(*), MAX(r.review_date)
+        FROM reviews r LEFT JOIN claims c ON c.id = r.claim_id
+        GROUP BY r.source_id, r.rating_normalized, attributed""").fetchall()
+    recent = dict(conn.execute("""
+        SELECT source_id, COUNT(*) FROM reviews WHERE review_date >= date('now', '-30 day') GROUP BY source_id""").fetchall())
+    conn.close()
+    stats: dict[str, dict[str, Any]] = {}
+    for source_id, level, attributed, n, last in rows:
+        s = stats.setdefault(source_id, {
+            "source_id": source_id, "source": sources.get(source_id, {}).get("name", source_id),
+            "full_scale": sources.get(source_id, {}).get("full_scale") == "1",
+            "all": {lv: 0 for lv in LEVELS}, "attributed": {lv: 0 for lv in LEVELS},
+            "last_review_date": "", "last_30_days": recent.get(source_id, 0)})
+        s["all"][level] += n
+        if attributed:
+            s["attributed"][level] += n
+        s["last_review_date"] = max(s["last_review_date"], last or "")
+    for s in stats.values():
+        for scope in ("all", "attributed"):
+            total = sum(s[scope].values())
+            positive = s[scope]["true"] + s[scope]["mostly_true"]
+            s[scope + "_total"] = total
+            s[scope + "_positive_share"] = round(positive / total, 3) if total else None
+    return sorted(stats.values(), key=lambda s: -s["attributed_total"])
 
 
 def seed(out_dir: Path = OUT_DIR) -> None:
@@ -127,6 +173,9 @@ def apply(decisions: list[dict[str, Any]], queues: dict[str, dict[str, Any]], se
     known_ratings = {(r["source_id"], label_key(r["rating_original"])) for r in _read_csv(seeds_dir / "rating_map.csv")}
     known_urls = {r["review_url"] for r in _read_csv(attributions_csv)} if attributions_csv.exists() else set()
     known_parties = {(a["person_id"], a["start_date"]) for a in _read_csv(seeds_dir / "affiliations_manual.csv")}
+    from pipeline.attribute import Referential
+    parties_path = seeds_dir / "parties.csv"
+    periods = Referential([], [], [], _read_csv(parties_path) if parties_path.exists() else [])
     skipped = 0
     for d in decisions:
         kind, item = items.get(d.get("item_id"), (None, None))
@@ -147,7 +196,8 @@ def apply(decisions: list[dict[str, Any]], queues: dict[str, dict[str, Any]], se
                     attribution_rows.append({"review_url": r["url"], "decision": value, "decided_at": at,
                                              "note": d.get("note", "")})
         elif kind == "parties" and item["claim_date"] and \
-                (value == NO_PARTY or value in {c["id"] for c in item["candidates"]} | {a["id"] for a in item["known_affiliations"]}):
+                (value == NO_PARTY or (value in {c["id"] for c in item["candidates"]} | {a["id"] for a in item["known_affiliations"]}
+                                       and periods.party_existed(value, item["claim_date"]))):
             key = (item["person"]["id"], item["claim_date"])
             if key not in known_parties:
                 known_parties.add(key)
@@ -177,7 +227,7 @@ def main() -> None:
         raw = [json.loads(p.read_text(encoding="utf-8")) for p in sorted(args.decisions_dir.rglob("*.json"))]
         decisions = [d["data"] if isinstance(d.get("data"), dict) else d for d in raw]
         queues = {kind: json.loads((OUT_DIR / f"{kind}.json").read_text(encoding="utf-8"))
-                  for kind in ("ratings", "attributions", "parties")}
+                  for kind in ("ratings", "attributions", "parties")}  # « sources » : suivi, sans décision
         print(apply(decisions, queues))
 
 

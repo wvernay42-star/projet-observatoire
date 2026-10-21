@@ -23,3 +23,10 @@
   des sites français est indispensable (accès réseau à ouvrir dans l'environnement cloud).
 - Les Surligneurs publient une phrase explicative au lieu d'un verdict court → « Non classable »
   sauf règle dédiée (leur `ratingValue` est à étudier).
+
+## 2026-10-21 (après-midi)
+
+- Capacité de validation humaine : environ 100 éléments par jour (porteur du projet).
+- Module B (V2) : thème pilote **finances publiques**.
+- Parti affiché = affiliation datée en vigueur à la date de la déclaration, dans la période
+  d'existence du parti, sous le nom qu'il portait à cette date.
