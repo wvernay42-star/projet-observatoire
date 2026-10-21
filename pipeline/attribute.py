@@ -25,6 +25,7 @@ _VAGUE = re.compile(
     r"reseaux sociaux|viral|virale)\b"
 )
 _VAGUE_START = re.compile(r"^(des|un|une|les|le|la|l|d)\s")
+_VAGUE_WHOLE = re.compile(r"^(x|multiples?|sources? multiples?|plusieurs personnes|divers|inconnu|anonyme|\W*)$")
 # « X sur TF1 », « X, député RN », « X (LFI) », « le ministre X » : on retire le contexte.
 _CONTEXT = [
     re.compile(r"\s*\(.*?\)\s*"),
@@ -96,7 +97,7 @@ class Referential:
             return Attribution("to_review", candidates=tuple(sorted(found)),
                                reason="nom retrouvé après retrait du contexte")
 
-        if _VAGUE.search(key) or _VAGUE_START.match(key):
+        if _VAGUE.search(key) or _VAGUE_START.match(key) or _VAGUE_WHOLE.match(key):
             return Attribution("rejected", reason="libellé vague")
 
         tokens = stripped.split()

@@ -1,0 +1,98 @@
+{
+ "claims": [
+  {
+   "text": "L’image d’octogénaires agressés et dévêtus à Paris le 17 octobre",
+   "claimant": "Sources multiples",
+   "claimDate": "2026-10-17T00:00:00Z",
+   "claimReview": [
+    {
+     "publisher": {
+      "name": "AFP Factuel",
+      "site": "factuel.afp.com"
+     },
+     "url": "https://factuel.afp.com/doc.afp.com.D3QZ9NQ",
+     "title": "Une photo d'un couple d'octogénaires dépouillés le 17 octobre ? C'est de l'IA",
+     "reviewDate": "2026-10-20T13:51:00Z",
+     "textualRating": "Image générée par IA",
+     "languageCode": "fr"
+    }
+   ]
+  },
+  {
+   "text": "Une vidéo d'une manifestation massive en Grèce",
+   "claimant": "Sources multiples",
+   "claimDate": "2026-10-07T00:00:00Z",
+   "claimReview": [
+    {
+     "publisher": {
+      "name": "AFP Factuel",
+      "site": "factuel.afp.com"
+     },
+     "url": "https://factuel.afp.com/doc.afp.com.D38H463",
+     "title": "Attention à ces vidéos censées montrer de récentes manifestations en Grèce",
+     "reviewDate": "2026-10-19T17:50:00Z",
+     "textualRating": "Faux",
+     "languageCode": "fr"
+    }
+   ]
+  },
+  {
+   "text": "Des ministres menacent les manifestants avant le 17 octobre",
+   "claimant": "Multiple",
+   "claimDate": "2026-10-12T22:00:00Z",
+   "claimReview": [
+    {
+     "publisher": {
+      "name": "Poligraph",
+      "site": "poligraph.fr"
+     },
+     "url": "https://poligraph.fr/factchecks/2026-10-14-mobilisation-du-17-octobre-gare-a-ces-fausses-citations-de",
+     "title": "Faux — Mobilisation du 17 octobre : gare à ces fausses citations de ...",
+     "reviewDate": "2026-10-14T00:00:00Z",
+     "textualRating": "Faux",
+     "languageCode": "fr"
+    },
+    {
+     "publisher": {
+      "name": "DE FACTO",
+      "site": "defacto-observatoire.fr"
+     },
+     "url": "https://defacto-observatoire.fr/Medias/Factuel/Fact-checks/Mobilisation-du-17-octobre-gare-a-ces-fausses-citations-de-ministres-menacant-les-manifestants/",
+     "title": "Mobilisation du 17 octobre : gare à ces fausses citations de ministres menaçant les manifestants",
+     "reviewDate": "2026-10-16T14:08:48Z",
+     "textualRating": "Faux",
+     "languageCode": "fr"
+    },
+    {
+     "publisher": {
+      "name": "AFP Factuel",
+      "site": "factuel.afp.com"
+     },
+     "url": "https://factuel.afp.com/doc.afp.com.D3633ZR",
+     "title": "Mobilisation du 17 octobre : gare à ces fausses citations de ministres menaçant les manifestants",
+     "reviewDate": "2026-10-14T17:41:00Z",
+     "textualRating": "Faux",
+     "languageCode": "fr"
+    }
+   ]
+  },
+  {
+   "text": "La visualisation de l'Elysée est masquée sur Google Maps avant le 17 octobre",
+   "claimant": "Multiple",
+   "claimDate": "2026-10-14T00:00:00Z",
+   "claimReview": [
+    {
+     "publisher": {
+      "name": "AFP Factuel",
+      "site": "factuel.afp.com"
+     },
+     "url": "https://factuel.afp.com/doc.afp.com.D3CC2WE",
+     "title": "Non, le palais de l'Élysée n'a pas été \"censuré\" sur Google Maps à l'approche du 17 octobre",
+     "reviewDate": "2026-10-16T13:12:00Z",
+     "textualRating": "Faux",
+     "languageCode": "fr"
+    }
+   ]
+  }
+ ]
+}

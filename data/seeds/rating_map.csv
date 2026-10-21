@@ -1,21 +1,113 @@
 source_id,rating_original,rating_normalized,decided_by
 afp_factuel,Vrai,true,rule
 afp_factuel,C'est vrai,true,rule
+afp_factuel,Correct,true,rule
+afp_factuel,Plutôt vrai,mostly_true,rule
+afp_factuel,À moitié vrai,half_true,rule
+afp_factuel,Imprécis,half_true,rule
+afp_factuel,Plutôt faux,mostly_false,rule
+afp_factuel,Trompeur,mostly_false,rule
+afp_factuel,Exagéré,mostly_false,rule
 afp_factuel,Faux,false,rule
 afp_factuel,C'est faux,false,rule
+afp_factuel,Inventé,false,rule
+afp_factuel,Manque de contexte,unrated,rule
+afp_factuel,Satire,unrated,rule
+afp_factuel,Montage,unrated,rule
+afp_factuel,Invérifiable,unrated,rule
 les_decodeurs,Vrai,true,rule
 les_decodeurs,C'est vrai,true,rule
+les_decodeurs,Correct,true,rule
+les_decodeurs,Plutôt vrai,mostly_true,rule
+les_decodeurs,À moitié vrai,half_true,rule
+les_decodeurs,Imprécis,half_true,rule
+les_decodeurs,Plutôt faux,mostly_false,rule
+les_decodeurs,Trompeur,mostly_false,rule
+les_decodeurs,Exagéré,mostly_false,rule
 les_decodeurs,Faux,false,rule
 les_decodeurs,C'est faux,false,rule
+les_decodeurs,Inventé,false,rule
+les_decodeurs,Manque de contexte,unrated,rule
+les_decodeurs,Satire,unrated,rule
+les_decodeurs,Montage,unrated,rule
+les_decodeurs,Invérifiable,unrated,rule
 liberation_checknews,Vrai,true,rule
 liberation_checknews,C'est vrai,true,rule
+liberation_checknews,Correct,true,rule
+liberation_checknews,Plutôt vrai,mostly_true,rule
+liberation_checknews,À moitié vrai,half_true,rule
+liberation_checknews,Imprécis,half_true,rule
+liberation_checknews,Plutôt faux,mostly_false,rule
+liberation_checknews,Trompeur,mostly_false,rule
+liberation_checknews,Exagéré,mostly_false,rule
 liberation_checknews,Faux,false,rule
 liberation_checknews,C'est faux,false,rule
+liberation_checknews,Inventé,false,rule
+liberation_checknews,Manque de contexte,unrated,rule
+liberation_checknews,Satire,unrated,rule
+liberation_checknews,Montage,unrated,rule
+liberation_checknews,Invérifiable,unrated,rule
 franceinfo_vraioufake,Vrai,true,rule
 franceinfo_vraioufake,C'est vrai,true,rule
+franceinfo_vraioufake,Correct,true,rule
+franceinfo_vraioufake,Plutôt vrai,mostly_true,rule
+franceinfo_vraioufake,À moitié vrai,half_true,rule
+franceinfo_vraioufake,Imprécis,half_true,rule
+franceinfo_vraioufake,Plutôt faux,mostly_false,rule
+franceinfo_vraioufake,Trompeur,mostly_false,rule
+franceinfo_vraioufake,Exagéré,mostly_false,rule
 franceinfo_vraioufake,Faux,false,rule
 franceinfo_vraioufake,C'est faux,false,rule
+franceinfo_vraioufake,Inventé,false,rule
+franceinfo_vraioufake,Manque de contexte,unrated,rule
+franceinfo_vraioufake,Satire,unrated,rule
+franceinfo_vraioufake,Montage,unrated,rule
+franceinfo_vraioufake,Invérifiable,unrated,rule
 les_surligneurs,Vrai,true,rule
 les_surligneurs,C'est vrai,true,rule
+les_surligneurs,Correct,true,rule
+les_surligneurs,Plutôt vrai,mostly_true,rule
+les_surligneurs,À moitié vrai,half_true,rule
+les_surligneurs,Imprécis,half_true,rule
+les_surligneurs,Plutôt faux,mostly_false,rule
+les_surligneurs,Trompeur,mostly_false,rule
+les_surligneurs,Exagéré,mostly_false,rule
 les_surligneurs,Faux,false,rule
 les_surligneurs,C'est faux,false,rule
+les_surligneurs,Inventé,false,rule
+les_surligneurs,Manque de contexte,unrated,rule
+les_surligneurs,Satire,unrated,rule
+les_surligneurs,Montage,unrated,rule
+les_surligneurs,Invérifiable,unrated,rule
+tf1info_verificateurs,Vrai,true,rule
+tf1info_verificateurs,C'est vrai,true,rule
+tf1info_verificateurs,Correct,true,rule
+tf1info_verificateurs,Plutôt vrai,mostly_true,rule
+tf1info_verificateurs,À moitié vrai,half_true,rule
+tf1info_verificateurs,Imprécis,half_true,rule
+tf1info_verificateurs,Plutôt faux,mostly_false,rule
+tf1info_verificateurs,Trompeur,mostly_false,rule
+tf1info_verificateurs,Exagéré,mostly_false,rule
+tf1info_verificateurs,Faux,false,rule
+tf1info_verificateurs,C'est faux,false,rule
+tf1info_verificateurs,Inventé,false,rule
+tf1info_verificateurs,Manque de contexte,unrated,rule
+tf1info_verificateurs,Satire,unrated,rule
+tf1info_verificateurs,Montage,unrated,rule
+tf1info_verificateurs,Invérifiable,unrated,rule
+20minutes_fakeoff,Vrai,true,rule
+20minutes_fakeoff,C'est vrai,true,rule
+20minutes_fakeoff,Correct,true,rule
+20minutes_fakeoff,Plutôt vrai,mostly_true,rule
+20minutes_fakeoff,À moitié vrai,half_true,rule
+20minutes_fakeoff,Imprécis,half_true,rule
+20minutes_fakeoff,Plutôt faux,mostly_false,rule
+20minutes_fakeoff,Trompeur,mostly_false,rule
+20minutes_fakeoff,Exagéré,mostly_false,rule
+20minutes_fakeoff,Faux,false,rule
+20minutes_fakeoff,C'est faux,false,rule
+20minutes_fakeoff,Inventé,false,rule
+20minutes_fakeoff,Manque de contexte,unrated,rule
+20minutes_fakeoff,Satire,unrated,rule
+20minutes_fakeoff,Montage,unrated,rule
+20minutes_fakeoff,Invérifiable,unrated,rule

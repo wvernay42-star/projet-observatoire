@@ -1,6 +1,8 @@
 id,name,country,url,full_scale,licence,connector
-afp_factuel,AFP Factuel,FR,https://factuel.afp.com/,,à vérifier,jsonld_crawler
-les_decodeurs,Les Décodeurs (Le Monde),FR,https://www.lemonde.fr/les-decodeurs/,,à vérifier,jsonld_crawler
-liberation_checknews,Libération CheckNews,FR,https://www.liberation.fr/checknews/,,à vérifier,jsonld_crawler
-franceinfo_vraioufake,franceinfo Vrai ou Fake,FR,https://www.franceinfo.fr/vrai-ou-fake/,,à vérifier,jsonld_crawler
-les_surligneurs,Les Surligneurs,FR,https://lessurligneurs.eu/,,à vérifier,jsonld_crawler
+afp_factuel,AFP Factuel,FR,https://factuel.afp.com/,,à vérifier,google_factcheck
+les_decodeurs,Les Décodeurs (Le Monde),FR,https://www.lemonde.fr/les-decodeurs/,,à vérifier,google_factcheck
+liberation_checknews,Libération CheckNews,FR,https://www.liberation.fr/checknews/,,à vérifier,google_factcheck
+franceinfo_vraioufake,franceinfo Vrai ou Fake,FR,https://www.franceinfo.fr/vrai-ou-fake/,1,à vérifier,google_factcheck
+les_surligneurs,Les Surligneurs,FR,https://lessurligneurs.eu/,,à vérifier,google_factcheck
+tf1info_verificateurs,TF1 Info – Les Vérificateurs,FR,https://www.tf1info.fr/les-verificateurs/,1,à vérifier,google_factcheck
+20minutes_fakeoff,20 Minutes – Fake Off,FR,https://www.20minutes.fr/fake-off/,1,à vérifier,google_factcheck

@@ -9,13 +9,43 @@ Les décisions durables sont aussi consignées dans [decisions.md](decisions.md)
 | # | Étape | État |
 |---|---|---|
 | 1 | Initialiser le repo, schema.sql, seeds vides | ✅ fait (20/10) |
-| 2 | connectors/base.py + jsonld_crawler (AFP Factuel) | ⚠️ base.py fait ; crawler remis en question (voir 21/10) |
+| 2 | connectors/base.py + jsonld_crawler (AFP Factuel) | ✅ base.py ; crawler abandonné au profit de google_factcheck (21/10) |
 | 3 | rating_map.csv + ratings.py | ✅ fait (21/10) — 15 propositions à valider |
 | 4 | persons / parties / affiliations + attribute.py | ✅ fait (21/10) — 67 724 personnes, partis à valider pour beaucoup |
-| 5 | Autres sites FR, google_factcheck, datacommons_feed, dedupe.py | 🟡 datacommons_feed fait ; google_factcheck attend une clé API |
+| 5 | Autres sites FR, google_factcheck, datacommons_feed, dedupe.py | 🟡 google_factcheck + datacommons_feed faits ; dedupe.py à faire |
 | 6 | run_daily.py + export.py, routine sur 90 jours | ⏳ |
 | 7 | web/beta/index.html (maquette A) | ⏳ |
 | — | Page web de validation (maquette faite) | ⏳ |
+
+## 2026-10-21 (nuit) — connecteur google_factcheck, premières données récentes
+
+**Décision** : TF1 Info (Les Vérificateurs) et 20 Minutes (Fake Off) ajoutés aux sources ;
+toutes les sources passent par `google_factcheck` (sources.csv, colonne `connector`).
+`full_scale = 1` pour TF1 Info, franceinfo et 20 Minutes (verdicts positifs observés).
+
+**rating_map.csv modifié** : ajout, pour les 7 sources, des libellés donnés en exemple dans le
+tableau « Échelle de verdicts » du cadrage (Vrai, Correct, Plutôt vrai, À moitié vrai, Imprécis,
+Plutôt faux, Trompeur, Exagéré, Faux, Inventé, Manque de contexte, Satire, Montage, Invérifiable)
+→ 112 règles. « TROMPEUR » (Décodeurs) retiré des propositions puisque couvert par le cadrage.
+Nouvelles propositions à valider : « En partie vrai » (TF1), « C'est plus compliqué » (franceinfo),
+« Image générée par IA », « Photo manipulée », « Vidéo manipulée », « Infondé » (AFP).
+
+**Collecte réelle sur 90 jours** (`python -m pipeline.connectors.google_factcheck --days 90`) :
+- 242 vérifications : AFP 96, TF1 Info 97, 20 Minutes 41, franceinfo 8.
+- Verdicts : faux 150, plutôt faux 44, vrai 6, plutôt vrai 4, non classable 38
+  (dont 37 en attente de validation de libellé). Le déséquilibre vers « faux » prévu au
+  cadrage se confirme.
+- Attribution : 25 `auto_sure`, 6 `to_review` (nom + fonction, ex. « Julien Odoul, député RN »),
+  211 écartées (166 libellés vagues : « Sources multiples », « X », publications de réseaux
+  sociaux… ; 33 hors référentiel, surtout des comptes étrangers ; 12 sans claimant).
+- 31 déclarations de personnalités au total : Le Pen, Mélenchon, Retailleau, Bardella,
+  Tondelier, Panot, Macron, Glucksmann, Knafo, Bergé, Lecornu, Hollande, Philippot…
+- 76 vérifications sur 242 n'ont pas de date de déclaration → repli sur la date de vérification.
+- AFP et 20 Minutes vérifient surtout des contenus viraux ; TF1 Info et franceinfo
+  apportent l'essentiel des déclarations de personnalités.
+
+**Autres éditeurs vus dans l'API** (non suivis) : Poligraph (poligraph.fr), DE FACTO
+(defacto-observatoire.fr).
 
 ## 2026-10-21 (soir) — clé Google, référentiel des personnalités
 

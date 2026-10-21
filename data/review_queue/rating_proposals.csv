@@ -2,7 +2,6 @@ source_id,rating_original,proposed_normalized,rationale,occurrences
 les_decodeurs,C’EST PLUS COMPLIQUÉ,half_true,Libellé intermédiaire des Décodeurs (ratingValue 1 sur 2),4
 les_decodeurs,C'est compliqué,half_true,Variante du précédent,1
 les_decodeurs,Très exagéré,mostly_false,"Exagération forte, sans être inventé",1
-les_decodeurs,TROMPEUR,mostly_false,Correspond à l'exemple « Trompeur » du cadrage,1
 les_decodeurs,Discutable,half_true,"ratingValue 1 sur 2, comme « C'est plus compliqué »",1
 les_decodeurs,DOUTEUX,unrated,"Exprime un doute, pas une conclusion vrai/faux",1
 les_decodeurs,INFONDE,false,ratingValue 0 sur 2,1
@@ -13,3 +12,9 @@ les_decodeurs,Ce sondage n'existe pas.,false,Phrase équivalant à « inventé �
 les_decodeurs,"Les jeux concours se multiplient sur Facebook et, pourtant, il s’agit souvent d’escroqueries.",unrated,"Phrase explicative, pas un verdict",1
 afp_factuel,Peu crédible,mostly_false,Doute fort sans réfutation complète,1
 les_surligneurs,*,unrated,"Les Surligneurs publient une phrase explicative au lieu d'un verdict ; ratingValue (1, 2, 4) sans échelle déclarée",14
+tf1info_verificateurs,En partie vrai,half_true,Niveau intermédiaire de l'échelle TF1 Info,16
+franceinfo_vraioufake,C’est plus compliqué,half_true,Même libellé que chez Les Décodeurs,3
+afp_factuel,Image générée par IA,unrated,"Nature du contenu (montage), pas un verdict vrai/faux",15
+afp_factuel,Photo manipulée,unrated,Équivaut à « Montage » du cadrage,3
+afp_factuel,Vidéo manipulée,unrated,Équivaut à « Montage » du cadrage,3
+afp_factuel,Infondé,false,Même proposition que « INFONDE » des Décodeurs,1

@@ -1,0 +1,94 @@
+{
+ "claims": [
+  {
+   "text": "Seuls 38 bacheliers \"n'ont pas eu de solution\" sur Parcoursup en 2025",
+   "claimant": "Philippe Baptiste",
+   "claimDate": "2026-10-14T00:00:00Z",
+   "claimReview": [
+    {
+     "publisher": {
+      "name": "franceinfo",
+      "site": "franceinfo.fr"
+     },
+     "url": "https://www.franceinfo.fr/vrai-ou-fake/vrai-ou-faux-n-y-a-t-il-eu-que-38-bacheliers-qui-n-ont-pas-eu-de-solution-sur-parcoursup-en-2025-comme-l-affirme-le-gouvernement_8239924.html",
+     "title": "VRAI OU FAUX. N'y a-t-il eu que 38 bacheliers qui \"n'ont pas eu de solution\" sur Parcoursup en 2025, comme l'affirme le gouvernement ?",
+     "reviewDate": "2026-10-17T00:00:00Z",
+     "textualRating": "C’est plus compliqué",
+     "languageCode": "fr"
+    }
+   ]
+  },
+  {
+   "text": "Conflit d'intérêt, liens avec Israël, votes en faveur des pesticides… On a vérifié les affirmations de Mathilde Panot sur Octobre rose",
+   "claimant": "Mathilde Panot",
+   "claimDate": "2026-10-09T00:00:00Z",
+   "claimReview": [
+    {
+     "publisher": {
+      "name": "franceinfo",
+      "site": "franceinfo.fr"
+     },
+     "url": "https://www.franceinfo.fr/vrai-ou-fake/vrai-ou-faux-conflit-d-interets-liens-avec-israel-votes-en-faveur-des-pesticides-on-a-verifie-les-affirmations-de-mathilde-panot-sur-octobre-rose_8236957.html",
+     "title": "VRAI OU FAUX. Conflit d'intérêts, liens avec Israël, votes en faveur des pesticides… On a vérifié les affirmations de Mathilde Panot sur Octobre rose",
+     "reviewDate": "2026-10-16T00:00:00Z",
+     "textualRating": "C’est plus compliqué",
+     "languageCode": "fr"
+    }
+   ]
+  },
+  {
+   "text": "\"Aujourd'hui, 70% des Français sont éligibles au parc social et seulement 11% en bénéficient\"",
+   "claimant": "Marine Le Pen",
+   "claimDate": "2026-09-13T00:00:00Z",
+   "claimReview": [
+    {
+     "publisher": {
+      "name": "franceinfo",
+      "site": "franceinfo.fr"
+     },
+     "url": "https://www.franceinfo.fr/economie/vrai-ou-faux-est-il-vrai-que-70-des-francais-sont-eligibles-a-un-logement-du-parc-social-et-que-seulement-11-d-entre-eux-en-beneficient-comme-l-affirme-marine-le-pen_8195210.html",
+     "title": "VRAI OU FAUX. Est-il vrai que \"70% des Français sont éligibles\" à un logement du parc social et que \"seulement 11% d'entre eux en bénéficient\", comme l'affirme Marine Le Pen ?",
+     "reviewDate": "2026-09-17T00:00:00Z",
+     "textualRating": "Plutôt Faux",
+     "languageCode": "fr"
+    }
+   ]
+  },
+  {
+   "text": "Ça suffit le coup du soit disant prix Nobel d'économie. Ce n'est pas le même prix Nobel que celui de médecine ou de physique. C'est le prix créé par une banque suédoise qu'ils ont eux-mêmes appelé \"Nobel\" en prétendu hommage à l'inventeur de la dynamite.",
+   "claimant": "Jean-Luc Mélenchon",
+   "claimDate": "2026-09-06T00:00:00Z",
+   "claimReview": [
+    {
+     "publisher": {
+      "name": "franceinfo",
+      "site": "franceinfo.fr"
+     },
+     "url": "https://www.franceinfo.fr/monde/prix-nobel/vrai-ou-faux-le-nobel-d-economie-est-il-un-soi-disant-prix-nobel-comme-le-juge-jean-luc-melenchon_8182844.html",
+     "title": "VRAI OU FAUX. Le \"Nobel\" d'économie est-il un \"soi-disant\" prix Nobel, comme le juge Jean-Luc Mélenchon ?",
+     "reviewDate": "2026-09-09T00:00:00Z",
+     "textualRating": "Plutôt Vrai",
+     "languageCode": "fr"
+    }
+   ]
+  },
+  {
+   "text": "Une entreprise doit payer 483 euros pour augmenter de 100 euros net le salaire d'un employé payé au Smic",
+   "claimant": "Dominique Schelcher",
+   "claimDate": "2026-09-01T00:00:00Z",
+   "claimReview": [
+    {
+     "publisher": {
+      "name": "franceinfo",
+      "site": "franceinfo.fr"
+     },
+     "url": "https://www.franceinfo.fr/vrai-ou-fake/vrai-ou-faux-une-entreprise-doit-elle-debourser-483-euros-pour-augmenter-de-100-euros-net-le-salaire-d-un-employe-paye-au-smic-comme-l-affirme-le-pdg-de-cooperative-u_8173814.html",
+     "title": "VRAI OU FAUX. Une entreprise doit-elle débourser \"483 euros\" pour augmenter de \"100 euros net\" le salaire d'un employé payé au smic, comme l'affirme le PDG de Coopérative U ?",
+     "reviewDate": "2026-09-04T00:00:00Z",
+     "textualRating": "Plutôt Faux",
+     "languageCode": "fr"
+    }
+   ]
+  }
+ ]
+}

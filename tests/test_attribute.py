@@ -39,7 +39,8 @@ def test_name_with_context_goes_to_review(ref, claimant):
 
 
 @pytest.mark.parametrize("claimant", ["Des internautes sur les réseaux sociaux", "Une internaute sur Facebook",
-                                      "Plusieurs sites dont Wikistrike", "un élu RN", "Anti-Macron / Facebook"])
+                                      "Plusieurs sites dont Wikistrike", "un élu RN", "Anti-Macron / Facebook",
+                                      "Sources multiples", "Multiple", "X", "-"])
 def test_vague_labels_are_never_attributed(ref, claimant):
     assert ref.attribute(claimant).status == "rejected"
 
