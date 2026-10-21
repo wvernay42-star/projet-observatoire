@@ -106,11 +106,19 @@ class Referential:
         if not on:
             return PartyAtDate(None, "no_date")
         on = on[:10]
+
+        def started(start: str) -> bool:  # comparé à la précision la plus faible des deux dates
+            n = min(len(start), len(on))
+            return not start or start[:n] <= on[:n]
+
+        def not_ended(end: str) -> bool:
+            n = min(len(end), len(on))
+            return not end or on[:n] <= end[:n]
+
         current = {
             a["party_id"]
             for a in self.affiliations.get(person_id, [])
-            if (not a["start_date"] or a["start_date"][: len(on)] <= on)
-            and (not a["end_date"] or on <= a["end_date"][: len(on)])
+            if started(a["start_date"]) and not_ended(a["end_date"])
         }
         if len(current) == 1:
             return PartyAtDate(next(iter(current)), "ok")

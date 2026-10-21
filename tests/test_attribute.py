@@ -68,3 +68,22 @@ def test_party_unknown_or_ambiguous_is_never_guessed(ref):
 def test_partial_dates_compare_on_their_precision(ref):
     assert ref.party_at("Q5", "2024").status == "ambiguous"  # année du changement de parti
     assert ref.party_at("Q5", "2023").party_id == "LR"
+
+
+def test_year_precision_dates_do_not_invent_a_day():
+    ref = Referential(PERSONS, [
+        {"person_id": "Q3", "party_id": "A", "start_date": "2010", "end_date": "2015", "source_url": ""},
+        {"person_id": "Q3", "party_id": "B", "start_date": "2015", "end_date": "", "source_url": ""},
+    ])
+    assert ref.party_at("Q3", "2012-03-01").party_id == "A"
+    assert ref.party_at("Q3", "2015-06-01").status == "ambiguous"  # changement dans l'année
+    assert ref.party_at("Q3", "2016-01-01").party_id == "B"
+
+
+def test_wikidata_date_precision():
+    from pipeline.referential import day
+    assert day("2015-01-01T00:00:00Z", "9") == "2015"
+    assert day("2015-06-01T00:00:00Z", "10") == "2015-06"
+    assert day("2015-06-21T00:00:00Z", "11") == "2015-06-21"
+    assert day("1990-01-01T00:00:00Z", "8") == ""
+    assert day(None) == ""

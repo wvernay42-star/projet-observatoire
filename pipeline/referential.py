@@ -2,7 +2,8 @@
 
 Écrit data/seeds/persons.csv, parties.csv et affiliations.csv. Périmètre : toute personne
 ayant exercé depuis 2017 une fonction publique nationale ou locale (député, sénateur,
-eurodéputé français, membre du gouvernement, dirigeant de parti, maire).
+eurodéputé français, président de la République, membre du gouvernement, dirigeant de
+parti, maire).
 
 Les affiliations partisanes viennent de la propriété P102 (« membre du parti politique »)
 avec ses dates ; une affiliation sans date reste sans date (jamais inventée).
@@ -59,10 +60,21 @@ ROLES: dict[str, tuple[str, str]] = {
   {_WINDOW.replace("{since_start}", "2014-01-01T00:00:00Z")}
 """),
     "gouvernement": ("membre du gouvernement", f"""
-  ?cab wdt:P31 wd:Q1450662.
+  {{ ?cab wdt:P31 wd:Q1450662.
   OPTIONAL {{ ?cab wdt:P571 ?cabStart }} OPTIONAL {{ ?cab wdt:P576 ?cabEnd }}
   FILTER((BOUND(?cabEnd) && ?cabEnd >= {SINCE}) || (!BOUND(?cabEnd) && BOUND(?cabStart) && ?cabStart >= {SINCE}))
   ?p p:P39 ?st. ?st pq:P5054 ?cab.
+}} UNION {{
+  ?pos wdt:P1001 wd:Q142; rdfs:label ?posLabel.
+  FILTER(LANG(?posLabel) = "fr" && (STRSTARTS(?posLabel, "ministre") || STRSTARTS(?posLabel, "Premier ministre")
+    || STRSTARTS(?posLabel, "secrétaire d'État") || STRSTARTS(?posLabel, "secrétaire d’État")
+    || STRSTARTS(?posLabel, "porte-parole du gouvernement")))
+  ?p p:P39 ?st. ?st ps:P39 ?pos.
+  {_WINDOW.replace("{since_start}", "2012-01-01T00:00:00Z")} }}
+"""),
+    "president": ("président de la République", f"""
+  ?p p:P39 ?st. ?st ps:P39 wd:Q191954.
+  {_WINDOW.replace("{since_start}", "2007-01-01T00:00:00Z")}
 """),
     "chef_parti": ("dirigeant de parti", f"""
   ?org wdt:P31/wdt:P279* wd:Q7278; wdt:P17 wd:Q142; p:P488 ?st. ?st ps:P488 ?p.
@@ -87,9 +99,16 @@ def qid(uri: str) -> str:
     return uri.rsplit("/", 1)[-1]
 
 
-def day(value: str | None) -> str:
-    """'2017-06-21T00:00:00Z' -> '2017-06-21' ; valeur absente -> ''."""
-    return value[:10] if value and value[:1].isdigit() else ""
+def day(value: str | None, precision: str | None = "11") -> str:
+    """Date Wikidata à sa précision réelle : jour '2017-06-21', mois '2017-06', année '2017'.
+
+    Wikidata stocke une date connue à l'année sous la forme 2017-01-01 : sans sa précision,
+    on inventerait un 1er janvier. Précision plus faible que l'année (décennie…) -> ''.
+    """
+    if not value or not value[:1].isdigit():
+        return ""
+    cut = {"11": 10, "10": 7, "9": 4}.get(precision or "11")
+    return value[:cut] if cut else ""
 
 
 class Wikidata:
@@ -155,19 +174,20 @@ def fetch_names(wd: Wikidata, persons: dict[str, Person]) -> None:
 def fetch_affiliations(wd: Wikidata, person_ids: Iterable[str]) -> list[dict[str, str]]:
     affiliations = []
     for ids in batches(person_ids):
-        rows = wd.query(f"""SELECT ?p ?party ?start ?end WHERE {{
+        rows = wd.query(f"""SELECT ?p ?party ?start ?startPrec ?end ?endPrec WHERE {{
   VALUES ?p {{ {values(ids)} }}
   ?p p:P102 ?st. ?st ps:P102 ?party.
   FILTER NOT EXISTS {{ ?st wikibase:rank wikibase:DeprecatedRank }}
-  OPTIONAL {{ ?st pq:P580 ?start }} OPTIONAL {{ ?st pq:P582 ?end }}
+  OPTIONAL {{ ?st pqv:P580 [ wikibase:timeValue ?start; wikibase:timePrecision ?startPrec ] }}
+  OPTIONAL {{ ?st pqv:P582 [ wikibase:timeValue ?end; wikibase:timePrecision ?endPrec ] }}
 }}""")
         for row in rows:
             pid = qid(row["p"])
             affiliations.append({
                 "person_id": pid,
                 "party_id": qid(row["party"]),
-                "start_date": day(row.get("start")),
-                "end_date": day(row.get("end")),
+                "start_date": day(row.get("start"), row.get("startPrec")),
+                "end_date": day(row.get("end"), row.get("endPrec")),
                 "source_url": f"https://www.wikidata.org/wiki/{pid}#P102",
             })
     return affiliations
