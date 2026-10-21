@@ -1,0 +1,204 @@
+{
+ "@type": "DataFeed",
+ "dataFeedElement": [
+  {
+   "@type": "DataFeedItem",
+   "dateCreated": "2026-10-20T16:24:11.927901+00:00",
+   "item": [
+    {
+     "@context": "http://schema.org",
+     "@type": "ClaimReview",
+     "author": {
+      "@type": "Organization",
+      "name": "المشاهد نت",
+      "url": "https://almushahid.net/"
+     },
+     "claimReviewed": "مقتل مؤذن على يد شقيقه المتحوّث لأنّه لم يقل \"حي على خير العمل\" أثناء الأذان",
+     "datePublished": "2026-10-20",
+     "itemReviewed": {
+      "@type": "Claim",
+      "appearance": [
+       {
+        "@type": "CreativeWork",
+        "url": "https://www.facebook.com/story.php?story_fbid=122328744938213760&id=61556412814735#"
+       },
+       {
+        "@type": "CreativeWork",
+        "url": "https://x.com/AlyfrsyAhmd/status/2112401921206100258?s=20"
+       }
+      ],
+      "author": {
+       "@type": "Person",
+       "name": "قناة يمن شباب"
+      },
+      "datePublished": "2026-10-20",
+      "firstAppearance": {
+       "@type": "CreativeWork",
+       "url": "https://www.facebook.com/story.php?story_fbid=1155645160745638&id=100089004946762#"
+      }
+     },
+     "reviewRating": {
+      "@type": "Rating",
+      "alternateName": "صحيح",
+      "ratingExplanation": "مواطن في المنطقة أخبر المشاهد بتفاصيل الحادثة وصحتها"
+     },
+     "sdPublisher": {
+      "@type": "Organization",
+      "name": "Google Fact Check Tools",
+      "url": "https://g.co/factchecktools"
+     },
+     "url": "https://almushahid.net/145322/"
+    }
+   ],
+   "url": "https://almushahid.net/145322/"
+  },
+  {
+   "@type": "DataFeedItem",
+   "dateModified": "2026-10-16T07:48:40.950147+00:00",
+   "item": null,
+   "url": "https://www.br.de/nachrichten/netzwelt/ki-manipulierte-bilder-das-truegerische-spiel-mit-der-unschaerfe-ein-faktenfuchs,VY1ClWs"
+  },
+  {
+   "@type": "DataFeedItem",
+   "dateCreated": "2020-10-26T14:03:06.060692+00:00",
+   "item": [
+    {
+     "@context": "http://schema.org",
+     "@type": "ClaimReview",
+     "author": {
+      "@type": "Organization",
+      "name": "Les Surligneurs",
+      "url": "https://www.lessurligneurs.eu/"
+     },
+     "claimReviewed": "Il faut définir comme arme par destination les feux d’artifices et mortiers",
+     "datePublished": "2020-10-12",
+     "itemReviewed": {
+      "@type": "Claim",
+      "appearance": [
+       {
+        "@type": "CreativeWork",
+        "url": "https://www.rtl.fr/actu/politique/les-infos-de-5h-gerald-darmanin-veut-interdire-la-vente-de-mortiers-d-artifices-au-public-7800901261?fbclid=IwAR1hKfy3sL43vUCseTwQkKyjp3FOL1wh1y72d8RaB8C6i0qPf4T79N1HBcI"
+       }
+      ],
+      "author": {
+       "@type": "Person",
+       "jobTitle": "Ministre de l'intérieur",
+       "name": "Gérald Darmanin"
+      },
+      "datePublished": "2020-10-13",
+      "name": "Le journal RTL"
+     },
+     "reviewRating": {
+      "@type": "Rating",
+      "alternateName": "Les mortiers d’artifice sont déjà considérés comme des « armes par destination » au sens du code pénal",
+      "ratingExplanation": "Si l’émotion devant la violence de l’agression et le danger représenté par ces engins est compréhensible, la réponse législative préconisée est en revanche inutile.",
+      "ratingValue": "2"
+     },
+     "sdPublisher": {
+      "@type": "Organization",
+      "name": "Google Fact Check Tools",
+      "url": "https://g.co/factchecktools"
+     },
+     "url": "https://lessurligneurs.eu/attaque-du-commissariat-de-champigny-sur-marne-gerald-darmanin-veut-definir-comme-arme-par-destination-les-feux-dartifices-et-mortiers/"
+    }
+   ],
+   "url": "https://www.lessurligneurs.eu/attaque-du-commissariat-de-champigny-sur-marne-gerald-darmanin-veut-definir-comme-arme-par-destination-les-feux-dartifices-et-mortiers/"
+  },
+  {
+   "@type": "DataFeedItem",
+   "dateCreated": "2019-11-28T09:10:59.900266+00:00",
+   "item": [
+    {
+     "@context": "http://schema.org",
+     "@type": "ClaimReview",
+     "author": {
+      "@type": "Organization",
+      "name": "Le Monde",
+      "url": "https://www.lemonde.fr/"
+     },
+     "claimReviewed": "Paris, Lyon, Marseille, votre maire va être élu sans vous ! Loi PLM, insulte à la démocratie",
+     "datePublished": "2019-11-21",
+     "itemReviewed": {
+      "@type": "Claim",
+      "appearance": [
+       {
+        "@type": "CreativeWork",
+        "url": "https://www.liberonsparis.com/petitionbigard/"
+       }
+      ],
+      "author": {
+       "@type": "Person",
+       "name": "Jean-Marie Bigard"
+      },
+      "datePublished": "2019-11-05"
+     },
+     "reviewRating": {
+      "@type": "Rating",
+      "alternateName": "faux"
+     },
+     "sdPublisher": {
+      "@type": "Organization",
+      "name": "Google Fact Check Tools",
+      "url": "https://g.co/factchecktools"
+     },
+     "url": "https://www.lemonde.fr/les-decodeurs/article/2019/11/21/municipales-les-raccourcis-de-jean-marie-bigard-sur-le-mode-de-scrutin-a-paris_6020046_4355770.html"
+    }
+   ],
+   "url": "https://www.lemonde.fr/les-decodeurs/article/2019/11/21/municipales-les-raccourcis-de-jean-marie-bigard-sur-le-mode-de-scrutin-a-paris_6020046_4355770.html"
+  },
+  {
+   "@type": "DataFeedItem",
+   "dateCreated": "2019-03-28T14:58:21.605356+00:00",
+   "item": [
+    {
+     "@context": "http://schema.org",
+     "@type": "ClaimReview",
+     "author": {
+      "@type": "Organization",
+      "name": "AFP Factuel",
+      "url": "https://factuel.afp.com/"
+     },
+     "claimReviewed": "Rachline (FN) ne connaissait pas la revue radicale à laquelle il a donné un entretien",
+     "datePublished": "2017-11-22",
+     "itemReviewed": {
+      "@type": "Claim",
+      "appearance": [
+       {
+        "@type": "CreativeWork",
+        "url": "http://www.rtl.fr/actu/politique/interview-de-rachline-a-une-revue-identitaire-il-ne-savait-pas-dit-le-pen-sur-rtl-7791029302"
+       },
+       {
+        "@type": "CreativeWork",
+        "url": "http://www.frontnational.com/videos/david-rachline-sur-rmc-16/"
+       },
+       {
+        "@type": "CreativeWork",
+        "url": "http://www.frontnational.com/videos/david-rachline-sur-sud-radio-8/"
+       },
+       {
+        "@type": "CreativeWork",
+        "url": "http://www.frontnational.com/videos/david-rachline-sur-cnews-9/"
+       }
+      ],
+      "author": {
+       "@type": "Person",
+       "name": "Rassemblement national"
+      },
+      "datePublished": "2017-11-19"
+     },
+     "reviewRating": {
+      "@type": "Rating",
+      "alternateName": "Peu crédible"
+     },
+     "sdPublisher": {
+      "@type": "Organization",
+      "name": "Google Fact Check Tools",
+      "url": "https://g.co/factchecktools"
+     },
+     "url": "https://factuel.afp.com/rachline-fn-ne-connaissait-pas-la-revue-radicale-laquelle-il-donne-un-entretien-peu-credible"
+    }
+   ],
+   "url": "https://factuel.afp.com/rachline-fn-ne-connaissait-pas-la-revue-radicale-laquelle-il-donne-un-entretien-peu-credible"
+  }
+ ]
+}

@@ -1,1 +1,6 @@
 id,name,country,url,full_scale,licence,connector
+afp_factuel,AFP Factuel,FR,https://factuel.afp.com/,,à vérifier,jsonld_crawler
+les_decodeurs,Les Décodeurs (Le Monde),FR,https://www.lemonde.fr/les-decodeurs/,,à vérifier,jsonld_crawler
+liberation_checknews,Libération CheckNews,FR,https://www.liberation.fr/checknews/,,à vérifier,jsonld_crawler
+franceinfo_vraioufake,franceinfo Vrai ou Fake,FR,https://www.francetvinfo.fr/vrai-ou-fake/,,à vérifier,jsonld_crawler
+les_surligneurs,Les Surligneurs,FR,https://lessurligneurs.eu/,,à vérifier,jsonld_crawler
