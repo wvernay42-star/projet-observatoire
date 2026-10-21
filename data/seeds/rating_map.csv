@@ -111,3 +111,19 @@ tf1info_verificateurs,Invérifiable,unrated,rule
 20minutes_fakeoff,Satire,unrated,rule
 20minutes_fakeoff,Montage,unrated,rule
 20minutes_fakeoff,Invérifiable,unrated,rule
+poligraph_fr,Vrai,true,rule
+poligraph_fr,C'est vrai,true,rule
+poligraph_fr,Correct,true,rule
+poligraph_fr,Plutôt vrai,mostly_true,rule
+poligraph_fr,À moitié vrai,half_true,rule
+poligraph_fr,Imprécis,half_true,rule
+poligraph_fr,Plutôt faux,mostly_false,rule
+poligraph_fr,Trompeur,mostly_false,rule
+poligraph_fr,Exagéré,mostly_false,rule
+poligraph_fr,Faux,false,rule
+poligraph_fr,C'est faux,false,rule
+poligraph_fr,Inventé,false,rule
+poligraph_fr,Manque de contexte,unrated,rule
+poligraph_fr,Satire,unrated,rule
+poligraph_fr,Montage,unrated,rule
+poligraph_fr,Invérifiable,unrated,rule

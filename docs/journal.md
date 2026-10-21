@@ -13,9 +13,29 @@ Les décisions durables sont aussi consignées dans [decisions.md](decisions.md)
 | 3 | rating_map.csv + ratings.py | ✅ fait (21/10) — 15 propositions à valider |
 | 4 | persons / parties / affiliations + attribute.py | ✅ fait (21/10) — 67 724 personnes, partis à valider pour beaucoup |
 | 5 | Autres sites FR, google_factcheck, datacommons_feed, dedupe.py | ✅ fait (21/10) |
-| 6 | run_daily.py + export.py, routine sur 90 jours | ✅ fait (21/10) — 24 entrées exportées |
+| 6 | run_daily.py + export.py, routine sur 90 jours | ✅ fait — 122 entrées exportées sur 2 ans (22/10) |
 | 7 | web/beta/index.html (maquette A) | ⏳ |
 | — | Page web de validation (maquette faite) | ⏳ |
+
+## 2026-10-22 — plus de déclarations exactes : historique 2 ans + Poligraph
+
+**Demande du porteur** : recueillir davantage de déclarations vérifiées « vraies » (sans jamais
+modifier un verdict). Recherche par nom de 30 personnalités sur 2 ans dans l'API Google :
+TF1 Info (26 vrai/plutôt vrai sur 99) et franceinfo (13 sur 35) vérifient beaucoup de
+déclarations exactes ; l'AFP quasiment jamais ; Poligraph (non suivi jusque-là) publie toute l'échelle.
+
+**Décisions** : Poligraph ajouté (`poligraph_fr`, full_scale = 1, licence à vérifier) avec les
+règles du cadrage dans `rating_map.csv` (signalé : 16 lignes ajoutées pour cette source) ;
+historique de collecte porté à 2 ans (`--days 730`).
+
+**Résultat** : 2 116 vérifications ; 122 déclarations exportées (51 personnalités) ;
+verdicts : plutôt faux 35, faux 27, plutôt vrai 15, vrai 12, non classable 33 (surtout
+« En partie vrai » ×80 et « C'est plus compliqué » ×37 en attente) ; file : 75 attributions,
+60 partis, 12 libellés.
+
+**À garder en tête** : les fact-checkers choisissent ce qu'ils vérifient (souvent les propos
+douteux) ; même avec ces sources, la répartition ne mesure pas la sincérité globale d'une
+personne. D'où la mention obligatoire du module C.
 
 ## 2026-10-21 (nuit, suite) — dédoublonnage, routine quotidienne, export
 

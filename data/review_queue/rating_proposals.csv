@@ -18,3 +18,5 @@ afp_factuel,Image générée par IA,unrated,"Nature du contenu (montage), pas un
 afp_factuel,Photo manipulée,unrated,Équivaut à « Montage » du cadrage,3
 afp_factuel,Vidéo manipulée,unrated,Équivaut à « Montage » du cadrage,3
 afp_factuel,Infondé,false,Même proposition que « INFONDE » des Décodeurs,1
+poligraph_fr,En partie vrai,half_true,Même libellé que TF1 Info,3
+poligraph_fr,C’est plus compliqué,half_true,Même libellé que franceinfo,2

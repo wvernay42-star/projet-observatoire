@@ -1,5 +1,27 @@
 [
  {
+  "claim_id": "c_279e29240311c8ad",
+  "claim_text": "Les retraites et la santé à l'origine de 80 % de la hausse des dépenses publiques depuis 50 ans",
+  "claim_date": "2026-10-15",
+  "reviews": [
+   {
+    "url": "https://poligraph.fr/factchecks/2026-10-15-verif-les-retraites-et-la-sante-a-l-origine-de-80-de-la-hausse-des-de",
+    "source_id": "poligraph_fr",
+    "claimant": "David Amiel, ministre de l'Action et des comptes publics",
+    "rating_original": "En partie vrai",
+    "rating_normalized": "unrated",
+    "review_date": "2026-10-15"
+   }
+  ],
+  "reason": "nom retrouvé après retrait du contexte",
+  "candidates": [
+   {
+    "id": "Q47502155",
+    "name": "David Amiel"
+   }
+  ]
+ },
+ {
   "claim_id": "c_8c077da6c4a45923",
   "claim_text": "Les retraites et la santé à l'origine de 80 % de la hausse des dépenses publiques depuis 50 ans",
   "claim_date": "2026-10-15",
@@ -44,6 +66,28 @@
   ]
  },
  {
+  "claim_id": "c_9cccaccdb19ed041",
+  "claim_text": "La France est le deuxième pays au monde le plus touché par le cancer du sein",
+  "claim_date": "2026-10-12",
+  "reviews": [
+   {
+    "url": "https://poligraph.fr/factchecks/2026-10-12-verif-la-france-est-elle-vraiment-le-deuxieme-pays-le-plus-touche-au",
+    "source_id": "poligraph_fr",
+    "claimant": "Mathilde Panot, députée La France insoumise",
+    "rating_original": "Vrai",
+    "rating_normalized": "true",
+    "review_date": "2026-10-12"
+   }
+  ],
+  "reason": "nom retrouvé après retrait du contexte",
+  "candidates": [
+   {
+    "id": "Q30343128",
+    "name": "Mathilde Panot"
+   }
+  ]
+ },
+ {
   "claim_id": "c_1be99f2ee985ff4b",
   "claim_text": "La France détient le record d'Europe des dividendes versés par les entreprises",
   "claim_date": "2026-09-18",
@@ -51,6 +95,28 @@
    {
     "url": "https://www.tf1info.fr/economie/verif-la-france-detient-elle-le-record-d-europe-de-dividendes-verses-par-les-entreprises-comme-le-dit-eric-coquerel-de-lfi-2464935.html",
     "source_id": "tf1info_verificateurs",
+    "claimant": "Eric Coquerel, député LFI de Seine-Saint-Denis",
+    "rating_original": "Plutôt vrai",
+    "rating_normalized": "mostly_true",
+    "review_date": "2026-09-18"
+   }
+  ],
+  "reason": "nom retrouvé après retrait du contexte",
+  "candidates": [
+   {
+    "id": "Q17485936",
+    "name": "Éric Coquerel"
+   }
+  ]
+ },
+ {
+  "claim_id": "c_3f03b1f31d299cba",
+  "claim_text": "La France détient le record d'Europe des dividendes versés par les entreprises",
+  "claim_date": "2026-09-18",
+  "reviews": [
+   {
+    "url": "https://poligraph.fr/factchecks/2026-09-18-verif-x27-la-france-championne-d-europe-des-dividendes-verses-par-les",
+    "source_id": "poligraph_fr",
     "claimant": "Eric Coquerel, député LFI de Seine-Saint-Denis",
     "rating_original": "Plutôt vrai",
     "rating_normalized": "mostly_true",
@@ -128,6 +194,1478 @@
    {
     "id": "Q41102798",
     "name": "Julien Odoul"
+   }
+  ]
+ },
+ {
+  "claim_id": "c_3d8d6b1f6acd3f1f",
+  "claim_text": "Bruxelles va interdire les emballages des packs d'eau",
+  "claim_date": "2026-07-03",
+  "reviews": [
+   {
+    "url": "https://www.tf1info.fr/economie/verif-bruxelles-va-vous-obliger-a-porter-vos-bouteilles-d-eau-une-par-une-les-packs-d-eau-vont-ils-etre-interdits-par-l-ue-2450966.html",
+    "source_id": "tf1info_verificateurs",
+    "claimant": "Virginie Joron, eurodéputée RN",
+    "rating_original": "Plutôt faux",
+    "rating_normalized": "mostly_false",
+    "review_date": "2026-07-03"
+   }
+  ],
+  "reason": "nom retrouvé après retrait du contexte",
+  "candidates": [
+   {
+    "id": "Q60604481",
+    "name": "Virginie Joron"
+   }
+  ]
+ },
+ {
+  "claim_id": "c_185a00d1ea380b09",
+  "claim_text": "Les travaux d'intérêt général sont une peine aujourd'hui \"largement délaissée\" par les magistrats",
+  "claim_date": "2026-06-02",
+  "reviews": [
+   {
+    "url": "https://www.tf1info.fr/justice-faits-divers/verif-les-travaux-d-interet-general-une-peine-qui-est-aujourd-hui-largement-delaissee-par-les-magistrats-2444998.html",
+    "source_id": "tf1info_verificateurs",
+    "claimant": "Le député François Ruffin",
+    "rating_original": "En partie vrai",
+    "rating_normalized": "unrated",
+    "review_date": "2026-06-04"
+   }
+  ],
+  "reason": "nom retrouvé après retrait du contexte",
+  "candidates": [
+   {
+    "id": "Q3085763",
+    "name": "François Ruffin"
+   }
+  ]
+ },
+ {
+  "claim_id": "c_b957128997f4d31f",
+  "claim_text": "Une mission en charge de la sécurité des musées ne compte que huit personnes pour superviser 1.200 établissements",
+  "claim_date": "2026-03-04",
+  "reviews": [
+   {
+    "url": "https://www.tf1info.fr/societe/verif-n-y-a-t-il-que-huit-personnes-en-france-pour-superviser-la-securite-de-1-200-musees-2428447.html",
+    "source_id": "tf1info_verificateurs",
+    "claimant": "Le député Alexis Corbière",
+    "rating_original": "Plutôt vrai",
+    "rating_normalized": "mostly_true",
+    "review_date": "2026-03-05"
+   }
+  ],
+  "reason": "nom retrouvé après retrait du contexte",
+  "candidates": [
+   {
+    "id": "Q2834481",
+    "name": "Alexis Corbière"
+   }
+  ]
+ },
+ {
+  "claim_id": "c_719299614b523cdc",
+  "claim_text": "Aucune étude scientifique sérieuse ne fait le lien entre acétamipride et cancer",
+  "claim_date": "2026-02-11",
+  "reviews": [
+   {
+    "url": "https://www.tf1info.fr/sante/verif-loi-duplomb-est-il-vrai-qu-aucune-etude-scientifique-serieuse-ne-fait-le-lien-entre-pesticide-insecticide-acetamipride-et-cancer-2424328.html",
+    "source_id": "tf1info_verificateurs",
+    "claimant": "Le sénateur Laurent Duplomb",
+    "rating_original": "Plutôt vrai",
+    "rating_normalized": "mostly_true",
+    "review_date": "2026-02-12"
+   }
+  ],
+  "reason": "nom retrouvé après retrait du contexte",
+  "candidates": [
+   {
+    "id": "Q40871303",
+    "name": "Laurent Duplomb"
+   }
+  ]
+ },
+ {
+  "claim_id": "c_6879f63f596d002a",
+  "claim_text": "La rapporteuse de l'ONU Francesca Albanese a qualifié Israël d'\"ennemi commun de l'humanité\"",
+  "claim_date": "2026-02-08",
+  "reviews": [
+   {
+    "url": "https://poligraph.fr/factchecks/2026-02-12-verif-ennemi-commun-de-l-humanite-ce-qu-a-vraiment-dit-la-rapporteuse-de-l-onu-sur-israel",
+    "source_id": "poligraph_fr",
+    "claimant": "La députée Caroline Yadan",
+    "rating_original": "Plutôt faux",
+    "rating_normalized": "mostly_false",
+    "review_date": "2026-02-12"
+   }
+  ],
+  "reason": "nom retrouvé après retrait du contexte",
+  "candidates": [
+   {
+    "id": "Q113015802",
+    "name": "Caroline Yadan"
+   }
+  ]
+ },
+ {
+  "claim_id": "c_843ac7cd0f63bc2a",
+  "claim_text": "La rapporteuse de l'ONU Francesca Albanese a qualifié Israël d'\"ennemi commun de l'humanité\"",
+  "claim_date": "2026-02-08",
+  "reviews": [
+   {
+    "url": "https://www.tf1info.fr/international/verif-israel-ennemi-commun-de-l-humanite-qu-a-vraiment-dit-la-rapporteuse-de-l-onu-francesca-albanese-2424348.html",
+    "source_id": "tf1info_verificateurs",
+    "claimant": "La députée Caroline Yadan",
+    "rating_original": "Plutôt faux",
+    "rating_normalized": "mostly_false",
+    "review_date": "2026-02-12"
+   }
+  ],
+  "reason": "nom retrouvé après retrait du contexte",
+  "candidates": [
+   {
+    "id": "Q113015802",
+    "name": "Caroline Yadan"
+   }
+  ]
+ },
+ {
+  "claim_id": "c_93cc813656906088",
+  "claim_text": "Travaux de tunnel à Lyon et promenade à Paris facilement réalisables",
+  "claim_date": "2026-01-20",
+  "reviews": [
+   {
+    "url": "https://factuel.afp.com/doc.afp.com.99K6363",
+    "source_id": "afp_factuel",
+    "claimant": "Sarah Knafo, Jean-Michel Aulas",
+    "rating_original": "Manque de contexte",
+    "rating_normalized": "unrated",
+    "review_date": "2026-03-05"
+   }
+  ],
+  "reason": "nom retrouvé après retrait du contexte",
+  "candidates": [
+   {
+    "id": "Q82637284",
+    "name": "Sarah Knafo"
+   }
+  ]
+ },
+ {
+  "claim_id": "c_4a01cfc610c11ff6",
+  "claim_text": "Le taux d'anxiété des salariés français est de 48%, celui des Allemands est de 12%",
+  "claim_date": "2025-11-25",
+  "reviews": [
+   {
+    "url": "https://www.tf1info.fr/vie-pro/verif-anxiete-au-travail-quatre-fois-plus-de-francais-touches-que-d-allemands-2409140.html",
+    "source_id": "tf1info_verificateurs",
+    "claimant": "Le député François Ruffin",
+    "rating_original": "Vrai",
+    "rating_normalized": "true",
+    "review_date": "2025-11-26"
+   }
+  ],
+  "reason": "nom retrouvé après retrait du contexte",
+  "candidates": [
+   {
+    "id": "Q3085763",
+    "name": "François Ruffin"
+   }
+  ]
+ },
+ {
+  "claim_id": "c_051b7b65ac86a562",
+  "claim_text": "Erasmus va être élargi aux étudiants d'Afrique du Nord",
+  "claim_date": "2025-10-23",
+  "reviews": [
+   {
+    "url": "https://factuel.afp.com/doc.afp.com.79VD963",
+    "source_id": "afp_factuel",
+    "claimant": "Jordan Bardella, Marion Maréchal",
+    "rating_original": "Trompeur",
+    "rating_normalized": "mostly_false",
+    "review_date": "2025-11-20"
+   }
+  ],
+  "reason": "nom retrouvé après retrait du contexte",
+  "candidates": [
+   {
+    "id": "Q40655898",
+    "name": "Jordan Bardella"
+   }
+  ]
+ },
+ {
+  "claim_id": "c_ea152bff065c6bd7",
+  "claim_text": "Le SMIC baisse à 1050 euros brut en janvier 2026",
+  "claim_date": "2025-10-22",
+  "reviews": [
+   {
+    "url": "https://factuel.afp.com/doc.afp.com.79M9463",
+    "source_id": "afp_factuel",
+    "claimant": "Personne",
+    "rating_original": "Faux",
+    "rating_normalized": "false",
+    "review_date": "2025-10-24"
+   }
+  ],
+  "reason": "nom seul",
+  "candidates": [
+   {
+    "id": "Q30344388",
+    "name": "Pascale Fontenel-Personne"
+   }
+  ]
+ },
+ {
+  "claim_id": "c_115e3f389ac8cb04",
+  "claim_text": "\"Certaines énergies renouvelables sont totalement inutiles\"",
+  "claim_date": "2025-09-18",
+  "reviews": [
+   {
+    "url": "https://www.franceinfo.fr/replay-radio/le-vrai-du-faux/vrai-ou-faux-les-energies-renouvelables-sont-elles-couteuses-et-totalement-inutiles_7472131.html",
+    "source_id": "franceinfo_vraioufake",
+    "claimant": "Eric Ciotti, député UDR",
+    "rating_original": "Plutôt Faux",
+    "rating_normalized": "mostly_false",
+    "review_date": "2025-09-18"
+   }
+  ],
+  "reason": "nom retrouvé après retrait du contexte",
+  "candidates": [
+   {
+    "id": "Q1844180",
+    "name": "Éric Ciotti"
+   }
+  ]
+ },
+ {
+  "claim_id": "c_331b536027b181e9",
+  "claim_text": "L'ONU a fabriqué des chiffres pour déclarer la famine à Gaza",
+  "claim_date": "2025-09-02",
+  "reviews": [
+   {
+    "url": "https://www.franceinfo.fr/replay-radio/le-vrai-du-faux/vrai-ou-faux-famine-a-gaza-l-onu-a-t-elle-manipule-les-chiffres-comme-l-accuse-israel_7442701.html",
+    "source_id": "franceinfo_vraioufake",
+    "claimant": "Israël",
+    "rating_original": "Faux",
+    "rating_normalized": "false",
+    "review_date": "2025-09-02"
+   }
+  ],
+  "reason": "nom seul",
+  "candidates": [
+   {
+    "id": "Q65585797",
+    "name": "Pierre Israel"
+   }
+  ]
+ },
+ {
+  "claim_id": "c_5cfbff4e5af5e01d",
+  "claim_text": "Si on les taxait davantage, seuls 0,003 % des très hauts patrimoines seraient susceptibles de quitter la France",
+  "claim_date": "2025-09-01",
+  "reviews": [
+   {
+    "url": "https://www.tf1info.fr/politique/verif-une-hausse-de-taxes-ferait-fuir-0-003-des-plus-riches-que-vaut-ce-chiffre-avance-par-olivier-faure-2392216.html",
+    "source_id": "tf1info_verificateurs",
+    "claimant": "Olivier Faure",
+    "rating_original": "Vrai",
+    "rating_normalized": "true",
+    "review_date": "2025-09-02"
+   }
+  ],
+  "reason": "homonymes",
+  "candidates": [
+   {
+    "id": "Q3351018",
+    "name": "Olivier Faure"
+   },
+   {
+    "id": "Q98251361",
+    "name": "Olivier Faure"
+   }
+  ]
+ },
+ {
+  "claim_id": "c_fabaf980b4ce6720",
+  "claim_text": "\"On n'a jamais fait passer autant de textes au Parlement\" que sous François Bayrou",
+  "claim_date": "2025-08-28",
+  "reviews": [
+   {
+    "url": "https://www.franceinfo.fr/replay-radio/le-vrai-du-faux/est-ce-vraiment-sous-francois-bayrou-que-le-plus-de-lois-sont-votees_7356231.html",
+    "source_id": "franceinfo_vraioufake",
+    "claimant": "Patrick Mignola, ministre",
+    "rating_original": "Faux",
+    "rating_normalized": "false",
+    "review_date": "2025-08-28"
+   }
+  ],
+  "reason": "nom retrouvé après retrait du contexte",
+  "candidates": [
+   {
+    "id": "Q30378878",
+    "name": "Patrick Mignola"
+   }
+  ]
+ },
+ {
+  "claim_id": "c_a8957ed6577219d1",
+  "claim_text": "\"La chute du gouvernement Bayrou coûterait 12 milliards d'euros\"",
+  "claim_date": "2025-08-27",
+  "reviews": [
+   {
+    "url": "https://www.franceinfo.fr/replay-radio/le-vrai-du-faux/vrai-ou-faux-vote-de-confiance-la-chute-de-francois-bayrou-couterait-elle-12-milliards-d-euros-a-la-france_7356234.html",
+    "source_id": "franceinfo_vraioufake",
+    "claimant": "Prisca Thévenot, députée ENR",
+    "rating_original": "Faux",
+    "rating_normalized": "false",
+    "review_date": "2025-08-27"
+   }
+  ],
+  "reason": "nom retrouvé après retrait du contexte",
+  "candidates": [
+   {
+    "id": "Q106020252",
+    "name": "Prisca Thevenot"
+   }
+  ]
+ },
+ {
+  "claim_id": "c_c9dca7b98be27e02",
+  "claim_text": "\"Les taux de tentatives de suicides chez les jeunes explosent, mais explosent littéralement, et que les réseaux sociaux en sont une des raisons\"",
+  "claim_date": "2025-08-22",
+  "reviews": [
+   {
+    "url": "https://www.franceinfo.fr/replay-radio/le-vrai-du-faux/vrai-ou-faux-sante-mentale-les-reseaux-sociaux-poussent-ils-les-jeunes-au-suicide_7356243.html",
+    "source_id": "franceinfo_vraioufake",
+    "claimant": "Sandrine Rousseau, députée écologiste",
+    "rating_original": "C’est plus compliqué",
+    "rating_normalized": "unrated",
+    "review_date": "2025-08-22"
+   }
+  ],
+  "reason": "nom retrouvé après retrait du contexte",
+  "candidates": [
+   {
+    "id": "Q21013136",
+    "name": "Sandrine Rousseau"
+   }
+  ]
+ },
+ {
+  "claim_id": "c_225f29be3b4e6e3e",
+  "claim_text": "La guerre à Gaza a tué plus de journalistes que la Première Guerre mondiale, la Seconde Guerre mondiale, la guerre de Corée, la guerre du Vietnam, la guerre de l'Afghanistan et la guerre d'Irak cumulées",
+  "claim_date": "2025-08-21",
+  "reviews": [
+   {
+    "url": "https://www.franceinfo.fr/replay-radio/le-vrai-du-faux/y-a-t-il-eu-plus-de-journalistes-tues-a-gaza-que-pendant-les-deux-guerres-mondiales-et-quatre-autres-conflits_7356246.html",
+    "source_id": "franceinfo_vraioufake",
+    "claimant": "Mathilde Panot, députée LFI",
+    "rating_original": "Faux",
+    "rating_normalized": "false",
+    "review_date": "2025-08-21"
+   }
+  ],
+  "reason": "nom retrouvé après retrait du contexte",
+  "candidates": [
+   {
+    "id": "Q30343128",
+    "name": "Mathilde Panot"
+   }
+  ]
+ },
+ {
+  "claim_id": "c_c8b29acf33cafbbc",
+  "claim_text": "Les hausses d'impôts font-elles fuir les riches ?",
+  "claim_date": "2025-07-18",
+  "reviews": [
+   {
+    "url": "https://www.franceinfo.fr/replay-radio/le-vrai-du-faux/budget-les-impots-font-ils-vraiment-fuir-les-riches_7354680.html",
+    "source_id": "franceinfo_vraioufake",
+    "claimant": "Philippe Juvin, député LR et gouvernement",
+    "rating_original": "Plutôt Faux",
+    "rating_normalized": "mostly_false",
+    "review_date": "2025-07-18"
+   }
+  ],
+  "reason": "nom retrouvé après retrait du contexte",
+  "candidates": [
+   {
+    "id": "Q445705",
+    "name": "Philippe Juvin"
+   }
+  ]
+ },
+ {
+  "claim_id": "c_01f9d47d54ac4162",
+  "claim_text": "La dette publique augmente-t-elle de 5 000 euros par seconde ?",
+  "claim_date": "2025-07-16",
+  "reviews": [
+   {
+    "url": "https://www.franceinfo.fr/replay-radio/le-vrai-du-faux/la-dette-publique-augmente-t-elle-de-5-000-euros-par-seconde_7350015.html",
+    "source_id": "franceinfo_vraioufake",
+    "claimant": "François Bayrou, Premier ministre",
+    "rating_original": "Vrai",
+    "rating_normalized": "true",
+    "review_date": "2025-07-16"
+   }
+  ],
+  "reason": "nom retrouvé après retrait du contexte",
+  "candidates": [
+   {
+    "id": "Q12963",
+    "name": "François Bayrou"
+   }
+  ]
+ },
+ {
+  "claim_id": "c_fc9ece9a178b8a53",
+  "claim_text": "Le Syndicat de la magistrature a appelé à \"tout faire pour faire barrage au RN par tous moyens possibles\"",
+  "claim_date": "2025-07-11",
+  "reviews": [
+   {
+    "url": "https://poligraph.fr/factchecks/2025-07-11-perquisitions-au-rn-le-syndicat-de-la-magistrature-a-t-il-appel-eacute-agrave-lutter-contre-le-parti-quot",
+    "source_id": "poligraph_fr",
+    "claimant": "Thomas Ménagé, RN",
+    "rating_original": "Plutôt Faux",
+    "rating_normalized": "mostly_false",
+    "review_date": "2025-07-11"
+   }
+  ],
+  "reason": "nom retrouvé après retrait du contexte",
+  "candidates": [
+   {
+    "id": "Q112650795",
+    "name": "Thomas Ménagé"
+   }
+  ]
+ },
+ {
+  "claim_id": "c_04c0b9af154b94d2",
+  "claim_text": "Tous les experts s'accordent sur l’impossibilité de transporter la tapisserie de Bayeux, trop fragile",
+  "claim_date": "2025-07-10",
+  "reviews": [
+   {
+    "url": "https://www.tf1info.fr/traditions-et-patrimoine/verif-une-extreme-fragilite-les-experts-sont-ils-tous-opposes-au-pret-a-londres-de-la-tapisserie-de-bayeux-annonce-par-emmanuel-macron-2382388.html",
+    "source_id": "tf1info_verificateurs",
+    "claimant": "La députée Anne Sicard",
+    "rating_original": "Plutôt vrai",
+    "rating_normalized": "mostly_true",
+    "review_date": "2025-07-11"
+   }
+  ],
+  "reason": "nom retrouvé après retrait du contexte",
+  "candidates": [
+   {
+    "id": "Q127270999",
+    "name": "Anne Sicard"
+   }
+  ]
+ },
+ {
+  "claim_id": "c_10de33bfe63e2566",
+  "claim_text": "Le Syndicat de la magistrature a appelé à \"tout faire pour faire barrage au RN par tous moyens possibles\"",
+  "claim_date": "2025-07-09",
+  "reviews": [
+   {
+    "url": "https://www.franceinfo.fr/replay-radio/le-vrai-du-faux/perquisitions-au-rn-le-syndicat-de-la-magistrature-a-t-il-appele-a-lutter-contre-le-parti-par-tous-les-moyens_7340565.html",
+    "source_id": "franceinfo_vraioufake",
+    "claimant": "Thomas Ménagé, RN",
+    "rating_original": "Plutôt Faux",
+    "rating_normalized": "mostly_false",
+    "review_date": "2025-07-11"
+   }
+  ],
+  "reason": "nom retrouvé après retrait du contexte",
+  "candidates": [
+   {
+    "id": "Q112650795",
+    "name": "Thomas Ménagé"
+   }
+  ]
+ },
+ {
+  "claim_id": "c_78f1013656953c44",
+  "claim_text": "La climatisation est-elle responsable de 7% des émissions mondiales de gaz à effet de serre",
+  "claim_date": "2025-07-02",
+  "reviews": [
+   {
+    "url": "https://www.tf1info.fr/environnement-ecologie/verif-la-climatisation-est-elle-responsable-de-7-des-emissions-de-gaz-a-effet-de-serre-comme-l-assure-un-depute-lfi-2380210.html",
+    "source_id": "tf1info_verificateurs",
+    "claimant": "Rodrigo Arenas, député LFI",
+    "rating_original": "Vrai",
+    "rating_normalized": "true",
+    "review_date": "2025-07-02"
+   }
+  ],
+  "reason": "nom retrouvé après retrait du contexte",
+  "candidates": [
+   {
+    "id": "Q109043455",
+    "name": "Rodrigo Arenas Muñoz"
+   }
+  ]
+ },
+ {
+  "claim_id": "c_d836fc2069832ae9",
+  "claim_text": "L'acétamipride est \"autorisée partout en Europe parce que pas jugée dangereuse par les scientifiques européens\"",
+  "claim_date": "2025-06-30",
+  "reviews": [
+   {
+    "url": "https://www.tf1info.fr/environnement-ecologie/verif-l-acetamipride-est-elle-autorisee-partout-en-europe-car-pas-jugee-dangereuse-par-les-scientifiques-europeens-pour-l-environnement-et-la-sante-humaine-2380063.html",
+    "source_id": "tf1info_verificateurs",
+    "claimant": "Annie Genevard, ministre de l'Agriculture",
+    "rating_original": "Plutôt faux",
+    "rating_normalized": "mostly_false",
+    "review_date": "2025-06-30"
+   }
+  ],
+  "reason": "nom retrouvé après retrait du contexte",
+  "candidates": [
+   {
+    "id": "Q2414678",
+    "name": "Annie Genevard"
+   }
+  ]
+ },
+ {
+  "claim_id": "c_4cc9f423e80b34ad",
+  "claim_text": "Éric Ciotti a été exempté de service militaire",
+  "claim_date": "2025-06-23",
+  "reviews": [
+   {
+    "url": "https://www.tf1info.fr/politique/verif-eric-ciotti-a-t-il-echappe-au-service-militaire-grace-a-christian-estrosi-2378615.html",
+    "source_id": "tf1info_verificateurs",
+    "claimant": "Aurélien Pradié, député du Lot",
+    "rating_original": "Vrai",
+    "rating_normalized": "true",
+    "review_date": "2025-06-23"
+   }
+  ],
+  "reason": "nom retrouvé après retrait du contexte",
+  "candidates": [
+   {
+    "id": "Q30351657",
+    "name": "Aurélien Pradié"
+   }
+  ]
+ },
+ {
+  "claim_id": "c_51f649efc92333fa",
+  "claim_text": "La vidéo montre des Israéliens fuyant vers l'Europe ou les Etats-Unis",
+  "claim_date": "2025-06-21",
+  "reviews": [
+   {
+    "url": "https://factuel.afp.com/doc.afp.com.63F7962",
+    "source_id": "afp_factuel",
+    "claimant": "Personne",
+    "rating_original": "Faux",
+    "rating_normalized": "false",
+    "review_date": "2025-06-23"
+   }
+  ],
+  "reason": "nom seul",
+  "candidates": [
+   {
+    "id": "Q30344388",
+    "name": "Pascale Fontenel-Personne"
+   }
+  ]
+ },
+ {
+  "claim_id": "c_51d405c531ee5e8c",
+  "claim_text": "Nicolas Sarkozy a eu la légion d'honneur pour son courage dans l'affaire \"Human Bomb\"",
+  "claim_date": "2025-06-19",
+  "reviews": [
+   {
+    "url": "https://www.franceinfo.fr/replay-radio/le-vrai-du-faux/nicolas-sarkozy-a-t-il-recu-la-legion-d-honneur-pour-son-courage-dans-l-affaire-human-bomb_7292895.html",
+    "source_id": "franceinfo_vraioufake",
+    "claimant": "Bruno Retailleau, Jordan Bardella, Rachida Dati",
+    "rating_original": "Faux",
+    "rating_normalized": "false",
+    "review_date": "2025-06-19"
+   }
+  ],
+  "reason": "nom retrouvé après retrait du contexte",
+  "candidates": [
+   {
+    "id": "Q2926942",
+    "name": "Bruno Retailleau"
+   }
+  ]
+ },
+ {
+  "claim_id": "c_44270855fd45d5b5",
+  "claim_text": "\"Il y a 1 000 faits de violences chaque jour dans notre pays. Il y a 5 000 tentatives d'homicides et homicides en France chaque année\"",
+  "claim_date": "2025-06-12",
+  "reviews": [
+   {
+    "url": "https://poligraph.fr/factchecks/2025-06-12-y-a-t-il-vraiment-1-000-faits-de-violences-chaque-jour-et-5-000-homicides-ou-tentatives-par-an-comme-l",
+    "source_id": "poligraph_fr",
+    "claimant": "Eric Ciotti, député des Alpes-Maritimes",
+    "rating_original": "Plutôt Vrai",
+    "rating_normalized": "mostly_true",
+    "review_date": "2025-06-12"
+   }
+  ],
+  "reason": "nom retrouvé après retrait du contexte",
+  "candidates": [
+   {
+    "id": "Q1844180",
+    "name": "Éric Ciotti"
+   }
+  ]
+ },
+ {
+  "claim_id": "c_44f4699c8d0de2ec",
+  "claim_text": "\"Il y a 1 000 faits de violences chaque jour dans notre pays. Il y a 5 000 tentatives d'homicides et homicides en France chaque année\"",
+  "claim_date": "2025-06-10",
+  "reviews": [
+   {
+    "url": "https://www.franceinfo.fr/replay-radio/le-vrai-du-faux/y-a-t-il-vraiment-1-000-faits-de-violences-chaque-jour-et-5-000-homicides-ou-tentatives-par-an-comme-l-affirme-eric-ciotti_7279302.html",
+    "source_id": "franceinfo_vraioufake",
+    "claimant": "Eric Ciotti, député des Alpes-Maritimes",
+    "rating_original": "Plutôt Vrai",
+    "rating_normalized": "mostly_true",
+    "review_date": "2025-06-12"
+   }
+  ],
+  "reason": "nom retrouvé après retrait du contexte",
+  "candidates": [
+   {
+    "id": "Q1844180",
+    "name": "Éric Ciotti"
+   }
+  ]
+ },
+ {
+  "claim_id": "c_8c194e3fa4f32547",
+  "claim_text": "Une personne seule avec 4770 euros de revenus mensuels a accès à un logement social",
+  "claim_date": "2025-06-09",
+  "reviews": [
+   {
+    "url": "https://www.tf1info.fr/immobilier/verif-une-personne-seule-qui-touche-4770-euros-net-par-mois-a-t-elle-vraiment-acces-a-un-logement-social-2375936.html",
+    "source_id": "tf1info_verificateurs",
+    "claimant": "Le député Stéphane Vojetta",
+    "rating_original": "En partie vrai",
+    "rating_normalized": "unrated",
+    "review_date": "2025-06-09"
+   }
+  ],
+  "reason": "nom retrouvé après retrait du contexte",
+  "candidates": [
+   {
+    "id": "Q108823633",
+    "name": "Stéphane Vojetta"
+   }
+  ]
+ },
+ {
+  "claim_id": "c_0cf351f397c9ac13",
+  "claim_text": "\"Les petites filles, on sait qu'elles décrochent en mathématiques, non pas au collège ou au lycée, mais dès le CP.\"",
+  "claim_date": "2025-06-03",
+  "reviews": [
+   {
+    "url": "https://www.tf1info.fr/education/verif-mathematiques-un-decrochage-des-filles-est-il-observe-des-le-cp-comme-l-affirme-aurore-berge-2374752.html",
+    "source_id": "tf1info_verificateurs",
+    "claimant": "La ministre Aurore Bergé",
+    "rating_original": "Vrai",
+    "rating_normalized": "true",
+    "review_date": "2025-06-03"
+   }
+  ],
+  "reason": "nom retrouvé après retrait du contexte",
+  "candidates": [
+   {
+    "id": "Q29570183",
+    "name": "Aurore Bergé"
+   }
+  ]
+ },
+ {
+  "claim_id": "c_cab91cfa0aaeb103",
+  "claim_text": "Y a-t-il de l'acétamipride dans les colliers anti-puces et dans les insecticides ménagers ?",
+  "claim_date": "2025-05-27",
+  "reviews": [
+   {
+    "url": "https://www.franceinfo.fr/replay-radio/le-vrai-du-faux/neonicotinoides-colliers-anti-puces-insecticides-menagers-decision-politique-on-a-verifie-plusieurs-declarations-sur-l-acetamipride_7259061.html",
+    "source_id": "franceinfo_vraioufake",
+    "claimant": "Annie Genevard, ministre de l'Agriculture",
+    "rating_original": "Plutôt Faux",
+    "rating_normalized": "mostly_false",
+    "review_date": "2025-05-27"
+   }
+  ],
+  "reason": "nom retrouvé après retrait du contexte",
+  "candidates": [
+   {
+    "id": "Q2414678",
+    "name": "Annie Genevard"
+   }
+  ]
+ },
+ {
+  "claim_id": "c_8b4684307972ec76",
+  "claim_text": "Est-il vrai que 12% des revenus des plus pauvres partent dans la TVA, contre 5% des revenus des plus riches ?",
+  "claim_date": "2025-05-26",
+  "reviews": [
+   {
+    "url": "https://www.franceinfo.fr/replay-radio/le-vrai-du-faux/tva-sociale-les-plus-pauvres-seraient-ils-davantage-mis-a-contribution-que-les-plus-riches_7259055.html",
+    "source_id": "franceinfo_vraioufake",
+    "claimant": "Manuel Bompard, député LFI",
+    "rating_original": "Vrai",
+    "rating_normalized": "true",
+    "review_date": "2025-05-28"
+   }
+  ],
+  "reason": "nom retrouvé après retrait du contexte",
+  "candidates": [
+   {
+    "id": "Q29575749",
+    "name": "Manuel Bompard"
+   }
+  ]
+ },
+ {
+  "claim_id": "c_fc715895c0474bd1",
+  "claim_text": "La diminution très forte voire la suppression de l'argent liquide permet de lutter contre le narcotrafic et la délinquance financière",
+  "claim_date": "2025-05-26",
+  "reviews": [
+   {
+    "url": "https://poligraph.fr/factchecks/2025-05-26-narcotrafic-est-ce-que-supprimer-l-argent-liquide-permet-de-lutter-contre-la-criminalite-comme-l-affirme",
+    "source_id": "poligraph_fr",
+    "claimant": "Gérald Darmanin, ministre de la Justice",
+    "rating_original": "C’est plus compliqué",
+    "rating_normalized": "unrated",
+    "review_date": "2025-05-26"
+   }
+  ],
+  "reason": "nom retrouvé après retrait du contexte",
+  "candidates": [
+   {
+    "id": "Q3123610",
+    "name": "Gérald Darmanin"
+   }
+  ]
+ },
+ {
+  "claim_id": "c_2286498043281101",
+  "claim_text": "La diminution très forte voire la suppression de l'argent liquide permet de lutter contre le narcotrafic et la délinquance financière",
+  "claim_date": "2025-05-21",
+  "reviews": [
+   {
+    "url": "https://www.franceinfo.fr/replay-radio/le-vrai-du-faux/narcotrafic-est-ce-que-supprimer-l-argent-liquide-permet-de-lutter-contre-la-criminalite-comme-l-affirme-gerald-darmanin_7259067.html",
+    "source_id": "franceinfo_vraioufake",
+    "claimant": "Gérald Darmanin, ministre de la Justice",
+    "rating_original": "C’est plus compliqué",
+    "rating_normalized": "unrated",
+    "review_date": "2025-05-26"
+   }
+  ],
+  "reason": "nom retrouvé après retrait du contexte",
+  "candidates": [
+   {
+    "id": "Q3123610",
+    "name": "Gérald Darmanin"
+   }
+  ]
+ },
+ {
+  "claim_id": "c_f6ffb346fdcf51e1",
+  "claim_text": "Après l'Ukraine, la France est le deuxième pays visé par la désinformation russe",
+  "claim_date": "2025-05-07",
+  "reviews": [
+   {
+    "url": "https://www.tf1info.fr/international/verif-la-france-le-pays-d-europe-le-plus-vise-par-la-desinformation-russe-apres-l-ukraine-comme-l-affirme-nathalie-loiseau-2369345.html",
+    "source_id": "tf1info_verificateurs",
+    "claimant": "Nathalie Loiseau, députée européenne",
+    "rating_original": "Vrai",
+    "rating_normalized": "true",
+    "review_date": "2025-05-07"
+   }
+  ],
+  "reason": "nom retrouvé après retrait du contexte",
+  "candidates": [
+   {
+    "id": "Q16666184",
+    "name": "Nathalie Loiseau"
+   }
+  ]
+ },
+ {
+  "claim_id": "c_75fce7d4ff1e45f8",
+  "claim_text": "\"Il n'y a pas eu de coupe budgétaire au ministère de la Culture. Sur le budget 2025, il n'y a pas eu de baisse, il y a eu une augmentation.\"",
+  "claim_date": "2025-05-06",
+  "reviews": [
+   {
+    "url": "https://www.franceinfo.fr/replay-radio/le-vrai-du-faux/le-budget-de-la-culture-est-il-en-hausse-ou-en-baisse_7221438.html",
+    "source_id": "franceinfo_vraioufake",
+    "claimant": "Rachida Dati, ministre de la Culture",
+    "rating_original": "C’est plus compliqué",
+    "rating_normalized": "unrated",
+    "review_date": "2025-05-08"
+   }
+  ],
+  "reason": "nom retrouvé après retrait du contexte",
+  "candidates": [
+   {
+    "id": "Q27182",
+    "name": "Rachida Dati"
+   }
+  ]
+ },
+ {
+  "claim_id": "c_3028c9351f7566dc",
+  "claim_text": "La France est \"championne du monde de la bureaucratie\" en matière d'organisation territoriale",
+  "claim_date": "2025-05-04",
+  "reviews": [
+   {
+    "url": "https://www.franceinfo.fr/replay-radio/le-vrai-du-faux/regions-departements-communes-la-france-est-elle-championne-du-monde-du-mille-feuille-administratif_7217448.html",
+    "source_id": "franceinfo_vraioufake",
+    "claimant": "Valérie Pécresse, présidente de la région Île-de-France",
+    "rating_original": "C’est plus compliqué",
+    "rating_normalized": "unrated",
+    "review_date": "2025-05-06"
+   }
+  ],
+  "reason": "nom retrouvé après retrait du contexte",
+  "candidates": [
+   {
+    "id": "Q455023",
+    "name": "Valérie Pécresse"
+   }
+  ]
+ },
+ {
+  "claim_id": "c_8ef155c237f85d19",
+  "claim_text": "J.D. Vance, le vice-président américain, va-t-il participé au pèlerinage de Chartres ?",
+  "claim_date": "2025-04-04",
+  "reviews": [
+   {
+    "url": "https://poligraph.fr/factchecks/2025-04-04-quand-un-poisson-d-avril-se-retrouve-a-l-assemblee-nationale",
+    "source_id": "poligraph_fr",
+    "claimant": "Arnaud Le Gall, député LFI",
+    "rating_original": "Faux",
+    "rating_normalized": "false",
+    "review_date": "2025-04-04"
+   }
+  ],
+  "reason": "nom retrouvé après retrait du contexte",
+  "candidates": [
+   {
+    "id": "Q112654178",
+    "name": "Arnaud Le Gall"
+   }
+  ]
+ },
+ {
+  "claim_id": "c_6d765bd9e9f325f4",
+  "claim_text": "J.D. Vance, le vice-président américain, va-t-il participé au pèlerinage de Chartres ?",
+  "claim_date": "2025-04-01",
+  "reviews": [
+   {
+    "url": "https://www.franceinfo.fr/replay-radio/le-vrai-du-faux/quand-un-poisson-d-avril-se-retrouve-a-l-assemblee-nationale_7141902.html",
+    "source_id": "franceinfo_vraioufake",
+    "claimant": "Arnaud Le Gall, député LFI",
+    "rating_original": "Faux",
+    "rating_normalized": "false",
+    "review_date": "2025-04-04"
+   }
+  ],
+  "reason": "nom retrouvé après retrait du contexte",
+  "candidates": [
+   {
+    "id": "Q112654178",
+    "name": "Arnaud Le Gall"
+   }
+  ]
+ },
+ {
+  "claim_id": "c_f5d84dee7fb64cc5",
+  "claim_text": "L'Italie vient de \"régulariser plus de 500.000 personnes\"",
+  "claim_date": "2025-03-11",
+  "reviews": [
+   {
+    "url": "https://www.tf1info.fr/politique/verif-immigration-l-italie-de-giorgi-meloni-vient-elle-vraiment-de-regulariser-plus-de-500000-personnes-sans-papiers-migrants-clandestins-2358975.html",
+    "source_id": "tf1info_verificateurs",
+    "claimant": "Le ministre François-Noël Buffet",
+    "rating_original": "En partie vrai",
+    "rating_normalized": "unrated",
+    "review_date": "2025-03-12"
+   }
+  ],
+  "reason": "nom retrouvé après retrait du contexte",
+  "candidates": [
+   {
+    "id": "Q12944",
+    "name": "François-Noël Buffet"
+   }
+  ]
+ },
+ {
+  "claim_id": "c_66921bb9fba0b944",
+  "claim_text": "\"La trop grande complexité de la bureaucratie fait perdre à la France 4% de sa richesse nationale\"",
+  "claim_date": "2025-03-06",
+  "reviews": [
+   {
+    "url": "https://www.franceinfo.fr/replay-radio/le-vrai-du-faux/les-lourdeurs-administratives-coutent-elles-4-du-pib-de-la-france-chaque-annee-comme-l-affirme-francois-bayrou_7092378.html",
+    "source_id": "franceinfo_vraioufake",
+    "claimant": "François Bayrou, Premier ministre",
+    "rating_original": "C’est plus compliqué",
+    "rating_normalized": "unrated",
+    "review_date": "2025-03-10"
+   }
+  ],
+  "reason": "nom retrouvé après retrait du contexte",
+  "candidates": [
+   {
+    "id": "Q12963",
+    "name": "François Bayrou"
+   }
+  ]
+ },
+ {
+  "claim_id": "c_2ff48422b93f40c1",
+  "claim_text": "Les pensions de retraite des femmes sont inférieures à 38% de celles des hommes",
+  "claim_date": "2025-02-25",
+  "reviews": [
+   {
+    "url": "https://www.tf1info.fr/societe/verif-retraites-france-les-pensions-des-femmes-sont-elles-inferieures-de-38-a-celles-des-hommes-comme-l-affirme-la-ministre-du-travail-astrid-panosyan-bouvet-2356118.html",
+    "source_id": "tf1info_verificateurs",
+    "claimant": "Astrid Panosyan-Bouvet, ministre du Travail",
+    "rating_original": "Vrai",
+    "rating_normalized": "true",
+    "review_date": "2025-02-25"
+   }
+  ],
+  "reason": "nom retrouvé après retrait du contexte",
+  "candidates": [
+   {
+    "id": "Q33106414",
+    "name": "Astrid Panosyan-Bouvet"
+   }
+  ]
+ },
+ {
+  "claim_id": "c_59d690a332fd086c",
+  "claim_text": "Là où le cannabis a été légalisé, la consommation a explosé sans faire disparaître le marché noir",
+  "claim_date": "2025-02-18",
+  "reviews": [
+   {
+    "url": "https://www.tf1info.fr/societe/verif-la-consommation-de-cannabis-explose-t-elle-la-ou-il-a-ete-legalise-sans-faire-disparaitre-le-marche-noir-2351575.html",
+    "source_id": "tf1info_verificateurs",
+    "claimant": "Naïma Moutchou, députée Horizons",
+    "rating_original": "Plutôt vrai",
+    "rating_normalized": "mostly_true",
+    "review_date": "2025-02-18"
+   }
+  ],
+  "reason": "nom retrouvé après retrait du contexte",
+  "candidates": [
+   {
+    "id": "Q30379800",
+    "name": "Naïma Moutchou"
+   }
+  ]
+ },
+ {
+  "claim_id": "c_5a0edab87326dfcc",
+  "claim_text": "\"0,5% du poids de notre cerveau, à chacun des humains, est aujourd'hui formé de plastique\"",
+  "claim_date": "2025-02-16",
+  "reviews": [
+   {
+    "url": "https://www.franceinfo.fr/replay-radio/le-vrai-du-faux/vrai-ou-faux-est-ce-vrai-que-0-5-du-poids-de-nos-cerveaux-est-constitue-de-plastique_7053395.html",
+    "source_id": "franceinfo_vraioufake",
+    "claimant": "Marine Tondelier, EELV",
+    "rating_original": "Plutôt Vrai",
+    "rating_normalized": "mostly_true",
+    "review_date": "2025-02-18"
+   }
+  ],
+  "reason": "nom retrouvé après retrait du contexte",
+  "candidates": [
+   {
+    "id": "Q29917987",
+    "name": "Marine Tondelier"
+   }
+  ]
+ },
+ {
+  "claim_id": "c_5ed7c4908d15cef7",
+  "claim_text": "\"Un mineur de 2025 n'est pas un mineur de 1945\"",
+  "claim_date": "2025-02-13",
+  "reviews": [
+   {
+    "url": "https://www.franceinfo.fr/replay-radio/le-vrai-du-faux/les-mineurs-d-aujourd-hui-sont-ils-plus-violents-que-les-mineurs-de-1945_7044056.html",
+    "source_id": "franceinfo_vraioufake",
+    "claimant": "Gabriel Attal, député EPR",
+    "rating_original": "Plutôt Vrai",
+    "rating_normalized": "mostly_true",
+    "review_date": "2025-02-13"
+   }
+  ],
+  "reason": "nom retrouvé après retrait du contexte",
+  "candidates": [
+   {
+    "id": "Q30339350",
+    "name": "Gabriel Attal"
+   }
+  ]
+ },
+ {
+  "claim_id": "c_66d2fbdd799f2142",
+  "claim_text": "\"40% des Algériens qui demandent un visa sur le sol français sont des visas pour soin\"",
+  "claim_date": "2025-02-03",
+  "reviews": [
+   {
+    "url": "https://www.franceinfo.fr/replay-radio/le-vrai-du-faux/vrai-ou-faux-immigration-40-des-demandes-de-visas-des-ressortissants-algeriens-ont-elles-un-but-medical_7028606.html",
+    "source_id": "franceinfo_vraioufake",
+    "claimant": "Jordan Bardella, patron du RN",
+    "rating_original": "Faux",
+    "rating_normalized": "false",
+    "review_date": "2025-02-05"
+   }
+  ],
+  "reason": "nom retrouvé après retrait du contexte",
+  "candidates": [
+   {
+    "id": "Q40655898",
+    "name": "Jordan Bardella"
+   }
+  ]
+ },
+ {
+  "claim_id": "c_844d89257b32ba63",
+  "claim_text": "Les Européens achètent 80% de leur matériel militaire hors de l'UE",
+  "claim_date": "2025-02-03",
+  "reviews": [
+   {
+    "url": "https://www.tf1info.fr/international/verif-les-europeens-achetent-ils-80-de-leur-materiel-militaire-hors-de-l-ue-2349030.html",
+    "source_id": "tf1info_verificateurs",
+    "claimant": "L'eurodéputée Valérie Hayer",
+    "rating_original": "En partie vrai",
+    "rating_normalized": "unrated",
+    "review_date": "2025-02-05"
+   }
+  ],
+  "reason": "nom retrouvé après retrait du contexte",
+  "candidates": [
+   {
+    "id": "Q63764512",
+    "name": "Valérie Hayer"
+   }
+  ]
+ },
+ {
+  "claim_id": "c_8866473849dccaa9",
+  "claim_text": "\"La France s'approche d'un sentiment de submersion migratoire\"",
+  "claim_date": "2025-01-29",
+  "reviews": [
+   {
+    "url": "https://www.franceinfo.fr/replay-radio/le-vrai-du-faux/submersion-migratoire-quelle-est-la-realite-des-chiffres-de-l-immigration-en-france_7014878.html",
+    "source_id": "franceinfo_vraioufake",
+    "claimant": "François Bayrou, Premier ministre",
+    "rating_original": "C’est plus compliqué",
+    "rating_normalized": "unrated",
+    "review_date": "2025-01-29"
+   }
+  ],
+  "reason": "nom retrouvé après retrait du contexte",
+  "candidates": [
+   {
+    "id": "Q12963",
+    "name": "François Bayrou"
+   }
+  ]
+ },
+ {
+  "claim_id": "c_292d254f5f31da6f",
+  "claim_text": "\"Les sommes qu'on n'investit pas dans l'environnement, il est démontré par les économistes que ça coûtera cinq fois plus cher\"",
+  "claim_date": "2025-01-22",
+  "reviews": [
+   {
+    "url": "https://www.franceinfo.fr/replay-radio/le-vrai-du-faux/l-inaction-climatique-coute-t-elle-cinq-fois-plus-cher-que-l-action-en-faveur-du-climat-comme-l-affirme-marine-tondelier_7010807.html",
+    "source_id": "franceinfo_vraioufake",
+    "claimant": "Marine Tondelier, EELV",
+    "rating_original": "Plutôt Vrai",
+    "rating_normalized": "mostly_true",
+    "review_date": "2025-01-27"
+   }
+  ],
+  "reason": "nom retrouvé après retrait du contexte",
+  "candidates": [
+   {
+    "id": "Q29917987",
+    "name": "Marine Tondelier"
+   }
+  ]
+ },
+ {
+  "claim_id": "c_d671682d0390f3aa",
+  "claim_text": "\"L'année dernière, au moment du projet de loi de finances, on a déposé un amendement de 100 millions d'euros pour l'accès à l'eau en Outre-Mer et notamment à Mayotte, et que tous les groupes politiques ont voté contre\"",
+  "claim_date": "2025-01-02",
+  "reviews": [
+   {
+    "url": "https://www.franceinfo.fr/replay-radio/le-vrai-du-faux/mayotte-le-rn-a-t-il-voulu-debloquer-100-millions-d-euros-pour-l-acces-a-l-eau-en-outre-mer_6981095.html",
+    "source_id": "franceinfo_vraioufake",
+    "claimant": "Thomas Ménagé, député RN",
+    "rating_original": "Plutôt Faux",
+    "rating_normalized": "mostly_false",
+    "review_date": "2025-01-06"
+   }
+  ],
+  "reason": "nom retrouvé après retrait du contexte",
+  "candidates": [
+   {
+    "id": "Q112650795",
+    "name": "Thomas Ménagé"
+   }
+  ]
+ },
+ {
+  "claim_id": "c_011f42f9073950e6",
+  "claim_text": "La France est déjà entrée en récession",
+  "claim_date": "2024-12-19",
+  "reviews": [
+   {
+    "url": "https://www.tf1info.fr/economie/verif-la-france-est-elle-reellement-deja-entree-en-recession-2340405.html",
+    "source_id": "tf1info_verificateurs",
+    "claimant": "Patrick Martin",
+    "rating_original": "Plutôt faux",
+    "rating_normalized": "mostly_false",
+    "review_date": "2024-12-19"
+   }
+  ],
+  "reason": "homonymes",
+  "candidates": [
+   {
+    "id": "Q139887231",
+    "name": "Patrick Martin"
+   },
+   {
+    "id": "Q65592131",
+    "name": "Patrick Martin"
+   },
+   {
+    "id": "Q65592132",
+    "name": "Patrick Martin"
+   },
+   {
+    "id": "Q65592133",
+    "name": "Patrick Martin"
+   },
+   {
+    "id": "Q98246929",
+    "name": "Patrick Martin"
+   }
+  ]
+ },
+ {
+  "claim_id": "c_9bfc3e82565aeade",
+  "claim_text": "\"Plus d'une trentaine de permanences ont été visées\" par les agriculteurs.",
+  "claim_date": "2024-12-10",
+  "reviews": [
+   {
+    "url": "https://www.franceinfo.fr/replay-radio/le-vrai-du-faux/les-permanences-des-deputes-du-nouveau-front-populaire-et-du-rn-particulierement-visees-par-les-agriculteurs-apres-le-vote-de-la-motion-de-censure_6923045.html",
+    "source_id": "franceinfo_vraioufake",
+    "claimant": "Yaël Braun-Pivet, présidente de l'Assemblée nationale",
+    "rating_original": "Vrai",
+    "rating_normalized": "true",
+    "review_date": "2024-12-12"
+   }
+  ],
+  "reason": "nom retrouvé après retrait du contexte",
+  "candidates": [
+   {
+    "id": "Q30339422",
+    "name": "Yaël Braun-Pivet"
+   }
+  ]
+ },
+ {
+  "claim_id": "c_95c164e9e8aa8cd7",
+  "claim_text": "Une auto-dissolution de l'Assemblée nationale entraînerait l'organisation de nouvelles élections législatives",
+  "claim_date": "2024-12-06",
+  "reviews": [
+   {
+    "url": "https://www.tf1info.fr/politique/verif-un-depute-propose-l-auto-dissolution-de-l-assemblee-nationale-pour-resoudre-la-crise-politique-mais-est-ce-possible-2338067.html",
+    "source_id": "tf1info_verificateurs",
+    "claimant": "Stéphane Vojetta, député Ensemble pour la République",
+    "rating_original": "Plutôt vrai",
+    "rating_normalized": "mostly_true",
+    "review_date": "2024-12-06"
+   }
+  ],
+  "reason": "nom retrouvé après retrait du contexte",
+  "candidates": [
+   {
+    "id": "Q108823633",
+    "name": "Stéphane Vojetta"
+   }
+  ]
+ },
+ {
+  "claim_id": "c_785a149627ff609a",
+  "claim_text": "\"L'auto-dissolution, ou la démission collective des 577 députés qui forment l'Assemblée nationale, est une option de déblocage\"",
+  "claim_date": "2024-12-04",
+  "reviews": [
+   {
+    "url": "https://www.franceinfo.fr/replay-radio/le-vrai-du-faux/vrai-ou-faux-une-autodissolution-de-l-assemblee-nationale-est-elle-possible_6911468.html",
+    "source_id": "franceinfo_vraioufake",
+    "claimant": "Stéphane Vojetta, député EPR",
+    "rating_original": "Plutôt Vrai",
+    "rating_normalized": "mostly_true",
+    "review_date": "2024-12-06"
+   }
+  ],
+  "reason": "nom retrouvé après retrait du contexte",
+  "candidates": [
+   {
+    "id": "Q108823633",
+    "name": "Stéphane Vojetta"
+   }
+  ]
+ },
+ {
+  "claim_id": "c_eb8ca2508294dd5d",
+  "claim_text": "Le Statut de Rome \"prévoit des cas d’immunité\" pour Benyamin Nétanyahou",
+  "claim_date": "2024-11-29",
+  "reviews": [
+   {
+    "url": "https://www.tf1info.fr/international/verif-le-statut-de-rome-fondateur-de-la-cour-penale-internationale-prevoit-il-l-immunite-de-benyamin-netanyahou-comme-l-affirme-la-porte-parole-du-gouvernement-maud-bregeon-2336874.html",
+    "source_id": "tf1info_verificateurs",
+    "claimant": "Maud Bregeon, porte-parole du gouvernement",
+    "rating_original": "Plutôt faux",
+    "rating_normalized": "mostly_false",
+    "review_date": "2024-11-29"
+   }
+  ],
+  "reason": "nom retrouvé après retrait du contexte",
+  "candidates": [
+   {
+    "id": "Q104032664",
+    "name": "Maud Bregeon"
+   }
+  ]
+ },
+ {
+  "claim_id": "c_8064270c7a9b79a2",
+  "claim_text": "\"On verse, je crois, 100 millions d'euros à la Chine. Est-ce que la Chine a besoin d'une aide au développement ?\"",
+  "claim_date": "2024-11-28",
+  "reviews": [
+   {
+    "url": "https://www.franceinfo.fr/replay-radio/le-vrai-du-faux/la-france-verse-t-elle-100-millions-d-euros-d-aide-au-developpement-a-la-chine_6904202.html",
+    "source_id": "franceinfo_vraioufake",
+    "claimant": "Sébastien Chenu, RN",
+    "rating_original": "Plutôt Vrai",
+    "rating_normalized": "mostly_true",
+    "review_date": "2024-12-02"
+   }
+  ],
+  "reason": "nom retrouvé après retrait du contexte",
+  "candidates": [
+   {
+    "id": "Q21294609",
+    "name": "Sébastien Chenu"
+   }
+  ]
+ },
+ {
+  "claim_id": "c_d24cbbba3ea2a2ec",
+  "claim_text": "L'utilisation des mines antipersonnel est interdite par le droit international",
+  "claim_date": "2024-11-21",
+  "reviews": [
+   {
+    "url": "https://www.tf1info.fr/international/verif-des-mines-antipersonnel-americaines-bientot-en-ukraine-guerre-est-ce-une-violation-du-droit-international-convention-ottawa-2335406.html",
+    "source_id": "tf1info_verificateurs",
+    "claimant": "Alain Houpert, sénateur",
+    "rating_original": "Plutôt vrai",
+    "rating_normalized": "mostly_true",
+    "review_date": "2024-11-21"
+   }
+  ],
+  "reason": "nom retrouvé après retrait du contexte",
+  "candidates": [
+   {
+    "id": "Q2829913",
+    "name": "Alain Houpert"
+   }
+  ]
+ },
+ {
+  "claim_id": "c_2303f2730a743973",
+  "claim_text": "L'Assurance maladie est le système qui rembourse le mieux, toutes dépenses confondues",
+  "claim_date": "2024-11-20",
+  "reviews": [
+   {
+    "url": "https://www.tf1info.fr/sante/verif-l-assurance-maladie-est-elle-le-systeme-qui-rembourse-le-mieux-les-soins-et-medicaments-au-monde-2335189.html",
+    "source_id": "tf1info_verificateurs",
+    "claimant": "Maud Bregeon, porte-parole du gouvernement",
+    "rating_original": "Plutôt faux",
+    "rating_normalized": "mostly_false",
+    "review_date": "2024-11-20"
+   }
+  ],
+  "reason": "nom retrouvé après retrait du contexte",
+  "candidates": [
+   {
+    "id": "Q104032664",
+    "name": "Maud Bregeon"
+   }
+  ]
+ },
+ {
+  "claim_id": "c_dfaf662746a06197",
+  "claim_text": "\"En France, on est davantage consommateurs de terres artificialisées\" que les autres pays d'Europe",
+  "claim_date": "2024-11-20",
+  "reviews": [
+   {
+    "url": "https://www.franceinfo.fr/replay-radio/le-vrai-du-faux/environnement-la-france-compte-t-elle-davantage-de-sols-artificialises-que-l-allemagne-et-l-espagne_6883946.html",
+    "source_id": "franceinfo_vraioufake",
+    "claimant": "François Ruffin, député ex-LFI",
+    "rating_original": "Plutôt Vrai",
+    "rating_normalized": "mostly_true",
+    "review_date": "2024-11-22"
+   }
+  ],
+  "reason": "nom retrouvé après retrait du contexte",
+  "candidates": [
+   {
+    "id": "Q3085763",
+    "name": "François Ruffin"
+   }
+  ]
+ },
+ {
+  "claim_id": "c_bee1f427367764c2",
+  "claim_text": "La procureure du procès des assistants du FN a dit \"je ne peux pas demander la relaxe parce que ça me ferait trop mal\"",
+  "claim_date": "2024-11-12",
+  "reviews": [
+   {
+    "url": "https://www.franceinfo.fr/replay-radio/le-vrai-du-faux/vrai-ou-faux-proces-des-assistants-parlementaires-du-fn-la-procureure-a-t-elle-vraiment-dit-ca-me-ferait-trop-mal-de-demander-la-relaxe_6871028.html",
+    "source_id": "franceinfo_vraioufake",
+    "claimant": "Marine Le Pen, RN",
+    "rating_original": "Plutôt Vrai",
+    "rating_normalized": "mostly_true",
+    "review_date": "2024-11-15"
+   }
+  ],
+  "reason": "nom retrouvé après retrait du contexte",
+  "candidates": [
+   {
+    "id": "Q12927",
+    "name": "Marine Le Pen"
+   }
+  ]
+ },
+ {
+  "claim_id": "c_1c1f52ab14f9429b",
+  "claim_text": "Emmanuel Macron a \"intégré la consommation de drogue\" dans le PIB de la France",
+  "claim_date": "2024-10-28",
+  "reviews": [
+   {
+    "url": "https://www.tf1info.fr/economie/emmanuel-macron-a-t-il-integre-la-consommation-de-drogue-au-pib-de-la-france-comme-le-dit-eric-piolle-le-maire-de-grenoble-2331034.html",
+    "source_id": "tf1info_verificateurs",
+    "claimant": "Eric Piolle, maire de Grenoble",
+    "rating_original": "Plutôt vrai",
+    "rating_normalized": "mostly_true",
+    "review_date": "2024-10-28"
+   }
+  ],
+  "reason": "nom retrouvé après retrait du contexte",
+  "candidates": [
+   {
+    "id": "Q16007948",
+    "name": "Éric Piolle"
+   }
+  ]
+ },
+ {
+  "claim_id": "c_ca26fd93021df494",
+  "claim_text": "Il y a \"une augmentation significative\" des absences dans la fonction publique",
+  "claim_date": "2024-10-28",
+  "reviews": [
+   {
+    "url": "https://www.franceinfo.fr/replay-radio/le-vrai-du-faux/vrai-ou-faux-absenteisme-dans-la-fonction-publique-un-nouveau-rapport-vient-contredire-le-ministre-guillaume-kasbarian_6878039.html",
+    "source_id": "franceinfo_vraioufake",
+    "claimant": "Guillaume Kasbarian, ministre de la Fonction publique",
+    "rating_original": "C’est plus compliqué",
+    "rating_normalized": "unrated",
+    "review_date": "2024-11-19"
+   }
+  ],
+  "reason": "nom retrouvé après retrait du contexte",
+  "candidates": [
+   {
+    "id": "Q30497082",
+    "name": "Guillaume Kasbarian"
+   }
+  ]
+ },
+ {
+  "claim_id": "c_2d742d3a34256948",
+  "claim_text": "Les caméras de vidéosurveillance \"ne sont pas la solution contre le narcotrafic\"",
+  "claim_date": "2024-10-27",
+  "reviews": [
+   {
+    "url": "https://www.franceinfo.fr/replay-radio/le-vrai-du-faux/les-cameras-de-videosurveillance-sont-elles-vraiment-utiles-pour-lutter-contre-le-narcotrafic_6838112.html",
+    "source_id": "franceinfo_vraioufake",
+    "claimant": "Eric Piolle, maire écologiste de Grenoble",
+    "rating_original": "C’est plus compliqué",
+    "rating_normalized": "unrated",
+    "review_date": "2024-10-29"
+   }
+  ],
+  "reason": "nom retrouvé après retrait du contexte",
+  "candidates": [
+   {
+    "id": "Q16007948",
+    "name": "Éric Piolle"
+   }
+  ]
+ },
+ {
+  "claim_id": "c_494288faf97b5922",
+  "claim_text": "La ville de Paris a plus de fonctionnaires que toutes les institutions de l’Union européenne",
+  "claim_date": "2024-10-25",
+  "reviews": [
+   {
+    "url": "https://www.tf1info.fr/politique/la-ville-de-paris-a-t-elle-plus-de-fonctionnaires-que-toute-l-union-europeenne-comme-l-affirme-le-depute-philippe-juvin-a-l-assemblee-nationale-2330541.html",
+    "source_id": "tf1info_verificateurs",
+    "claimant": "Philippe Juvin, député LR",
+    "rating_original": "Faux",
+    "rating_normalized": "false",
+    "review_date": "2024-10-25"
+   }
+  ],
+  "reason": "nom retrouvé après retrait du contexte",
+  "candidates": [
+   {
+    "id": "Q445705",
+    "name": "Philippe Juvin"
+   }
+  ]
+ },
+ {
+  "claim_id": "c_b89a0ce1453b63cc",
+  "claim_text": "Laurent Wauquiez n'a pas assisté aux trois semaines de débats budgétaires dans l'hémicycle",
+  "claim_date": "2024-10-11",
+  "reviews": [
+   {
+    "url": "https://www.franceinfo.fr/replay-radio/le-vrai-du-faux/vrai-ou-faux-budget-2025-laurent-wauquiez-n-a-t-il-pas-assiste-aux-debats-a-l-assemblee-comme-l-affirment-plusieurs-deputes_6867266.html",
+    "source_id": "franceinfo_vraioufake",
+    "claimant": "Arthur Delaporte, député PS",
+    "rating_original": "C’est plus compliqué",
+    "rating_normalized": "unrated",
+    "review_date": "2024-11-13"
+   }
+  ],
+  "reason": "nom retrouvé après retrait du contexte",
+  "candidates": [
+   {
+    "id": "Q112641115",
+    "name": "Arthur Delaporte"
    }
   ]
  }

@@ -1,6 +1,37 @@
 [
  {
-  "id": "c_c511b9d7034349a4",
+  "id": "c_1bdd1dfcded58e6f",
+  "person": {
+   "id": "Q30343128",
+   "name": "Mathilde Panot"
+  },
+  "party": {
+   "id": "Q27978402",
+   "name": "La France insoumise",
+   "short_name": "LFI",
+   "status": "ok"
+  },
+  "claim_text": "Conflit d'intérêt, liens avec Israël, votes en faveur des pesticides… On a vérifié les affirmations de Mathilde Panot sur Octobre rose",
+  "claim_date": "2026-10-16",
+  "date_precision": "day",
+  "date_is_fallback": true,
+  "country": "FR",
+  "attribution_status": "auto_sure",
+  "verdict": "unrated",
+  "reviews": [
+   {
+    "source_id": "poligraph_fr",
+    "source_name": "Poligraph",
+    "url": "https://poligraph.fr/factchecks/2026-10-16-vrai-ou-faux-conflit-d-interets-liens-avec-israel-votes-en-faveur-des",
+    "title": "Invérifiable — VRAI OU FAUX. Conflit d'intérêts, liens avec Israël, votes en faveur des pesticides… On a vérifié les affirmations de Mathilde Panot sur Octobre rose",
+    "rating_original": "C’est plus compliqué",
+    "rating_normalized": "unrated",
+    "review_date": "2026-10-16"
+   }
+  ]
+ },
+ {
+  "id": "c_96a23047c1bdcd97",
   "person": {
    "id": "Q98234202",
    "name": "Philippe Baptiste"
@@ -19,6 +50,15 @@
   "attribution_status": "auto_sure",
   "verdict": "unrated",
   "reviews": [
+   {
+    "source_id": "poligraph_fr",
+    "source_name": "Poligraph",
+    "url": "https://poligraph.fr/factchecks/2026-10-17-vrai-ou-faux-n-y-a-t-il-eu-que-38-bacheliers-qui-n-ont-pas-eu-de-solu",
+    "title": "Invérifiable — VRAI OU FAUX. N'y a-t-il eu que 38 bacheliers qui \"n'ont pas eu de solution\" sur Parcoursup en 2025, comme l'affirme le gouvernement ?",
+    "rating_original": "C’est plus compliqué",
+    "rating_normalized": "unrated",
+    "review_date": "2026-10-17"
+   },
    {
     "source_id": "franceinfo_vraioufake",
     "source_name": "franceinfo Vrai ou Fake",
@@ -113,6 +153,15 @@
   "verdict": "true",
   "reviews": [
    {
+    "source_id": "poligraph_fr",
+    "source_name": "Poligraph",
+    "url": "https://poligraph.fr/factchecks/2026-10-08-verif-x27-la-france-investit-elle-27-de-plus-que-la-moyenne-europeenn",
+    "title": "Vrai — VÉRIF' - La France investit-elle 27% de plus que la moyenne européenne pour ses lycées, comme l'affirme Bruno Retailleau ? | TF1 Info",
+    "rating_original": "Vrai",
+    "rating_normalized": "true",
+    "review_date": "2026-10-08"
+   },
+   {
     "source_id": "tf1info_verificateurs",
     "source_name": "TF1 Info – Les Vérificateurs",
     "url": "https://www.tf1info.fr/politique/verif-la-france-investit-elle-27-de-plus-que-la-moyenne-europeenne-pour-ses-lycees-comme-l-affirme-bruno-retailleau-2468847.html",
@@ -155,7 +204,7 @@
   ]
  },
  {
-  "id": "c_d6dbb7cca632d39a",
+  "id": "c_6cc8121f304f5a22",
   "person": {
    "id": "Q3052795",
    "name": "Emmanuel Maurel"
@@ -175,6 +224,15 @@
   "verdict": "unrated",
   "reviews": [
    {
+    "source_id": "poligraph_fr",
+    "source_name": "Poligraph",
+    "url": "https://poligraph.fr/factchecks/2026-09-25-verif-la-france-est-elle-vraiment-le-leader-europeen-des-morts-au-tra",
+    "title": "Partiellement vrai — VÉRIF' - La France est-elle vraiment \"le leader européen des morts au travail\" ?",
+    "rating_original": "En partie vrai",
+    "rating_normalized": "unrated",
+    "review_date": "2026-09-25"
+   },
+   {
     "source_id": "tf1info_verificateurs",
     "source_name": "TF1 Info – Les Vérificateurs",
     "url": "https://www.tf1info.fr/societe/verif-la-france-est-elle-vraiment-le-leader-europeen-des-morts-au-travail-2466337.html",
@@ -186,7 +244,7 @@
   ]
  },
  {
-  "id": "c_d76d62ca9bfd68d2",
+  "id": "c_224eb51f27052641",
   "person": {
    "id": "Q2926942",
    "name": "Bruno Retailleau"
@@ -205,6 +263,15 @@
   "attribution_status": "auto_sure",
   "verdict": "false",
   "reviews": [
+   {
+    "source_id": "poligraph_fr",
+    "source_name": "Poligraph",
+    "url": "https://poligraph.fr/factchecks/2026-09-23-verif-la-france-est-elle-vraiment-le-seul-pays-europeen-a-voir-le-cho",
+    "title": "Faux — VÉRIF' - La France est-elle vraiment le \"seul pays européen à voir le chômage augmenter\" ?",
+    "rating_original": "Faux",
+    "rating_normalized": "false",
+    "review_date": "2026-09-23"
+   },
    {
     "source_id": "tf1info_verificateurs",
     "source_name": "TF1 Info – Les Vérificateurs",
@@ -248,38 +315,38 @@
   ]
  },
  {
-  "id": "c_6e07debd77b3cb19",
+  "id": "c_98c456dfb5292090",
   "person": {
-   "id": "Q29570183",
-   "name": "Aurore Bergé"
+   "id": "Q12927",
+   "name": "Marine Le Pen"
   },
   "party": {
-   "id": "Q23731823",
-   "name": "Renaissance",
-   "short_name": "RE",
+   "id": "Q205150",
+   "name": "Rassemblement national",
+   "short_name": "RN",
    "status": "ok"
   },
-  "claim_text": "Les 10% d'abattement des retraités sur l'impôt sur le revenu sont accordés pour \"frais professionnels\"",
-  "claim_date": "2026-09-14",
+  "claim_text": "\"Aujourd'hui, 70% des Français sont éligibles au parc social et seulement 11% en bénéficient\"",
+  "claim_date": "2026-09-17",
   "date_precision": "day",
-  "date_is_fallback": false,
+  "date_is_fallback": true,
   "country": "FR",
   "attribution_status": "auto_sure",
   "verdict": "mostly_false",
   "reviews": [
    {
-    "source_id": "tf1info_verificateurs",
-    "source_name": "TF1 Info – Les Vérificateurs",
-    "url": "https://www.tf1info.fr/societe/verif-impot-sur-le-revenu-les-10-d-abattement-des-retraites-sont-ils-vraiment-accordes-pour-frais-professionnels-2464355.html",
-    "title": "VÉRIF' - Impôt sur le revenu : les 10% d'abattement des retraités sont-ils vraiment accordés pour \"frais professionnels\" ?",
-    "rating_original": "Plutôt faux",
+    "source_id": "poligraph_fr",
+    "source_name": "Poligraph",
+    "url": "https://poligraph.fr/factchecks/2026-09-17-vrai-ou-faux-est-il-vrai-que-quot-70-des-fran-ccedil-ais-sont-eacute",
+    "title": "Plutôt faux — VRAI OU FAUX. Est-il vrai que \"70% des Français sont éligibles\" à un logement du parc social et que \"seulement 11% d'entre eux en bénéficient\", comme l'affirme Marine Le Pen ?",
+    "rating_original": "Plutôt Faux",
     "rating_normalized": "mostly_false",
-    "review_date": "2026-09-15"
+    "review_date": "2026-09-17"
    }
   ]
  },
  {
-  "id": "c_d061e6b92bc03da2",
+  "id": "c_2c23915a4552ed2e",
   "person": {
    "id": "Q12927",
    "name": "Marine Le Pen"
@@ -299,6 +366,15 @@
   "verdict": "unrated",
   "reviews": [
    {
+    "source_id": "poligraph_fr",
+    "source_name": "Poligraph",
+    "url": "https://poligraph.fr/factchecks/2026-09-14-verif-penurie-de-logements-y-a-t-il-9-millions-de-metres-carres-de-bu",
+    "title": "Partiellement vrai — VÉRIF' - Pénurie de logements : y a-t-il \"9 millions de mètres carrés de bureaux inutilisés\" en France ?",
+    "rating_original": "En partie vrai",
+    "rating_normalized": "unrated",
+    "review_date": "2026-09-14"
+   },
+   {
     "source_id": "tf1info_verificateurs",
     "source_name": "TF1 Info – Les Vérificateurs",
     "url": "https://www.tf1info.fr/immobilier/verif-immobilier-penurie-de-logements-compte-t-on-en-france-9-millions-de-metres-carres-de-bureaux-inutilises-2464149.html",
@@ -306,6 +382,46 @@
     "rating_original": "En partie vrai",
     "rating_normalized": "unrated",
     "review_date": "2026-09-14"
+   }
+  ]
+ },
+ {
+  "id": "c_46ed272472b2f89d",
+  "person": {
+   "id": "Q29570183",
+   "name": "Aurore Bergé"
+  },
+  "party": {
+   "id": "Q23731823",
+   "name": "Renaissance",
+   "short_name": "RE",
+   "status": "ok"
+  },
+  "claim_text": "Les 10% d'abattement des retraités sur l'impôt sur le revenu sont accordés pour \"frais professionnels\"",
+  "claim_date": "2026-09-14",
+  "date_precision": "day",
+  "date_is_fallback": false,
+  "country": "FR",
+  "attribution_status": "auto_sure",
+  "verdict": "mostly_false",
+  "reviews": [
+   {
+    "source_id": "poligraph_fr",
+    "source_name": "Poligraph",
+    "url": "https://poligraph.fr/factchecks/2026-09-15-verif-impot-sur-le-revenu-les-10-d-abattement-des-retraites-sont-ils",
+    "title": "Plutôt faux — VÉRIF' - Impôt sur le revenu : les 10% d'abattement des retraités sont-ils vraiment accordés pour \"frais professionnels\" ?",
+    "rating_original": "Plutôt faux",
+    "rating_normalized": "mostly_false",
+    "review_date": "2026-09-15"
+   },
+   {
+    "source_id": "tf1info_verificateurs",
+    "source_name": "TF1 Info – Les Vérificateurs",
+    "url": "https://www.tf1info.fr/societe/verif-impot-sur-le-revenu-les-10-d-abattement-des-retraites-sont-ils-vraiment-accordes-pour-frais-professionnels-2464355.html",
+    "title": "VÉRIF' - Impôt sur le revenu : les 10% d'abattement des retraités sont-ils vraiment accordés pour \"frais professionnels\" ?",
+    "rating_original": "Plutôt faux",
+    "rating_normalized": "mostly_false",
+    "review_date": "2026-09-15"
    }
   ]
  },
@@ -381,7 +497,7 @@
   ]
  },
  {
-  "id": "c_6621df003ee043b7",
+  "id": "c_516377b5ea7503d3",
   "person": {
    "id": "Q82637284",
    "name": "Sarah Knafo"
@@ -400,6 +516,15 @@
   "attribution_status": "auto_sure",
   "verdict": "false",
   "reviews": [
+   {
+    "source_id": "poligraph_fr",
+    "source_name": "Poligraph",
+    "url": "https://poligraph.fr/factchecks/2026-09-07-verif-le-code-du-travail-fait-il-4-000-pages-en-france-contre-seulement-49-en-suisse",
+    "title": "Faux — VÉRIF' - Le Code du travail fait-il 4.000 pages en France, contre seulement 49 en Suisse ?",
+    "rating_original": "Faux",
+    "rating_normalized": "false",
+    "review_date": "2026-09-07"
+   },
    {
     "source_id": "tf1info_verificateurs",
     "source_name": "TF1 Info – Les Vérificateurs",
@@ -494,6 +619,15 @@
   "verdict": "false",
   "reviews": [
    {
+    "source_id": "poligraph_fr",
+    "source_name": "Poligraph",
+    "url": "https://poligraph.fr/factchecks/2026-09-02-verif-x27-emmanuel-macron-assure-qu-x27-a-son-epoque-les-vacances-d-x27-ete-commencaient-autour-du-14",
+    "title": "Faux — VÉRIF' - Emmanuel Macron assure qu'à son époque, les vacances d'été commençaient autour du 14 juillet… Est-ce vrai ? | TF1 Info",
+    "rating_original": "Faux",
+    "rating_normalized": "false",
+    "review_date": "2026-09-02"
+   },
+   {
     "source_id": "tf1info_verificateurs",
     "source_name": "TF1 Info – Les Vérificateurs",
     "url": "https://www.tf1info.fr/education/verif-emmanuel-macron-assure-qu-a-son-epoque-les-vacances-d-ete-commencaient-autour-du-14-juillet-est-ce-vrai-2461953.html",
@@ -556,6 +690,15 @@
   "verdict": "unrated",
   "reviews": [
    {
+    "source_id": "poligraph_fr",
+    "source_name": "Poligraph",
+    "url": "https://poligraph.fr/factchecks/2026-09-02-vrai-ou-faux-la-r-eacute-forme-du-concours-des-enseignants-a-t-elle-permis-de-quot-recruter-quasiment-agrave",
+    "title": "Invérifiable — VRAI OU FAUX. La réforme du concours des enseignants a-t-elle permis de \"recruter quasiment à plein\", comme l'affirme le ministre de l'Education nationale ?",
+    "rating_original": "C’est plus compliqué",
+    "rating_normalized": "unrated",
+    "review_date": "2026-09-02"
+   },
+   {
     "source_id": "franceinfo_vraioufake",
     "source_name": "franceinfo Vrai ou Fake",
     "url": "https://www.franceinfo.fr/vrai-ou-fake/vrai-ou-faux-la-reforme-du-concours-des-enseignants-a-t-elle-permis-de-recruter-quasiment-a-plein-comme-l-affirme-le-ministre-de-l-education-nationale_8171921.html",
@@ -617,6 +760,15 @@
   "attribution_status": "auto_sure",
   "verdict": "unrated",
   "reviews": [
+   {
+    "source_id": "poligraph_fr",
+    "source_name": "Poligraph",
+    "url": "https://poligraph.fr/factchecks/2026-08-27-verif-est-il-vrai-qu-en-maternelle-beaucoup-d-enfants-ne-maitrisent-pas-plus-de-500-mots",
+    "title": "Partiellement vrai — VÉRIF' - Est-il vrai qu'\"en maternelle, beaucoup d'enfants ne maîtrisent pas plus de 500 mots\" ?",
+    "rating_original": "En partie vrai",
+    "rating_normalized": "unrated",
+    "review_date": "2026-08-27"
+   },
    {
     "source_id": "tf1info_verificateurs",
     "source_name": "TF1 Info – Les Vérificateurs",
@@ -749,6 +901,3045 @@
     "rating_original": "Trompeur",
     "rating_normalized": "mostly_false",
     "review_date": "2026-08-24"
+   }
+  ]
+ },
+ {
+  "id": "c_1545375921ee6831",
+  "person": {
+   "id": "Q15724624",
+   "name": "François-Xavier Bellamy"
+  },
+  "party": {
+   "id": null,
+   "name": null,
+   "short_name": null,
+   "status": "undated"
+  },
+  "claim_text": "Un seul médecin rencontrera le patient avant la validation d'une demande d'aide à mourir",
+  "claim_date": "2026-07-15",
+  "date_precision": "day",
+  "date_is_fallback": false,
+  "country": "FR",
+  "attribution_status": "auto_sure",
+  "verdict": "mostly_false",
+  "reviews": [
+   {
+    "source_id": "franceinfo_vraioufake",
+    "source_name": "franceinfo Vrai ou Fake",
+    "url": "https://www.franceinfo.fr/vrai-ou-fake/vrai-ou-faux-aide-a-mourir-le-patient-ne-rencontrera-t-il-qu-un-seul-medecin-avant-la-validation-de-sa-demande-comme-le-denonce-francois-xavier-bellamy_8110238.html",
+    "title": "VRAI OU FAUX. Aide à mourir : le patient ne rencontrera-t-il qu'un seul médecin avant la validation de sa demande, comme le dénonce François-Xavier Bellamy ?",
+    "rating_original": "Plutôt Faux",
+    "rating_normalized": "mostly_false",
+    "review_date": "2026-07-18"
+   }
+  ]
+ },
+ {
+  "id": "c_7808336aef9fe7f4",
+  "person": {
+   "id": "Q46138822",
+   "name": "Jean-Philippe Tanguy"
+  },
+  "party": {
+   "id": null,
+   "name": null,
+   "short_name": null,
+   "status": "undated"
+  },
+  "claim_text": "Jean-Luc Mélenchon a déclaré \"'Le seul parti qui réhabilite la politique, c'est le Front national\"",
+  "claim_date": "2026-07-12",
+  "date_precision": "day",
+  "date_is_fallback": false,
+  "country": "FR",
+  "attribution_status": "auto_sure",
+  "verdict": "unrated",
+  "reviews": [
+   {
+    "source_id": "franceinfo_vraioufake",
+    "source_name": "franceinfo Vrai ou Fake",
+    "url": "https://www.franceinfo.fr/vrai-ou-fake/vrai-ou-faux-jean-luc-melenchon-a-t-il-declare-que-le-seul-parti-qui-rehabilite-la-politique-c-est-le-front-national-comme-le-pretend-une-interview-relayee-par-jean-philippe-tanguy_8108606.html",
+    "title": "VRAI OU FAUX. Jean-Luc Mélenchon a-t-il déclaré que \"le seul parti qui réhabilite la politique, c'est le Front national\", comme le prétend une interview relayée par Jean-Philippe Tanguy ?",
+    "rating_original": "C’est plus compliqué",
+    "rating_normalized": "unrated",
+    "review_date": "2026-07-17"
+   }
+  ]
+ },
+ {
+  "id": "c_ed8c9ee066117044",
+  "person": {
+   "id": "Q82637284",
+   "name": "Sarah Knafo"
+  },
+  "party": {
+   "id": "Q109932430",
+   "name": "Reconquête!",
+   "short_name": "",
+   "status": "ok"
+  },
+  "claim_text": "Les droits de succession frappent d'abord les plus modestes",
+  "claim_date": "2026-07-08",
+  "date_precision": "day",
+  "date_is_fallback": true,
+  "country": "FR",
+  "attribution_status": "auto_sure",
+  "verdict": "false",
+  "reviews": [
+   {
+    "source_id": "tf1info_verificateurs",
+    "source_name": "TF1 Info – Les Vérificateurs",
+    "url": "https://www.tf1info.fr/conso-argent/verif-droits-de-succession-cet-impot-sur-l-heritage-frappe-t-il-d-abord-les-plus-modestes-2452008.html",
+    "title": "VÉRIF' - Droits de succession : cet impôt sur l'héritage frappe-t-il \"d'abord les plus modestes\" ?",
+    "rating_original": "Faux",
+    "rating_normalized": "false",
+    "review_date": "2026-07-08"
+   }
+  ]
+ },
+ {
+  "id": "c_511bac9f266f7cf3",
+  "person": {
+   "id": "Q104032664",
+   "name": "Maud Bregeon"
+  },
+  "party": {
+   "id": null,
+   "name": null,
+   "short_name": null,
+   "status": "undated"
+  },
+  "claim_text": "Jamais le budget de la justice n'a été aussi haut en France",
+  "claim_date": "2026-06-11",
+  "date_precision": "day",
+  "date_is_fallback": true,
+  "country": "FR",
+  "attribution_status": "auto_sure",
+  "verdict": "true",
+  "reviews": [
+   {
+    "source_id": "tf1info_verificateurs",
+    "source_name": "TF1 Info – Les Vérificateurs",
+    "url": "https://www.tf1info.fr/justice-faits-divers/verif-affaire-fillette-adolescente-mort-lyhanna-est-il-vrai-que-jamais-le-budget-de-la-justice-n-a-ete-aussi-haut-comme-le-dit-le-gouvernement-2446822.html",
+    "title": "VÉRIF' - Affaire Lyhanna : est-il vrai que \"le budget de la justice n'a jamais été aussi haut\", comme le dit le gouvernement ?",
+    "rating_original": "Vrai",
+    "rating_normalized": "true",
+    "review_date": "2026-06-11"
+   }
+  ]
+ },
+ {
+  "id": "c_759d1083fd660192",
+  "person": {
+   "id": "Q3123610",
+   "name": "Gérald Darmanin"
+  },
+  "party": {
+   "id": null,
+   "name": null,
+   "short_name": null,
+   "status": "undated"
+  },
+  "claim_text": "Tous les pédocriminels sont incurables",
+  "claim_date": "2026-06-08",
+  "date_precision": "day",
+  "date_is_fallback": false,
+  "country": "FR",
+  "attribution_status": "auto_sure",
+  "verdict": "mostly_false",
+  "reviews": [
+   {
+    "source_id": "franceinfo_vraioufake",
+    "source_name": "franceinfo Vrai ou Fake",
+    "url": "https://www.franceinfo.fr/vrai-ou-fake/vrai-ou-faux-mort-de-lyhanna-tous-les-pedocriminels-sont-ils-incurables-comme-l-affirme-gerald-darmanin_8053976.html",
+    "title": "VRAI OU FAUX. Mort de Lyhanna : Tous les pédocriminels sont-ils \"incurables\", comme l'affirme Gérald Darmanin ?",
+    "rating_original": "Plutôt Faux",
+    "rating_normalized": "mostly_false",
+    "review_date": "2026-06-13"
+   }
+  ]
+ },
+ {
+  "id": "c_ef51da92ed700c16",
+  "person": {
+   "id": "Q12927",
+   "name": "Marine Le Pen"
+  },
+  "party": {
+   "id": "Q205150",
+   "name": "Rassemblement national",
+   "short_name": "RN",
+   "status": "ok"
+  },
+  "claim_text": "Il n'y a qu'en France où la victoire d'un club de foot provoque des émeutes.",
+  "claim_date": "2026-05-30",
+  "date_precision": "day",
+  "date_is_fallback": false,
+  "country": "FR",
+  "attribution_status": "auto_sure",
+  "verdict": "false",
+  "reviews": [
+   {
+    "source_id": "franceinfo_vraioufake",
+    "source_name": "franceinfo Vrai ou Fake",
+    "url": "https://www.franceinfo.fr/vrai-ou-fake/vrai-ou-faux-violences-apres-le-sacre-europeen-du-psg-la-france-est-elle-le-seul-pays-ou-la-victoire-d-un-club-de-foot-provoque-des-emeutes-comme-l-affirme-marine-le-pen_8039525.html",
+    "title": "VRAI OU FAUX. Violences après le sacre européen du PSG : la France est-elle le seul pays \"où la victoire d'un club de foot provoque des émeutes\", comme l'affirme Marine Le Pen ?",
+    "rating_original": "Faux",
+    "rating_normalized": "false",
+    "review_date": "2026-06-02"
+   }
+  ]
+ },
+ {
+  "id": "c_54005784cad99232",
+  "person": {
+   "id": "Q30339422",
+   "name": "Yaël Braun-Pivet"
+  },
+  "party": {
+   "id": "Q23731823",
+   "name": "Renaissance",
+   "short_name": "RE",
+   "status": "ok"
+  },
+  "claim_text": "\"46% des jeunes Français n'ont jamais entendu parler de la Shoah\"",
+  "claim_date": "2026-04-26",
+  "date_precision": "day",
+  "date_is_fallback": false,
+  "country": "FR",
+  "attribution_status": "auto_sure",
+  "verdict": "unrated",
+  "reviews": [
+   {
+    "source_id": "franceinfo_vraioufake",
+    "source_name": "franceinfo Vrai ou Fake",
+    "url": "https://www.franceinfo.fr/societe/antisemitisme/vrai-ou-faux-pres-de-la-moitie-des-jeunes-francais-n-ont-ils-jamais-entendu-parler-de-la-shoah-comme-l-affirme-la-presidente-de-l-assemblee-nationale-yael-braun-pivet_7969649.html",
+    "title": "VRAI OU FAUX. Près de la moitié des \"jeunes\" Français n'ont-ils \"jamais entendu parler de la Shoah\", comme l'affirme la présidente de l'Assemblée nationale Yaël Braun-Pivet ?",
+    "rating_original": "C’est plus compliqué",
+    "rating_normalized": "unrated",
+    "review_date": "2026-04-29"
+   }
+  ]
+ },
+ {
+  "id": "c_a1b984943402b778",
+  "person": {
+   "id": "Q40655898",
+   "name": "Jordan Bardella"
+  },
+  "party": {
+   "id": "Q205150",
+   "name": "Rassemblement national",
+   "short_name": "RN",
+   "status": "ok"
+  },
+  "claim_text": "Les personnes régularisées en Espagne pourront s'installer en France",
+  "claim_date": "2026-04-14",
+  "date_precision": "day",
+  "date_is_fallback": false,
+  "country": "FR",
+  "attribution_status": "auto_sure",
+  "verdict": "mostly_false",
+  "reviews": [
+   {
+    "source_id": "afp_factuel",
+    "source_name": "AFP Factuel",
+    "url": "https://factuel.afp.com/doc.afp.com.A86L4G3",
+    "title": "Régularisation de 500.000 sans-papiers en Espagne : attention aux déclarations trompeuses de Jordan Bardella",
+    "rating_original": "Trompeur",
+    "rating_normalized": "mostly_false",
+    "review_date": "2026-04-22"
+   }
+  ]
+ },
+ {
+  "id": "c_64072ce56678b9fc",
+  "person": {
+   "id": "Q82637284",
+   "name": "Sarah Knafo"
+  },
+  "party": {
+   "id": "Q109932430",
+   "name": "Reconquête!",
+   "short_name": "",
+   "status": "ok"
+  },
+  "claim_text": "A peine élu maire de Paris, Emmanuel Grégoire a augmenté son salaire de 25%",
+  "claim_date": "2026-04-13",
+  "date_precision": "day",
+  "date_is_fallback": true,
+  "country": "FR",
+  "attribution_status": "auto_sure",
+  "verdict": "false",
+  "reviews": [
+   {
+    "source_id": "poligraph_fr",
+    "source_name": "Poligraph",
+    "url": "https://poligraph.fr/factchecks/2026-04-13-verif-a-peine-elu-a-la-mairie-de-paris-emmanuel-gregoire-a-t-il-augmente-son-salaire-de-25",
+    "title": "Faux — VÉRIF' - À peine élu à la mairie de Paris, Emmanuel Grégoire a-t-il augmenté son salaire de 25% ?",
+    "rating_original": "Faux",
+    "rating_normalized": "false",
+    "review_date": "2026-04-13"
+   },
+   {
+    "source_id": "tf1info_verificateurs",
+    "source_name": "TF1 Info – Les Vérificateurs",
+    "url": "https://www.tf1info.fr/politique/verif-le-nouveau-maire-de-paris-emmanuel-gregoire-a-t-il-augmente-son-salaire-de-25-comme-le-dit-son-ancienne-adversaire-sarah-knafo-2435693.html",
+    "title": "VÉRIF' - À peine élu à la mairie de Paris, Emmanuel Grégoire a-t-il augmenté son salaire de 25% ?",
+    "rating_original": "Faux",
+    "rating_normalized": "false",
+    "review_date": "2026-04-13"
+   }
+  ]
+ },
+ {
+  "id": "c_a5d9a41247ae026c",
+  "person": {
+   "id": "Q30339198",
+   "name": "Jean-Noël Barrot"
+  },
+  "party": {
+   "id": null,
+   "name": null,
+   "short_name": null,
+   "status": "undated"
+  },
+  "claim_text": "Le projet de péage dans le détroit d'Ormuz est illégal.",
+  "claim_date": "2026-04-09",
+  "date_precision": "day",
+  "date_is_fallback": false,
+  "country": "FR",
+  "attribution_status": "auto_sure",
+  "verdict": "unrated",
+  "reviews": [
+   {
+    "source_id": "franceinfo_vraioufake",
+    "source_name": "franceinfo Vrai ou Fake",
+    "url": "https://www.franceinfo.fr/vrai-ou-fake/vrai-ou-faux-le-projet-de-peage-dans-le-detroit-d-ormuz-evoque-par-l-iran-et-donald-trump-viole-t-il-le-droit-international_7926188.html",
+    "title": "VRAI OU FAUX. Le projet de péage dans le détroit d'Ormuz évoqué par l'Iran et Donald Trump viole-t-il le droit international ?",
+    "rating_original": "C’est plus compliqué",
+    "rating_normalized": "unrated",
+    "review_date": "2026-04-09"
+   }
+  ]
+ },
+ {
+  "id": "c_4600bcd2800cb9e0",
+  "person": {
+   "id": "Q30339350",
+   "name": "Gabriel Attal"
+  },
+  "party": {
+   "id": "Q23731823",
+   "name": "Renaissance",
+   "short_name": "RE",
+   "status": "ok"
+  },
+  "claim_text": "Fleuristes et boulangers interdits d'ouvrir le 1er mai",
+  "claim_date": "2026-04-06",
+  "date_precision": "day",
+  "date_is_fallback": false,
+  "country": "FR",
+  "attribution_status": "auto_sure",
+  "verdict": "unrated",
+  "reviews": [
+   {
+    "source_id": "afp_factuel",
+    "source_name": "AFP Factuel",
+    "url": "https://factuel.afp.com/doc.afp.com.A73F4CR",
+    "title": "Ouverture des boulangeries et fleuristes le 1er-Mai : que dit la loi ?",
+    "rating_original": "Manque de contexte",
+    "rating_normalized": "unrated",
+    "review_date": "2026-04-09"
+   }
+  ]
+ },
+ {
+  "id": "c_4f524e4ed74a13ba",
+  "person": {
+   "id": "Q12927",
+   "name": "Marine Le Pen"
+  },
+  "party": {
+   "id": "Q205150",
+   "name": "Rassemblement national",
+   "short_name": "RN",
+   "status": "ok"
+  },
+  "claim_text": "L'Etat profite-t-il vraiment de la crise des carburants ?",
+  "claim_date": "2026-03-24",
+  "date_precision": "day",
+  "date_is_fallback": false,
+  "country": "FR",
+  "attribution_status": "auto_sure",
+  "verdict": "mostly_false",
+  "reviews": [
+   {
+    "source_id": "franceinfo_vraioufake",
+    "source_name": "franceinfo Vrai ou Fake",
+    "url": "https://www.franceinfo.fr/vrai-ou-fake/vrai-ou-faux-l-etat-profite-t-il-vraiment-de-la-crise-des-carburants-pour-s-en-mettre-plein-les-poches-comme-l-affirme-le-rassemblement-national_7895645.html",
+    "title": "VRAI OU FAUX. L'Etat profite-t-il vraiment de la crise des carburants pour \"s'en mettre plein les poches\", comme l'affirme le Rassemblement national ?",
+    "rating_original": "Plutôt Faux",
+    "rating_normalized": "mostly_false",
+    "review_date": "2026-03-27"
+   }
+  ]
+ },
+ {
+  "id": "c_5412311eeded7ac1",
+  "person": {
+   "id": "Q12927",
+   "name": "Marine Le Pen"
+  },
+  "party": {
+   "id": "Q205150",
+   "name": "Rassemblement national",
+   "short_name": "RN",
+   "status": "ok"
+  },
+  "claim_text": "En France, l'âge moyen du premier \"emploi réel\" est aujourd'hui de 27 ans ?",
+  "claim_date": "2026-03-10",
+  "date_precision": "day",
+  "date_is_fallback": true,
+  "country": "FR",
+  "attribution_status": "auto_sure",
+  "verdict": "mostly_true",
+  "reviews": [
+   {
+    "source_id": "poligraph_fr",
+    "source_name": "Poligraph",
+    "url": "https://poligraph.fr/factchecks/2026-03-10-verif-l-age-moyen-du-premier-emploi-reel-en-france-est-il-aujourd-hui-de-27-ans",
+    "title": "Plutôt vrai — VÉRIF' - L'âge moyen du premier \"emploi réel\" en France est-il aujourd'hui de 27 ans ?",
+    "rating_original": "Plutôt vrai",
+    "rating_normalized": "mostly_true",
+    "review_date": "2026-03-10"
+   },
+   {
+    "source_id": "tf1info_verificateurs",
+    "source_name": "TF1 Info – Les Vérificateurs",
+    "url": "https://www.tf1info.fr/vie-pro/verif-l-age-moyen-du-premier-emploi-reel-en-france-est-il-aujourd-hui-de-27-ans-2429138.html",
+    "title": "VÉRIF' - L'âge moyen du premier \"emploi réel\" en France est-il aujourd'hui de 27 ans ?",
+    "rating_original": "Plutôt vrai",
+    "rating_normalized": "mostly_true",
+    "review_date": "2026-03-10"
+   }
+  ]
+ },
+ {
+  "id": "c_faa5e0a1549c25d0",
+  "person": {
+   "id": "Q27182",
+   "name": "Rachida Dati"
+  },
+  "party": {
+   "id": null,
+   "name": null,
+   "short_name": null,
+   "status": "undated"
+  },
+  "claim_text": "La réduction de la vitesse à 50 km/h sur le périphérique parisien n'a pas démontré que ça réduisait la pollution",
+  "claim_date": "2026-03-10",
+  "date_precision": "day",
+  "date_is_fallback": false,
+  "country": "FR",
+  "attribution_status": "auto_sure",
+  "verdict": "mostly_false",
+  "reviews": [
+   {
+    "source_id": "tf1info_verificateurs",
+    "source_name": "TF1 Info – Les Vérificateurs",
+    "url": "https://www.tf1info.fr/politique/elections/municipales/verif-le-passage-a-50-km-h-sur-le-peripherique-parisien-n-a-t-il-vraiment-eu-aucun-impact-sur-la-pollution-2429763.html",
+    "title": "VÉRIF' - Le passage à 50 km/h sur le périphérique parisien n'a-t-il vraiment eu aucun impact sur la pollution ?",
+    "rating_original": "Plutôt faux",
+    "rating_normalized": "mostly_false",
+    "review_date": "2026-03-13"
+   }
+  ]
+ },
+ {
+  "id": "c_35b3d2a40b43b441",
+  "person": {
+   "id": "Q27182",
+   "name": "Rachida Dati"
+  },
+  "party": {
+   "id": null,
+   "name": null,
+   "short_name": null,
+   "status": "undated"
+  },
+  "claim_text": "Si elle est élue maire de Paris, Rachida Dati pourra doubler le nombre de caméras et éviter tout \"angle mort\"",
+  "claim_date": "2026-03-09",
+  "date_precision": "day",
+  "date_is_fallback": false,
+  "country": "FR",
+  "attribution_status": "auto_sure",
+  "verdict": "unrated",
+  "reviews": [
+   {
+    "source_id": "afp_factuel",
+    "source_name": "AFP Factuel",
+    "url": "https://factuel.afp.com/doc.afp.com.99QP2T3",
+    "title": "Municipales à Paris : doubler le nombre de caméras pour éviter \"tout angle mort\", une promesse semée d'embûches",
+    "rating_original": "Manque de contexte",
+    "rating_normalized": "unrated",
+    "review_date": "2026-03-10"
+   }
+  ]
+ },
+ {
+  "id": "c_4111e2441636ae50",
+  "person": {
+   "id": "Q5829",
+   "name": "Jean-Luc Mélenchon"
+  },
+  "party": {
+   "id": null,
+   "name": null,
+   "short_name": null,
+   "status": "ambiguous"
+  },
+  "claim_text": "L'Iran et Oman sont souverains dans le détroit d'Ormuz",
+  "claim_date": "2026-03-09",
+  "date_precision": "day",
+  "date_is_fallback": false,
+  "country": "FR",
+  "attribution_status": "auto_sure",
+  "verdict": "unrated",
+  "reviews": [
+   {
+    "source_id": "afp_factuel",
+    "source_name": "AFP Factuel",
+    "url": "https://factuel.afp.com/doc.afp.com.A2YV3KE",
+    "title": "L'Iran et Oman, souverains sur la navigation dans le détroit d'Ormuz ? Le raccourci juridique de Jean-Luc Mélenchon",
+    "rating_original": "Manque de contexte",
+    "rating_normalized": "unrated",
+    "review_date": "2026-03-13"
+   }
+  ]
+ },
+ {
+  "id": "c_7f2cfff2b3c28df6",
+  "person": {
+   "id": "Q12927",
+   "name": "Marine Le Pen"
+  },
+  "party": {
+   "id": "Q205150",
+   "name": "Rassemblement national",
+   "short_name": "RN",
+   "status": "ok"
+  },
+  "claim_text": "Le vin n'est pas mauvais pour la santé si on en n'abuse pas",
+  "claim_date": "2026-03-06",
+  "date_precision": "day",
+  "date_is_fallback": false,
+  "country": "FR",
+  "attribution_status": "auto_sure",
+  "verdict": "false",
+  "reviews": [
+   {
+    "source_id": "afp_factuel",
+    "source_name": "AFP Factuel",
+    "url": "https://factuel.afp.com/doc.afp.com.A2ZQ6KF",
+    "title": "Un alcool pas comme les autres ? Attention aux idées reçues autour du vin",
+    "rating_original": "Faux",
+    "rating_normalized": "false",
+    "review_date": "2026-03-25"
+   }
+  ]
+ },
+ {
+  "id": "c_454efb9b5dee5b83",
+  "person": {
+   "id": "Q30343128",
+   "name": "Mathilde Panot"
+  },
+  "party": {
+   "id": "Q27978402",
+   "name": "La France insoumise",
+   "short_name": "LFI",
+   "status": "ok"
+  },
+  "claim_text": "Macron engage un peu plus la France dans une guerre illégale sans mandat des représentants du peuple.",
+  "claim_date": "2026-03-05",
+  "date_precision": "day",
+  "date_is_fallback": false,
+  "country": "FR",
+  "attribution_status": "auto_sure",
+  "verdict": "false",
+  "reviews": [
+   {
+    "source_id": "tf1info_verificateurs",
+    "source_name": "TF1 Info – Les Vérificateurs",
+    "url": "https://www.tf1info.fr/international/verif-l-executif-macron-lecornu-doit-il-vraiment-prevenir-le-parlement-pour-acceuillir-des-avions-americains-sur-les-bases-militaires-francaises-2428668.html",
+    "title": "VÉRIF' - L'exécutif doit-il vraiment prévenir le Parlement pour accueillir des avions américains sur des bases françaises ?",
+    "rating_original": "Faux",
+    "rating_normalized": "false",
+    "review_date": "2026-03-06"
+   }
+  ]
+ },
+ {
+  "id": "c_cee84fc0272cdd37",
+  "person": {
+   "id": "Q40655898",
+   "name": "Jordan Bardella"
+  },
+  "party": {
+   "id": "Q205150",
+   "name": "Rassemblement national",
+   "short_name": "RN",
+   "status": "ok"
+  },
+  "claim_text": "Cela passe par une baisse de la TICPE et de la TVA sur l’énergie en cas de flambée, qui serait compensée pour les caisses de l’Etat par la hausse des bases.",
+  "claim_date": "2026-03-02",
+  "date_precision": "day",
+  "date_is_fallback": false,
+  "country": "FR",
+  "attribution_status": "auto_sure",
+  "verdict": "unrated",
+  "reviews": [
+   {
+    "source_id": "tf1info_verificateurs",
+    "source_name": "TF1 Info – Les Vérificateurs",
+    "url": "https://www.tf1info.fr/economie/verif-guerre-moyen-orient-iran-israel-etats-unis-une-baisse-de-ticpe-et-de-la-tva-sur-l-energie-est-elle-possible-comme-le-demande-le-rn-2428201.html",
+    "title": "VÉRIF' - Gaz, électricité, carburants... une baisse des taxes sur l'énergie est-elle possible, comme le demande le RN ?",
+    "rating_original": "En partie vrai",
+    "rating_normalized": "unrated",
+    "review_date": "2026-03-05"
+   }
+  ]
+ },
+ {
+  "id": "c_4a23bd89bd126ae2",
+  "person": {
+   "id": "Q30339198",
+   "name": "Jean-Noël Barrot"
+  },
+  "party": {
+   "id": null,
+   "name": null,
+   "short_name": null,
+   "status": "undated"
+  },
+  "claim_text": "L'Europe est le premier soutien financier de l'Ukraine",
+  "claim_date": "2026-02-24",
+  "date_precision": "day",
+  "date_is_fallback": true,
+  "country": "FR",
+  "attribution_status": "auto_sure",
+  "verdict": "true",
+  "reviews": [
+   {
+    "source_id": "poligraph_fr",
+    "source_name": "Poligraph",
+    "url": "https://poligraph.fr/factchecks/2026-02-24-verif-l-union-europeenne-est-elle-le-premier-soutien-financier-de-l-ukraine",
+    "title": "Vrai — VÉRIF' - L'Union européenne est-elle le \"premier soutien financier\" de l'Ukraine ?",
+    "rating_original": "Vrai",
+    "rating_normalized": "true",
+    "review_date": "2026-02-24"
+   },
+   {
+    "source_id": "tf1info_verificateurs",
+    "source_name": "TF1 Info – Les Vérificateurs",
+    "url": "https://www.tf1info.fr/international/verif-l-union-europeenne-est-elle-le-premier-soutien-financier-de-l-ukraine-quatre-ans-guerre-russie-comme-le-dit-le-ministre-jean-noel-barrot-2426605.html",
+    "title": "VÉRIF' - L'Union européenne est-elle le \"premier soutien financier\" de l'Ukraine ?",
+    "rating_original": "Vrai",
+    "rating_normalized": "true",
+    "review_date": "2026-02-24"
+   }
+  ]
+ },
+ {
+  "id": "c_8f600aa37aa5e36f",
+  "person": {
+   "id": "Q3074223",
+   "name": "Florian Philippot"
+  },
+  "party": {
+   "id": "Q41330182",
+   "name": "Les Patriotes",
+   "short_name": "LP",
+   "status": "ok"
+  },
+  "claim_text": "La Pologne compte condamner à de la prison à vie les complices de Jeffrey Epstein",
+  "claim_date": "2026-02-23",
+  "date_precision": "day",
+  "date_is_fallback": false,
+  "country": "FR",
+  "attribution_status": "auto_sure",
+  "verdict": "false",
+  "reviews": [
+   {
+    "source_id": "afp_factuel",
+    "source_name": "AFP Factuel",
+    "url": "https://factuel.afp.com/doc.afp.com.98VF3NQ",
+    "title": "Non, la Pologne ne prévoit pas \"la prison à vie\" pour les complices de Jeffrey Epstein",
+    "rating_original": "Faux",
+    "rating_normalized": "false",
+    "review_date": "2026-02-26"
+   }
+  ]
+ },
+ {
+  "id": "c_a5c20dc8eb8ba8e6",
+  "person": {
+   "id": "Q40655898",
+   "name": "Jordan Bardella"
+  },
+  "party": {
+   "id": "Q205150",
+   "name": "Rassemblement national",
+   "short_name": "RN",
+   "status": "ok"
+  },
+  "claim_text": "Le logo de la Jeune Garde était sur les documents de campagne de François Hollande, aux législatives de 2024",
+  "claim_date": "2026-02-19",
+  "date_precision": "day",
+  "date_is_fallback": true,
+  "country": "FR",
+  "attribution_status": "auto_sure",
+  "verdict": "false",
+  "reviews": [
+   {
+    "source_id": "tf1info_verificateurs",
+    "source_name": "TF1 Info – Les Vérificateurs",
+    "url": "https://www.tf1info.fr/politique/verif-le-logo-de-la-jeune-garde-etait-il-appose-sur-un-document-de-campagne-de-francois-hollande-aux-legislatives-de-2024-comme-l-affirme-jordan-bardella-2425795.html",
+    "title": "VÉRIF' - Le \"logo de la Jeune Garde\" était-il apposé sur un document de campagne de François Hollande ?",
+    "rating_original": "Faux",
+    "rating_normalized": "false",
+    "review_date": "2026-02-19"
+   }
+  ]
+ },
+ {
+  "id": "c_e68ec98c7d56307d",
+  "person": {
+   "id": "Q5829",
+   "name": "Jean-Luc Mélenchon"
+  },
+  "party": {
+   "id": null,
+   "name": null,
+   "short_name": null,
+   "status": "ambiguous"
+  },
+  "claim_text": "Un couple sur quatre a recours à la PMA pour avoir des enfants",
+  "claim_date": "2026-02-12",
+  "date_precision": "day",
+  "date_is_fallback": false,
+  "country": "FR",
+  "attribution_status": "auto_sure",
+  "verdict": "false",
+  "reviews": [
+   {
+    "source_id": "tf1info_verificateurs",
+    "source_name": "TF1 Info – Les Vérificateurs",
+    "url": "https://www.tf1info.fr/societe/verif-en-france-un-couple-sur-quatre-a-t-il-recours-a-la-pma-pour-avoir-des-enfants-comme-l-assure-jean-luc-melenchon-2424586.html",
+    "title": "VÉRIF' - En France, un couple sur quatre a-t-il recours à la PMA pour avoir des enfants ?",
+    "rating_original": "Faux",
+    "rating_normalized": "false",
+    "review_date": "2026-02-14"
+   }
+  ]
+ },
+ {
+  "id": "c_55f243bd05275cd8",
+  "person": {
+   "id": "Q82637284",
+   "name": "Sarah Knafo"
+  },
+  "party": {
+   "id": "Q109932430",
+   "name": "Reconquête!",
+   "short_name": "",
+   "status": "ok"
+  },
+  "claim_text": "L'absence d'éclairage public la nuit augmente l'insécurité",
+  "claim_date": "2026-02-09",
+  "date_precision": "day",
+  "date_is_fallback": true,
+  "country": "FR",
+  "attribution_status": "auto_sure",
+  "verdict": "mostly_false",
+  "reviews": [
+   {
+    "source_id": "poligraph_fr",
+    "source_name": "Poligraph",
+    "url": "https://poligraph.fr/factchecks/2026-02-09-verif-est-il-vrai-que-l-absence-d-eclairage-public-la-nuit-augmente-l-insecurite",
+    "title": "Plutôt faux — VÉRIF' - Est-il vrai que l'absence d'éclairage public la nuit \"augmente l'insécurité\" ?",
+    "rating_original": "Plutôt faux",
+    "rating_normalized": "mostly_false",
+    "review_date": "2026-02-09"
+   },
+   {
+    "source_id": "tf1info_verificateurs",
+    "source_name": "TF1 Info – Les Vérificateurs",
+    "url": "https://www.tf1info.fr/politique/elections/municipales/municipales-a-paris-l-absence-d-eclairage-public-la-nuit-augmente-l-insecurite-c-est-ce-que-dit-sarah-knafo-dans-son-programme-nous-avons-verifie-2423677.html",
+    "title": "VÉRIF' - Est-il vrai que l'absence d'éclairage public la nuit \"augmente l'insécurité\" ?",
+    "rating_original": "Plutôt faux",
+    "rating_normalized": "mostly_false",
+    "review_date": "2026-02-09"
+   }
+  ]
+ },
+ {
+  "id": "c_b3cf7e058f4a1ed3",
+  "person": {
+   "id": "Q40871303",
+   "name": "Laurent Duplomb"
+  },
+  "party": {
+   "id": null,
+   "name": null,
+   "short_name": null,
+   "status": "undated"
+  },
+  "claim_text": "L'acétamipride inoffensif pour santé et environnement d'après les agences",
+  "claim_date": "2026-02-09",
+  "date_precision": "day",
+  "date_is_fallback": false,
+  "country": "FR",
+  "attribution_status": "auto_sure",
+  "verdict": "mostly_false",
+  "reviews": [
+   {
+    "source_id": "afp_factuel",
+    "source_name": "AFP Factuel",
+    "url": "https://factuel.afp.com/doc.afp.com.96VP2T3",
+    "title": "Au coeur de la \"loi Duplomb\", une molécule qui inquiète",
+    "rating_original": "Trompeur",
+    "rating_normalized": "mostly_false",
+    "review_date": "2026-02-13"
+   }
+  ]
+ },
+ {
+  "id": "c_4f3e2981a33f1933",
+  "person": {
+   "id": "Q3052772",
+   "name": "Emmanuel Macron"
+  },
+  "party": {
+   "id": "Q23731823",
+   "name": "Renaissance",
+   "short_name": "RE",
+   "status": "ok"
+  },
+  "claim_text": "On a plus de vacances aujourd'hui dans l'année qu'il y a 20 ans",
+  "claim_date": "2026-02-06",
+  "date_precision": "day",
+  "date_is_fallback": false,
+  "country": "FR",
+  "attribution_status": "auto_sure",
+  "verdict": "unrated",
+  "reviews": [
+   {
+    "source_id": "tf1info_verificateurs",
+    "source_name": "TF1 Info – Les Vérificateurs",
+    "url": "https://www.tf1info.fr/education/verif-a-t-on-plus-de-vacances-dans-l-annee-qu-il-y-a-20-ans-comme-l-assure-emmanuel-macron-2423614.html",
+    "title": "VÉRIF' - A-t-on \"plus de vacances dans l'année\" qu'il y a 20 ans, comme l'assure Emmanuel Macron ?",
+    "rating_original": "En partie vrai",
+    "rating_normalized": "unrated",
+    "review_date": "2026-02-09"
+   }
+  ]
+ },
+ {
+  "id": "c_309b7658ef44b12c",
+  "person": {
+   "id": "Q27182",
+   "name": "Rachida Dati"
+  },
+  "party": {
+   "id": null,
+   "name": null,
+   "short_name": null,
+   "status": "undated"
+  },
+  "claim_text": "Emmanuel Grégoire a-t-il \"fait disparaître plus de 150 000 logements du parc locatif privé de Paris\"",
+  "claim_date": "2026-02-05",
+  "date_precision": "day",
+  "date_is_fallback": true,
+  "country": "FR",
+  "attribution_status": "auto_sure",
+  "verdict": "mostly_false",
+  "reviews": [
+   {
+    "source_id": "poligraph_fr",
+    "source_name": "Poligraph",
+    "url": "https://poligraph.fr/factchecks/2026-02-05-vrai-ou-faux-emmanuel-gregoire-a-t-il-fait-disparaitre-150-000-logeme",
+    "title": "Plutôt faux — VRAI OU FAUX. Emmanuel Grégoire a-t-il \"fait disparaître 150 000 logements du parc locatif privé\" parisien, comme le dénonce Rachida Dati ?",
+    "rating_original": "Plutôt Faux",
+    "rating_normalized": "mostly_false",
+    "review_date": "2026-02-05"
+   }
+  ]
+ },
+ {
+  "id": "c_a270302c4943b6c7",
+  "person": {
+   "id": "Q27182",
+   "name": "Rachida Dati"
+  },
+  "party": {
+   "id": null,
+   "name": null,
+   "short_name": null,
+   "status": "undated"
+  },
+  "claim_text": "Les accidents de vélo sont en hausse de 70% à Paris depuis 2017",
+  "claim_date": "2026-02-02",
+  "date_precision": "day",
+  "date_is_fallback": false,
+  "country": "FR",
+  "attribution_status": "auto_sure",
+  "verdict": "false",
+  "reviews": [
+   {
+    "source_id": "tf1info_verificateurs",
+    "source_name": "TF1 Info – Les Vérificateurs",
+    "url": "https://www.tf1info.fr/politique/elections/municipales/verif-les-accidents-de-velo-sont-ils-vraiment-en-hausse-de-70-a-paris-depuis-2017-comme-le-dit-rachida-dati-2422540.html",
+    "title": "VÉRIF' - Les accidents de vélo sont-ils vraiment en hausse de 70% à Paris depuis 2017 ?",
+    "rating_original": "Faux",
+    "rating_normalized": "false",
+    "review_date": "2026-02-03"
+   }
+  ]
+ },
+ {
+  "id": "c_7e01ef9f4088bda6",
+  "person": {
+   "id": "Q27182",
+   "name": "Rachida Dati"
+  },
+  "party": {
+   "id": null,
+   "name": null,
+   "short_name": null,
+   "status": "undated"
+  },
+  "claim_text": "Emmanuel Grégoire a-t-il \"fait disparaître plus de 150 000 logements du parc locatif privé de Paris\"",
+  "claim_date": "2026-01-31",
+  "date_precision": "day",
+  "date_is_fallback": false,
+  "country": "FR",
+  "attribution_status": "auto_sure",
+  "verdict": "mostly_false",
+  "reviews": [
+   {
+    "source_id": "franceinfo_vraioufake",
+    "source_name": "franceinfo Vrai ou Fake",
+    "url": "https://www.franceinfo.fr/vrai-ou-fake/vrai-ou-faux-emmanuel-gregoire-a-t-il-fait-disparaitre-150-000-logements-du-parc-locatif-prive-parisien-comme-le-denonce-rachida-dati_7781549.html",
+    "title": "VRAI OU FAUX. Emmanuel Grégoire a-t-il \"fait disparaître 150 000 logements du parc locatif privé\" parisien, comme le dénonce Rachida Dati ?",
+    "rating_original": "Plutôt Faux",
+    "rating_normalized": "mostly_false",
+    "review_date": "2026-02-05"
+   }
+  ]
+ },
+ {
+  "id": "c_c046da3e18752f68",
+  "person": {
+   "id": "Q3171170",
+   "name": "Jean Castex"
+  },
+  "party": {
+   "id": "Q23731823",
+   "name": "Renaissance",
+   "short_name": "RE",
+   "status": "ok"
+  },
+  "claim_text": "Des espaces interdits aux enfants de moins de douze ans ont été créés dès 2017 par la SNCF dans certains TGV",
+  "claim_date": "2026-01-27",
+  "date_precision": "day",
+  "date_is_fallback": false,
+  "country": "FR",
+  "attribution_status": "auto_sure",
+  "verdict": "true",
+  "reviews": [
+   {
+    "source_id": "tf1info_verificateurs",
+    "source_name": "TF1 Info – Les Vérificateurs",
+    "url": "https://www.tf1info.fr/transports/verif-la-sncf-a-t-elle-mis-en-place-des-2017-des-wagons-sans-enfants-dans-certains-tgv-optimum-no-kids-2421402.html",
+    "title": "VÉRIF' - La SNCF a-t-elle mis en place des wagons sans enfants dans certains TGV dès 2017 ?",
+    "rating_original": "Vrai",
+    "rating_normalized": "true",
+    "review_date": "2026-01-28"
+   }
+  ]
+ },
+ {
+  "id": "c_7d4be054414b04ac",
+  "person": {
+   "id": "Q27182",
+   "name": "Rachida Dati"
+  },
+  "party": {
+   "id": null,
+   "name": null,
+   "short_name": null,
+   "status": "undated"
+  },
+  "claim_text": "Garer sa voiture à Paris coûte désormais \"jusqu'à 200€ par jour\" ?",
+  "claim_date": "2026-01-25",
+  "date_precision": "day",
+  "date_is_fallback": false,
+  "country": "FR",
+  "attribution_status": "auto_sure",
+  "verdict": "unrated",
+  "reviews": [
+   {
+    "source_id": "tf1info_verificateurs",
+    "source_name": "TF1 Info – Les Vérificateurs",
+    "url": "https://www.tf1info.fr/politique/elections/municipales/verif-stationnement-paris-garer-sa-voiture-coute-t-il-desormais-jusqu-a-200-euros-par-jour-comme-l-affirme-rachida-dati-2420937.html",
+    "title": "VÉRIF' - Stationnement à Paris : garer sa voiture coûte-t-il désormais \"jusqu'à 200 euros par jour\" ?",
+    "rating_original": "En partie vrai",
+    "rating_normalized": "unrated",
+    "review_date": "2026-01-26"
+   }
+  ]
+ },
+ {
+  "id": "c_7453ffb40bc2ea52",
+  "person": {
+   "id": "Q29575749",
+   "name": "Manuel Bompard"
+  },
+  "party": {
+   "id": null,
+   "name": null,
+   "short_name": null,
+   "status": "ambiguous"
+  },
+  "claim_text": "Les socialistes ont-ils vraiment proposé de restreindre le financement du permis B par le compte personnel de formation ?",
+  "claim_date": "2026-01-24",
+  "date_precision": "day",
+  "date_is_fallback": false,
+  "country": "FR",
+  "attribution_status": "auto_sure",
+  "verdict": "mostly_true",
+  "reviews": [
+   {
+    "source_id": "franceinfo_vraioufake",
+    "source_name": "franceinfo Vrai ou Fake",
+    "url": "https://www.franceinfo.fr/vrai-ou-fake/vrai-ou-faux-les-socialistes-ont-ils-propose-de-restreindre-le-financement-du-permis-b-par-le-compte-personnel-de-formation-comme-le-dit-manuel-bompard_7767539.html",
+    "title": "VRAI OU FAUX. Les socialistes ont-ils proposé de restreindre le financement du permis B par le compte personnel de formation, comme le dit Manuel Bompard ?",
+    "rating_original": "Plutôt Vrai",
+    "rating_normalized": "mostly_true",
+    "review_date": "2026-01-28"
+   }
+  ]
+ },
+ {
+  "id": "c_57f7255a9168248e",
+  "person": {
+   "id": "Q82637284",
+   "name": "Sarah Knafo"
+  },
+  "party": {
+   "id": "Q109932430",
+   "name": "Reconquête!",
+   "short_name": "",
+   "status": "ok"
+  },
+  "claim_text": "L'extinction de l'éclairage public induit de la criminalité",
+  "claim_date": "2026-01-19",
+  "date_precision": "day",
+  "date_is_fallback": false,
+  "country": "FR",
+  "attribution_status": "auto_sure",
+  "verdict": "mostly_false",
+  "reviews": [
+   {
+    "source_id": "afp_factuel",
+    "source_name": "AFP Factuel",
+    "url": "https://factuel.afp.com/doc.afp.com.94A679E",
+    "title": "Attention aux affirmations liant baisse de l'éclairage public la nuit et hausse de l'insécurité",
+    "rating_original": "Trompeur",
+    "rating_normalized": "mostly_false",
+    "review_date": "2026-02-03"
+   }
+  ]
+ },
+ {
+  "id": "c_8c368974fd8a58f5",
+  "person": {
+   "id": "Q2926942",
+   "name": "Bruno Retailleau"
+  },
+  "party": {
+   "id": "Q20012759",
+   "name": "Les Républicains",
+   "short_name": "LR",
+   "status": "ok"
+  },
+  "claim_text": "Un couple avec deux enfants peut gagner 1,7 Smic sans travailler",
+  "claim_date": "2026-01-07",
+  "date_precision": "day",
+  "date_is_fallback": false,
+  "country": "FR",
+  "attribution_status": "auto_sure",
+  "verdict": "mostly_false",
+  "reviews": [
+   {
+    "source_id": "afp_factuel",
+    "source_name": "AFP Factuel",
+    "url": "https://factuel.afp.com/doc.afp.com.926E6CQ",
+    "title": "Plus d'une fois et demi le Smic pour une famille, sans travailler? Un calcul douteux",
+    "rating_original": "Trompeur",
+    "rating_normalized": "mostly_false",
+    "review_date": "2026-01-13"
+   }
+  ]
+ },
+ {
+  "id": "c_99b139a3991d6185",
+  "person": {
+   "id": "Q29575749",
+   "name": "Manuel Bompard"
+  },
+  "party": {
+   "id": null,
+   "name": null,
+   "short_name": null,
+   "status": "ambiguous"
+  },
+  "claim_text": "Est-ce que c'est vrai, ou pas, que (le) mandat (de Volodymyr Zelensky) est arrivé à son terme ?",
+  "claim_date": "2025-12-10",
+  "date_precision": "day",
+  "date_is_fallback": false,
+  "country": "FR",
+  "attribution_status": "auto_sure",
+  "verdict": "unrated",
+  "reviews": [
+   {
+    "source_id": "tf1info_verificateurs",
+    "source_name": "TF1 Info – Les Vérificateurs",
+    "url": "https://www.tf1info.fr/international/verif-zelensky-pret-a-des-elections-en-ukraine-le-mandat-du-president-est-il-vraiment-arrive-a-terme-2411953.html",
+    "title": "VÉRIF' - Zelensky \"prêt\" à des élections en Ukraine : le mandat du président est-il vraiment arrivé \"à terme\" ?",
+    "rating_original": "En partie vrai",
+    "rating_normalized": "unrated",
+    "review_date": "2025-12-10"
+   }
+  ]
+ },
+ {
+  "id": "c_0210efd7868a0822",
+  "person": {
+   "id": "Q3074223",
+   "name": "Florian Philippot"
+  },
+  "party": {
+   "id": "Q41330182",
+   "name": "Les Patriotes",
+   "short_name": "LP",
+   "status": "ok"
+  },
+  "claim_text": "L'OTAN a menacé la Russie d'une frappe \"préventive\".",
+  "claim_date": "2025-12-03",
+  "date_precision": "day",
+  "date_is_fallback": true,
+  "country": "FR",
+  "attribution_status": "auto_sure",
+  "verdict": "false",
+  "reviews": [
+   {
+    "source_id": "tf1info_verificateurs",
+    "source_name": "TF1 Info – Les Vérificateurs",
+    "url": "https://www.tf1info.fr/international/verif-l-otan-a-t-elle-vraiment-menace-la-russie-d-une-frappe-preventive-ou-preemptive-2410506.html",
+    "title": "VÉRIF' - L'Otan a-t-elle vraiment menacé la Russie d'une frappe \"préventive\" ?",
+    "rating_original": "Faux",
+    "rating_normalized": "false",
+    "review_date": "2025-12-03"
+   }
+  ]
+ },
+ {
+  "id": "c_d2556d7cf44d2ff0",
+  "person": {
+   "id": "Q3018298",
+   "name": "David Lisnard"
+  },
+  "party": {
+   "id": null,
+   "name": null,
+   "short_name": null,
+   "status": "ambiguous"
+  },
+  "claim_text": "\"Jamais autant de nos compatriotes n'ont dormi dehors ou dans leur voiture\"",
+  "claim_date": "2025-12-01",
+  "date_precision": "day",
+  "date_is_fallback": false,
+  "country": "FR",
+  "attribution_status": "auto_sure",
+  "verdict": "unrated",
+  "reviews": [
+   {
+    "source_id": "tf1info_verificateurs",
+    "source_name": "TF1 Info – Les Vérificateurs",
+    "url": "https://www.tf1info.fr/immobilier/verif-n-y-a-t-il-jamais-eu-autant-de-francais-qui-dorment-dehors-comme-l-affirme-david-lisnard-2410018.html",
+    "title": "VÉRIF' - N'y a-t-il \"jamais\" eu \"autant\" de Français qui \"dorment dehors\" ?",
+    "rating_original": "En partie vrai",
+    "rating_normalized": "unrated",
+    "review_date": "2025-12-01"
+   }
+  ]
+ },
+ {
+  "id": "c_faf6db59f2ac28ed",
+  "person": {
+   "id": "Q3167954",
+   "name": "Jean-Michel Blanquer"
+  },
+  "party": {
+   "id": null,
+   "name": null,
+   "short_name": null,
+   "status": "undated"
+  },
+  "claim_text": "Nous représentons entre 10% à 15% de la dépense sociale mondiale alors que nous sommes moins de 1% de la population mondiale",
+  "claim_date": "2025-11-11",
+  "date_precision": "day",
+  "date_is_fallback": false,
+  "country": "FR",
+  "attribution_status": "auto_sure",
+  "verdict": "false",
+  "reviews": [
+   {
+    "source_id": "tf1info_verificateurs",
+    "source_name": "TF1 Info – Les Vérificateurs",
+    "url": "https://www.tf1info.fr/politique/verif-la-france-verse-t-elle-10-a-15-de-la-depense-sociale-mondiale-comme-l-assure-ancien-ministre-jean-michel-blanquer-2406325.html",
+    "title": "VÉRIF' - La France verse-t-elle \"10% à 15% de la dépense sociale mondiale\", comme l'assure Jean-Michel Blanquer ?",
+    "rating_original": "Faux",
+    "rating_normalized": "false",
+    "review_date": "2025-11-13"
+   }
+  ]
+ },
+ {
+  "id": "c_bcf1fe6f36fb0aa0",
+  "person": {
+   "id": "Q5829",
+   "name": "Jean-Luc Mélenchon"
+  },
+  "party": {
+   "id": null,
+   "name": null,
+   "short_name": null,
+   "status": "ambiguous"
+  },
+  "claim_text": "Les découverts seront interdits à partir du 20 novembre 2026 en France",
+  "claim_date": "2025-10-29",
+  "date_precision": "day",
+  "date_is_fallback": false,
+  "country": "FR",
+  "attribution_status": "auto_sure",
+  "verdict": "mostly_false",
+  "reviews": [
+   {
+    "source_id": "afp_factuel",
+    "source_name": "AFP Factuel",
+    "url": "https://factuel.afp.com/doc.afp.com.82J33CQ",
+    "title": "Les découverts bancaires interdits à partir de novembre 2026 ? C'est trompeur",
+    "rating_original": "Trompeur",
+    "rating_normalized": "mostly_false",
+    "review_date": "2025-10-31"
+   }
+  ]
+ },
+ {
+  "id": "c_fecc229f2668b2ad",
+  "person": {
+   "id": "Q5829",
+   "name": "Jean-Luc Mélenchon"
+  },
+  "party": {
+   "id": null,
+   "name": null,
+   "short_name": null,
+   "status": "ambiguous"
+  },
+  "claim_text": "La Commission européenne menace de bloquer tous les versements à la France si celle-ci n'applique pas ses consignes budgétaires",
+  "claim_date": "2025-10-17",
+  "date_precision": "day",
+  "date_is_fallback": false,
+  "country": "FR",
+  "attribution_status": "auto_sure",
+  "verdict": "false",
+  "reviews": [
+   {
+    "source_id": "tf1info_verificateurs",
+    "source_name": "TF1 Info – Les Vérificateurs",
+    "url": "https://www.tf1info.fr/politique/verif-la-commission-europeenne-menace-t-elle-de-bloquer-tous-les-versements-a-la-france-sur-des-questions-de-budget-2401957.html",
+    "title": "VÉRIF' - La Commission européenne menace-t-elle de \"bloquer tous les versements à la France\" sur des questions de budget ?",
+    "rating_original": "Faux",
+    "rating_normalized": "false",
+    "review_date": "2025-10-21"
+   }
+  ]
+ },
+ {
+  "id": "c_5c4541f145c8ec29",
+  "person": {
+   "id": "Q3074223",
+   "name": "Florian Philippot"
+  },
+  "party": {
+   "id": "Q41330182",
+   "name": "Les Patriotes",
+   "short_name": "LP",
+   "status": "ok"
+  },
+  "claim_text": "Le budget de la France est fixé par l'Europe jusqu'en 2031",
+  "claim_date": "2025-10-16",
+  "date_precision": "day",
+  "date_is_fallback": true,
+  "country": "FR",
+  "attribution_status": "auto_sure",
+  "verdict": "mostly_false",
+  "reviews": [
+   {
+    "source_id": "tf1info_verificateurs",
+    "source_name": "TF1 Info – Les Vérificateurs",
+    "url": "https://www.tf1info.fr/politique/verif-le-budget-de-la-france-est-il-deja-fixe-par-l-europe-jusqu-en-2031-2401003.html",
+    "title": "VÉRIF' - Le budget de la France est-il déjà fixé par l'Europe jusqu'en 2031 ?",
+    "rating_original": "Plutôt faux",
+    "rating_normalized": "mostly_false",
+    "review_date": "2025-10-16"
+   }
+  ]
+ },
+ {
+  "id": "c_c437e14286875e68",
+  "person": {
+   "id": "Q5829",
+   "name": "Jean-Luc Mélenchon"
+  },
+  "party": {
+   "id": null,
+   "name": null,
+   "short_name": null,
+   "status": "ambiguous"
+  },
+  "claim_text": "La génération 1964 sera la seule à bénéficier de la suspension de la réforme des retraites",
+  "claim_date": "2025-10-14",
+  "date_precision": "day",
+  "date_is_fallback": false,
+  "country": "FR",
+  "attribution_status": "auto_sure",
+  "verdict": "false",
+  "reviews": [
+   {
+    "source_id": "tf1info_verificateurs",
+    "source_name": "TF1 Info – Les Vérificateurs",
+    "url": "https://www.tf1info.fr/politique/verif-la-generation-1964-sera-t-elle-la-seule-a-profiter-d-une-suspension-de-la-reforme-des-retraites-comme-le-dit-jean-luc-melenchon-2400708.html",
+    "title": "VÉRIF' - La génération 1964 sera-t-elle la seule à profiter d'une suspension de la réforme des retraites ?",
+    "rating_original": "Faux",
+    "rating_normalized": "false",
+    "review_date": "2025-10-15"
+   }
+  ]
+ },
+ {
+  "id": "c_e0b7ad893b78d441",
+  "person": {
+   "id": "Q29917987",
+   "name": "Marine Tondelier"
+  },
+  "party": {
+   "id": "Q613786",
+   "name": "Les Écologistes – Europe Écologie Les Verts",
+   "short_name": "EELV",
+   "status": "ok"
+  },
+  "claim_text": "70% des habits ne sont jamais portés",
+  "claim_date": "2025-10-08",
+  "date_precision": "day",
+  "date_is_fallback": true,
+  "country": "FR",
+  "attribution_status": "auto_sure",
+  "verdict": "unrated",
+  "reviews": [
+   {
+    "source_id": "tf1info_verificateurs",
+    "source_name": "TF1 Info – Les Vérificateurs",
+    "url": "https://www.tf1info.fr/societe/verif-shein-au-bhv-70-des-habits-des-francais-ne-sont-ils-jamais-portes-2399137.html",
+    "title": "VÉRIF' - Shein au BHV : 70% des habits des Français ne sont-ils jamais portés ?",
+    "rating_original": "En partie vrai",
+    "rating_normalized": "unrated",
+    "review_date": "2025-10-08"
+   }
+  ]
+ },
+ {
+  "id": "c_b1f68cd781b78569",
+  "person": {
+   "id": "Q12961",
+   "name": "Nicolas Dupont-Aignan"
+  },
+  "party": {
+   "id": null,
+   "name": null,
+   "short_name": null,
+   "status": "undated"
+  },
+  "claim_text": "L'État laisse-t-il mourir de froid des vaches dans les alpages en les privant de retour à l'étable ?",
+  "claim_date": "2025-09-28",
+  "date_precision": "day",
+  "date_is_fallback": false,
+  "country": "FR",
+  "attribution_status": "auto_sure",
+  "verdict": "mostly_false",
+  "reviews": [
+   {
+    "source_id": "tf1info_verificateurs",
+    "source_name": "TF1 Info – Les Vérificateurs",
+    "url": "https://www.tf1info.fr/societe/verif-l-etat-laisse-t-il-mourir-de-froid-des-vaches-dans-les-alpages-en-les-privant-de-retour-a-l-etable-2397790.html",
+    "title": "VÉRIF' - L'État laisse-t-il mourir de froid des vaches dans les alpages en les privant de retour à l'étable ?",
+    "rating_original": "Plutôt faux",
+    "rating_normalized": "mostly_false",
+    "review_date": "2025-09-30"
+   }
+  ]
+ },
+ {
+  "id": "c_ecc0c7806bc0a35f",
+  "person": {
+   "id": "Q112650795",
+   "name": "Thomas Ménagé"
+  },
+  "party": {
+   "id": null,
+   "name": null,
+   "short_name": null,
+   "status": "none"
+  },
+  "claim_text": "L'exécution provisoire est prévue s’il y a un risque de réitération, de récidive ou de fuite",
+  "claim_date": "2025-09-26",
+  "date_precision": "day",
+  "date_is_fallback": false,
+  "country": "FR",
+  "attribution_status": "auto_sure",
+  "verdict": "mostly_false",
+  "reviews": [
+   {
+    "source_id": "tf1info_verificateurs",
+    "source_name": "TF1 Info – Les Vérificateurs",
+    "url": "https://www.tf1info.fr/justice-faits-divers/verif-condamnation-de-nicolas-sarkozy-l-execution-provisoire-est-elle-vraiment-encadree-dans-des-cas-tres-precis-2397564.html",
+    "title": "VÉRIF' - Condamnation de Nicolas Sarkozy : l'exécution provisoire est-elle vraiment \"encadrée dans des cas très précis\" ?",
+    "rating_original": "Plutôt faux",
+    "rating_normalized": "mostly_false",
+    "review_date": "2025-09-29"
+   }
+  ]
+ },
+ {
+  "id": "c_6c454908103f4eca",
+  "person": {
+   "id": "Q2926942",
+   "name": "Bruno Retailleau"
+  },
+  "party": {
+   "id": "Q20012759",
+   "name": "Les Républicains",
+   "short_name": "LR",
+   "status": "ok"
+  },
+  "claim_text": "La France affiche un niveau de vie \"7.000 euros\" plus faible qu'en Allemagne, alors qu'il était identique il y a 25 ans",
+  "claim_date": "2025-09-22",
+  "date_precision": "day",
+  "date_is_fallback": false,
+  "country": "FR",
+  "attribution_status": "auto_sure",
+  "verdict": "mostly_true",
+  "reviews": [
+   {
+    "source_id": "tf1info_verificateurs",
+    "source_name": "TF1 Info – Les Vérificateurs",
+    "url": "https://www.tf1info.fr/economie/verif-un-niveau-de-vie-7-000-euros-plus-faible-qu-en-allemagne-alors-qu-il-etait-identique-il-y-a-25-ans-2396404.html",
+    "title": "VÉRIF' - Un niveau de vie \"7.000 euros\" plus faible en France qu'en Allemagne, alors qu'il était identique il y a 25 ans ?",
+    "rating_original": "Plutôt vrai",
+    "rating_normalized": "mostly_true",
+    "review_date": "2025-09-24"
+   }
+  ]
+ },
+ {
+  "id": "c_e211b355835c2f10",
+  "person": {
+   "id": "Q12963",
+   "name": "François Bayrou"
+  },
+  "party": {
+   "id": null,
+   "name": null,
+   "short_name": null,
+   "status": "undated"
+  },
+  "claim_text": "La France n'a pas eu de budget à l'équilibre depuis 51 ans",
+  "claim_date": "2025-09-09",
+  "date_precision": "day",
+  "date_is_fallback": true,
+  "country": "FR",
+  "attribution_status": "auto_sure",
+  "verdict": "true",
+  "reviews": [
+   {
+    "source_id": "tf1info_verificateurs",
+    "source_name": "TF1 Info – Les Vérificateurs",
+    "url": "https://www.tf1info.fr/politique/verif-la-france-n-a-t-elle-vraiment-connu-aucun-budget-deficit-a-l-equilibre-depuis-51-ans-comme-l-affirme-demission-premier-ministre-francois-bayrou-2393543.html",
+    "title": "VÉRIF' - La France n'a-t-elle vraiment connu aucun budget \"à l'équilibre depuis 51 ans\", comme l'affirme François Bayrou ?",
+    "rating_original": "Vrai",
+    "rating_normalized": "true",
+    "review_date": "2025-09-09"
+   }
+  ]
+ },
+ {
+  "id": "c_67a2e20fe6755ea1",
+  "person": {
+   "id": "Q3052772",
+   "name": "Emmanuel Macron"
+  },
+  "party": {
+   "id": "Q23731823",
+   "name": "Renaissance",
+   "short_name": "RE",
+   "status": "ok"
+  },
+  "claim_text": "La Russie a conquis \"moins de 1% du territoire ukrainien\" depuis novembre 2022",
+  "claim_date": "2025-09-08",
+  "date_precision": "day",
+  "date_is_fallback": true,
+  "country": "FR",
+  "attribution_status": "auto_sure",
+  "verdict": "mostly_true",
+  "reviews": [
+   {
+    "source_id": "tf1info_verificateurs",
+    "source_name": "TF1 Info – Les Vérificateurs",
+    "url": "https://www.tf1info.fr/international/verif-l-armee-russe-a-t-elle-conquis-moins-de-1-du-territoire-ukrainien-depuis-l-automne-2022-2392867.html",
+    "title": "VÉRIF' - L'armée russe a-t-elle conquis \"moins de 1% du territoire ukrainien\" depuis l'automne 2022 ?",
+    "rating_original": "Plutôt vrai",
+    "rating_normalized": "mostly_true",
+    "review_date": "2025-09-08"
+   }
+  ]
+ },
+ {
+  "id": "c_09a8d42a83e69e70",
+  "person": {
+   "id": "Q12963",
+   "name": "François Bayrou"
+  },
+  "party": {
+   "id": null,
+   "name": null,
+   "short_name": null,
+   "status": "undated"
+  },
+  "claim_text": "La France reçoit plus d'argent de l'UE qu'elle n'en verse",
+  "claim_date": "2025-08-31",
+  "date_precision": "day",
+  "date_is_fallback": false,
+  "country": "FR",
+  "attribution_status": "auto_sure",
+  "verdict": "mostly_false",
+  "reviews": [
+   {
+    "source_id": "tf1info_verificateurs",
+    "source_name": "TF1 Info – Les Vérificateurs",
+    "url": "https://www.tf1info.fr/economie/verif-la-france-recoit-elle-vraiment-plus-d-argent-de-l-ue-qu-elle-n-en-verse-comme-le-dit-francois-bayrou-2392041.html",
+    "title": "VÉRIF - La France reçoit-elle vraiment plus d'argent de l'UE qu'elle n'en verse ?",
+    "rating_original": "Plutôt faux",
+    "rating_normalized": "mostly_false",
+    "review_date": "2025-09-01"
+   }
+  ]
+ },
+ {
+  "id": "c_e95533a1dbf8c83f",
+  "person": {
+   "id": "Q12963",
+   "name": "François Bayrou"
+  },
+  "party": {
+   "id": null,
+   "name": null,
+   "short_name": null,
+   "status": "undated"
+  },
+  "claim_text": "\"La taxe Zucman est inconstitutionnelle\"",
+  "claim_date": "2025-08-30",
+  "date_precision": "day",
+  "date_is_fallback": false,
+  "country": "FR",
+  "attribution_status": "auto_sure",
+  "verdict": "unrated",
+  "reviews": [
+   {
+    "source_id": "franceinfo_vraioufake",
+    "source_name": "franceinfo Vrai ou Fake",
+    "url": "https://www.franceinfo.fr/economie/impots/exil-fiscal/vrai-ou-faux-la-taxe-zucman-sur-les-tres-hauts-patrimoines-serait-elle-inconstitutionnelle-comme-l-affirme-francois-bayrou_7468477.html",
+    "title": "VRAI OU FAUX. La \"taxe Zucman\" sur les très hauts patrimoines serait-elle inconstitutionnelle, comme l'affirme François Bayrou ?",
+    "rating_original": "C’est plus compliqué",
+    "rating_normalized": "unrated",
+    "review_date": "2025-09-03"
+   }
+  ]
+ },
+ {
+  "id": "c_5739612cefc8275d",
+  "person": {
+   "id": "Q12963",
+   "name": "François Bayrou"
+  },
+  "party": {
+   "id": null,
+   "name": null,
+   "short_name": null,
+   "status": "undated"
+  },
+  "claim_text": "\"La charge de la dette va devenir le premier poste de budget de la France\"",
+  "claim_date": "2025-08-26",
+  "date_precision": "day",
+  "date_is_fallback": true,
+  "country": "FR",
+  "attribution_status": "auto_sure",
+  "verdict": "unrated",
+  "reviews": [
+   {
+    "source_id": "franceinfo_vraioufake",
+    "source_name": "franceinfo Vrai ou Fake",
+    "url": "https://www.franceinfo.fr/replay-radio/le-vrai-du-faux/vrai-ou-faux-la-charge-de-la-dette-va-t-elle-devenir-le-budget-le-plus-important-de-l-etat-comme-l-affirme-francois-bayrou_7356237.html",
+    "title": "Vrai ou faux. La charge de la dette va-t-elle devenir le budget le plus important de l'État, comme l'affirme François Bayrou ?",
+    "rating_original": "C’est plus compliqué",
+    "rating_normalized": "unrated",
+    "review_date": "2025-08-26"
+   }
+  ]
+ },
+ {
+  "id": "c_54940dd6a1f8fc74",
+  "person": {
+   "id": "Q27182",
+   "name": "Rachida Dati"
+  },
+  "party": {
+   "id": null,
+   "name": null,
+   "short_name": null,
+   "status": "undated"
+  },
+  "claim_text": "Paris est la capitale européenne la plus mortelle en cas de canicule",
+  "claim_date": "2025-08-14",
+  "date_precision": "day",
+  "date_is_fallback": true,
+  "country": "FR",
+  "attribution_status": "auto_sure",
+  "verdict": "mostly_true",
+  "reviews": [
+   {
+    "source_id": "tf1info_verificateurs",
+    "source_name": "TF1 Info – Les Vérificateurs",
+    "url": "https://www.tf1info.fr/meteo/verif-paris-est-elle-reellement-la-capitale-europeenne-la-plus-mortelle-en-cas-de-canicule-2388752.html",
+    "title": "VÉRIF' – Paris est-elle réellement la capitale européenne \"la plus mortelle\" en cas de canicule ?",
+    "rating_original": "Plutôt vrai",
+    "rating_normalized": "mostly_true",
+    "review_date": "2025-08-14"
+   }
+  ]
+ },
+ {
+  "id": "c_ca3b8578d89015ee",
+  "person": {
+   "id": "Q3123610",
+   "name": "Gérald Darmanin"
+  },
+  "party": {
+   "id": null,
+   "name": null,
+   "short_name": null,
+   "status": "undated"
+  },
+  "claim_text": "La loi ne permet pas de placer certains individus en détention provisoire",
+  "claim_date": "2025-08-05",
+  "date_precision": "day",
+  "date_is_fallback": false,
+  "country": "FR",
+  "attribution_status": "auto_sure",
+  "verdict": "mostly_false",
+  "reviews": [
+   {
+    "source_id": "afp_factuel",
+    "source_name": "AFP Factuel",
+    "url": "https://factuel.afp.com/doc.afp.com.693J669",
+    "title": "La loi ne permet pas de placer certains individus en détention provisoire? C'est trompeur",
+    "rating_original": "Trompeur",
+    "rating_normalized": "mostly_false",
+    "review_date": "2025-08-18"
+   }
+  ]
+ },
+ {
+  "id": "c_aedd431657740e2a",
+  "person": {
+   "id": "Q2942097",
+   "name": "Catherine Vautrin"
+  },
+  "party": {
+   "id": "Q108846587",
+   "name": "Horizons",
+   "short_name": "",
+   "status": "ok"
+  },
+  "claim_text": "\"Pour rappel, les contrôles qui ont été exécutés sur les arrêts maladie de plus de dix-huit mois ont montré que, pour 50 % d’entre eux, ces arrêts n’étaient plus justifiés\"",
+  "claim_date": "2025-07-25",
+  "date_precision": "day",
+  "date_is_fallback": false,
+  "country": "FR",
+  "attribution_status": "auto_sure",
+  "verdict": "mostly_true",
+  "reviews": [
+   {
+    "source_id": "franceinfo_vraioufake",
+    "source_name": "franceinfo Vrai ou Fake",
+    "url": "https://www.franceinfo.fr/vrai-ou-fake/vrai-ou-faux-la-moitie-des-arrets-maladies-de-plus-de-dix-huit-mois-sont-ils-injustifies-comme-l-assure-la-ministre-de-la-sante-catherine-vautrin_7404205.html",
+    "title": "VRAI OU FAUX. La moitié des arrêts-maladies de plus de dix-huit mois sont-ils injustifiés, comme l'assure la ministre de la Santé Catherine Vautrin ?",
+    "rating_original": "Plutôt Vrai",
+    "rating_normalized": "mostly_true",
+    "review_date": "2025-07-30"
+   }
+  ]
+ },
+ {
+  "id": "c_0fe449220385b562",
+  "person": {
+   "id": "Q12927",
+   "name": "Marine Le Pen"
+  },
+  "party": {
+   "id": "Q205150",
+   "name": "Rassemblement national",
+   "short_name": "RN",
+   "status": "ok"
+  },
+  "claim_text": "La France pourrait décider d'une \"année blanche\" en n'augmentant pas sa contribution au budget de l'UE",
+  "claim_date": "2025-07-03",
+  "date_precision": "day",
+  "date_is_fallback": false,
+  "country": "FR",
+  "attribution_status": "auto_sure",
+  "verdict": "mostly_false",
+  "reviews": [
+   {
+    "source_id": "tf1info_verificateurs",
+    "source_name": "TF1 Info – Les Vérificateurs",
+    "url": "https://www.tf1info.fr/politique/verif-marine-le-pen-souhaite-une-annee-blanche-sur-la-contribution-francaise-a-l-ue-est-ce-possible-2381024.html",
+    "title": "VÉRIF' - Marine Le Pen propose une \"année blanche\" sur la contribution française à l'UE, est-ce possible ?",
+    "rating_original": "Plutôt faux",
+    "rating_normalized": "mostly_false",
+    "review_date": "2025-07-04"
+   }
+  ]
+ },
+ {
+  "id": "c_82d15da90cfdca50",
+  "person": {
+   "id": "Q3573907",
+   "name": "Yves Pozzo di Borgo"
+  },
+  "party": {
+   "id": null,
+   "name": null,
+   "short_name": null,
+   "status": "undated"
+  },
+  "claim_text": "32000 scientifiques ont dit que le réchauffement climatique n'existait pas dans un manifeste.",
+  "claim_date": "2025-06-08",
+  "date_precision": "day",
+  "date_is_fallback": false,
+  "country": "FR",
+  "attribution_status": "auto_sure",
+  "verdict": "mostly_false",
+  "reviews": [
+   {
+    "source_id": "tf1info_verificateurs",
+    "source_name": "TF1 Info – Les Vérificateurs",
+    "url": "https://www.tf1info.fr/environnement-ecologie/video-verif-non-32-000-chercheurs-n-ont-pas-nie-la-realite-du-rechauffement-climatique-2376410.html",
+    "title": "VÉRIF' - Non, 32.000 chercheurs n'ont pas nié la réalité du réchauffement climatique",
+    "rating_original": "Plutôt faux",
+    "rating_normalized": "mostly_false",
+    "review_date": "2025-06-18"
+   }
+  ]
+ },
+ {
+  "id": "c_9eb994de36d991ab",
+  "person": {
+   "id": "Q106635078",
+   "name": "Philippe Ballard"
+  },
+  "party": {
+   "id": "Q205150",
+   "name": "Rassemblement national",
+   "short_name": "RN",
+   "status": "ok"
+  },
+  "claim_text": "Les éoliennes en mer ne servent à rien.",
+  "claim_date": "2025-06-08",
+  "date_precision": "day",
+  "date_is_fallback": false,
+  "country": "FR",
+  "attribution_status": "auto_sure",
+  "verdict": "false",
+  "reviews": [
+   {
+    "source_id": "franceinfo_vraioufake",
+    "source_name": "franceinfo Vrai ou Fake",
+    "url": "https://www.franceinfo.fr/vrai-ou-fake/vrai-ou-faux-les-eoliennes-en-mer-ne-servent-elles-a-rien-comme-l-affirme-un-depute-du-rassemblement-national_7305324.html",
+    "title": "VRAI OU FAUX. Les éoliennes en mer \"ne servent-elles à rien\", comme l'affirme un député du Rassemblement national ?",
+    "rating_original": "Faux",
+    "rating_normalized": "false",
+    "review_date": "2025-06-14"
+   }
+  ]
+ },
+ {
+  "id": "c_c76f0a13221fcb69",
+  "person": {
+   "id": "Q61769367",
+   "name": "Pierre Meurin"
+  },
+  "party": {
+   "id": null,
+   "name": null,
+   "short_name": null,
+   "status": "undated"
+  },
+  "claim_text": "\"Un SUV Crit'Air 1 pollue beaucoup plus qu'une citadine Clio Crit'Air 4\"",
+  "claim_date": "2025-05-27",
+  "date_precision": "day",
+  "date_is_fallback": false,
+  "country": "FR",
+  "attribution_status": "auto_sure",
+  "verdict": "unrated",
+  "reviews": [
+   {
+    "source_id": "franceinfo_vraioufake",
+    "source_name": "franceinfo Vrai ou Fake",
+    "url": "https://www.franceinfo.fr/replay-radio/le-vrai-du-faux/un-suv-crit-air-1-pollue-t-il-vraiment-plus-qu-une-petite-citadine-crit-air-4_7259376.html",
+    "title": "Un SUV Crit'Air 1 pollue-t-il vraiment plus qu'une petite citadine Crit'Air 4 ?",
+    "rating_original": "C’est plus compliqué",
+    "rating_normalized": "unrated",
+    "review_date": "2025-05-30"
+   }
+  ]
+ },
+ {
+  "id": "c_bcca144a0439ba2f",
+  "person": {
+   "id": "Q3123610",
+   "name": "Gérald Darmanin"
+  },
+  "party": {
+   "id": null,
+   "name": null,
+   "short_name": null,
+   "status": "undated"
+  },
+  "claim_text": "Les prisons coûtent dix millions d'euros par jour à l'État",
+  "claim_date": "2025-04-29",
+  "date_precision": "day",
+  "date_is_fallback": true,
+  "country": "FR",
+  "attribution_status": "auto_sure",
+  "verdict": "true",
+  "reviews": [
+   {
+    "source_id": "tf1info_verificateurs",
+    "source_name": "TF1 Info – Les Vérificateurs",
+    "url": "https://www.tf1info.fr/politique/verif-les-prisons-coutent-elles-10-millions-d-euros-par-jour-comme-le-dit-gerald-darmanin-sur-tf1-2367816.html",
+    "title": "VÉRIF' - Les prisons coûtent-elles 10 millions d'euros par jour, comme le dit Gérald Darmanin ?",
+    "rating_original": "Vrai",
+    "rating_normalized": "true",
+    "review_date": "2025-04-29"
+   }
+  ]
+ },
+ {
+  "id": "c_57388a139cf8ba71",
+  "person": {
+   "id": "Q82637284",
+   "name": "Sarah Knafo"
+  },
+  "party": {
+   "id": "Q109932430",
+   "name": "Reconquête!",
+   "short_name": "",
+   "status": "ok"
+  },
+  "claim_text": "Plus nous donnons aux Comores, plus il y a de migrants à Mayotte",
+  "claim_date": "2025-04-25",
+  "date_precision": "day",
+  "date_is_fallback": true,
+  "country": "FR",
+  "attribution_status": "auto_sure",
+  "verdict": "false",
+  "reviews": [
+   {
+    "source_id": "tf1info_verificateurs",
+    "source_name": "TF1 Info – Les Vérificateurs",
+    "url": "https://www.tf1info.fr/politique/verif-est-il-vrai-que-plus-nous-donnons-aux-comores-plus-il-y-a-de-migrants-a-mayotte-2367244.html",
+    "title": "VÉRIF' - Est-il vrai que \"plus nous donnons aux Comores, plus il y a de migrants à Mayotte\" ?",
+    "rating_original": "Faux",
+    "rating_normalized": "false",
+    "review_date": "2025-04-25"
+   }
+  ]
+ },
+ {
+  "id": "c_2d7cda3fa570f2d0",
+  "person": {
+   "id": "Q12961",
+   "name": "Nicolas Dupont-Aignan"
+  },
+  "party": {
+   "id": null,
+   "name": null,
+   "short_name": null,
+   "status": "undated"
+  },
+  "claim_text": "Seules 4.500 places de prison ont été construites depuis 2017 contre les 15.000 promises par Emmanuel Macron",
+  "claim_date": "2025-04-18",
+  "date_precision": "day",
+  "date_is_fallback": true,
+  "country": "FR",
+  "attribution_status": "auto_sure",
+  "verdict": "unrated",
+  "reviews": [
+   {
+    "source_id": "tf1info_verificateurs",
+    "source_name": "TF1 Info – Les Vérificateurs",
+    "url": "https://www.tf1info.fr/justice-faits-divers/verif-seules-4-500-places-de-prison-ont-elles-ete-construites-sur-les-15-000-promises-par-emmanuel-macron-nicolas-dupont-aignan-2365765.html",
+    "title": "VÉRIF'- Seules 4.500 places de prison ont-elles été construites sur les 15.000 promises par Emmanuel Macron ?",
+    "rating_original": "En partie vrai",
+    "rating_normalized": "unrated",
+    "review_date": "2025-04-18"
+   }
+  ]
+ },
+ {
+  "id": "c_3ff155e4a48d1828",
+  "person": {
+   "id": "Q30339422",
+   "name": "Yaël Braun-Pivet"
+  },
+  "party": {
+   "id": "Q23731823",
+   "name": "Renaissance",
+   "short_name": "RE",
+   "status": "ok"
+  },
+  "claim_text": "Seules 20 % des maires sont des femmes",
+  "claim_date": "2025-04-10",
+  "date_precision": "day",
+  "date_is_fallback": false,
+  "country": "FR",
+  "attribution_status": "auto_sure",
+  "verdict": "true",
+  "reviews": [
+   {
+    "source_id": "tf1info_verificateurs",
+    "source_name": "TF1 Info – Les Vérificateurs",
+    "url": "https://www.tf1info.fr/politique/verif-elections-municipales-compte-t-on-seulement-20-de-femmes-maires-en-france-2364454.html",
+    "title": "VÉRIF' - Compte-t-on seulement 20% de femmes maires en France ?",
+    "rating_original": "Vrai",
+    "rating_normalized": "true",
+    "review_date": "2025-04-10"
+   }
+  ]
+ },
+ {
+  "id": "c_512c710859f6d28c",
+  "person": {
+   "id": "Q3085763",
+   "name": "François Ruffin"
+  },
+  "party": {
+   "id": null,
+   "name": null,
+   "short_name": null,
+   "status": "undated"
+  },
+  "claim_text": "1500 entreprises françaises ont été \"avalées par le capital américain\" en dix ans",
+  "claim_date": "2025-04-10",
+  "date_precision": "day",
+  "date_is_fallback": true,
+  "country": "FR",
+  "attribution_status": "auto_sure",
+  "verdict": "true",
+  "reviews": [
+   {
+    "source_id": "tf1info_verificateurs",
+    "source_name": "TF1 Info – Les Vérificateurs",
+    "url": "https://www.tf1info.fr/economie/verif-1500-entreprises-francaises-avalees-par-le-capital-americain-en-dix-ans-comme-l-assure-francois-ruffin-2364348.html",
+    "title": "VÉRIF' - 1500 entreprises françaises ont-elles été \"avalées par le capital américain\" en dix ans ?",
+    "rating_original": "Vrai",
+    "rating_normalized": "true",
+    "review_date": "2025-04-10"
+   }
+  ]
+ },
+ {
+  "id": "c_a9f82eed0e8df707",
+  "person": {
+   "id": "Q12927",
+   "name": "Marine Le Pen"
+  },
+  "party": {
+   "id": "Q205150",
+   "name": "Rassemblement national",
+   "short_name": "RN",
+   "status": "ok"
+  },
+  "claim_text": "La moitié des décisions rendues en première instance sont révoquées en appel",
+  "claim_date": "2025-04-07",
+  "date_precision": "day",
+  "date_is_fallback": true,
+  "country": "FR",
+  "attribution_status": "auto_sure",
+  "verdict": "false",
+  "reviews": [
+   {
+    "source_id": "poligraph_fr",
+    "source_name": "Poligraph",
+    "url": "https://poligraph.fr/factchecks/2025-04-07-verif-la-moitie-des-jugements-sont-ils-revoques-en-appel-comme-l-assu",
+    "title": "Faux — VÉRIF' - \"La moitié\" des jugements sont-ils \"révoqués en appel\", comme l'assure Marine Le Pen ?",
+    "rating_original": "Faux",
+    "rating_normalized": "false",
+    "review_date": "2025-04-07"
+   },
+   {
+    "source_id": "tf1info_verificateurs",
+    "source_name": "TF1 Info – Les Vérificateurs",
+    "url": "https://www.tf1info.fr/justice-faits-divers/verif-la-moitie-des-decisions-de-premiere-instance-sont-elles-revoquees-en-appel-comme-l-assure-marine-le-pen-2363722.html",
+    "title": "VÉRIF' - \"La moitié\" des jugements sont-ils \"révoqués en appel\", comme l'assure Marine Le Pen ?",
+    "rating_original": "Faux",
+    "rating_normalized": "false",
+    "review_date": "2025-04-07"
+   }
+  ]
+ },
+ {
+  "id": "c_a068694ac4a0f584",
+  "person": {
+   "id": "Q12963",
+   "name": "François Bayrou"
+  },
+  "party": {
+   "id": null,
+   "name": null,
+   "short_name": null,
+   "status": "undated"
+  },
+  "claim_text": "La France est la seule à permettre l'exécution provisoire d'une peine d'inéligibilité",
+  "claim_date": "2025-04-02",
+  "date_precision": "day",
+  "date_is_fallback": true,
+  "country": "FR",
+  "attribution_status": "auto_sure",
+  "verdict": "unrated",
+  "reviews": [
+   {
+    "source_id": "tf1info_verificateurs",
+    "source_name": "TF1 Info – Les Vérificateurs",
+    "url": "https://www.tf1info.fr/politique/marine-le-pen-ineligibile-d-autres-pays-appliquent-ils-l-ineligibilite-avec-execution-provisoire-2362824.html",
+    "title": "D'autres pays appliquent-ils l'inéligibilité avec exécution provisoire ?",
+    "rating_original": "En partie vrai",
+    "rating_normalized": "unrated",
+    "review_date": "2025-04-02"
+   }
+  ]
+ },
+ {
+  "id": "c_c086ec626576b6b7",
+  "person": {
+   "id": "Q12927",
+   "name": "Marine Le Pen"
+  },
+  "party": {
+   "id": "Q205150",
+   "name": "Rassemblement national",
+   "short_name": "RN",
+   "status": "ok"
+  },
+  "claim_text": "Marine Le Pen a été visée par un jugement politique violant l'Etat de droit",
+  "claim_date": "2025-03-31",
+  "date_precision": "day",
+  "date_is_fallback": false,
+  "country": "FR",
+  "attribution_status": "auto_sure",
+  "verdict": "false",
+  "reviews": [
+   {
+    "source_id": "afp_factuel",
+    "source_name": "AFP Factuel",
+    "url": "https://factuel.afp.com/doc.afp.com.38PR7CP",
+    "title": "Marine Le Pen a-t-elle été visée par un jugement \"politique\" ? Ce que dit le droit",
+    "rating_original": "Faux",
+    "rating_normalized": "false",
+    "review_date": "2025-04-01"
+   }
+  ]
+ },
+ {
+  "id": "c_bedba3608f5334d8",
+  "person": {
+   "id": "Q3123610",
+   "name": "Gérald Darmanin"
+  },
+  "party": {
+   "id": null,
+   "name": null,
+   "short_name": null,
+   "status": "undated"
+  },
+  "claim_text": "Il est possible d'expulser les détenus étrangers des prisons françaises pour qu'ils purgent leur peine dans leur pays.",
+  "claim_date": "2025-03-28",
+  "date_precision": "day",
+  "date_is_fallback": true,
+  "country": "FR",
+  "attribution_status": "auto_sure",
+  "verdict": "mostly_true",
+  "reviews": [
+   {
+    "source_id": "franceinfo_vraioufake",
+    "source_name": "franceinfo Vrai ou Fake",
+    "url": "https://www.franceinfo.fr/vrai-ou-fake/vrai-ou-faux-peut-on-vraiment-expulser-les-etrangers-detenus-dans-les-prisons-francaises-comme-le-souhaite-gerald-darmanin_7152696.html",
+    "title": "VRAI OU FAUX. Peut-on vraiment expulser les étrangers détenus dans les prisons françaises, comme le souhaite Gérald Darmanin ?",
+    "rating_original": "Plutôt Vrai",
+    "rating_normalized": "mostly_true",
+    "review_date": "2025-03-28"
+   }
+  ]
+ },
+ {
+  "id": "c_1927a46f49e9569d",
+  "person": {
+   "id": "Q12963",
+   "name": "François Bayrou"
+  },
+  "party": {
+   "id": null,
+   "name": null,
+   "short_name": null,
+   "status": "undated"
+  },
+  "claim_text": "Le régime de retraite du public aurait un \"déficit caché\"",
+  "claim_date": "2025-03-18",
+  "date_precision": "day",
+  "date_is_fallback": true,
+  "country": "FR",
+  "attribution_status": "auto_sure",
+  "verdict": "mostly_false",
+  "reviews": [
+   {
+    "source_id": "franceinfo_vraioufake",
+    "source_name": "franceinfo Vrai ou Fake",
+    "url": "https://www.franceinfo.fr/replay-radio/le-vrai-du-faux/retraites-le-regime-de-la-fonction-publique-est-il-en-deficit_7108260.html",
+    "title": "Retraites : le régime de la fonction publique est-il en déficit ?",
+    "rating_original": "Plutôt Faux",
+    "rating_normalized": "mostly_false",
+    "review_date": "2025-03-18"
+   }
+  ]
+ },
+ {
+  "id": "c_3965f5c60e56cf18",
+  "person": {
+   "id": "Q17632457",
+   "name": "Laurent Jacobelli"
+  },
+  "party": {
+   "id": null,
+   "name": null,
+   "short_name": null,
+   "status": "undated"
+  },
+  "claim_text": "40% du minimum vieillesse est donné à des étrangers qui n'ont pas cotisé",
+  "claim_date": "2025-03-16",
+  "date_precision": "day",
+  "date_is_fallback": false,
+  "country": "FR",
+  "attribution_status": "auto_sure",
+  "verdict": "mostly_false",
+  "reviews": [
+   {
+    "source_id": "afp_factuel",
+    "source_name": "AFP Factuel",
+    "url": "https://factuel.afp.com/doc.afp.com.37FW6NR",
+    "title": "Minimum vieillesse et étrangers : les approximations du RN",
+    "rating_original": "Trompeur",
+    "rating_normalized": "mostly_false",
+    "review_date": "2025-04-08"
+   }
+  ]
+ },
+ {
+  "id": "c_b7df9f8c1a6ba116",
+  "person": {
+   "id": "Q59601214",
+   "name": "Manon Aubry"
+  },
+  "party": {
+   "id": "Q27978402",
+   "name": "La France insoumise",
+   "short_name": "LFI",
+   "status": "ok"
+  },
+  "claim_text": "Le plan de réarmement de l'Europe n'est pas démocratique, car le Parlement européen n'a pas été consulté",
+  "claim_date": "2025-03-12",
+  "date_precision": "day",
+  "date_is_fallback": true,
+  "country": "FR",
+  "attribution_status": "auto_sure",
+  "verdict": "false",
+  "reviews": [
+   {
+    "source_id": "tf1info_verificateurs",
+    "source_name": "TF1 Info – Les Vérificateurs",
+    "url": "https://www.tf1info.fr/international/verif-le-plan-de-rearmement-rearm-de-l-europe-sera-t-il-valide-sans-consulter-le-parlement-europeen-2358913.html",
+    "title": "VÉRIF' - Le plan de réarmement de l'Europe sera-t-il validé \"sans consulter le Parlement européen\" ?",
+    "rating_original": "Faux",
+    "rating_normalized": "false",
+    "review_date": "2025-03-12"
+   }
+  ]
+ },
+ {
+  "id": "c_422ca6c517a7ed46",
+  "person": {
+   "id": "Q41102798",
+   "name": "Julien Odoul"
+  },
+  "party": {
+   "id": null,
+   "name": null,
+   "short_name": null,
+   "status": "undated"
+  },
+  "claim_text": "Les immigrés algériens sont prioritaires pour l'accès aux logements sociaux",
+  "claim_date": "2025-03-06",
+  "date_precision": "day",
+  "date_is_fallback": true,
+  "country": "FR",
+  "attribution_status": "auto_sure",
+  "verdict": "false",
+  "reviews": [
+   {
+    "source_id": "afp_factuel",
+    "source_name": "AFP Factuel",
+    "url": "https://factuel.afp.com/doc.afp.com.36YQ276",
+    "title": "Non, les ressortissants algériens ne sont pas \"prioritaires\" pour le logement social en France",
+    "rating_original": "Faux",
+    "rating_normalized": "false",
+    "review_date": "2025-03-06"
+   },
+   {
+    "source_id": "poligraph_fr",
+    "source_name": "Poligraph",
+    "url": "https://poligraph.fr/factchecks/2025-03-06-non-les-ressortissants-algeriens-ne-sont-pas-prioritaires-pour-le-log",
+    "title": "Faux — Non, les ressortissants algériens ne sont pas \"prioritaires\" pour le logement social en France",
+    "rating_original": "Faux",
+    "rating_normalized": "false",
+    "review_date": "2025-03-06"
+   }
+  ]
+ },
+ {
+  "id": "c_17f7dc4a42cca4b9",
+  "person": {
+   "id": "Q40655898",
+   "name": "Jordan Bardella"
+  },
+  "party": {
+   "id": "Q205150",
+   "name": "Rassemblement national",
+   "short_name": "RN",
+   "status": "ok"
+  },
+  "claim_text": "Le bilan du macronisme, c’est un million de vaches et 150 000 exploitations agricoles en moins",
+  "claim_date": "2025-02-24",
+  "date_precision": "day",
+  "date_is_fallback": true,
+  "country": "FR",
+  "attribution_status": "auto_sure",
+  "verdict": "mostly_false",
+  "reviews": [
+   {
+    "source_id": "tf1info_verificateurs",
+    "source_name": "TF1 Info – Les Vérificateurs",
+    "url": "https://www.tf1info.fr/societe/verif-agriculture-un-million-de-vaches-en-moins-en-france-depuis-l-arrivee-au-pouvoir-de-macron-comme-l-affirme-bardella-2355935.html",
+    "title": "VÉRIF' - La France compte-t-elle \"un million de vaches en moins\" depuis l'arrivée au pouvoir de Macron ?",
+    "rating_original": "Plutôt faux",
+    "rating_normalized": "mostly_false",
+    "review_date": "2025-02-24"
+   }
+  ]
+ },
+ {
+  "id": "c_b165fd11e4aa9a0c",
+  "person": {
+   "id": "Q29917987",
+   "name": "Marine Tondelier"
+  },
+  "party": {
+   "id": "Q613786",
+   "name": "Les Écologistes – Europe Écologie Les Verts",
+   "short_name": "EELV",
+   "status": "ok"
+  },
+  "claim_text": "\"La France est le premier importateur de GNL russe.\nOn donne plus d'argent à Poutine en achetant son gaz… qu'à l'Ukraine en force militaire.",
+  "claim_date": "2025-02-24",
+  "date_precision": "day",
+  "date_is_fallback": false,
+  "country": "FR",
+  "attribution_status": "auto_sure",
+  "verdict": "mostly_true",
+  "reviews": [
+   {
+    "source_id": "franceinfo_vraioufake",
+    "source_name": "franceinfo Vrai ou Fake",
+    "url": "https://www.franceinfo.fr/vrai-ou-fake/vrai-ou-faux-la-france-depense-t-elle-plus-pour-acheter-du-gaz-russe-que-pour-aider-militairement-l-ukraine-comme-l-affirme-marine-tondelier_7099647.html",
+    "title": "VRAI OU FAUX. La France dépense-t-elle plus pour acheter du gaz russe que pour aider militairement l'Ukraine, comme l'affirme Marine Tondelier ?",
+    "rating_original": "Plutôt Vrai",
+    "rating_normalized": "mostly_true",
+    "review_date": "2025-02-28"
+   }
+  ]
+ },
+ {
+  "id": "c_75a8a001b1d44e40",
+  "person": {
+   "id": "Q33275664",
+   "name": "Christophe Gomart"
+  },
+  "party": {
+   "id": null,
+   "name": null,
+   "short_name": null,
+   "status": "none"
+  },
+  "claim_text": "\"Si les États-Unis attaquaient le Groenland, aucun pays européen ne pourrait faire décoller ses F-35 pour le défendre, car ils ont un système de blocage si le plan de vol ne convient pas au Pentagone\"",
+  "claim_date": "2025-02-19",
+  "date_precision": "day",
+  "date_is_fallback": false,
+  "country": "FR",
+  "attribution_status": "auto_sure",
+  "verdict": "unrated",
+  "reviews": [
+   {
+    "source_id": "franceinfo_vraioufake",
+    "source_name": "franceinfo Vrai ou Fake",
+    "url": "https://www.franceinfo.fr/vrai-ou-fake/vrai-ou-faux-les-etats-unis-peuvent-ils-empecher-les-avions-f-35-des-armees-europeennes-de-decoller_7118070.html",
+    "title": "VRAI OU FAUX. Les Etats-Unis peuvent-ils empêcher les avions F-35 des armées européennes de décoller ?",
+    "rating_original": "C’est plus compliqué",
+    "rating_normalized": "unrated",
+    "review_date": "2025-03-09"
+   }
+  ]
+ },
+ {
+  "id": "c_bdbf7acf604195a4",
+  "person": {
+   "id": "Q3074223",
+   "name": "Florian Philippot"
+  },
+  "party": {
+   "id": "Q41330182",
+   "name": "Les Patriotes",
+   "short_name": "LP",
+   "status": "ok"
+  },
+  "claim_text": "Le président de la Conférence de Munich en larmes après le discours de JD Vance",
+  "claim_date": "2025-02-17",
+  "date_precision": "day",
+  "date_is_fallback": false,
+  "country": "FR",
+  "attribution_status": "auto_sure",
+  "verdict": "unrated",
+  "reviews": [
+   {
+    "source_id": "afp_factuel",
+    "source_name": "AFP Factuel",
+    "url": "https://factuel.afp.com/doc.afp.com.36Y79PL",
+    "title": "Attention, cette vidéo du président de la conférence de Munich en larmes a été tronquée et éditée",
+    "rating_original": "Vidéo manipulée",
+    "rating_normalized": "unrated",
+    "review_date": "2025-02-19"
+   }
+  ]
+ },
+ {
+  "id": "c_34abef26bc7c4f0c",
+  "person": {
+   "id": "Q29575749",
+   "name": "Manuel Bompard"
+  },
+  "party": {
+   "id": null,
+   "name": null,
+   "short_name": null,
+   "status": "ambiguous"
+  },
+  "claim_text": "Le prix de l'électricité va augmenter pour 10 millions de personnes",
+  "claim_date": "2025-02-10",
+  "date_precision": "day",
+  "date_is_fallback": true,
+  "country": "FR",
+  "attribution_status": "auto_sure",
+  "verdict": "mostly_true",
+  "reviews": [
+   {
+    "source_id": "tf1info_verificateurs",
+    "source_name": "TF1 Info – Les Vérificateurs",
+    "url": "https://www.tf1info.fr/conso/verif-le-prix-de-l-electricite-va-t-il-augmenter-pour-10-millions-de-personnes-comme-dit-lfi-manuel-bompard-2349995.html",
+    "title": "VÉRIF' – Le prix de l'électricité va-t-il vraiment augmenter pour 10 millions de personnes ?",
+    "rating_original": "Plutôt vrai",
+    "rating_normalized": "mostly_true",
+    "review_date": "2025-02-10"
+   }
+  ]
+ },
+ {
+  "id": "c_120c77f90061b360",
+  "person": {
+   "id": "Q2942097",
+   "name": "Catherine Vautrin"
+  },
+  "party": {
+   "id": "Q108846587",
+   "name": "Horizons",
+   "short_name": "",
+   "status": "ok"
+  },
+  "claim_text": "La censure a coûté 12 milliards d'euros aux Français.",
+  "claim_date": "2025-02-05",
+  "date_precision": "day",
+  "date_is_fallback": true,
+  "country": "FR",
+  "attribution_status": "auto_sure",
+  "verdict": "mostly_false",
+  "reviews": [
+   {
+    "source_id": "franceinfo_vraioufake",
+    "source_name": "franceinfo Vrai ou Fake",
+    "url": "https://www.franceinfo.fr/vrai-ou-fake/vrai-ou-faux-la-chute-du-gouvernement-barnier-a-t-elle-vraiment-coute-12-milliards-d-euros-aux-francais_7042940.html",
+    "title": "VRAI OU FAUX. La chute du gouvernement Barnier a-t-elle vraiment coûté 12 milliards d'euros aux Français ?",
+    "rating_original": "Plutôt Faux",
+    "rating_normalized": "mostly_false",
+    "review_date": "2025-02-05"
+   }
+  ]
+ },
+ {
+  "id": "c_ea1dc2ca81fcae42",
+  "person": {
+   "id": "Q3074223",
+   "name": "Florian Philippot"
+  },
+  "party": {
+   "id": "Q41330182",
+   "name": "Les Patriotes",
+   "short_name": "LP",
+   "status": "ok"
+  },
+  "claim_text": "Le Bouclier Démocratique Européen permettra d'annuler les élections",
+  "claim_date": "2025-02-03",
+  "date_precision": "day",
+  "date_is_fallback": false,
+  "country": "FR",
+  "attribution_status": "auto_sure",
+  "verdict": "false",
+  "reviews": [
+   {
+    "source_id": "afp_factuel",
+    "source_name": "AFP Factuel",
+    "url": "https://factuel.afp.com/doc.afp.com.36YV6LD",
+    "title": "Non, l'UE n'a pas le pouvoir d'annuler des élections dans ses États membres",
+    "rating_original": "Faux",
+    "rating_normalized": "false",
+    "review_date": "2025-03-04"
+   }
+  ]
+ },
+ {
+  "id": "c_2f49140dcef34b1c",
+  "person": {
+   "id": "Q12963",
+   "name": "François Bayrou"
+  },
+  "party": {
+   "id": null,
+   "name": null,
+   "short_name": null,
+   "status": "undated"
+  },
+  "claim_text": "En Belgique, une aide à mourir a été apportée à des adolescents \"simplement parce qu'ils étaient mal dans leur peau\"",
+  "claim_date": "2025-01-27",
+  "date_precision": "day",
+  "date_is_fallback": false,
+  "country": "FR",
+  "attribution_status": "auto_sure",
+  "verdict": "false",
+  "reviews": [
+   {
+    "source_id": "tf1info_verificateurs",
+    "source_name": "TF1 Info – Les Vérificateurs",
+    "url": "https://www.tf1info.fr/societe/verif-fin-de-vie-des-ados-belges-ont-ils-ete-aides-a-mourir-parce-qu-ils-etaient-mal-dans-leur-peau-comme-le-dit-francois-bayrou-sur-lci-2347411.html",
+    "title": "VÉRIF' - Des ados belges ont-ils été aidés à mourir \"parce qu'ils étaient mal dans leur peau\", comme le dit François Bayrou ?",
+    "rating_original": "Faux",
+    "rating_normalized": "false",
+    "review_date": "2025-01-28"
+   }
+  ]
+ },
+ {
+  "id": "c_d780907f67ee0a9c",
+  "person": {
+   "id": "Q3074223",
+   "name": "Florian Philippot"
+  },
+  "party": {
+   "id": "Q41330182",
+   "name": "Les Patriotes",
+   "short_name": "LP",
+   "status": "ok"
+  },
+  "claim_text": "L'Union européenne va délivrer la première autorisation de commercialisation de viande artificielle créée avec la fondation Bill Gates",
+  "claim_date": "2025-01-23",
+  "date_precision": "day",
+  "date_is_fallback": true,
+  "country": "FR",
+  "attribution_status": "auto_sure",
+  "verdict": "false",
+  "reviews": [
+   {
+    "source_id": "tf1info_verificateurs",
+    "source_name": "TF1 Info – Les Vérificateurs",
+    "url": "https://www.tf1info.fr/societe/verif-l-ue-va-t-elle-delivrer-la-premiere-autorisation-de-commercialisation-de-viande-artificielle-creee-avec-la-fondation-bill-gates-2346487.html",
+    "title": "VÉRIF - L'UE va-t-elle permettre \"la commercialisation de viande artificielle\" créée avec la fondation Bill Gates ?",
+    "rating_original": "Faux",
+    "rating_normalized": "false",
+    "review_date": "2025-01-23"
+   }
+  ]
+ },
+ {
+  "id": "c_086fa9e513630e0b",
+  "person": {
+   "id": "Q1844180",
+   "name": "Éric Ciotti"
+  },
+  "party": {
+   "id": "Q127038760",
+   "name": "Union des droites pour la République",
+   "short_name": "UDR",
+   "status": "ok"
+  },
+  "claim_text": "La France n'achète plus de gaz à la Russie ou \"très très très peu\"",
+  "claim_date": "2025-01-22",
+  "date_precision": "day",
+  "date_is_fallback": false,
+  "country": "FR",
+  "attribution_status": "auto_sure",
+  "verdict": "unrated",
+  "reviews": [
+   {
+    "source_id": "afp_factuel",
+    "source_name": "AFP Factuel",
+    "url": "https://factuel.afp.com/doc.afp.com.36WJ7AL",
+    "title": "La France importe \"très très très peu\" de gaz russe ? Pas si simple",
+    "rating_original": "Manque de contexte",
+    "rating_normalized": "unrated",
+    "review_date": "2025-02-20"
+   },
+   {
+    "source_id": "poligraph_fr",
+    "source_name": "Poligraph",
+    "url": "https://poligraph.fr/factchecks/2025-02-20-la-france-importe-tres-tres-tres-peu-de-gaz-russe-pas-si-simple",
+    "title": "Invérifiable — La France importe \"très très très peu\" de gaz russe ? Pas si simple",
+    "rating_original": "Manque de contexte",
+    "rating_normalized": "unrated",
+    "review_date": "2025-02-20"
+   }
+  ]
+ },
+ {
+  "id": "c_4608a99f720a3374",
+  "person": {
+   "id": "Q112448632",
+   "name": "Sarah Legrain"
+  },
+  "party": {
+   "id": "Q922707",
+   "name": "Parti de Gauche",
+   "short_name": "PG",
+   "status": "ok"
+  },
+  "claim_text": "On est dans la 7e puissance éco au monde et on a le retour du scorbut.",
+  "claim_date": "2025-01-13",
+  "date_precision": "day",
+  "date_is_fallback": false,
+  "country": "FR",
+  "attribution_status": "auto_sure",
+  "verdict": "true",
+  "reviews": [
+   {
+    "source_id": "franceinfo_vraioufake",
+    "source_name": "franceinfo Vrai ou Fake",
+    "url": "https://www.franceinfo.fr/replay-radio/le-vrai-du-faux/vrai-ou-faux-le-scorbut-est-il-de-retour-en-france-chez-les-plus-jeunes_6996395.html",
+    "title": "Vrai ou faux. Le scorbut est-il de retour en France chez les plus jeunes ?",
+    "rating_original": "Vrai",
+    "rating_normalized": "true",
+    "review_date": "2025-01-20"
+   }
+  ]
+ },
+ {
+  "id": "c_18ca1a8d3f2ca7a9",
+  "person": {
+   "id": "Q30339422",
+   "name": "Yaël Braun-Pivet"
+  },
+  "party": {
+   "id": "Q23731823",
+   "name": "Renaissance",
+   "short_name": "RE",
+   "status": "ok"
+  },
+  "claim_text": "À la retraite, plus de 50% des femmes touchent moins de 1.000 euros, contre 20% des hommes ?",
+  "claim_date": "2025-01-12",
+  "date_precision": "day",
+  "date_is_fallback": false,
+  "country": "FR",
+  "attribution_status": "auto_sure",
+  "verdict": "mostly_true",
+  "reviews": [
+   {
+    "source_id": "tf1info_verificateurs",
+    "source_name": "TF1 Info – Les Vérificateurs",
+    "url": "https://www.tf1info.fr/politique/retraites-plus-de-50-des-femmes-touchent-elles-moins-de-1000-euros-contre-seulement-20-des-hommes-2344580.html",
+    "title": "VÉRIF' - Retraites : plus de 50% des femmes touchent-elles moins de 1000 euros, contre seulement 20% des hommes ?",
+    "rating_original": "Plutôt vrai",
+    "rating_normalized": "mostly_true",
+    "review_date": "2025-01-13"
+   }
+  ]
+ },
+ {
+  "id": "c_224212e798dbef7d",
+  "person": {
+   "id": "Q984375",
+   "name": "Laurent Wauquiez"
+  },
+  "party": {
+   "id": null,
+   "name": null,
+   "short_name": null,
+   "status": "undated"
+  },
+  "claim_text": "Les titres de séjour pour soins coûtent plusieurs centaines de millions d'euros par an et bénéficient aussi à des ressortissants de pays riches",
+  "claim_date": "2025-01-12",
+  "date_precision": "day",
+  "date_is_fallback": false,
+  "country": "FR",
+  "attribution_status": "auto_sure",
+  "verdict": "unrated",
+  "reviews": [
+   {
+    "source_id": "tf1info_verificateurs",
+    "source_name": "TF1 Info – Les Vérificateurs",
+    "url": "https://www.tf1info.fr/sante/verif-des-etrangers-venus-de-pays-riches-viennent-ils-se-faire-soigner-en-france-avec-des-titres-de-sejour-pour-soins-2344562.html",
+    "title": "VÉRIF' - Des étrangers venus de pays riches viennent-ils se faire soigner en France avec des titres de séjour pour soins ?",
+    "rating_original": "En partie vrai",
+    "rating_normalized": "unrated",
+    "review_date": "2025-01-13"
+   }
+  ]
+ },
+ {
+  "id": "c_09d42a4bcec33da2",
+  "person": {
+   "id": "Q12961",
+   "name": "Nicolas Dupont-Aignan"
+  },
+  "party": {
+   "id": null,
+   "name": null,
+   "short_name": null,
+   "status": "undated"
+  },
+  "claim_text": "Les compteurs Linky sont un gouffre financier pour les consommateurs, car ils durent quatre fois moins longtemps que ceux qui étaient installés auparavant",
+  "claim_date": "2025-01-11",
+  "date_precision": "day",
+  "date_is_fallback": true,
+  "country": "FR",
+  "attribution_status": "auto_sure",
+  "verdict": "false",
+  "reviews": [
+   {
+    "source_id": "tf1info_verificateurs",
+    "source_name": "TF1 Info – Les Vérificateurs",
+    "url": "https://www.tf1info.fr/conso/verif-compteurs-linky-durent-ils-quatre-fois-moins-longtemps-que-ceux-installes-auparavant-fake-news-2344237.html",
+    "title": "VÉRIF' - Compteurs Linky : durent-ils quatre fois moins longtemps que ceux installés auparavant ?",
+    "rating_original": "Faux",
+    "rating_normalized": "false",
+    "review_date": "2025-01-11"
+   }
+  ]
+ },
+ {
+  "id": "c_52805ff90a64ae5d",
+  "person": {
+   "id": "Q21013136",
+   "name": "Sandrine Rousseau"
+  },
+  "party": {
+   "id": null,
+   "name": null,
+   "short_name": null,
+   "status": "undated"
+  },
+  "claim_text": "Les premières règles surviennent dès l'école primaire chez 20% des filles",
+  "claim_date": "2025-01-08",
+  "date_precision": "day",
+  "date_is_fallback": false,
+  "country": "FR",
+  "attribution_status": "auto_sure",
+  "verdict": "mostly_true",
+  "reviews": [
+   {
+    "source_id": "tf1info_verificateurs",
+    "source_name": "TF1 Info – Les Vérificateurs",
+    "url": "https://www.tf1info.fr/education/verif-regles-est-il-vrai-que-20-des-filles-ont-leurs-premieres-menstruations-des-l-ecole-primaire-en-france-2344122.html",
+    "title": "VÉRIF' - Est-il vrai que 20% des filles ont leurs premières règles dès l'école primaire ?",
+    "rating_original": "Plutôt vrai",
+    "rating_normalized": "mostly_true",
+    "review_date": "2025-01-10"
+   }
+  ]
+ },
+ {
+  "id": "c_2efa81c02129cd77",
+  "person": {
+   "id": "Q40655898",
+   "name": "Jordan Bardella"
+  },
+  "party": {
+   "id": "Q205150",
+   "name": "Rassemblement national",
+   "short_name": "RN",
+   "status": "ok"
+  },
+  "claim_text": "La censure a permis de faire baisser le tarif de l'électricité",
+  "claim_date": "2024-12-27",
+  "date_precision": "day",
+  "date_is_fallback": false,
+  "country": "FR",
+  "attribution_status": "auto_sure",
+  "verdict": "mostly_false",
+  "reviews": [
+   {
+    "source_id": "franceinfo_vraioufake",
+    "source_name": "franceinfo Vrai ou Fake",
+    "url": "https://www.franceinfo.fr/vrai-ou-fake/vrai-ou-faux-le-vote-de-la-censure-a-t-il-fait-baisser-le-tarif-de-l-electricite-comme-le-suggere-jordan-bardella_6985061.html",
+    "title": "VRAI OU FAUX. Le vote de la censure a-t-il fait baisser le tarif de l'électricité, comme le suggère Jordan Bardella ?",
+    "rating_original": "Plutôt Faux",
+    "rating_normalized": "mostly_false",
+    "review_date": "2024-12-30"
+   }
+  ]
+ },
+ {
+  "id": "c_3d02c8a3b25dc74b",
+  "person": {
+   "id": "Q12961",
+   "name": "Nicolas Dupont-Aignan"
+  },
+  "party": {
+   "id": null,
+   "name": null,
+   "short_name": null,
+   "status": "undated"
+  },
+  "claim_text": "Des milliers de soldats britanniques démissionnent, craignant d’être envoyés en Ukraine",
+  "claim_date": "2024-12-24",
+  "date_precision": "day",
+  "date_is_fallback": false,
+  "country": "FR",
+  "attribution_status": "auto_sure",
+  "verdict": "unrated",
+  "reviews": [
+   {
+    "source_id": "tf1info_verificateurs",
+    "source_name": "TF1 Info – Les Vérificateurs",
+    "url": "https://www.tf1info.fr/international/verif-des-milliers-de-soldats-britanniques-quittent-ils-l-armee-par-crainte-d-etre-mobilises-en-ukraine-2341414.html",
+    "title": "VÉRIF' - Des milliers de soldats britanniques quittent-ils l'armée par crainte d'être mobilisés en Ukraine ?",
+    "rating_original": "En partie vrai",
+    "rating_normalized": "unrated",
+    "review_date": "2024-12-25"
+   }
+  ]
+ },
+ {
+  "id": "c_5b096b58f27f439a",
+  "person": {
+   "id": "Q12927",
+   "name": "Marine Le Pen"
+  },
+  "party": {
+   "id": "Q205150",
+   "name": "Rassemblement national",
+   "short_name": "RN",
+   "status": "ok"
+  },
+  "claim_text": "En 20 ans, la France est passée du 2ᵉ au 6ᵉ rang mondial en matière d'exportation de produits agricoles",
+  "claim_date": "2024-12-15",
+  "date_precision": "day",
+  "date_is_fallback": false,
+  "country": "FR",
+  "attribution_status": "auto_sure",
+  "verdict": "true",
+  "reviews": [
+   {
+    "source_id": "tf1info_verificateurs",
+    "source_name": "TF1 Info – Les Vérificateurs",
+    "url": "https://www.tf1info.fr/economie/verif-en-20-ans-la-france-est-elle-passee-du-2-au-6-rang-mondial-en-matiere-d-exportation-de-produits-agricoles-comme-le-dit-marine-le-pen-2339825.html",
+    "title": "VÉRIF' - En 20 ans, la France est-elle passée du 2ᵉ au 6ᵉ rang mondial en matière d'exportation de produits agricoles ?",
+    "rating_original": "Vrai",
+    "rating_normalized": "true",
+    "review_date": "2024-12-16"
+   }
+  ]
+ },
+ {
+  "id": "c_0a938249f9814e78",
+  "person": {
+   "id": "Q63371085",
+   "name": "Christelle d'Intorni"
+  },
+  "party": {
+   "id": null,
+   "name": null,
+   "short_name": null,
+   "status": "none"
+  },
+  "claim_text": "Les manuels de SVT de 4e et de 2nde invitent “les enfants à choisir leur sexe”",
+  "claim_date": "2024-12-03",
+  "date_precision": "day",
+  "date_is_fallback": false,
+  "country": "FR",
+  "attribution_status": "auto_sure",
+  "verdict": "mostly_false",
+  "reviews": [
+   {
+    "source_id": "afp_factuel",
+    "source_name": "AFP Factuel",
+    "url": "https://factuel.afp.com/doc.afp.com.36PL2BQ",
+    "title": "Non, les programmes de SVT n'invitent pas les élèves à choisir leur sexe",
+    "rating_original": "Trompeur",
+    "rating_normalized": "mostly_false",
+    "review_date": "2024-12-11"
+   }
+  ]
+ },
+ {
+  "id": "c_a03ee64682f9f69a",
+  "person": {
+   "id": "Q438465",
+   "name": "Michel Barnier"
+  },
+  "party": {
+   "id": null,
+   "name": null,
+   "short_name": null,
+   "status": "undated"
+  },
+  "claim_text": "Il y a vingt ans, la dette française était équivalente à la dette allemande",
+  "claim_date": "2024-11-28",
+  "date_precision": "day",
+  "date_is_fallback": false,
+  "country": "FR",
+  "attribution_status": "auto_sure",
+  "verdict": "true",
+  "reviews": [
+   {
+    "source_id": "tf1info_verificateurs",
+    "source_name": "TF1 Info – Les Vérificateurs",
+    "url": "https://www.tf1info.fr/economie/verif-dette-france-allemagne-aujourd-hui-nettement-inferieure-l-endettement-allemand-etait-il-identique-a-celui-des-francais-il-y-a-20-ans-2336886.html",
+    "title": "VÉRIF' - Aujourd'hui nettement inférieure, la dette allemande était-elle identique à celle de la France il y a 20 ans ?",
+    "rating_original": "Vrai",
+    "rating_normalized": "true",
+    "review_date": "2024-11-30"
+   }
+  ]
+ },
+ {
+  "id": "c_579926d5f2a1af4e",
+  "person": {
+   "id": "Q63655",
+   "name": "Thierry Mariani"
+  },
+  "party": {
+   "id": null,
+   "name": null,
+   "short_name": null,
+   "status": "ambiguous"
+  },
+  "claim_text": "La Russie est devenue la quatrième économie mondiale depuis le début de la guerre en Ukraine",
+  "claim_date": "2024-11-25",
+  "date_precision": "day",
+  "date_is_fallback": true,
+  "country": "FR",
+  "attribution_status": "auto_sure",
+  "verdict": "mostly_false",
+  "reviews": [
+   {
+    "source_id": "tf1info_verificateurs",
+    "source_name": "TF1 Info – Les Vérificateurs",
+    "url": "https://www.tf1info.fr/international/verif-guerre-en-ukraine-la-russie-est-elle-reellement-devenue-la-quatrieme-economie-mondiale-2336025.html",
+    "title": "VÉRIF' - Guerre en Ukraine : la Russie est-elle réellement devenue \"la quatrième économie mondiale\" ?",
+    "rating_original": "Plutôt faux",
+    "rating_normalized": "mostly_false",
+    "review_date": "2024-11-25"
+   }
+  ]
+ },
+ {
+  "id": "c_865812569ed316d7",
+  "person": {
+   "id": "Q20020731",
+   "name": "Élisabeth Borne"
+  },
+  "party": {
+   "id": "Q23731823",
+   "name": "Renaissance",
+   "short_name": "RE",
+   "status": "ok"
+  },
+  "claim_text": "Si le budget 2025 est censuré, la carte vitale ne fonctionne plus et les retraites ne sont plus versées au 1ᵉʳ janvier",
+  "claim_date": "2024-11-25",
+  "date_precision": "day",
+  "date_is_fallback": true,
+  "country": "FR",
+  "attribution_status": "auto_sure",
+  "verdict": "mostly_false",
+  "reviews": [
+   {
+    "source_id": "tf1info_verificateurs",
+    "source_name": "TF1 Info – Les Vérificateurs",
+    "url": "https://www.tf1info.fr/politique/verif-sans-vote-du-budget-la-carte-vitale-ne-marchera-t-elle-plus-a-compter-du-1-janvier-comme-l-assure-elisabeth-borne-2336016.html",
+    "title": "VÉRIF' - Sans vote du budget, la carte vitale sera-t-elle inutilisable à compter du 1ᵉʳ janvier ?",
+    "rating_original": "Plutôt faux",
+    "rating_normalized": "mostly_false",
+    "review_date": "2024-11-25"
+   }
+  ]
+ },
+ {
+  "id": "c_2effe5ad62ba64a0",
+  "person": {
+   "id": "Q29917987",
+   "name": "Marine Tondelier"
+  },
+  "party": {
+   "id": "Q613786",
+   "name": "Les Écologistes – Europe Écologie Les Verts",
+   "short_name": "EELV",
+   "status": "ok"
+  },
+  "claim_text": "Le Mercosur va entrainer \"5% de déforestation en plus en Amazonie en six ans\", en raison de l’élevage intensif",
+  "claim_date": "2024-11-21",
+  "date_precision": "day",
+  "date_is_fallback": true,
+  "country": "FR",
+  "attribution_status": "auto_sure",
+  "verdict": "mostly_true",
+  "reviews": [
+   {
+    "source_id": "tf1info_verificateurs",
+    "source_name": "TF1 Info – Les Vérificateurs",
+    "url": "https://www.tf1info.fr/environnement-ecologie/verif-mercosur-l-amazonie-a-t-elle-perdu-5-de-sa-surface-en-six-ans-en-raison-de-la-production-de-boeuf-de-volaille-et-de-mais-comme-l-assure-marine-tondelier-2335190.html",
+    "title": "VÉRIF' - L'accord UE-Mercosur va-t-il entrainer \"5% de déforestation en plus en Amazonie en six ans\" ?",
+    "rating_original": "Plutôt vrai",
+    "rating_normalized": "mostly_true",
+    "review_date": "2024-11-21"
+   }
+  ]
+ },
+ {
+  "id": "c_ff54fea684bc14c6",
+  "person": {
+   "id": "Q984375",
+   "name": "Laurent Wauquiez"
+  },
+  "party": {
+   "id": null,
+   "name": null,
+   "short_name": null,
+   "status": "undated"
+  },
+  "claim_text": "L'équivalent de la population toulousaine est accueilli chaque année en France",
+  "claim_date": "2024-11-15",
+  "date_precision": "day",
+  "date_is_fallback": false,
+  "country": "FR",
+  "attribution_status": "auto_sure",
+  "verdict": "unrated",
+  "reviews": [
+   {
+    "source_id": "tf1info_verificateurs",
+    "source_name": "TF1 Info – Les Vérificateurs",
+    "url": "https://www.tf1info.fr/politique/verif-immigration-l-equivalent-de-la-population-toulousaine-est-il-accueilli-chaque-annee-en-france-2336867.html",
+    "title": "VÉRIF' - Immigration : l'équivalent de la population toulousaine est-il accueilli chaque année en France ?",
+    "rating_original": "En partie vrai",
+    "rating_normalized": "unrated",
+    "review_date": "2024-11-29"
+   }
+  ]
+ },
+ {
+  "id": "c_d21036d99d83f5af",
+  "person": {
+   "id": "Q556149",
+   "name": "Raphaël Glucksmann"
+  },
+  "party": {
+   "id": "Q58366009",
+   "name": "Place publique",
+   "short_name": "PP",
+   "status": "ok"
+  },
+  "claim_text": "L'UE a livré 4 à 5 fois moins de munitions à l'Ukraine que la Corée du Nord n'en a fournies à la Russie",
+  "claim_date": "2024-11-08",
+  "date_precision": "day",
+  "date_is_fallback": false,
+  "country": "FR",
+  "attribution_status": "auto_sure",
+  "verdict": "mostly_true",
+  "reviews": [
+   {
+    "source_id": "tf1info_verificateurs",
+    "source_name": "TF1 Info – Les Vérificateurs",
+    "url": "https://www.tf1info.fr/international/verif-guerre-ukraine-russie-l-ue-a-t-elle-livre-4-a-5-fois-moins-de-munitions-a-l-ukraine-que-la-coree-du-nord-n-en-a-fournies-a-la-russie-2333534.html",
+    "title": "VÉRIF' - L'UE a-t-elle livré 4 à 5 fois moins de munitions à l'Ukraine que la Corée du Nord à la Russie ?",
+    "rating_original": "Plutôt vrai",
+    "rating_normalized": "mostly_true",
+    "review_date": "2024-11-11"
    }
   ]
  }
