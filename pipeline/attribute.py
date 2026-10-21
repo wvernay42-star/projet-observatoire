@@ -74,6 +74,7 @@ class Referential:
         for a in affiliations:
             self.affiliations[a["person_id"]].append(a)
         # Affiliations validées à la main : prioritaires sur Wikidata aux dates qu'elles couvrent.
+        self.candidates: dict[str, dict[str, str]] = {}  # liste commune avec Votona (person_id -> ligne)
         # Période d'existence de chaque parti : une affiliation n'a pas de sens hors de cette période.
         self.party_periods = {p["id"]: (p.get("inception", ""), p.get("dissolved", "")) for p in parties or []}
         self.manual: dict[str, list[dict[str, str]]] = defaultdict(list)
@@ -88,7 +89,15 @@ class Referential:
 
         manual_path = seeds_dir / "affiliations_manual.csv"
         manual = read("affiliations_manual.csv") if manual_path.exists() else []
-        return cls(read("persons.csv"), read("affiliations.csv"), manual, read("parties.csv"))
+        persons = read("persons.csv")
+        candidates = read("candidates_2027.csv") if (seeds_dir / "candidates_2027.csv").exists() else []
+        # Candidats 2027 (liste commune avec Votona) absents des fonctions suivies : ajoutés au référentiel.
+        known = {p["id"] for p in persons}
+        persons += [{"id": c["person_id"] or "votona:" + c["votona_id"], "full_name": c["name"], "aliases": "[]"}
+                    for c in candidates if (c["person_id"] or "votona:" + c["votona_id"]) not in known]
+        ref = cls(persons, read("affiliations.csv"), manual, read("parties.csv"))
+        ref.candidates = {c["person_id"] or "votona:" + c["votona_id"]: c for c in candidates}
+        return ref
 
     def attribute(self, claimant: str | None) -> Attribution:
         if not claimant or not claimant.strip():

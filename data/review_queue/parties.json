@@ -131,6 +131,27 @@
   ]
  },
  {
+  "claim_id": "c_a74f7f2b24a1bfff",
+  "claim_text": "Le gouvernement a freiné le déploiement des bornes de recharge électrique",
+  "claim_date": "2026-04-14",
+  "reviews": [
+   {
+    "url": "https://www.tf1info.fr/transports/verif-le-gouvernement-a-t-il-freine-sur-le-deploiement-des-bornes-de-recharge-pour-les-voitures-electriques-comme-le-dit-segolene-royal-2435887.html",
+    "source_id": "tf1info_verificateurs",
+    "claimant": "Ségolène Royal",
+    "rating_original": "Plutôt faux",
+    "rating_normalized": "mostly_false",
+    "review_date": "2026-04-14"
+   }
+  ],
+  "person": {
+   "id": "Q81923",
+   "name": "Ségolène Royal"
+  },
+  "status": "none",
+  "candidates": []
+ },
+ {
   "claim_id": "c_b957128997f4d31f",
   "claim_text": "Une mission en charge de la sécurité des musées ne compte que huit personnes pour superviser 1.200 établissements",
   "claim_date": "2026-03-04",
@@ -648,6 +669,27 @@
    "Q20012759",
    "Q64503948"
   ]
+ },
+ {
+  "claim_id": "c_7d8a557761f50487",
+  "claim_text": "L'ancien Premier ministre Jean Castex a une voiture avec chauffeur et essence à vie",
+  "claim_date": "2025-05-02",
+  "reviews": [
+   {
+    "url": "https://www.tf1info.fr/politique/verif-non-l-ancien-premier-ministre-jean-castex-ne-beneficie-pas-d-une-voiture-de-fonction-avec-chauffeur-et-essence-a-vie-comme-le-pretend-segolene-royal-sur-x-2368497.html",
+    "source_id": "tf1info_verificateurs",
+    "claimant": "Ségolène Royal",
+    "rating_original": "Plutôt faux",
+    "rating_normalized": "mostly_false",
+    "review_date": "2025-05-02"
+   }
+  ],
+  "person": {
+   "id": "Q81923",
+   "name": "Ségolène Royal"
+  },
+  "status": "none",
+  "candidates": []
  },
  {
   "claim_id": "c_6d765bd9e9f325f4",

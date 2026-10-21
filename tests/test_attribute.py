@@ -120,3 +120,21 @@ def test_affiliation_outside_party_lifetime_is_ignored():
     assert ref.party_at("Q3", "2024-11-15").party_id == "LR"  # UMP n'existait plus : validation ignorée
     assert ref.party_at("Q3", "2010-01-01").status == "undated"  # UMP possible, mais sans date
     assert not ref.party_existed("LR", "2012-03-01")
+
+
+def test_candidates_2027_join_the_referential(tmp_path):
+    import csv
+    def write(name, header, rows):
+        with (tmp_path / name).open("w", newline="", encoding="utf-8") as f:
+            w = csv.writer(f); w.writerow(header); w.writerows(rows)
+    write("persons.csv", ["id", "full_name", "aliases", "country", "public_role"], [["Q1", "Marine Le Pen", "[]", "FR", "député"]])
+    write("affiliations.csv", ["person_id", "party_id", "start_date", "end_date", "source_url"], [])
+    write("parties.csv", ["id", "name", "short_name", "country", "parlgov_id", "inception", "dissolved"], [])
+    write("candidates_2027.csv", ["votona_id", "name", "votona_party", "status", "person_id", "person_match", "party_id", "votona_url"],
+          [["lepen", "Marine Le Pen", "RN", "déclaré ou pressenti", "Q1", "sûr", "", ""],
+           ["arthaud", "Nathalie Arthaud", "Lutte Ouvrière", "déclaré ou pressenti", "Q439490", "sûr", "", ""],
+           ["mathieu", "Benoît Mathieu", "Sans étiquette", "déclaré ou pressenti", "", "aucune fiche Wikidata", "", ""]])
+    ref = Referential.load(tmp_path)
+    assert ref.attribute("Nathalie Arthaud").person_id == "Q439490"
+    assert ref.attribute("Benoît Mathieu").person_id == "votona:mathieu"
+    assert set(ref.candidates) == {"Q1", "Q439490", "votona:mathieu"}

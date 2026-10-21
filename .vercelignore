@@ -1,0 +1,5 @@
+# Seul le dossier site/ est servi ; le reste du dépôt (pipeline, données brutes) ne part pas chez Vercel.
+*
+!site
+!site/**
+!vercel.json

@@ -68,7 +68,8 @@ def build_facts(conn: sqlite3.Connection, ref: Referential) -> list[dict[str, An
         name, short = party_name_at(p, party_names.get(party.party_id or "", []), c["claim_date"]) if p else (None, None)
         facts.append({
             "id": c["id"],
-            "person": {"id": c["person_id"], "name": ref.full_names.get(c["person_id"], "")},
+            "person": {"id": c["person_id"], "name": ref.full_names.get(c["person_id"], ""),
+                       "votona_id": ref.candidates.get(c["person_id"], {}).get("votona_id")},
             "party": {"id": party.party_id, "name": name, "short_name": short, "status": party.status},
             "claim_text": c["text"],
             "claim_date": c["claim_date"],

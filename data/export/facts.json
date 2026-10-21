@@ -3,7 +3,8 @@
   "id": "c_279e29240311c8ad",
   "person": {
    "id": "Q47502155",
-   "name": "David Amiel"
+   "name": "David Amiel",
+   "votona_id": null
   },
   "party": {
    "id": null,
@@ -43,7 +44,8 @@
   "id": "c_96a23047c1bdcd97",
   "person": {
    "id": "Q98234202",
-   "name": "Philippe Baptiste"
+   "name": "Philippe Baptiste",
+   "votona_id": null
   },
   "party": {
    "id": null,
@@ -83,7 +85,8 @@
   "id": "c_41ee162c574bed08",
   "person": {
    "id": "Q5829",
-   "name": "Jean-Luc Mélenchon"
+   "name": "Jean-Luc Mélenchon",
+   "votona_id": "melenchon"
   },
   "party": {
    "id": "Q27978402",
@@ -114,7 +117,8 @@
   "id": "c_09ff534ca14317ef",
   "person": {
    "id": "Q30343128",
-   "name": "Mathilde Panot"
+   "name": "Mathilde Panot",
+   "votona_id": null
   },
   "party": {
    "id": "Q27978402",
@@ -154,7 +158,8 @@
   "id": "c_1bdd1dfcded58e6f",
   "person": {
    "id": "Q30343128",
-   "name": "Mathilde Panot"
+   "name": "Mathilde Panot",
+   "votona_id": null
   },
   "party": {
    "id": "Q27978402",
@@ -194,7 +199,8 @@
   "id": "c_096032dec5dbbee4",
   "person": {
    "id": "Q2926942",
-   "name": "Bruno Retailleau"
+   "name": "Bruno Retailleau",
+   "votona_id": "retailleau"
   },
   "party": {
    "id": "Q20012759",
@@ -234,7 +240,8 @@
   "id": "c_001be89c56b0c02a",
   "person": {
    "id": "Q5829",
-   "name": "Jean-Luc Mélenchon"
+   "name": "Jean-Luc Mélenchon",
+   "votona_id": "melenchon"
   },
   "party": {
    "id": "Q27978402",
@@ -265,7 +272,8 @@
   "id": "c_6cc8121f304f5a22",
   "person": {
    "id": "Q3052795",
-   "name": "Emmanuel Maurel"
+   "name": "Emmanuel Maurel",
+   "votona_id": "maurel"
   },
   "party": {
    "id": "Q58329311",
@@ -305,7 +313,8 @@
   "id": "c_224eb51f27052641",
   "person": {
    "id": "Q2926942",
-   "name": "Bruno Retailleau"
+   "name": "Bruno Retailleau",
+   "votona_id": "retailleau"
   },
   "party": {
    "id": "Q20012759",
@@ -345,7 +354,8 @@
   "id": "c_ec5b83524d9270e4",
   "person": {
    "id": "Q112572505",
-   "name": "Benjamin Haddad"
+   "name": "Benjamin Haddad",
+   "votona_id": null
   },
   "party": {
    "id": null,
@@ -376,7 +386,8 @@
   "id": "c_1be99f2ee985ff4b",
   "person": {
    "id": "Q17485936",
-   "name": "Éric Coquerel"
+   "name": "Éric Coquerel",
+   "votona_id": null
   },
   "party": {
    "id": null,
@@ -416,7 +427,8 @@
   "id": "c_2c23915a4552ed2e",
   "person": {
    "id": "Q12927",
-   "name": "Marine Le Pen"
+   "name": "Marine Le Pen",
+   "votona_id": "lepen"
   },
   "party": {
    "id": "Q205150",
@@ -456,7 +468,8 @@
   "id": "c_46ed272472b2f89d",
   "person": {
    "id": "Q29570183",
-   "name": "Aurore Bergé"
+   "name": "Aurore Bergé",
+   "votona_id": null
   },
   "party": {
    "id": "Q23731823",
@@ -496,7 +509,8 @@
   "id": "c_675479b55c37dd44",
   "person": {
    "id": "Q12927",
-   "name": "Marine Le Pen"
+   "name": "Marine Le Pen",
+   "votona_id": "lepen"
   },
   "party": {
    "id": "Q205150",
@@ -545,7 +559,8 @@
   "id": "c_e4eb0075c71fba49",
   "person": {
    "id": "Q30343128",
-   "name": "Mathilde Panot"
+   "name": "Mathilde Panot",
+   "votona_id": null
   },
   "party": {
    "id": "Q27978402",
@@ -576,7 +591,8 @@
   "id": "c_ae641593ed789043",
   "person": {
    "id": "Q5829",
-   "name": "Jean-Luc Mélenchon"
+   "name": "Jean-Luc Mélenchon",
+   "votona_id": "melenchon"
   },
   "party": {
    "id": "Q27978402",
@@ -607,7 +623,8 @@
   "id": "c_516377b5ea7503d3",
   "person": {
    "id": "Q82637284",
-   "name": "Sarah Knafo"
+   "name": "Sarah Knafo",
+   "votona_id": null
   },
   "party": {
    "id": "Q109932430",
@@ -647,7 +664,8 @@
   "id": "c_4c3859ef1b71f879",
   "person": {
    "id": "Q20089181",
-   "name": "Sébastien Lecornu"
+   "name": "Sébastien Lecornu",
+   "votona_id": null
   },
   "party": {
    "id": "Q23731823",
@@ -678,7 +696,8 @@
   "id": "c_7b311013d8063320",
   "person": {
    "id": "Q40655898",
-   "name": "Jordan Bardella"
+   "name": "Jordan Bardella",
+   "votona_id": "bardella"
   },
   "party": {
    "id": "Q205150",
@@ -709,7 +728,8 @@
   "id": "c_bcca6625c1f9c10c",
   "person": {
    "id": "Q3052772",
-   "name": "Emmanuel Macron"
+   "name": "Emmanuel Macron",
+   "votona_id": null
   },
   "party": {
    "id": "Q23731823",
@@ -749,7 +769,8 @@
   "id": "c_eee14ba775b6b771",
   "person": {
    "id": "Q157",
-   "name": "François Hollande"
+   "name": "François Hollande",
+   "votona_id": null
   },
   "party": {
    "id": "Q170972",
@@ -780,7 +801,8 @@
   "id": "c_d1eaf02165d705d3",
   "person": {
    "id": "Q33138734",
-   "name": "Édouard Geffray"
+   "name": "Édouard Geffray",
+   "votona_id": null
   },
   "party": {
    "id": null,
@@ -820,7 +842,8 @@
   "id": "c_5a2dbc0ea9794dce",
   "person": {
    "id": "Q46138822",
-   "name": "Jean-Philippe Tanguy"
+   "name": "Jean-Philippe Tanguy",
+   "votona_id": null
   },
   "party": {
    "id": "Q205150",
@@ -851,7 +874,8 @@
   "id": "c_3391e174c0191b59",
   "person": {
    "id": "Q3579995",
-   "name": "Édouard Philippe"
+   "name": "Édouard Philippe",
+   "votona_id": "philippe"
   },
   "party": {
    "id": "Q108846587",
@@ -891,7 +915,8 @@
   "id": "c_724c0fdac8dce407",
   "person": {
    "id": "Q29917987",
-   "name": "Marine Tondelier"
+   "name": "Marine Tondelier",
+   "votona_id": "tondelier"
   },
   "party": {
    "id": "Q613786",
@@ -922,7 +947,8 @@
   "id": "c_f3f84ae2e13a33a0",
   "person": {
    "id": "Q556149",
-   "name": "Raphaël Glucksmann"
+   "name": "Raphaël Glucksmann",
+   "votona_id": "glucksmann"
   },
   "party": {
    "id": "Q58366009",
@@ -953,7 +979,8 @@
   "id": "c_93d411a620e4664a",
   "person": {
    "id": "Q29917987",
-   "name": "Marine Tondelier"
+   "name": "Marine Tondelier",
+   "votona_id": "tondelier"
   },
   "party": {
    "id": "Q613786",
@@ -984,7 +1011,8 @@
   "id": "c_cf73e93a7a41b8e5",
   "person": {
    "id": "Q5829",
-   "name": "Jean-Luc Mélenchon"
+   "name": "Jean-Luc Mélenchon",
+   "votona_id": "melenchon"
   },
   "party": {
    "id": "Q27978402",
@@ -1015,7 +1043,8 @@
   "id": "c_7d175f62dc5f0a41",
   "person": {
    "id": "Q3074223",
-   "name": "Florian Philippot"
+   "name": "Florian Philippot",
+   "votona_id": "philippot"
   },
   "party": {
    "id": "Q41330182",
@@ -1046,7 +1075,8 @@
   "id": "c_a57446c5d4ef54fd",
   "person": {
    "id": "Q41102798",
-   "name": "Julien Odoul"
+   "name": "Julien Odoul",
+   "votona_id": null
   },
   "party": {
    "id": null,
@@ -1077,7 +1107,8 @@
   "id": "c_1545375921ee6831",
   "person": {
    "id": "Q15724624",
-   "name": "François-Xavier Bellamy"
+   "name": "François-Xavier Bellamy",
+   "votona_id": null
   },
   "party": {
    "id": "Q20012759",
@@ -1108,7 +1139,8 @@
   "id": "c_7808336aef9fe7f4",
   "person": {
    "id": "Q46138822",
-   "name": "Jean-Philippe Tanguy"
+   "name": "Jean-Philippe Tanguy",
+   "votona_id": null
   },
   "party": {
    "id": "Q205150",
@@ -1139,7 +1171,8 @@
   "id": "c_ed8c9ee066117044",
   "person": {
    "id": "Q82637284",
-   "name": "Sarah Knafo"
+   "name": "Sarah Knafo",
+   "votona_id": null
   },
   "party": {
    "id": "Q109932430",
@@ -1170,7 +1203,8 @@
   "id": "c_3d8d6b1f6acd3f1f",
   "person": {
    "id": "Q60604481",
-   "name": "Virginie Joron"
+   "name": "Virginie Joron",
+   "votona_id": null
   },
   "party": {
    "id": null,
@@ -1201,7 +1235,8 @@
   "id": "c_511bac9f266f7cf3",
   "person": {
    "id": "Q104032664",
-   "name": "Maud Bregeon"
+   "name": "Maud Bregeon",
+   "votona_id": null
   },
   "party": {
    "id": "Q23731823",
@@ -1232,7 +1267,8 @@
   "id": "c_759d1083fd660192",
   "person": {
    "id": "Q3123610",
-   "name": "Gérald Darmanin"
+   "name": "Gérald Darmanin",
+   "votona_id": null
   },
   "party": {
    "id": "Q20012759",
@@ -1263,7 +1299,8 @@
   "id": "c_185a00d1ea380b09",
   "person": {
    "id": "Q3085763",
-   "name": "François Ruffin"
+   "name": "François Ruffin",
+   "votona_id": "ruffin"
   },
   "party": {
    "id": null,
@@ -1294,7 +1331,8 @@
   "id": "c_ef51da92ed700c16",
   "person": {
    "id": "Q12927",
-   "name": "Marine Le Pen"
+   "name": "Marine Le Pen",
+   "votona_id": "lepen"
   },
   "party": {
    "id": "Q205150",
@@ -1325,7 +1363,8 @@
   "id": "c_54005784cad99232",
   "person": {
    "id": "Q30339422",
-   "name": "Yaël Braun-Pivet"
+   "name": "Yaël Braun-Pivet",
+   "votona_id": null
   },
   "party": {
    "id": "Q23731823",
@@ -1356,7 +1395,8 @@
   "id": "c_a1b984943402b778",
   "person": {
    "id": "Q40655898",
-   "name": "Jordan Bardella"
+   "name": "Jordan Bardella",
+   "votona_id": "bardella"
   },
   "party": {
    "id": "Q205150",
@@ -1384,10 +1424,43 @@
   ]
  },
  {
+  "id": "c_a74f7f2b24a1bfff",
+  "person": {
+   "id": "Q81923",
+   "name": "Ségolène Royal",
+   "votona_id": "royal"
+  },
+  "party": {
+   "id": null,
+   "name": null,
+   "short_name": null,
+   "status": "none"
+  },
+  "claim_text": "Le gouvernement a freiné le déploiement des bornes de recharge électrique",
+  "claim_date": "2026-04-14",
+  "date_precision": "day",
+  "date_is_fallback": true,
+  "country": "FR",
+  "attribution_status": "auto_sure",
+  "verdict": "mostly_false",
+  "reviews": [
+   {
+    "source_id": "tf1info_verificateurs",
+    "source_name": "TF1 Info – Les Vérificateurs",
+    "url": "https://www.tf1info.fr/transports/verif-le-gouvernement-a-t-il-freine-sur-le-deploiement-des-bornes-de-recharge-pour-les-voitures-electriques-comme-le-dit-segolene-royal-2435887.html",
+    "title": "VÉRIF' - Voitures électriques : le gouvernement a-t-il freiné sur le déploiement des bornes de recharge ?",
+    "rating_original": "Plutôt faux",
+    "rating_normalized": "mostly_false",
+    "review_date": "2026-04-14"
+   }
+  ]
+ },
+ {
   "id": "c_64072ce56678b9fc",
   "person": {
    "id": "Q82637284",
-   "name": "Sarah Knafo"
+   "name": "Sarah Knafo",
+   "votona_id": null
   },
   "party": {
    "id": "Q109932430",
@@ -1427,7 +1500,8 @@
   "id": "c_a5d9a41247ae026c",
   "person": {
    "id": "Q30339198",
-   "name": "Jean-Noël Barrot"
+   "name": "Jean-Noël Barrot",
+   "votona_id": null
   },
   "party": {
    "id": "Q587370",
@@ -1458,7 +1532,8 @@
   "id": "c_4600bcd2800cb9e0",
   "person": {
    "id": "Q30339350",
-   "name": "Gabriel Attal"
+   "name": "Gabriel Attal",
+   "votona_id": "attal"
   },
   "party": {
    "id": "Q23731823",
@@ -1489,7 +1564,8 @@
   "id": "c_4f524e4ed74a13ba",
   "person": {
    "id": "Q12927",
-   "name": "Marine Le Pen"
+   "name": "Marine Le Pen",
+   "votona_id": "lepen"
   },
   "party": {
    "id": "Q205150",
@@ -1520,7 +1596,8 @@
   "id": "c_5412311eeded7ac1",
   "person": {
    "id": "Q12927",
-   "name": "Marine Le Pen"
+   "name": "Marine Le Pen",
+   "votona_id": "lepen"
   },
   "party": {
    "id": "Q205150",
@@ -1560,7 +1637,8 @@
   "id": "c_faa5e0a1549c25d0",
   "person": {
    "id": "Q27182",
-   "name": "Rachida Dati"
+   "name": "Rachida Dati",
+   "votona_id": null
   },
   "party": {
    "id": "Q20012759",
@@ -1591,7 +1669,8 @@
   "id": "c_35b3d2a40b43b441",
   "person": {
    "id": "Q27182",
-   "name": "Rachida Dati"
+   "name": "Rachida Dati",
+   "votona_id": null
   },
   "party": {
    "id": "Q20012759",
@@ -1622,7 +1701,8 @@
   "id": "c_4111e2441636ae50",
   "person": {
    "id": "Q5829",
-   "name": "Jean-Luc Mélenchon"
+   "name": "Jean-Luc Mélenchon",
+   "votona_id": "melenchon"
   },
   "party": {
    "id": "Q27978402",
@@ -1653,7 +1733,8 @@
   "id": "c_7f2cfff2b3c28df6",
   "person": {
    "id": "Q12927",
-   "name": "Marine Le Pen"
+   "name": "Marine Le Pen",
+   "votona_id": "lepen"
   },
   "party": {
    "id": "Q205150",
@@ -1684,7 +1765,8 @@
   "id": "c_454efb9b5dee5b83",
   "person": {
    "id": "Q30343128",
-   "name": "Mathilde Panot"
+   "name": "Mathilde Panot",
+   "votona_id": null
   },
   "party": {
    "id": "Q27978402",
@@ -1715,7 +1797,8 @@
   "id": "c_b957128997f4d31f",
   "person": {
    "id": "Q2834481",
-   "name": "Alexis Corbière"
+   "name": "Alexis Corbière",
+   "votona_id": null
   },
   "party": {
    "id": null,
@@ -1746,7 +1829,8 @@
   "id": "c_cee84fc0272cdd37",
   "person": {
    "id": "Q40655898",
-   "name": "Jordan Bardella"
+   "name": "Jordan Bardella",
+   "votona_id": "bardella"
   },
   "party": {
    "id": "Q205150",
@@ -1777,7 +1861,8 @@
   "id": "c_4a23bd89bd126ae2",
   "person": {
    "id": "Q30339198",
-   "name": "Jean-Noël Barrot"
+   "name": "Jean-Noël Barrot",
+   "votona_id": null
   },
   "party": {
    "id": "Q587370",
@@ -1817,7 +1902,8 @@
   "id": "c_8f600aa37aa5e36f",
   "person": {
    "id": "Q3074223",
-   "name": "Florian Philippot"
+   "name": "Florian Philippot",
+   "votona_id": "philippot"
   },
   "party": {
    "id": "Q41330182",
@@ -1848,7 +1934,8 @@
   "id": "c_a5c20dc8eb8ba8e6",
   "person": {
    "id": "Q40655898",
-   "name": "Jordan Bardella"
+   "name": "Jordan Bardella",
+   "votona_id": "bardella"
   },
   "party": {
    "id": "Q205150",
@@ -1879,7 +1966,8 @@
   "id": "c_e68ec98c7d56307d",
   "person": {
    "id": "Q5829",
-   "name": "Jean-Luc Mélenchon"
+   "name": "Jean-Luc Mélenchon",
+   "votona_id": "melenchon"
   },
   "party": {
    "id": "Q27978402",
@@ -1910,7 +1998,8 @@
   "id": "c_719299614b523cdc",
   "person": {
    "id": "Q40871303",
-   "name": "Laurent Duplomb"
+   "name": "Laurent Duplomb",
+   "votona_id": null
   },
   "party": {
    "id": null,
@@ -1941,7 +2030,8 @@
   "id": "c_55f243bd05275cd8",
   "person": {
    "id": "Q82637284",
-   "name": "Sarah Knafo"
+   "name": "Sarah Knafo",
+   "votona_id": null
   },
   "party": {
    "id": "Q109932430",
@@ -1981,7 +2071,8 @@
   "id": "c_b3cf7e058f4a1ed3",
   "person": {
    "id": "Q40871303",
-   "name": "Laurent Duplomb"
+   "name": "Laurent Duplomb",
+   "votona_id": null
   },
   "party": {
    "id": "Q20012759",
@@ -2012,7 +2103,8 @@
   "id": "c_6879f63f596d002a",
   "person": {
    "id": "Q113015802",
-   "name": "Caroline Yadan"
+   "name": "Caroline Yadan",
+   "votona_id": null
   },
   "party": {
    "id": null,
@@ -2052,7 +2144,8 @@
   "id": "c_4f3e2981a33f1933",
   "person": {
    "id": "Q3052772",
-   "name": "Emmanuel Macron"
+   "name": "Emmanuel Macron",
+   "votona_id": null
   },
   "party": {
    "id": "Q23731823",
@@ -2083,7 +2176,8 @@
   "id": "c_a270302c4943b6c7",
   "person": {
    "id": "Q27182",
-   "name": "Rachida Dati"
+   "name": "Rachida Dati",
+   "votona_id": null
   },
   "party": {
    "id": "Q20012759",
@@ -2114,7 +2208,8 @@
   "id": "c_309b7658ef44b12c",
   "person": {
    "id": "Q27182",
-   "name": "Rachida Dati"
+   "name": "Rachida Dati",
+   "votona_id": null
   },
   "party": {
    "id": "Q20012759",
@@ -2154,7 +2249,8 @@
   "id": "c_c046da3e18752f68",
   "person": {
    "id": "Q3171170",
-   "name": "Jean Castex"
+   "name": "Jean Castex",
+   "votona_id": null
   },
   "party": {
    "id": "Q23731823",
@@ -2185,7 +2281,8 @@
   "id": "c_7d4be054414b04ac",
   "person": {
    "id": "Q27182",
-   "name": "Rachida Dati"
+   "name": "Rachida Dati",
+   "votona_id": null
   },
   "party": {
    "id": "Q20012759",
@@ -2216,7 +2313,8 @@
   "id": "c_7453ffb40bc2ea52",
   "person": {
    "id": "Q29575749",
-   "name": "Manuel Bompard"
+   "name": "Manuel Bompard",
+   "votona_id": null
   },
   "party": {
    "id": "Q27978402",
@@ -2247,7 +2345,8 @@
   "id": "c_93cc813656906088",
   "person": {
    "id": "Q82637284",
-   "name": "Sarah Knafo"
+   "name": "Sarah Knafo",
+   "votona_id": null
   },
   "party": {
    "id": "Q109932430",
@@ -2278,7 +2377,8 @@
   "id": "c_57f7255a9168248e",
   "person": {
    "id": "Q82637284",
-   "name": "Sarah Knafo"
+   "name": "Sarah Knafo",
+   "votona_id": null
   },
   "party": {
    "id": "Q109932430",
@@ -2309,7 +2409,8 @@
   "id": "c_8c368974fd8a58f5",
   "person": {
    "id": "Q2926942",
-   "name": "Bruno Retailleau"
+   "name": "Bruno Retailleau",
+   "votona_id": "retailleau"
   },
   "party": {
    "id": "Q20012759",
@@ -2340,7 +2441,8 @@
   "id": "c_99b139a3991d6185",
   "person": {
    "id": "Q29575749",
-   "name": "Manuel Bompard"
+   "name": "Manuel Bompard",
+   "votona_id": null
   },
   "party": {
    "id": "Q27978402",
@@ -2371,7 +2473,8 @@
   "id": "c_0210efd7868a0822",
   "person": {
    "id": "Q3074223",
-   "name": "Florian Philippot"
+   "name": "Florian Philippot",
+   "votona_id": "philippot"
   },
   "party": {
    "id": "Q41330182",
@@ -2402,7 +2505,8 @@
   "id": "c_d2556d7cf44d2ff0",
   "person": {
    "id": "Q3018298",
-   "name": "David Lisnard"
+   "name": "David Lisnard",
+   "votona_id": "lisnard"
   },
   "party": {
    "id": "Q123528596",
@@ -2433,7 +2537,8 @@
   "id": "c_4a01cfc610c11ff6",
   "person": {
    "id": "Q3085763",
-   "name": "François Ruffin"
+   "name": "François Ruffin",
+   "votona_id": "ruffin"
   },
   "party": {
    "id": null,
@@ -2464,7 +2569,8 @@
   "id": "c_faf6db59f2ac28ed",
   "person": {
    "id": "Q3167954",
-   "name": "Jean-Michel Blanquer"
+   "name": "Jean-Michel Blanquer",
+   "votona_id": null
   },
   "party": {
    "id": "Q23731823",
@@ -2495,7 +2601,8 @@
   "id": "c_bcf1fe6f36fb0aa0",
   "person": {
    "id": "Q5829",
-   "name": "Jean-Luc Mélenchon"
+   "name": "Jean-Luc Mélenchon",
+   "votona_id": "melenchon"
   },
   "party": {
    "id": "Q27978402",
@@ -2526,7 +2633,8 @@
   "id": "c_051b7b65ac86a562",
   "person": {
    "id": "Q40655898",
-   "name": "Jordan Bardella"
+   "name": "Jordan Bardella",
+   "votona_id": "bardella"
   },
   "party": {
    "id": "Q205150",
@@ -2557,7 +2665,8 @@
   "id": "c_ea152bff065c6bd7",
   "person": {
    "id": "Q30344388",
-   "name": "Pascale Fontenel-Personne"
+   "name": "Pascale Fontenel-Personne",
+   "votona_id": null
   },
   "party": {
    "id": null,
@@ -2588,7 +2697,8 @@
   "id": "c_fecc229f2668b2ad",
   "person": {
    "id": "Q5829",
-   "name": "Jean-Luc Mélenchon"
+   "name": "Jean-Luc Mélenchon",
+   "votona_id": "melenchon"
   },
   "party": {
    "id": "Q27978402",
@@ -2619,7 +2729,8 @@
   "id": "c_5c4541f145c8ec29",
   "person": {
    "id": "Q3074223",
-   "name": "Florian Philippot"
+   "name": "Florian Philippot",
+   "votona_id": "philippot"
   },
   "party": {
    "id": "Q41330182",
@@ -2650,7 +2761,8 @@
   "id": "c_c437e14286875e68",
   "person": {
    "id": "Q5829",
-   "name": "Jean-Luc Mélenchon"
+   "name": "Jean-Luc Mélenchon",
+   "votona_id": "melenchon"
   },
   "party": {
    "id": "Q27978402",
@@ -2681,7 +2793,8 @@
   "id": "c_e0b7ad893b78d441",
   "person": {
    "id": "Q29917987",
-   "name": "Marine Tondelier"
+   "name": "Marine Tondelier",
+   "votona_id": "tondelier"
   },
   "party": {
    "id": "Q613786",
@@ -2712,7 +2825,8 @@
   "id": "c_b1f68cd781b78569",
   "person": {
    "id": "Q12961",
-   "name": "Nicolas Dupont-Aignan"
+   "name": "Nicolas Dupont-Aignan",
+   "votona_id": "dupont-aignan"
   },
   "party": {
    "id": "Q12962",
@@ -2743,7 +2857,8 @@
   "id": "c_ecc0c7806bc0a35f",
   "person": {
    "id": "Q112650795",
-   "name": "Thomas Ménagé"
+   "name": "Thomas Ménagé",
+   "votona_id": null
   },
   "party": {
    "id": null,
@@ -2774,7 +2889,8 @@
   "id": "c_6c454908103f4eca",
   "person": {
    "id": "Q2926942",
-   "name": "Bruno Retailleau"
+   "name": "Bruno Retailleau",
+   "votona_id": "retailleau"
   },
   "party": {
    "id": "Q20012759",
@@ -2805,7 +2921,8 @@
   "id": "c_115e3f389ac8cb04",
   "person": {
    "id": "Q1844180",
-   "name": "Éric Ciotti"
+   "name": "Éric Ciotti",
+   "votona_id": null
   },
   "party": {
    "id": "Q127038760",
@@ -2836,7 +2953,8 @@
   "id": "c_e211b355835c2f10",
   "person": {
    "id": "Q12963",
-   "name": "François Bayrou"
+   "name": "François Bayrou",
+   "votona_id": null
   },
   "party": {
    "id": "Q587370",
@@ -2867,7 +2985,8 @@
   "id": "c_67a2e20fe6755ea1",
   "person": {
    "id": "Q3052772",
-   "name": "Emmanuel Macron"
+   "name": "Emmanuel Macron",
+   "votona_id": null
   },
   "party": {
    "id": "Q23731823",
@@ -2898,7 +3017,8 @@
   "id": "c_331b536027b181e9",
   "person": {
    "id": "Q65585797",
-   "name": "Pierre Israel"
+   "name": "Pierre Israel",
+   "votona_id": null
   },
   "party": {
    "id": null,
@@ -2929,7 +3049,8 @@
   "id": "c_5cfbff4e5af5e01d",
   "person": {
    "id": "Q3351018",
-   "name": "Olivier Faure"
+   "name": "Olivier Faure",
+   "votona_id": "faure"
   },
   "party": {
    "id": null,
@@ -2960,7 +3081,8 @@
   "id": "c_09a8d42a83e69e70",
   "person": {
    "id": "Q12963",
-   "name": "François Bayrou"
+   "name": "François Bayrou",
+   "votona_id": null
   },
   "party": {
    "id": "Q587370",
@@ -2991,7 +3113,8 @@
   "id": "c_e95533a1dbf8c83f",
   "person": {
    "id": "Q12963",
-   "name": "François Bayrou"
+   "name": "François Bayrou",
+   "votona_id": null
   },
   "party": {
    "id": "Q587370",
@@ -3022,7 +3145,8 @@
   "id": "c_fabaf980b4ce6720",
   "person": {
    "id": "Q30378878",
-   "name": "Patrick Mignola"
+   "name": "Patrick Mignola",
+   "votona_id": null
   },
   "party": {
    "id": null,
@@ -3053,7 +3177,8 @@
   "id": "c_a8957ed6577219d1",
   "person": {
    "id": "Q106020252",
-   "name": "Prisca Thevenot"
+   "name": "Prisca Thevenot",
+   "votona_id": null
   },
   "party": {
    "id": null,
@@ -3084,7 +3209,8 @@
   "id": "c_5739612cefc8275d",
   "person": {
    "id": "Q12963",
-   "name": "François Bayrou"
+   "name": "François Bayrou",
+   "votona_id": null
   },
   "party": {
    "id": "Q587370",
@@ -3115,7 +3241,8 @@
   "id": "c_c9dca7b98be27e02",
   "person": {
    "id": "Q21013136",
-   "name": "Sandrine Rousseau"
+   "name": "Sandrine Rousseau",
+   "votona_id": null
   },
   "party": {
    "id": null,
@@ -3146,7 +3273,8 @@
   "id": "c_225f29be3b4e6e3e",
   "person": {
    "id": "Q30343128",
-   "name": "Mathilde Panot"
+   "name": "Mathilde Panot",
+   "votona_id": null
   },
   "party": {
    "id": "Q27978402",
@@ -3177,7 +3305,8 @@
   "id": "c_54940dd6a1f8fc74",
   "person": {
    "id": "Q27182",
-   "name": "Rachida Dati"
+   "name": "Rachida Dati",
+   "votona_id": null
   },
   "party": {
    "id": "Q20012759",
@@ -3208,7 +3337,8 @@
   "id": "c_ca3b8578d89015ee",
   "person": {
    "id": "Q3123610",
-   "name": "Gérald Darmanin"
+   "name": "Gérald Darmanin",
+   "votona_id": null
   },
   "party": {
    "id": "Q20012759",
@@ -3239,7 +3369,8 @@
   "id": "c_aedd431657740e2a",
   "person": {
    "id": "Q2942097",
-   "name": "Catherine Vautrin"
+   "name": "Catherine Vautrin",
+   "votona_id": null
   },
   "party": {
    "id": "Q108846587",
@@ -3270,7 +3401,8 @@
   "id": "c_c8b29acf33cafbbc",
   "person": {
    "id": "Q445705",
-   "name": "Philippe Juvin"
+   "name": "Philippe Juvin",
+   "votona_id": null
   },
   "party": {
    "id": null,
@@ -3301,7 +3433,8 @@
   "id": "c_01f9d47d54ac4162",
   "person": {
    "id": "Q12963",
-   "name": "François Bayrou"
+   "name": "François Bayrou",
+   "votona_id": null
   },
   "party": {
    "id": "Q587370",
@@ -3332,7 +3465,8 @@
   "id": "c_04c0b9af154b94d2",
   "person": {
    "id": "Q127270999",
-   "name": "Anne Sicard"
+   "name": "Anne Sicard",
+   "votona_id": null
   },
   "party": {
    "id": "Q130517388",
@@ -3363,7 +3497,8 @@
   "id": "c_10de33bfe63e2566",
   "person": {
    "id": "Q112650795",
-   "name": "Thomas Ménagé"
+   "name": "Thomas Ménagé",
+   "votona_id": null
   },
   "party": {
    "id": null,
@@ -3403,7 +3538,8 @@
   "id": "c_0fe449220385b562",
   "person": {
    "id": "Q12927",
-   "name": "Marine Le Pen"
+   "name": "Marine Le Pen",
+   "votona_id": "lepen"
   },
   "party": {
    "id": "Q205150",
@@ -3434,7 +3570,8 @@
   "id": "c_78f1013656953c44",
   "person": {
    "id": "Q109043455",
-   "name": "Rodrigo Arenas Muñoz"
+   "name": "Rodrigo Arenas Muñoz",
+   "votona_id": null
   },
   "party": {
    "id": null,
@@ -3465,7 +3602,8 @@
   "id": "c_d836fc2069832ae9",
   "person": {
    "id": "Q2414678",
-   "name": "Annie Genevard"
+   "name": "Annie Genevard",
+   "votona_id": null
   },
   "party": {
    "id": null,
@@ -3496,7 +3634,8 @@
   "id": "c_4cc9f423e80b34ad",
   "person": {
    "id": "Q30351657",
-   "name": "Aurélien Pradié"
+   "name": "Aurélien Pradié",
+   "votona_id": null
   },
   "party": {
    "id": null,
@@ -3527,7 +3666,8 @@
   "id": "c_51f649efc92333fa",
   "person": {
    "id": "Q30344388",
-   "name": "Pascale Fontenel-Personne"
+   "name": "Pascale Fontenel-Personne",
+   "votona_id": null
   },
   "party": {
    "id": null,
@@ -3558,7 +3698,8 @@
   "id": "c_51d405c531ee5e8c",
   "person": {
    "id": "Q2926942",
-   "name": "Bruno Retailleau"
+   "name": "Bruno Retailleau",
+   "votona_id": "retailleau"
   },
   "party": {
    "id": "Q20012759",
@@ -3589,7 +3730,8 @@
   "id": "c_44270855fd45d5b5",
   "person": {
    "id": "Q1844180",
-   "name": "Éric Ciotti"
+   "name": "Éric Ciotti",
+   "votona_id": null
   },
   "party": {
    "id": "Q127038760",
@@ -3629,7 +3771,8 @@
   "id": "c_8c194e3fa4f32547",
   "person": {
    "id": "Q108823633",
-   "name": "Stéphane Vojetta"
+   "name": "Stéphane Vojetta",
+   "votona_id": null
   },
   "party": {
    "id": null,
@@ -3660,7 +3803,8 @@
   "id": "c_82d15da90cfdca50",
   "person": {
    "id": "Q3573907",
-   "name": "Yves Pozzo di Borgo"
+   "name": "Yves Pozzo di Borgo",
+   "votona_id": null
   },
   "party": {
    "id": "Q82892",
@@ -3691,7 +3835,8 @@
   "id": "c_9eb994de36d991ab",
   "person": {
    "id": "Q106635078",
-   "name": "Philippe Ballard"
+   "name": "Philippe Ballard",
+   "votona_id": null
   },
   "party": {
    "id": "Q205150",
@@ -3722,7 +3867,8 @@
   "id": "c_0cf351f397c9ac13",
   "person": {
    "id": "Q29570183",
-   "name": "Aurore Bergé"
+   "name": "Aurore Bergé",
+   "votona_id": null
   },
   "party": {
    "id": "Q23731823",
@@ -3753,7 +3899,8 @@
   "id": "c_c76f0a13221fcb69",
   "person": {
    "id": "Q61769367",
-   "name": "Pierre Meurin"
+   "name": "Pierre Meurin",
+   "votona_id": null
   },
   "party": {
    "id": "Q205150",
@@ -3784,7 +3931,8 @@
   "id": "c_cab91cfa0aaeb103",
   "person": {
    "id": "Q2414678",
-   "name": "Annie Genevard"
+   "name": "Annie Genevard",
+   "votona_id": null
   },
   "party": {
    "id": null,
@@ -3815,7 +3963,8 @@
   "id": "c_8b4684307972ec76",
   "person": {
    "id": "Q29575749",
-   "name": "Manuel Bompard"
+   "name": "Manuel Bompard",
+   "votona_id": null
   },
   "party": {
    "id": null,
@@ -3846,7 +3995,8 @@
   "id": "c_2286498043281101",
   "person": {
    "id": "Q3123610",
-   "name": "Gérald Darmanin"
+   "name": "Gérald Darmanin",
+   "votona_id": null
   },
   "party": {
    "id": null,
@@ -3886,7 +4036,8 @@
   "id": "c_f6ffb346fdcf51e1",
   "person": {
    "id": "Q16666184",
-   "name": "Nathalie Loiseau"
+   "name": "Nathalie Loiseau",
+   "votona_id": null
   },
   "party": {
    "id": null,
@@ -3917,7 +4068,8 @@
   "id": "c_75fce7d4ff1e45f8",
   "person": {
    "id": "Q27182",
-   "name": "Rachida Dati"
+   "name": "Rachida Dati",
+   "votona_id": null
   },
   "party": {
    "id": "Q20012759",
@@ -3948,7 +4100,8 @@
   "id": "c_3028c9351f7566dc",
   "person": {
    "id": "Q455023",
-   "name": "Valérie Pécresse"
+   "name": "Valérie Pécresse",
+   "votona_id": null
   },
   "party": {
    "id": null,
@@ -3976,10 +4129,43 @@
   ]
  },
  {
+  "id": "c_7d8a557761f50487",
+  "person": {
+   "id": "Q81923",
+   "name": "Ségolène Royal",
+   "votona_id": "royal"
+  },
+  "party": {
+   "id": null,
+   "name": null,
+   "short_name": null,
+   "status": "none"
+  },
+  "claim_text": "L'ancien Premier ministre Jean Castex a une voiture avec chauffeur et essence à vie",
+  "claim_date": "2025-05-02",
+  "date_precision": "day",
+  "date_is_fallback": true,
+  "country": "FR",
+  "attribution_status": "auto_sure",
+  "verdict": "mostly_false",
+  "reviews": [
+   {
+    "source_id": "tf1info_verificateurs",
+    "source_name": "TF1 Info – Les Vérificateurs",
+    "url": "https://www.tf1info.fr/politique/verif-non-l-ancien-premier-ministre-jean-castex-ne-beneficie-pas-d-une-voiture-de-fonction-avec-chauffeur-et-essence-a-vie-comme-le-pretend-segolene-royal-sur-x-2368497.html",
+    "title": "VÉRIF' - Non, l'ancien Premier ministre Jean Castex ne bénéficie pas d'une voiture de fonction à vie",
+    "rating_original": "Plutôt faux",
+    "rating_normalized": "mostly_false",
+    "review_date": "2025-05-02"
+   }
+  ]
+ },
+ {
   "id": "c_bcca144a0439ba2f",
   "person": {
    "id": "Q3123610",
-   "name": "Gérald Darmanin"
+   "name": "Gérald Darmanin",
+   "votona_id": null
   },
   "party": {
    "id": "Q20012759",
@@ -4010,7 +4196,8 @@
   "id": "c_57388a139cf8ba71",
   "person": {
    "id": "Q82637284",
-   "name": "Sarah Knafo"
+   "name": "Sarah Knafo",
+   "votona_id": null
   },
   "party": {
    "id": "Q109932430",
@@ -4041,7 +4228,8 @@
   "id": "c_2d7cda3fa570f2d0",
   "person": {
    "id": "Q12961",
-   "name": "Nicolas Dupont-Aignan"
+   "name": "Nicolas Dupont-Aignan",
+   "votona_id": "dupont-aignan"
   },
   "party": {
    "id": "Q12962",
@@ -4072,7 +4260,8 @@
   "id": "c_3ff155e4a48d1828",
   "person": {
    "id": "Q30339422",
-   "name": "Yaël Braun-Pivet"
+   "name": "Yaël Braun-Pivet",
+   "votona_id": null
   },
   "party": {
    "id": "Q23731823",
@@ -4103,7 +4292,8 @@
   "id": "c_512c710859f6d28c",
   "person": {
    "id": "Q3085763",
-   "name": "François Ruffin"
+   "name": "François Ruffin",
+   "votona_id": "ruffin"
   },
   "party": {
    "id": "Q192821",
@@ -4134,7 +4324,8 @@
   "id": "c_a9f82eed0e8df707",
   "person": {
    "id": "Q12927",
-   "name": "Marine Le Pen"
+   "name": "Marine Le Pen",
+   "votona_id": "lepen"
   },
   "party": {
    "id": "Q205150",
@@ -4174,7 +4365,8 @@
   "id": "c_a068694ac4a0f584",
   "person": {
    "id": "Q12963",
-   "name": "François Bayrou"
+   "name": "François Bayrou",
+   "votona_id": null
   },
   "party": {
    "id": "Q587370",
@@ -4205,7 +4397,8 @@
   "id": "c_6d765bd9e9f325f4",
   "person": {
    "id": "Q112654178",
-   "name": "Arnaud Le Gall"
+   "name": "Arnaud Le Gall",
+   "votona_id": null
   },
   "party": {
    "id": null,
@@ -4245,7 +4438,8 @@
   "id": "c_c086ec626576b6b7",
   "person": {
    "id": "Q12927",
-   "name": "Marine Le Pen"
+   "name": "Marine Le Pen",
+   "votona_id": "lepen"
   },
   "party": {
    "id": "Q205150",
@@ -4276,7 +4470,8 @@
   "id": "c_bedba3608f5334d8",
   "person": {
    "id": "Q3123610",
-   "name": "Gérald Darmanin"
+   "name": "Gérald Darmanin",
+   "votona_id": null
   },
   "party": {
    "id": "Q20012759",
@@ -4307,7 +4502,8 @@
   "id": "c_1927a46f49e9569d",
   "person": {
    "id": "Q12963",
-   "name": "François Bayrou"
+   "name": "François Bayrou",
+   "votona_id": null
   },
   "party": {
    "id": "Q587370",
@@ -4338,7 +4534,8 @@
   "id": "c_3965f5c60e56cf18",
   "person": {
    "id": "Q17632457",
-   "name": "Laurent Jacobelli"
+   "name": "Laurent Jacobelli",
+   "votona_id": null
   },
   "party": {
    "id": "Q205150",
@@ -4369,7 +4566,8 @@
   "id": "c_b7df9f8c1a6ba116",
   "person": {
    "id": "Q59601214",
-   "name": "Manon Aubry"
+   "name": "Manon Aubry",
+   "votona_id": null
   },
   "party": {
    "id": "Q27978402",
@@ -4400,7 +4598,8 @@
   "id": "c_f5d84dee7fb64cc5",
   "person": {
    "id": "Q12944",
-   "name": "François-Noël Buffet"
+   "name": "François-Noël Buffet",
+   "votona_id": null
   },
   "party": {
    "id": null,
@@ -4431,7 +4630,8 @@
   "id": "c_422ca6c517a7ed46",
   "person": {
    "id": "Q41102798",
-   "name": "Julien Odoul"
+   "name": "Julien Odoul",
+   "votona_id": null
   },
   "party": {
    "id": "Q205150",
@@ -4471,7 +4671,8 @@
   "id": "c_66921bb9fba0b944",
   "person": {
    "id": "Q12963",
-   "name": "François Bayrou"
+   "name": "François Bayrou",
+   "votona_id": null
   },
   "party": {
    "id": "Q587370",
@@ -4502,7 +4703,8 @@
   "id": "c_2ff48422b93f40c1",
   "person": {
    "id": "Q33106414",
-   "name": "Astrid Panosyan-Bouvet"
+   "name": "Astrid Panosyan-Bouvet",
+   "votona_id": null
   },
   "party": {
    "id": null,
@@ -4533,7 +4735,8 @@
   "id": "c_17f7dc4a42cca4b9",
   "person": {
    "id": "Q40655898",
-   "name": "Jordan Bardella"
+   "name": "Jordan Bardella",
+   "votona_id": "bardella"
   },
   "party": {
    "id": "Q205150",
@@ -4564,7 +4767,8 @@
   "id": "c_b165fd11e4aa9a0c",
   "person": {
    "id": "Q29917987",
-   "name": "Marine Tondelier"
+   "name": "Marine Tondelier",
+   "votona_id": "tondelier"
   },
   "party": {
    "id": "Q613786",
@@ -4595,7 +4799,8 @@
   "id": "c_75a8a001b1d44e40",
   "person": {
    "id": "Q33275664",
-   "name": "Christophe Gomart"
+   "name": "Christophe Gomart",
+   "votona_id": null
   },
   "party": {
    "id": null,
@@ -4626,7 +4831,8 @@
   "id": "c_59d690a332fd086c",
   "person": {
    "id": "Q30379800",
-   "name": "Naïma Moutchou"
+   "name": "Naïma Moutchou",
+   "votona_id": null
   },
   "party": {
    "id": null,
@@ -4657,7 +4863,8 @@
   "id": "c_bdbf7acf604195a4",
   "person": {
    "id": "Q3074223",
-   "name": "Florian Philippot"
+   "name": "Florian Philippot",
+   "votona_id": "philippot"
   },
   "party": {
    "id": "Q41330182",
@@ -4688,7 +4895,8 @@
   "id": "c_5a0edab87326dfcc",
   "person": {
    "id": "Q29917987",
-   "name": "Marine Tondelier"
+   "name": "Marine Tondelier",
+   "votona_id": "tondelier"
   },
   "party": {
    "id": "Q613786",
@@ -4719,7 +4927,8 @@
   "id": "c_5ed7c4908d15cef7",
   "person": {
    "id": "Q30339350",
-   "name": "Gabriel Attal"
+   "name": "Gabriel Attal",
+   "votona_id": "attal"
   },
   "party": {
    "id": "Q23731823",
@@ -4750,7 +4959,8 @@
   "id": "c_34abef26bc7c4f0c",
   "person": {
    "id": "Q29575749",
-   "name": "Manuel Bompard"
+   "name": "Manuel Bompard",
+   "votona_id": null
   },
   "party": {
    "id": "Q27978402",
@@ -4781,7 +4991,8 @@
   "id": "c_120c77f90061b360",
   "person": {
    "id": "Q2942097",
-   "name": "Catherine Vautrin"
+   "name": "Catherine Vautrin",
+   "votona_id": null
   },
   "party": {
    "id": "Q108846587",
@@ -4812,7 +5023,8 @@
   "id": "c_66d2fbdd799f2142",
   "person": {
    "id": "Q40655898",
-   "name": "Jordan Bardella"
+   "name": "Jordan Bardella",
+   "votona_id": "bardella"
   },
   "party": {
    "id": "Q205150",
@@ -4843,7 +5055,8 @@
   "id": "c_844d89257b32ba63",
   "person": {
    "id": "Q63764512",
-   "name": "Valérie Hayer"
+   "name": "Valérie Hayer",
+   "votona_id": null
   },
   "party": {
    "id": "Q23731823",
@@ -4874,7 +5087,8 @@
   "id": "c_ea1dc2ca81fcae42",
   "person": {
    "id": "Q3074223",
-   "name": "Florian Philippot"
+   "name": "Florian Philippot",
+   "votona_id": "philippot"
   },
   "party": {
    "id": "Q41330182",
@@ -4905,7 +5119,8 @@
   "id": "c_8866473849dccaa9",
   "person": {
    "id": "Q12963",
-   "name": "François Bayrou"
+   "name": "François Bayrou",
+   "votona_id": null
   },
   "party": {
    "id": "Q587370",
@@ -4936,7 +5151,8 @@
   "id": "c_2f49140dcef34b1c",
   "person": {
    "id": "Q12963",
-   "name": "François Bayrou"
+   "name": "François Bayrou",
+   "votona_id": null
   },
   "party": {
    "id": "Q587370",
@@ -4967,7 +5183,8 @@
   "id": "c_d780907f67ee0a9c",
   "person": {
    "id": "Q3074223",
-   "name": "Florian Philippot"
+   "name": "Florian Philippot",
+   "votona_id": "philippot"
   },
   "party": {
    "id": "Q41330182",
@@ -4998,7 +5215,8 @@
   "id": "c_086fa9e513630e0b",
   "person": {
    "id": "Q1844180",
-   "name": "Éric Ciotti"
+   "name": "Éric Ciotti",
+   "votona_id": null
   },
   "party": {
    "id": "Q127038760",
@@ -5038,7 +5256,8 @@
   "id": "c_292d254f5f31da6f",
   "person": {
    "id": "Q29917987",
-   "name": "Marine Tondelier"
+   "name": "Marine Tondelier",
+   "votona_id": "tondelier"
   },
   "party": {
    "id": "Q613786",
@@ -5069,7 +5288,8 @@
   "id": "c_4608a99f720a3374",
   "person": {
    "id": "Q112448632",
-   "name": "Sarah Legrain"
+   "name": "Sarah Legrain",
+   "votona_id": null
   },
   "party": {
    "id": "Q922707",
@@ -5100,7 +5320,8 @@
   "id": "c_18ca1a8d3f2ca7a9",
   "person": {
    "id": "Q30339422",
-   "name": "Yaël Braun-Pivet"
+   "name": "Yaël Braun-Pivet",
+   "votona_id": null
   },
   "party": {
    "id": "Q23731823",
@@ -5131,7 +5352,8 @@
   "id": "c_224212e798dbef7d",
   "person": {
    "id": "Q984375",
-   "name": "Laurent Wauquiez"
+   "name": "Laurent Wauquiez",
+   "votona_id": null
   },
   "party": {
    "id": null,
@@ -5162,7 +5384,8 @@
   "id": "c_09d42a4bcec33da2",
   "person": {
    "id": "Q12961",
-   "name": "Nicolas Dupont-Aignan"
+   "name": "Nicolas Dupont-Aignan",
+   "votona_id": "dupont-aignan"
   },
   "party": {
    "id": "Q12962",
@@ -5193,7 +5416,8 @@
   "id": "c_52805ff90a64ae5d",
   "person": {
    "id": "Q21013136",
-   "name": "Sandrine Rousseau"
+   "name": "Sandrine Rousseau",
+   "votona_id": null
   },
   "party": {
    "id": "Q613786",
@@ -5224,7 +5448,8 @@
   "id": "c_d671682d0390f3aa",
   "person": {
    "id": "Q112650795",
-   "name": "Thomas Ménagé"
+   "name": "Thomas Ménagé",
+   "votona_id": null
   },
   "party": {
    "id": null,
@@ -5255,7 +5480,8 @@
   "id": "c_2efa81c02129cd77",
   "person": {
    "id": "Q40655898",
-   "name": "Jordan Bardella"
+   "name": "Jordan Bardella",
+   "votona_id": "bardella"
   },
   "party": {
    "id": "Q205150",
@@ -5286,7 +5512,8 @@
   "id": "c_3d02c8a3b25dc74b",
   "person": {
    "id": "Q12961",
-   "name": "Nicolas Dupont-Aignan"
+   "name": "Nicolas Dupont-Aignan",
+   "votona_id": "dupont-aignan"
   },
   "party": {
    "id": "Q12962",
@@ -5317,7 +5544,8 @@
   "id": "c_011f42f9073950e6",
   "person": {
    "id": "Q139887231",
-   "name": "Patrick Martin"
+   "name": "Patrick Martin",
+   "votona_id": null
   },
   "party": {
    "id": null,
@@ -5348,7 +5576,8 @@
   "id": "c_5b096b58f27f439a",
   "person": {
    "id": "Q12927",
-   "name": "Marine Le Pen"
+   "name": "Marine Le Pen",
+   "votona_id": "lepen"
   },
   "party": {
    "id": "Q205150",
@@ -5379,7 +5608,8 @@
   "id": "c_9bfc3e82565aeade",
   "person": {
    "id": "Q30339422",
-   "name": "Yaël Braun-Pivet"
+   "name": "Yaël Braun-Pivet",
+   "votona_id": null
   },
   "party": {
    "id": "Q23731823",
@@ -5410,7 +5640,8 @@
   "id": "c_95c164e9e8aa8cd7",
   "person": {
    "id": "Q108823633",
-   "name": "Stéphane Vojetta"
+   "name": "Stéphane Vojetta",
+   "votona_id": null
   },
   "party": {
    "id": null,
@@ -5441,7 +5672,8 @@
   "id": "c_785a149627ff609a",
   "person": {
    "id": "Q108823633",
-   "name": "Stéphane Vojetta"
+   "name": "Stéphane Vojetta",
+   "votona_id": null
   },
   "party": {
    "id": null,
@@ -5472,7 +5704,8 @@
   "id": "c_0a938249f9814e78",
   "person": {
    "id": "Q63371085",
-   "name": "Christelle d'Intorni"
+   "name": "Christelle d'Intorni",
+   "votona_id": null
   },
   "party": {
    "id": null,
@@ -5503,7 +5736,8 @@
   "id": "c_eb8ca2508294dd5d",
   "person": {
    "id": "Q104032664",
-   "name": "Maud Bregeon"
+   "name": "Maud Bregeon",
+   "votona_id": null
   },
   "party": {
    "id": null,
@@ -5534,7 +5768,8 @@
   "id": "c_8064270c7a9b79a2",
   "person": {
    "id": "Q21294609",
-   "name": "Sébastien Chenu"
+   "name": "Sébastien Chenu",
+   "votona_id": null
   },
   "party": {
    "id": null,
@@ -5565,7 +5800,8 @@
   "id": "c_a03ee64682f9f69a",
   "person": {
    "id": "Q438465",
-   "name": "Michel Barnier"
+   "name": "Michel Barnier",
+   "votona_id": null
   },
   "party": {
    "id": null,
@@ -5596,7 +5832,8 @@
   "id": "c_579926d5f2a1af4e",
   "person": {
    "id": "Q63655",
-   "name": "Thierry Mariani"
+   "name": "Thierry Mariani",
+   "votona_id": null
   },
   "party": {
    "id": null,
@@ -5627,7 +5864,8 @@
   "id": "c_865812569ed316d7",
   "person": {
    "id": "Q20020731",
-   "name": "Élisabeth Borne"
+   "name": "Élisabeth Borne",
+   "votona_id": null
   },
   "party": {
    "id": "Q23731823",
@@ -5658,7 +5896,8 @@
   "id": "c_2effe5ad62ba64a0",
   "person": {
    "id": "Q29917987",
-   "name": "Marine Tondelier"
+   "name": "Marine Tondelier",
+   "votona_id": "tondelier"
   },
   "party": {
    "id": "Q613786",
@@ -5689,7 +5928,8 @@
   "id": "c_d24cbbba3ea2a2ec",
   "person": {
    "id": "Q2829913",
-   "name": "Alain Houpert"
+   "name": "Alain Houpert",
+   "votona_id": null
   },
   "party": {
    "id": null,
@@ -5720,7 +5960,8 @@
   "id": "c_2303f2730a743973",
   "person": {
    "id": "Q104032664",
-   "name": "Maud Bregeon"
+   "name": "Maud Bregeon",
+   "votona_id": null
   },
   "party": {
    "id": null,
@@ -5751,7 +5992,8 @@
   "id": "c_dfaf662746a06197",
   "person": {
    "id": "Q3085763",
-   "name": "François Ruffin"
+   "name": "François Ruffin",
+   "votona_id": "ruffin"
   },
   "party": {
    "id": null,
@@ -5782,7 +6024,8 @@
   "id": "c_ff54fea684bc14c6",
   "person": {
    "id": "Q984375",
-   "name": "Laurent Wauquiez"
+   "name": "Laurent Wauquiez",
+   "votona_id": null
   },
   "party": {
    "id": null,
@@ -5813,7 +6056,8 @@
   "id": "c_bee1f427367764c2",
   "person": {
    "id": "Q12927",
-   "name": "Marine Le Pen"
+   "name": "Marine Le Pen",
+   "votona_id": "lepen"
   },
   "party": {
    "id": "Q205150",
@@ -5844,7 +6088,8 @@
   "id": "c_d21036d99d83f5af",
   "person": {
    "id": "Q556149",
-   "name": "Raphaël Glucksmann"
+   "name": "Raphaël Glucksmann",
+   "votona_id": "glucksmann"
   },
   "party": {
    "id": "Q58366009",
@@ -5875,7 +6120,8 @@
   "id": "c_1c1f52ab14f9429b",
   "person": {
    "id": "Q16007948",
-   "name": "Éric Piolle"
+   "name": "Éric Piolle",
+   "votona_id": null
   },
   "party": {
    "id": null,
@@ -5906,7 +6152,8 @@
   "id": "c_ca26fd93021df494",
   "person": {
    "id": "Q30497082",
-   "name": "Guillaume Kasbarian"
+   "name": "Guillaume Kasbarian",
+   "votona_id": null
   },
   "party": {
    "id": null,
@@ -5937,7 +6184,8 @@
   "id": "c_2d742d3a34256948",
   "person": {
    "id": "Q16007948",
-   "name": "Éric Piolle"
+   "name": "Éric Piolle",
+   "votona_id": null
   },
   "party": {
    "id": null,
@@ -5968,7 +6216,8 @@
   "id": "c_494288faf97b5922",
   "person": {
    "id": "Q445705",
-   "name": "Philippe Juvin"
+   "name": "Philippe Juvin",
+   "votona_id": null
   },
   "party": {
    "id": null,
@@ -5999,7 +6248,8 @@
   "id": "c_b89a0ce1453b63cc",
   "person": {
    "id": "Q112641115",
-   "name": "Arthur Delaporte"
+   "name": "Arthur Delaporte",
+   "votona_id": null
   },
   "party": {
    "id": null,

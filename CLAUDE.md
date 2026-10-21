@@ -1,4 +1,8 @@
-# Observatoire de la parole politique
+# Votona Observatoire (Observatoire de la parole politique)
+
+Charte graphique et liste des candidats communes avec Votona (dépôt wvernay42-star/votona,
+votona.fr) : data/seeds/candidates_2027.csv. Les vérifications n'entrent jamais dans le
+classement de Votona.
 
 Spécification complète : docs/cadrage.md (à lire avant toute tâche).
 Suivi : docs/journal.md (état d'avancement) et docs/decisions.md. À la fin de chaque
@@ -24,4 +28,5 @@ le tableau d'état.
 - python -m pipeline.run_daily      # routine complète
 - python -m pipeline.run_daily --connector jsonld_crawler --dry-run
 - python -m pipeline.validation_sync seed|apply <dossier>   # tableau de validation (docs/validation.md)
+- python -m pipeline.build_beta   # artefact (web/beta/) + site statique (site/, Vercel, docs/hebergement.md)
 - pytest

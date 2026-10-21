@@ -30,3 +30,12 @@
 - Module B (V2) : thème pilote **finances publiques**.
 - Parti affiché = affiliation datée en vigueur à la date de la déclaration, dans la période
   d'existence du parti, sous le nom qu'il portait à cette date.
+
+## 2026-10-21 (soir)
+
+- Nom : **Votona Observatoire**, même famille que Votona (votona.fr).
+- Périmètre affiché par défaut : candidats à la présidentielle 2027 (liste commune avec Votona),
+  puis leurs partis, puis toute la vie politique ; la base complète est conservée.
+- Les vérifications n'entrent jamais dans le classement de Votona.
+- Hébergement : Vercel, préproduction `preview.observatoire.votona.fr` (noindex), production
+  `observatoire.votona.fr` après la liste de conformité.

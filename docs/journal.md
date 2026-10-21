@@ -17,6 +17,28 @@ Les décisions durables sont aussi consignées dans [decisions.md](decisions.md)
 | 7 | web/beta/index.html (maquette A) | ✅ en ligne (22/10) — 119 déclarations |
 | — | Page web de validation | ✅ en ligne (22/10) — 147 éléments à traiter |
 
+## 2026-10-21 (soir) — Votona Observatoire : liste commune, charte, vue 2027, site
+
+**Décisions du porteur** : nom **Votona Observatoire** ; mise en avant des candidats 2027 et de
+leurs partis ; site sur un sous-domaine de votona.fr, d'abord en préproduction.
+
+- Analyse du dépôt `wvernay42-star/votona` (lecture seule) : site statique Vercel, `draft` →
+  votona.vercel.app, `main` → votona.fr ; charte : fond crème #fbfaf7, encre #191d2b, violet
+  #7C3AED, bandeau #F6F2FE souligné de violet, Baloo 2 / Work Sans / IBM Plex Mono, largeur 880 px,
+  mascotte ourson, charte de neutralité des intitulés.
+- **Liste commune** `data/seeds/candidates_2027.csv` : 38 candidats de Votona (5 retirés), 36 reliés
+  à Wikidata (Labib et Mikolajczak « à confirmer » ; Mathieu et Markovic sans fiche Wikidata),
+  23 reliés à un parti du référentiel. Les candidats absents des fonctions suivies (Arthaud,
+  Kazib, Branco, Polony…) rejoignent le référentiel d'attribution.
+- **Beta** : charte Votona appliquée ; vue « Candidats 2027 » (38 fiches, ordre alphabétique du
+  nom, « aucune vérification publiée à ce jour » affiché tel quel, lien vers les positions sur
+  Votona) ; sélecteur de périmètre Candidats 2027 / Leurs partis / Toute la vie politique
+  (défaut : candidats) ; badge et lien Votona sur les fiches ; méthodologie : les vérifications
+  n'entrent jamais dans le classement de Votona. Contact : contact@votona.fr.
+- 188 déclarations, dont 65 de 15 candidats.
+- **Site** : `site/` + `vercel.json` (noindex) + `.vercelignore`, procédure dans `docs/hebergement.md`
+  (préproduction `preview.observatoire.votona.fr`, puis `observatoire.votona.fr`).
+
 ## 2026-10-21 (fin d'après-midi) — couverture de l'API Google au-delà des 8 rédactions
 
 Recherche par nom de 360 personnalités (gouvernement, présidents, chefs de parti + personnes

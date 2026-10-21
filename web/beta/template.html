@@ -1,32 +1,38 @@
-<title>Observatoire de la parole politique</title>
+<title>Votona Observatoire - les déclarations vérifiées</title>
 <meta name="claude:viewport-fit-sides" content="cover">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700;800&family=Work+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
 <style>
-/* Variante A « Jauge » : bandeau bleu nuit, titres et affirmations en serif, jauge à 5 crans, échelle bleu → orange. */
+/* Charte Votona (fond crème, violet, Baloo 2 / Work Sans / IBM Plex Mono, largeur 880 px) ;
+   échelle des verdicts propre à l'Observatoire (bleu → orange), distincte du vert/rouge « pour/contre » de Votona. */
 :root {
-  --bg: #ffffff; --surface: #ffffff; --soft: #f1f2f4; --fg: #1a1a1a; --muted: #5f6368; --line: #e3e3e3;
-  --band: #1b3a5c; --band-fg: #ffffff; --link: #1b3a5c; --accent-soft: #e8edf3; --off: #e6e7ea; --warn-bg: #fdf3e7; --warn-fg: #6b3a0c;
+  --bg: #fbfaf7; --surface: #ffffff; --soft: #f1ece0; --fg: #191d2b; --muted: #4d5468; --faint: #6b7284; --line: #e4dfd0;
+  --band: #F6F2FE; --band-fg: #191d2b; --band-line: rgba(25,29,43,.14); --link: #6d28d9; --accent: #7C3AED; --accent-ink: #ffffff;
+  --accent-soft: #efe4fd; --off: #e9e4d6; --warn-bg: #fbecd1; --warn-fg: #6b4206;
   --v-true: #1f5fa8; --v-mostly_true: #9dc0e6; --v-half_true: #cfc8ba; --v-mostly_false: #f2b57e; --v-false: #b4500a;
-  --hatch: #c9cdd2; --unrated-line: #8a8f96;
-  --serif: "Source Serif 4", Georgia, "Times New Roman", serif;
-  --sans: Inter, system-ui, -apple-system, "Segoe UI", sans-serif;
+  --hatch: #c9c2b2; --unrated-line: #8a8170;
+  --display: "Baloo 2", ui-rounded, system-ui, sans-serif;
+  --sans: "Work Sans", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+  --mono: "IBM Plex Mono", ui-monospace, monospace;
+  --radius: 20px;
 }
 @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
-  --bg: #11151a; --surface: #171c22; --soft: #1f262e; --fg: #e9ebee; --muted: #a5adb7; --line: #2e3640;
-  --band: #0e2236; --band-fg: #e9ebee; --link: #9cc3ea; --accent-soft: #1f2d3c; --off: #2c343e; --warn-bg: #2f2214; --warn-fg: #f2c492;
+  --bg: #14171c; --surface: #1c2028; --soft: #252a36; --fg: #f1ede4; --muted: #aab0c0; --faint: #8f96a8; --line: #2d323f;
+  --band: #1c2028; --band-fg: #f1ede4; --band-line: rgba(241,237,228,.16); --link: #b9a2fb; --accent: #A78BFA; --accent-ink: #1c1230;
+  --accent-soft: #2f2350; --off: #2d323f; --warn-bg: #3a2a12; --warn-fg: #f0c27a;
   --v-true: #4f8fd6; --v-mostly_true: #9dc0e6; --v-half_true: #b9b2a4; --v-mostly_false: #f2b57e; --v-false: #e07a32;
   --hatch: #4a525c; --unrated-line: #8d96a1; color-scheme: dark } }
 :root[data-theme="dark"] {
-  --bg: #11151a; --surface: #171c22; --soft: #1f262e; --fg: #e9ebee; --muted: #a5adb7; --line: #2e3640;
-  --band: #0e2236; --band-fg: #e9ebee; --link: #9cc3ea; --accent-soft: #1f2d3c; --off: #2c343e; --warn-bg: #2f2214; --warn-fg: #f2c492;
+  --bg: #14171c; --surface: #1c2028; --soft: #252a36; --fg: #f1ede4; --muted: #aab0c0; --faint: #8f96a8; --line: #2d323f;
+  --band: #1c2028; --band-fg: #f1ede4; --band-line: rgba(241,237,228,.16); --link: #b9a2fb; --accent: #A78BFA; --accent-ink: #1c1230;
+  --accent-soft: #2f2350; --off: #2d323f; --warn-bg: #3a2a12; --warn-fg: #f0c27a;
   --v-true: #4f8fd6; --v-mostly_true: #9dc0e6; --v-half_true: #b9b2a4; --v-mostly_false: #f2b57e; --v-false: #e07a32;
   --hatch: #4a525c; --unrated-line: #8d96a1; color-scheme: dark }
 
 body { background: var(--bg); color: var(--fg); font-family: var(--sans); font-size: 15px; line-height: 1.5; }
-.wrap { max-width: 1180px; margin: 0 auto; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+.wrap { max-width: 880px; margin: 0 auto; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
 a { color: var(--link); }
-h1, h2, h3 { font-family: var(--serif); text-wrap: balance; margin: 0; line-height: 1.2; }
+h1, h2, h3 { font-family: var(--display); font-weight: 700; text-wrap: balance; margin: 0; line-height: 1.15; }
 h1 { font-size: clamp(28px, 4vw, 40px); }
 h2 { font-size: 24px; }
 .muted { color: var(--muted); }
@@ -34,21 +40,26 @@ h2 { font-size: 24px; }
 
 .beta { background: var(--warn-bg); color: var(--warn-fg); font-size: 13px; }
 .beta .wrap { padding-block: 8px; }
-header.top { background: var(--band); color: var(--band-fg); }
+header.top { background: var(--band); color: var(--band-fg); border-bottom: 3px solid var(--accent); }
 header.top .wrap { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px 16px; padding-block: 10px; }
-.logo { font-family: var(--serif); font-weight: 700; font-size: 22px; color: var(--band-fg); text-decoration: none; background: none; border: 0; cursor: pointer; padding: 8px 0; }
+.logo { display: flex; align-items: center; gap: 9px; color: var(--band-fg); text-decoration: none; background: none; border: 0; cursor: pointer; padding: 6px 0; font: inherit; }
+.logo img { width: 40px; height: 32px; object-fit: contain; transition: transform .45s cubic-bezier(.34,1.56,.64,1); }
+.logo:hover img { transform: rotate(-8deg) scale(1.08); }
+.logo .name { font-family: var(--display); font-weight: 700; font-size: 20px; }
+.logo .tag { font-family: var(--mono); font-size: 11px; color: var(--accent); letter-spacing: .06em; }
 nav.main { display: flex; flex-wrap: wrap; gap: 2px; }
-nav.main button { background: none; border: 0; color: var(--band-fg); font: inherit; padding: 12px 12px; cursor: pointer; border-bottom: 3px solid transparent; min-height: 44px; }
-nav.main button[aria-current="page"] { font-weight: 600; border-bottom-color: var(--band-fg); }
+nav.main button { background: none; border: 0; color: var(--band-fg); font: inherit; font-weight: 500; padding: 10px 10px; cursor: pointer; border-bottom: 3px solid transparent; min-height: 44px; }
+nav.main button:hover { color: var(--accent); }
+nav.main button[aria-current="page"] { font-weight: 700; color: var(--accent); border-bottom-color: var(--accent); }
 
 main.wrap { display: flex; flex-direction: column; gap: 28px; padding-block: 28px 48px; }
-.filters { display: flex; flex-wrap: wrap; align-items: flex-end; gap: 12px 16px; padding: 14px 16px; border: 1px solid var(--line); border-radius: 8px; background: var(--surface); }
+.filters { display: flex; flex-wrap: wrap; align-items: flex-end; gap: 12px 16px; padding: 16px 18px; border: 1px solid var(--line); border-radius: var(--radius); background: var(--surface); }
 .filters label, .filters fieldset { display: flex; flex-direction: column; gap: 4px; font-size: 13px; font-weight: 600; border: 0; padding: 0; margin: 0; min-width: 0; }
-.filters select, .filters input[type="search"], .filters input[type="date"] { min-height: 44px; font: inherit; font-weight: 400; font-size: 14px; padding: 0 8px; border: 1px solid var(--line); border-radius: 6px; background: var(--surface); color: var(--fg); max-width: 100%; }
+.filters select, .filters input[type="search"], .filters input[type="date"] { min-height: 44px; font: inherit; font-weight: 400; font-size: 14px; padding: 0 8px; border: 1px solid var(--line); border-radius: 14px; background: var(--bg); color: var(--fg); max-width: 100%; }
 .pills { display: flex; flex-wrap: wrap; gap: 6px; }
 .pill { min-height: 40px; padding: 0 12px; border: 1px solid var(--line); background: var(--surface); color: var(--fg); border-radius: 20px; font: inherit; font-size: 13px; cursor: pointer; display: inline-flex; align-items: center; gap: 6px; }
-.pill[aria-pressed="true"] { background: var(--accent-soft); border-color: var(--link); font-weight: 600; }
-.pill[aria-pressed="false"] { color: var(--muted); text-decoration: line-through; }
+.pill[aria-pressed="true"] { background: var(--accent-soft); border-color: var(--accent); font-weight: 600; }
+.pill.verdict[aria-pressed="false"] { color: var(--muted); text-decoration: line-through; }
 .sw { width: 12px; height: 12px; border-radius: 2px; display: inline-block; flex: none; }
 .sw.unrated { background: repeating-linear-gradient(45deg, var(--surface) 0 3px, var(--hatch) 3px 5px); border: 1px dashed var(--unrated-line); }
 .reset { background: none; border: 0; color: var(--link); text-decoration: underline; font: inherit; font-size: 13px; cursor: pointer; min-height: 40px; }
@@ -61,16 +72,16 @@ main.wrap { display: flex; flex-direction: column; gap: 28px; padding-block: 28p
 .fill { height: 100%; }
 .fill.unrated { background: repeating-linear-gradient(45deg, var(--surface) 0 4px, var(--hatch) 4px 6px); box-shadow: inset 0 0 0 1px var(--unrated-line); }
 .num { text-align: right; font-variant-numeric: tabular-nums; }
-.side { flex: 1 1 260px; border: 1px solid var(--line); border-radius: 8px; align-self: flex-start; }
+.side { flex: 1 1 240px; border: 1px solid var(--line); border-radius: var(--radius); align-self: flex-start; background: var(--surface); }
 .side > div { padding: 14px 18px; border-bottom: 1px solid var(--line); }
 .side > div:last-child { border-bottom: 0; }
 .side .k { font-size: 12px; font-weight: 600; color: var(--muted); text-transform: uppercase; letter-spacing: .05em; }
-.side .v { font-size: 24px; font-weight: 700; font-variant-numeric: tabular-nums; }
-.scope { font-size: 14px; color: var(--muted); margin: 6px 0 0; }
+.side .v { font-family: var(--mono); font-size: 22px; font-weight: 600; font-variant-numeric: tabular-nums; }
+.scope-note { font-size: 14px; color: var(--muted); margin: 6px 0 0; }
 
 .cards { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 16px; }
-.card { border: 1px solid var(--line); border-radius: 8px; padding: 16px; display: flex; flex-direction: column; gap: 10px; background: var(--surface); }
-.claim { font-family: var(--serif); font-size: 18px; line-height: 1.35; margin: 0; }
+.card { border: 1px solid var(--line); border-radius: var(--radius); padding: 16px 18px; display: flex; flex-direction: column; gap: 10px; background: var(--surface); }
+.claim { font-family: var(--sans); font-weight: 500; font-size: 17px; line-height: 1.4; margin: 0; }
 .meter { display: flex; gap: 3px; }
 .meter span { width: 30px; height: 10px; border-radius: 2px; background: var(--off); }
 .verdict { font-size: 14px; }
@@ -85,9 +96,9 @@ main.wrap { display: flex; flex-direction: column; gap: 28px; padding-block: 28p
 .fact { display: grid; grid-template-columns: minmax(0, 1fr) minmax(200px, 260px); gap: 8px 24px; padding: 18px 0; border-top: 1px solid var(--line); }
 .fact .right { display: flex; flex-direction: column; gap: 6px; align-items: flex-end; text-align: right; }
 @media (max-width: 640px) { .fact { grid-template-columns: minmax(0, 1fr); } .fact .right { align-items: flex-start; text-align: left; } .bar-row { grid-template-columns: 100px minmax(0, 1fr) 70px; font-size: 14px; } }
-.report { background: var(--accent-soft); border-radius: 6px; padding: 10px 12px; font-size: 13px; display: flex; flex-wrap: wrap; align-items: center; gap: 8px; }
+.report { background: var(--accent-soft); border-radius: 14px; padding: 10px 12px; font-size: 13px; display: flex; flex-wrap: wrap; align-items: center; gap: 8px; }
 .report code { font-size: 12px; }
-.btn { min-height: 40px; padding: 0 14px; border-radius: 6px; border: 1px solid var(--line); background: var(--surface); color: var(--fg); font: inherit; font-size: 13px; cursor: pointer; }
+.btn { min-height: 40px; padding: 0 16px; border-radius: 14px; border: 1px solid var(--line); background: var(--surface); color: var(--fg); font: inherit; font-size: 13px; cursor: pointer; }
 .more { align-self: center; }
 
 .people { display: grid; grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); gap: 0 24px; }
@@ -95,7 +106,14 @@ main.wrap { display: flex; flex-direction: column; gap: 28px; padding-block: 28p
 .people button:hover .n1 { text-decoration: underline; }
 .people .n2 { color: var(--muted); font-variant-numeric: tabular-nums; white-space: nowrap; }
 .head { display: flex; flex-wrap: wrap; gap: 20px; align-items: center; }
-.avatar { width: 84px; height: 84px; border-radius: 50%; background: var(--soft); color: var(--link); display: flex; align-items: center; justify-content: center; font-family: var(--serif); font-size: 30px; font-weight: 700; flex: none; }
+.avatar { width: 84px; height: 84px; border-radius: 50%; background: var(--accent-soft); color: var(--accent); display: flex; align-items: center; justify-content: center; font-family: var(--display); font-size: 30px; font-weight: 800; flex: none; }
+.badge { display: inline-flex; align-items: center; gap: 6px; font-family: var(--mono); font-size: 11px; letter-spacing: .04em; text-transform: uppercase; background: var(--accent-soft); color: var(--fg); border-radius: 999px; padding: 4px 10px; }
+.cands { display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 12px; }
+.cand { border: 1px solid var(--line); border-radius: var(--radius); padding: 14px 16px; background: var(--surface); display: flex; flex-direction: column; gap: 6px; }
+.cand.withdrawn { opacity: .7; }
+.cand .top { display: flex; justify-content: space-between; gap: 8px; align-items: baseline; }
+.cand .cnt { font-family: var(--mono); font-weight: 600; white-space: nowrap; }
+.scope { display: flex; flex-wrap: wrap; gap: 6px; }
 .timeline { position: relative; height: 44px; border-bottom: 2px solid var(--line); }
 .timeline span { position: absolute; bottom: 7px; width: 14px; height: 14px; border-radius: 50%; transform: translateX(-7px); }
 .timeline span.unrated { background: var(--surface); border: 2px dashed var(--unrated-line); }
@@ -110,13 +128,14 @@ table.plain th, table.plain td { text-align: left; padding: 8px 12px; border-bot
 table.plain th { font-size: 12px; color: var(--muted); text-transform: uppercase; letter-spacing: .05em; }
 footer { border-top: 1px solid var(--line); padding-top: 16px; font-size: 13px; color: var(--muted); display: flex; flex-wrap: wrap; gap: 8px 20px; justify-content: space-between; }
 button:focus-visible, select:focus-visible, input:focus-visible, a:focus-visible { outline: 3px solid var(--v-true); outline-offset: 2px; }
+.btn:hover { border-color: var(--accent); color: var(--accent); }
 .toast { position: fixed; left: 50%; transform: translateX(-50%); bottom: calc(16px + env(safe-area-inset-bottom, 0px)); background: var(--fg); color: var(--bg); padding: 10px 16px; border-radius: 6px; font-size: 14px; }
 </style>
 
-<div class="beta"><div class="wrap">Version bêta — données de test sur la France, mises à jour chaque jour. Les rattachements partisans sont incomplets.</div></div>
+<div class="beta"><div class="wrap">Version bêta : vérifications publiées en France, mises à jour chaque jour. Les rattachements partisans sont encore incomplets.</div></div>
 <header class="top">
   <div class="wrap">
-    <button class="logo" type="button" data-go="accueil">Observatoire<span style="font-weight:400;opacity:.75"> de la parole politique</span></button>
+    <button class="logo" type="button" data-go="accueil"><img src="/*__LOGO__*/" alt="" width="40" height="32"><span class="name">Votona</span><span class="tag">OBSERVATOIRE</span></button>
     <nav class="main" aria-label="Navigation principale" id="nav"></nav>
   </div>
 </header>
@@ -124,14 +143,16 @@ button:focus-visible, select:focus-visible, input:focus-visible, a:focus-visible
 <div class="toast" id="toast" role="status" hidden></div>
 
 <script>
-const DATA = /*__DATA__*/{"generated_at":null,"facts":[],"sources":[],"contact":""};
+const DATA = /*__DATA__*/{"generated_at":null,"facts":[],"sources":[],"contact":"","candidates":[]};
 
 const LEVELS = [
   ["true", "Vrai", 0], ["mostly_true", "Plutôt vrai", 1], ["half_true", "À moitié vrai", 2],
   ["mostly_false", "Plutôt faux", 3], ["false", "Faux", 4], ["unrated", "Non classable", -1],
 ];
 const LEVEL = Object.fromEntries(LEVELS.map(([k, l, i]) => [k, { label: l, idx: i }]));
-const VIEWS = [["accueil", "Accueil"], ["faits", "Faits vérifiés"], ["personnalites", "Personnalités"], ["partis", "Partis"], ["methodologie", "Méthodologie"]];
+const VIEWS = [["accueil", "Accueil"], ["candidats", "Candidats 2027"], ["faits", "Faits vérifiés"], ["personnalites", "Personnalités"], ["partis", "Partis"], ["methodologie", "Méthodologie"]];
+const SCOPES = [["candidats", "Candidats 2027"], ["partis", "Leurs partis"], ["tout", "Toute la vie politique"]];
+const VOTONA = "https://votona.fr";
 const SCOPE = "Sur les déclarations vérifiées, pas sur l'ensemble des propos tenus.";
 
 const facts = DATA.facts.map((f) => ({ ...f, reviewDate: f.reviews.map((r) => r.review_date).filter(Boolean).sort().pop() || null }));
@@ -140,11 +161,15 @@ for (const f of facts) {
   persons[f.person.id] = f.person.name;
   if (f.party.id) parties[f.party.id] = f.party.short_name ? f.party.name + " (" + f.party.short_name + ")" : f.party.name;
 }
+const candidates = DATA.candidates.map((c) => ({ ...c, pid: c.person_id || "votona:" + c.votona_id }));
+const candidateById = Object.fromEntries(candidates.map((c) => [c.pid, c]));
+for (const c of candidates) persons[c.pid] ||= c.name;
+const candidateParties = new Set(candidates.filter((c) => c.party_id).map((c) => c.party_id));
 const sourceNames = Object.fromEntries(DATA.sources.map((s) => [s.id, s.name]));
 const usedSources = [...new Set(facts.flatMap((f) => f.reviews.map((r) => r.source_id)))].sort((a, b) => (sourceNames[a] || a).localeCompare(sourceNames[b] || b, "fr"));
 const today = DATA.generated_at ? DATA.generated_at.slice(0, 10) : new Date().toISOString().slice(0, 10);
 
-const state = { view: "accueil", id: null, period: "all", from: "", to: "", dateBy: "claim", party: "", person: "", source: "", verdicts: new Set(LEVELS.map((l) => l[0])), limit: 30, report: null };
+const state = { view: "accueil", id: null, scope: "candidats", period: "all", from: "", to: "", dateBy: "claim", party: "", person: "", source: "", verdicts: new Set(LEVELS.map((l) => l[0])), limit: 30, report: null };
 
 const $ = (id) => document.getElementById(id);
 const el = (tag, attrs = {}, ...kids) => {
@@ -182,7 +207,9 @@ function filtered({ person = state.person, party = state.party } = {}) {
   const [from, to] = periodRange();
   return facts.filter((f) => {
     const d = (state.dateBy === "claim" ? f.claim_date : f.reviewDate) || "";
-    return d >= from && d.slice(0, 10) <= to
+    const inScope = state.scope === "tout" || candidateById[f.person.id]
+      || (state.scope === "partis" && f.party.id && candidateParties.has(f.party.id));
+    return inScope && d >= from && d.slice(0, 10) <= to
       && (!party || f.party.id === party)
       && (!person || f.person.id === person)
       && (!state.source || f.reviews.some((r) => r.source_id === state.source))
@@ -205,7 +232,7 @@ function go(view, id = null) {
 }
 function fromHash() {
   const h = decodeURIComponent((location.hash || "").slice(1));
-  const m = h.match(/^(personne|parti)-(Q\d+)$/);
+  const m = h.match(/^(personne|parti)-(Q\d+|votona:[a-z0-9-]+)$/);
   if (m && (m[1] === "personne" ? persons[m[2]] : parties[m[2]])) { state.view = m[1]; state.id = m[2]; }
   else if (VIEWS.some(([v]) => v === h)) state.view = h;
 }
@@ -221,6 +248,9 @@ function filtersBar({ withPerson = true, withParty = true } = {}) {
     el("label", { for: "f-to" }, "Au", el("input", { type: "date", id: "f-to", value: state.to, on: { change: (e) => { state.to = e.target.value; render(); } } })),
   ] : [];
   return el("section", { class: "filters", "aria-label": "Filtres" },
+    el("fieldset", {}, el("legend", { text: "Périmètre" }), el("div", { class: "scope" }, SCOPES.map(([k, l]) => el("button", {
+      type: "button", class: "pill", "aria-pressed": String(state.scope === k), on: { click: () => { state.scope = k; state.limit = 30; render(); } },
+    }, l)))),
     sel("f-period", "Période", state.period, [["all", "Toute la période"], ["7", "7 derniers jours"], ["30", "30 derniers jours"], ["365", "12 derniers mois"], ["year", "Année " + today.slice(0, 4)], ["custom", "Personnalisée…"]], (v) => (state.period = v)),
     ...custom,
     sel("f-dateby", "Dater par", state.dateBy, [["claim", "Date de la déclaration"], ["review", "Date de la vérification"]], (v) => (state.dateBy = v)),
@@ -229,10 +259,10 @@ function filtersBar({ withPerson = true, withParty = true } = {}) {
     withPerson ? sel("f-person", "Personne", state.person, [["", "Toutes les personnes"], ...Object.entries(persons).sort((a, b) => a[1].localeCompare(b[1], "fr"))], (v) => (state.person = v)) : null,
     sel("f-source", "Source", state.source, [["", "Toutes les sources"], ...usedSources.map((s) => [s, sourceNames[s] || s])], (v) => (state.source = v)),
     el("fieldset", {}, el("legend", { text: "Verdict" }), el("div", { class: "pills" }, LEVELS.map(([k, l]) => el("button", {
-      type: "button", class: "pill", "aria-pressed": String(state.verdicts.has(k)),
+      type: "button", class: "pill verdict", "aria-pressed": String(state.verdicts.has(k)),
       on: { click: () => { state.verdicts.has(k) ? state.verdicts.delete(k) : state.verdicts.add(k); render(); } },
     }, swatch(k), l)))),
-    el("button", { type: "button", class: "reset", on: { click: () => { Object.assign(state, { period: "all", from: "", to: "", dateBy: "claim", party: "", person: "", source: "", verdicts: new Set(LEVELS.map((x) => x[0])) }); render(); } } }, "Réinitialiser"));
+    el("button", { type: "button", class: "reset", on: { click: () => { Object.assign(state, { scope: "candidats", period: "all", from: "", to: "", dateBy: "claim", party: "", person: "", source: "", verdicts: new Set(LEVELS.map((x) => x[0])) }); render(); } } }, "Réinitialiser"));
 }
 
 function summary(list, extra = []) {
@@ -242,7 +272,7 @@ function summary(list, extra = []) {
   const last = list.map((f) => f.reviewDate).filter(Boolean).sort().pop();
   return el("section", { class: "summary" },
     el("div", { class: "bars" },
-      el("div", {}, el("h2", { text: n + (n > 1 ? " déclarations vérifiées" : " déclaration vérifiée") }), el("p", { class: "scope", text: SCOPE + " Période : " + periodLabel() + "." })),
+      el("div", {}, el("h2", { text: n + (n > 1 ? " déclarations vérifiées" : " déclaration vérifiée") }), el("p", { class: "scope-note", text: SCOPE + " Période : " + periodLabel() + "." })),
       el("div", { role: "list", "aria-label": "Répartition par verdict" }, LEVELS.map(([k, l]) => el("div", { class: "bar-row", role: "listitem" },
         el("span", { class: "lab", text: l }),
         el("div", { class: "track" }, el("div", { class: "fill" + (k === "unrated" ? " unrated" : ""), style: "width:" + (n ? (counts[k] / n) * 100 : 0) + "%" + (k === "unrated" ? "" : ";background:var(--v-" + k + ")") })),
@@ -315,7 +345,7 @@ const views = {
     const list = filtered();
     return [
       el("div", {}, el("h1", { text: "Ce que les fact-checkers ont vérifié" }),
-        el("p", { class: "muted", style: "max-width:70ch;margin:8px 0 0", text: "L'Observatoire rassemble les vérifications publiées par des rédactions reconnues et les rattache aux personnalités politiques concernées. Il ne juge jamais lui-même : chaque verdict est celui de la source, avec son libellé d'origine et un lien vers l'article." })),
+        el("p", { class: "muted", style: "max-width:70ch;margin:8px 0 0", text: "Votona Observatoire rassemble les vérifications publiées par des rédactions reconnues et les rattache aux personnalités politiques concernées. Il ne juge jamais lui-même : chaque verdict est celui de la source, avec son libellé d'origine et un lien vers l'article." })),
       filtersBar(), summary(list),
       el("section", { style: "display:flex;flex-direction:column;gap:16px" },
         el("div", { style: "display:flex;flex-wrap:wrap;justify-content:space-between;align-items:baseline;gap:8px" }, el("h2", { text: "Dernières vérifications" }),
@@ -350,7 +380,9 @@ const views = {
         el("span", { class: "n1", text: parties[id] }), el("span", { class: "n2", text: byParty[id].length + " vérif." })))) : el("p", { class: "muted", text: "Aucun parti pour ces filtres." })];
   },
   personne() {
-    const id = state.id, list = filtered({ person: id, party: "" }), allOfPerson = facts.filter((f) => f.person.id === id);
+    const id = state.id, keepScope = state.scope; state.scope = "tout";
+    const list = filtered({ person: id, party: "" }); state.scope = keepScope;
+    const allOfPerson = facts.filter((f) => f.person.id === id), cand = candidateById[id];
     const name = persons[id] || id;
     const initials = name.split(/[\s-]+/).filter(Boolean).map((w) => w[0]).slice(0, 2).join("").toUpperCase();
     const partyNames = [...new Set(allOfPerson.filter((f) => f.party.id).map((f) => parties[f.party.id]))];
@@ -360,14 +392,40 @@ const views = {
     return [
       el("div", { class: "head" }, el("div", { class: "avatar", "aria-hidden": "true", text: initials }),
         el("div", { style: "min-width:0" }, el("h1", { text: name }),
-          el("p", { class: "muted", style: "margin:4px 0 0" }, partyNames.length ? "Partis sur la période : " + partyNames.join(", ") : "Parti non renseigné sur la période", " · ",
-            el("a", { href: "https://www.wikidata.org/wiki/" + id, target: "_blank", rel: "noopener", text: "fiche Wikidata" })))),
+          cand ? el("div", { style: "margin-top:6px;display:flex;flex-wrap:wrap;gap:8px;align-items:center" }, el("span", { class: "badge", text: cand.status === "retiré" ? "Candidature 2027 retirée" : "Présidentielle 2027" }),
+            el("a", { href: cand.votona_url, target: "_blank", rel: "noopener", text: "Ses positions sur Votona" })) : null,
+          el("p", { class: "muted", style: "margin:4px 0 0" }, partyNames.length ? "Partis sur la période : " + partyNames.join(", ") : (cand ? cand.votona_party + " (selon Votona)" : "Parti non renseigné sur la période"),
+            id.startsWith("Q") ? [" · ", el("a", { href: "https://www.wikidata.org/wiki/" + id, target: "_blank", rel: "noopener", text: "fiche Wikidata" })] : null))),
       filtersBar({ withPerson: false, withParty: false }),
       summary(list),
       dates.length > 1 ? el("section", { "aria-label": "Frise des vérifications", style: "display:flex;flex-direction:column;gap:8px" }, el("h2", { text: "Dans le temps" }),
         el("div", { class: "timeline" }, allOfPerson.filter((f) => f.claim_date).map((f) => el("span", { class: f.verdict === "unrated" ? "unrated" : null, title: frDate(f.claim_date) + " — " + LEVEL[f.verdict].label, style: "left:" + pos(f.claim_date) + "%" + (f.verdict === "unrated" ? "" : ";background:var(--v-" + f.verdict + ")") }))),
         el("div", { class: "axis" }, el("span", { text: frDate(dates[0]) }), el("span", { text: frDate(dates[dates.length - 1]) }))) : null,
+      list.length ? null : el("p", { class: "muted", text: "Aucune vérification publiée à ce jour par les rédactions suivies. Cela ne dit rien de l'exactitude de ses propos : les rédactions choisissent ce qu'elles vérifient." }),
       el("h2", { text: "Les " + list.length + " faits" }), factList(list, false),
+    ];
+  },
+  candidats() {
+    const keepScope = state.scope; state.scope = "tout";
+    const all = filtered({ person: "", party: "" }); state.scope = keepScope;
+    const count = (pid) => all.filter((f) => f.person.id === pid).length;
+    // Ordre alphabétique du nom de famille (l'identifiant Votona en est tiré : « lepen », « dupont-aignan »).
+    const sorted = [...candidates].sort((a, b) => (a.status === "retiré") - (b.status === "retiré") || a.votona_id.localeCompare(b.votona_id, "fr"));
+    const withFacts = sorted.filter((c) => count(c.pid)).length;
+    return [
+      el("div", {}, el("h1", { text: "Candidats à la présidentielle 2027" }),
+        el("p", { class: "muted", style: "max-width:70ch;margin:8px 0 0", text: "La même liste que sur Votona, par ordre alphabétique des noms ; candidatures retirées en fin de liste. " + withFacts + " candidats sur " + candidates.length + " ont au moins une déclaration vérifiée sur la période. Les rédactions vérifient surtout les candidats les plus exposés : l'absence de vérification ne dit rien de l'exactitude des propos." })),
+      filtersBar({ withPerson: false, withParty: false }),
+      el("div", { class: "cands" }, sorted.map((c) => {
+        const n = count(c.pid);
+        return el("article", { class: "cand" + (c.status === "retiré" ? " withdrawn" : "") },
+          el("div", { class: "top" }, el("button", { type: "button", class: "linkish", on: { click: () => go("personne", c.pid) } }, c.name),
+            el("span", { class: "cnt", text: n ? n + " vérif." : "—" })),
+          el("div", { class: "small muted", text: c.votona_party + (c.status === "retiré" ? " · candidature retirée" : "") }),
+          el("div", { class: "small" }, n ? null : el("span", { class: "muted", text: "Aucune vérification publiée à ce jour · " }),
+            el("a", { href: c.votona_url, target: "_blank", rel: "noopener", text: "Positions sur Votona" })));
+      })),
+      el("p", { class: "small muted", text: "Les vérifications ne comptent jamais dans le classement de Votona : les deux outils sont séparés." }),
     ];
   },
   parti() {
@@ -401,6 +459,9 @@ const views = {
         el("li", { text: "Le parti indiqué est celui en vigueur à la date de la déclaration, d'après des affiliations publiques et datées. Faute de date fiable, le parti n'est pas indiqué." }),
         el("li", { text: "Seules des métadonnées sont reprises (titre, verdict, dates, lien), jamais le contenu des articles." }),
         el("li", { text: "Toute attribution incertaine est vérifiée à la main avant publication. Aucun classement des personnalités n'est proposé." })),
+      el("h2", { text: "Votona et l'Observatoire" }),
+      el("p", {}, "Votona compare vos positions à celles des candidats ; l'Observatoire recense ce que les rédactions de fact-checking ont vérifié. Les deux outils partagent la liste des candidats, mais ", el("strong", { text: "les vérifications n'entrent jamais dans le classement de Votona" }), ", et l'Observatoire n'interprète aucune position."),
+      el("p", { text: "Périmètre par défaut : les candidats déclarés ou pressentis à la présidentielle 2027 de la liste Votona. « Leurs partis » ajoute les déclarations des membres de leurs partis, selon le parti en vigueur à la date de chaque déclaration. « Toute la vie politique » montre l'ensemble de la base : élus, membres du gouvernement, dirigeants de parti, maires." }),
       el("h2", { text: "Sources" }),
       el("div", { class: "table-box" }, el("table", { class: "plain" }, el("thead", {}, el("tr", {}, el("th", { text: "Rédaction" }), el("th", { text: "Déclarations dans la base" }))),
         el("tbody", {}, usedSources.map((s) => el("tr", {}, el("td", { text: sourceNames[s] || s }), el("td", { class: "num", text: String(counts[s]) })))))),
@@ -423,11 +484,12 @@ const views = {
 };
 
 function render() {
-  const navView = state.view === "personne" ? "personnalites" : state.view === "parti" ? "partis" : state.view;
+  const navView = state.view === "personne" ? (candidateById[state.id] ? "candidats" : "personnalites") : state.view === "parti" ? "partis" : state.view;
   $("nav").replaceChildren(...VIEWS.map(([v, l]) => el("button", { type: "button", "data-go": v, "aria-current": v === navView ? "page" : null }, l)));
   $("app").replaceChildren(...views[state.view](),
-    el("footer", {}, el("span", { text: "L'Observatoire ne produit aucun verdict : il reprend celui de la source." }),
-      el("span", {}, el("button", { type: "button", class: "linkish", style: "font-weight:400", "data-go": "methodologie" }, "Méthodologie"), " · Mise à jour : " + frDate(DATA.generated_at))));
+    el("footer", {}, el("span", { text: "Votona Observatoire ne produit aucun verdict : il reprend celui de la source." }),
+      el("span", {}, el("a", { href: VOTONA, target: "_blank", rel: "noopener", text: "Votona, le test présidentielle 2027" }), " · ",
+        el("button", { type: "button", class: "linkish", style: "font-weight:400", "data-go": "methodologie" }, "Méthodologie"), " · Mise à jour : " + frDate(DATA.generated_at))));
 }
 
 fromHash();
