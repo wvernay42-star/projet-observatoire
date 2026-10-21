@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<title>Tableau de validation</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0}
+a{color:#1B3A5C}a:hover{color:#0E2236}
+</style>
+</helmet>
+<div style="font-family: Inter, system-ui, sans-serif; color: #1A1A1A; background: #F4F5F7; min-height: 100%">
+  <header style="background: #FFFFFF; border-bottom: 1px solid #DDE0E4">
+    <div style="max-width: 1340px; margin: 0 auto; padding: 12px 24px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px">
+      <div style="display: flex; align-items: center; gap: 12px">
+        <span style="font-weight: 700; font-size: 18px">Observatoire</span>
+        <span style="font-size: 13px; font-weight: 600; padding: 3px 8px; border-radius: 4px; background: #E8EDF3; color: #1B3A5C">Validation · interne</span>
+      </div>
+      <span style="font-size: 14px; color: #5F6368">Routine du jour : terminée à 06:04 · <a href="#">journal des exécutions</a></span>
+    </div>
+  </header>
+
+  <main style="max-width: 1340px; margin: 0 auto; padding: 24px; display: flex; flex-direction: column; gap: 20px">
+    <section aria-label="Indicateurs" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 12px">
+      <div style="background: #FFFFFF; border: 1px solid #DDE0E4; border-radius: 8px; padding: 14px 16px"><div style="font-size: 13px; color: #5F6368; font-weight: 600">À traiter</div><div style="font-size: 30px; font-weight: 700">{{pending}}</div><div style="font-size: 13px; color: #5F6368">{{pendingAttr}} attributions · {{pendingRat}} verdicts</div></div>
+      <div style="background: #FFFFFF; border: 1px solid #DDE0E4; border-radius: 8px; padding: 14px 16px"><div style="font-size: 13px; color: #5F6368; font-weight: 600">Validées aujourd'hui</div><div style="font-size: 30px; font-weight: 700; color: #1F5FA8">{{validated}}</div></div>
+      <div style="background: #FFFFFF; border: 1px solid #DDE0E4; border-radius: 8px; padding: 14px 16px"><div style="font-size: 13px; color: #5F6368; font-weight: 600">Rejetées aujourd'hui</div><div style="font-size: 30px; font-weight: 700; color: #8A4A12">{{rejected}}</div></div>
+      <div style="background: #FFFFFF; border: 1px solid #DDE0E4; border-radius: 8px; padding: 14px 16px"><div style="font-size: 13px; color: #5F6368; font-weight: 600">Signalements ouverts</div><div style="font-size: 30px; font-weight: 700">0</div><div style="font-size: 13px; color: #5F6368">délai de retrait : 48 h</div></div>
+    </section>
+
+    <div role="tablist" aria-label="Files de validation" style="display: flex; flex-wrap: wrap; gap: 8px">
+      <button type="button" role="tab" aria-selected="{{tabAttrSel}}" onClick="{{showAttr}}" style="min-height: 44px; padding: 0 16px; border-radius: 22px; font: inherit; font-size: 14px; font-weight: 600; cursor: pointer; background: {{tabAttrBg}}; color: {{tabAttrFg}}; border: 1px solid #1B3A5C">Attributions à vérifier · {{pendingAttr}}</button>
+      <button type="button" role="tab" aria-selected="{{tabRatSel}}" onClick="{{showRat}}" style="min-height: 44px; padding: 0 16px; border-radius: 22px; font: inherit; font-size: 14px; font-weight: 600; cursor: pointer; background: {{tabRatBg}}; color: {{tabRatFg}}; border: 1px solid #1B3A5C">Verdicts à convertir · {{pendingRat}}</button>
+    </div>
+
+    <section style="display: flex; flex-wrap: wrap; gap: 20px; align-items: flex-start">
+      <div style="flex: 1 1 340px; min-width: 0; background: #FFFFFF; border: 1px solid #DDE0E4; border-radius: 8px; overflow: hidden">
+        <sc-for list="{{queue}}" as="q" hint-placeholder-count="5">
+          <button type="button" onClick="{{q.pick}}" style="display: flex; flex-direction: column; gap: 4px; width: 100%; text-align: left; padding: 14px 16px; border: 0; border-bottom: 1px solid #ECEEF1; border-left: 4px solid {{q.mark}}; background: {{q.bg}}; font: inherit; cursor: pointer">
+            <span style="font-size: 14px; font-weight: 600">{{q.title}}</span>
+            <span style="font-size: 13px; color: #5F6368">{{q.sub}}</span>
+            <span style="font-size: 12px; font-weight: 600; color: #8A4A12">{{q.reason}}</span>
+          </button>
+        </sc-for>
+        <sc-if value="{{empty}}" hint-placeholder-val="{{ false }}">
+          <div style="padding: 32px 16px; text-align: center; color: #5F6368; font-size: 15px">File vide. Rien à valider dans cette file.</div>
+        </sc-if>
+      </div>
+
+      <div style="flex: 999 1 560px; min-width: 0; background: #FFFFFF; border: 1px solid #DDE0E4; border-radius: 8px; padding: 24px; display: flex; flex-direction: column; gap: 18px">
+        <sc-if value="{{hasCur}}" hint-placeholder-val="{{ true }}">
+          <div style="display: flex; flex-direction: column; gap: 18px">
+            <div style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px; font-size: 13px; color: #5F6368">
+              <span>{{cur.source}} · vérifié le {{cur.rdate}} · déclaration du {{cur.cdate}}</span>
+              <a href="#">Ouvrir l'article source</a>
+            </div>
+            <p style="margin: 0; font-size: 20px; line-height: 1.4; font-weight: 500">« {{cur.claim}} »</p>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 12px">
+              <div style="background: #F4F5F7; border-radius: 6px; padding: 12px 14px"><div style="font-size: 12px; font-weight: 600; color: #5F6368; text-transform: uppercase; letter-spacing: 0.04em">{{cur.leftLabel}}</div><div style="font-size: 16px; padding-top: 4px">{{cur.left}}</div></div>
+              <div style="background: #F4F5F7; border-radius: 6px; padding: 12px 14px"><div style="font-size: 12px; font-weight: 600; color: #5F6368; text-transform: uppercase; letter-spacing: 0.04em">{{cur.rightLabel}}</div><div style="font-size: 16px; padding-top: 4px; font-weight: 600">{{cur.right}}</div></div>
+            </div>
+            <p style="margin: 0; font-size: 14px; color: #5F6368">Pourquoi en file : <strong style="color: #8A4A12">{{cur.reason}}</strong></p>
+
+            <sc-if value="{{isRat}}" hint-placeholder-val="{{ false }}">
+              <fieldset style="border: 0; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 8px">
+                <legend style="font-size: 14px; font-weight: 600; margin-bottom: 8px">Niveau normalisé (sera ajouté à rating_map)</legend>
+                <div style="display: flex; flex-wrap: wrap; gap: 6px">
+                  <sc-for list="{{levels}}" as="l" hint-placeholder-count="6">
+                    <button type="button" onClick="{{l.pick}}" aria-pressed="{{l.on}}" style="min-height: 44px; padding: 0 14px; border-radius: 6px; font: inherit; font-size: 14px; font-weight: 600; cursor: pointer; background: {{l.bg}}; color: {{l.fg}}; border: {{l.border}}">{{l.label}}</button>
+                  </sc-for>
+                </div>
+              </fieldset>
+            </sc-if>
+
+            <div style="display: flex; flex-wrap: wrap; gap: 10px; padding-top: 6px; border-top: 1px solid #ECEEF1">
+              <button type="button" onClick="{{accept}}" style="min-height: 48px; padding: 0 22px; border-radius: 6px; font: inherit; font-size: 15px; font-weight: 700; cursor: pointer; background: #1B3A5C; color: #FFFFFF; border: 1px solid #1B3A5C">{{cur.acceptLabel}}</button>
+              <button type="button" onClick="{{reject}}" style="min-height: 48px; padding: 0 22px; border-radius: 6px; font: inherit; font-size: 15px; font-weight: 600; cursor: pointer; background: #FFFFFF; color: #8A4A12; border: 1px solid #8A4A12">{{cur.rejectLabel}}</button>
+              <button type="button" onClick="{{skip}}" style="min-height: 48px; padding: 0 22px; border-radius: 6px; font: inherit; font-size: 15px; cursor: pointer; background: #FFFFFF; color: #3C4043; border: 1px solid #C9CDD2">Passer</button>
+            </div>
+          </div>
+        </sc-if>
+        <sc-if value="{{noCur}}" hint-placeholder-val="{{ false }}">
+          <p style="margin: 0; color: #5F6368; font-size: 15px">Sélectionnez une entrée dans la file.</p>
+        </sc-if>
+      </div>
+    </section>
+  </main>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":1150}}'>
+class Component extends DCLogic {
+  constructor(props) {
+    super(props);
+    this.state = {
+      tab: 'attr', sel: 0, validated: 0, rejected: 0, level: null,
+      attr: [
+        { id: 'a1', title: 'Rassemblement national', sub: 'AFP Factuel · 22 nov. 2017', reason: "Libellé d'organisation, pas de personne", source: 'AFP Factuel', rdate: '22 nov. 2017', cdate: '19 nov. 2017', claim: 'Rachline (FN) ne connaissait pas la revue radicale à laquelle il a donné un entretien', leftLabel: 'Claimant fourni par la source', left: 'Rassemblement national', rightLabel: 'Personne proposée', right: 'David Rachline — correspondance partielle (nom cité dans le texte)', acceptLabel: 'Attribuer à David Rachline', rejectLabel: 'Ne pas attribuer' },
+        { id: 'a2', title: 'Jean Castex', sub: 'Les Surligneurs · 1er oct. 2020', reason: 'Affiliation à la date à confirmer', source: 'Les Surligneurs', rdate: '1er oct. 2020', cdate: '24 sept. 2020', claim: 'Il faut créer des « juges pénaux de proximité » pour réprimer efficacement les « petits délits » et « les délits dits contraventionnels »', leftLabel: 'Claimant fourni par la source', left: 'Jean Castex', rightLabel: 'Parti au 24 sept. 2020', right: '[à confirmer dans affiliations.csv]', acceptLabel: 'Valider', rejectLabel: 'Rejeter' },
+        { id: 'a3', title: 'Anti-Macron / Facebook', sub: 'Les Décodeurs · 15 avr. 2019', reason: 'Libellé vague : jamais attribué', source: 'Les Décodeurs', rdate: '15 avr. 2019', cdate: '13 avr. 2019', claim: "Nathalie Loiseau propose-t-elle de baisser le Smic pour qu'il soit fixé à 855 euros ?", leftLabel: 'Claimant fourni par la source', left: 'Anti-Macron / Facebook', rightLabel: 'Personne proposée', right: 'Aucune (hors référentiel)', acceptLabel: 'Confirmer : hors périmètre', rejectLabel: 'Attribuer manuellement' },
+        { id: 'a4', title: 'Jean-Pierre Pernault sur TF1', sub: 'Les Décodeurs · 15 févr. 2019', reason: 'Personne hors référentiel', source: 'Les Décodeurs', rdate: '15 févr. 2019', cdate: '7 févr. 2019', claim: 'Le diesel est-il finalement « moins polluant que l’essence » ?', leftLabel: 'Claimant fourni par la source', left: 'Jean-Pierre Pernault sur TF1', rightLabel: 'Personne proposée', right: 'Aucune (journaliste, pas une personnalité politique)', acceptLabel: 'Confirmer : hors périmètre', rejectLabel: 'Attribuer manuellement' }
+      ],
+      rat: [
+        { id: 'r1', title: '« Peu crédible »', sub: 'AFP Factuel · 1 occurrence', reason: 'Libellé absent de rating_map', source: 'AFP Factuel', rdate: '22 nov. 2017', cdate: '19 nov. 2017', claim: 'Rachline (FN) ne connaissait pas la revue radicale à laquelle il a donné un entretien', leftLabel: "Libellé d'origine", left: 'Peu crédible', rightLabel: 'Proposition automatique', right: 'Plutôt faux (à valider)', acceptLabel: 'Enregistrer la conversion', rejectLabel: 'Laisser en non classable', suggest: 'mostly_false' },
+        { id: 'r2', title: '« Très exagéré »', sub: 'Les Décodeurs · 1 occurrence', reason: 'Libellé absent de rating_map', source: 'Les Décodeurs', rdate: '7 août 2019', cdate: '3 avr. 2019', claim: 'Bruxelles a interdit la 5G en raison de ses effets sur la 5g', leftLabel: "Libellé d'origine", left: 'Très exagéré', rightLabel: 'Proposition automatique', right: 'Plutôt faux (à valider)', acceptLabel: 'Enregistrer la conversion', rejectLabel: 'Laisser en non classable', suggest: 'mostly_false' },
+        { id: 'r3', title: 'Phrase au lieu d’un verdict', sub: 'Les Surligneurs · 14 occurrences', reason: 'Aucun verdict court publié', source: 'Les Surligneurs', rdate: '21 oct. 2020', cdate: '15 sept. 2020', claim: "Je demande une mesure simple : qu'on expulse les étrangers délinquants ou criminels.", leftLabel: "Libellé d'origine", left: "En l'état actuel du droit, il n'est pas possible d'expulser automatiquement un étranger…", rightLabel: 'Proposition automatique', right: 'Non classable', acceptLabel: 'Enregistrer la conversion', rejectLabel: 'Laisser en non classable', suggest: 'unrated' }
+      ]
+    };
+  }
+  renderVals() {
+    const s = this.state;
+    const V = [
+      ['true', 'Vrai', '#1F5FA8', '#FFFFFF'], ['mostly_true', 'Plutôt vrai', '#9DC0E6', '#0B2540'], ['half_true', 'À moitié vrai', '#CFC8BA', '#2B2B2B'],
+      ['mostly_false', 'Plutôt faux', '#F2B57E', '#3D1E00'], ['false', 'Faux', '#B4500A', '#FFFFFF'], ['unrated', 'Non classable', '#FFFFFF', '#333333']
+    ];
+    const list = s.tab === 'attr' ? s.attr : s.rat;
+    const sel = Math.min(s.sel, list.length - 1);
+    const cur = list[sel] || null;
+    const done = (key) => () => {
+      const next = list.filter((_, i) => i !== sel);
+      this.setState({ [s.tab]: next, [key]: s[key] + 1, level: null });
+    };
+    const chosen = s.level || (cur && cur.suggest);
+    return {
+      pending: s.attr.length + s.rat.length, pendingAttr: s.attr.length, pendingRat: s.rat.length,
+      validated: s.validated, rejected: s.rejected,
+      tabAttrSel: String(s.tab === 'attr'), tabRatSel: String(s.tab === 'rat'),
+      tabAttrBg: s.tab === 'attr' ? '#1B3A5C' : '#FFFFFF', tabAttrFg: s.tab === 'attr' ? '#FFFFFF' : '#1B3A5C',
+      tabRatBg: s.tab === 'rat' ? '#1B3A5C' : '#FFFFFF', tabRatFg: s.tab === 'rat' ? '#FFFFFF' : '#1B3A5C',
+      showAttr: () => this.setState({ tab: 'attr', sel: 0, level: null }),
+      showRat: () => this.setState({ tab: 'rat', sel: 0, level: null }),
+      queue: list.map((q, i) => ({ ...q, pick: () => this.setState({ sel: i, level: null }), bg: i === sel ? '#EEF3F8' : '#FFFFFF', mark: i === sel ? '#1B3A5C' : 'transparent' })),
+      empty: list.length === 0, hasCur: !!cur, noCur: !cur && list.length > 0,
+      cur: cur || {}, isRat: s.tab === 'rat',
+      levels: V.map(([k, label, bg, fg]) => ({ label, on: String(chosen === k), pick: () => this.setState({ level: k }), bg: chosen === k ? bg : '#FFFFFF', fg: chosen === k ? fg : '#1A1A1A', border: chosen === k ? '2px solid #1A1A1A' : '1px solid #C9CDD2' })),
+      accept: done('validated'), reject: done('rejected'),
+      skip: () => this.setState({ sel: list.length ? (sel + 1) % list.length : 0, level: null })
+    };
+  }
+}
+</script>
+</body>
+</html>

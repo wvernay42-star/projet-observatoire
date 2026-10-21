@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<title>Fiche personne — variante Jauge</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Source+Serif+4:opsz,wght@8..60,600;8..60,700&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0}
+a{color:#1B3A5C}a:hover{color:#0E2236}
+</style>
+</helmet>
+<div style="font-family: Inter, system-ui, sans-serif; color: #1A1A1A; background: #FFFFFF; min-height: 100%">
+  <header style="background: #1B3A5C; color: #FFFFFF">
+    <div style="max-width: 1180px; margin: 0 auto; padding: 16px 24px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px">
+      <a href="Main.dc.html" style="color: #FFFFFF; text-decoration: none; font-family: 'Source Serif 4', Georgia, serif; font-size: 24px; font-weight: 700">Observatoire<span style="font-weight: 600; opacity: 0.75"> · [nom à choisir]</span></a>
+      <nav aria-label="Navigation principale" style="display: flex; flex-wrap: wrap; gap: 4px">
+        <a href="Main.dc.html" style="color: #FFFFFF; text-decoration: none; padding: 12px 12px">Accueil</a>
+        <a href="A-Liste.dc.html" style="color: #FFFFFF; text-decoration: none; padding: 12px 12px">Faits vérifiés</a>
+        <a href="#" style="color: #FFFFFF; text-decoration: none; padding: 12px 12px; font-weight: 600; border-bottom: 3px solid #FFFFFF">Personnalités</a>
+        <a href="#" style="color: #FFFFFF; text-decoration: none; padding: 12px 12px">Partis</a>
+        <a href="#" style="color: #FFFFFF; text-decoration: none; padding: 12px 12px">Méthodologie</a>
+      </nav>
+    </div>
+  </header>
+
+  <main style="max-width: 1180px; margin: 0 auto; padding: 32px 24px 48px; display: flex; flex-direction: column; gap: 32px">
+    <section style="display: flex; flex-wrap: wrap; gap: 24px; align-items: center">
+      <div aria-hidden="true" style="width: 96px; height: 96px; border-radius: 50%; background: #E6E7EA; color: #1B3A5C; display: flex; align-items: center; justify-content: center; font-family: 'Source Serif 4', Georgia, serif; font-size: 34px; font-weight: 700">ND</div>
+      <div style="flex: 1 1 320px; min-width: 0">
+        <h1 style="margin: 0; font-family: 'Source Serif 4', Georgia, serif; font-size: 40px; line-height: 1.1">Nicolas Dupont-Aignan</h1>
+        <p style="margin: 6px 0 0; font-size: 16px; color: #3C4043">Président de Debout la France · France</p>
+        <p style="margin: 4px 0 0; font-size: 13px; color: #5F6368">Affiliation : <a href="#">source Wikidata</a></p>
+      </div>
+    </section>
+
+    <section style="display: flex; flex-wrap: wrap; gap: 32px">
+      <div style="flex: 999 1 520px; min-width: 0; display: flex; flex-direction: column; gap: 14px">
+        <h2 style="margin: 0; font-family: 'Source Serif 4', Georgia, serif; font-size: 24px">4 déclarations vérifiées</h2>
+        <p style="margin: 0; color: #5F6368; font-size: 14px">Oct. 2018 – oct. 2020 · sur les déclarations vérifiées, pas sur l'ensemble des propos.</p>
+        <sc-for list="{{rows}}" as="row" hint-placeholder-count="6">
+          <div style="display: grid; grid-template-columns: 150px minmax(0, 1fr) 72px; align-items: center; gap: 12px">
+            <span style="font-size: 15px; font-weight: 600">{{row.label}}</span>
+            <div style="height: 22px; background: #F1F2F4; border-radius: 4px; overflow: hidden">
+              <div style="height: 100%; width: {{row.w}}; background: {{row.bg}}; border: {{row.border}}; box-sizing: border-box"></div>
+            </div>
+            <span style="font-size: 15px; text-align: right; font-variant-numeric: tabular-nums">{{row.n}} <span style="color: #5F6368">· {{row.p}}</span></span>
+          </div>
+        </sc-for>
+      </div>
+      <aside style="flex: 1 1 260px; border: 1px solid #E3E3E3; border-radius: 8px">
+        <div style="padding: 14px 18px; border-bottom: 1px solid #E3E3E3"><div style="font-size: 13px; color: #5F6368; font-weight: 600">Sources distinctes</div><div style="font-size: 22px; font-weight: 700">2</div><div style="font-size: 13px; color: #5F6368">Les Décodeurs (3) · Les Surligneurs (1)</div></div>
+        <div style="padding: 14px 18px; border-bottom: 1px solid #E3E3E3"><div style="font-size: 13px; color: #5F6368; font-weight: 600">Vérification la plus récente</div><div style="font-size: 18px; font-weight: 700">30 juillet 2020</div></div>
+        <div style="padding: 14px 18px"><div style="font-size: 13px; color: #5F6368; font-weight: 600">Partis sur la période</div><div style="font-size: 15px">Debout la France</div></div>
+      </aside>
+    </section>
+
+    <section aria-label="Frise des vérifications" style="display: flex; flex-direction: column; gap: 10px">
+      <h2 style="margin: 0; font-family: 'Source Serif 4', Georgia, serif; font-size: 22px">Dans le temps</h2>
+      <div style="position: relative; height: 56px; border-bottom: 2px solid #C9CDD2">
+        <sc-for list="{{dots}}" as="d" hint-placeholder-count="4">
+          <span title="{{d.t}}" style="position: absolute; bottom: 8px; left: {{d.x}}; width: 16px; height: 16px; border-radius: 50%; background: {{d.bg}}; border: {{d.border}}; box-sizing: border-box"></span>
+        </sc-for>
+      </div>
+      <div style="display: flex; justify-content: space-between; font-size: 13px; color: #5F6368"><span>Oct. 2018</span><span>2019</span><span>2020</span><span>Oct. 2020</span></div>
+    </section>
+
+    <section style="display: flex; flex-direction: column">
+      <h2 style="margin: 0 0 8px; font-family: 'Source Serif 4', Georgia, serif; font-size: 22px">Les 4 faits</h2>
+      <sc-for list="{{facts}}" as="f" hint-placeholder-count="4">
+        <article style="display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 8px 24px; padding: 16px 0; border-top: 1px solid #E3E3E3">
+          <div style="display: flex; flex-direction: column; gap: 6px; min-width: 0">
+            <p style="margin: 0; font-family: 'Source Serif 4', Georgia, serif; font-size: 18px; line-height: 1.35">« {{f.claim}} »</p>
+            <div style="font-size: 13px; color: #5F6368">Déclaration : <span style="font-style: {{f.cstyle}}">{{f.cdate}}</span> · Vérification : {{f.rdate}} · <a href="#">Lire sur {{f.source}}</a></div>
+          </div>
+          <div style="display: flex; flex-direction: column; gap: 6px; align-items: flex-end; width: 220px; max-width: 100%">
+            <div style="display: flex; gap: 3px" aria-hidden="true">
+              <sc-for list="{{f.segs}}" as="s" hint-placeholder-count="5"><span style="width: 32px; height: 10px; border-radius: 2px; background: {{s.bg}}"></span></sc-for>
+            </div>
+            <strong style="font-size: 15px">{{f.norm}}</strong>
+            <span style="font-size: 13px; color: #5F6368; text-align: right">« {{f.orig}} » selon {{f.source}}</span>
+          </div>
+        </article>
+      </sc-for>
+    </section>
+  </main>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1280,"height":1300}}'>
+class Component extends DCLogic {
+  renderVals() {
+    const V = {
+      true: { l: 'Vrai', bg: '#1F5FA8', i: 0 },
+      mostly_true: { l: 'Plutôt vrai', bg: '#9DC0E6', i: 1 },
+      half_true: { l: 'À moitié vrai', bg: '#CFC8BA', i: 2 },
+      mostly_false: { l: 'Plutôt faux', bg: '#F2B57E', i: 3 },
+      false: { l: 'Faux', bg: '#B4500A', i: 4 },
+      unrated: { l: 'Non classable', bg: '#FFFFFF', i: -1 }
+    };
+    const counts = { true: 0, mostly_true: 0, half_true: 0, mostly_false: 0, false: 3, unrated: 1 };
+    const total = 4;
+    const rows = Object.keys(V).map((k) => ({
+      label: V[k].l, n: counts[k],
+      p: Math.round((counts[k] / total) * 100) + ' %',
+      w: (counts[k] / total) * 100 + '%',
+      bg: k === 'unrated' ? 'repeating-linear-gradient(45deg, #FFFFFF 0 4px, #C9CDD2 4px 6px)' : V[k].bg,
+      border: k === 'unrated' && counts[k] ? '1px solid #8A8F96' : 'none'
+    }));
+    const segs = (k) => [0, 1, 2, 3, 4].map((i) => ({ bg: V[k].i === i ? V[k].bg : '#E6E7EA' }));
+    const raw = [
+      ["Il faut faire condamner à 30 ans de prison pour intelligence avec l'ennemi", 'unrated', "Le juge pénal ne peut donc appliquer une loi à des actes qu'elle n'a envisagés…", 'Les Surligneurs', '21 juil. 2020', '30 juil. 2020', false, 0.86],
+      ["L'ex-conseiller d'Emmanuel Macron, le banquier Bernard Mourad, est-il en charge de la privatisation d'Aéroports de Paris ?", 'false', 'Faux', 'Les Décodeurs', '1er avr. 2019', '1er avr. 2019', true, 0.25],
+      ["Est-il vrai que l'Europe importe de la viande canadienne bourrée d'hormones à cause du CETA ?", 'false', 'FAUX', 'Les Décodeurs', '6 mars 2019', '7 mars 2019', false, 0.2],
+      ['Les pensions de réversion vont-elles diminuer de 25 % ?', 'false', 'Faux', 'Les Décodeurs', '3 déc. 2018', '6 déc. 2018', false, 0.07]
+    ];
+    const facts = raw.map(([claim, k, orig, source, cdate, rdate, fb]) => ({ claim, orig, source, cdate, rdate, norm: V[k].l, segs: segs(k), cstyle: fb ? 'italic' : 'normal' }));
+    const dots = raw.map(([claim, k, , , cdate, , , x]) => ({ x: 'calc(' + x * 100 + '% - 8px)', t: cdate + ' — ' + V[k].l, bg: k === 'unrated' ? '#FFFFFF' : V[k].bg, border: k === 'unrated' ? '2px dashed #5F6368' : 'none' }));
+    return { rows, facts, dots };
+  }
+}
+</script>
+</body>
+</html>

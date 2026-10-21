@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<title>Accueil — variante Jauge</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Source+Serif+4:opsz,wght@8..60,600;8..60,700&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0}
+a{color:#1B3A5C}a:hover{color:#0E2236}
+</style>
+</helmet>
+<div style="font-family: Inter, system-ui, sans-serif; color: #1A1A1A; background: #FFFFFF; min-height: 100%">
+  <header style="background: #1B3A5C; color: #FFFFFF">
+    <div style="max-width: 1180px; margin: 0 auto; padding: 16px 24px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px">
+      <a href="#" style="color: #FFFFFF; text-decoration: none; font-family: 'Source Serif 4', Georgia, serif; font-size: 24px; font-weight: 700">Observatoire<span style="font-weight: 600; opacity: 0.75"> · [nom à choisir]</span></a>
+      <nav aria-label="Navigation principale" style="display: flex; flex-wrap: wrap; gap: 4px">
+        <a href="#" style="color: #FFFFFF; text-decoration: none; padding: 12px 12px; font-weight: 600; border-bottom: 3px solid #FFFFFF">Accueil</a>
+        <a href="A-Liste.dc.html" style="color: #FFFFFF; text-decoration: none; padding: 12px 12px">Faits vérifiés</a>
+        <a href="A-Fiche.dc.html" style="color: #FFFFFF; text-decoration: none; padding: 12px 12px">Personnalités</a>
+        <a href="#" style="color: #FFFFFF; text-decoration: none; padding: 12px 12px">Partis</a>
+        <a href="#" style="color: #FFFFFF; text-decoration: none; padding: 12px 12px">Méthodologie</a>
+      </nav>
+    </div>
+  </header>
+
+  <main style="max-width: 1180px; margin: 0 auto; padding: 32px 24px 48px; display: flex; flex-direction: column; gap: 32px">
+    <section aria-label="Filtres" style="display: flex; flex-wrap: wrap; align-items: center; gap: 12px; padding: 16px; border: 1px solid #E3E3E3; border-radius: 8px">
+      <span style="font-weight: 600; font-size: 14px">Période</span>
+      <div style="display: flex; flex-wrap: wrap; gap: 6px">
+        <button type="button" style="min-height: 44px; padding: 0 14px; border: 1px solid #C9CDD2; background: #FFFFFF; border-radius: 22px; font: inherit; font-size: 14px">7 jours</button>
+        <button type="button" style="min-height: 44px; padding: 0 14px; border: 1px solid #C9CDD2; background: #FFFFFF; border-radius: 22px; font: inherit; font-size: 14px">30 jours</button>
+        <button type="button" style="min-height: 44px; padding: 0 14px; border: 1px solid #C9CDD2; background: #FFFFFF; border-radius: 22px; font: inherit; font-size: 14px">12 mois</button>
+        <button type="button" style="min-height: 44px; padding: 0 14px; border: 1px solid #C9CDD2; background: #FFFFFF; border-radius: 22px; font: inherit; font-size: 14px">Année civile</button>
+        <button type="button" aria-pressed="true" style="min-height: 44px; padding: 0 14px; border: 1px solid #1B3A5C; background: #1B3A5C; color: #FFFFFF; border-radius: 22px; font: inherit; font-size: 14px">Oct. 2018 – oct. 2020</button>
+      </div>
+      <label style="display: flex; align-items: center; gap: 8px; font-size: 14px; margin-left: auto">
+        Trier selon
+        <select style="min-height: 44px; font: inherit; font-size: 14px; padding: 0 8px; border: 1px solid #C9CDD2; border-radius: 6px">
+          <option>Date de la déclaration</option>
+          <option>Date de la vérification</option>
+        </select>
+      </label>
+    </section>
+
+    <section style="display: flex; flex-wrap: wrap; gap: 32px">
+      <div style="flex: 999 1 560px; min-width: 0; display: flex; flex-direction: column; gap: 16px">
+        <div>
+          <h1 style="margin: 0; font-family: 'Source Serif 4', Georgia, serif; font-size: 40px; line-height: 1.15">24 déclarations vérifiées</h1>
+          <p style="margin: 8px 0 0; color: #5F6368; font-size: 15px">Sur les déclarations vérifiées par les sources suivies, pas sur l'ensemble des propos tenus.</p>
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 10px" role="list" aria-label="Répartition par verdict">
+          <sc-for list="{{rows}}" as="row" hint-placeholder-count="6">
+            <div role="listitem" style="display: grid; grid-template-columns: 150px minmax(0, 1fr) 72px; align-items: center; gap: 12px">
+              <span style="font-size: 15px; font-weight: 600">{{row.label}}</span>
+              <div style="height: 22px; background: #F1F2F4; border-radius: 4px; overflow: hidden">
+                <div style="height: 100%; width: {{row.w}}; background: {{row.bg}}; border: {{row.border}}; box-sizing: border-box"></div>
+              </div>
+              <span style="font-size: 15px; text-align: right; font-variant-numeric: tabular-nums">{{row.n}} <span style="color: #5F6368">· {{row.p}}</span></span>
+            </div>
+          </sc-for>
+        </div>
+      </div>
+      <aside style="flex: 1 1 280px; display: flex; flex-direction: column; gap: 0; border: 1px solid #E3E3E3; border-radius: 8px">
+        <div style="padding: 16px 20px; border-bottom: 1px solid #E3E3E3">
+          <div style="font-size: 13px; color: #5F6368; font-weight: 600; text-transform: uppercase; letter-spacing: 0.04em">Personnalités concernées</div>
+          <div style="font-size: 28px; font-weight: 700">15</div>
+        </div>
+        <div style="padding: 16px 20px; border-bottom: 1px solid #E3E3E3">
+          <div style="font-size: 13px; color: #5F6368; font-weight: 600; text-transform: uppercase; letter-spacing: 0.04em">Sources distinctes</div>
+          <div style="font-size: 28px; font-weight: 700">2 <span style="font-size: 15px; font-weight: 400; color: #5F6368">sur 5 suivies</span></div>
+        </div>
+        <div style="padding: 16px 20px">
+          <div style="font-size: 13px; color: #5F6368; font-weight: 600; text-transform: uppercase; letter-spacing: 0.04em">Vérification la plus récente</div>
+          <div style="font-size: 20px; font-weight: 700">21 octobre 2020</div>
+        </div>
+      </aside>
+    </section>
+
+    <section style="display: flex; flex-direction: column; gap: 16px">
+      <div style="display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 8px">
+        <h2 style="margin: 0; font-family: 'Source Serif 4', Georgia, serif; font-size: 26px">Dernières vérifications</h2>
+        <a href="A-Liste.dc.html" style="font-weight: 600">Voir les 24 faits</a>
+      </div>
+      <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 16px">
+        <sc-for list="{{latest}}" as="f" hint-placeholder-count="4">
+          <article style="border: 1px solid #E3E3E3; border-radius: 8px; padding: 16px; display: flex; flex-direction: column; gap: 10px">
+            <div style="font-size: 14px"><strong>{{f.person}}</strong> <span style="color: #5F6368">· {{f.party}}</span></div>
+            <p style="margin: 0; font-family: 'Source Serif 4', Georgia, serif; font-size: 17px; line-height: 1.35">« {{f.claim}} »</p>
+            <div style="display: flex; gap: 3px" aria-hidden="true">
+              <sc-for list="{{f.segs}}" as="s" hint-placeholder-count="5"><span style="width: 28px; height: 8px; border-radius: 2px; background: {{s.bg}}"></span></sc-for>
+            </div>
+            <div style="font-size: 14px"><strong>{{f.norm}}</strong> <span style="color: #5F6368">— « {{f.orig}} » selon {{f.source}}</span></div>
+            <div style="font-size: 13px; color: #5F6368">Déclaration : {{f.cdate}} · Vérification : {{f.rdate}}</div>
+          </article>
+        </sc-for>
+      </div>
+    </section>
+
+    <footer style="border-top: 1px solid #E3E3E3; padding-top: 16px; font-size: 13px; color: #5F6368; display: flex; flex-wrap: wrap; gap: 16px; justify-content: space-between">
+      <span>L'Observatoire ne produit aucun verdict : il reprend celui de la source, avec son libellé d'origine.</span>
+      <span><a href="#">Méthodologie</a> · <a href="#">Signaler une erreur</a></span>
+    </footer>
+  </main>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1280,"height":1240}}'>
+class Component extends DCLogic {
+  renderVals() {
+    const V = {
+      true: { l: 'Vrai', bg: '#1F5FA8', i: 0 },
+      mostly_true: { l: 'Plutôt vrai', bg: '#9DC0E6', i: 1 },
+      half_true: { l: 'À moitié vrai', bg: '#CFC8BA', i: 2 },
+      mostly_false: { l: 'Plutôt faux', bg: '#F2B57E', i: 3 },
+      false: { l: 'Faux', bg: '#B4500A', i: 4 },
+      unrated: { l: 'Non classable', bg: '#FFFFFF', i: -1 }
+    };
+    const counts = { true: 0, mostly_true: 0, half_true: 1, mostly_false: 0, false: 9, unrated: 14 };
+    const total = 24;
+    const rows = Object.keys(V).map((k) => ({
+      label: V[k].l,
+      n: counts[k],
+      p: Math.round((counts[k] / total) * 100) + ' %',
+      w: (counts[k] / total) * 100 + '%',
+      bg: k === 'unrated' ? 'repeating-linear-gradient(45deg, #FFFFFF 0 4px, #C9CDD2 4px 6px)' : V[k].bg,
+      border: k === 'unrated' && counts[k] ? '1px solid #8A8F96' : 'none'
+    }));
+    const segs = (k) => [0, 1, 2, 3, 4].map((i) => ({ bg: V[k].i === i ? V[k].bg : '#E6E7EA' }));
+    const facts = [
+      { person: 'Eric Ciotti', party: 'LR', claim: "Je demande une mesure simple : qu'on expulse les étrangers délinquants ou criminels.", k: 'unrated', orig: "En l'état actuel du droit, il n'est pas possible d'expulser automatiquement…", source: 'Les Surligneurs', cdate: '15 sept. 2020', rdate: '21 oct. 2020' },
+      { person: 'Gérald Darmanin', party: 'LREM', claim: "Il faut définir comme arme par destination les feux d'artifices et mortiers", k: 'unrated', orig: "Les mortiers d'artifice sont déjà considérés comme des « armes par destination »…", source: 'Les Surligneurs', cdate: '13 oct. 2020', rdate: '12 oct. 2020' },
+      { person: 'Marine Le Pen', party: 'RN', claim: 'Est-il possible de faire une loi pour « interdire le voile » en France ?', k: 'half_true', orig: "C'est compliqué", source: 'Les Décodeurs', cdate: '20 oct. 2019', rdate: '24 oct. 2019' },
+      { person: 'François Asselineau', party: 'UPR', claim: "Un projet secret d'une Europe des nations où « il n'y aurait plus la France »", k: 'false', orig: 'FAUX', source: 'Les Décodeurs', cdate: '22 mai 2019', rdate: '23 mai 2019' }
+    ];
+    const latest = facts.map((f) => ({ ...f, norm: V[f.k].l, segs: segs(f.k) }));
+    return { rows, latest };
+  }
+}
+</script>
+</body>
+</html>

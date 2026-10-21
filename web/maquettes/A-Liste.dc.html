@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<title>Liste des faits — variante Jauge</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Source+Serif+4:opsz,wght@8..60,600;8..60,700&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0}
+a{color:#1B3A5C}a:hover{color:#0E2236}
+</style>
+</helmet>
+<div style="font-family: Inter, system-ui, sans-serif; color: #1A1A1A; background: #FFFFFF; min-height: 100%">
+  <header style="background: #1B3A5C; color: #FFFFFF">
+    <div style="max-width: 1180px; margin: 0 auto; padding: 16px 24px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px">
+      <a href="Main.dc.html" style="color: #FFFFFF; text-decoration: none; font-family: 'Source Serif 4', Georgia, serif; font-size: 24px; font-weight: 700">Observatoire<span style="font-weight: 600; opacity: 0.75"> · [nom à choisir]</span></a>
+      <nav aria-label="Navigation principale" style="display: flex; flex-wrap: wrap; gap: 4px">
+        <a href="Main.dc.html" style="color: #FFFFFF; text-decoration: none; padding: 12px 12px">Accueil</a>
+        <a href="#" style="color: #FFFFFF; text-decoration: none; padding: 12px 12px; font-weight: 600; border-bottom: 3px solid #FFFFFF">Faits vérifiés</a>
+        <a href="A-Fiche.dc.html" style="color: #FFFFFF; text-decoration: none; padding: 12px 12px">Personnalités</a>
+        <a href="#" style="color: #FFFFFF; text-decoration: none; padding: 12px 12px">Partis</a>
+        <a href="#" style="color: #FFFFFF; text-decoration: none; padding: 12px 12px">Méthodologie</a>
+      </nav>
+    </div>
+  </header>
+
+  <main style="max-width: 1180px; margin: 0 auto; padding: 32px 24px 48px; display: flex; flex-wrap: wrap; gap: 32px; align-items: flex-start">
+    <aside aria-label="Filtres" style="flex: 1 1 240px; display: flex; flex-direction: column; gap: 20px">
+      <h2 style="margin: 0; font-size: 18px">Filtrer</h2>
+      <label style="display: flex; flex-direction: column; gap: 6px; font-size: 14px; font-weight: 600">Période
+        <select style="min-height: 44px; font: inherit; font-weight: 400; padding: 0 8px; border: 1px solid #C9CDD2; border-radius: 6px"><option>Oct. 2018 – oct. 2020</option><option>7 jours</option><option>30 jours</option><option>12 mois</option><option>Année civile</option></select>
+      </label>
+      <fieldset style="border: 0; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 6px">
+        <legend style="font-size: 14px; font-weight: 600; margin-bottom: 6px">Dater par</legend>
+        <label style="display: flex; align-items: center; gap: 8px; min-height: 32px; font-size: 14px"><input type="radio" name="d" checked> Date de la déclaration</label>
+        <label style="display: flex; align-items: center; gap: 8px; min-height: 32px; font-size: 14px"><input type="radio" name="d"> Date de la vérification</label>
+      </fieldset>
+      <label style="display: flex; flex-direction: column; gap: 6px; font-size: 14px; font-weight: 600">Personne
+        <input type="search" placeholder="Rechercher un nom" style="min-height: 44px; font: inherit; font-weight: 400; padding: 0 10px; border: 1px solid #C9CDD2; border-radius: 6px">
+      </label>
+      <label style="display: flex; flex-direction: column; gap: 6px; font-size: 14px; font-weight: 600">Parti
+        <select style="min-height: 44px; font: inherit; font-weight: 400; padding: 0 8px; border: 1px solid #C9CDD2; border-radius: 6px"><option>Tous les partis</option></select>
+      </label>
+      <fieldset style="border: 0; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 4px">
+        <legend style="font-size: 14px; font-weight: 600; margin-bottom: 6px">Verdict</legend>
+        <sc-for list="{{levels}}" as="l" hint-placeholder-count="6">
+          <label style="display: flex; align-items: center; gap: 8px; min-height: 32px; font-size: 14px"><input type="checkbox" checked><span style="width: 12px; height: 12px; border-radius: 2px; background: {{l.bg}}; border: {{l.border}}; box-sizing: border-box"></span>{{l.label}} <span style="color: #5F6368">({{l.n}})</span></label>
+        </sc-for>
+      </fieldset>
+      <label style="display: flex; flex-direction: column; gap: 6px; font-size: 14px; font-weight: 600">Source
+        <select style="min-height: 44px; font: inherit; font-weight: 400; padding: 0 8px; border: 1px solid #C9CDD2; border-radius: 6px"><option>Toutes les sources</option><option>Les Décodeurs</option><option>Les Surligneurs</option></select>
+      </label>
+    </aside>
+
+    <section style="flex: 999 1 560px; min-width: 0; display: flex; flex-direction: column; gap: 16px">
+      <div>
+        <h1 style="margin: 0; font-family: 'Source Serif 4', Georgia, serif; font-size: 34px">Faits vérifiés</h1>
+        <p style="margin: 6px 0 0; color: #5F6368; font-size: 15px">13 affichés sur 24 déclarations vérifiées · triés par date de déclaration, du plus récent au plus ancien. Les dates en <em>italique</em> sont des dates de vérification utilisées faute de date de déclaration.</p>
+      </div>
+      <sc-for list="{{facts}}" as="f" hint-placeholder-count="8">
+        <article style="display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 8px 24px; padding: 18px 0; border-top: 1px solid #E3E3E3">
+          <div style="display: flex; flex-direction: column; gap: 6px; min-width: 0">
+            <div style="font-size: 14px"><a href="A-Fiche.dc.html" style="font-weight: 700; text-decoration: none">{{f.person}}</a> <span style="color: #5F6368">· {{f.party}} à la date de la déclaration</span></div>
+            <p style="margin: 0; font-family: 'Source Serif 4', Georgia, serif; font-size: 18px; line-height: 1.35">« {{f.claim}} »</p>
+            <div style="font-size: 13px; color: #5F6368">Déclaration : <span style="font-style: {{f.cstyle}}">{{f.cdate}}</span> · Vérification : {{f.rdate}} · <a href="#">Lire sur {{f.source}}</a> · <a href="#" style="color: #5F6368">Signaler une erreur</a></div>
+          </div>
+          <div style="display: flex; flex-direction: column; gap: 6px; align-items: flex-end; width: 220px; max-width: 100%">
+            <div style="display: flex; gap: 3px" aria-hidden="true">
+              <sc-for list="{{f.segs}}" as="s" hint-placeholder-count="5"><span style="width: 32px; height: 10px; border-radius: 2px; background: {{s.bg}}"></span></sc-for>
+            </div>
+            <strong style="font-size: 15px">{{f.norm}}</strong>
+            <span style="font-size: 13px; color: #5F6368; text-align: right">« {{f.orig}} » selon {{f.source}}</span>
+          </div>
+        </article>
+      </sc-for>
+    </section>
+  </main>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1280,"height":1500}}'>
+class Component extends DCLogic {
+  renderVals() {
+    const V = {
+      true: { l: 'Vrai', bg: '#1F5FA8', i: 0 },
+      mostly_true: { l: 'Plutôt vrai', bg: '#9DC0E6', i: 1 },
+      half_true: { l: 'À moitié vrai', bg: '#CFC8BA', i: 2 },
+      mostly_false: { l: 'Plutôt faux', bg: '#F2B57E', i: 3 },
+      false: { l: 'Faux', bg: '#B4500A', i: 4 },
+      unrated: { l: 'Non classable', bg: '#FFFFFF', i: -1 }
+    };
+    const counts = { true: 0, mostly_true: 0, half_true: 1, mostly_false: 0, false: 9, unrated: 14 };
+    const levels = Object.keys(V).map((k) => ({ label: V[k].l, n: counts[k], bg: V[k].bg, border: k === 'unrated' ? '1px dashed #5F6368' : 'none' }));
+    const segs = (k) => [0, 1, 2, 3, 4].map((i) => ({ bg: V[k].i === i ? V[k].bg : '#E6E7EA' }));
+    const raw = [
+      ['Gérald Darmanin', 'LREM', "Il faut définir comme arme par destination les feux d'artifices et mortiers", 'unrated', "Les mortiers d'artifice sont déjà considérés comme des « armes par destination » au sens du code pénal", 'Les Surligneurs', '13 oct. 2020', '12 oct. 2020', false],
+      ['Emmanuel Macron', 'LREM', 'Face aux piscines réservées aux femmes […] « le préfet pourra suspendre les actes municipaux »', 'unrated', 'Le préfet peut déjà saisir le juge administratif, tenu de statuer dans les 48 heures…', 'Les Surligneurs', '2 oct. 2020', '3 oct. 2020', false],
+      ['Eric Ciotti', 'LR', "Je demande une mesure simple : qu'on expulse les étrangers délinquants ou criminels.", 'unrated', "En l'état actuel du droit, il n'est pas possible d'expulser automatiquement…", 'Les Surligneurs', '15 sept. 2020', '21 oct. 2020', false],
+      ['Jordan Bardella', 'RN', 'Si les Français veulent se saisir de la possibilité de rétablir la peine de mort, nous le ferons par le référendum d\'initiative citoyenne.', 'unrated', 'C\'est une proposition peu réaliste du point de vue du droit…', 'Les Surligneurs', '15 sept. 2020', '21 sept. 2020', false],
+      ['Marlène Schiappa', 'LREM', 'Quand un étranger commet des violences sexistes et sexuelles, il doit cesser d\'être accueilli en France', 'unrated', 'Seul le viol ou des infractions répétées de la part d\'un étranger pourrait engendrer son expulsion.', 'Les Surligneurs', '23 juil. 2020', '6 août 2020', false],
+      ['Nicolas Dupont-Aignan', 'DLF', "Il faut faire condamner à 30 ans de prison pour intelligence avec l'ennemi", 'unrated', 'Le juge pénal ne peut donc appliquer une loi à des actes qu\'elle n\'a envisagés…', 'Les Surligneurs', '21 juil. 2020', '30 juil. 2020', false],
+      ['Marine Le Pen', 'RN', 'Est-il possible de faire une loi pour « interdire le voile » en France ?', 'half_true', "C'est compliqué", 'Les Décodeurs', '20 oct. 2019', '24 oct. 2019', false],
+      ['François Asselineau', 'UPR', "Un projet secret d'une Europe des nations où « il n'y aurait plus la France »", 'false', 'FAUX', 'Les Décodeurs', '22 mai 2019', '23 mai 2019', false],
+      ['Marine Le Pen', 'RN', 'La Roumanie aurait négocié un accord avec le Pakistan pour faire venir 500 000 travailleurs sur son sol.', 'false', 'FAUX', 'Les Décodeurs', '10 mai 2019', '13 mai 2019', false],
+      ['Nicolas Dupont-Aignan', 'DLF', "L'ex-conseiller d'Emmanuel Macron, le banquier Bernard Mourad, est-il en charge de la privatisation d'Aéroports de Paris ?", 'false', 'Faux', 'Les Décodeurs', '1er avr. 2019', '1er avr. 2019', true],
+      ['Nicolas Dupont-Aignan', 'DLF', "Est-il vrai que l'Europe importe de la viande canadienne bourrée d'hormones à cause du CETA ?", 'false', 'FAUX', 'Les Décodeurs', '6 mars 2019', '7 mars 2019', false],
+      ['Nicolas Dupont-Aignan', 'DLF', 'Les pensions de réversion vont-elles diminuer de 25 % ?', 'false', 'Faux', 'Les Décodeurs', '3 déc. 2018', '6 déc. 2018', false],
+      ['Valérie Pécresse', 'LR', 'Dans certains quartiers on devrait avoir une circonstance aggravante qui permettrait de doubler la peine.', 'false', 'Faux', 'Les Décodeurs', '22 oct. 2018', '22 oct. 2018', true]
+    ];
+    const facts = raw.map(([person, party, claim, k, orig, source, cdate, rdate, fb]) => ({ person, party, claim, orig, source, cdate, rdate, norm: V[k].l, segs: segs(k), cstyle: fb ? 'italic' : 'normal' }));
+    return { levels, facts };
+  }
+}
+</script>
+</body>
+</html>
