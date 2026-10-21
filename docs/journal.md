@@ -13,9 +13,19 @@ Les décisions durables sont aussi consignées dans [decisions.md](decisions.md)
 | 3 | rating_map.csv + ratings.py | ✅ fait (21/10) — 15 propositions à valider |
 | 4 | persons / parties / affiliations + attribute.py | ✅ fait (21/10) — 67 724 personnes, partis à valider pour beaucoup |
 | 5 | Autres sites FR, google_factcheck, datacommons_feed, dedupe.py | ✅ fait (21/10) |
-| 6 | run_daily.py + export.py, routine sur 90 jours | ✅ fait — 122 entrées exportées sur 2 ans (22/10) |
+| 6 | run_daily.py + export.py, routine sur 90 jours | ✅ fait — 122 entrées exportées sur 2 ans ; planifiée chaque jour à 6 h (22/10) |
 | 7 | web/beta/index.html (maquette A) | ⏳ |
 | — | Page web de validation | ✅ en ligne (22/10) — 147 éléments à traiter |
+
+## 2026-10-22 (suite 2) — routine quotidienne planifiée
+
+- Tâche planifiée « Routine quotidienne Observatoire » (id `trig_012mCuwXsnbSw8LrjxuAjyhN`),
+  chaque jour à 5 h 59 (heure de Paris), première exécution le 22/10/2026.
+- Chaque exécution démarre une nouvelle session cloud qui : rattache et clone le repo,
+  applique les décisions du tableau de validation, lance `run_daily`, redépose les files,
+  lance les tests, ajoute une entrée « Routine quotidienne » à ce journal, commite et pousse.
+- Aucun connecteur claude.ai n'est nécessaire (API Google via le secret réseau de
+  l'environnement, base de la page via les outils d'artefact).
 
 ## 2026-10-22 (suite) — tableau de validation en ligne
 
