@@ -1,6 +1,9 @@
 # Observatoire de la parole politique
 
 Spécification complète : docs/cadrage.md (à lire avant toute tâche).
+Suivi : docs/journal.md (état d'avancement) et docs/decisions.md. À la fin de chaque
+session de travail, ajouter une entrée datée en haut de docs/journal.md et mettre à jour
+le tableau d'état.
 
 ## Règles non négociables
 - L'outil ne produit jamais de verdict. Il reprend celui de la source.
