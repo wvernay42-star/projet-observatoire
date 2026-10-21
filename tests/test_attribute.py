@@ -60,7 +60,7 @@ def test_party_at_date(ref):
 
 
 def test_party_unknown_or_ambiguous_is_never_guessed(ref):
-    assert ref.party_at("Q2", "2019-05-10").status == "ambiguous"  # deux affiliations sans dates
+    assert ref.party_at("Q2", "2019-05-10").status == "undated"  # affiliations sans dates : à valider
     assert ref.party_at("Q3", "2019-05-10").status == "none"
     assert ref.party_at("Q1", None).status == "no_date"
 
@@ -87,3 +87,11 @@ def test_wikidata_date_precision():
     assert day("2015-06-21T00:00:00Z", "11") == "2015-06-21"
     assert day("1990-01-01T00:00:00Z", "8") == ""
     assert day(None) == ""
+
+
+def test_undated_affiliation_is_never_used_automatically():
+    ref = Referential(PERSONS, [
+        {"person_id": "Q3", "party_id": "PS", "start_date": "", "end_date": "", "source_url": ""},
+    ])
+    result = ref.party_at("Q3", "2020-09-12")
+    assert (result.party_id, result.status, result.candidates) == (None, "undated", ("PS",))

@@ -11,7 +11,7 @@ Les décisions durables sont aussi consignées dans [decisions.md](decisions.md)
 | 1 | Initialiser le repo, schema.sql, seeds vides | ✅ fait (20/10) |
 | 2 | connectors/base.py + jsonld_crawler (AFP Factuel) | ⚠️ base.py fait ; crawler remis en question (voir 21/10) |
 | 3 | rating_map.csv + ratings.py | ✅ fait (21/10) — 15 propositions à valider |
-| 4 | persons / parties / affiliations + attribute.py | ⏳ à faire (sources accessibles) |
+| 4 | persons / parties / affiliations + attribute.py | ✅ fait (21/10) — 67 724 personnes, partis à valider pour beaucoup |
 | 5 | Autres sites FR, google_factcheck, datacommons_feed, dedupe.py | 🟡 datacommons_feed fait ; google_factcheck attend une clé API |
 | 6 | run_daily.py + export.py, routine sur 90 jours | ⏳ |
 | 7 | web/beta/index.html (maquette A) | ⏳ |
@@ -34,7 +34,33 @@ automatiquement vers `factchecktools.googleapis.com`) ; fonctionne. Accès `www.
 
 → Proposition : ajouter TF1 Info et 20 Minutes aux sources suivies (à valider).
 
-**Étape 4** : voir le bilan ci-dessous (référentiel Wikidata + attribute.py).
+**Étape 4 — référentiel** (`python -m pipeline.referential`, ~25 min, source Wikidata) :
+- 67 724 personnes : députés (15e–17e législatures, 1 628), sénateurs (691), eurodéputés
+  français (202), gouvernement (127), présidents de la République (2), dirigeants de parti (195),
+  maires depuis 2014 (65 595). 269 partis, 3 915 affiliations.
+- Dates d'affiliation gardées à leur précision réelle (Wikidata note souvent « 2015-01-01 »
+  pour « 2015 ») : jamais de 1er janvier inventé.
+- Seulement ~19 % des affiliations ont une date de début ; beaucoup de personnes n'ont aucune
+  affiliation connue (maires surtout).
+
+**Étape 4 — attribution** (`python -m pipeline.attribute`) sur les 89 vérifications FR du flux :
+- 24 attribuées `auto_sure` (15 personnalités, toutes correctes), 65 écartées (internautes,
+  médias, sites, personnes hors référentiel : Jean-Pierre Pernault, Ursula von der Leyen…).
+- Parti à la date du fait : sûr pour 7 personnes sur 15 (Le Pen, Bardella, Bay → RN ;
+  Ciotti → LR ; Macron → RE ; Asselineau → UPR ; Monot → DLF).
+- Règle ajoutée : une affiliation **sans aucune date** n'est jamais utilisée automatiquement
+  (cas Jacques Maire : Wikidata ne connaît que le PS, sans date, alors qu'il était LREM en 2020).
+  Ces cas (8 personnes) passent en validation avec les partis candidats.
+
+**Limites connues** :
+- Noms de parti : Wikidata donne le nom actuel (« Renaissance » pour LREM en 2020,
+  « Rassemblement national » pour le FN en 2017). À traiter : nom en vigueur à la date (P1448 daté).
+- Les affiliations validées à la main devront être stockées à part
+  (ex. `data/seeds/affiliations_manual.csv`) pour survivre à une reconstruction du référentiel.
+- Grand nombre d'homonymes chez les maires (1 900+ noms partagés) : ils passeront en validation.
+
+**Prochaines étapes proposées** : connecteur `google_factcheck` (AFP, TF1 Info, 20 Minutes,
+franceinfo), puis `dedupe.py`, puis tableau de validation.
 
 ## 2026-10-21 (suite) — accès réseau ouvert, test des sources
 

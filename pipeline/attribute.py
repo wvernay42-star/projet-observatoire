@@ -46,7 +46,10 @@ class Attribution:
 @dataclass(frozen=True)
 class PartyAtDate:
     party_id: str | None
-    status: str  # 'ok', 'none' (aucune affiliation connue), 'ambiguous', 'no_date'
+    # 'ok', 'none' (aucune affiliation connue), 'ambiguous' (plusieurs en vigueur),
+    # 'undated' (seules des affiliations sans aucune date correspondent : à valider), 'no_date'
+    status: str
+    candidates: tuple[str, ...] = ()
 
 
 class Referential:
@@ -115,14 +118,21 @@ class Referential:
             n = min(len(end), len(on))
             return not end or on[:n] <= end[:n]
 
-        current = {
-            a["party_id"]
-            for a in self.affiliations.get(person_id, [])
+        matching = [
+            a for a in self.affiliations.get(person_id, [])
             if started(a["start_date"]) and not_ended(a["end_date"])
-        }
-        if len(current) == 1:
-            return PartyAtDate(next(iter(current)), "ok")
-        return PartyAtDate(None, "ambiguous" if current else "none")
+        ]
+        # Le cadrage exige des affiliations datées : une affiliation sans aucune date
+        # ne sert jamais automatiquement, elle est seulement proposée à la validation.
+        dated = {a["party_id"] for a in matching if a["start_date"] or a["end_date"]}
+        undated = {a["party_id"] for a in matching} - dated
+        if len(dated) == 1 and not undated:
+            return PartyAtDate(next(iter(dated)), "ok")
+        if len(dated) > 1:
+            return PartyAtDate(None, "ambiguous", tuple(sorted(dated | undated)))
+        if undated:
+            return PartyAtDate(None, "undated", tuple(sorted(dated | undated)))
+        return PartyAtDate(None, "none")
 
 
 def main() -> None:
