@@ -103,3 +103,8 @@ def test_manual_affiliation_wins_on_its_date_only():
     ref = Referential(PERSONS, AFFILIATIONS, manual)
     assert ref.party_at("Q2", "2026-09-13").party_id == "RN"
     assert ref.party_at("Q2", "2019-05-10").status == "undated"  # ailleurs, Wikidata reste la règle
+
+
+def test_manual_no_party_is_a_decision_not_a_gap():
+    manual = [{"person_id": "Q3", "party_id": "none", "start_date": "2026-10-15", "end_date": "2026-10-15", "source_url": ""}]
+    assert Referential(PERSONS, [], manual).party_at("Q3", "2026-10-15").status == "no_party"

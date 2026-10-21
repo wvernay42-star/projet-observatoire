@@ -259,6 +259,7 @@ function meter(k) {
 
 function partyText(f) {
   if (f.party.id) return f.party.short_name || f.party.name;
+  if (f.party.status === "no_party") return "sans étiquette";
   return "parti non renseigné";
 }
 

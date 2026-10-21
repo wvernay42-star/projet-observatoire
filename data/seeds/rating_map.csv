@@ -127,3 +127,15 @@ poligraph_fr,Manque de contexte,unrated,rule
 poligraph_fr,Satire,unrated,rule
 poligraph_fr,Montage,unrated,rule
 poligraph_fr,Invérifiable,unrated,rule
+les_decodeurs,FAUSSE LÉGENDE,mostly_false,human
+poligraph_fr,En partie vrai,half_true,human
+afp_factuel,Infondé,false,human
+afp_factuel,Image générée par IA,unrated,human
+afp_factuel,Vidéo manipulée,mostly_false,human
+tf1info_verificateurs,En partie vrai,half_true,human
+poligraph_fr,C’est plus compliqué,half_true,human
+afp_factuel,Partiellement faux,mostly_false,human
+20minutes_fakeoff,En partie vrai,mostly_true,human
+afp_factuel,1,unrated,human
+afp_factuel,Photo manipulée,mostly_false,human
+franceinfo_vraioufake,C’est plus compliqué,half_true,human

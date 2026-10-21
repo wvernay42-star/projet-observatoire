@@ -48,7 +48,8 @@ class Attribution:
 class PartyAtDate:
     party_id: str | None
     # 'ok', 'none' (aucune affiliation connue), 'ambiguous' (plusieurs en vigueur),
-    # 'undated' (seules des affiliations sans aucune date correspondent : à valider), 'no_date'
+    # 'undated' (seules des affiliations sans aucune date correspondent : à valider), 'no_date',
+    # 'no_party' (validé à la main : sans étiquette à cette date)
     status: str
     candidates: tuple[str, ...] = ()
 
@@ -130,7 +131,7 @@ class Referential:
                   if started(a["start_date"]) and not_ended(a["end_date"])}
         if len(manual) == 1:
             party_id = next(iter(manual))
-            return PartyAtDate(None, "none") if party_id == "none" else PartyAtDate(party_id, "ok")
+            return PartyAtDate(None, "no_party") if party_id == "none" else PartyAtDate(party_id, "ok")
 
         matching = [
             a for a in self.affiliations.get(person_id, [])

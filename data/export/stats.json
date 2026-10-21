@@ -2,17 +2,30 @@
  "scope_note": "Sur les déclarations vérifiées, pas sur l'ensemble des propos.",
  "person": {
   "Q104032664": {
-   "n_claims": 1,
+   "n_claims": 3,
    "verdicts": {
     "true": 1,
     "mostly_true": 0,
     "half_true": 0,
-    "mostly_false": 0,
+    "mostly_false": 2,
     "false": 0,
     "unrated": 0
    },
    "n_sources": 1,
    "last_review_date": "2026-06-11"
+  },
+  "Q106020252": {
+   "n_claims": 1,
+   "verdicts": {
+    "true": 0,
+    "mostly_true": 0,
+    "half_true": 0,
+    "mostly_false": 0,
+    "false": 1,
+    "unrated": 0
+   },
+   "n_sources": 1,
+   "last_review_date": "2025-08-27"
   },
   "Q106635078": {
    "n_claims": 1,
@@ -26,6 +39,32 @@
    },
    "n_sources": 1,
    "last_review_date": "2025-06-14"
+  },
+  "Q108823633": {
+   "n_claims": 3,
+   "verdicts": {
+    "true": 0,
+    "mostly_true": 2,
+    "half_true": 1,
+    "mostly_false": 0,
+    "false": 0,
+    "unrated": 0
+   },
+   "n_sources": 2,
+   "last_review_date": "2025-06-09"
+  },
+  "Q109043455": {
+   "n_claims": 1,
+   "verdicts": {
+    "true": 1,
+    "mostly_true": 0,
+    "half_true": 0,
+    "mostly_false": 0,
+    "false": 0,
+    "unrated": 0
+   },
+   "n_sources": 1,
+   "last_review_date": "2025-07-02"
   },
   "Q112448632": {
    "n_claims": 1,
@@ -53,7 +92,124 @@
    "n_sources": 1,
    "last_review_date": "2026-09-21"
   },
+  "Q112641115": {
+   "n_claims": 1,
+   "verdicts": {
+    "true": 0,
+    "mostly_true": 0,
+    "half_true": 1,
+    "mostly_false": 0,
+    "false": 0,
+    "unrated": 0
+   },
+   "n_sources": 1,
+   "last_review_date": "2024-11-13"
+  },
   "Q112650795": {
+   "n_claims": 3,
+   "verdicts": {
+    "true": 0,
+    "mostly_true": 0,
+    "half_true": 0,
+    "mostly_false": 3,
+    "false": 0,
+    "unrated": 0
+   },
+   "n_sources": 3,
+   "last_review_date": "2025-09-29"
+  },
+  "Q112654178": {
+   "n_claims": 1,
+   "verdicts": {
+    "true": 0,
+    "mostly_true": 0,
+    "half_true": 0,
+    "mostly_false": 0,
+    "false": 1,
+    "unrated": 0
+   },
+   "n_sources": 2,
+   "last_review_date": "2025-04-04"
+  },
+  "Q113015802": {
+   "n_claims": 1,
+   "verdicts": {
+    "true": 0,
+    "mostly_true": 0,
+    "half_true": 0,
+    "mostly_false": 1,
+    "false": 0,
+    "unrated": 0
+   },
+   "n_sources": 2,
+   "last_review_date": "2026-02-12"
+  },
+  "Q127270999": {
+   "n_claims": 1,
+   "verdicts": {
+    "true": 0,
+    "mostly_true": 1,
+    "half_true": 0,
+    "mostly_false": 0,
+    "false": 0,
+    "unrated": 0
+   },
+   "n_sources": 1,
+   "last_review_date": "2025-07-11"
+  },
+  "Q12927": {
+   "n_claims": 11,
+   "verdicts": {
+    "true": 1,
+    "mostly_true": 2,
+    "half_true": 1,
+    "mostly_false": 3,
+    "false": 4,
+    "unrated": 0
+   },
+   "n_sources": 4,
+   "last_review_date": "2026-09-17"
+  },
+  "Q12944": {
+   "n_claims": 1,
+   "verdicts": {
+    "true": 0,
+    "mostly_true": 0,
+    "half_true": 1,
+    "mostly_false": 0,
+    "false": 0,
+    "unrated": 0
+   },
+   "n_sources": 1,
+   "last_review_date": "2025-03-12"
+  },
+  "Q12961": {
+   "n_claims": 4,
+   "verdicts": {
+    "true": 0,
+    "mostly_true": 0,
+    "half_true": 2,
+    "mostly_false": 1,
+    "false": 1,
+    "unrated": 0
+   },
+   "n_sources": 1,
+   "last_review_date": "2025-09-30"
+  },
+  "Q12963": {
+   "n_claims": 10,
+   "verdicts": {
+    "true": 2,
+    "mostly_true": 0,
+    "half_true": 5,
+    "mostly_false": 2,
+    "false": 1,
+    "unrated": 0
+   },
+   "n_sources": 2,
+   "last_review_date": "2025-09-09"
+  },
+  "Q139887231": {
    "n_claims": 1,
    "verdicts": {
     "true": 0,
@@ -64,56 +220,17 @@
     "unrated": 0
    },
    "n_sources": 1,
-   "last_review_date": "2025-09-29"
-  },
-  "Q12927": {
-   "n_claims": 10,
-   "verdicts": {
-    "true": 1,
-    "mostly_true": 1,
-    "half_true": 0,
-    "mostly_false": 3,
-    "false": 4,
-    "unrated": 1
-   },
-   "n_sources": 4,
-   "last_review_date": "2026-09-17"
-  },
-  "Q12961": {
-   "n_claims": 4,
-   "verdicts": {
-    "true": 0,
-    "mostly_true": 0,
-    "half_true": 0,
-    "mostly_false": 1,
-    "false": 1,
-    "unrated": 2
-   },
-   "n_sources": 1,
-   "last_review_date": "2025-09-30"
-  },
-  "Q12963": {
-   "n_claims": 7,
-   "verdicts": {
-    "true": 1,
-    "mostly_true": 0,
-    "half_true": 0,
-    "mostly_false": 2,
-    "false": 1,
-    "unrated": 3
-   },
-   "n_sources": 2,
-   "last_review_date": "2025-09-09"
+   "last_review_date": "2024-12-19"
   },
   "Q157": {
    "n_claims": 1,
    "verdicts": {
     "true": 0,
     "mostly_true": 0,
-    "half_true": 0,
+    "half_true": 1,
     "mostly_false": 0,
     "false": 0,
-    "unrated": 1
+    "unrated": 0
    },
    "n_sources": 1,
    "last_review_date": "2026-09-01"
@@ -131,6 +248,45 @@
    "n_sources": 1,
    "last_review_date": "2026-07-18"
   },
+  "Q16007948": {
+   "n_claims": 2,
+   "verdicts": {
+    "true": 0,
+    "mostly_true": 1,
+    "half_true": 1,
+    "mostly_false": 0,
+    "false": 0,
+    "unrated": 0
+   },
+   "n_sources": 2,
+   "last_review_date": "2024-10-29"
+  },
+  "Q16666184": {
+   "n_claims": 1,
+   "verdicts": {
+    "true": 1,
+    "mostly_true": 0,
+    "half_true": 0,
+    "mostly_false": 0,
+    "false": 0,
+    "unrated": 0
+   },
+   "n_sources": 1,
+   "last_review_date": "2025-05-07"
+  },
+  "Q17485936": {
+   "n_claims": 1,
+   "verdicts": {
+    "true": 0,
+    "mostly_true": 1,
+    "half_true": 0,
+    "mostly_false": 0,
+    "false": 0,
+    "unrated": 0
+   },
+   "n_sources": 2,
+   "last_review_date": "2026-09-18"
+  },
   "Q17632457": {
    "n_claims": 1,
    "verdicts": {
@@ -145,17 +301,17 @@
    "last_review_date": "2025-04-08"
   },
   "Q1844180": {
-   "n_claims": 1,
+   "n_claims": 3,
    "verdicts": {
     "true": 0,
-    "mostly_true": 0,
+    "mostly_true": 1,
     "half_true": 0,
-    "mostly_false": 0,
+    "mostly_false": 1,
     "false": 0,
     "unrated": 1
    },
-   "n_sources": 2,
-   "last_review_date": "2025-02-20"
+   "n_sources": 3,
+   "last_review_date": "2025-09-18"
   },
   "Q20020731": {
    "n_claims": 1,
@@ -175,15 +331,28 @@
    "verdicts": {
     "true": 0,
     "mostly_true": 0,
-    "half_true": 0,
+    "half_true": 1,
     "mostly_false": 0,
     "false": 0,
-    "unrated": 1
+    "unrated": 0
    },
    "n_sources": 1,
    "last_review_date": "2026-09-03"
   },
   "Q21013136": {
+   "n_claims": 2,
+   "verdicts": {
+    "true": 0,
+    "mostly_true": 1,
+    "half_true": 1,
+    "mostly_false": 0,
+    "false": 0,
+    "unrated": 0
+   },
+   "n_sources": 2,
+   "last_review_date": "2025-08-22"
+  },
+  "Q21294609": {
    "n_claims": 1,
    "verdicts": {
     "true": 0,
@@ -194,32 +363,71 @@
     "unrated": 0
    },
    "n_sources": 1,
-   "last_review_date": "2025-01-10"
+   "last_review_date": "2024-12-02"
+  },
+  "Q2414678": {
+   "n_claims": 2,
+   "verdicts": {
+    "true": 0,
+    "mostly_true": 0,
+    "half_true": 0,
+    "mostly_false": 2,
+    "false": 0,
+    "unrated": 0
+   },
+   "n_sources": 2,
+   "last_review_date": "2025-06-30"
   },
   "Q27182": {
-   "n_claims": 6,
+   "n_claims": 7,
    "verdicts": {
     "true": 0,
     "mostly_true": 1,
-    "half_true": 0,
+    "half_true": 2,
     "mostly_false": 2,
     "false": 1,
-    "unrated": 2
+    "unrated": 1
    },
    "n_sources": 4,
    "last_review_date": "2026-03-13"
   },
+  "Q2829913": {
+   "n_claims": 1,
+   "verdicts": {
+    "true": 0,
+    "mostly_true": 1,
+    "half_true": 0,
+    "mostly_false": 0,
+    "false": 0,
+    "unrated": 0
+   },
+   "n_sources": 1,
+   "last_review_date": "2024-11-21"
+  },
+  "Q2834481": {
+   "n_claims": 1,
+   "verdicts": {
+    "true": 0,
+    "mostly_true": 1,
+    "half_true": 0,
+    "mostly_false": 0,
+    "false": 0,
+    "unrated": 0
+   },
+   "n_sources": 1,
+   "last_review_date": "2026-03-05"
+  },
   "Q2926942": {
-   "n_claims": 4,
+   "n_claims": 5,
    "verdicts": {
     "true": 1,
     "mostly_true": 1,
     "half_true": 0,
     "mostly_false": 1,
-    "false": 1,
+    "false": 2,
     "unrated": 0
    },
-   "n_sources": 3,
+   "n_sources": 4,
    "last_review_date": "2026-10-08"
   },
   "Q2942097": {
@@ -236,9 +444,9 @@
    "last_review_date": "2025-07-30"
   },
   "Q29570183": {
-   "n_claims": 1,
+   "n_claims": 2,
    "verdicts": {
-    "true": 0,
+    "true": 1,
     "mostly_true": 0,
     "half_true": 0,
     "mostly_false": 1,
@@ -249,27 +457,27 @@
    "last_review_date": "2026-09-15"
   },
   "Q29575749": {
-   "n_claims": 3,
+   "n_claims": 4,
    "verdicts": {
-    "true": 0,
+    "true": 1,
     "mostly_true": 2,
-    "half_true": 0,
+    "half_true": 1,
     "mostly_false": 0,
     "false": 0,
-    "unrated": 1
+    "unrated": 0
    },
    "n_sources": 2,
    "last_review_date": "2026-01-28"
   },
   "Q29917987": {
-   "n_claims": 5,
+   "n_claims": 7,
    "verdicts": {
     "true": 0,
-    "mostly_true": 3,
-    "half_true": 0,
+    "mostly_true": 5,
+    "half_true": 1,
     "mostly_false": 1,
     "false": 0,
-    "unrated": 1
+    "unrated": 0
    },
    "n_sources": 2,
    "last_review_date": "2026-09-02"
@@ -279,10 +487,10 @@
    "verdicts": {
     "true": 0,
     "mostly_true": 0,
-    "half_true": 0,
+    "half_true": 1,
     "mostly_false": 0,
     "false": 0,
-    "unrated": 1
+    "unrated": 0
    },
    "n_sources": 1,
    "last_review_date": "2025-12-01"
@@ -292,31 +500,18 @@
    "verdicts": {
     "true": 1,
     "mostly_true": 0,
-    "half_true": 0,
+    "half_true": 1,
     "mostly_false": 0,
     "false": 0,
-    "unrated": 1
+    "unrated": 0
    },
    "n_sources": 3,
    "last_review_date": "2026-04-09"
   },
   "Q30339350": {
-   "n_claims": 1,
+   "n_claims": 2,
    "verdicts": {
     "true": 0,
-    "mostly_true": 0,
-    "half_true": 0,
-    "mostly_false": 0,
-    "false": 0,
-    "unrated": 1
-   },
-   "n_sources": 1,
-   "last_review_date": "2026-04-09"
-  },
-  "Q30339422": {
-   "n_claims": 3,
-   "verdicts": {
-    "true": 1,
     "mostly_true": 1,
     "half_true": 0,
     "mostly_false": 0,
@@ -324,30 +519,108 @@
     "unrated": 1
    },
    "n_sources": 2,
+   "last_review_date": "2026-04-09"
+  },
+  "Q30339422": {
+   "n_claims": 4,
+   "verdicts": {
+    "true": 2,
+    "mostly_true": 1,
+    "half_true": 1,
+    "mostly_false": 0,
+    "false": 0,
+    "unrated": 0
+   },
+   "n_sources": 2,
    "last_review_date": "2026-04-29"
   },
   "Q30343128": {
+   "n_claims": 5,
+   "verdicts": {
+    "true": 1,
+    "mostly_true": 0,
+    "half_true": 2,
+    "mostly_false": 0,
+    "false": 2,
+    "unrated": 0
+   },
+   "n_sources": 3,
+   "last_review_date": "2026-10-16"
+  },
+  "Q30344388": {
    "n_claims": 2,
    "verdicts": {
     "true": 0,
     "mostly_true": 0,
     "half_true": 0,
     "mostly_false": 0,
-    "false": 1,
-    "unrated": 1
+    "false": 2,
+    "unrated": 0
    },
-   "n_sources": 3,
-   "last_review_date": "2026-10-16"
+   "n_sources": 1,
+   "last_review_date": "2025-10-24"
+  },
+  "Q30351657": {
+   "n_claims": 1,
+   "verdicts": {
+    "true": 1,
+    "mostly_true": 0,
+    "half_true": 0,
+    "mostly_false": 0,
+    "false": 0,
+    "unrated": 0
+   },
+   "n_sources": 1,
+   "last_review_date": "2025-06-23"
+  },
+  "Q30378878": {
+   "n_claims": 1,
+   "verdicts": {
+    "true": 0,
+    "mostly_true": 0,
+    "half_true": 0,
+    "mostly_false": 0,
+    "false": 1,
+    "unrated": 0
+   },
+   "n_sources": 1,
+   "last_review_date": "2025-08-28"
+  },
+  "Q30379800": {
+   "n_claims": 1,
+   "verdicts": {
+    "true": 0,
+    "mostly_true": 1,
+    "half_true": 0,
+    "mostly_false": 0,
+    "false": 0,
+    "unrated": 0
+   },
+   "n_sources": 1,
+   "last_review_date": "2025-02-18"
+  },
+  "Q30497082": {
+   "n_claims": 1,
+   "verdicts": {
+    "true": 0,
+    "mostly_true": 0,
+    "half_true": 1,
+    "mostly_false": 0,
+    "false": 0,
+    "unrated": 0
+   },
+   "n_sources": 1,
+   "last_review_date": "2024-11-19"
   },
   "Q3052772": {
    "n_claims": 3,
    "verdicts": {
     "true": 0,
     "mostly_true": 1,
-    "half_true": 0,
+    "half_true": 1,
     "mostly_false": 0,
     "false": 1,
-    "unrated": 1
+    "unrated": 0
    },
    "n_sources": 2,
    "last_review_date": "2026-09-02"
@@ -357,51 +630,51 @@
    "verdicts": {
     "true": 0,
     "mostly_true": 0,
-    "half_true": 0,
+    "half_true": 1,
     "mostly_false": 0,
     "false": 0,
-    "unrated": 1
+    "unrated": 0
    },
    "n_sources": 2,
    "last_review_date": "2026-09-25"
   },
   "Q3074223": {
-   "n_claims": 6,
+   "n_claims": 7,
    "verdicts": {
     "true": 0,
     "mostly_true": 0,
     "half_true": 0,
-    "mostly_false": 1,
+    "mostly_false": 3,
     "false": 4,
-    "unrated": 1
+    "unrated": 0
    },
    "n_sources": 2,
-   "last_review_date": "2026-02-26"
+   "last_review_date": "2026-08-07"
   },
   "Q3085763": {
-   "n_claims": 1,
+   "n_claims": 4,
    "verdicts": {
-    "true": 1,
-    "mostly_true": 0,
-    "half_true": 0,
+    "true": 2,
+    "mostly_true": 1,
+    "half_true": 1,
     "mostly_false": 0,
     "false": 0,
     "unrated": 0
    },
-   "n_sources": 1,
-   "last_review_date": "2025-04-10"
+   "n_sources": 2,
+   "last_review_date": "2026-06-04"
   },
   "Q3123610": {
-   "n_claims": 4,
+   "n_claims": 5,
    "verdicts": {
     "true": 1,
     "mostly_true": 1,
-    "half_true": 0,
+    "half_true": 1,
     "mostly_false": 2,
     "false": 0,
     "unrated": 0
    },
-   "n_sources": 3,
+   "n_sources": 4,
    "last_review_date": "2026-06-13"
   },
   "Q3167954": {
@@ -430,15 +703,28 @@
    "n_sources": 1,
    "last_review_date": "2026-01-28"
   },
+  "Q33106414": {
+   "n_claims": 1,
+   "verdicts": {
+    "true": 1,
+    "mostly_true": 0,
+    "half_true": 0,
+    "mostly_false": 0,
+    "false": 0,
+    "unrated": 0
+   },
+   "n_sources": 1,
+   "last_review_date": "2025-02-25"
+  },
   "Q33138734": {
    "n_claims": 1,
    "verdicts": {
     "true": 0,
     "mostly_true": 0,
-    "half_true": 0,
+    "half_true": 1,
     "mostly_false": 0,
     "false": 0,
-    "unrated": 1
+    "unrated": 0
    },
    "n_sources": 2,
    "last_review_date": "2026-09-02"
@@ -448,13 +734,26 @@
    "verdicts": {
     "true": 0,
     "mostly_true": 0,
-    "half_true": 0,
+    "half_true": 1,
     "mostly_false": 0,
     "false": 0,
-    "unrated": 1
+    "unrated": 0
    },
    "n_sources": 1,
    "last_review_date": "2025-03-09"
+  },
+  "Q3351018": {
+   "n_claims": 1,
+   "verdicts": {
+    "true": 1,
+    "mostly_true": 0,
+    "half_true": 0,
+    "mostly_false": 0,
+    "false": 0,
+    "unrated": 0
+   },
+   "n_sources": 1,
+   "last_review_date": "2025-09-02"
   },
   "Q3573907": {
    "n_claims": 1,
@@ -474,52 +773,52 @@
    "verdicts": {
     "true": 0,
     "mostly_true": 0,
-    "half_true": 0,
+    "half_true": 1,
     "mostly_false": 0,
     "false": 0,
-    "unrated": 1
+    "unrated": 0
    },
    "n_sources": 2,
    "last_review_date": "2026-08-27"
   },
   "Q40655898": {
-   "n_claims": 6,
+   "n_claims": 8,
    "verdicts": {
     "true": 0,
     "mostly_true": 0,
-    "half_true": 0,
-    "mostly_false": 4,
-    "false": 1,
-    "unrated": 1
+    "half_true": 1,
+    "mostly_false": 5,
+    "false": 2,
+    "unrated": 0
    },
    "n_sources": 3,
    "last_review_date": "2026-09-01"
   },
   "Q40871303": {
-   "n_claims": 1,
+   "n_claims": 2,
    "verdicts": {
     "true": 0,
-    "mostly_true": 0,
+    "mostly_true": 1,
     "half_true": 0,
     "mostly_false": 1,
     "false": 0,
     "unrated": 0
    },
-   "n_sources": 1,
+   "n_sources": 2,
    "last_review_date": "2026-02-13"
   },
   "Q41102798": {
-   "n_claims": 1,
+   "n_claims": 2,
    "verdicts": {
     "true": 0,
     "mostly_true": 0,
     "half_true": 0,
     "mostly_false": 0,
-    "false": 1,
+    "false": 2,
     "unrated": 0
    },
-   "n_sources": 2,
-   "last_review_date": "2025-03-06"
+   "n_sources": 3,
+   "last_review_date": "2026-07-24"
   },
   "Q438465": {
    "n_claims": 1,
@@ -534,18 +833,57 @@
    "n_sources": 1,
    "last_review_date": "2024-11-30"
   },
-  "Q46138822": {
+  "Q445705": {
    "n_claims": 2,
    "verdicts": {
     "true": 0,
     "mostly_true": 0,
     "half_true": 0,
+    "mostly_false": 1,
+    "false": 1,
+    "unrated": 0
+   },
+   "n_sources": 2,
+   "last_review_date": "2025-07-18"
+  },
+  "Q455023": {
+   "n_claims": 1,
+   "verdicts": {
+    "true": 0,
+    "mostly_true": 0,
+    "half_true": 1,
+    "mostly_false": 0,
+    "false": 0,
+    "unrated": 0
+   },
+   "n_sources": 1,
+   "last_review_date": "2025-05-06"
+  },
+  "Q46138822": {
+   "n_claims": 2,
+   "verdicts": {
+    "true": 0,
+    "mostly_true": 0,
+    "half_true": 1,
     "mostly_false": 0,
     "false": 1,
-    "unrated": 1
+    "unrated": 0
    },
    "n_sources": 1,
    "last_review_date": "2026-09-01"
+  },
+  "Q47502155": {
+   "n_claims": 1,
+   "verdicts": {
+    "true": 0,
+    "mostly_true": 0,
+    "half_true": 1,
+    "mostly_false": 0,
+    "false": 0,
+    "unrated": 0
+   },
+   "n_sources": 2,
+   "last_review_date": "2026-10-15"
   },
   "Q556149": {
    "n_claims": 2,
@@ -565,10 +903,10 @@
    "verdicts": {
     "true": 0,
     "mostly_true": 1,
-    "half_true": 0,
+    "half_true": 1,
     "mostly_false": 3,
     "false": 3,
-    "unrated": 2
+    "unrated": 1
    },
    "n_sources": 3,
    "last_review_date": "2026-10-13"
@@ -586,15 +924,28 @@
    "n_sources": 1,
    "last_review_date": "2025-03-12"
   },
-  "Q61769367": {
+  "Q60604481": {
    "n_claims": 1,
    "verdicts": {
     "true": 0,
     "mostly_true": 0,
     "half_true": 0,
+    "mostly_false": 1,
+    "false": 0,
+    "unrated": 0
+   },
+   "n_sources": 1,
+   "last_review_date": "2026-07-03"
+  },
+  "Q61769367": {
+   "n_claims": 1,
+   "verdicts": {
+    "true": 0,
+    "mostly_true": 0,
+    "half_true": 1,
     "mostly_false": 0,
     "false": 0,
-    "unrated": 1
+    "unrated": 0
    },
    "n_sources": 1,
    "last_review_date": "2025-05-30"
@@ -625,15 +976,41 @@
    "n_sources": 1,
    "last_review_date": "2024-11-25"
   },
+  "Q63764512": {
+   "n_claims": 1,
+   "verdicts": {
+    "true": 0,
+    "mostly_true": 0,
+    "half_true": 1,
+    "mostly_false": 0,
+    "false": 0,
+    "unrated": 0
+   },
+   "n_sources": 1,
+   "last_review_date": "2025-02-05"
+  },
+  "Q65585797": {
+   "n_claims": 1,
+   "verdicts": {
+    "true": 0,
+    "mostly_true": 0,
+    "half_true": 0,
+    "mostly_false": 0,
+    "false": 1,
+    "unrated": 0
+   },
+   "n_sources": 1,
+   "last_review_date": "2025-09-02"
+  },
   "Q82637284": {
-   "n_claims": 6,
+   "n_claims": 7,
    "verdicts": {
     "true": 0,
     "mostly_true": 0,
     "half_true": 0,
     "mostly_false": 2,
     "false": 4,
-    "unrated": 0
+    "unrated": 1
    },
    "n_sources": 3,
    "last_review_date": "2026-09-07"
@@ -643,10 +1020,10 @@
    "verdicts": {
     "true": 0,
     "mostly_true": 0,
-    "half_true": 0,
+    "half_true": 1,
     "mostly_false": 0,
     "false": 0,
-    "unrated": 1
+    "unrated": 0
    },
    "n_sources": 2,
    "last_review_date": "2026-10-17"
@@ -656,10 +1033,10 @@
    "verdicts": {
     "true": 0,
     "mostly_true": 0,
-    "half_true": 0,
+    "half_true": 2,
     "mostly_false": 0,
     "false": 0,
-    "unrated": 2
+    "unrated": 0
    },
    "n_sources": 1,
    "last_review_date": "2025-01-13"
@@ -667,131 +1044,196 @@
  },
  "party": {
   "Q108846587": {
-   "n_claims": 2,
+   "n_claims": 3,
    "verdicts": {
     "true": 0,
     "mostly_true": 1,
-    "half_true": 0,
+    "half_true": 1,
     "mostly_false": 1,
     "false": 0,
     "unrated": 0
    },
-   "n_sources": 1,
-   "last_review_date": "2025-07-30"
+   "n_sources": 3,
+   "last_review_date": "2026-08-27"
   },
   "Q109932430": {
-   "n_claims": 6,
+   "n_claims": 7,
    "verdicts": {
     "true": 0,
     "mostly_true": 0,
     "half_true": 0,
     "mostly_false": 2,
     "false": 4,
-    "unrated": 0
+    "unrated": 1
    },
    "n_sources": 3,
    "last_review_date": "2026-09-07"
   },
-  "Q127038760": {
+  "Q123528596": {
    "n_claims": 1,
    "verdicts": {
     "true": 0,
     "mostly_true": 0,
-    "half_true": 0,
+    "half_true": 1,
     "mostly_false": 0,
+    "false": 0,
+    "unrated": 0
+   },
+   "n_sources": 1,
+   "last_review_date": "2025-12-01"
+  },
+  "Q127038760": {
+   "n_claims": 3,
+   "verdicts": {
+    "true": 0,
+    "mostly_true": 1,
+    "half_true": 0,
+    "mostly_false": 1,
     "false": 0,
     "unrated": 1
    },
-   "n_sources": 2,
-   "last_review_date": "2025-02-20"
+   "n_sources": 3,
+   "last_review_date": "2025-09-18"
+  },
+  "Q12962": {
+   "n_claims": 4,
+   "verdicts": {
+    "true": 0,
+    "mostly_true": 0,
+    "half_true": 2,
+    "mostly_false": 1,
+    "false": 1,
+    "unrated": 0
+   },
+   "n_sources": 1,
+   "last_review_date": "2025-09-30"
+  },
+  "Q130517388": {
+   "n_claims": 1,
+   "verdicts": {
+    "true": 0,
+    "mostly_true": 1,
+    "half_true": 0,
+    "mostly_false": 0,
+    "false": 0,
+    "unrated": 0
+   },
+   "n_sources": 1,
+   "last_review_date": "2025-07-11"
   },
   "Q170972": {
    "n_claims": 1,
    "verdicts": {
     "true": 0,
     "mostly_true": 0,
-    "half_true": 0,
+    "half_true": 1,
     "mostly_false": 0,
     "false": 0,
-    "unrated": 1
+    "unrated": 0
    },
    "n_sources": 1,
    "last_review_date": "2026-09-01"
   },
-  "Q20012759": {
-   "n_claims": 4,
+  "Q173152": {
+   "n_claims": 2,
    "verdicts": {
-    "true": 1,
-    "mostly_true": 1,
-    "half_true": 0,
-    "mostly_false": 1,
-    "false": 1,
+    "true": 0,
+    "mostly_true": 0,
+    "half_true": 2,
+    "mostly_false": 0,
+    "false": 0,
     "unrated": 0
    },
-   "n_sources": 3,
+   "n_sources": 1,
+   "last_review_date": "2025-01-13"
+  },
+  "Q192821": {
+   "n_claims": 1,
+   "verdicts": {
+    "true": 1,
+    "mostly_true": 0,
+    "half_true": 0,
+    "mostly_false": 0,
+    "false": 0,
+    "unrated": 0
+   },
+   "n_sources": 1,
+   "last_review_date": "2025-04-10"
+  },
+  "Q20012759": {
+   "n_claims": 17,
+   "verdicts": {
+    "true": 2,
+    "mostly_true": 3,
+    "half_true": 1,
+    "mostly_false": 7,
+    "false": 3,
+    "unrated": 1
+   },
+   "n_sources": 4,
    "last_review_date": "2026-10-08"
   },
   "Q205150": {
-   "n_claims": 17,
+   "n_claims": 25,
    "verdicts": {
     "true": 1,
-    "mostly_true": 1,
-    "half_true": 0,
-    "mostly_false": 7,
-    "false": 6,
-    "unrated": 2
+    "mostly_true": 2,
+    "half_true": 4,
+    "mostly_false": 9,
+    "false": 9,
+    "unrated": 0
    },
    "n_sources": 4,
    "last_review_date": "2026-09-17"
   },
   "Q23731823": {
-   "n_claims": 11,
+   "n_claims": 17,
    "verdicts": {
-    "true": 2,
-    "mostly_true": 2,
-    "half_true": 0,
+    "true": 5,
+    "mostly_true": 3,
+    "half_true": 4,
     "mostly_false": 2,
-    "false": 1,
-    "unrated": 4
+    "false": 2,
+    "unrated": 1
    },
    "n_sources": 4,
    "last_review_date": "2026-09-15"
   },
   "Q27978402": {
-   "n_claims": 3,
+   "n_claims": 18,
    "verdicts": {
-    "true": 0,
-    "mostly_true": 0,
-    "half_true": 0,
-    "mostly_false": 0,
-    "false": 2,
+    "true": 1,
+    "mostly_true": 3,
+    "half_true": 4,
+    "mostly_false": 3,
+    "false": 6,
     "unrated": 1
    },
-   "n_sources": 3,
+   "n_sources": 4,
    "last_review_date": "2026-10-16"
   },
   "Q41330182": {
-   "n_claims": 6,
+   "n_claims": 7,
    "verdicts": {
     "true": 0,
     "mostly_true": 0,
     "half_true": 0,
-    "mostly_false": 1,
+    "mostly_false": 3,
     "false": 4,
-    "unrated": 1
+    "unrated": 0
    },
    "n_sources": 2,
-   "last_review_date": "2026-02-26"
+   "last_review_date": "2026-08-07"
   },
   "Q58329311": {
    "n_claims": 1,
    "verdicts": {
     "true": 0,
     "mostly_true": 0,
-    "half_true": 0,
+    "half_true": 1,
     "mostly_false": 0,
     "false": 0,
-    "unrated": 1
+    "unrated": 0
    },
    "n_sources": 2,
    "last_review_date": "2026-09-25"
@@ -809,18 +1251,44 @@
    "n_sources": 1,
    "last_review_date": "2026-08-24"
   },
+  "Q587370": {
+   "n_claims": 9,
+   "verdicts": {
+    "true": 2,
+    "mostly_true": 0,
+    "half_true": 4,
+    "mostly_false": 2,
+    "false": 1,
+    "unrated": 0
+   },
+   "n_sources": 3,
+   "last_review_date": "2026-04-09"
+  },
   "Q613786": {
-   "n_claims": 5,
+   "n_claims": 8,
    "verdicts": {
     "true": 0,
-    "mostly_true": 3,
-    "half_true": 0,
+    "mostly_true": 6,
+    "half_true": 1,
     "mostly_false": 1,
     "false": 0,
-    "unrated": 1
+    "unrated": 0
    },
    "n_sources": 2,
    "last_review_date": "2026-09-02"
+  },
+  "Q82892": {
+   "n_claims": 1,
+   "verdicts": {
+    "true": 0,
+    "mostly_true": 0,
+    "half_true": 0,
+    "mostly_false": 1,
+    "false": 0,
+    "unrated": 0
+   },
+   "n_sources": 1,
+   "last_review_date": "2025-06-18"
   },
   "Q922707": {
    "n_claims": 1,
@@ -838,78 +1306,91 @@
  },
  "country": {
   "FR": {
-   "n_claims": 119,
+   "n_claims": 186,
    "verdicts": {
-    "true": 12,
-    "mostly_true": 15,
-    "half_true": 0,
-    "mostly_false": 33,
-    "false": 27,
-    "unrated": 32
+    "true": 23,
+    "mostly_true": 31,
+    "half_true": 42,
+    "mostly_false": 47,
+    "false": 38,
+    "unrated": 5
    },
    "n_sources": 4,
    "last_review_date": "2026-10-17"
   }
  },
  "month": {
+  "2024-10": {
+   "n_claims": 5,
+   "verdicts": {
+    "true": 0,
+    "mostly_true": 1,
+    "half_true": 3,
+    "mostly_false": 0,
+    "false": 1,
+    "unrated": 0
+   },
+   "n_sources": 2,
+   "last_review_date": "2024-11-19"
+  },
   "2024-11": {
-   "n_claims": 6,
+   "n_claims": 12,
    "verdicts": {
     "true": 1,
-    "mostly_true": 2,
-    "half_true": 0,
-    "mostly_false": 2,
+    "mostly_true": 6,
+    "half_true": 1,
+    "mostly_false": 4,
     "false": 0,
-    "unrated": 1
+    "unrated": 0
    },
-   "n_sources": 1,
-   "last_review_date": "2024-11-30"
+   "n_sources": 2,
+   "last_review_date": "2024-12-02"
   },
   "2024-12": {
-   "n_claims": 4,
+   "n_claims": 8,
    "verdicts": {
-    "true": 1,
-    "mostly_true": 0,
-    "half_true": 0,
-    "mostly_false": 2,
+    "true": 2,
+    "mostly_true": 2,
+    "half_true": 1,
+    "mostly_false": 3,
     "false": 0,
-    "unrated": 1
+    "unrated": 0
    },
    "n_sources": 3,
    "last_review_date": "2024-12-30"
   },
   "2025-01": {
-   "n_claims": 8,
+   "n_claims": 11,
    "verdicts": {
     "true": 1,
-    "mostly_true": 2,
-    "half_true": 0,
-    "mostly_false": 0,
+    "mostly_true": 3,
+    "half_true": 2,
+    "mostly_false": 1,
     "false": 3,
-    "unrated": 2
+    "unrated": 1
    },
    "n_sources": 4,
    "last_review_date": "2025-02-20"
   },
   "2025-02": {
-   "n_claims": 7,
+   "n_claims": 13,
    "verdicts": {
-    "true": 0,
-    "mostly_true": 2,
-    "half_true": 0,
-    "mostly_false": 2,
-    "false": 1,
-    "unrated": 2
+    "true": 1,
+    "mostly_true": 5,
+    "half_true": 2,
+    "mostly_false": 3,
+    "false": 2,
+    "unrated": 0
    },
    "n_sources": 3,
    "last_review_date": "2025-03-09"
   },
   "2025-03": {
-   "n_claims": 6,
+   "n_claims": 8,
    "verdicts": {
     "true": 0,
     "mostly_true": 1,
-    "half_true": 0,
+    "half_true": 2,
     "mostly_false": 2,
     "false": 3,
     "unrated": 0
@@ -918,100 +1399,100 @@
    "last_review_date": "2025-04-08"
   },
   "2025-04": {
-   "n_claims": 7,
+   "n_claims": 8,
    "verdicts": {
     "true": 3,
     "mostly_true": 0,
-    "half_true": 0,
+    "half_true": 2,
     "mostly_false": 0,
-    "false": 2,
-    "unrated": 2
+    "false": 3,
+    "unrated": 0
    },
-   "n_sources": 2,
+   "n_sources": 3,
    "last_review_date": "2025-04-29"
   },
   "2025-05": {
-   "n_claims": 1,
+   "n_claims": 7,
    "verdicts": {
-    "true": 0,
+    "true": 2,
     "mostly_true": 0,
-    "half_true": 0,
-    "mostly_false": 0,
+    "half_true": 4,
+    "mostly_false": 1,
     "false": 0,
-    "unrated": 1
+    "unrated": 0
    },
-   "n_sources": 1,
+   "n_sources": 3,
    "last_review_date": "2025-05-30"
   },
   "2025-06": {
-   "n_claims": 2,
+   "n_claims": 9,
    "verdicts": {
-    "true": 0,
-    "mostly_true": 0,
-    "half_true": 0,
-    "mostly_false": 1,
-    "false": 1,
+    "true": 2,
+    "mostly_true": 1,
+    "half_true": 1,
+    "mostly_false": 2,
+    "false": 3,
     "unrated": 0
    },
-   "n_sources": 2,
-   "last_review_date": "2025-06-18"
+   "n_sources": 4,
+   "last_review_date": "2025-06-30"
   },
   "2025-07": {
-   "n_claims": 2,
+   "n_claims": 7,
    "verdicts": {
-    "true": 0,
-    "mostly_true": 1,
+    "true": 2,
+    "mostly_true": 2,
     "half_true": 0,
-    "mostly_false": 1,
+    "mostly_false": 3,
     "false": 0,
     "unrated": 0
    },
-   "n_sources": 2,
+   "n_sources": 3,
    "last_review_date": "2025-07-30"
   },
   "2025-08": {
-   "n_claims": 5,
+   "n_claims": 9,
    "verdicts": {
     "true": 0,
     "mostly_true": 1,
-    "half_true": 0,
+    "half_true": 3,
     "mostly_false": 2,
-    "false": 0,
-    "unrated": 2
+    "false": 3,
+    "unrated": 0
    },
    "n_sources": 3,
    "last_review_date": "2025-09-03"
   },
   "2025-09": {
-   "n_claims": 5,
+   "n_claims": 8,
    "verdicts": {
-    "true": 1,
+    "true": 2,
     "mostly_true": 2,
     "half_true": 0,
-    "mostly_false": 2,
-    "false": 0,
+    "mostly_false": 3,
+    "false": 1,
     "unrated": 0
    },
-   "n_sources": 1,
+   "n_sources": 2,
    "last_review_date": "2025-09-30"
   },
   "2025-10": {
-   "n_claims": 5,
+   "n_claims": 7,
    "verdicts": {
     "true": 0,
     "mostly_true": 0,
-    "half_true": 0,
-    "mostly_false": 2,
-    "false": 2,
-    "unrated": 1
+    "half_true": 1,
+    "mostly_false": 3,
+    "false": 3,
+    "unrated": 0
    },
    "n_sources": 2,
-   "last_review_date": "2025-10-31"
+   "last_review_date": "2025-11-20"
   },
   "2025-11": {
-   "n_claims": 1,
+   "n_claims": 2,
    "verdicts": {
-    "true": 0,
+    "true": 1,
     "mostly_true": 0,
     "half_true": 0,
     "mostly_false": 0,
@@ -1019,56 +1500,56 @@
     "unrated": 0
    },
    "n_sources": 1,
-   "last_review_date": "2025-11-13"
+   "last_review_date": "2025-11-26"
   },
   "2025-12": {
    "n_claims": 3,
    "verdicts": {
     "true": 0,
     "mostly_true": 0,
-    "half_true": 0,
+    "half_true": 2,
     "mostly_false": 0,
     "false": 1,
-    "unrated": 2
+    "unrated": 0
    },
    "n_sources": 1,
    "last_review_date": "2025-12-10"
   },
   "2026-01": {
-   "n_claims": 6,
+   "n_claims": 7,
    "verdicts": {
     "true": 1,
     "mostly_true": 1,
-    "half_true": 0,
+    "half_true": 1,
     "mostly_false": 3,
     "false": 0,
     "unrated": 1
    },
    "n_sources": 4,
-   "last_review_date": "2026-02-05"
+   "last_review_date": "2026-03-05"
   },
   "2026-02": {
-   "n_claims": 8,
+   "n_claims": 10,
    "verdicts": {
     "true": 1,
-    "mostly_true": 0,
-    "half_true": 0,
-    "mostly_false": 2,
+    "mostly_true": 1,
+    "half_true": 1,
+    "mostly_false": 3,
     "false": 4,
-    "unrated": 1
+    "unrated": 0
    },
    "n_sources": 3,
    "last_review_date": "2026-02-26"
   },
   "2026-03": {
-   "n_claims": 8,
+   "n_claims": 9,
    "verdicts": {
     "true": 0,
-    "mostly_true": 1,
-    "half_true": 0,
+    "mostly_true": 2,
+    "half_true": 1,
     "mostly_false": 2,
     "false": 2,
-    "unrated": 3
+    "unrated": 2
    },
    "n_sources": 4,
    "last_review_date": "2026-03-27"
@@ -1078,10 +1559,10 @@
    "verdicts": {
     "true": 0,
     "mostly_true": 0,
-    "half_true": 0,
+    "half_true": 2,
     "mostly_false": 1,
     "false": 1,
-    "unrated": 3
+    "unrated": 1
    },
    "n_sources": 4,
    "last_review_date": "2026-04-29"
@@ -1100,11 +1581,11 @@
    "last_review_date": "2026-06-02"
   },
   "2026-06": {
-   "n_claims": 2,
+   "n_claims": 3,
    "verdicts": {
     "true": 1,
     "mostly_true": 0,
-    "half_true": 0,
+    "half_true": 1,
     "mostly_false": 1,
     "false": 0,
     "unrated": 0
@@ -1113,53 +1594,53 @@
    "last_review_date": "2026-06-13"
   },
   "2026-07": {
-   "n_claims": 3,
+   "n_claims": 5,
    "verdicts": {
     "true": 0,
     "mostly_true": 0,
-    "half_true": 0,
-    "mostly_false": 1,
-    "false": 1,
-    "unrated": 1
+    "half_true": 1,
+    "mostly_false": 2,
+    "false": 2,
+    "unrated": 0
    },
    "n_sources": 2,
-   "last_review_date": "2026-07-18"
+   "last_review_date": "2026-07-24"
   },
   "2026-08": {
-   "n_claims": 7,
+   "n_claims": 8,
    "verdicts": {
     "true": 0,
     "mostly_true": 1,
-    "half_true": 0,
-    "mostly_false": 3,
+    "half_true": 2,
+    "mostly_false": 4,
     "false": 1,
-    "unrated": 2
+    "unrated": 0
    },
    "n_sources": 4,
    "last_review_date": "2026-09-02"
   },
   "2026-09": {
-   "n_claims": 12,
+   "n_claims": 14,
    "verdicts": {
     "true": 1,
-    "mostly_true": 1,
-    "half_true": 0,
+    "mostly_true": 2,
+    "half_true": 5,
     "mostly_false": 3,
     "false": 3,
-    "unrated": 4
+    "unrated": 0
    },
    "n_sources": 3,
    "last_review_date": "2026-09-25"
   },
   "2026-10": {
-   "n_claims": 5,
+   "n_claims": 7,
    "verdicts": {
-    "true": 1,
+    "true": 2,
     "mostly_true": 0,
-    "half_true": 0,
+    "half_true": 4,
     "mostly_false": 1,
     "false": 0,
-    "unrated": 3
+    "unrated": 0
    },
    "n_sources": 3,
    "last_review_date": "2026-10-17"

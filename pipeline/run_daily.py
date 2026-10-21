@@ -150,7 +150,7 @@ def write_queues(conn: sqlite3.Connection, ref: Referential, out_dir: Path = QUE
                                  "candidates": [{"id": q, "name": ref.full_names.get(q, q)} for q in candidates]})
         else:
             party = ref.party_at(c["person_id"], c["claim_date"])
-            if party.status != "ok":
+            if party.status not in ("ok", "no_party"):
                 parties.append({**base, "person": {"id": c["person_id"], "name": ref.full_names.get(c["person_id"])},
                                 "status": party.status, "candidates": list(party.candidates)})
     ratings = [{"source_id": s, "rating_original": o, "occurrences": n} for s, o, n in conn.execute(
@@ -165,12 +165,13 @@ def write_queues(conn: sqlite3.Connection, ref: Referential, out_dir: Path = QUE
 
 
 def silent_connectors(conn: sqlite3.Connection) -> list[str]:
-    """Connecteurs sans nouvelle vérification sur les 3 dernières exécutions (format de site changé ?)."""
+    """Connecteurs sans nouvelle vérification sur les 3 derniers jours d'exécution (format changé ?)."""
     silent = []
     for (name,) in conn.execute("SELECT DISTINCT connector FROM runs").fetchall():
-        last = conn.execute("SELECT new_reviews, errors FROM runs WHERE connector = ? ORDER BY id DESC LIMIT ?",
-                            (name, ZERO_ALERT_RUNS)).fetchall()
-        if len(last) == ZERO_ALERT_RUNS and all(n == 0 for n, _ in last):
+        days = conn.execute(
+            "SELECT substr(started_at, 1, 10) AS day, SUM(new_reviews) FROM runs WHERE connector = ?"
+            " GROUP BY day ORDER BY day DESC LIMIT ?", (name, ZERO_ALERT_RUNS)).fetchall()
+        if len(days) == ZERO_ALERT_RUNS and all(n == 0 for _, n in days):
             silent.append(name)
     return silent
 
@@ -227,7 +228,7 @@ def main() -> None:
         print(f"File de validation : {q['attributions']} attributions, {q['parties']} partis, {q['ratings']} libellés")
         print(f"Exportées (data/export/facts.json) : {report['exported']}")
     if report["silent_connectors"]:
-        print(f"ALERTE : aucun résultat nouveau depuis {ZERO_ALERT_RUNS} exécutions : {report['silent_connectors']}")
+        print(f"ALERTE : aucun résultat nouveau depuis {ZERO_ALERT_RUNS} jours : {report['silent_connectors']}")
 
 
 if __name__ == "__main__":
