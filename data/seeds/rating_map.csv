@@ -1,1 +1,21 @@
 source_id,rating_original,rating_normalized,decided_by
+afp_factuel,Vrai,true,rule
+afp_factuel,C'est vrai,true,rule
+afp_factuel,Faux,false,rule
+afp_factuel,C'est faux,false,rule
+les_decodeurs,Vrai,true,rule
+les_decodeurs,C'est vrai,true,rule
+les_decodeurs,Faux,false,rule
+les_decodeurs,C'est faux,false,rule
+liberation_checknews,Vrai,true,rule
+liberation_checknews,C'est vrai,true,rule
+liberation_checknews,Faux,false,rule
+liberation_checknews,C'est faux,false,rule
+franceinfo_vraioufake,Vrai,true,rule
+franceinfo_vraioufake,C'est vrai,true,rule
+franceinfo_vraioufake,Faux,false,rule
+franceinfo_vraioufake,C'est faux,false,rule
+les_surligneurs,Vrai,true,rule
+les_surligneurs,C'est vrai,true,rule
+les_surligneurs,Faux,false,rule
+les_surligneurs,C'est faux,false,rule

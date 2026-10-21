@@ -1,0 +1,15 @@
+source_id,rating_original,proposed_normalized,rationale,occurrences
+les_decodeurs,C’EST PLUS COMPLIQUÉ,half_true,Libellé intermédiaire des Décodeurs (ratingValue 1 sur 2),4
+les_decodeurs,C'est compliqué,half_true,Variante du précédent,1
+les_decodeurs,Très exagéré,mostly_false,"Exagération forte, sans être inventé",1
+les_decodeurs,TROMPEUR,mostly_false,Correspond à l'exemple « Trompeur » du cadrage,1
+les_decodeurs,Discutable,half_true,"ratingValue 1 sur 2, comme « C'est plus compliqué »",1
+les_decodeurs,DOUTEUX,unrated,"Exprime un doute, pas une conclusion vrai/faux",1
+les_decodeurs,INFONDE,false,ratingValue 0 sur 2,1
+les_decodeurs,FAUSSE LÉGENDE,unrated,Image sortie de son contexte : catégorie « Montage / contexte »,1
+les_decodeurs,FAUX (c'est une arnaque),false,Faux suivi d'une précision,1
+les_decodeurs,0,unrated,"Libellé technique, pas un verdict",1
+les_decodeurs,Ce sondage n'existe pas.,false,Phrase équivalant à « inventé »,1
+les_decodeurs,"Les jeux concours se multiplient sur Facebook et, pourtant, il s’agit souvent d’escroqueries.",unrated,"Phrase explicative, pas un verdict",1
+afp_factuel,Peu crédible,mostly_false,Doute fort sans réfutation complète,1
+les_surligneurs,*,unrated,"Les Surligneurs publient une phrase explicative au lieu d'un verdict ; ratingValue (1, 2, 4) sans échelle déclarée",14

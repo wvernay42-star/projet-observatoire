@@ -6,4 +6,5 @@ __pycache__/
 .ruff_cache/
 data/observatoire.db
 data/review_queue/*
+!data/review_queue/rating_proposals.csv
 !data/review_queue/.gitkeep
