@@ -12,10 +12,38 @@ Les décisions durables sont aussi consignées dans [decisions.md](decisions.md)
 | 2 | connectors/base.py + jsonld_crawler (AFP Factuel) | ✅ base.py ; crawler abandonné au profit de google_factcheck (21/10) |
 | 3 | rating_map.csv + ratings.py | ✅ fait (21/10) — 15 propositions à valider |
 | 4 | persons / parties / affiliations + attribute.py | ✅ fait (21/10) — 67 724 personnes, partis à valider pour beaucoup |
-| 5 | Autres sites FR, google_factcheck, datacommons_feed, dedupe.py | 🟡 google_factcheck + datacommons_feed faits ; dedupe.py à faire |
-| 6 | run_daily.py + export.py, routine sur 90 jours | ⏳ |
+| 5 | Autres sites FR, google_factcheck, datacommons_feed, dedupe.py | ✅ fait (21/10) |
+| 6 | run_daily.py + export.py, routine sur 90 jours | ✅ fait (21/10) — 24 entrées exportées |
 | 7 | web/beta/index.html (maquette A) | ⏳ |
 | — | Page web de validation (maquette faite) | ⏳ |
+
+## 2026-10-21 (nuit, suite) — dédoublonnage, routine quotidienne, export
+
+**Question du porteur : « trop peu de vrais »**. Les verdicts ne sont pas modifiables (règle 1).
+Analyse : l'écart vient des rumeurs virales (AFP, 20 Minutes : 180 faux / 4 vrais sur 211),
+qui ne sont rattachées à personne et ne seront jamais affichées. Sur les 31 déclarations de
+personnalités : 6 vrai/plutôt vrai, 14 faux/plutôt faux, 11 intermédiaires en attente de
+validation (« En partie vrai », « C'est plus compliqué »). Leviers légitimes : valider ces
+libellés, ajouter des sources à échelle complète (module A), afficher le dénominateur (module C).
+
+**Code** :
+- `normalize.py` : dates à leur précision, horodatages UTC ramenés au jour de Paris
+  (« 2026-10-12T22:00:00Z » = 13 octobre), repli sur la date de vérification.
+- `dedupe.py` : même personne, ±3 jours, similarité ≥ 80, ou ≥ 55 avec les mêmes chiffres
+  (cas Le Pen 13/09, « 70 % éligibles / 11 % » formulé différemment par franceinfo et TF1 Info).
+  Verdict d'un claim = le plus fréquent ; égalité → non classable.
+- `run_daily.py` : collecte depuis le dernier succès − 7 jours, upsert par URL, claims recalculés
+  à chaque fois (idempotent), validations manuelles appliquées
+  (`data/validations/attributions.csv`, `data/seeds/affiliations_manual.csv`, `rating_map.csv`),
+  files de validation dans `data/review_queue/*.json`, alerte après 3 exécutions sans nouveauté.
+- `export.py` : `data/export/facts.json` + `stats.json` (par personne, parti, pays, mois).
+
+**Exécution réelle** (`python -m pipeline.run_daily --days 90`) :
+- 246 vérifications (Google 242, Data Commons 4), 2ᵉ exécution : 0 nouvelle (idempotence OK).
+- Claims : 24 exportés (`auto_sure`), 6 attributions à valider, 215 écartés.
+- Verdicts exportés : non classable 9 (en attente de libellé), plutôt faux 7, faux 4, vrai 2,
+  plutôt vrai 2. Parti sûr pour 15 entrées sur 24.
+- File de validation : 6 attributions, 9 partis, 7 libellés.
 
 ## 2026-10-21 (nuit) — connecteur google_factcheck, premières données récentes
 

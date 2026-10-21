@@ -1,0 +1,134 @@
+[
+ {
+  "claim_id": "c_8c077da6c4a45923",
+  "claim_text": "Les retraites et la santé à l'origine de 80 % de la hausse des dépenses publiques depuis 50 ans",
+  "claim_date": "2026-10-15",
+  "reviews": [
+   {
+    "url": "https://www.tf1info.fr/politique/verif-les-retraites-et-la-sante-a-l-origine-de-80-de-la-hausse-des-depenses-publiques-vraiment-2470134.html",
+    "source_id": "tf1info_verificateurs",
+    "claimant": "David Amiel, ministre de l'Action et des comptes publics",
+    "rating_original": "En partie vrai",
+    "rating_normalized": "unrated",
+    "review_date": "2026-10-15"
+   }
+  ],
+  "reason": "nom retrouvé après retrait du contexte",
+  "candidates": [
+   {
+    "id": "Q47502155",
+    "name": "David Amiel"
+   }
+  ]
+ },
+ {
+  "claim_id": "c_09ff534ca14317ef",
+  "claim_text": "La France est le deuxième pays au monde le plus touché par le cancer du sein",
+  "claim_date": "2026-10-12",
+  "reviews": [
+   {
+    "url": "https://www.tf1info.fr/sante/verif-avec-un-million-de-femmes-concernees-la-france-est-elle-le-deuxieme-pays-au-monde-le-plus-touche-par-le-cancer-du-sein-comme-le-dit-mathilde-panot-2469502.html",
+    "source_id": "tf1info_verificateurs",
+    "claimant": "Mathilde Panot, députée La France insoumise",
+    "rating_original": "Vrai",
+    "rating_normalized": "true",
+    "review_date": "2026-10-12"
+   }
+  ],
+  "reason": "nom retrouvé après retrait du contexte",
+  "candidates": [
+   {
+    "id": "Q30343128",
+    "name": "Mathilde Panot"
+   }
+  ]
+ },
+ {
+  "claim_id": "c_1be99f2ee985ff4b",
+  "claim_text": "La France détient le record d'Europe des dividendes versés par les entreprises",
+  "claim_date": "2026-09-18",
+  "reviews": [
+   {
+    "url": "https://www.tf1info.fr/economie/verif-la-france-detient-elle-le-record-d-europe-de-dividendes-verses-par-les-entreprises-comme-le-dit-eric-coquerel-de-lfi-2464935.html",
+    "source_id": "tf1info_verificateurs",
+    "claimant": "Eric Coquerel, député LFI de Seine-Saint-Denis",
+    "rating_original": "Plutôt vrai",
+    "rating_normalized": "mostly_true",
+    "review_date": "2026-09-18"
+   }
+  ],
+  "reason": "nom retrouvé après retrait du contexte",
+  "candidates": [
+   {
+    "id": "Q17485936",
+    "name": "Éric Coquerel"
+   }
+  ]
+ },
+ {
+  "claim_id": "c_e4eb0075c71fba49",
+  "claim_text": "Le blocage des prix du carburant ne coûte pas un seul euro d'argent public",
+  "claim_date": "2026-09-10",
+  "reviews": [
+   {
+    "url": "https://www.tf1info.fr/politique/verif-blocage-des-prix-du-carburant-une-mesure-qui-ne-coute-pas-un-seul-euro-d-argent-public-vraiment-2463427.html",
+    "source_id": "tf1info_verificateurs",
+    "claimant": "Mathilde Panot, députée LFI",
+    "rating_original": "En partie vrai",
+    "rating_normalized": "unrated",
+    "review_date": "2026-09-10"
+   }
+  ],
+  "reason": "nom retrouvé après retrait du contexte",
+  "candidates": [
+   {
+    "id": "Q30343128",
+    "name": "Mathilde Panot"
+   }
+  ]
+ },
+ {
+  "claim_id": "c_7d175f62dc5f0a41",
+  "claim_text": "La France refuse d'acheter des Canadair français",
+  "claim_date": "2026-08-07",
+  "reviews": [
+   {
+    "url": "https://www.tf1info.fr/politique/verif-pour-lutter-contre-les-feux-de-foret-la-france-refuse-t-elle-d-acheter-des-canadair-francais-2456957.html",
+    "source_id": "tf1info_verificateurs",
+    "claimant": "Florian Philippot, président des Patriotes",
+    "rating_original": "Plutôt faux",
+    "rating_normalized": "mostly_false",
+    "review_date": "2026-08-07"
+   }
+  ],
+  "reason": "nom retrouvé après retrait du contexte",
+  "candidates": [
+   {
+    "id": "Q3074223",
+    "name": "Florian Philippot"
+   }
+  ]
+ },
+ {
+  "claim_id": "c_a57446c5d4ef54fd",
+  "claim_text": "Les éoliennes sont en réalité très polluantes à cause de leur moteur thermique",
+  "claim_date": "2026-07-24",
+  "reviews": [
+   {
+    "url": "https://www.tf1info.fr/environnement-ecologie/verif-pollution-les-eoliennes-eolien-fonctionnent-elles-vraiment-grace-a-un-moteur-thermique-2454858.html",
+    "source_id": "tf1info_verificateurs",
+    "claimant": "Julien Odoul, député RN",
+    "rating_original": "Faux",
+    "rating_normalized": "false",
+    "review_date": "2026-07-24"
+   }
+  ],
+  "reason": "nom retrouvé après retrait du contexte",
+  "candidates": [
+   {
+    "id": "Q41102798",
+    "name": "Julien Odoul"
+   }
+  ]
+ }
+]

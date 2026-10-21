@@ -1,0 +1,755 @@
+[
+ {
+  "id": "c_c511b9d7034349a4",
+  "person": {
+   "id": "Q98234202",
+   "name": "Philippe Baptiste"
+  },
+  "party": {
+   "id": null,
+   "name": null,
+   "short_name": null,
+   "status": "none"
+  },
+  "claim_text": "Seuls 38 bacheliers \"n'ont pas eu de solution\" sur Parcoursup en 2025",
+  "claim_date": "2026-10-14",
+  "date_precision": "day",
+  "date_is_fallback": false,
+  "country": "FR",
+  "attribution_status": "auto_sure",
+  "verdict": "unrated",
+  "reviews": [
+   {
+    "source_id": "franceinfo_vraioufake",
+    "source_name": "franceinfo Vrai ou Fake",
+    "url": "https://www.franceinfo.fr/vrai-ou-fake/vrai-ou-faux-n-y-a-t-il-eu-que-38-bacheliers-qui-n-ont-pas-eu-de-solution-sur-parcoursup-en-2025-comme-l-affirme-le-gouvernement_8239924.html",
+    "title": "VRAI OU FAUX. N'y a-t-il eu que 38 bacheliers qui \"n'ont pas eu de solution\" sur Parcoursup en 2025, comme l'affirme le gouvernement ?",
+    "rating_original": "C’est plus compliqué",
+    "rating_normalized": "unrated",
+    "review_date": "2026-10-17"
+   }
+  ]
+ },
+ {
+  "id": "c_41ee162c574bed08",
+  "person": {
+   "id": "Q5829",
+   "name": "Jean-Luc Mélenchon"
+  },
+  "party": {
+   "id": null,
+   "name": null,
+   "short_name": null,
+   "status": "ambiguous"
+  },
+  "claim_text": "Manger bio réduit les risques de diabète",
+  "claim_date": "2026-10-13",
+  "date_precision": "day",
+  "date_is_fallback": true,
+  "country": "FR",
+  "attribution_status": "auto_sure",
+  "verdict": "unrated",
+  "reviews": [
+   {
+    "source_id": "tf1info_verificateurs",
+    "source_name": "TF1 Info – Les Vérificateurs",
+    "url": "https://www.tf1info.fr/sante/verif-est-il-vrai-que-consommer-bio-limite-les-risques-de-diabete-comme-l-affirme-jean-luc-melenchon-2469728.html",
+    "title": "VÉRIF' - Est-il vrai que consommer bio limite les risques de diabète ?",
+    "rating_original": "En partie vrai",
+    "rating_normalized": "unrated",
+    "review_date": "2026-10-13"
+   }
+  ]
+ },
+ {
+  "id": "c_6dba9d3ec05f0282",
+  "person": {
+   "id": "Q30343128",
+   "name": "Mathilde Panot"
+  },
+  "party": {
+   "id": "Q27978402",
+   "name": "La France insoumise",
+   "short_name": "LFI",
+   "status": "ok"
+  },
+  "claim_text": "Conflit d'intérêt, liens avec Israël, votes en faveur des pesticides… On a vérifié les affirmations de Mathilde Panot sur Octobre rose",
+  "claim_date": "2026-10-09",
+  "date_precision": "day",
+  "date_is_fallback": false,
+  "country": "FR",
+  "attribution_status": "auto_sure",
+  "verdict": "unrated",
+  "reviews": [
+   {
+    "source_id": "franceinfo_vraioufake",
+    "source_name": "franceinfo Vrai ou Fake",
+    "url": "https://www.franceinfo.fr/vrai-ou-fake/vrai-ou-faux-conflit-d-interets-liens-avec-israel-votes-en-faveur-des-pesticides-on-a-verifie-les-affirmations-de-mathilde-panot-sur-octobre-rose_8236957.html",
+    "title": "VRAI OU FAUX. Conflit d'intérêts, liens avec Israël, votes en faveur des pesticides… On a vérifié les affirmations de Mathilde Panot sur Octobre rose",
+    "rating_original": "C’est plus compliqué",
+    "rating_normalized": "unrated",
+    "review_date": "2026-10-16"
+   }
+  ]
+ },
+ {
+  "id": "c_096032dec5dbbee4",
+  "person": {
+   "id": "Q2926942",
+   "name": "Bruno Retailleau"
+  },
+  "party": {
+   "id": "Q20012759",
+   "name": "Les Républicains",
+   "short_name": "LR",
+   "status": "ok"
+  },
+  "claim_text": "La France investit-elle 27 % de plus que la moyenne européenne pour ses lycées",
+  "claim_date": "2026-10-08",
+  "date_precision": "day",
+  "date_is_fallback": true,
+  "country": "FR",
+  "attribution_status": "auto_sure",
+  "verdict": "true",
+  "reviews": [
+   {
+    "source_id": "tf1info_verificateurs",
+    "source_name": "TF1 Info – Les Vérificateurs",
+    "url": "https://www.tf1info.fr/politique/verif-la-france-investit-elle-27-de-plus-que-la-moyenne-europeenne-pour-ses-lycees-comme-l-affirme-bruno-retailleau-2468847.html",
+    "title": "VÉRIF' - La France investit-elle 27% de plus que la moyenne de l'OCDE pour ses lycées, comme l'affirme Bruno Retailleau ?",
+    "rating_original": "Vrai",
+    "rating_normalized": "true",
+    "review_date": "2026-10-08"
+   }
+  ]
+ },
+ {
+  "id": "c_001be89c56b0c02a",
+  "person": {
+   "id": "Q5829",
+   "name": "Jean-Luc Mélenchon"
+  },
+  "party": {
+   "id": null,
+   "name": null,
+   "short_name": null,
+   "status": "ambiguous"
+  },
+  "claim_text": "Le nombre d'interpellations lors des manifestations lycéennes de 2026 est plus élevé que pendant mai 1968",
+  "claim_date": "2026-10-06",
+  "date_precision": "day",
+  "date_is_fallback": true,
+  "country": "FR",
+  "attribution_status": "auto_sure",
+  "verdict": "mostly_false",
+  "reviews": [
+   {
+    "source_id": "tf1info_verificateurs",
+    "source_name": "TF1 Info – Les Vérificateurs",
+    "url": "https://www.tf1info.fr/politique/verif-manifestation-des-lyceens-le-nombre-d-interpellations-est-il-plus-eleve-que-pendant-mai-1968-2468386.html",
+    "title": "VÉRIF' - Manifestations des lycéens : le nombre d'interpellations est-il réellement \"plus élevé que pendant Mai-1968\" ?",
+    "rating_original": "Plutôt faux",
+    "rating_normalized": "mostly_false",
+    "review_date": "2026-10-06"
+   }
+  ]
+ },
+ {
+  "id": "c_d6dbb7cca632d39a",
+  "person": {
+   "id": "Q3052795",
+   "name": "Emmanuel Maurel"
+  },
+  "party": {
+   "id": "Q58329311",
+   "name": "Gauche républicaine et socialiste",
+   "short_name": "GRS",
+   "status": "ok"
+  },
+  "claim_text": "La France est le leader européen des morts au travail",
+  "claim_date": "2026-09-25",
+  "date_precision": "day",
+  "date_is_fallback": true,
+  "country": "FR",
+  "attribution_status": "auto_sure",
+  "verdict": "unrated",
+  "reviews": [
+   {
+    "source_id": "tf1info_verificateurs",
+    "source_name": "TF1 Info – Les Vérificateurs",
+    "url": "https://www.tf1info.fr/societe/verif-la-france-est-elle-vraiment-le-leader-europeen-des-morts-au-travail-2466337.html",
+    "title": "VÉRIF' - La France est-elle vraiment \"le leader européen des morts au travail\" ?",
+    "rating_original": "En partie vrai",
+    "rating_normalized": "unrated",
+    "review_date": "2026-09-25"
+   }
+  ]
+ },
+ {
+  "id": "c_d76d62ca9bfd68d2",
+  "person": {
+   "id": "Q2926942",
+   "name": "Bruno Retailleau"
+  },
+  "party": {
+   "id": "Q20012759",
+   "name": "Les Républicains",
+   "short_name": "LR",
+   "status": "ok"
+  },
+  "claim_text": "La France est le \"seul pays européen à voir le chômage augmenter\"",
+  "claim_date": "2026-09-23",
+  "date_precision": "day",
+  "date_is_fallback": true,
+  "country": "FR",
+  "attribution_status": "auto_sure",
+  "verdict": "false",
+  "reviews": [
+   {
+    "source_id": "tf1info_verificateurs",
+    "source_name": "TF1 Info – Les Vérificateurs",
+    "url": "https://www.tf1info.fr/economie/verif-la-france-est-elle-vraiment-le-seul-pays-europeen-a-voir-le-chomage-augmenter-comme-l-affirme-bruno-retailleau-2465813.html",
+    "title": "VÉRIF' - La France est-elle vraiment le \"seul pays européen à voir le chômage augmenter\" ?",
+    "rating_original": "Faux",
+    "rating_normalized": "false",
+    "review_date": "2026-09-23"
+   }
+  ]
+ },
+ {
+  "id": "c_ec5b83524d9270e4",
+  "person": {
+   "id": "Q112572505",
+   "name": "Benjamin Haddad"
+  },
+  "party": {
+   "id": null,
+   "name": null,
+   "short_name": null,
+   "status": "none"
+  },
+  "claim_text": "L'existence d'une menace russe fait consensus en Europe",
+  "claim_date": "2026-09-21",
+  "date_precision": "day",
+  "date_is_fallback": true,
+  "country": "FR",
+  "attribution_status": "auto_sure",
+  "verdict": "true",
+  "reviews": [
+   {
+    "source_id": "tf1info_verificateurs",
+    "source_name": "TF1 Info – Les Vérificateurs",
+    "url": "https://www.tf1info.fr/international/verif-inquietude-sur-la-menace-hybride-russe-cette-crainte-francaise-fait-elle-consensus-en-europe-2465430.html",
+    "title": "VÉRIF' - Inquiétude sur la \"menace hybride russe\" : cette crainte française fait-elle consensus en Europe ?",
+    "rating_original": "Vrai",
+    "rating_normalized": "true",
+    "review_date": "2026-09-21"
+   }
+  ]
+ },
+ {
+  "id": "c_6e07debd77b3cb19",
+  "person": {
+   "id": "Q29570183",
+   "name": "Aurore Bergé"
+  },
+  "party": {
+   "id": "Q23731823",
+   "name": "Renaissance",
+   "short_name": "RE",
+   "status": "ok"
+  },
+  "claim_text": "Les 10% d'abattement des retraités sur l'impôt sur le revenu sont accordés pour \"frais professionnels\"",
+  "claim_date": "2026-09-14",
+  "date_precision": "day",
+  "date_is_fallback": false,
+  "country": "FR",
+  "attribution_status": "auto_sure",
+  "verdict": "mostly_false",
+  "reviews": [
+   {
+    "source_id": "tf1info_verificateurs",
+    "source_name": "TF1 Info – Les Vérificateurs",
+    "url": "https://www.tf1info.fr/societe/verif-impot-sur-le-revenu-les-10-d-abattement-des-retraites-sont-ils-vraiment-accordes-pour-frais-professionnels-2464355.html",
+    "title": "VÉRIF' - Impôt sur le revenu : les 10% d'abattement des retraités sont-ils vraiment accordés pour \"frais professionnels\" ?",
+    "rating_original": "Plutôt faux",
+    "rating_normalized": "mostly_false",
+    "review_date": "2026-09-15"
+   }
+  ]
+ },
+ {
+  "id": "c_d061e6b92bc03da2",
+  "person": {
+   "id": "Q12927",
+   "name": "Marine Le Pen"
+  },
+  "party": {
+   "id": "Q205150",
+   "name": "Rassemblement national",
+   "short_name": "RN",
+   "status": "ok"
+  },
+  "claim_text": "On compte en France 9 millions de mètres carrés de bureaux inutilisés",
+  "claim_date": "2026-09-14",
+  "date_precision": "day",
+  "date_is_fallback": true,
+  "country": "FR",
+  "attribution_status": "auto_sure",
+  "verdict": "unrated",
+  "reviews": [
+   {
+    "source_id": "tf1info_verificateurs",
+    "source_name": "TF1 Info – Les Vérificateurs",
+    "url": "https://www.tf1info.fr/immobilier/verif-immobilier-penurie-de-logements-compte-t-on-en-france-9-millions-de-metres-carres-de-bureaux-inutilises-2464149.html",
+    "title": "VÉRIF' - Pénurie de logements : y a-t-il \"9 millions de mètres carrés de bureaux inutilisés\" en France ?",
+    "rating_original": "En partie vrai",
+    "rating_normalized": "unrated",
+    "review_date": "2026-09-14"
+   }
+  ]
+ },
+ {
+  "id": "c_675479b55c37dd44",
+  "person": {
+   "id": "Q12927",
+   "name": "Marine Le Pen"
+  },
+  "party": {
+   "id": "Q205150",
+   "name": "Rassemblement national",
+   "short_name": "RN",
+   "status": "ok"
+  },
+  "claim_text": "\"Aujourd'hui, 70% des Français sont éligibles au parc social et seulement 11% en bénéficient\"",
+  "claim_date": "2026-09-13",
+  "date_precision": "day",
+  "date_is_fallback": false,
+  "country": "FR",
+  "attribution_status": "auto_sure",
+  "verdict": "mostly_false",
+  "reviews": [
+   {
+    "source_id": "tf1info_verificateurs",
+    "source_name": "TF1 Info – Les Vérificateurs",
+    "url": "https://www.tf1info.fr/immobilier/verif-les-francais-sont-ils-seulement-11-a-vivre-dans-un-logement-social-alors-que-70-y-sont-eligibles-2464373.html",
+    "title": "VÉRIF' - Les Français sont-ils seulement 11% à vivre dans un logement social, alors que 70% y sont éligibles ?",
+    "rating_original": "Plutôt faux",
+    "rating_normalized": "mostly_false",
+    "review_date": "2026-09-16"
+   },
+   {
+    "source_id": "franceinfo_vraioufake",
+    "source_name": "franceinfo Vrai ou Fake",
+    "url": "https://www.franceinfo.fr/economie/vrai-ou-faux-est-il-vrai-que-70-des-francais-sont-eligibles-a-un-logement-du-parc-social-et-que-seulement-11-d-entre-eux-en-beneficient-comme-l-affirme-marine-le-pen_8195210.html",
+    "title": "VRAI OU FAUX. Est-il vrai que \"70% des Français sont éligibles\" à un logement du parc social et que \"seulement 11% d'entre eux en bénéficient\", comme l'affirme Marine Le Pen ?",
+    "rating_original": "Plutôt Faux",
+    "rating_normalized": "mostly_false",
+    "review_date": "2026-09-17"
+   }
+  ]
+ },
+ {
+  "id": "c_ae641593ed789043",
+  "person": {
+   "id": "Q5829",
+   "name": "Jean-Luc Mélenchon"
+  },
+  "party": {
+   "id": null,
+   "name": null,
+   "short_name": null,
+   "status": "ambiguous"
+  },
+  "claim_text": "Ça suffit le coup du soit disant prix Nobel d'économie. Ce n'est pas le même prix Nobel que celui de médecine ou de physique. C'est le prix créé par une banque suédoise qu'ils ont eux-mêmes appelé \"Nobel\" en prétendu hommage à l'inventeur de la dynamite.",
+  "claim_date": "2026-09-06",
+  "date_precision": "day",
+  "date_is_fallback": false,
+  "country": "FR",
+  "attribution_status": "auto_sure",
+  "verdict": "mostly_true",
+  "reviews": [
+   {
+    "source_id": "franceinfo_vraioufake",
+    "source_name": "franceinfo Vrai ou Fake",
+    "url": "https://www.franceinfo.fr/monde/prix-nobel/vrai-ou-faux-le-nobel-d-economie-est-il-un-soi-disant-prix-nobel-comme-le-juge-jean-luc-melenchon_8182844.html",
+    "title": "VRAI OU FAUX. Le \"Nobel\" d'économie est-il un \"soi-disant\" prix Nobel, comme le juge Jean-Luc Mélenchon ?",
+    "rating_original": "Plutôt Vrai",
+    "rating_normalized": "mostly_true",
+    "review_date": "2026-09-09"
+   }
+  ]
+ },
+ {
+  "id": "c_6621df003ee043b7",
+  "person": {
+   "id": "Q82637284",
+   "name": "Sarah Knafo"
+  },
+  "party": {
+   "id": "Q109932430",
+   "name": "Reconquête!",
+   "short_name": "",
+   "status": "ok"
+  },
+  "claim_text": "Le Code du travail fait 4.000 pages en France, et seulement 49 pages en Suisse",
+  "claim_date": "2026-09-02",
+  "date_precision": "day",
+  "date_is_fallback": false,
+  "country": "FR",
+  "attribution_status": "auto_sure",
+  "verdict": "false",
+  "reviews": [
+   {
+    "source_id": "tf1info_verificateurs",
+    "source_name": "TF1 Info – Les Vérificateurs",
+    "url": "https://www.tf1info.fr/politique/verif-le-code-du-travail-fait-il-4000-pages-en-france-contre-seulement-49-pages-en-suisse-2462409.html",
+    "title": "VÉRIF' - Le Code du travail fait-il 4.000 pages en France, contre seulement 49 en Suisse ?",
+    "rating_original": "Faux",
+    "rating_normalized": "false",
+    "review_date": "2026-09-07"
+   }
+  ]
+ },
+ {
+  "id": "c_4c3859ef1b71f879",
+  "person": {
+   "id": "Q20089181",
+   "name": "Sébastien Lecornu"
+  },
+  "party": {
+   "id": "Q23731823",
+   "name": "Renaissance",
+   "short_name": "RE",
+   "status": "ok"
+  },
+  "claim_text": "Les véhicules électriques ont battu un record, atteignant 38% des ventes en août",
+  "claim_date": "2026-09-01",
+  "date_precision": "day",
+  "date_is_fallback": false,
+  "country": "FR",
+  "attribution_status": "auto_sure",
+  "verdict": "unrated",
+  "reviews": [
+   {
+    "source_id": "tf1info_verificateurs",
+    "source_name": "TF1 Info – Les Vérificateurs",
+    "url": "https://www.tf1info.fr/economie/verif-les-vehicules-electriques-ont-ils-battu-un-record-atteignant-38-des-ventes-en-aout-2462179.html",
+    "title": "VÉRIF' - Les véhicules électriques ont-ils battu un record, atteignant 38% des ventes en août ?",
+    "rating_original": "En partie vrai",
+    "rating_normalized": "unrated",
+    "review_date": "2026-09-03"
+   }
+  ]
+ },
+ {
+  "id": "c_7b311013d8063320",
+  "person": {
+   "id": "Q40655898",
+   "name": "Jordan Bardella"
+  },
+  "party": {
+   "id": "Q205150",
+   "name": "Rassemblement national",
+   "short_name": "RN",
+   "status": "ok"
+  },
+  "claim_text": "50.000 des 500.000 personnes entrées légalement en France chaque année ont un contrat de travail",
+  "claim_date": "2026-09-01",
+  "date_precision": "day",
+  "date_is_fallback": true,
+  "country": "FR",
+  "attribution_status": "auto_sure",
+  "verdict": "mostly_false",
+  "reviews": [
+   {
+    "source_id": "tf1info_verificateurs",
+    "source_name": "TF1 Info – Les Vérificateurs",
+    "url": "https://www.tf1info.fr/politique/verif-seuls-10-des-immigres-entrent-ils-legalement-en-france-avec-du-travail-comme-le-dit-jordan-bardella-2461437.html",
+    "title": "VÉRIF' - Seuls 10% des immigrés entrent-ils légalement en France avec du travail, comme le dit Jordan Bardella ?",
+    "rating_original": "Plutôt faux",
+    "rating_normalized": "mostly_false",
+    "review_date": "2026-09-01"
+   }
+  ]
+ },
+ {
+  "id": "c_bcca6625c1f9c10c",
+  "person": {
+   "id": "Q3052772",
+   "name": "Emmanuel Macron"
+  },
+  "party": {
+   "id": "Q23731823",
+   "name": "Renaissance",
+   "short_name": "RE",
+   "status": "ok"
+  },
+  "claim_text": "À l'époque où j'étais élèves, les vacances d'été commençaient au 14 juillet",
+  "claim_date": "2026-09-01",
+  "date_precision": "day",
+  "date_is_fallback": false,
+  "country": "FR",
+  "attribution_status": "auto_sure",
+  "verdict": "false",
+  "reviews": [
+   {
+    "source_id": "tf1info_verificateurs",
+    "source_name": "TF1 Info – Les Vérificateurs",
+    "url": "https://www.tf1info.fr/education/verif-emmanuel-macron-assure-qu-a-son-epoque-les-vacances-d-ete-commencaient-autour-du-14-juillet-est-ce-vrai-2461953.html",
+    "title": "VÉRIF' - Emmanuel Macron assure qu'à son époque, les vacances d'été commençaient autour du 14 juillet… Est-ce vrai ?",
+    "rating_original": "Faux",
+    "rating_normalized": "false",
+    "review_date": "2026-09-02"
+   }
+  ]
+ },
+ {
+  "id": "c_eee14ba775b6b771",
+  "person": {
+   "id": "Q157",
+   "name": "François Hollande"
+  },
+  "party": {
+   "id": "Q170972",
+   "name": "Parti socialiste",
+   "short_name": "PS",
+   "status": "ok"
+  },
+  "claim_text": "À l'époque où la retraite à 60 ans a été instaurée, l'espérance de vie était en France de seulement 70 ans ?",
+  "claim_date": "2026-09-01",
+  "date_precision": "day",
+  "date_is_fallback": true,
+  "country": "FR",
+  "attribution_status": "auto_sure",
+  "verdict": "unrated",
+  "reviews": [
+   {
+    "source_id": "tf1info_verificateurs",
+    "source_name": "TF1 Info – Les Vérificateurs",
+    "url": "https://www.tf1info.fr/politique/verif-a-l-epoque-ou-la-retraite-a-60-ans-a-ete-instauree-l-esperance-de-vie-etait-elle-en-france-de-seulement-70-ans-2461643.html",
+    "title": "VÉRIF' - À l'époque où la retraite à 60 ans a été instaurée, l'espérance de vie était-elle de seulement 70 ans ?",
+    "rating_original": "En partie vrai",
+    "rating_normalized": "unrated",
+    "review_date": "2026-09-01"
+   }
+  ]
+ },
+ {
+  "id": "c_d1eaf02165d705d3",
+  "person": {
+   "id": "Q33138734",
+   "name": "Édouard Geffray"
+  },
+  "party": {
+   "id": null,
+   "name": null,
+   "short_name": null,
+   "status": "none"
+  },
+  "claim_text": "La réforme du concours des enseignants a permis de \"recruter quasiment à plein\"",
+  "claim_date": "2026-08-31",
+  "date_precision": "day",
+  "date_is_fallback": false,
+  "country": "FR",
+  "attribution_status": "auto_sure",
+  "verdict": "unrated",
+  "reviews": [
+   {
+    "source_id": "franceinfo_vraioufake",
+    "source_name": "franceinfo Vrai ou Fake",
+    "url": "https://www.franceinfo.fr/vrai-ou-fake/vrai-ou-faux-la-reforme-du-concours-des-enseignants-a-t-elle-permis-de-recruter-quasiment-a-plein-comme-l-affirme-le-ministre-de-l-education-nationale_8171921.html",
+    "title": "VRAI OU FAUX. La réforme du concours des enseignants a-t-elle permis de \"recruter quasiment à plein\", comme l'affirme le ministre de l'Education nationale ?",
+    "rating_original": "C’est plus compliqué",
+    "rating_normalized": "unrated",
+    "review_date": "2026-09-02"
+   }
+  ]
+ },
+ {
+  "id": "c_5a2dbc0ea9794dce",
+  "person": {
+   "id": "Q46138822",
+   "name": "Jean-Philippe Tanguy"
+  },
+  "party": {
+   "id": null,
+   "name": null,
+   "short_name": null,
+   "status": "undated"
+  },
+  "claim_text": "Le RN peut-il vraiment interdire le port du voile dans l'espace public ?",
+  "claim_date": "2026-08-30",
+  "date_precision": "day",
+  "date_is_fallback": false,
+  "country": "FR",
+  "attribution_status": "auto_sure",
+  "verdict": "false",
+  "reviews": [
+   {
+    "source_id": "franceinfo_vraioufake",
+    "source_name": "franceinfo Vrai ou Fake",
+    "url": "https://www.franceinfo.fr/vrai-ou-fake/vrai-ou-faux-absolument-pas-credible-juridiquement-le-rn-peut-il-vraiment-interdire-le-port-du-voile-dans-l-espace-public_8170601.html",
+    "title": "VRAI OU FAUX. \"Absolument pas crédible juridiquement\" : le RN peut-il vraiment interdire le port du voile dans l'espace public ?",
+    "rating_original": "Faux",
+    "rating_normalized": "false",
+    "review_date": "2026-09-01"
+   }
+  ]
+ },
+ {
+  "id": "c_3391e174c0191b59",
+  "person": {
+   "id": "Q3579995",
+   "name": "Édouard Philippe"
+  },
+  "party": {
+   "id": null,
+   "name": null,
+   "short_name": null,
+   "status": "undated"
+  },
+  "claim_text": "En maternelle, beaucoup d’enfants ne maîtrisent pas plus de 500 mots, alors que la cible devrait être à 2500 pour tous",
+  "claim_date": "2026-08-27",
+  "date_precision": "day",
+  "date_is_fallback": true,
+  "country": "FR",
+  "attribution_status": "auto_sure",
+  "verdict": "unrated",
+  "reviews": [
+   {
+    "source_id": "tf1info_verificateurs",
+    "source_name": "TF1 Info – Les Vérificateurs",
+    "url": "https://www.tf1info.fr/education/verif-en-maternelle-beaucoup-d-enfants-maitrisent-ils-seulement-500-mots-loin-d-une-cible-de-2-500-mots-comme-le-dit-edouard-philippe-2460592.html",
+    "title": "VÉRIF' - Est-il vrai qu'\"en maternelle, beaucoup d'enfants ne maîtrisent pas plus de 500 mots\" ?",
+    "rating_original": "En partie vrai",
+    "rating_normalized": "unrated",
+    "review_date": "2026-08-27"
+   }
+  ]
+ },
+ {
+  "id": "c_724c0fdac8dce407",
+  "person": {
+   "id": "Q29917987",
+   "name": "Marine Tondelier"
+  },
+  "party": {
+   "id": "Q613786",
+   "name": "Les Écologistes – Europe Écologie Les Verts",
+   "short_name": "EELV",
+   "status": "ok"
+  },
+  "claim_text": "Le pacte Dutreil, qui facilite la transmission des entreprises familiales, est \"détourné\" à des fins d'optimisation fiscale",
+  "claim_date": "2026-08-27",
+  "date_precision": "day",
+  "date_is_fallback": false,
+  "country": "FR",
+  "attribution_status": "auto_sure",
+  "verdict": "mostly_true",
+  "reviews": [
+   {
+    "source_id": "franceinfo_vraioufake",
+    "source_name": "franceinfo Vrai ou Fake",
+    "url": "https://www.franceinfo.fr/vrai-ou-fake/vrai-ou-faux-marine-tondelier-a-t-elle-raison-de-dire-qu-une-loi-sur-la-transmission-d-entreprises-familiales-est-detournee-pour-servir-d-optimisation-fiscale_8166221.html",
+    "title": "VRAI OU FAUX. Marine Tondelier a-t-elle raison de dire qu'une loi sur la transmission d'entreprises familiales est \"détournée\" pour \"servir d'optimisation fiscale\" ?",
+    "rating_original": "Plutôt Vrai",
+    "rating_normalized": "mostly_true",
+    "review_date": "2026-09-02"
+   }
+  ]
+ },
+ {
+  "id": "c_f3f84ae2e13a33a0",
+  "person": {
+   "id": "Q556149",
+   "name": "Raphaël Glucksmann"
+  },
+  "party": {
+   "id": "Q58366009",
+   "name": "Place publique",
+   "short_name": "PP",
+   "status": "ok"
+  },
+  "claim_text": "La France est le pays européen qui compte le plus d'élèves par classe en primaire",
+  "claim_date": "2026-08-23",
+  "date_precision": "day",
+  "date_is_fallback": false,
+  "country": "FR",
+  "attribution_status": "auto_sure",
+  "verdict": "mostly_false",
+  "reviews": [
+   {
+    "source_id": "tf1info_verificateurs",
+    "source_name": "TF1 Info – Les Vérificateurs",
+    "url": "https://www.tf1info.fr/education/verif-la-france-est-elle-vraiment-le-pays-europeen-qui-compte-le-plus-d-eleves-par-classe-en-primaire-2460149.html",
+    "title": "VÉRIF' - La France est-elle vraiment le pays européen qui compte le plus d'élèves par classe en primaire ?",
+    "rating_original": "Plutôt faux",
+    "rating_normalized": "mostly_false",
+    "review_date": "2026-08-24"
+   }
+  ]
+ },
+ {
+  "id": "c_93d411a620e4664a",
+  "person": {
+   "id": "Q29917987",
+   "name": "Marine Tondelier"
+  },
+  "party": {
+   "id": "Q613786",
+   "name": "Les Écologistes – Europe Écologie Les Verts",
+   "short_name": "EELV",
+   "status": "ok"
+  },
+  "claim_text": "Pour lutter contre les ingérences étrangères, la France peut suspendre X le temps des élections",
+  "claim_date": "2026-08-10",
+  "date_precision": "day",
+  "date_is_fallback": true,
+  "country": "FR",
+  "attribution_status": "auto_sure",
+  "verdict": "mostly_false",
+  "reviews": [
+   {
+    "source_id": "tf1info_verificateurs",
+    "source_name": "TF1 Info – Les Vérificateurs",
+    "url": "https://www.tf1info.fr/politique/verif-ingerence-etrangere-suspendre-x-le-temps-des-elections-en-france-comme-le-demande-marine-tondelier-est-ce-possible-2457725.html",
+    "title": "VÉRIF' - Ingérence étrangère : suspendre X le temps des élections en France, est-ce possible ?",
+    "rating_original": "Plutôt faux",
+    "rating_normalized": "mostly_false",
+    "review_date": "2026-08-10"
+   }
+  ]
+ },
+ {
+  "id": "c_cf73e93a7a41b8e5",
+  "person": {
+   "id": "Q5829",
+   "name": "Jean-Luc Mélenchon"
+  },
+  "party": {
+   "id": null,
+   "name": null,
+   "short_name": null,
+   "status": "ambiguous"
+  },
+  "claim_text": "On peut annuler la dette de la France détenue par la BCE",
+  "claim_date": "2026-08-09",
+  "date_precision": "day",
+  "date_is_fallback": false,
+  "country": "FR",
+  "attribution_status": "auto_sure",
+  "verdict": "mostly_false",
+  "reviews": [
+   {
+    "source_id": "afp_factuel",
+    "source_name": "AFP Factuel",
+    "url": "https://factuel.afp.com/doc.afp.com.C4NT3ZQ",
+    "title": "Annuler une partie de la dette de la France ? La proposition de LFI face aux obstacles juridiques et politiques",
+    "rating_original": "Trompeur",
+    "rating_normalized": "mostly_false",
+    "review_date": "2026-08-24"
+   }
+  ]
+ }
+]

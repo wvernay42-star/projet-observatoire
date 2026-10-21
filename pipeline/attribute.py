@@ -77,7 +77,14 @@ class Referential:
             with (seeds_dir / name).open(encoding="utf-8") as f:
                 return list(csv.DictReader(f))
 
-        return cls(read("persons.csv"), read("affiliations.csv"))
+        affiliations = read("affiliations.csv")
+        manual_path = seeds_dir / "affiliations_manual.csv"
+        if manual_path.exists():
+            # Affiliations validées à la main : remplacent celles de Wikidata pour ces personnes.
+            manual = read("affiliations_manual.csv")
+            overridden = {a["person_id"] for a in manual}
+            affiliations = [a for a in affiliations if a["person_id"] not in overridden] + manual
+        return cls(read("persons.csv"), affiliations)
 
     def attribute(self, claimant: str | None) -> Attribution:
         if not claimant or not claimant.strip():

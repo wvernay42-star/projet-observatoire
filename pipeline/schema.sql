@@ -27,7 +27,9 @@ CREATE TABLE claims (             -- une affirmation, dédoublonnée
   text TEXT, person_id TEXT,      -- NULL tant que non attribuée
   claim_date TEXT, date_precision TEXT, date_is_fallback INTEGER,
   country TEXT, channel TEXT,     -- 'tv', 'x', 'presse', 'meeting'...
-  attribution_status TEXT         -- 'auto_sure', 'to_review', 'validated', 'rejected'
+  attribution_status TEXT,        -- 'auto_sure', 'to_review', 'validated', 'rejected'
+  attribution_reason TEXT,        -- pourquoi ce statut (correspondance exacte, homonymes…)
+  candidates TEXT                 -- JSON : personnes proposées quand to_review
 );
 
 CREATE TABLE reviews (            -- un fact-check ; plusieurs par claim possible
@@ -36,7 +38,12 @@ CREATE TABLE reviews (            -- un fact-check ; plusieurs par claim possibl
   url TEXT UNIQUE, title TEXT,
   rating_original TEXT,           -- libellé exact de la source
   rating_normalized TEXT,         -- échelle commune
-  review_date TEXT, ingested_at TEXT, lang TEXT
+  review_date TEXT, ingested_at TEXT, lang TEXT,
+  connector TEXT,
+  claimant TEXT,                  -- libellé brut de l'auteur de la déclaration (source)
+  claim_text TEXT,                -- affirmation telle que résumée par la source
+  claim_date_raw TEXT,            -- date de déclaration brute fournie par la source
+  rating_method TEXT              -- 'map', 'numeric' ou 'pending'
 );
 
 CREATE TABLE rating_map (

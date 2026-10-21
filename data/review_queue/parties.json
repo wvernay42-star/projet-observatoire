@@ -1,0 +1,208 @@
+[
+ {
+  "claim_id": "c_c511b9d7034349a4",
+  "claim_text": "Seuls 38 bacheliers \"n'ont pas eu de solution\" sur Parcoursup en 2025",
+  "claim_date": "2026-10-14",
+  "reviews": [
+   {
+    "url": "https://www.franceinfo.fr/vrai-ou-fake/vrai-ou-faux-n-y-a-t-il-eu-que-38-bacheliers-qui-n-ont-pas-eu-de-solution-sur-parcoursup-en-2025-comme-l-affirme-le-gouvernement_8239924.html",
+    "source_id": "franceinfo_vraioufake",
+    "claimant": "Philippe Baptiste",
+    "rating_original": "C’est plus compliqué",
+    "rating_normalized": "unrated",
+    "review_date": "2026-10-17"
+   }
+  ],
+  "person": {
+   "id": "Q98234202",
+   "name": "Philippe Baptiste"
+  },
+  "status": "none",
+  "candidates": []
+ },
+ {
+  "claim_id": "c_41ee162c574bed08",
+  "claim_text": "Manger bio réduit les risques de diabète",
+  "claim_date": "2026-10-13",
+  "reviews": [
+   {
+    "url": "https://www.tf1info.fr/sante/verif-est-il-vrai-que-consommer-bio-limite-les-risques-de-diabete-comme-l-affirme-jean-luc-melenchon-2469728.html",
+    "source_id": "tf1info_verificateurs",
+    "claimant": "Jean-Luc Mélenchon",
+    "rating_original": "En partie vrai",
+    "rating_normalized": "unrated",
+    "review_date": "2026-10-13"
+   }
+  ],
+  "person": {
+   "id": "Q5829",
+   "name": "Jean-Luc Mélenchon"
+  },
+  "status": "ambiguous",
+  "candidates": [
+   "Q27978402",
+   "Q922707"
+  ]
+ },
+ {
+  "claim_id": "c_001be89c56b0c02a",
+  "claim_text": "Le nombre d'interpellations lors des manifestations lycéennes de 2026 est plus élevé que pendant mai 1968",
+  "claim_date": "2026-10-06",
+  "reviews": [
+   {
+    "url": "https://www.tf1info.fr/politique/verif-manifestation-des-lyceens-le-nombre-d-interpellations-est-il-plus-eleve-que-pendant-mai-1968-2468386.html",
+    "source_id": "tf1info_verificateurs",
+    "claimant": "Jean-Luc Mélenchon",
+    "rating_original": "Plutôt faux",
+    "rating_normalized": "mostly_false",
+    "review_date": "2026-10-06"
+   }
+  ],
+  "person": {
+   "id": "Q5829",
+   "name": "Jean-Luc Mélenchon"
+  },
+  "status": "ambiguous",
+  "candidates": [
+   "Q27978402",
+   "Q922707"
+  ]
+ },
+ {
+  "claim_id": "c_ec5b83524d9270e4",
+  "claim_text": "L'existence d'une menace russe fait consensus en Europe",
+  "claim_date": "2026-09-21",
+  "reviews": [
+   {
+    "url": "https://www.tf1info.fr/international/verif-inquietude-sur-la-menace-hybride-russe-cette-crainte-francaise-fait-elle-consensus-en-europe-2465430.html",
+    "source_id": "tf1info_verificateurs",
+    "claimant": "Benjamin Haddad",
+    "rating_original": "Vrai",
+    "rating_normalized": "true",
+    "review_date": "2026-09-21"
+   }
+  ],
+  "person": {
+   "id": "Q112572505",
+   "name": "Benjamin Haddad"
+  },
+  "status": "none",
+  "candidates": []
+ },
+ {
+  "claim_id": "c_ae641593ed789043",
+  "claim_text": "Ça suffit le coup du soit disant prix Nobel d'économie. Ce n'est pas le même prix Nobel que celui de médecine ou de physique. C'est le prix créé par une banque suédoise qu'ils ont eux-mêmes appelé \"Nobel\" en prétendu hommage à l'inventeur de la dynamite.",
+  "claim_date": "2026-09-06",
+  "reviews": [
+   {
+    "url": "https://www.franceinfo.fr/monde/prix-nobel/vrai-ou-faux-le-nobel-d-economie-est-il-un-soi-disant-prix-nobel-comme-le-juge-jean-luc-melenchon_8182844.html",
+    "source_id": "franceinfo_vraioufake",
+    "claimant": "Jean-Luc Mélenchon",
+    "rating_original": "Plutôt Vrai",
+    "rating_normalized": "mostly_true",
+    "review_date": "2026-09-09"
+   }
+  ],
+  "person": {
+   "id": "Q5829",
+   "name": "Jean-Luc Mélenchon"
+  },
+  "status": "ambiguous",
+  "candidates": [
+   "Q27978402",
+   "Q922707"
+  ]
+ },
+ {
+  "claim_id": "c_d1eaf02165d705d3",
+  "claim_text": "La réforme du concours des enseignants a permis de \"recruter quasiment à plein\"",
+  "claim_date": "2026-08-31",
+  "reviews": [
+   {
+    "url": "https://www.franceinfo.fr/vrai-ou-fake/vrai-ou-faux-la-reforme-du-concours-des-enseignants-a-t-elle-permis-de-recruter-quasiment-a-plein-comme-l-affirme-le-ministre-de-l-education-nationale_8171921.html",
+    "source_id": "franceinfo_vraioufake",
+    "claimant": "Edouard Geffray",
+    "rating_original": "C’est plus compliqué",
+    "rating_normalized": "unrated",
+    "review_date": "2026-09-02"
+   }
+  ],
+  "person": {
+   "id": "Q33138734",
+   "name": "Édouard Geffray"
+  },
+  "status": "none",
+  "candidates": []
+ },
+ {
+  "claim_id": "c_5a2dbc0ea9794dce",
+  "claim_text": "Le RN peut-il vraiment interdire le port du voile dans l'espace public ?",
+  "claim_date": "2026-08-30",
+  "reviews": [
+   {
+    "url": "https://www.franceinfo.fr/vrai-ou-fake/vrai-ou-faux-absolument-pas-credible-juridiquement-le-rn-peut-il-vraiment-interdire-le-port-du-voile-dans-l-espace-public_8170601.html",
+    "source_id": "franceinfo_vraioufake",
+    "claimant": "Jean-Philippe Tanguy",
+    "rating_original": "Faux",
+    "rating_normalized": "false",
+    "review_date": "2026-09-01"
+   }
+  ],
+  "person": {
+   "id": "Q46138822",
+   "name": "Jean-Philippe Tanguy"
+  },
+  "status": "undated",
+  "candidates": [
+   "Q12962",
+   "Q205150"
+  ]
+ },
+ {
+  "claim_id": "c_3391e174c0191b59",
+  "claim_text": "En maternelle, beaucoup d’enfants ne maîtrisent pas plus de 500 mots, alors que la cible devrait être à 2500 pour tous",
+  "claim_date": "2026-08-27",
+  "reviews": [
+   {
+    "url": "https://www.tf1info.fr/education/verif-en-maternelle-beaucoup-d-enfants-maitrisent-ils-seulement-500-mots-loin-d-une-cible-de-2-500-mots-comme-le-dit-edouard-philippe-2460592.html",
+    "source_id": "tf1info_verificateurs",
+    "claimant": "Edouard Philippe",
+    "rating_original": "En partie vrai",
+    "rating_normalized": "unrated",
+    "review_date": "2026-08-27"
+   }
+  ],
+  "person": {
+   "id": "Q3579995",
+   "name": "Édouard Philippe"
+  },
+  "status": "undated",
+  "candidates": [
+   "Q108846587"
+  ]
+ },
+ {
+  "claim_id": "c_cf73e93a7a41b8e5",
+  "claim_text": "On peut annuler la dette de la France détenue par la BCE",
+  "claim_date": "2026-08-09",
+  "reviews": [
+   {
+    "url": "https://factuel.afp.com/doc.afp.com.C4NT3ZQ",
+    "source_id": "afp_factuel",
+    "claimant": "Jean-Luc Mélenchon",
+    "rating_original": "Trompeur",
+    "rating_normalized": "mostly_false",
+    "review_date": "2026-08-24"
+   }
+  ],
+  "person": {
+   "id": "Q5829",
+   "name": "Jean-Luc Mélenchon"
+  },
+  "status": "ambiguous",
+  "candidates": [
+   "Q27978402",
+   "Q922707"
+  ]
+ }
+]

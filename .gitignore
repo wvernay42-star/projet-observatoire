@@ -7,4 +7,7 @@ __pycache__/
 data/observatoire.db
 data/review_queue/*
 !data/review_queue/rating_proposals.csv
+!data/review_queue/attributions.json
+!data/review_queue/parties.json
+!data/review_queue/ratings.json
 !data/review_queue/.gitkeep

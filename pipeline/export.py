@@ -1,0 +1,100 @@
+"""Export public : data/export/facts.json (entrées validées) et stats.json (agrégats).
+
+Seuls les claims dont l'attribution est 'auto_sure' ou 'validated' sont exportés.
+Métadonnées uniquement : jamais le contenu des articles.
+"""
+
+import csv
+import json
+import sqlite3
+from collections import Counter, defaultdict
+from pathlib import Path
+from typing import Any
+
+from pipeline.attribute import Referential
+from pipeline.connectors.base import SEEDS_DIR
+from pipeline.dedupe import majority_verdict
+from pipeline.ratings import LEVELS
+
+EXPORT_DIR = Path(__file__).resolve().parents[1] / "data" / "export"
+PUBLISHED = ("auto_sure", "validated")
+SCOPE_NOTE = "Sur les déclarations vérifiées, pas sur l'ensemble des propos."
+
+
+def _read(name: str) -> dict[str, dict[str, str]]:
+    with (SEEDS_DIR / name).open(encoding="utf-8") as f:
+        return {row["id"]: row for row in csv.DictReader(f)}
+
+
+def build_facts(conn: sqlite3.Connection, ref: Referential) -> list[dict[str, Any]]:
+    sources, parties = _read("sources.csv"), _read("parties.csv")
+    conn.row_factory = sqlite3.Row
+    claims = conn.execute(
+        f"SELECT * FROM claims WHERE attribution_status IN ({','.join('?' * len(PUBLISHED))})"
+        " ORDER BY claim_date DESC, id", PUBLISHED).fetchall()
+    facts = []
+    for c in claims:
+        reviews = conn.execute("SELECT * FROM reviews WHERE claim_id = ? ORDER BY review_date, url",
+                               (c["id"],)).fetchall()
+        party = ref.party_at(c["person_id"], c["claim_date"])
+        p = parties.get(party.party_id or "", {})
+        facts.append({
+            "id": c["id"],
+            "person": {"id": c["person_id"], "name": ref.full_names.get(c["person_id"], "")},
+            "party": {"id": party.party_id, "name": p.get("name"), "short_name": p.get("short_name"),
+                      "status": party.status},
+            "claim_text": c["text"],
+            "claim_date": c["claim_date"],
+            "date_precision": c["date_precision"],
+            "date_is_fallback": bool(c["date_is_fallback"]),
+            "country": c["country"],
+            "attribution_status": c["attribution_status"],
+            "verdict": majority_verdict([r["rating_normalized"] for r in reviews]),
+            "reviews": [{
+                "source_id": r["source_id"],
+                "source_name": sources.get(r["source_id"], {}).get("name", r["source_id"]),
+                "url": r["url"],
+                "title": r["title"],
+                "rating_original": r["rating_original"],
+                "rating_normalized": r["rating_normalized"],
+                "review_date": r["review_date"],
+            } for r in reviews],
+        })
+    return facts
+
+
+def _bucket() -> dict[str, Any]:
+    return {"n": 0, "verdicts": Counter(), "sources": set(), "last_review_date": ""}
+
+
+def build_stats(facts: list[dict[str, Any]]) -> dict[str, Any]:
+    groups: dict[str, dict[str, dict[str, Any]]] = {k: defaultdict(_bucket) for k in ("person", "party", "country", "month")}
+    for f in facts:
+        keys = {"person": f["person"]["id"], "party": f["party"]["id"], "country": f["country"],
+                "month": (f["claim_date"] or "")[:7] or None}
+        for kind, key in keys.items():
+            if not key:
+                continue
+            b = groups[kind][key]
+            b["n"] += 1
+            b["verdicts"][f["verdict"]] += 1
+            b["sources"].update(r["source_id"] for r in f["reviews"])
+            b["last_review_date"] = max([b["last_review_date"]] + [r["review_date"] or "" for r in f["reviews"]])
+    return {
+        "scope_note": SCOPE_NOTE,
+        **{kind: {key: {"n_claims": b["n"],
+                        "verdicts": {level: b["verdicts"].get(level, 0) for level in LEVELS},
+                        "n_sources": len(b["sources"]),
+                        "last_review_date": b["last_review_date"] or None}
+                  for key, b in sorted(g.items())}
+           for kind, g in groups.items()},
+    }
+
+
+def export(conn: sqlite3.Connection, ref: Referential, out_dir: Path = EXPORT_DIR) -> int:
+    facts = build_facts(conn, ref)
+    out_dir.mkdir(parents=True, exist_ok=True)
+    (out_dir / "facts.json").write_text(json.dumps(facts, ensure_ascii=False, indent=1), encoding="utf-8")
+    (out_dir / "stats.json").write_text(json.dumps(build_stats(facts), ensure_ascii=False, indent=1),
+                                        encoding="utf-8")
+    return len(facts)
