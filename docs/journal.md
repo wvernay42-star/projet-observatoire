@@ -36,6 +36,8 @@ leurs partis ; site sur un sous-domaine de votona.fr, d'abord en préproduction.
   (défaut : candidats) ; badge et lien Votona sur les fiches ; méthodologie : les vérifications
   n'entrent jamais dans le classement de Votona. Contact : contact@votona.fr.
 - 188 déclarations, dont 65 de 15 candidats.
+- **Synchronisation** `pipeline/sync_candidates.py` : Votona est la source de la liste (ajouts,
+  retraits) ; jamais de suppression ; la routine du matin la lance (dépôt Votona en lecture seule).
 - **Site** : `site/` + `vercel.json` (noindex) + `.vercelignore`, procédure dans `docs/hebergement.md`
   (préproduction `preview.observatoire.votona.fr`, puis `observatoire.votona.fr`).
 
