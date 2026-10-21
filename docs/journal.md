@@ -14,8 +14,25 @@ Les décisions durables sont aussi consignées dans [decisions.md](decisions.md)
 | 4 | persons / parties / affiliations + attribute.py | ✅ fait (21/10) — 67 724 personnes, partis à valider pour beaucoup |
 | 5 | Autres sites FR, google_factcheck, datacommons_feed, dedupe.py | ✅ fait (21/10) |
 | 6 | run_daily.py + export.py, routine sur 90 jours | ✅ fait — 122 entrées exportées sur 2 ans ; planifiée chaque jour à 6 h (22/10) |
-| 7 | web/beta/index.html (maquette A) | ⏳ |
+| 7 | web/beta/index.html (maquette A) | ✅ en ligne (22/10) — 119 déclarations |
 | — | Page web de validation | ✅ en ligne (22/10) — 147 éléments à traiter |
+
+## 2026-10-22 (suite 3) — beta publique en ligne
+
+- Page de la beta : https://claude.ai/artifact/19UnNBtaqC927nk4tZR419 (privée tant qu'elle
+  n'est pas partagée depuis le menu Partager). Gabarit `web/beta/template.html` (maquette A),
+  page générée `web/beta/index.html` par `python -m pipeline.build_beta` (export embarqué).
+- Écrans : accueil (compteurs + dénominateur + mention de périmètre), faits vérifiés, personnalités
+  (ordre alphabétique, aucun classement), partis, fiche personne (frise), fiche parti,
+  méthodologie (principes, sources, échelle, limites, contestation sous 48 h).
+- Filtres : période (7 j, 30 j, 12 mois, année, personnalisée), date de déclaration / de
+  vérification, pays, parti, personne, source, verdicts. Liens partageables seulement par vue
+  (#faits, #personne-Q…, #parti-Q…) : les filtres ne passent pas dans l'adresse (limite des artefacts).
+- « Signaler une erreur » : affiche l'adresse de contact et la référence de l'entrée, avec copie.
+- Dédoublonnage : fenêtre élargie à ±10 jours quand une date est une date de repli
+  (cas Le Pen logement social : 3 vérifications regroupées, Panot « Octobre rose » : 2).
+  119 déclarations exportées.
+- La routine du matin régénère et republie la beta (étape ajoutée à la tâche planifiée).
 
 ## 2026-10-22 (suite 2) — routine quotidienne planifiée
 

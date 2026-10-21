@@ -2,7 +2,7 @@
 
 Niveau 1 — même URL : une seule review (clé unique, upsert en base).
 Niveau 2 — même affirmation vérifiée par plusieurs médias : un seul claim si même personne,
-dates de déclaration à ±3 jours et textes très proches (rapidfuzz, token_set_ratio), ou
+dates de déclaration à ±3 jours (±10 jours si l'une est une date de repli) et textes très proches (rapidfuzz, token_set_ratio), ou
 textes assez proches citant exactement les mêmes chiffres (au moins deux).
 Les reviews non attribuées à une personne ne sont jamais fusionnées entre elles.
 """
@@ -17,6 +17,7 @@ from rapidfuzz import fuzz
 from pipeline.text import label_key
 
 MAX_DAYS_APART = 3
+MAX_DAYS_APART_FALLBACK = 10  # quand une date est une date de vérification faute de date de déclaration
 MIN_SIMILARITY = 80
 MIN_SIMILARITY_SAME_FIGURES = 55
 
@@ -25,6 +26,7 @@ MIN_SIMILARITY_SAME_FIGURES = 55
 class Group:
     person_id: str | None
     claim_date: str | None
+    fallback: bool = False
     texts: list[str] = field(default_factory=list)
     review_ids: list[str] = field(default_factory=list)
 
@@ -47,20 +49,23 @@ def similar(a: str, b: str) -> bool:
     return len(figures) >= 2 and figures == _figures(b) and score >= MIN_SIMILARITY_SAME_FIGURES
 
 
-def group_reviews(items: Iterable[tuple[str, str | None, str | None, str]]) -> list[Group]:
-    """items : (review_id, person_id, claim_date, texte) -> groupes, dans un ordre stable."""
+def group_reviews(items: Iterable[tuple]) -> list[Group]:
+    """items : (review_id, person_id, claim_date, texte[, date_is_fallback]) -> groupes, ordre stable."""
     groups: list[Group] = []
-    for review_id, person_id, claim_date, text in sorted(items, key=lambda i: (i[2] or "", i[0])):
+    for item in sorted(items, key=lambda i: (i[2] or "", i[0])):
+        review_id, person_id, claim_date, text = item[:4]
+        fallback = bool(item[4]) if len(item) > 4 else False
         target = None
         if person_id:
             for g in groups:
                 apart = _days_apart(g.claim_date, claim_date)
-                if g.person_id == person_id and apart is not None and apart <= MAX_DAYS_APART \
+                window = MAX_DAYS_APART_FALLBACK if (fallback or g.fallback) else MAX_DAYS_APART
+                if g.person_id == person_id and apart is not None and apart <= window \
                         and any(similar(text, t) for t in g.texts):
                     target = g
                     break
         if target is None:
-            target = Group(person_id, claim_date)
+            target = Group(person_id, claim_date, fallback)
             groups.append(target)
         target.texts.append(text)
         target.review_ids.append(review_id)

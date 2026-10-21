@@ -497,30 +497,6 @@
   ]
  },
  {
-  "claim_id": "c_309b7658ef44b12c",
-  "claim_text": "Emmanuel Grégoire a-t-il \"fait disparaître plus de 150 000 logements du parc locatif privé de Paris\"",
-  "claim_date": "2026-02-05",
-  "reviews": [
-   {
-    "url": "https://poligraph.fr/factchecks/2026-02-05-vrai-ou-faux-emmanuel-gregoire-a-t-il-fait-disparaitre-150-000-logeme",
-    "source_id": "poligraph_fr",
-    "claimant": "Rachida DATI",
-    "rating_original": "Plutôt Faux",
-    "rating_normalized": "mostly_false",
-    "review_date": "2026-02-05"
-   }
-  ],
-  "person": {
-   "id": "Q27182",
-   "name": "Rachida Dati"
-  },
-  "status": "undated",
-  "candidates": [
-   "Q173152",
-   "Q20012759"
-  ]
- },
- {
   "claim_id": "c_a270302c4943b6c7",
   "claim_text": "Les accidents de vélo sont en hausse de 70% à Paris depuis 2017",
   "claim_date": "2026-02-02",
@@ -545,13 +521,21 @@
   ]
  },
  {
-  "claim_id": "c_7e01ef9f4088bda6",
+  "claim_id": "c_309b7658ef44b12c",
   "claim_text": "Emmanuel Grégoire a-t-il \"fait disparaître plus de 150 000 logements du parc locatif privé de Paris\"",
   "claim_date": "2026-01-31",
   "reviews": [
    {
     "url": "https://www.franceinfo.fr/vrai-ou-fake/vrai-ou-faux-emmanuel-gregoire-a-t-il-fait-disparaitre-150-000-logements-du-parc-locatif-prive-parisien-comme-le-denonce-rachida-dati_7781549.html",
     "source_id": "franceinfo_vraioufake",
+    "claimant": "Rachida DATI",
+    "rating_original": "Plutôt Faux",
+    "rating_normalized": "mostly_false",
+    "review_date": "2026-02-05"
+   },
+   {
+    "url": "https://poligraph.fr/factchecks/2026-02-05-vrai-ou-faux-emmanuel-gregoire-a-t-il-fait-disparaitre-150-000-logeme",
+    "source_id": "poligraph_fr",
     "claimant": "Rachida DATI",
     "rating_original": "Plutôt Faux",
     "rating_normalized": "mostly_false",

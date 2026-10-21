@@ -1,36 +1,5 @@
 [
  {
-  "id": "c_1bdd1dfcded58e6f",
-  "person": {
-   "id": "Q30343128",
-   "name": "Mathilde Panot"
-  },
-  "party": {
-   "id": "Q27978402",
-   "name": "La France insoumise",
-   "short_name": "LFI",
-   "status": "ok"
-  },
-  "claim_text": "Conflit d'intérêt, liens avec Israël, votes en faveur des pesticides… On a vérifié les affirmations de Mathilde Panot sur Octobre rose",
-  "claim_date": "2026-10-16",
-  "date_precision": "day",
-  "date_is_fallback": true,
-  "country": "FR",
-  "attribution_status": "auto_sure",
-  "verdict": "unrated",
-  "reviews": [
-   {
-    "source_id": "poligraph_fr",
-    "source_name": "Poligraph",
-    "url": "https://poligraph.fr/factchecks/2026-10-16-vrai-ou-faux-conflit-d-interets-liens-avec-israel-votes-en-faveur-des",
-    "title": "Invérifiable — VRAI OU FAUX. Conflit d'intérêts, liens avec Israël, votes en faveur des pesticides… On a vérifié les affirmations de Mathilde Panot sur Octobre rose",
-    "rating_original": "C’est plus compliqué",
-    "rating_normalized": "unrated",
-    "review_date": "2026-10-16"
-   }
-  ]
- },
- {
   "id": "c_96a23047c1bdcd97",
   "person": {
    "id": "Q98234202",
@@ -102,7 +71,7 @@
   ]
  },
  {
-  "id": "c_6dba9d3ec05f0282",
+  "id": "c_1bdd1dfcded58e6f",
   "person": {
    "id": "Q30343128",
    "name": "Mathilde Panot"
@@ -121,6 +90,15 @@
   "attribution_status": "auto_sure",
   "verdict": "unrated",
   "reviews": [
+   {
+    "source_id": "poligraph_fr",
+    "source_name": "Poligraph",
+    "url": "https://poligraph.fr/factchecks/2026-10-16-vrai-ou-faux-conflit-d-interets-liens-avec-israel-votes-en-faveur-des",
+    "title": "Invérifiable — VRAI OU FAUX. Conflit d'intérêts, liens avec Israël, votes en faveur des pesticides… On a vérifié les affirmations de Mathilde Panot sur Octobre rose",
+    "rating_original": "C’est plus compliqué",
+    "rating_normalized": "unrated",
+    "review_date": "2026-10-16"
+   },
    {
     "source_id": "franceinfo_vraioufake",
     "source_name": "franceinfo Vrai ou Fake",
@@ -315,37 +293,6 @@
   ]
  },
  {
-  "id": "c_98c456dfb5292090",
-  "person": {
-   "id": "Q12927",
-   "name": "Marine Le Pen"
-  },
-  "party": {
-   "id": "Q205150",
-   "name": "Rassemblement national",
-   "short_name": "RN",
-   "status": "ok"
-  },
-  "claim_text": "\"Aujourd'hui, 70% des Français sont éligibles au parc social et seulement 11% en bénéficient\"",
-  "claim_date": "2026-09-17",
-  "date_precision": "day",
-  "date_is_fallback": true,
-  "country": "FR",
-  "attribution_status": "auto_sure",
-  "verdict": "mostly_false",
-  "reviews": [
-   {
-    "source_id": "poligraph_fr",
-    "source_name": "Poligraph",
-    "url": "https://poligraph.fr/factchecks/2026-09-17-vrai-ou-faux-est-il-vrai-que-quot-70-des-fran-ccedil-ais-sont-eacute",
-    "title": "Plutôt faux — VRAI OU FAUX. Est-il vrai que \"70% des Français sont éligibles\" à un logement du parc social et que \"seulement 11% d'entre eux en bénéficient\", comme l'affirme Marine Le Pen ?",
-    "rating_original": "Plutôt Faux",
-    "rating_normalized": "mostly_false",
-    "review_date": "2026-09-17"
-   }
-  ]
- },
- {
   "id": "c_2c23915a4552ed2e",
   "person": {
    "id": "Q12927",
@@ -453,6 +400,15 @@
     "rating_original": "Plutôt faux",
     "rating_normalized": "mostly_false",
     "review_date": "2026-09-16"
+   },
+   {
+    "source_id": "poligraph_fr",
+    "source_name": "Poligraph",
+    "url": "https://poligraph.fr/factchecks/2026-09-17-vrai-ou-faux-est-il-vrai-que-quot-70-des-fran-ccedil-ais-sont-eacute",
+    "title": "Plutôt faux — VRAI OU FAUX. Est-il vrai que \"70% des Français sont éligibles\" à un logement du parc social et que \"seulement 11% d'entre eux en bénéficient\", comme l'affirme Marine Le Pen ?",
+    "rating_original": "Plutôt Faux",
+    "rating_normalized": "mostly_false",
+    "review_date": "2026-09-17"
    },
    {
     "source_id": "franceinfo_vraioufake",
@@ -1747,37 +1703,6 @@
   ]
  },
  {
-  "id": "c_309b7658ef44b12c",
-  "person": {
-   "id": "Q27182",
-   "name": "Rachida Dati"
-  },
-  "party": {
-   "id": null,
-   "name": null,
-   "short_name": null,
-   "status": "undated"
-  },
-  "claim_text": "Emmanuel Grégoire a-t-il \"fait disparaître plus de 150 000 logements du parc locatif privé de Paris\"",
-  "claim_date": "2026-02-05",
-  "date_precision": "day",
-  "date_is_fallback": true,
-  "country": "FR",
-  "attribution_status": "auto_sure",
-  "verdict": "mostly_false",
-  "reviews": [
-   {
-    "source_id": "poligraph_fr",
-    "source_name": "Poligraph",
-    "url": "https://poligraph.fr/factchecks/2026-02-05-vrai-ou-faux-emmanuel-gregoire-a-t-il-fait-disparaitre-150-000-logeme",
-    "title": "Plutôt faux — VRAI OU FAUX. Emmanuel Grégoire a-t-il \"fait disparaître 150 000 logements du parc locatif privé\" parisien, comme le dénonce Rachida Dati ?",
-    "rating_original": "Plutôt Faux",
-    "rating_normalized": "mostly_false",
-    "review_date": "2026-02-05"
-   }
-  ]
- },
- {
   "id": "c_a270302c4943b6c7",
   "person": {
    "id": "Q27182",
@@ -1809,7 +1734,7 @@
   ]
  },
  {
-  "id": "c_7e01ef9f4088bda6",
+  "id": "c_309b7658ef44b12c",
   "person": {
    "id": "Q27182",
    "name": "Rachida Dati"
@@ -1828,6 +1753,15 @@
   "attribution_status": "auto_sure",
   "verdict": "mostly_false",
   "reviews": [
+   {
+    "source_id": "poligraph_fr",
+    "source_name": "Poligraph",
+    "url": "https://poligraph.fr/factchecks/2026-02-05-vrai-ou-faux-emmanuel-gregoire-a-t-il-fait-disparaitre-150-000-logeme",
+    "title": "Plutôt faux — VRAI OU FAUX. Emmanuel Grégoire a-t-il \"fait disparaître 150 000 logements du parc locatif privé\" parisien, comme le dénonce Rachida Dati ?",
+    "rating_original": "Plutôt Faux",
+    "rating_normalized": "mostly_false",
+    "review_date": "2026-02-05"
+   },
    {
     "source_id": "franceinfo_vraioufake",
     "source_name": "franceinfo Vrai ou Fake",

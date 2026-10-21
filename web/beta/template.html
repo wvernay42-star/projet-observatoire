@@ -1,0 +1,434 @@
+<title>Observatoire de la parole politique</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&display=swap" rel="stylesheet">
+<style>
+/* Variante A « Jauge » : bandeau bleu nuit, titres et affirmations en serif, jauge à 5 crans, échelle bleu → orange. */
+:root {
+  --bg: #ffffff; --surface: #ffffff; --soft: #f1f2f4; --fg: #1a1a1a; --muted: #5f6368; --line: #e3e3e3;
+  --band: #1b3a5c; --band-fg: #ffffff; --link: #1b3a5c; --accent-soft: #e8edf3; --off: #e6e7ea; --warn-bg: #fdf3e7; --warn-fg: #6b3a0c;
+  --v-true: #1f5fa8; --v-mostly_true: #9dc0e6; --v-half_true: #cfc8ba; --v-mostly_false: #f2b57e; --v-false: #b4500a;
+  --hatch: #c9cdd2; --unrated-line: #8a8f96;
+  --serif: "Source Serif 4", Georgia, "Times New Roman", serif;
+  --sans: Inter, system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+  --bg: #11151a; --surface: #171c22; --soft: #1f262e; --fg: #e9ebee; --muted: #a5adb7; --line: #2e3640;
+  --band: #0e2236; --band-fg: #e9ebee; --link: #9cc3ea; --accent-soft: #1f2d3c; --off: #2c343e; --warn-bg: #2f2214; --warn-fg: #f2c492;
+  --v-true: #4f8fd6; --v-mostly_true: #9dc0e6; --v-half_true: #b9b2a4; --v-mostly_false: #f2b57e; --v-false: #e07a32;
+  --hatch: #4a525c; --unrated-line: #8d96a1; color-scheme: dark } }
+:root[data-theme="dark"] {
+  --bg: #11151a; --surface: #171c22; --soft: #1f262e; --fg: #e9ebee; --muted: #a5adb7; --line: #2e3640;
+  --band: #0e2236; --band-fg: #e9ebee; --link: #9cc3ea; --accent-soft: #1f2d3c; --off: #2c343e; --warn-bg: #2f2214; --warn-fg: #f2c492;
+  --v-true: #4f8fd6; --v-mostly_true: #9dc0e6; --v-half_true: #b9b2a4; --v-mostly_false: #f2b57e; --v-false: #e07a32;
+  --hatch: #4a525c; --unrated-line: #8d96a1; color-scheme: dark }
+
+body { background: var(--bg); color: var(--fg); font-family: var(--sans); font-size: 15px; line-height: 1.5; }
+.wrap { max-width: 1180px; margin: 0 auto; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+a { color: var(--link); }
+h1, h2, h3 { font-family: var(--serif); text-wrap: balance; margin: 0; line-height: 1.2; }
+h1 { font-size: clamp(28px, 4vw, 40px); }
+h2 { font-size: 24px; }
+.muted { color: var(--muted); }
+.small { font-size: 13px; }
+
+.beta { background: var(--warn-bg); color: var(--warn-fg); font-size: 13px; }
+.beta .wrap { padding-block: 8px; }
+header.top { background: var(--band); color: var(--band-fg); }
+header.top .wrap { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px 16px; padding-block: 10px; }
+.logo { font-family: var(--serif); font-weight: 700; font-size: 22px; color: var(--band-fg); text-decoration: none; background: none; border: 0; cursor: pointer; padding: 8px 0; }
+nav.main { display: flex; flex-wrap: wrap; gap: 2px; }
+nav.main button { background: none; border: 0; color: var(--band-fg); font: inherit; padding: 12px 12px; cursor: pointer; border-bottom: 3px solid transparent; min-height: 44px; }
+nav.main button[aria-current="page"] { font-weight: 600; border-bottom-color: var(--band-fg); }
+
+main.wrap { display: flex; flex-direction: column; gap: 28px; padding-block: 28px 48px; }
+.filters { display: flex; flex-wrap: wrap; align-items: flex-end; gap: 12px 16px; padding: 14px 16px; border: 1px solid var(--line); border-radius: 8px; background: var(--surface); }
+.filters label, .filters fieldset { display: flex; flex-direction: column; gap: 4px; font-size: 13px; font-weight: 600; border: 0; padding: 0; margin: 0; min-width: 0; }
+.filters select, .filters input[type="search"], .filters input[type="date"] { min-height: 44px; font: inherit; font-weight: 400; font-size: 14px; padding: 0 8px; border: 1px solid var(--line); border-radius: 6px; background: var(--surface); color: var(--fg); max-width: 100%; }
+.pills { display: flex; flex-wrap: wrap; gap: 6px; }
+.pill { min-height: 40px; padding: 0 12px; border: 1px solid var(--line); background: var(--surface); color: var(--fg); border-radius: 20px; font: inherit; font-size: 13px; cursor: pointer; display: inline-flex; align-items: center; gap: 6px; }
+.pill[aria-pressed="true"] { background: var(--accent-soft); border-color: var(--link); font-weight: 600; }
+.pill[aria-pressed="false"] { color: var(--muted); text-decoration: line-through; }
+.sw { width: 12px; height: 12px; border-radius: 2px; display: inline-block; flex: none; }
+.sw.unrated { background: repeating-linear-gradient(45deg, var(--surface) 0 3px, var(--hatch) 3px 5px); border: 1px dashed var(--unrated-line); }
+.reset { background: none; border: 0; color: var(--link); text-decoration: underline; font: inherit; font-size: 13px; cursor: pointer; min-height: 40px; }
+
+.summary { display: flex; flex-wrap: wrap; gap: 28px; }
+.summary .bars { flex: 999 1 520px; min-width: 0; display: flex; flex-direction: column; gap: 10px; }
+.bar-row { display: grid; grid-template-columns: 130px minmax(0, 1fr) 84px; align-items: center; gap: 12px; font-size: 15px; }
+.bar-row .lab { font-weight: 600; }
+.track { height: 22px; background: var(--soft); border-radius: 4px; overflow: hidden; }
+.fill { height: 100%; }
+.fill.unrated { background: repeating-linear-gradient(45deg, var(--surface) 0 4px, var(--hatch) 4px 6px); box-shadow: inset 0 0 0 1px var(--unrated-line); }
+.num { text-align: right; font-variant-numeric: tabular-nums; }
+.side { flex: 1 1 260px; border: 1px solid var(--line); border-radius: 8px; align-self: flex-start; }
+.side > div { padding: 14px 18px; border-bottom: 1px solid var(--line); }
+.side > div:last-child { border-bottom: 0; }
+.side .k { font-size: 12px; font-weight: 600; color: var(--muted); text-transform: uppercase; letter-spacing: .05em; }
+.side .v { font-size: 24px; font-weight: 700; font-variant-numeric: tabular-nums; }
+.scope { font-size: 14px; color: var(--muted); margin: 6px 0 0; }
+
+.cards { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 16px; }
+.card { border: 1px solid var(--line); border-radius: 8px; padding: 16px; display: flex; flex-direction: column; gap: 10px; background: var(--surface); }
+.claim { font-family: var(--serif); font-size: 18px; line-height: 1.35; margin: 0; }
+.meter { display: flex; gap: 3px; }
+.meter span { width: 30px; height: 10px; border-radius: 2px; background: var(--off); }
+.verdict { font-size: 14px; }
+.verdict strong { font-size: 15px; }
+.dates { font-size: 13px; color: var(--muted); }
+.fallback { font-style: italic; }
+.who { font-size: 14px; }
+.linkish { background: none; border: 0; padding: 0; font: inherit; color: var(--link); cursor: pointer; text-decoration: none; font-weight: 700; text-align: left; }
+.linkish:hover { text-decoration: underline; }
+
+.facts { display: flex; flex-direction: column; }
+.fact { display: grid; grid-template-columns: minmax(0, 1fr) minmax(200px, 260px); gap: 8px 24px; padding: 18px 0; border-top: 1px solid var(--line); }
+.fact .right { display: flex; flex-direction: column; gap: 6px; align-items: flex-end; text-align: right; }
+@media (max-width: 640px) { .fact { grid-template-columns: minmax(0, 1fr); } .fact .right { align-items: flex-start; text-align: left; } .bar-row { grid-template-columns: 100px minmax(0, 1fr) 70px; font-size: 14px; } }
+.report { background: var(--accent-soft); border-radius: 6px; padding: 10px 12px; font-size: 13px; display: flex; flex-wrap: wrap; align-items: center; gap: 8px; }
+.report code { font-size: 12px; }
+.btn { min-height: 40px; padding: 0 14px; border-radius: 6px; border: 1px solid var(--line); background: var(--surface); color: var(--fg); font: inherit; font-size: 13px; cursor: pointer; }
+.more { align-self: center; }
+
+.people { display: grid; grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); gap: 0 24px; }
+.people button { display: flex; justify-content: space-between; gap: 8px; width: 100%; text-align: left; padding: 12px 0; border: 0; border-bottom: 1px solid var(--line); background: none; color: var(--fg); font: inherit; cursor: pointer; min-height: 44px; }
+.people button:hover .n1 { text-decoration: underline; }
+.people .n2 { color: var(--muted); font-variant-numeric: tabular-nums; white-space: nowrap; }
+.head { display: flex; flex-wrap: wrap; gap: 20px; align-items: center; }
+.avatar { width: 84px; height: 84px; border-radius: 50%; background: var(--soft); color: var(--link); display: flex; align-items: center; justify-content: center; font-family: var(--serif); font-size: 30px; font-weight: 700; flex: none; }
+.timeline { position: relative; height: 44px; border-bottom: 2px solid var(--line); }
+.timeline span { position: absolute; bottom: 7px; width: 14px; height: 14px; border-radius: 50%; transform: translateX(-7px); }
+.timeline span.unrated { background: var(--surface); border: 2px dashed var(--unrated-line); }
+.axis { display: flex; justify-content: space-between; font-size: 12px; color: var(--muted); }
+
+.prose { max-width: 70ch; display: flex; flex-direction: column; gap: 14px; }
+.prose p, .prose ul { margin: 0; }
+.prose li { margin-bottom: 6px; }
+.table-box { overflow-x: auto; }
+table.plain { border-collapse: collapse; font-size: 14px; min-width: 520px; }
+table.plain th, table.plain td { text-align: left; padding: 8px 12px; border-bottom: 1px solid var(--line); vertical-align: top; }
+table.plain th { font-size: 12px; color: var(--muted); text-transform: uppercase; letter-spacing: .05em; }
+footer { border-top: 1px solid var(--line); padding-top: 16px; font-size: 13px; color: var(--muted); display: flex; flex-wrap: wrap; gap: 8px 20px; justify-content: space-between; }
+button:focus-visible, select:focus-visible, input:focus-visible, a:focus-visible { outline: 3px solid var(--v-true); outline-offset: 2px; }
+.toast { position: fixed; left: 50%; transform: translateX(-50%); bottom: calc(16px + env(safe-area-inset-bottom, 0px)); background: var(--fg); color: var(--bg); padding: 10px 16px; border-radius: 6px; font-size: 14px; }
+</style>
+
+<div class="beta"><div class="wrap">Version bêta — données de test sur la France, mises à jour chaque jour. Les rattachements partisans sont incomplets.</div></div>
+<header class="top">
+  <div class="wrap">
+    <button class="logo" type="button" data-go="accueil">Observatoire<span style="font-weight:400;opacity:.75"> de la parole politique</span></button>
+    <nav class="main" aria-label="Navigation principale" id="nav"></nav>
+  </div>
+</header>
+<main class="wrap" id="app"></main>
+<div class="toast" id="toast" role="status" hidden></div>
+
+<script>
+const DATA = /*__DATA__*/{"generated_at":null,"facts":[],"sources":[],"contact":""};
+
+const LEVELS = [
+  ["true", "Vrai", 0], ["mostly_true", "Plutôt vrai", 1], ["half_true", "À moitié vrai", 2],
+  ["mostly_false", "Plutôt faux", 3], ["false", "Faux", 4], ["unrated", "Non classable", -1],
+];
+const LEVEL = Object.fromEntries(LEVELS.map(([k, l, i]) => [k, { label: l, idx: i }]));
+const VIEWS = [["accueil", "Accueil"], ["faits", "Faits vérifiés"], ["personnalites", "Personnalités"], ["partis", "Partis"], ["methodologie", "Méthodologie"]];
+const SCOPE = "Sur les déclarations vérifiées, pas sur l'ensemble des propos tenus.";
+
+const facts = DATA.facts.map((f) => ({ ...f, reviewDate: f.reviews.map((r) => r.review_date).filter(Boolean).sort().pop() || null }));
+const persons = {}, parties = {};
+for (const f of facts) {
+  persons[f.person.id] = f.person.name;
+  if (f.party.id) parties[f.party.id] = f.party.short_name ? f.party.name + " (" + f.party.short_name + ")" : f.party.name;
+}
+const sourceNames = Object.fromEntries(DATA.sources.map((s) => [s.id, s.name]));
+const usedSources = [...new Set(facts.flatMap((f) => f.reviews.map((r) => r.source_id)))].sort((a, b) => (sourceNames[a] || a).localeCompare(sourceNames[b] || b, "fr"));
+const today = DATA.generated_at ? DATA.generated_at.slice(0, 10) : new Date().toISOString().slice(0, 10);
+
+const state = { view: "accueil", id: null, period: "all", from: "", to: "", dateBy: "claim", party: "", person: "", source: "", verdicts: new Set(LEVELS.map((l) => l[0])), limit: 30, report: null };
+
+const $ = (id) => document.getElementById(id);
+const el = (tag, attrs = {}, ...kids) => {
+  const n = document.createElement(tag);
+  for (const [k, v] of Object.entries(attrs)) {
+    if (k === "on") for (const [e, f] of Object.entries(v)) n.addEventListener(e, f);
+    else if (k === "text") n.textContent = v;
+    else if (k === "style") n.setAttribute("style", v);
+    else if (v !== false && v != null) n.setAttribute(k, v === true ? "" : v);
+  }
+  for (const k of kids.flat(Infinity)) if (k != null && k !== false) n.append(k.nodeType ? k : document.createTextNode(String(k)));
+  return n;
+};
+const frDate = (iso, long) => {
+  if (!iso) return "date inconnue";
+  if (iso.length === 7) return new Date(iso + "-15T12:00:00").toLocaleDateString("fr-FR", { month: "long", year: "numeric" });
+  const d = new Date(iso.slice(0, 10) + "T12:00:00");
+  return isNaN(d) ? iso : d.toLocaleDateString("fr-FR", { day: "numeric", month: long ? "long" : "short", year: "numeric" });
+};
+const shift = (days) => { const d = new Date(today + "T12:00:00"); d.setDate(d.getDate() - days); return d.toISOString().slice(0, 10); };
+const toast = (msg) => { const t = $("toast"); t.textContent = msg; t.hidden = false; clearTimeout(toast.h); toast.h = setTimeout(() => (t.hidden = true), 2600); };
+const swatch = (k) => el("span", { class: "sw" + (k === "unrated" ? " unrated" : ""), style: k === "unrated" ? null : "background: var(--v-" + k + ")", "aria-hidden": "true" });
+
+function periodRange() {
+  const p = state.period;
+  if (p === "7") return [shift(7), today];
+  if (p === "30") return [shift(30), today];
+  if (p === "365") return [shift(365), today];
+  if (p === "year") return [today.slice(0, 4) + "-01-01", today];
+  if (p === "custom") return [state.from || "0000", state.to || "9999"];
+  return ["0000", "9999"];
+}
+
+function filtered({ person = state.person, party = state.party } = {}) {
+  const [from, to] = periodRange();
+  return facts.filter((f) => {
+    const d = (state.dateBy === "claim" ? f.claim_date : f.reviewDate) || "";
+    return d >= from && d.slice(0, 10) <= to
+      && (!party || f.party.id === party)
+      && (!person || f.person.id === person)
+      && (!state.source || f.reviews.some((r) => r.source_id === state.source))
+      && state.verdicts.has(f.verdict);
+  }).sort((a, b) => ((b.claim_date || "") + b.id).localeCompare((a.claim_date || "") + a.id));
+}
+
+function periodLabel() {
+  const [from, to] = periodRange();
+  if (state.period === "all") return "toute la période couverte";
+  return "du " + frDate(from === "0000" ? null : from) + " au " + frDate(to === "9999" ? null : to);
+}
+
+/* ---------- navigation ---------- */
+function go(view, id = null) {
+  state.view = view; state.id = id; state.limit = 30; state.report = null;
+  const token = id ? (view === "personne" ? "personne-" : "parti-") + id : view;
+  try { history.replaceState(null, "", "#" + token); } catch (e) { /* hors d'un navigateur classique */ }
+  render(); window.scrollTo(0, 0);
+}
+function fromHash() {
+  const h = decodeURIComponent((location.hash || "").slice(1));
+  const m = h.match(/^(personne|parti)-(Q\d+)$/);
+  if (m && (m[1] === "personne" ? persons[m[2]] : parties[m[2]])) { state.view = m[1]; state.id = m[2]; }
+  else if (VIEWS.some(([v]) => v === h)) state.view = h;
+}
+document.addEventListener("click", (e) => { const b = e.target.closest("[data-go]"); if (b) go(b.dataset.go); });
+
+/* ---------- composants ---------- */
+function filtersBar({ withPerson = true, withParty = true } = {}) {
+  const sel = (id, label, value, options, onChange) => el("label", { for: id }, label,
+    el("select", { id, on: { change: (e) => { onChange(e.target.value); state.limit = 30; render(); } } },
+      options.map(([v, t]) => el("option", { value: v, selected: v === value }, t))));
+  const custom = state.period === "custom" ? [
+    el("label", { for: "f-from" }, "Du", el("input", { type: "date", id: "f-from", value: state.from, on: { change: (e) => { state.from = e.target.value; render(); } } })),
+    el("label", { for: "f-to" }, "Au", el("input", { type: "date", id: "f-to", value: state.to, on: { change: (e) => { state.to = e.target.value; render(); } } })),
+  ] : [];
+  return el("section", { class: "filters", "aria-label": "Filtres" },
+    sel("f-period", "Période", state.period, [["all", "Toute la période"], ["7", "7 derniers jours"], ["30", "30 derniers jours"], ["365", "12 derniers mois"], ["year", "Année " + today.slice(0, 4)], ["custom", "Personnalisée…"]], (v) => (state.period = v)),
+    ...custom,
+    sel("f-dateby", "Dater par", state.dateBy, [["claim", "Date de la déclaration"], ["review", "Date de la vérification"]], (v) => (state.dateBy = v)),
+    sel("f-country", "Pays", "FR", [["FR", "France"]], () => {}),
+    withParty ? sel("f-party", "Parti", state.party, [["", "Tous les partis"], ...Object.entries(parties).sort((a, b) => a[1].localeCompare(b[1], "fr"))], (v) => (state.party = v)) : null,
+    withPerson ? sel("f-person", "Personne", state.person, [["", "Toutes les personnes"], ...Object.entries(persons).sort((a, b) => a[1].localeCompare(b[1], "fr"))], (v) => (state.person = v)) : null,
+    sel("f-source", "Source", state.source, [["", "Toutes les sources"], ...usedSources.map((s) => [s, sourceNames[s] || s])], (v) => (state.source = v)),
+    el("fieldset", {}, el("legend", { text: "Verdict" }), el("div", { class: "pills" }, LEVELS.map(([k, l]) => el("button", {
+      type: "button", class: "pill", "aria-pressed": String(state.verdicts.has(k)),
+      on: { click: () => { state.verdicts.has(k) ? state.verdicts.delete(k) : state.verdicts.add(k); render(); } },
+    }, swatch(k), l)))),
+    el("button", { type: "button", class: "reset", on: { click: () => { Object.assign(state, { period: "all", from: "", to: "", dateBy: "claim", party: "", person: "", source: "", verdicts: new Set(LEVELS.map((x) => x[0])) }); render(); } } }, "Réinitialiser"));
+}
+
+function summary(list, extra = []) {
+  const n = list.length;
+  const counts = Object.fromEntries(LEVELS.map(([k]) => [k, list.filter((f) => f.verdict === k).length]));
+  const sources = new Set(list.flatMap((f) => f.reviews.map((r) => r.source_id)));
+  const last = list.map((f) => f.reviewDate).filter(Boolean).sort().pop();
+  return el("section", { class: "summary" },
+    el("div", { class: "bars" },
+      el("div", {}, el("h2", { text: n + (n > 1 ? " déclarations vérifiées" : " déclaration vérifiée") }), el("p", { class: "scope", text: SCOPE + " Période : " + periodLabel() + "." })),
+      el("div", { role: "list", "aria-label": "Répartition par verdict" }, LEVELS.map(([k, l]) => el("div", { class: "bar-row", role: "listitem" },
+        el("span", { class: "lab", text: l }),
+        el("div", { class: "track" }, el("div", { class: "fill" + (k === "unrated" ? " unrated" : ""), style: "width:" + (n ? (counts[k] / n) * 100 : 0) + "%" + (k === "unrated" ? "" : ";background:var(--v-" + k + ")") })),
+        el("span", { class: "num" }, String(counts[k]), el("span", { class: "muted", text: " · " + (n ? Math.round((counts[k] / n) * 100) : 0) + " %" })))))),
+    el("aside", { class: "side" }, ...extra,
+      el("div", {}, el("div", { class: "k", text: "Sources distinctes" }), el("div", { class: "v", text: String(sources.size) }), el("div", { class: "small muted", text: [...sources].map((s) => sourceNames[s] || s).join(" · ") || "—" })),
+      el("div", {}, el("div", { class: "k", text: "Vérification la plus récente" }), el("div", { class: "v", style: "font-size:18px", text: last ? frDate(last, true) : "—" }))));
+}
+
+function meter(k) {
+  const i = LEVEL[k]?.idx ?? -1;
+  return el("div", { class: "meter", "aria-hidden": "true" }, [0, 1, 2, 3, 4].map((x) => el("span", { style: x === i ? "background:var(--v-" + k + ")" : null })));
+}
+
+function partyText(f) {
+  if (f.party.id) return f.party.short_name || f.party.name;
+  return "parti non renseigné";
+}
+
+function verdictLines(f) {
+  return f.reviews.map((r) => el("div", { class: "verdict" },
+    el("strong", { text: LEVEL[r.rating_normalized]?.label || r.rating_normalized }),
+    el("span", { class: "muted" }, " — « " + (r.rating_original || "sans libellé") + " » selon ", el("a", { href: r.url, target: "_blank", rel: "noopener", text: r.source_name }))));
+}
+
+function datesLine(f) {
+  return el("div", { class: "dates" }, "Déclaration : ", el("span", { class: f.date_is_fallback ? "fallback" : null, title: f.date_is_fallback ? "Date de déclaration non fournie par la source : date de vérification utilisée" : null, text: frDate(f.claim_date) }),
+    " · Vérification : " + frDate(f.reviewDate));
+}
+
+function personLink(f) {
+  return el("div", { class: "who" }, el("button", { type: "button", class: "linkish", on: { click: () => go("personne", f.person.id) } }, f.person.name), " ",
+    el("span", { class: "muted", text: "· " + partyText(f) + " à cette date" }));
+}
+
+function card(f) {
+  return el("article", { class: "card" }, personLink(f), el("p", { class: "claim", text: "« " + (f.claim_text || "") + " »" }), meter(f.verdict),
+    el("div", { class: "verdict" }, el("strong", { text: LEVEL[f.verdict].label }), f.reviews.length > 1 ? el("span", { class: "muted", text: " (verdict le plus fréquent sur " + f.reviews.length + " vérifications)" }) : null), verdictLines(f), datesLine(f));
+}
+
+function factRow(f, withPerson = true) {
+  const open = state.report === f.id;
+  return el("article", { class: "fact" },
+    el("div", { style: "display:flex;flex-direction:column;gap:6px;min-width:0" },
+      withPerson ? personLink(f) : el("div", { class: "who muted", text: partyText(f) + " à cette date" }),
+      el("p", { class: "claim", text: "« " + (f.claim_text || "") + " »" }),
+      datesLine(f),
+      el("div", { class: "small" }, f.reviews.map((r, i) => [i ? " · " : "", el("a", { href: r.url, target: "_blank", rel: "noopener", text: "Lire sur " + r.source_name })]),
+        " · ", el("button", { type: "button", class: "linkish", style: "font-weight:400;color:var(--muted)", "aria-expanded": String(open), on: { click: () => { state.report = open ? null : f.id; render(); } } }, "Signaler une erreur")),
+      open ? el("div", { class: "report" }, "Écrivez à ", el("strong", { text: DATA.contact }), " en indiquant la référence ", el("code", { text: f.id }), ". Une attribution contestée à raison est retirée sous 48 h.",
+        el("button", { type: "button", class: "btn", on: { click: () => copy(DATA.contact + " — référence " + f.id) } }, "Copier l'adresse et la référence")) : null),
+    el("div", { class: "right" }, meter(f.verdict), el("strong", { text: LEVEL[f.verdict].label }), verdictLines(f)));
+}
+
+async function copy(text) {
+  try { await navigator.clipboard.writeText(text); toast("Copié"); } catch (e) { toast("Copie impossible : sélectionnez le texte à la main."); }
+}
+
+function factList(list, withPerson = true) {
+  const shown = list.slice(0, state.limit);
+  return el("section", { class: "facts" },
+    shown.length ? shown.map((f) => factRow(f, withPerson)) : el("p", { class: "muted", text: "Aucune déclaration vérifiée ne correspond à ces filtres." }),
+    list.length > shown.length ? el("button", { type: "button", class: "btn more", on: { click: () => { state.limit += 30; render(); } } }, "Afficher 30 de plus (" + (list.length - shown.length) + " restantes)") : null);
+}
+
+/* ---------- vues ---------- */
+const views = {
+  accueil() {
+    const list = filtered();
+    return [
+      el("div", {}, el("h1", { text: "Ce que les fact-checkers ont vérifié" }),
+        el("p", { class: "muted", style: "max-width:70ch;margin:8px 0 0", text: "L'Observatoire rassemble les vérifications publiées par des rédactions reconnues et les rattache aux personnalités politiques concernées. Il ne juge jamais lui-même : chaque verdict est celui de la source, avec son libellé d'origine et un lien vers l'article." })),
+      filtersBar(), summary(list),
+      el("section", { style: "display:flex;flex-direction:column;gap:16px" },
+        el("div", { style: "display:flex;flex-wrap:wrap;justify-content:space-between;align-items:baseline;gap:8px" }, el("h2", { text: "Dernières vérifications" }),
+          el("button", { type: "button", class: "linkish", "data-go": "faits" }, "Voir les " + list.length + " faits")),
+        el("div", { class: "cards" }, list.slice(0, 6).map(card))),
+    ];
+  },
+  faits() {
+    const list = filtered();
+    return [el("div", {}, el("h1", { text: "Faits vérifiés" }), el("p", { class: "muted", style: "margin:6px 0 0" }, list.length + " déclarations, de la plus récente à la plus ancienne. Les dates en ", el("em", { text: "italique" }), " sont des dates de vérification, faute de date de déclaration.")),
+      filtersBar(), factList(list)];
+  },
+  personnalites() {
+    const all = filtered({ person: "" });
+    const byPerson = {};
+    for (const f of all) (byPerson[f.person.id] ||= []).push(f);
+    const ids = Object.keys(byPerson).sort((a, b) => persons[a].localeCompare(persons[b], "fr"));
+    return [el("div", {}, el("h1", { text: "Personnalités" }), el("p", { class: "muted", style: "margin:6px 0 0", text: "Par ordre alphabétique. Aucun classement : le nombre de vérifications dépend des choix des rédactions, pas de la sincérité des personnes." })),
+      filtersBar({ withPerson: false }),
+      ids.length ? el("div", { class: "people" }, ids.map((id) => el("button", { type: "button", on: { click: () => go("personne", id) } },
+        el("span", { class: "n1", text: persons[id] }), el("span", { class: "n2", text: byPerson[id].length + " vérif." })))) : el("p", { class: "muted", text: "Aucune personnalité pour ces filtres." })];
+  },
+  partis() {
+    const all = filtered({ party: "" });
+    const byParty = {};
+    for (const f of all) if (f.party.id) (byParty[f.party.id] ||= []).push(f);
+    const unknown = all.filter((f) => !f.party.id).length;
+    const ids = Object.keys(byParty).sort((a, b) => parties[a].localeCompare(parties[b], "fr"));
+    return [el("div", {}, el("h1", { text: "Partis" }), el("p", { class: "muted", style: "margin:6px 0 0", text: "Parti en vigueur à la date de chaque déclaration, d'après des affiliations publiques et datées. " + unknown + " déclaration(s) sans parti renseigné ne sont comptées dans aucun parti." })),
+      filtersBar({ withParty: false }),
+      ids.length ? el("div", { class: "people" }, ids.map((id) => el("button", { type: "button", on: { click: () => go("parti", id) } },
+        el("span", { class: "n1", text: parties[id] }), el("span", { class: "n2", text: byParty[id].length + " vérif." })))) : el("p", { class: "muted", text: "Aucun parti pour ces filtres." })];
+  },
+  personne() {
+    const id = state.id, list = filtered({ person: id, party: "" }), allOfPerson = facts.filter((f) => f.person.id === id);
+    const name = persons[id] || id;
+    const initials = name.split(/[\s-]+/).filter(Boolean).map((w) => w[0]).slice(0, 2).join("").toUpperCase();
+    const partyNames = [...new Set(allOfPerson.filter((f) => f.party.id).map((f) => parties[f.party.id]))];
+    const dates = allOfPerson.map((f) => f.claim_date).filter(Boolean).sort();
+    const t0 = dates.length ? new Date(dates[0]).getTime() : 0, t1 = dates.length ? new Date(dates[dates.length - 1]).getTime() : 1;
+    const pos = (d) => (t1 === t0 ? 50 : 2 + ((new Date(d).getTime() - t0) / (t1 - t0)) * 96);
+    return [
+      el("div", { class: "head" }, el("div", { class: "avatar", "aria-hidden": "true", text: initials }),
+        el("div", { style: "min-width:0" }, el("h1", { text: name }),
+          el("p", { class: "muted", style: "margin:4px 0 0" }, partyNames.length ? "Partis sur la période : " + partyNames.join(", ") : "Parti non renseigné sur la période", " · ",
+            el("a", { href: "https://www.wikidata.org/wiki/" + id, target: "_blank", rel: "noopener", text: "fiche Wikidata" })))),
+      filtersBar({ withPerson: false, withParty: false }),
+      summary(list),
+      dates.length > 1 ? el("section", { "aria-label": "Frise des vérifications", style: "display:flex;flex-direction:column;gap:8px" }, el("h2", { text: "Dans le temps" }),
+        el("div", { class: "timeline" }, allOfPerson.filter((f) => f.claim_date).map((f) => el("span", { class: f.verdict === "unrated" ? "unrated" : null, title: frDate(f.claim_date) + " — " + LEVEL[f.verdict].label, style: "left:" + pos(f.claim_date) + "%" + (f.verdict === "unrated" ? "" : ";background:var(--v-" + f.verdict + ")") }))),
+        el("div", { class: "axis" }, el("span", { text: frDate(dates[0]) }), el("span", { text: frDate(dates[dates.length - 1]) }))) : null,
+      el("h2", { text: "Les " + list.length + " faits" }), factList(list, false),
+    ];
+  },
+  parti() {
+    const id = state.id, list = filtered({ party: id, person: "" });
+    const byPerson = {};
+    for (const f of list) (byPerson[f.person.id] ||= []).push(f);
+    return [
+      el("div", {}, el("h1", { text: parties[id] || id }), el("p", { class: "muted", style: "margin:6px 0 0", text: "Déclarations de personnes affiliées à ce parti à la date où elles ont été faites. La couverture dépend des rédactions et des affiliations connues : elle ne représente pas l'ensemble du parti." })),
+      filtersBar({ withParty: false, withPerson: false }),
+      summary(list),
+      el("section", {}, el("h2", { text: "Par personne" }), el("div", { class: "table-box" }, el("table", { class: "plain" },
+        el("thead", {}, el("tr", {}, ["Personne", "Vérifications", ...LEVELS.map((l) => l[1])].map((h) => el("th", { text: h })))),
+        el("tbody", {}, Object.keys(byPerson).sort((a, b) => persons[a].localeCompare(persons[b], "fr")).map((pid) => el("tr", {},
+          el("td", {}, el("button", { type: "button", class: "linkish", on: { click: () => go("personne", pid) } }, persons[pid])),
+          el("td", { class: "num", text: String(byPerson[pid].length) }),
+          LEVELS.map(([k]) => el("td", { class: "num", text: String(byPerson[pid].filter((f) => f.verdict === k).length) })))))))),
+      el("h2", { text: "Les " + list.length + " faits" }), factList(list),
+    ];
+  },
+  methodologie() {
+    const counts = Object.fromEntries(usedSources.map((s) => [s, facts.filter((f) => f.reviews.some((r) => r.source_id === s)).length]));
+    return [el("div", { class: "prose" },
+      el("h1", { text: "Méthodologie" }),
+      el("p", { text: "L'Observatoire ne produit aucun verdict. Il recense des vérifications publiées par des rédactions de fact-checking, les rattache à des personnalités politiques identifiées et les rend consultables par période, parti, personne, verdict et source." }),
+      el("h2", { text: "Principes" }),
+      el("ul", {},
+        el("li", { text: "Le verdict affiché est celui de la source, avec son libellé d'origine toujours visible." }),
+        el("li", { text: "Chaque entrée donne le lien vers l'article, la date de la déclaration, la date de la vérification et le nom de la rédaction." }),
+        el("li", { text: "Un verdict qui ne se place pas sur l'axe vrai/faux est classé « non classable », jamais forcé." }),
+        el("li", { text: SCOPE + " Les rédactions choisissent ce qu'elles vérifient, souvent des propos qui suscitent un doute : ces chiffres ne mesurent pas la sincérité d'une personne." }),
+        el("li", { text: "Le parti indiqué est celui en vigueur à la date de la déclaration, d'après des affiliations publiques et datées. Faute de date fiable, le parti n'est pas indiqué." }),
+        el("li", { text: "Seules des métadonnées sont reprises (titre, verdict, dates, lien), jamais le contenu des articles." }),
+        el("li", { text: "Toute attribution incertaine est vérifiée à la main avant publication. Aucun classement des personnalités n'est proposé." })),
+      el("h2", { text: "Sources" }),
+      el("div", { class: "table-box" }, el("table", { class: "plain" }, el("thead", {}, el("tr", {}, el("th", { text: "Rédaction" }), el("th", { text: "Déclarations dans la base" }))),
+        el("tbody", {}, usedSources.map((s) => el("tr", {}, el("td", { text: sourceNames[s] || s }), el("td", { class: "num", text: String(counts[s]) })))))),
+      el("p", { class: "small muted", text: "Collecte : API Google Fact Check Tools (vérifications déclarées par les rédactions) et flux ClaimReview de Data Commons (licence CC BY). Personnalités et affiliations : Wikidata." }),
+      el("h2", { text: "Échelle commune" }),
+      el("div", { class: "table-box" }, el("table", { class: "plain" }, el("thead", {}, el("tr", {}, el("th", { text: "Niveau" }), el("th", { text: "Exemples de libellés d'origine" }))),
+        el("tbody", {}, [["true", "Vrai, Correct"], ["mostly_true", "Plutôt vrai"], ["half_true", "À moitié vrai, Imprécis, En partie vrai"], ["mostly_false", "Plutôt faux, Trompeur, Exagéré"], ["false", "Faux, Inventé"], ["unrated", "Manque de contexte, Montage, Invérifiable"]].map(([k, ex]) =>
+          el("tr", {}, el("td", {}, swatch(k), " " + LEVEL[k].label), el("td", { text: ex })))))),
+      el("p", { text: "Quand plusieurs rédactions vérifient la même déclaration, toutes les vérifications sont affichées ; le compteur retient le verdict le plus fréquent, et « non classable » en cas d'égalité." }),
+      el("h2", { text: "Limites de la version bêta" }),
+      el("ul", {},
+        el("li", { text: "Périmètre : France ; personnalités ayant exercé une fonction publique depuis 2017." }),
+        el("li", { text: "Certains libellés intermédiaires sont classés « non classable » en attendant leur validation." }),
+        el("li", { text: "Les affiliations partisanes de Wikidata sont souvent non datées : beaucoup de déclarations n'ont pas encore de parti indiqué." }),
+        el("li", { text: "Les noms de partis sont les noms actuels (par exemple Renaissance pour La République en marche)." })),
+      el("h2", { text: "Contester une entrée, vos droits" }),
+      el("p", {}, "Pour signaler une erreur, demander une rectification ou vous opposer au traitement de données vous concernant, écrivez à ", el("strong", { text: DATA.contact }), " en indiquant la référence de l'entrée (bouton « Signaler une erreur »). Une attribution contestée à raison est retirée sous 48 heures."),
+      el("p", { class: "small muted", text: "Données mises à jour le " + frDate(DATA.generated_at, true) + "." }))];
+  },
+};
+
+function render() {
+  const navView = state.view === "personne" ? "personnalites" : state.view === "parti" ? "partis" : state.view;
+  $("nav").replaceChildren(...VIEWS.map(([v, l]) => el("button", { type: "button", "data-go": v, "aria-current": v === navView ? "page" : null }, l)));
+  $("app").replaceChildren(...views[state.view](),
+    el("footer", {}, el("span", { text: "L'Observatoire ne produit aucun verdict : il reprend celui de la source." }),
+      el("span", {}, el("button", { type: "button", class: "linkish", style: "font-weight:400", "data-go": "methodologie" }, "Méthodologie"), " · Mise à jour : " + frDate(DATA.generated_at))));
+}
+
+fromHash();
+render();
+</script>

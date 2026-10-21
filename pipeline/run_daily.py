@@ -111,13 +111,14 @@ def rebuild_claims(conn: sqlite3.Connection, ref: Referential, validations: dict
         else:
             attribution = ref.attribute(r["claimant"])
         attributions[r["id"]] = attribution
-        claim_date, _, _ = claim_dates(dict(r))
-        items.append((r["id"], attribution.person_id, claim_date, r["claim_text"] or r["title"] or ""))
+        claim_date, _, fallback = claim_dates(dict(r))
+        items.append((r["id"], attribution.person_id, claim_date, r["claim_text"] or r["title"] or "", fallback))
 
     by_id = {r["id"]: r for r in reviews}
     conn.execute("DELETE FROM claims")
     for group in group_reviews(items):
-        first = by_id[group.review_ids[0]]
+        dated = [by_id[rid] for rid in group.review_ids if not claim_dates(dict(by_id[rid]))[2]]
+        first = dated[0] if dated else by_id[group.review_ids[0]]
         attribution = attributions[first["id"]]
         claim_date, precision, fallback = claim_dates(dict(first))
         claim_id = "c_" + min(group.review_ids)

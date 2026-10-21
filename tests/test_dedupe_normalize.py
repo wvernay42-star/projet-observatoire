@@ -49,3 +49,12 @@ def test_rephrased_claim_with_same_figures_is_merged():
         ("r3", "Q12927", "2026-09-14", "Le chômage des jeunes atteint 18% contre 7% pour l'ensemble des actifs"),  # autre affirmation
     ])
     assert [g.review_ids for g in groups] == [["r1", "r2"], ["r3"]]
+
+
+def test_fallback_date_widens_the_window():
+    groups = group_reviews([
+        ("r1", "Q12927", "2026-09-13", "Aujourd'hui, 70% des Français sont éligibles au parc social et seulement 11% en bénéficient", False),
+        ("r2", "Q12927", "2026-09-17", "Aujourd'hui, 70% des Français sont éligibles au parc social et seulement 11% en bénéficient", True),
+        ("r3", "Q12927", "2026-09-30", "Aujourd'hui, 70% des Français sont éligibles au parc social et seulement 11% en bénéficient", True),
+    ])
+    assert [g.review_ids for g in groups] == [["r1", "r2"], ["r3"]]
