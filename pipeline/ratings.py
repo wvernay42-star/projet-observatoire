@@ -7,14 +7,13 @@ Règles, dans l'ordre (docs/cadrage.md, « Échelle de verdicts ») :
 """
 
 import csv
-import re
-import unicodedata
 from collections import Counter
 from collections.abc import Iterable
 from dataclasses import dataclass
 from pathlib import Path
 
 from pipeline.connectors.base import SEEDS_DIR, RawReview
+from pipeline.text import label_key
 
 LEVELS = ("true", "mostly_true", "half_true", "mostly_false", "false", "unrated")
 DECIDED_BY = ("rule", "llm_validated", "human")
@@ -28,13 +27,6 @@ NUMERIC_SOURCES: frozenset[str] = frozenset()
 class Rating:
     normalized: str
     method: str  # 'map', 'numeric' ou 'pending' (à valider, compté comme unrated)
-
-
-def label_key(label: str) -> str:
-    """Clé de comparaison : minuscules, sans accents, apostrophes et espaces uniformisés."""
-    text = unicodedata.normalize("NFKD", label.replace("’", "'"))
-    text = "".join(c for c in text if not unicodedata.combining(c)).lower()
-    return re.sub(r"\s+", " ", text).strip(" .")
 
 
 def load_rating_map(path: Path = SEEDS_DIR / "rating_map.csv") -> dict[tuple[str, str], str]:

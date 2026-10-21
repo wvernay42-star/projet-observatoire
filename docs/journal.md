@@ -17,6 +17,25 @@ Les décisions durables sont aussi consignées dans [decisions.md](decisions.md)
 | 7 | web/beta/index.html (maquette A) | ⏳ |
 | — | Page web de validation (maquette faite) | ⏳ |
 
+## 2026-10-21 (soir) — clé Google, référentiel des personnalités
+
+**Clé API Google** : configurée en « Network secret » (en-tête `X-goog-api-key` injecté
+automatiquement vers `factchecktools.googleapis.com`) ; fonctionne. Accès `www.franceinfo.fr` ouvert.
+
+**Ce que remonte l'API Google Fact Check** (filtre par site éditeur) :
+
+| Éditeur | 90 jours | 365 jours | Plus récente |
+|---|---|---|---|
+| factuel.afp.com | 93 | ≥ 200 | 20/10/2026 |
+| tf1info.fr (Les Vérificateurs) | 97 | ≥ 200 | 19/10/2026 |
+| 20minutes.fr (Fake Off) | 41 | 191 | 20/10/2026 |
+| franceinfo.fr | 8 | 24 | 17/10/2026 |
+| lemonde.fr, liberation.fr, lessurligneurs.eu | 0 | 0 | — |
+
+→ Proposition : ajouter TF1 Info et 20 Minutes aux sources suivies (à valider).
+
+**Étape 4** : voir le bilan ci-dessous (référentiel Wikidata + attribute.py).
+
 ## 2026-10-21 (suite) — accès réseau ouvert, test des sources
 
 **Accès** : Le Monde, Libération, Les Surligneurs, Assemblée nationale, Sénat, Wikidata, ParlGov : OK.
