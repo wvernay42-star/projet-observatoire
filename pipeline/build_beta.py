@@ -2,8 +2,10 @@
 
     python -m pipeline.build_beta
 
-Embarque data/export/facts.json, la liste des sources et l'adresse de contact. La page est
-ensuite publiée telle quelle (artefact) ; elle ne charge aucune donnée à distance.
+Embarque data/export/facts.json, la liste des sources, les sujets de Votona et l'adresse de
+contact. La page est publiée telle quelle (artefact) ; elle ne charge aucune donnée à distance.
+La version site (site/, Vercel) ajoute les données ouvertes : donnees/facts.json, donnees/facts.csv
+et flux.xml (RSS des dernières vérifications).
 """
 
 import base64
@@ -11,6 +13,8 @@ import csv
 import json
 import re
 import shutil
+from email.utils import format_datetime
+from xml.sax.saxutils import escape
 from datetime import datetime, timezone
 from pathlib import Path
 
@@ -24,6 +28,7 @@ PLACEHOLDER = '/*__DATA__*/{"generated_at":null,"facts":[],"sources":[],"contact
 LOGO_PLACEHOLDER = "/*__LOGO__*/"
 LOGO = Path(__file__).resolve().parents[1] / "web" / "beta" / "logo-head.webp"
 CONTACT = "contact@votona.fr"
+SITE_URL = "https://observatoire.votona.fr"  # adresse de production (liens absolus du flux RSS)
 
 
 def build(export_dir: Path = EXPORT_DIR, template: Path = TEMPLATE, output: Path = OUTPUT) -> int:
@@ -33,18 +38,24 @@ def build(export_dir: Path = EXPORT_DIR, template: Path = TEMPLATE, output: Path
     generated = datetime.fromtimestamp((export_dir / "facts.json").stat().st_mtime, timezone.utc)
     with (SEEDS_DIR / "candidates_2027.csv").open(encoding="utf-8") as f:
         candidates = list(csv.DictReader(f))
-    data = {"generated_at": generated.isoformat(timespec="seconds"), "facts": facts,
-            "sources": sources, "contact": CONTACT, "candidates": candidates}
-    # « </ » échappé : le JSON ne peut pas fermer la balise <script> qui l'embarque.
-    payload = json.dumps(data, ensure_ascii=False, separators=(",", ":")).replace("</", "<\\/")
+    with (SEEDS_DIR / "themes.csv").open(encoding="utf-8") as f:
+        topics = [{"slug": t["key"], "label": t["label"], "category": t["category"]}
+                  for t in csv.DictReader(f) if t["kind"] == "topic"]
+    data = {"generated_at": generated.isoformat(timespec="seconds"), "facts": facts, "sources": sources,
+            "contact": CONTACT, "candidates": candidates, "topics": topics}
     html = template.read_text(encoding="utf-8")
     if PLACEHOLDER not in html:
         raise ValueError("Emplacement des données introuvable dans le gabarit")
-    html = html.replace(PLACEHOLDER, payload)
+
+    def page(site: bool, logo: str) -> str:
+        # « </ » échappé : le JSON ne peut pas fermer la balise <script> qui l'embarque.
+        payload = json.dumps({**data, "site": site}, ensure_ascii=False, separators=(",", ":")).replace("</", "<\\/")
+        return html.replace(PLACEHOLDER, payload).replace(LOGO_PLACEHOLDER, logo)
+
     # Artefact : logo embarqué (aucune ressource externe) ; site : fichier servi à côté de la page.
-    logo = "data:image/webp;base64," + base64.b64encode(LOGO.read_bytes()).decode()
-    output.write_text(html.replace(LOGO_PLACEHOLDER, logo), encoding="utf-8")
-    build_site(html.replace(LOGO_PLACEHOLDER, "/assets/logo-head.webp"))
+    output.write_text(page(False, "data:image/webp;base64," + base64.b64encode(LOGO.read_bytes()).decode()), encoding="utf-8")
+    build_site(page(True, "/assets/logo-head.webp"))
+    write_open_data(facts, generated)
     return len(facts)
 
 
@@ -57,6 +68,7 @@ SITE_HEAD = """<!doctype html>
 <meta name="robots" content="noindex, nofollow">
 <meta name="description" content="Votona Observatoire : les vérifications des fact-checkers français sur les candidats à la présidentielle 2027 et la vie politique, avec le verdict d'origine et un lien vers chaque article.">
 <link rel="icon" href="/assets/favicon-48.png">
+<link rel="alternate" type="application/rss+xml" title="Votona Observatoire - dernières vérifications" href="/flux.xml">
 <style>:root{color-scheme:light}body{margin:0;padding:0;font:14px system-ui,sans-serif}img{max-width:100%}[hidden]{display:none!important}</style>
 </head>
 <body>
@@ -76,6 +88,49 @@ def build_site(page: str, site_dir: Path = SITE_DIR) -> None:
     if favicon.exists():
         shutil.copyfile(favicon, site_dir / "assets" / "favicon-48.png")
     (site_dir / "robots.txt").write_text("User-agent: *\nDisallow: /\n", encoding="utf-8")
+
+
+OPEN_DATA_COLUMNS = ["id", "person_id", "person_name", "votona_id", "party_id", "party_name", "party_status",
+                     "claim_text", "claim_date", "date_is_fallback", "verdict", "theme", "votona_topics",
+                     "source_id", "source_name", "url", "title", "rating_original", "rating_normalized", "review_date"]
+RSS_ITEMS = 50
+
+
+def write_open_data(facts: list[dict], generated: datetime, site_dir: Path = SITE_DIR) -> None:
+    """Données ouvertes du site : la base publiée en JSON et CSV (une ligne par vérification), et un flux RSS."""
+    out = site_dir / "donnees"
+    out.mkdir(parents=True, exist_ok=True)
+    (out / "facts.json").write_text(json.dumps(facts, ensure_ascii=False, indent=1), encoding="utf-8")
+    with (out / "facts.csv").open("w", newline="", encoding="utf-8") as f:
+        w = csv.DictWriter(f, fieldnames=OPEN_DATA_COLUMNS)
+        w.writeheader()
+        for fact in facts:
+            for r in fact["reviews"]:
+                w.writerow({"id": fact["id"], "person_id": fact["person"]["id"], "person_name": fact["person"]["name"],
+                            "votona_id": fact["person"].get("votona_id") or "", "party_id": fact["party"]["id"] or "",
+                            "party_name": fact["party"]["name"] or "", "party_status": fact["party"]["status"],
+                            "claim_text": fact["claim_text"], "claim_date": fact["claim_date"] or "",
+                            "date_is_fallback": int(fact["date_is_fallback"]), "verdict": fact["verdict"],
+                            "theme": fact.get("theme") or "",
+                            "votona_topics": ";".join(t["slug"] for t in fact.get("votona_topics", [])),
+                            **{k: r[k] or "" for k in ("source_id", "source_name", "url", "title", "rating_original",
+                                                       "rating_normalized", "review_date")}})
+    latest = sorted(facts, key=lambda f: max((r["review_date"] or "" for r in f["reviews"]), default=""), reverse=True)
+    items = []
+    for fact in latest[:RSS_ITEMS]:
+        r = max(fact["reviews"], key=lambda x: x["review_date"] or "")
+        when = datetime.fromisoformat((r["review_date"] or generated.date().isoformat())[:10]).replace(hour=12, tzinfo=timezone.utc)
+        verdicts = " ; ".join(f"« {x['rating_original'] or 'sans libellé'} » selon {x['source_name']}" for x in fact["reviews"])
+        items.append(f"""<item><title>{escape(fact["person"]["name"] + " : « " + (fact["claim_text"] or "") + " »")}</title>
+<link>{escape(r["url"])}</link><guid isPermaLink="false">{escape(fact["id"])}</guid><pubDate>{format_datetime(when)}</pubDate>
+<description>{escape(verdicts)}</description></item>""")
+    (site_dir / "flux.xml").write_text(f"""<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0"><channel><title>Votona Observatoire - dernières vérifications</title><link>{SITE_URL}/</link>
+<description>Les dernières déclarations politiques vérifiées par les rédactions françaises de fact-checking, avec le verdict d'origine.</description>
+<language>fr</language><lastBuildDate>{format_datetime(generated)}</lastBuildDate>
+{chr(10).join(items)}
+</channel></rss>
+""", encoding="utf-8")
 
 
 if __name__ == "__main__":

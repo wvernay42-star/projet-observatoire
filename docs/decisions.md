@@ -39,3 +39,15 @@
 - Les vérifications n'entrent jamais dans le classement de Votona.
 - Hébergement : Vercel, préproduction `preview.observatoire.votona.fr` (noindex), production
   `observatoire.votona.fr` après la liste de conformité.
+
+## 2026-10-22
+- Un seul écran à filtres complets (Faits vérifiés) ; les autres vues entrent par une personne, un
+  parti ou un sujet.
+- Thème des faits : familles et sujets de Votona, par mots-clés relus à la main, affiché comme
+  indicatif. Il sert de passerelle vers Votona et à montrer les angles morts, jamais à qualifier.
+- Divergence entre rédactions signalée telle quelle, sans arbitrage.
+- Données ouvertes (JSON, CSV, RSS) : métadonnées seulement, comme l'export.
+- Deux environnements : `preprod` (préproduction) et `main` (production), noindex partout jusqu'à
+  la liste de conformité. Fusion `preprod` → `main` sur demande explicite du porteur.
+- Liens Votona → Observatoire préparés derrière une constante vide, activés quand le domaine
+  de production répond.

@@ -15,6 +15,7 @@ from pipeline.attribute import Referential
 from pipeline.connectors.base import SEEDS_DIR
 from pipeline.dedupe import majority_verdict
 from pipeline.ratings import LEVELS
+from pipeline.themes import classify, load_themes
 
 EXPORT_DIR = Path(__file__).resolve().parents[1] / "data" / "export"
 PUBLISHED = ("auto_sure", "validated")
@@ -55,6 +56,7 @@ def party_name_at(party: dict[str, str], history: list[dict[str, str]], on: str 
 def build_facts(conn: sqlite3.Connection, ref: Referential) -> list[dict[str, Any]]:
     sources, parties = _read("sources.csv"), _read("parties.csv")
     party_names = load_party_names()
+    themes = load_themes()
     conn.row_factory = sqlite3.Row
     claims = conn.execute(
         f"SELECT * FROM claims WHERE attribution_status IN ({','.join('?' * len(PUBLISHED))})"
@@ -66,6 +68,8 @@ def build_facts(conn: sqlite3.Connection, ref: Referential) -> list[dict[str, An
         party = ref.party_at(c["person_id"], c["claim_date"])
         p = parties.get(party.party_id or "", {})
         name, short = party_name_at(p, party_names.get(party.party_id or "", []), c["claim_date"]) if p else (None, None)
+        # Thème indicatif (familles et sujets de Votona), tiré de l'affirmation et des titres.
+        theme, topics = classify(" ".join([c["text"] or "", *(r["title"] or "" for r in reviews)]), themes)
         facts.append({
             "id": c["id"],
             "person": {"id": c["person_id"], "name": ref.full_names.get(c["person_id"], ""),
@@ -77,6 +81,8 @@ def build_facts(conn: sqlite3.Connection, ref: Referential) -> list[dict[str, An
             "date_is_fallback": bool(c["date_is_fallback"]),
             "country": c["country"],
             "attribution_status": c["attribution_status"],
+            "theme": theme,
+            "votona_topics": topics,
             "verdict": majority_verdict([r["rating_normalized"] for r in reviews]),
             "reviews": [{
                 "source_id": r["source_id"],

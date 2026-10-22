@@ -18,6 +18,13 @@
   "date_is_fallback": true,
   "country": "FR",
   "attribution_status": "validated",
+  "theme": "Économie & travail",
+  "votona_topics": [
+   {
+    "slug": "reduire-la-dette-publique-en-priorite-par-la-baisse-des",
+    "label": "Réduire la dette publique en priorité par la baisse des dépenses de l'État"
+   }
+  ],
   "verdict": "half_true",
   "reviews": [
    {
@@ -59,6 +66,13 @@
   "date_is_fallback": false,
   "country": "FR",
   "attribution_status": "auto_sure",
+  "theme": "Société",
+  "votona_topics": [
+   {
+    "slug": "redonner-davantage-dautonomie-et-de-selection-aux",
+    "label": "Donner plus d'autonomie aux établissements scolaires, y compris pour choisir leurs élèves"
+   }
+  ],
   "verdict": "half_true",
   "reviews": [
    {
@@ -100,6 +114,8 @@
   "date_is_fallback": true,
   "country": "FR",
   "attribution_status": "auto_sure",
+  "theme": "Écologie",
+  "votona_topics": [],
   "verdict": "half_true",
   "reviews": [
    {
@@ -132,6 +148,8 @@
   "date_is_fallback": true,
   "country": "FR",
   "attribution_status": "validated",
+  "theme": null,
+  "votona_topics": [],
   "verdict": "true",
   "reviews": [
    {
@@ -173,6 +191,13 @@
   "date_is_fallback": false,
   "country": "FR",
   "attribution_status": "auto_sure",
+  "theme": "Écologie",
+  "votona_topics": [
+   {
+    "slug": "interdire-rapidement-les-pesticides-de-synthese-en",
+    "label": "Fixer une date de sortie des pesticides de synthèse en agriculture"
+   }
+  ],
   "verdict": "half_true",
   "reviews": [
    {
@@ -214,6 +239,13 @@
   "date_is_fallback": true,
   "country": "FR",
   "attribution_status": "auto_sure",
+  "theme": "Société",
+  "votona_topics": [
+   {
+    "slug": "redonner-davantage-dautonomie-et-de-selection-aux",
+    "label": "Donner plus d'autonomie aux établissements scolaires, y compris pour choisir leurs élèves"
+   }
+  ],
   "verdict": "true",
   "reviews": [
    {
@@ -255,6 +287,13 @@
   "date_is_fallback": true,
   "country": "FR",
   "attribution_status": "auto_sure",
+  "theme": "Société",
+  "votona_topics": [
+   {
+    "slug": "redonner-davantage-dautonomie-et-de-selection-aux",
+    "label": "Donner plus d'autonomie aux établissements scolaires, y compris pour choisir leurs élèves"
+   }
+  ],
   "verdict": "mostly_false",
   "reviews": [
    {
@@ -287,6 +326,8 @@
   "date_is_fallback": true,
   "country": "FR",
   "attribution_status": "auto_sure",
+  "theme": "Europe & institutions",
+  "votona_topics": [],
   "verdict": "half_true",
   "reviews": [
    {
@@ -328,6 +369,13 @@
   "date_is_fallback": true,
   "country": "FR",
   "attribution_status": "auto_sure",
+  "theme": "Protection sociale",
+  "votona_topics": [
+   {
+    "slug": "durcir-les-conditions-dindemnisation-du-chomage",
+    "label": "Restreindre les conditions d'indemnisation du chômage"
+   }
+  ],
   "verdict": "false",
   "reviews": [
    {
@@ -369,6 +417,8 @@
   "date_is_fallback": true,
   "country": "FR",
   "attribution_status": "auto_sure",
+  "theme": "Europe & institutions",
+  "votona_topics": [],
   "verdict": "true",
   "reviews": [
    {
@@ -401,6 +451,8 @@
   "date_is_fallback": true,
   "country": "FR",
   "attribution_status": "validated",
+  "theme": "Économie & travail",
+  "votona_topics": [],
   "verdict": "mostly_true",
   "reviews": [
    {
@@ -442,6 +494,8 @@
   "date_is_fallback": true,
   "country": "FR",
   "attribution_status": "auto_sure",
+  "theme": "Société",
+  "votona_topics": [],
   "verdict": "half_true",
   "reviews": [
    {
@@ -483,6 +537,8 @@
   "date_is_fallback": false,
   "country": "FR",
   "attribution_status": "auto_sure",
+  "theme": "Économie & travail",
+  "votona_topics": [],
   "verdict": "mostly_false",
   "reviews": [
    {
@@ -524,6 +580,13 @@
   "date_is_fallback": false,
   "country": "FR",
   "attribution_status": "auto_sure",
+  "theme": "Société",
+  "votona_topics": [
+   {
+    "slug": "encadrer-plus-strictement-les-loyers-dans-les-zones-tendues",
+    "label": "Encadrer plus strictement les loyers dans les zones tendues"
+   }
+  ],
   "verdict": "mostly_false",
   "reviews": [
    {
@@ -574,6 +637,13 @@
   "date_is_fallback": true,
   "country": "FR",
   "attribution_status": "validated",
+  "theme": "Économie & travail",
+  "votona_topics": [
+   {
+    "slug": "baisser-la-tva-et-la-ticpe-sur-les-carburants-pour-redonner",
+    "label": "Baisser la TVA et la TICPE sur les carburants"
+   }
+  ],
   "verdict": "half_true",
   "reviews": [
    {
@@ -606,6 +676,8 @@
   "date_is_fallback": false,
   "country": "FR",
   "attribution_status": "auto_sure",
+  "theme": "Économie & travail",
+  "votona_topics": [],
   "verdict": "mostly_true",
   "reviews": [
    {
@@ -638,6 +710,8 @@
   "date_is_fallback": false,
   "country": "FR",
   "attribution_status": "auto_sure",
+  "theme": null,
+  "votona_topics": [],
   "verdict": "false",
   "reviews": [
    {
@@ -679,6 +753,8 @@
   "date_is_fallback": false,
   "country": "FR",
   "attribution_status": "auto_sure",
+  "theme": null,
+  "votona_topics": [],
   "verdict": "half_true",
   "reviews": [
    {
@@ -711,6 +787,13 @@
   "date_is_fallback": true,
   "country": "FR",
   "attribution_status": "auto_sure",
+  "theme": "Sécurité & immigration",
+  "votona_topics": [
+   {
+    "slug": "reduire-drastiquement-limmigration-par-des-quotas-stricts",
+    "label": "Réduire l'immigration en instaurant des quotas annuels"
+   }
+  ],
   "verdict": "mostly_false",
   "reviews": [
    {
@@ -743,6 +826,8 @@
   "date_is_fallback": false,
   "country": "FR",
   "attribution_status": "auto_sure",
+  "theme": null,
+  "votona_topics": [],
   "verdict": "false",
   "reviews": [
    {
@@ -784,6 +869,13 @@
   "date_is_fallback": true,
   "country": "FR",
   "attribution_status": "auto_sure",
+  "theme": "Économie & travail",
+  "votona_topics": [
+   {
+    "slug": "ramener-lage-legal-de-depart-a-la-retraite-a-60-ans",
+    "label": "Ramener l'âge légal de départ à la retraite à 60 ans"
+   }
+  ],
   "verdict": "half_true",
   "reviews": [
    {
@@ -816,6 +908,13 @@
   "date_is_fallback": false,
   "country": "FR",
   "attribution_status": "auto_sure",
+  "theme": "Société",
+  "votona_topics": [
+   {
+    "slug": "plafonner-les-effectifs-a-19-eleves-par-classe-en-recrutant",
+    "label": "Plafonner les effectifs à 19 élèves par classe en recrutant davantage d'enseignants"
+   }
+  ],
   "verdict": "half_true",
   "reviews": [
    {
@@ -857,6 +956,8 @@
   "date_is_fallback": false,
   "country": "FR",
   "attribution_status": "auto_sure",
+  "theme": "Sécurité & immigration",
+  "votona_topics": [],
   "verdict": "false",
   "reviews": [
    {
@@ -889,6 +990,8 @@
   "date_is_fallback": true,
   "country": "FR",
   "attribution_status": "auto_sure",
+  "theme": null,
+  "votona_topics": [],
   "verdict": "half_true",
   "reviews": [
    {
@@ -930,6 +1033,8 @@
   "date_is_fallback": false,
   "country": "FR",
   "attribution_status": "auto_sure",
+  "theme": "Économie & travail",
+  "votona_topics": [],
   "verdict": "mostly_true",
   "reviews": [
    {
@@ -962,6 +1067,13 @@
   "date_is_fallback": false,
   "country": "FR",
   "attribution_status": "auto_sure",
+  "theme": "Société",
+  "votona_topics": [
+   {
+    "slug": "plafonner-les-effectifs-a-19-eleves-par-classe-en-recrutant",
+    "label": "Plafonner les effectifs à 19 élèves par classe en recrutant davantage d'enseignants"
+   }
+  ],
   "verdict": "mostly_false",
   "reviews": [
    {
@@ -994,6 +1106,8 @@
   "date_is_fallback": true,
   "country": "FR",
   "attribution_status": "auto_sure",
+  "theme": "Europe & institutions",
+  "votona_topics": [],
   "verdict": "mostly_false",
   "reviews": [
    {
@@ -1026,6 +1140,13 @@
   "date_is_fallback": false,
   "country": "FR",
   "attribution_status": "auto_sure",
+  "theme": "Économie & travail",
+  "votona_topics": [
+   {
+    "slug": "reduire-la-dette-publique-en-priorite-par-la-baisse-des",
+    "label": "Réduire la dette publique en priorité par la baisse des dépenses de l'État"
+   }
+  ],
   "verdict": "mostly_false",
   "reviews": [
    {
@@ -1058,6 +1179,8 @@
   "date_is_fallback": true,
   "country": "FR",
   "attribution_status": "validated",
+  "theme": null,
+  "votona_topics": [],
   "verdict": "mostly_false",
   "reviews": [
    {
@@ -1090,6 +1213,8 @@
   "date_is_fallback": true,
   "country": "FR",
   "attribution_status": "validated",
+  "theme": "Écologie",
+  "votona_topics": [],
   "verdict": "false",
   "reviews": [
    {
@@ -1122,6 +1247,13 @@
   "date_is_fallback": false,
   "country": "FR",
   "attribution_status": "auto_sure",
+  "theme": "Société",
+  "votona_topics": [
+   {
+    "slug": "reconnaitre-un-droit-a-laide-active-a-mourir-comme-la-loi",
+    "label": "Autoriser l'aide active à mourir, sous conditions, pour les personnes atteintes d'une maladie grave et incurable"
+   }
+  ],
   "verdict": "mostly_false",
   "reviews": [
    {
@@ -1154,6 +1286,8 @@
   "date_is_fallback": false,
   "country": "FR",
   "attribution_status": "auto_sure",
+  "theme": null,
+  "votona_topics": [],
   "verdict": "half_true",
   "reviews": [
    {
@@ -1186,6 +1320,13 @@
   "date_is_fallback": true,
   "country": "FR",
   "attribution_status": "auto_sure",
+  "theme": "Économie & travail",
+  "votona_topics": [
+   {
+    "slug": "alourdir-la-fiscalite-sur-les-tres-gros-heritages-mega",
+    "label": "Augmenter la fiscalité sur les très gros héritages"
+   }
+  ],
   "verdict": "false",
   "reviews": [
    {
@@ -1218,6 +1359,8 @@
   "date_is_fallback": true,
   "country": "FR",
   "attribution_status": "validated",
+  "theme": "Écologie",
+  "votona_topics": [],
   "verdict": "mostly_false",
   "reviews": [
    {
@@ -1250,6 +1393,8 @@
   "date_is_fallback": true,
   "country": "FR",
   "attribution_status": "auto_sure",
+  "theme": "Sécurité & immigration",
+  "votona_topics": [],
   "verdict": "true",
   "reviews": [
    {
@@ -1282,6 +1427,8 @@
   "date_is_fallback": false,
   "country": "FR",
   "attribution_status": "auto_sure",
+  "theme": null,
+  "votona_topics": [],
   "verdict": "mostly_false",
   "reviews": [
    {
@@ -1314,6 +1461,8 @@
   "date_is_fallback": false,
   "country": "FR",
   "attribution_status": "validated",
+  "theme": null,
+  "votona_topics": [],
   "verdict": "half_true",
   "reviews": [
    {
@@ -1346,6 +1495,13 @@
   "date_is_fallback": false,
   "country": "FR",
   "attribution_status": "auto_sure",
+  "theme": "Sécurité & immigration",
+  "votona_topics": [
+   {
+    "slug": "reserver-le-jugement-de-tous-les-crimes-sexuels-aux-cours",
+    "label": "Réserver le jugement de tous les crimes sexuels aux cours d'assises avec jury populaire, en les excluant des cours criminelles départementales"
+   }
+  ],
   "verdict": "false",
   "reviews": [
    {
@@ -1378,6 +1534,8 @@
   "date_is_fallback": false,
   "country": "FR",
   "attribution_status": "auto_sure",
+  "theme": "Société",
+  "votona_topics": [],
   "verdict": "half_true",
   "reviews": [
    {
@@ -1410,6 +1568,13 @@
   "date_is_fallback": false,
   "country": "FR",
   "attribution_status": "auto_sure",
+  "theme": "Sécurité & immigration",
+  "votona_topics": [
+   {
+    "slug": "reduire-drastiquement-limmigration-par-des-quotas-stricts",
+    "label": "Réduire l'immigration en instaurant des quotas annuels"
+   }
+  ],
   "verdict": "mostly_false",
   "reviews": [
    {
@@ -1442,6 +1607,8 @@
   "date_is_fallback": true,
   "country": "FR",
   "attribution_status": "auto_sure",
+  "theme": "Europe & institutions",
+  "votona_topics": [],
   "verdict": "mostly_false",
   "reviews": [
    {
@@ -1474,6 +1641,8 @@
   "date_is_fallback": true,
   "country": "FR",
   "attribution_status": "auto_sure",
+  "theme": "Économie & travail",
+  "votona_topics": [],
   "verdict": "false",
   "reviews": [
    {
@@ -1515,6 +1684,13 @@
   "date_is_fallback": false,
   "country": "FR",
   "attribution_status": "auto_sure",
+  "theme": "Sécurité & immigration",
+  "votona_topics": [
+   {
+    "slug": "reserver-le-jugement-de-tous-les-crimes-sexuels-aux-cours",
+    "label": "Réserver le jugement de tous les crimes sexuels aux cours d'assises avec jury populaire, en les excluant des cours criminelles départementales"
+   }
+  ],
   "verdict": "half_true",
   "reviews": [
    {
@@ -1547,6 +1723,8 @@
   "date_is_fallback": false,
   "country": "FR",
   "attribution_status": "auto_sure",
+  "theme": null,
+  "votona_topics": [],
   "verdict": "unrated",
   "reviews": [
    {
@@ -1579,6 +1757,13 @@
   "date_is_fallback": false,
   "country": "FR",
   "attribution_status": "auto_sure",
+  "theme": "Économie & travail",
+  "votona_topics": [
+   {
+    "slug": "baisser-la-tva-et-la-ticpe-sur-les-carburants-pour-redonner",
+    "label": "Baisser la TVA et la TICPE sur les carburants"
+   }
+  ],
   "verdict": "mostly_false",
   "reviews": [
    {
@@ -1611,6 +1796,8 @@
   "date_is_fallback": true,
   "country": "FR",
   "attribution_status": "auto_sure",
+  "theme": "Économie & travail",
+  "votona_topics": [],
   "verdict": "mostly_true",
   "reviews": [
    {
@@ -1652,6 +1839,8 @@
   "date_is_fallback": false,
   "country": "FR",
   "attribution_status": "auto_sure",
+  "theme": null,
+  "votona_topics": [],
   "verdict": "mostly_false",
   "reviews": [
    {
@@ -1684,6 +1873,8 @@
   "date_is_fallback": false,
   "country": "FR",
   "attribution_status": "auto_sure",
+  "theme": "Europe & institutions",
+  "votona_topics": [],
   "verdict": "unrated",
   "reviews": [
    {
@@ -1716,6 +1907,8 @@
   "date_is_fallback": false,
   "country": "FR",
   "attribution_status": "auto_sure",
+  "theme": "Défense & numérique",
+  "votona_topics": [],
   "verdict": "unrated",
   "reviews": [
    {
@@ -1748,6 +1941,8 @@
   "date_is_fallback": false,
   "country": "FR",
   "attribution_status": "auto_sure",
+  "theme": "Protection sociale",
+  "votona_topics": [],
   "verdict": "false",
   "reviews": [
    {
@@ -1780,6 +1975,8 @@
   "date_is_fallback": false,
   "country": "FR",
   "attribution_status": "auto_sure",
+  "theme": "Défense & numérique",
+  "votona_topics": [],
   "verdict": "false",
   "reviews": [
    {
@@ -1812,6 +2009,8 @@
   "date_is_fallback": false,
   "country": "FR",
   "attribution_status": "validated",
+  "theme": "Sécurité & immigration",
+  "votona_topics": [],
   "verdict": "mostly_true",
   "reviews": [
    {
@@ -1844,6 +2043,13 @@
   "date_is_fallback": false,
   "country": "FR",
   "attribution_status": "auto_sure",
+  "theme": "Économie & travail",
+  "votona_topics": [
+   {
+    "slug": "baisser-la-tva-et-la-ticpe-sur-les-carburants-pour-redonner",
+    "label": "Baisser la TVA et la TICPE sur les carburants"
+   }
+  ],
   "verdict": "half_true",
   "reviews": [
    {
@@ -1876,6 +2082,13 @@
   "date_is_fallback": true,
   "country": "FR",
   "attribution_status": "auto_sure",
+  "theme": "Défense & numérique",
+  "votona_topics": [
+   {
+    "slug": "maintenir-un-soutien-militaire-et-financier-fort-a-lukraine",
+    "label": "Maintenir le soutien militaire et financier de la France à l'Ukraine"
+   }
+  ],
   "verdict": "true",
   "reviews": [
    {
@@ -1917,6 +2130,13 @@
   "date_is_fallback": false,
   "country": "FR",
   "attribution_status": "auto_sure",
+  "theme": "Sécurité & immigration",
+  "votona_topics": [
+   {
+    "slug": "retablir-des-peines-minimales-peines-planchers-pour-les",
+    "label": "Rétablir des peines minimales (peines planchers) pour les récidivistes"
+   }
+  ],
   "verdict": "false",
   "reviews": [
    {
@@ -1949,6 +2169,8 @@
   "date_is_fallback": true,
   "country": "FR",
   "attribution_status": "auto_sure",
+  "theme": null,
+  "votona_topics": [],
   "verdict": "false",
   "reviews": [
    {
@@ -1981,6 +2203,8 @@
   "date_is_fallback": false,
   "country": "FR",
   "attribution_status": "auto_sure",
+  "theme": null,
+  "votona_topics": [],
   "verdict": "false",
   "reviews": [
    {
@@ -2013,6 +2237,13 @@
   "date_is_fallback": false,
   "country": "FR",
   "attribution_status": "validated",
+  "theme": "Écologie",
+  "votona_topics": [
+   {
+    "slug": "interdire-rapidement-les-pesticides-de-synthese-en",
+    "label": "Fixer une date de sortie des pesticides de synthèse en agriculture"
+   }
+  ],
   "verdict": "mostly_true",
   "reviews": [
    {
@@ -2045,6 +2276,13 @@
   "date_is_fallback": true,
   "country": "FR",
   "attribution_status": "auto_sure",
+  "theme": "Sécurité & immigration",
+  "votona_topics": [
+   {
+    "slug": "renforcer-les-moyens-de-la-police-et-allonger-les-peines-de",
+    "label": "Augmenter les effectifs et les moyens de la police et de la gendarmerie"
+   }
+  ],
   "verdict": "mostly_false",
   "reviews": [
    {
@@ -2086,6 +2324,13 @@
   "date_is_fallback": false,
   "country": "FR",
   "attribution_status": "auto_sure",
+  "theme": "Écologie",
+  "votona_topics": [
+   {
+    "slug": "interdire-rapidement-les-pesticides-de-synthese-en",
+    "label": "Fixer une date de sortie des pesticides de synthèse en agriculture"
+   }
+  ],
   "verdict": "mostly_false",
   "reviews": [
    {
@@ -2118,6 +2363,8 @@
   "date_is_fallback": false,
   "country": "FR",
   "attribution_status": "validated",
+  "theme": "Défense & numérique",
+  "votona_topics": [],
   "verdict": "mostly_false",
   "reviews": [
    {
@@ -2159,6 +2406,8 @@
   "date_is_fallback": false,
   "country": "FR",
   "attribution_status": "auto_sure",
+  "theme": null,
+  "votona_topics": [],
   "verdict": "half_true",
   "reviews": [
    {
@@ -2191,6 +2440,8 @@
   "date_is_fallback": false,
   "country": "FR",
   "attribution_status": "auto_sure",
+  "theme": null,
+  "votona_topics": [],
   "verdict": "false",
   "reviews": [
    {
@@ -2223,6 +2474,8 @@
   "date_is_fallback": false,
   "country": "FR",
   "attribution_status": "auto_sure",
+  "theme": "Société",
+  "votona_topics": [],
   "verdict": "mostly_false",
   "reviews": [
    {
@@ -2264,6 +2517,8 @@
   "date_is_fallback": false,
   "country": "FR",
   "attribution_status": "auto_sure",
+  "theme": null,
+  "votona_topics": [],
   "verdict": "true",
   "reviews": [
    {
@@ -2296,6 +2551,8 @@
   "date_is_fallback": false,
   "country": "FR",
   "attribution_status": "auto_sure",
+  "theme": null,
+  "votona_topics": [],
   "verdict": "half_true",
   "reviews": [
    {
@@ -2328,6 +2585,8 @@
   "date_is_fallback": false,
   "country": "FR",
   "attribution_status": "auto_sure",
+  "theme": null,
+  "votona_topics": [],
   "verdict": "mostly_true",
   "reviews": [
    {
@@ -2360,6 +2619,8 @@
   "date_is_fallback": false,
   "country": "FR",
   "attribution_status": "validated",
+  "theme": "Europe & institutions",
+  "votona_topics": [],
   "verdict": "unrated",
   "reviews": [
    {
@@ -2392,6 +2653,13 @@
   "date_is_fallback": false,
   "country": "FR",
   "attribution_status": "auto_sure",
+  "theme": "Sécurité & immigration",
+  "votona_topics": [
+   {
+    "slug": "renforcer-les-moyens-de-la-police-et-allonger-les-peines-de",
+    "label": "Augmenter les effectifs et les moyens de la police et de la gendarmerie"
+   }
+  ],
   "verdict": "mostly_false",
   "reviews": [
    {
@@ -2424,6 +2692,13 @@
   "date_is_fallback": false,
   "country": "FR",
   "attribution_status": "auto_sure",
+  "theme": "Protection sociale",
+  "votona_topics": [
+   {
+    "slug": "augmenter-significativement-le-smic",
+    "label": "Augmenter le SMIC au-delà de sa revalorisation automatique"
+   }
+  ],
   "verdict": "mostly_false",
   "reviews": [
    {
@@ -2456,6 +2731,13 @@
   "date_is_fallback": false,
   "country": "FR",
   "attribution_status": "auto_sure",
+  "theme": "Défense & numérique",
+  "votona_topics": [
+   {
+    "slug": "maintenir-un-soutien-militaire-et-financier-fort-a-lukraine",
+    "label": "Maintenir le soutien militaire et financier de la France à l'Ukraine"
+   }
+  ],
   "verdict": "half_true",
   "reviews": [
    {
@@ -2488,6 +2770,13 @@
   "date_is_fallback": true,
   "country": "FR",
   "attribution_status": "auto_sure",
+  "theme": "Défense & numérique",
+  "votona_topics": [
+   {
+    "slug": "maintenir-un-soutien-militaire-et-financier-fort-a-lukraine",
+    "label": "Maintenir le soutien militaire et financier de la France à l'Ukraine"
+   }
+  ],
   "verdict": "false",
   "reviews": [
    {
@@ -2520,6 +2809,8 @@
   "date_is_fallback": false,
   "country": "FR",
   "attribution_status": "auto_sure",
+  "theme": null,
+  "votona_topics": [],
   "verdict": "half_true",
   "reviews": [
    {
@@ -2552,6 +2843,8 @@
   "date_is_fallback": false,
   "country": "FR",
   "attribution_status": "validated",
+  "theme": null,
+  "votona_topics": [],
   "verdict": "true",
   "reviews": [
    {
@@ -2584,6 +2877,8 @@
   "date_is_fallback": false,
   "country": "FR",
   "attribution_status": "auto_sure",
+  "theme": null,
+  "votona_topics": [],
   "verdict": "false",
   "reviews": [
    {
@@ -2616,6 +2911,8 @@
   "date_is_fallback": false,
   "country": "FR",
   "attribution_status": "auto_sure",
+  "theme": null,
+  "votona_topics": [],
   "verdict": "mostly_false",
   "reviews": [
    {
@@ -2648,6 +2945,13 @@
   "date_is_fallback": false,
   "country": "FR",
   "attribution_status": "validated",
+  "theme": "Sécurité & immigration",
+  "votona_topics": [
+   {
+    "slug": "reduire-drastiquement-limmigration-par-des-quotas-stricts",
+    "label": "Réduire l'immigration en instaurant des quotas annuels"
+   }
+  ],
   "verdict": "mostly_false",
   "reviews": [
    {
@@ -2680,6 +2984,13 @@
   "date_is_fallback": false,
   "country": "FR",
   "attribution_status": "validated",
+  "theme": "Protection sociale",
+  "votona_topics": [
+   {
+    "slug": "augmenter-significativement-le-smic",
+    "label": "Augmenter le SMIC au-delà de sa revalorisation automatique"
+   }
+  ],
   "verdict": "false",
   "reviews": [
    {
@@ -2712,6 +3023,8 @@
   "date_is_fallback": false,
   "country": "FR",
   "attribution_status": "auto_sure",
+  "theme": "Europe & institutions",
+  "votona_topics": [],
   "verdict": "false",
   "reviews": [
    {
@@ -2744,6 +3057,8 @@
   "date_is_fallback": true,
   "country": "FR",
   "attribution_status": "auto_sure",
+  "theme": "Europe & institutions",
+  "votona_topics": [],
   "verdict": "mostly_false",
   "reviews": [
    {
@@ -2776,6 +3091,13 @@
   "date_is_fallback": false,
   "country": "FR",
   "attribution_status": "auto_sure",
+  "theme": "Économie & travail",
+  "votona_topics": [
+   {
+    "slug": "ramener-lage-legal-de-depart-a-la-retraite-a-60-ans",
+    "label": "Ramener l'âge légal de départ à la retraite à 60 ans"
+   }
+  ],
   "verdict": "false",
   "reviews": [
    {
@@ -2808,6 +3130,8 @@
   "date_is_fallback": true,
   "country": "FR",
   "attribution_status": "auto_sure",
+  "theme": null,
+  "votona_topics": [],
   "verdict": "half_true",
   "reviews": [
    {
@@ -2840,6 +3164,8 @@
   "date_is_fallback": false,
   "country": "FR",
   "attribution_status": "auto_sure",
+  "theme": null,
+  "votona_topics": [],
   "verdict": "mostly_false",
   "reviews": [
    {
@@ -2872,6 +3198,13 @@
   "date_is_fallback": false,
   "country": "FR",
   "attribution_status": "auto_sure",
+  "theme": "Sécurité & immigration",
+  "votona_topics": [
+   {
+    "slug": "retablir-des-peines-minimales-peines-planchers-pour-les",
+    "label": "Rétablir des peines minimales (peines planchers) pour les récidivistes"
+   }
+  ],
   "verdict": "mostly_false",
   "reviews": [
    {
@@ -2904,6 +3237,8 @@
   "date_is_fallback": false,
   "country": "FR",
   "attribution_status": "auto_sure",
+  "theme": null,
+  "votona_topics": [],
   "verdict": "mostly_true",
   "reviews": [
    {
@@ -2936,6 +3271,8 @@
   "date_is_fallback": true,
   "country": "FR",
   "attribution_status": "validated",
+  "theme": "Écologie",
+  "votona_topics": [],
   "verdict": "mostly_false",
   "reviews": [
    {
@@ -2968,6 +3305,8 @@
   "date_is_fallback": true,
   "country": "FR",
   "attribution_status": "auto_sure",
+  "theme": null,
+  "votona_topics": [],
   "verdict": "true",
   "reviews": [
    {
@@ -3000,6 +3339,13 @@
   "date_is_fallback": true,
   "country": "FR",
   "attribution_status": "auto_sure",
+  "theme": "Défense & numérique",
+  "votona_topics": [
+   {
+    "slug": "maintenir-un-soutien-militaire-et-financier-fort-a-lukraine",
+    "label": "Maintenir le soutien militaire et financier de la France à l'Ukraine"
+   }
+  ],
   "verdict": "mostly_true",
   "reviews": [
    {
@@ -3032,6 +3378,8 @@
   "date_is_fallback": true,
   "country": "FR",
   "attribution_status": "validated",
+  "theme": "Défense & numérique",
+  "votona_topics": [],
   "verdict": "false",
   "reviews": [
    {
@@ -3064,6 +3412,8 @@
   "date_is_fallback": false,
   "country": "FR",
   "attribution_status": "validated",
+  "theme": "Économie & travail",
+  "votona_topics": [],
   "verdict": "true",
   "reviews": [
    {
@@ -3096,6 +3446,8 @@
   "date_is_fallback": false,
   "country": "FR",
   "attribution_status": "auto_sure",
+  "theme": null,
+  "votona_topics": [],
   "verdict": "mostly_false",
   "reviews": [
    {
@@ -3128,6 +3480,13 @@
   "date_is_fallback": false,
   "country": "FR",
   "attribution_status": "auto_sure",
+  "theme": "Économie & travail",
+  "votona_topics": [
+   {
+    "slug": "retablir-un-impot-renforce-sur-les-grandes-fortunes",
+    "label": "Rétablir un impôt sur la fortune (ISF)"
+   }
+  ],
   "verdict": "half_true",
   "reviews": [
    {
@@ -3160,6 +3519,8 @@
   "date_is_fallback": true,
   "country": "FR",
   "attribution_status": "validated",
+  "theme": null,
+  "votona_topics": [],
   "verdict": "false",
   "reviews": [
    {
@@ -3192,6 +3553,8 @@
   "date_is_fallback": true,
   "country": "FR",
   "attribution_status": "validated",
+  "theme": "Europe & institutions",
+  "votona_topics": [],
   "verdict": "false",
   "reviews": [
    {
@@ -3224,6 +3587,13 @@
   "date_is_fallback": true,
   "country": "FR",
   "attribution_status": "auto_sure",
+  "theme": "Économie & travail",
+  "votona_topics": [
+   {
+    "slug": "reduire-la-dette-publique-en-priorite-par-la-baisse-des",
+    "label": "Réduire la dette publique en priorité par la baisse des dépenses de l'État"
+   }
+  ],
   "verdict": "half_true",
   "reviews": [
    {
@@ -3256,6 +3626,8 @@
   "date_is_fallback": true,
   "country": "FR",
   "attribution_status": "validated",
+  "theme": "Société",
+  "votona_topics": [],
   "verdict": "half_true",
   "reviews": [
    {
@@ -3288,6 +3660,8 @@
   "date_is_fallback": true,
   "country": "FR",
   "attribution_status": "validated",
+  "theme": "Défense & numérique",
+  "votona_topics": [],
   "verdict": "false",
   "reviews": [
    {
@@ -3320,6 +3694,8 @@
   "date_is_fallback": true,
   "country": "FR",
   "attribution_status": "auto_sure",
+  "theme": "Écologie",
+  "votona_topics": [],
   "verdict": "mostly_true",
   "reviews": [
    {
@@ -3352,6 +3728,8 @@
   "date_is_fallback": false,
   "country": "FR",
   "attribution_status": "auto_sure",
+  "theme": null,
+  "votona_topics": [],
   "verdict": "mostly_false",
   "reviews": [
    {
@@ -3384,6 +3762,13 @@
   "date_is_fallback": false,
   "country": "FR",
   "attribution_status": "auto_sure",
+  "theme": "Protection sociale",
+  "votona_topics": [
+   {
+    "slug": "allonger-le-delai-de-carence-non-indemnise-pour-les-arrets",
+    "label": "Allonger le délai de carence non indemnisé pour les arrêts de travail courts"
+   }
+  ],
   "verdict": "mostly_true",
   "reviews": [
    {
@@ -3416,6 +3801,8 @@
   "date_is_fallback": true,
   "country": "FR",
   "attribution_status": "validated",
+  "theme": "Économie & travail",
+  "votona_topics": [],
   "verdict": "mostly_false",
   "reviews": [
    {
@@ -3448,6 +3835,13 @@
   "date_is_fallback": true,
   "country": "FR",
   "attribution_status": "validated",
+  "theme": "Économie & travail",
+  "votona_topics": [
+   {
+    "slug": "reduire-la-dette-publique-en-priorite-par-la-baisse-des",
+    "label": "Réduire la dette publique en priorité par la baisse des dépenses de l'État"
+   }
+  ],
   "verdict": "true",
   "reviews": [
    {
@@ -3480,6 +3874,8 @@
   "date_is_fallback": false,
   "country": "FR",
   "attribution_status": "validated",
+  "theme": null,
+  "votona_topics": [],
   "verdict": "mostly_true",
   "reviews": [
    {
@@ -3512,6 +3908,8 @@
   "date_is_fallback": false,
   "country": "FR",
   "attribution_status": "validated",
+  "theme": null,
+  "votona_topics": [],
   "verdict": "mostly_false",
   "reviews": [
    {
@@ -3553,6 +3951,13 @@
   "date_is_fallback": false,
   "country": "FR",
   "attribution_status": "auto_sure",
+  "theme": "Protection sociale",
+  "votona_topics": [
+   {
+    "slug": "geler-la-revalorisation-des-pensions-de-retraite-depassant",
+    "label": "Geler en 2027 la revalorisation des pensions de retraite supérieures à 2 034 euros par mois"
+   }
+  ],
   "verdict": "mostly_false",
   "reviews": [
    {
@@ -3585,6 +3990,8 @@
   "date_is_fallback": true,
   "country": "FR",
   "attribution_status": "validated",
+  "theme": "Écologie",
+  "votona_topics": [],
   "verdict": "true",
   "reviews": [
    {
@@ -3617,6 +4024,13 @@
   "date_is_fallback": true,
   "country": "FR",
   "attribution_status": "validated",
+  "theme": "Écologie",
+  "votona_topics": [
+   {
+    "slug": "interdire-rapidement-les-pesticides-de-synthese-en",
+    "label": "Fixer une date de sortie des pesticides de synthèse en agriculture"
+   }
+  ],
   "verdict": "mostly_false",
   "reviews": [
    {
@@ -3649,6 +4063,8 @@
   "date_is_fallback": true,
   "country": "FR",
   "attribution_status": "validated",
+  "theme": "Défense & numérique",
+  "votona_topics": [],
   "verdict": "true",
   "reviews": [
    {
@@ -3681,6 +4097,8 @@
   "date_is_fallback": false,
   "country": "FR",
   "attribution_status": "validated",
+  "theme": "Défense & numérique",
+  "votona_topics": [],
   "verdict": "false",
   "reviews": [
    {
@@ -3713,6 +4131,8 @@
   "date_is_fallback": true,
   "country": "FR",
   "attribution_status": "validated",
+  "theme": null,
+  "votona_topics": [],
   "verdict": "false",
   "reviews": [
    {
@@ -3745,6 +4165,13 @@
   "date_is_fallback": false,
   "country": "FR",
   "attribution_status": "validated",
+  "theme": "Sécurité & immigration",
+  "votona_topics": [
+   {
+    "slug": "reserver-le-jugement-de-tous-les-crimes-sexuels-aux-cours",
+    "label": "Réserver le jugement de tous les crimes sexuels aux cours d'assises avec jury populaire, en les excluant des cours criminelles départementales"
+   }
+  ],
   "verdict": "mostly_true",
   "reviews": [
    {
@@ -3786,6 +4213,13 @@
   "date_is_fallback": false,
   "country": "FR",
   "attribution_status": "validated",
+  "theme": "Société",
+  "votona_topics": [
+   {
+    "slug": "encadrer-plus-strictement-les-loyers-dans-les-zones-tendues",
+    "label": "Encadrer plus strictement les loyers dans les zones tendues"
+   }
+  ],
   "verdict": "half_true",
   "reviews": [
    {
@@ -3818,6 +4252,8 @@
   "date_is_fallback": false,
   "country": "FR",
   "attribution_status": "auto_sure",
+  "theme": "Écologie",
+  "votona_topics": [],
   "verdict": "mostly_false",
   "reviews": [
    {
@@ -3850,6 +4286,8 @@
   "date_is_fallback": false,
   "country": "FR",
   "attribution_status": "auto_sure",
+  "theme": "Écologie",
+  "votona_topics": [],
   "verdict": "false",
   "reviews": [
    {
@@ -3882,6 +4320,13 @@
   "date_is_fallback": false,
   "country": "FR",
   "attribution_status": "validated",
+  "theme": "Société",
+  "votona_topics": [
+   {
+    "slug": "redonner-davantage-dautonomie-et-de-selection-aux",
+    "label": "Donner plus d'autonomie aux établissements scolaires, y compris pour choisir leurs élèves"
+   }
+  ],
   "verdict": "true",
   "reviews": [
    {
@@ -3914,6 +4359,8 @@
   "date_is_fallback": false,
   "country": "FR",
   "attribution_status": "auto_sure",
+  "theme": null,
+  "votona_topics": [],
   "verdict": "half_true",
   "reviews": [
    {
@@ -3946,6 +4393,13 @@
   "date_is_fallback": true,
   "country": "FR",
   "attribution_status": "validated",
+  "theme": "Écologie",
+  "votona_topics": [
+   {
+    "slug": "interdire-rapidement-les-pesticides-de-synthese-en",
+    "label": "Fixer une date de sortie des pesticides de synthèse en agriculture"
+   }
+  ],
   "verdict": "mostly_false",
   "reviews": [
    {
@@ -3978,6 +4432,8 @@
   "date_is_fallback": false,
   "country": "FR",
   "attribution_status": "validated",
+  "theme": "Économie & travail",
+  "votona_topics": [],
   "verdict": "true",
   "reviews": [
    {
@@ -4010,6 +4466,13 @@
   "date_is_fallback": false,
   "country": "FR",
   "attribution_status": "validated",
+  "theme": "Sécurité & immigration",
+  "votona_topics": [
+   {
+    "slug": "renforcer-les-moyens-de-la-police-et-allonger-les-peines-de",
+    "label": "Augmenter les effectifs et les moyens de la police et de la gendarmerie"
+   }
+  ],
   "verdict": "half_true",
   "reviews": [
    {
@@ -4051,6 +4514,13 @@
   "date_is_fallback": true,
   "country": "FR",
   "attribution_status": "validated",
+  "theme": "Défense & numérique",
+  "votona_topics": [
+   {
+    "slug": "maintenir-un-soutien-militaire-et-financier-fort-a-lukraine",
+    "label": "Maintenir le soutien militaire et financier de la France à l'Ukraine"
+   }
+  ],
   "verdict": "true",
   "reviews": [
    {
@@ -4083,6 +4553,8 @@
   "date_is_fallback": false,
   "country": "FR",
   "attribution_status": "validated",
+  "theme": "Société",
+  "votona_topics": [],
   "verdict": "half_true",
   "reviews": [
    {
@@ -4115,6 +4587,8 @@
   "date_is_fallback": false,
   "country": "FR",
   "attribution_status": "validated",
+  "theme": null,
+  "votona_topics": [],
   "verdict": "half_true",
   "reviews": [
    {
@@ -4147,6 +4621,13 @@
   "date_is_fallback": true,
   "country": "FR",
   "attribution_status": "auto_sure",
+  "theme": "Économie & travail",
+  "votona_topics": [
+   {
+    "slug": "baisser-la-tva-et-la-ticpe-sur-les-carburants-pour-redonner",
+    "label": "Baisser la TVA et la TICPE sur les carburants"
+   }
+  ],
   "verdict": "mostly_false",
   "reviews": [
    {
@@ -4179,6 +4660,13 @@
   "date_is_fallback": true,
   "country": "FR",
   "attribution_status": "auto_sure",
+  "theme": "Sécurité & immigration",
+  "votona_topics": [
+   {
+    "slug": "retablir-des-peines-minimales-peines-planchers-pour-les",
+    "label": "Rétablir des peines minimales (peines planchers) pour les récidivistes"
+   }
+  ],
   "verdict": "true",
   "reviews": [
    {
@@ -4211,6 +4699,13 @@
   "date_is_fallback": true,
   "country": "FR",
   "attribution_status": "auto_sure",
+  "theme": "Sécurité & immigration",
+  "votona_topics": [
+   {
+    "slug": "reduire-drastiquement-limmigration-par-des-quotas-stricts",
+    "label": "Réduire l'immigration en instaurant des quotas annuels"
+   }
+  ],
   "verdict": "false",
   "reviews": [
    {
@@ -4243,6 +4738,13 @@
   "date_is_fallback": true,
   "country": "FR",
   "attribution_status": "auto_sure",
+  "theme": "Sécurité & immigration",
+  "votona_topics": [
+   {
+    "slug": "retablir-des-peines-minimales-peines-planchers-pour-les",
+    "label": "Rétablir des peines minimales (peines planchers) pour les récidivistes"
+   }
+  ],
   "verdict": "half_true",
   "reviews": [
    {
@@ -4275,6 +4777,8 @@
   "date_is_fallback": false,
   "country": "FR",
   "attribution_status": "auto_sure",
+  "theme": "Société",
+  "votona_topics": [],
   "verdict": "true",
   "reviews": [
    {
@@ -4307,6 +4811,8 @@
   "date_is_fallback": true,
   "country": "FR",
   "attribution_status": "auto_sure",
+  "theme": "Économie & travail",
+  "votona_topics": [],
   "verdict": "true",
   "reviews": [
    {
@@ -4339,6 +4845,8 @@
   "date_is_fallback": true,
   "country": "FR",
   "attribution_status": "auto_sure",
+  "theme": "Sécurité & immigration",
+  "votona_topics": [],
   "verdict": "false",
   "reviews": [
    {
@@ -4380,6 +4888,8 @@
   "date_is_fallback": true,
   "country": "FR",
   "attribution_status": "auto_sure",
+  "theme": null,
+  "votona_topics": [],
   "verdict": "half_true",
   "reviews": [
    {
@@ -4412,6 +4922,8 @@
   "date_is_fallback": false,
   "country": "FR",
   "attribution_status": "validated",
+  "theme": "Europe & institutions",
+  "votona_topics": [],
   "verdict": "false",
   "reviews": [
    {
@@ -4453,6 +4965,13 @@
   "date_is_fallback": false,
   "country": "FR",
   "attribution_status": "auto_sure",
+  "theme": "Sécurité & immigration",
+  "votona_topics": [
+   {
+    "slug": "reserver-le-jugement-de-tous-les-crimes-sexuels-aux-cours",
+    "label": "Réserver le jugement de tous les crimes sexuels aux cours d'assises avec jury populaire, en les excluant des cours criminelles départementales"
+   }
+  ],
   "verdict": "false",
   "reviews": [
    {
@@ -4485,6 +5004,17 @@
   "date_is_fallback": true,
   "country": "FR",
   "attribution_status": "auto_sure",
+  "theme": "Sécurité & immigration",
+  "votona_topics": [
+   {
+    "slug": "reduire-drastiquement-limmigration-par-des-quotas-stricts",
+    "label": "Réduire l'immigration en instaurant des quotas annuels"
+   },
+   {
+    "slug": "retablir-des-peines-minimales-peines-planchers-pour-les",
+    "label": "Rétablir des peines minimales (peines planchers) pour les récidivistes"
+   }
+  ],
   "verdict": "mostly_true",
   "reviews": [
    {
@@ -4517,6 +5047,13 @@
   "date_is_fallback": true,
   "country": "FR",
   "attribution_status": "auto_sure",
+  "theme": "Économie & travail",
+  "votona_topics": [
+   {
+    "slug": "reduire-la-dette-publique-en-priorite-par-la-baisse-des",
+    "label": "Réduire la dette publique en priorité par la baisse des dépenses de l'État"
+   }
+  ],
   "verdict": "mostly_false",
   "reviews": [
    {
@@ -4549,6 +5086,13 @@
   "date_is_fallback": false,
   "country": "FR",
   "attribution_status": "auto_sure",
+  "theme": "Sécurité & immigration",
+  "votona_topics": [
+   {
+    "slug": "reduire-drastiquement-limmigration-par-des-quotas-stricts",
+    "label": "Réduire l'immigration en instaurant des quotas annuels"
+   }
+  ],
   "verdict": "mostly_false",
   "reviews": [
    {
@@ -4581,6 +5125,13 @@
   "date_is_fallback": true,
   "country": "FR",
   "attribution_status": "auto_sure",
+  "theme": "Défense & numérique",
+  "votona_topics": [
+   {
+    "slug": "augmenter-fortement-le-budget-de-la-defense-face-aux",
+    "label": "Augmenter le budget de la défense au-delà de la programmation militaire actuelle"
+   }
+  ],
   "verdict": "false",
   "reviews": [
    {
@@ -4613,6 +5164,13 @@
   "date_is_fallback": false,
   "country": "FR",
   "attribution_status": "validated",
+  "theme": "Sécurité & immigration",
+  "votona_topics": [
+   {
+    "slug": "reduire-drastiquement-limmigration-par-des-quotas-stricts",
+    "label": "Réduire l'immigration en instaurant des quotas annuels"
+   }
+  ],
   "verdict": "half_true",
   "reviews": [
    {
@@ -4645,6 +5203,17 @@
   "date_is_fallback": true,
   "country": "FR",
   "attribution_status": "auto_sure",
+  "theme": "Société",
+  "votona_topics": [
+   {
+    "slug": "encadrer-plus-strictement-les-loyers-dans-les-zones-tendues",
+    "label": "Encadrer plus strictement les loyers dans les zones tendues"
+   },
+   {
+    "slug": "reduire-drastiquement-limmigration-par-des-quotas-stricts",
+    "label": "Réduire l'immigration en instaurant des quotas annuels"
+   }
+  ],
   "verdict": "false",
   "reviews": [
    {
@@ -4686,6 +5255,8 @@
   "date_is_fallback": false,
   "country": "FR",
   "attribution_status": "validated",
+  "theme": null,
+  "votona_topics": [],
   "verdict": "half_true",
   "reviews": [
    {
@@ -4718,6 +5289,13 @@
   "date_is_fallback": true,
   "country": "FR",
   "attribution_status": "validated",
+  "theme": "Protection sociale",
+  "votona_topics": [
+   {
+    "slug": "geler-la-revalorisation-des-pensions-de-retraite-depassant",
+    "label": "Geler en 2027 la revalorisation des pensions de retraite supérieures à 2 034 euros par mois"
+   }
+  ],
   "verdict": "true",
   "reviews": [
    {
@@ -4750,6 +5328,8 @@
   "date_is_fallback": true,
   "country": "FR",
   "attribution_status": "auto_sure",
+  "theme": null,
+  "votona_topics": [],
   "verdict": "mostly_false",
   "reviews": [
    {
@@ -4782,6 +5362,13 @@
   "date_is_fallback": false,
   "country": "FR",
   "attribution_status": "auto_sure",
+  "theme": "Défense & numérique",
+  "votona_topics": [
+   {
+    "slug": "maintenir-un-soutien-militaire-et-financier-fort-a-lukraine",
+    "label": "Maintenir le soutien militaire et financier de la France à l'Ukraine"
+   }
+  ],
   "verdict": "mostly_true",
   "reviews": [
    {
@@ -4814,6 +5401,8 @@
   "date_is_fallback": false,
   "country": "FR",
   "attribution_status": "auto_sure",
+  "theme": "Défense & numérique",
+  "votona_topics": [],
   "verdict": "half_true",
   "reviews": [
    {
@@ -4846,6 +5435,8 @@
   "date_is_fallback": true,
   "country": "FR",
   "attribution_status": "validated",
+  "theme": null,
+  "votona_topics": [],
   "verdict": "mostly_true",
   "reviews": [
    {
@@ -4878,6 +5469,8 @@
   "date_is_fallback": false,
   "country": "FR",
   "attribution_status": "auto_sure",
+  "theme": null,
+  "votona_topics": [],
   "verdict": "mostly_false",
   "reviews": [
    {
@@ -4910,6 +5503,8 @@
   "date_is_fallback": false,
   "country": "FR",
   "attribution_status": "validated",
+  "theme": null,
+  "votona_topics": [],
   "verdict": "mostly_true",
   "reviews": [
    {
@@ -4942,6 +5537,13 @@
   "date_is_fallback": true,
   "country": "FR",
   "attribution_status": "validated",
+  "theme": "Sécurité & immigration",
+  "votona_topics": [
+   {
+    "slug": "reserver-le-jugement-de-tous-les-crimes-sexuels-aux-cours",
+    "label": "Réserver le jugement de tous les crimes sexuels aux cours d'assises avec jury populaire, en les excluant des cours criminelles départementales"
+   }
+  ],
   "verdict": "mostly_true",
   "reviews": [
    {
@@ -4974,6 +5576,8 @@
   "date_is_fallback": true,
   "country": "FR",
   "attribution_status": "auto_sure",
+  "theme": "Économie & travail",
+  "votona_topics": [],
   "verdict": "mostly_true",
   "reviews": [
    {
@@ -5006,6 +5610,8 @@
   "date_is_fallback": true,
   "country": "FR",
   "attribution_status": "auto_sure",
+  "theme": "Europe & institutions",
+  "votona_topics": [],
   "verdict": "mostly_false",
   "reviews": [
    {
@@ -5038,6 +5644,13 @@
   "date_is_fallback": false,
   "country": "FR",
   "attribution_status": "validated",
+  "theme": "Sécurité & immigration",
+  "votona_topics": [
+   {
+    "slug": "reduire-drastiquement-limmigration-par-des-quotas-stricts",
+    "label": "Réduire l'immigration en instaurant des quotas annuels"
+   }
+  ],
   "verdict": "false",
   "reviews": [
    {
@@ -5070,6 +5683,8 @@
   "date_is_fallback": false,
   "country": "FR",
   "attribution_status": "validated",
+  "theme": "Europe & institutions",
+  "votona_topics": [],
   "verdict": "half_true",
   "reviews": [
    {
@@ -5102,6 +5717,8 @@
   "date_is_fallback": false,
   "country": "FR",
   "attribution_status": "auto_sure",
+  "theme": "Europe & institutions",
+  "votona_topics": [],
   "verdict": "false",
   "reviews": [
    {
@@ -5134,6 +5751,13 @@
   "date_is_fallback": true,
   "country": "FR",
   "attribution_status": "validated",
+  "theme": "Sécurité & immigration",
+  "votona_topics": [
+   {
+    "slug": "reduire-drastiquement-limmigration-par-des-quotas-stricts",
+    "label": "Réduire l'immigration en instaurant des quotas annuels"
+   }
+  ],
   "verdict": "half_true",
   "reviews": [
    {
@@ -5166,6 +5790,13 @@
   "date_is_fallback": false,
   "country": "FR",
   "attribution_status": "auto_sure",
+  "theme": "Société",
+  "votona_topics": [
+   {
+    "slug": "reconnaitre-un-droit-a-laide-active-a-mourir-comme-la-loi",
+    "label": "Autoriser l'aide active à mourir, sous conditions, pour les personnes atteintes d'une maladie grave et incurable"
+   }
+  ],
   "verdict": "false",
   "reviews": [
    {
@@ -5198,6 +5829,8 @@
   "date_is_fallback": true,
   "country": "FR",
   "attribution_status": "auto_sure",
+  "theme": "Europe & institutions",
+  "votona_topics": [],
   "verdict": "false",
   "reviews": [
    {
@@ -5230,6 +5863,13 @@
   "date_is_fallback": false,
   "country": "FR",
   "attribution_status": "auto_sure",
+  "theme": "Défense & numérique",
+  "votona_topics": [
+   {
+    "slug": "maintenir-un-soutien-militaire-et-financier-fort-a-lukraine",
+    "label": "Maintenir le soutien militaire et financier de la France à l'Ukraine"
+   }
+  ],
   "verdict": "unrated",
   "reviews": [
    {
@@ -5271,6 +5911,8 @@
   "date_is_fallback": false,
   "country": "FR",
   "attribution_status": "validated",
+  "theme": "Écologie",
+  "votona_topics": [],
   "verdict": "mostly_true",
   "reviews": [
    {
@@ -5303,6 +5945,8 @@
   "date_is_fallback": false,
   "country": "FR",
   "attribution_status": "auto_sure",
+  "theme": "Société",
+  "votona_topics": [],
   "verdict": "true",
   "reviews": [
    {
@@ -5335,6 +5979,8 @@
   "date_is_fallback": false,
   "country": "FR",
   "attribution_status": "auto_sure",
+  "theme": "Protection sociale",
+  "votona_topics": [],
   "verdict": "mostly_true",
   "reviews": [
    {
@@ -5367,6 +6013,13 @@
   "date_is_fallback": false,
   "country": "FR",
   "attribution_status": "auto_sure",
+  "theme": "Sécurité & immigration",
+  "votona_topics": [
+   {
+    "slug": "reduire-drastiquement-limmigration-par-des-quotas-stricts",
+    "label": "Réduire l'immigration en instaurant des quotas annuels"
+   }
+  ],
   "verdict": "half_true",
   "reviews": [
    {
@@ -5399,6 +6052,8 @@
   "date_is_fallback": true,
   "country": "FR",
   "attribution_status": "auto_sure",
+  "theme": null,
+  "votona_topics": [],
   "verdict": "false",
   "reviews": [
    {
@@ -5431,6 +6086,8 @@
   "date_is_fallback": false,
   "country": "FR",
   "attribution_status": "auto_sure",
+  "theme": "Société",
+  "votona_topics": [],
   "verdict": "mostly_true",
   "reviews": [
    {
@@ -5463,6 +6120,8 @@
   "date_is_fallback": false,
   "country": "FR",
   "attribution_status": "validated",
+  "theme": "Écologie",
+  "votona_topics": [],
   "verdict": "mostly_false",
   "reviews": [
    {
@@ -5495,6 +6154,8 @@
   "date_is_fallback": false,
   "country": "FR",
   "attribution_status": "auto_sure",
+  "theme": null,
+  "votona_topics": [],
   "verdict": "mostly_false",
   "reviews": [
    {
@@ -5527,6 +6188,13 @@
   "date_is_fallback": false,
   "country": "FR",
   "attribution_status": "auto_sure",
+  "theme": "Défense & numérique",
+  "votona_topics": [
+   {
+    "slug": "maintenir-un-soutien-militaire-et-financier-fort-a-lukraine",
+    "label": "Maintenir le soutien militaire et financier de la France à l'Ukraine"
+   }
+  ],
   "verdict": "half_true",
   "reviews": [
    {
@@ -5559,6 +6227,8 @@
   "date_is_fallback": true,
   "country": "FR",
   "attribution_status": "validated",
+  "theme": null,
+  "votona_topics": [],
   "verdict": "mostly_false",
   "reviews": [
    {
@@ -5591,6 +6261,8 @@
   "date_is_fallback": false,
   "country": "FR",
   "attribution_status": "auto_sure",
+  "theme": null,
+  "votona_topics": [],
   "verdict": "true",
   "reviews": [
    {
@@ -5623,6 +6295,8 @@
   "date_is_fallback": false,
   "country": "FR",
   "attribution_status": "validated",
+  "theme": "Écologie",
+  "votona_topics": [],
   "verdict": "true",
   "reviews": [
    {
@@ -5655,6 +6329,8 @@
   "date_is_fallback": true,
   "country": "FR",
   "attribution_status": "validated",
+  "theme": "Europe & institutions",
+  "votona_topics": [],
   "verdict": "mostly_true",
   "reviews": [
    {
@@ -5687,6 +6363,8 @@
   "date_is_fallback": false,
   "country": "FR",
   "attribution_status": "validated",
+  "theme": "Europe & institutions",
+  "votona_topics": [],
   "verdict": "mostly_true",
   "reviews": [
    {
@@ -5719,6 +6397,8 @@
   "date_is_fallback": false,
   "country": "FR",
   "attribution_status": "auto_sure",
+  "theme": null,
+  "votona_topics": [],
   "verdict": "mostly_false",
   "reviews": [
    {
@@ -5751,6 +6431,8 @@
   "date_is_fallback": true,
   "country": "FR",
   "attribution_status": "validated",
+  "theme": null,
+  "votona_topics": [],
   "verdict": "mostly_false",
   "reviews": [
    {
@@ -5783,6 +6465,8 @@
   "date_is_fallback": false,
   "country": "FR",
   "attribution_status": "validated",
+  "theme": "Défense & numérique",
+  "votona_topics": [],
   "verdict": "mostly_true",
   "reviews": [
    {
@@ -5815,6 +6499,13 @@
   "date_is_fallback": false,
   "country": "FR",
   "attribution_status": "auto_sure",
+  "theme": "Économie & travail",
+  "votona_topics": [
+   {
+    "slug": "reduire-la-dette-publique-en-priorite-par-la-baisse-des",
+    "label": "Réduire la dette publique en priorité par la baisse des dépenses de l'État"
+   }
+  ],
   "verdict": "true",
   "reviews": [
    {
@@ -5847,6 +6538,13 @@
   "date_is_fallback": true,
   "country": "FR",
   "attribution_status": "auto_sure",
+  "theme": "Défense & numérique",
+  "votona_topics": [
+   {
+    "slug": "maintenir-un-soutien-militaire-et-financier-fort-a-lukraine",
+    "label": "Maintenir le soutien militaire et financier de la France à l'Ukraine"
+   }
+  ],
   "verdict": "mostly_false",
   "reviews": [
    {
@@ -5879,6 +6577,8 @@
   "date_is_fallback": true,
   "country": "FR",
   "attribution_status": "auto_sure",
+  "theme": "Protection sociale",
+  "votona_topics": [],
   "verdict": "mostly_false",
   "reviews": [
    {
@@ -5911,6 +6611,13 @@
   "date_is_fallback": true,
   "country": "FR",
   "attribution_status": "auto_sure",
+  "theme": "Europe & institutions",
+  "votona_topics": [
+   {
+    "slug": "sopposer-a-la-ratification-de-laccord-de-libre-echange",
+    "label": "S'opposer à la ratification de l'accord de libre-échange entre l'Union européenne et le Mercosur"
+   }
+  ],
   "verdict": "mostly_true",
   "reviews": [
    {
@@ -5943,6 +6650,17 @@
   "date_is_fallback": true,
   "country": "FR",
   "attribution_status": "validated",
+  "theme": "Défense & numérique",
+  "votona_topics": [
+   {
+    "slug": "maintenir-un-soutien-militaire-et-financier-fort-a-lukraine",
+    "label": "Maintenir le soutien militaire et financier de la France à l'Ukraine"
+   },
+   {
+    "slug": "reserver-le-jugement-de-tous-les-crimes-sexuels-aux-cours",
+    "label": "Réserver le jugement de tous les crimes sexuels aux cours d'assises avec jury populaire, en les excluant des cours criminelles départementales"
+   }
+  ],
   "verdict": "mostly_true",
   "reviews": [
    {
@@ -5975,6 +6693,8 @@
   "date_is_fallback": true,
   "country": "FR",
   "attribution_status": "validated",
+  "theme": null,
+  "votona_topics": [],
   "verdict": "mostly_false",
   "reviews": [
    {
@@ -6007,6 +6727,8 @@
   "date_is_fallback": false,
   "country": "FR",
   "attribution_status": "validated",
+  "theme": "Écologie",
+  "votona_topics": [],
   "verdict": "mostly_true",
   "reviews": [
    {
@@ -6039,6 +6761,13 @@
   "date_is_fallback": false,
   "country": "FR",
   "attribution_status": "auto_sure",
+  "theme": "Sécurité & immigration",
+  "votona_topics": [
+   {
+    "slug": "reduire-drastiquement-limmigration-par-des-quotas-stricts",
+    "label": "Réduire l'immigration en instaurant des quotas annuels"
+   }
+  ],
   "verdict": "half_true",
   "reviews": [
    {
@@ -6071,6 +6800,8 @@
   "date_is_fallback": false,
   "country": "FR",
   "attribution_status": "validated",
+  "theme": null,
+  "votona_topics": [],
   "verdict": "mostly_true",
   "reviews": [
    {
@@ -6103,6 +6834,13 @@
   "date_is_fallback": false,
   "country": "FR",
   "attribution_status": "auto_sure",
+  "theme": "Défense & numérique",
+  "votona_topics": [
+   {
+    "slug": "maintenir-un-soutien-militaire-et-financier-fort-a-lukraine",
+    "label": "Maintenir le soutien militaire et financier de la France à l'Ukraine"
+   }
+  ],
   "verdict": "mostly_true",
   "reviews": [
    {
@@ -6135,6 +6873,8 @@
   "date_is_fallback": true,
   "country": "FR",
   "attribution_status": "validated",
+  "theme": null,
+  "votona_topics": [],
   "verdict": "mostly_true",
   "reviews": [
    {
@@ -6167,6 +6907,8 @@
   "date_is_fallback": false,
   "country": "FR",
   "attribution_status": "validated",
+  "theme": null,
+  "votona_topics": [],
   "verdict": "half_true",
   "reviews": [
    {
@@ -6199,6 +6941,8 @@
   "date_is_fallback": false,
   "country": "FR",
   "attribution_status": "validated",
+  "theme": null,
+  "votona_topics": [],
   "verdict": "half_true",
   "reviews": [
    {
@@ -6231,6 +6975,13 @@
   "date_is_fallback": true,
   "country": "FR",
   "attribution_status": "validated",
+  "theme": "Économie & travail",
+  "votona_topics": [
+   {
+    "slug": "geler-le-point-dindice-des-fonctionnaires-en-2027-pour",
+    "label": "Geler le point d'indice des fonctionnaires en 2027"
+   }
+  ],
   "verdict": "false",
   "reviews": [
    {
@@ -6263,6 +7014,8 @@
   "date_is_fallback": false,
   "country": "FR",
   "attribution_status": "validated",
+  "theme": "Europe & institutions",
+  "votona_topics": [],
   "verdict": "half_true",
   "reviews": [
    {

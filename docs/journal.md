@@ -16,6 +16,41 @@ Les décisions durables sont aussi consignées dans [decisions.md](decisions.md)
 | 6 | run_daily.py + export.py, routine sur 90 jours | ✅ fait — 122 entrées exportées sur 2 ans ; planifiée chaque jour à 6 h (22/10) |
 | 7 | web/beta/index.html (maquette A) | ✅ en ligne (22/10) — 119 déclarations |
 | — | Page web de validation | ✅ en ligne (22/10) — 147 éléments à traiter |
+| — | Sujets (familles et sujets Votona), recoupement, angles morts, données ouvertes, RSS | ✅ fait (22/10) |
+| — | Hébergement préprod (`preprod`) / prod (`main`) | ⏳ dépôt prêt ; Vercel + DNS OVH à faire par le porteur |
+| — | Liens Votona → Observatoire | ⏳ prêts, désactivés (branche votona `claude/liens-observatoire`) |
+
+## 2026-10-22 — Onglets sans redondance, sujets, recoupement, données ouvertes, préprod/prod
+
+**Demande du porteur** : contenu des onglets redondant ; enrichir pour se démarquer de Poligraph ;
+relier Votona et l'Observatoire sans les confondre ; hébergement préprod + prod.
+
+- **Architecture de la beta** : Accueil (chiffres clés, couverture des candidats 2027, dernières
+  vérifications, tuiles par sujet, ce qui distingue l'Observatoire ; plus de barre de filtres) ;
+  **Faits vérifiés**, seul écran à filtres complets (+ sujet, + « vérifié par plusieurs
+  rédactions ») ; Personnalités (onglets Candidats 2027 / Toutes, recherche) ; Partis (partis des
+  candidats d'abord, répartition en barre) ; **Sujets** (nouveau) ; Méthode. Les fiches personne,
+  parti et sujet n'ont plus de filtres : un lien « Filtrer ces faits » ouvre Faits vérifiés
+  pré-filtré. « Faire le test Votona » dans le bandeau.
+- **Sujets** : `data/seeds/themes.csv` (37 sujets de Votona + 7 familles, mots-clés à la main),
+  `pipeline/themes.py` ; l'export ajoute `theme` et `votona_topics` à chaque fait (indicatif,
+  jamais un jugement). 137/188 faits ont une famille, 73 un sujet de Votona.
+  **Angles morts** : 17 des 37 sujets de Votona sans aucune vérification pour les candidats 2027
+  et leurs partis.
+- **Recoupement** : badge « Vérifié par N rédactions » (28 faits), « Verdicts divergents » quand
+  les rédactions ne placent pas la déclaration au même niveau ; aucun arbitrage.
+- **Données ouvertes** (site seulement) : `site/donnees/facts.json`, `facts.csv` (une ligne par
+  vérification), flux RSS `site/flux.xml` (50 dernières).
+- **Liens Votona** : voir [liens-votona.md](liens-votona.md). Routes entrantes `#candidat-<id>` et
+  `#sujet-<famille>`. Côté Votona, branche `claude/liens-observatoire` (constante
+  `OBSERVATOIRE_URL` vide : pages générées inchangées, vérifié).
+- **Hébergement** : `preprod` → preview.observatoire.votona.fr, `main` → observatoire.votona.fr,
+  tous deux en noindex jusqu'au feu vert conformité ([hebergement.md](hebergement.md)). La routine
+  commite les données sur `main` et avance `preprod` seulement en avance rapide.
+- Tests : 70 passent. rating_map.csv non modifié.
+
+**Suite** : le porteur configure Vercel (deux domaines) et le DNS OVH, et ajoute le dépôt à la
+routine ; Science Feedback comme source ; module B finances publiques.
 
 ## 2026-10-21 (soir) — Votona Observatoire : liste commune, charte, vue 2027, site
 
