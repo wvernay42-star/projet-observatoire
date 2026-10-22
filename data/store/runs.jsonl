@@ -1,0 +1,13 @@
+{"connector": "google_factcheck", "errors": null, "fetched": 242, "id": 1, "new_reviews": 242, "started_at": "2026-10-21T09:55:50+00:00"}
+{"connector": "datacommons_feed", "errors": null, "fetched": 4, "id": 2, "new_reviews": 4, "started_at": "2026-10-21T09:55:50+00:00"}
+{"connector": "google_factcheck", "errors": null, "fetched": 242, "id": 3, "new_reviews": 0, "started_at": "2026-10-21T09:56:40+00:00"}
+{"connector": "datacommons_feed", "errors": null, "fetched": 4, "id": 4, "new_reviews": 0, "started_at": "2026-10-21T09:56:40+00:00"}
+{"connector": "google_factcheck", "errors": null, "fetched": 2112, "id": 5, "new_reviews": 1870, "started_at": "2026-10-21T10:21:04+00:00"}
+{"connector": "google_factcheck", "errors": null, "fetched": 25, "id": 6, "new_reviews": 0, "started_at": "2026-10-21T11:02:21+00:00"}
+{"connector": "datacommons_feed", "errors": null, "fetched": 4, "id": 7, "new_reviews": 0, "started_at": "2026-10-21T11:02:21+00:00"}
+{"connector": "google_factcheck", "errors": null, "fetched": 28, "id": 8, "new_reviews": 3, "started_at": "2026-10-21T13:04:46+00:00"}
+{"connector": "datacommons_feed", "errors": null, "fetched": 4, "id": 9, "new_reviews": 0, "started_at": "2026-10-21T13:04:46+00:00"}
+{"connector": "google_factcheck", "errors": null, "fetched": 28, "id": 10, "new_reviews": 0, "started_at": "2026-10-21T13:05:40+00:00"}
+{"connector": "google_factcheck", "errors": null, "fetched": 28, "id": 11, "new_reviews": 0, "started_at": "2026-10-21T13:08:43+00:00"}
+{"connector": "google_factcheck", "errors": null, "fetched": 28, "id": 12, "new_reviews": 0, "started_at": "2026-10-21T13:51:04+00:00"}
+{"connector": "google_factcheck", "errors": null, "fetched": 28, "id": 13, "new_reviews": 0, "started_at": "2026-10-22T07:14:10+00:00"}

@@ -32,14 +32,17 @@ from pipeline.ratings import convert, load_rating_map
 ROOT = Path(__file__).resolve().parents[1]
 QUEUE_DIR = ROOT / "data" / "review_queue"
 VALIDATIONS = ROOT / "data" / "validations" / "attributions.csv"
+STORE_DIR = ROOT / "data" / "store"  # mémoire versionnée de la base (la base SQLite n'est pas commitée)
 OVERLAP_DAYS = 7
 ZERO_ALERT_RUNS = 3
+MIN_EXPORT_RATIO = 0.5  # en dessous, on refuse d'écraser l'export (base vide, panne…)
 
 CONNECTORS: dict[str, type[Connector]] = {
     GoogleFactCheck.name: GoogleFactCheck,
     DataCommonsFeed.name: DataCommonsFeed,
 }
 
+RUN_COLUMNS = ["id", "started_at", "connector", "fetched", "new_reviews", "errors"]
 REVIEW_COLUMNS = ["id", "source_id", "url", "title", "rating_original", "rating_normalized", "rating_method",
                   "review_date", "ingested_at", "lang", "connector", "claimant", "claim_text", "claim_date_raw"]
 
@@ -189,19 +192,61 @@ def run(names: list[str], days: int | None = None, dry_run: bool = False, db_pat
     rating_map = load_rating_map()
     ref = Referential.load()
 
-    report: dict[str, Any] = {"connectors": collect(conn, names, days, now, rating_map)}
+    report: dict[str, Any] = {"restored": load_store(conn, STORE_DIR)}
+    report["connectors"] = collect(conn, names, days, now, rating_map)
     refresh_ratings(conn, rating_map)
     rebuild_claims(conn, ref, load_validations())
     statuses = Counter(s for (s,) in conn.execute("SELECT attribution_status FROM claims"))
     report["reviews"] = conn.execute("SELECT COUNT(*) FROM reviews").fetchone()[0]
     report["claims"] = dict(statuses)
     if not dry_run:
-        report["queues"] = write_queues(conn, ref, QUEUE_DIR)
-        report["exported"] = export(conn, ref, EXPORT_DIR)
+        published = conn.execute("SELECT COUNT(*) FROM claims WHERE attribution_status IN ('auto_sure', 'validated')").fetchone()[0]
+        before = previous_export_size(EXPORT_DIR)
+        if before > 20 and published < before * MIN_EXPORT_RATIO:
+            # Garde-fou : une base vide ou partielle ne doit jamais écraser l'export publié.
+            report["blocked"] = f"export refusé : {published} entrées contre {before} publiées"
+        else:
+            report["queues"] = write_queues(conn, ref, QUEUE_DIR)
+            report["exported"] = export(conn, ref, EXPORT_DIR)
         conn.commit()
+        save_store(conn, STORE_DIR)
     report["silent_connectors"] = silent_connectors(conn)
     conn.close()
     return report
+
+
+def load_store(conn: sqlite3.Connection, store_dir: Path = STORE_DIR) -> int:
+    """Recharge la base depuis data/store/*.jsonl quand elle est vide (nouvelle session, nouveau clone)."""
+    if conn.execute("SELECT COUNT(*) FROM reviews").fetchone()[0] or not (store_dir / "reviews.jsonl").exists():
+        return 0
+    loaded = 0
+    for table, columns in (("reviews", REVIEW_COLUMNS), ("runs", RUN_COLUMNS)):
+        path = store_dir / f"{table}.jsonl"
+        if not path.exists():
+            continue
+        rows = [json.loads(line) for line in path.read_text(encoding="utf-8").splitlines() if line.strip()]
+        conn.executemany(f"INSERT OR IGNORE INTO {table} ({', '.join(columns)}) VALUES ({', '.join('?' * len(columns))})",
+                         [[r.get(c) for c in columns] for r in rows])
+        loaded += len(rows) if table == "reviews" else 0
+    return loaded
+
+
+def save_store(conn: sqlite3.Connection, store_dir: Path = STORE_DIR) -> None:
+    """Écrit la base en JSON Lines triés (diff lisible dans git) : toutes les vérifications et le journal des exécutions."""
+    store_dir.mkdir(parents=True, exist_ok=True)
+    for table, columns, order in (("reviews", REVIEW_COLUMNS, "url"), ("runs", RUN_COLUMNS, "id")):
+        rows = conn.execute(f"SELECT {', '.join(columns)} FROM {table} ORDER BY {order}").fetchall()
+        (store_dir / f"{table}.jsonl").write_text(
+            "".join(json.dumps(dict(zip(columns, r)), ensure_ascii=False, sort_keys=True) + "\n" for r in rows),
+            encoding="utf-8")
+
+
+def previous_export_size(export_dir: Path) -> int:
+    path = export_dir / "facts.json"
+    try:
+        return len(json.loads(path.read_text(encoding="utf-8")))
+    except (OSError, ValueError):
+        return 0
 
 
 def init_db_conn(conn: sqlite3.Connection) -> None:
@@ -218,6 +263,8 @@ def main() -> None:
     args = parser.parse_args()
     report = run(args.connector or list(CONNECTORS), args.days, args.dry_run)
 
+    if report.get("restored"):
+        print(f"Base rechargée depuis data/store : {report['restored']} vérifications")
     print("Collecte :")
     for name, r in report["connectors"].items():
         status = f"ERREUR {r['errors']}" if r["errors"] else "ok"
@@ -227,6 +274,8 @@ def main() -> None:
         q = report["queues"]
         print(f"File de validation : {q['attributions']} attributions, {q['parties']} partis, {q['ratings']} libellés")
         print(f"Exportées (data/export/facts.json) : {report['exported']}")
+    if report.get("blocked"):
+        print(f"ALERTE : {report['blocked']} (base incomplète ?). Rien n'a été exporté.")
     if report["silent_connectors"]:
         print(f"ALERTE : aucun résultat nouveau depuis {ZERO_ALERT_RUNS} jours : {report['silent_connectors']}")
 

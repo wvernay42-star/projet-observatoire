@@ -1,6 +1,7 @@
 """Synchronise data/seeds/candidates_2027.csv avec la liste des candidats de Votona.
 
     python -m pipeline.sync_candidates /chemin/vers/votona/index.html
+    python -m pipeline.sync_candidates https://votona.fr/      # site public (domaine à autoriser)
 
 Votona (dépôt wvernay42-star/votona) est la source de la liste : nom, parti affiché, retrait.
 Un candidat existant garde son identifiant Wikidata ; un nouveau candidat est relié au référentiel
@@ -64,9 +65,19 @@ def sync(html: str, seeds_dir: Path = SEEDS_DIR, ref: Referential | None = None)
 
 def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
-    parser.add_argument("votona_index", type=Path, help="index.html du dépôt Votona")
+    parser.add_argument("votona_index", help="index.html du dépôt Votona, ou l'adresse https://votona.fr/")
     args = parser.parse_args()
-    for key, names in sync(args.votona_index.read_text(encoding="utf-8")).items():
+    if args.votona_index.startswith("https://"):
+        import httpx
+
+        response = httpx.get(args.votona_index, timeout=60, follow_redirects=True)
+        response.raise_for_status()
+        html = response.text
+    else:
+        html = Path(args.votona_index).read_text(encoding="utf-8")
+    if not parse_votona(html):
+        raise SystemExit("Aucun candidat trouvé dans la page Votona : liste inchangée.")
+    for key, names in sync(html).items():
         print(f"{key} : {len(names)}" + (f" — {', '.join(names)}" if names else ""))
 
 

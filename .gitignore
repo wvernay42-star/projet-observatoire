@@ -5,6 +5,7 @@ __pycache__/
 .pytest_cache/
 .ruff_cache/
 data/observatoire.db
+# data/store/*.jsonl est versionné : c'est la mémoire de la base entre deux sessions.
 data/review_queue/*
 !data/review_queue/rating_proposals.csv
 !data/review_queue/attributions.json

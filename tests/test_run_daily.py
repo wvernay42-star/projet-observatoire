@@ -32,6 +32,7 @@ def env(tmp_path, monkeypatch):
     monkeypatch.setattr(run_daily, "CONNECTORS", {"fake": Fake, "broken": Broken})
     monkeypatch.setattr(run_daily, "EXPORT_DIR", tmp_path / "export")
     monkeypatch.setattr(run_daily, "QUEUE_DIR", tmp_path / "queue")
+    monkeypatch.setattr(run_daily, "STORE_DIR", tmp_path / "store")
     monkeypatch.setattr(run_daily, "load_validations", lambda: {})
     Fake.reviews = [
         raw("https://a/1", "Marine Le Pen", "Plutôt faux"),
@@ -69,3 +70,19 @@ def test_dry_run_writes_nothing(env):
     db = env / "dry.db"
     run_daily.run(["fake"], days=30, dry_run=True, db_path=db)
     assert not db.exists() and not (env / "export" / "facts.json").exists()
+
+
+def test_store_survives_a_fresh_database(env):
+    run_daily.run(["fake"], days=30, db_path=env / "a.db")
+    Fake.reviews = []  # nouvelle session : la source ne renvoie plus rien, la base locale est neuve
+    report = run_daily.run(["fake"], days=30, db_path=env / "b.db")
+    assert report["restored"] == 4 and report["reviews"] == 4
+    assert len(json.loads((env / "export" / "facts.json").read_text())) == 1
+
+
+def test_export_is_never_overwritten_by_a_collapsed_base(env):
+    (env / "export").mkdir()
+    (env / "export" / "facts.json").write_text(json.dumps([{"id": i} for i in range(100)]))
+    report = run_daily.run(["fake"], days=30, db_path=env / "c.db")
+    assert report["blocked"].startswith("export refusé")
+    assert len(json.loads((env / "export" / "facts.json").read_text())) == 100
