@@ -1,5 +1,48 @@
 [
  {
+  "id": "c_17ba49cd0974d011",
+  "person": {
+   "id": "Q3052772",
+   "name": "Emmanuel Macron",
+   "votona_id": null
+  },
+  "party": {
+   "id": "Q23731823",
+   "name": "Renaissance",
+   "short_name": "RE",
+   "status": "ok"
+  },
+  "claim_text": "Il y a eu une manipulation étrangère de l'information après le 17 octobre",
+  "claim_date": "2026-10-23",
+  "date_precision": "day",
+  "date_is_fallback": true,
+  "country": "FR",
+  "attribution_status": "auto_sure",
+  "theme": null,
+  "votona_topics": [],
+  "verdict": "half_true",
+  "reviews": [
+   {
+    "source_id": "poligraph_fr",
+    "source_name": "Poligraph",
+    "url": "https://poligraph.fr/factchecks/2026-10-23-verif-une-manipulation-etrangere-de-l-information-de-quoi-parle-exact",
+    "title": "Partiellement vrai — VÉRIF' - \"Une manipulation étrangère de l'information\" : de quoi parle exactement Emmanuel Macron ?",
+    "rating_original": "En partie vrai",
+    "rating_normalized": "half_true",
+    "review_date": "2026-10-23"
+   },
+   {
+    "source_id": "tf1info_verificateurs",
+    "source_name": "TF1 Info – Les Vérificateurs",
+    "url": "https://www.tf1info.fr/international/verif-une-manipulation-etrangere-de-l-information-de-quoi-parle-exactement-emmanuel-macron-2471449.html",
+    "title": "VÉRIF' - \"Une manipulation étrangère de l'information\" : de quoi parle exactement Emmanuel Macron ?",
+    "rating_original": "En partie vrai",
+    "rating_normalized": "half_true",
+    "review_date": "2026-10-23"
+   }
+  ]
+ },
+ {
   "id": "c_279e29240311c8ad",
   "person": {
    "id": "Q47502155",

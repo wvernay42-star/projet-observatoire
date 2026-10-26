@@ -20,6 +20,17 @@ Les décisions durables sont aussi consignées dans [decisions.md](decisions.md)
 | — | Hébergement préprod (`preprod`) / prod (`main`) | ⏳ dépôt prêt ; Vercel + DNS OVH à faire par le porteur |
 | — | Liens Votona → Observatoire | ⏳ prêts, désactivés (branche votona `claude/liens-observatoire`) |
 
+## 2026-10-26 — Routine quotidienne
+
+- **Candidats** : synchronisation non faite (votona.fr inaccessible depuis la routine : proxy 403 ; pas de clone votona). Liste inchangée.
+- **Collecte** : google_factcheck 38 récupérées / 16 nouvelles ; datacommons_feed 4 / 0. Aucune erreur de connecteur.
+- **Décisions du tableau** : aucune (0 appliquée, 0 ignorée). rating_map.csv non modifié.
+- **Claims** : auto_sure 122, validated 67, rejected 1 916, to_review 0. Base : 2 135 vérifications.
+- **Export** : 189 déclarations (186 avant la veille : +67 validated comptés dans l'export), fichiers data/export/ régénérés. Pas d'alerte d'export.
+- **Files de validation** : verdicts 0, attributions 0, partis 51, sources 6 (déposées dans le tableau).
+- **Part de verdicts positifs (vrai + plutôt vrai)** : TF1 Info 15,3 % (875) ; franceinfo Vrai ou Fake 23,1 % (121) ; Poligraph 17,4 % (46) ; AFP Factuel 0 % (780) ; 20 Minutes Fake Off 4,5 % (309) ; Les Décodeurs 0 % (4).
+- **Beta** : régénérée (189 déclarations) et republiée (artefact version 5). Tests : 70 passent.
+
 ## 2026-10-22 — Onglets sans redondance, sujets, recoupement, données ouvertes, préprod/prod
 
 **Demande du porteur** : contenu des onglets redondant ; enrichir pour se démarquer de Poligraph ;

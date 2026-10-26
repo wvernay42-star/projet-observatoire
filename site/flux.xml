@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0"><channel><title>Votona Observatoire - dernières vérifications</title><link>https://preview.observatoire.votona.fr/</link>
+<rss version="2.0"><channel><title>Votona Observatoire - dernières vérifications</title><link>https://observatoire.votona.fr/</link>
 <description>Les dernières déclarations politiques vérifiées par les rédactions françaises de fact-checking, avec le verdict d'origine.</description>
-<language>fr</language><lastBuildDate>Thu, 22 Oct 2026 07:21:15 +0000</lastBuildDate>
+<language>fr</language><lastBuildDate>Mon, 26 Oct 2026 10:17:04 +0000</lastBuildDate>
+<item><title>Emmanuel Macron : « Il y a eu une manipulation étrangère de l'information après le 17 octobre »</title>
+<link>https://poligraph.fr/factchecks/2026-10-23-verif-une-manipulation-etrangere-de-l-information-de-quoi-parle-exact</link><guid isPermaLink="false">c_17ba49cd0974d011</guid><pubDate>Fri, 23 Oct 2026 12:00:00 +0000</pubDate>
+<description>« En partie vrai » selon Poligraph ; « En partie vrai » selon TF1 Info – Les Vérificateurs</description></item>
 <item><title>Philippe Baptiste : « Seuls 38 bacheliers "n'ont pas eu de solution" sur Parcoursup en 2025 »</title>
 <link>https://poligraph.fr/factchecks/2026-10-17-vrai-ou-faux-n-y-a-t-il-eu-que-38-bacheliers-qui-n-ont-pas-eu-de-solu</link><guid isPermaLink="false">c_96a23047c1bdcd97</guid><pubDate>Sat, 17 Oct 2026 12:00:00 +0000</pubDate>
 <description>« C’est plus compliqué » selon Poligraph ; « C’est plus compliqué » selon franceinfo Vrai ou Fake</description></item>
@@ -149,7 +152,4 @@
 <item><title>Marine Le Pen : « En France, l'âge moyen du premier "emploi réel" est aujourd'hui de 27 ans ? »</title>
 <link>https://poligraph.fr/factchecks/2026-03-10-verif-l-age-moyen-du-premier-emploi-reel-en-france-est-il-aujourd-hui-de-27-ans</link><guid isPermaLink="false">c_5412311eeded7ac1</guid><pubDate>Tue, 10 Mar 2026 12:00:00 +0000</pubDate>
 <description>« Plutôt vrai » selon Poligraph ; « Plutôt vrai » selon TF1 Info – Les Vérificateurs</description></item>
-<item><title>Rachida Dati : « Si elle est élue maire de Paris, Rachida Dati pourra doubler le nombre de caméras et éviter tout "angle mort" »</title>
-<link>https://factuel.afp.com/doc.afp.com.99QP2T3</link><guid isPermaLink="false">c_35b3d2a40b43b441</guid><pubDate>Tue, 10 Mar 2026 12:00:00 +0000</pubDate>
-<description>« Manque de contexte » selon AFP Factuel</description></item>
 </channel></rss>

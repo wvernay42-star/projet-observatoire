@@ -5,16 +5,16 @@
   "claim_date": "2026-10-15",
   "reviews": [
    {
-    "url": "https://www.tf1info.fr/politique/verif-les-retraites-et-la-sante-a-l-origine-de-80-de-la-hausse-des-depenses-publiques-vraiment-2470134.html",
-    "source_id": "tf1info_verificateurs",
+    "url": "https://poligraph.fr/factchecks/2026-10-15-verif-les-retraites-et-la-sante-a-l-origine-de-80-de-la-hausse-des-de",
+    "source_id": "poligraph_fr",
     "claimant": "David Amiel, ministre de l'Action et des comptes publics",
     "rating_original": "En partie vrai",
     "rating_normalized": "half_true",
     "review_date": "2026-10-15"
    },
    {
-    "url": "https://poligraph.fr/factchecks/2026-10-15-verif-les-retraites-et-la-sante-a-l-origine-de-80-de-la-hausse-des-de",
-    "source_id": "poligraph_fr",
+    "url": "https://www.tf1info.fr/politique/verif-les-retraites-et-la-sante-a-l-origine-de-80-de-la-hausse-des-depenses-publiques-vraiment-2470134.html",
+    "source_id": "tf1info_verificateurs",
     "claimant": "David Amiel, ministre de l'Action et des comptes publics",
     "rating_original": "En partie vrai",
     "rating_normalized": "half_true",
@@ -34,16 +34,16 @@
   "claim_date": "2026-09-18",
   "reviews": [
    {
-    "url": "https://www.tf1info.fr/economie/verif-la-france-detient-elle-le-record-d-europe-de-dividendes-verses-par-les-entreprises-comme-le-dit-eric-coquerel-de-lfi-2464935.html",
-    "source_id": "tf1info_verificateurs",
+    "url": "https://poligraph.fr/factchecks/2026-09-18-verif-x27-la-france-championne-d-europe-des-dividendes-verses-par-les",
+    "source_id": "poligraph_fr",
     "claimant": "Eric Coquerel, député LFI de Seine-Saint-Denis",
     "rating_original": "Plutôt vrai",
     "rating_normalized": "mostly_true",
     "review_date": "2026-09-18"
    },
    {
-    "url": "https://poligraph.fr/factchecks/2026-09-18-verif-x27-la-france-championne-d-europe-des-dividendes-verses-par-les",
-    "source_id": "poligraph_fr",
+    "url": "https://www.tf1info.fr/economie/verif-la-france-detient-elle-le-record-d-europe-de-dividendes-verses-par-les-entreprises-comme-le-dit-eric-coquerel-de-lfi-2464935.html",
+    "source_id": "tf1info_verificateurs",
     "claimant": "Eric Coquerel, député LFI de Seine-Saint-Denis",
     "rating_original": "Plutôt vrai",
     "rating_normalized": "mostly_true",
@@ -412,16 +412,16 @@
   "claim_date": "2025-07-09",
   "reviews": [
    {
-    "url": "https://www.franceinfo.fr/replay-radio/le-vrai-du-faux/perquisitions-au-rn-le-syndicat-de-la-magistrature-a-t-il-appele-a-lutter-contre-le-parti-par-tous-les-moyens_7340565.html",
-    "source_id": "franceinfo_vraioufake",
+    "url": "https://poligraph.fr/factchecks/2025-07-11-perquisitions-au-rn-le-syndicat-de-la-magistrature-a-t-il-appel-eacute-agrave-lutter-contre-le-parti-quot",
+    "source_id": "poligraph_fr",
     "claimant": "Thomas Ménagé, RN",
     "rating_original": "Plutôt Faux",
     "rating_normalized": "mostly_false",
     "review_date": "2025-07-11"
    },
    {
-    "url": "https://poligraph.fr/factchecks/2025-07-11-perquisitions-au-rn-le-syndicat-de-la-magistrature-a-t-il-appel-eacute-agrave-lutter-contre-le-parti-quot",
-    "source_id": "poligraph_fr",
+    "url": "https://www.franceinfo.fr/replay-radio/le-vrai-du-faux/perquisitions-au-rn-le-syndicat-de-la-magistrature-a-t-il-appele-a-lutter-contre-le-parti-par-tous-les-moyens_7340565.html",
+    "source_id": "franceinfo_vraioufake",
     "claimant": "Thomas Ménagé, RN",
     "rating_original": "Plutôt Faux",
     "rating_normalized": "mostly_false",
@@ -597,16 +597,16 @@
   "claim_date": "2025-05-21",
   "reviews": [
    {
-    "url": "https://www.franceinfo.fr/replay-radio/le-vrai-du-faux/narcotrafic-est-ce-que-supprimer-l-argent-liquide-permet-de-lutter-contre-la-criminalite-comme-l-affirme-gerald-darmanin_7259067.html",
-    "source_id": "franceinfo_vraioufake",
+    "url": "https://poligraph.fr/factchecks/2025-05-26-narcotrafic-est-ce-que-supprimer-l-argent-liquide-permet-de-lutter-contre-la-criminalite-comme-l-affirme",
+    "source_id": "poligraph_fr",
     "claimant": "Gérald Darmanin, ministre de la Justice",
     "rating_original": "C’est plus compliqué",
     "rating_normalized": "half_true",
     "review_date": "2025-05-26"
    },
    {
-    "url": "https://poligraph.fr/factchecks/2025-05-26-narcotrafic-est-ce-que-supprimer-l-argent-liquide-permet-de-lutter-contre-la-criminalite-comme-l-affirme",
-    "source_id": "poligraph_fr",
+    "url": "https://www.franceinfo.fr/replay-radio/le-vrai-du-faux/narcotrafic-est-ce-que-supprimer-l-argent-liquide-permet-de-lutter-contre-la-criminalite-comme-l-affirme-gerald-darmanin_7259067.html",
+    "source_id": "franceinfo_vraioufake",
     "claimant": "Gérald Darmanin, ministre de la Justice",
     "rating_original": "C’est plus compliqué",
     "rating_normalized": "half_true",
@@ -697,16 +697,16 @@
   "claim_date": "2025-04-01",
   "reviews": [
    {
-    "url": "https://www.franceinfo.fr/replay-radio/le-vrai-du-faux/quand-un-poisson-d-avril-se-retrouve-a-l-assemblee-nationale_7141902.html",
-    "source_id": "franceinfo_vraioufake",
+    "url": "https://poligraph.fr/factchecks/2025-04-04-quand-un-poisson-d-avril-se-retrouve-a-l-assemblee-nationale",
+    "source_id": "poligraph_fr",
     "claimant": "Arnaud Le Gall, député LFI",
     "rating_original": "Faux",
     "rating_normalized": "false",
     "review_date": "2025-04-04"
    },
    {
-    "url": "https://poligraph.fr/factchecks/2025-04-04-quand-un-poisson-d-avril-se-retrouve-a-l-assemblee-nationale",
-    "source_id": "poligraph_fr",
+    "url": "https://www.franceinfo.fr/replay-radio/le-vrai-du-faux/quand-un-poisson-d-avril-se-retrouve-a-l-assemblee-nationale_7141902.html",
+    "source_id": "franceinfo_vraioufake",
     "claimant": "Arnaud Le Gall, député LFI",
     "rating_original": "Faux",
     "rating_normalized": "false",
