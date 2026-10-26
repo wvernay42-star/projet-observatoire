@@ -27,6 +27,9 @@ OUTPUT = ROOT / "web" / "beta" / "index.html"
 PLACEHOLDER = '/*__DATA__*/{"generated_at":null,"facts":[],"sources":[],"contact":"","candidates":[]}'
 LOGO_PLACEHOLDER = "/*__LOGO__*/"
 LOGO = Path(__file__).resolve().parents[1] / "web" / "beta" / "logo-head.webp"
+# Accessoires des 7 familles de sujets, copiés de Votona (assets/props) : même identité visuelle.
+PROPS_PLACEHOLDER = "/*__PROPS__*/{}"
+PROPS_DIR = LOGO.with_name("props")
 CONTACT = "contact@votona.fr"
 SITE_URL = "https://observatoire.votona.fr"  # adresse de production (liens absolus du flux RSS)
 
@@ -50,7 +53,13 @@ def build(export_dir: Path = EXPORT_DIR, template: Path = TEMPLATE, output: Path
     def page(site: bool, logo: str) -> str:
         # « </ » échappé : le JSON ne peut pas fermer la balise <script> qui l'embarque.
         payload = json.dumps({**data, "site": site}, ensure_ascii=False, separators=(",", ":")).replace("</", "<\\/")
-        return html.replace(PLACEHOLDER, payload).replace(LOGO_PLACEHOLDER, logo)
+        if site:
+            props = {f.stem: f"/assets/props/{f.name}" for f in sorted(PROPS_DIR.glob("*.webp"))}
+        else:
+            props = {f.stem: "data:image/webp;base64," + base64.b64encode(f.read_bytes()).decode()
+                     for f in sorted(PROPS_DIR.glob("*.webp"))}
+        return (html.replace(PLACEHOLDER, payload).replace(LOGO_PLACEHOLDER, logo)
+                .replace(PROPS_PLACEHOLDER, json.dumps(props)))
 
     # Artefact : logo embarqué (aucune ressource externe) ; site : fichier servi à côté de la page.
     output.write_text(page(False, "data:image/webp;base64," + base64.b64encode(LOGO.read_bytes()).decode()), encoding="utf-8")
@@ -84,6 +93,9 @@ def build_site(page: str, site_dir: Path = SITE_DIR) -> None:
     head = SITE_HEAD.replace("</head>", "\n".join(head_tags) + "\n</head>")
     (site_dir / "index.html").write_text(head + body + "\n</body>\n</html>\n", encoding="utf-8")
     shutil.copyfile(LOGO, site_dir / "assets" / "logo-head.webp")
+    (site_dir / "assets" / "props").mkdir(exist_ok=True)
+    for f in PROPS_DIR.glob("*.webp"):
+        shutil.copyfile(f, site_dir / "assets" / "props" / f.name)
     favicon = LOGO.with_name("favicon-48.png")
     if favicon.exists():
         shutil.copyfile(favicon, site_dir / "assets" / "favicon-48.png")

@@ -51,3 +51,10 @@
   la liste de conformité. Fusion `preprod` → `main` sur demande explicite du porteur.
 - Liens Votona → Observatoire préparés derrière une constante vide, activés quand le domaine
   de production répond.
+
+## 2026-10-26
+- Une seule identité : l'Observatoire reprend tel quel le bandeau, les boutons, le pied de page et
+  les couleurs de familles de Votona ; seul le mot « OBSERVATOIRE » et l'échelle des verdicts
+  (bleu → orange) le distinguent. Liens entre les deux sites dans le même onglet.
+- Pages légales communes (celles de votona.fr) : à compléter pour mentionner l'Observatoire avant
+  l'ouverture au référencement.

@@ -20,6 +20,21 @@ Les décisions durables sont aussi consignées dans [decisions.md](decisions.md)
 | — | Hébergement préprod (`preprod`) / prod (`main`) | ✅ en ligne (26/10) — projet Vercel `votona-observatoire`, noindex |
 | — | Liens Votona → Observatoire | ⏳ actifs sur `draft` (test, 26/10) ; `main` sur demande du porteur |
 
+## 2026-10-26 (après-midi) — Une seule identité Votona / Observatoire, lien dans la barre de Votona
+
+- **Votona** (en production à la demande du porteur) : lien « Observatoire » dans la barre du haut
+  de l'app (écrans d'accueil, tableau de bord, compte ; pas pendant le questionnaire) et de toutes
+  les pages générées ; icône seule sous 480 px. Liens vers l'Observatoire dans le même onglet.
+- **Observatoire** aligné sur Votona : bandeau `header.topbar` identique (même largeur 1180 px,
+  marges, lavande y compris en mode sombre, mascotte, « Votona » + « OBSERVATOIRE » en Plex Mono),
+  lien « Le test 2027 » symétrique, icône « ? » pour la Méthode (comme la FAQ de Votona), onglets
+  sous le bandeau ; boutons `.btn-accent` / `.btn-ghost` de Votona ; pied de page `.gfoot`
+  (pages légales et réseaux de Votona) ; couleurs et accessoires des 7 familles (`web/beta/props/`,
+  copiés de Votona) sur les tuiles et pages sujets ; appel « Faire le test » sur l'accueil.
+- Ergonomie : cartes de l'accueil plus courtes (détail dans Faits vérifiés), chiffres clés en deux
+  colonnes et onglets courts sur mobile, « OBSERVATOIRE » toujours visible ; corrigé un conflit de
+  classe CSS (`.tag`) qui donnait un fond à l'étiquette du logo.
+
 ## 2026-10-26 — Mise en ligne, routine réparée, liens Votona sur draft
 
 - **Routine** : le porteur a ajouté le dépôt (écriture) à la routine Observatoire et `votona.fr`

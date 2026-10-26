@@ -1,56 +1,72 @@
 <title>Votona Observatoire - les déclarations vérifiées</title>
 <meta name="claude:viewport-fit-sides" content="cover">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700;800&family=Work+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Work+Sans:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
 /* Charte Votona (fond crème, violet, Baloo 2 / Work Sans / IBM Plex Mono, largeur 880 px) ;
    échelle des verdicts propre à l'Observatoire (bleu → orange), distincte du vert/rouge « pour/contre » de Votona. */
 :root {
   --bg: #fbfaf7; --surface: #ffffff; --soft: #f1ece0; --fg: #191d2b; --muted: #4d5468; --faint: #6b7284; --line: #e4dfd0;
-  --band: #F6F2FE; --band-fg: #191d2b; --band-line: rgba(25,29,43,.14); --link: #6d28d9; --accent: #7C3AED; --accent-ink: #ffffff;
+  --link: #6d28d9; --accent: #7C3AED; --accent-ink: #ffffff;
   --accent-soft: #efe4fd; --off: #e9e4d6; --warn-bg: #fbecd1; --warn-fg: #6b4206;
   --v-true: #1f5fa8; --v-mostly_true: #9dc0e6; --v-half_true: #cfc8ba; --v-mostly_false: #f2b57e; --v-false: #b4500a;
   --hatch: #c9c2b2; --unrated-line: #8a8170;
   --display: "Baloo 2", ui-rounded, system-ui, sans-serif;
   --sans: "Work Sans", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
   --mono: "IBM Plex Mono", ui-monospace, monospace;
-  --radius: 20px;
+  --radius: 20px; --gutter: clamp(20px, 4vw, 40px);
+  --masthead-bg: #F6F2FE; --masthead-ink: #191d2b; --masthead-line: rgba(25,29,43,.14);
 }
 @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
   --bg: #14171c; --surface: #1c2028; --soft: #252a36; --fg: #f1ede4; --muted: #aab0c0; --faint: #8f96a8; --line: #2d323f;
-  --band: #1c2028; --band-fg: #f1ede4; --band-line: rgba(241,237,228,.16); --link: #b9a2fb; --accent: #A78BFA; --accent-ink: #1c1230;
+  --link: #b9a2fb; --accent: #A78BFA; --accent-ink: #1c1230;
   --accent-soft: #2f2350; --off: #2d323f; --warn-bg: #3a2a12; --warn-fg: #f0c27a;
   --v-true: #4f8fd6; --v-mostly_true: #9dc0e6; --v-half_true: #b9b2a4; --v-mostly_false: #f2b57e; --v-false: #e07a32;
   --hatch: #4a525c; --unrated-line: #8d96a1; color-scheme: dark } }
 :root[data-theme="dark"] {
   --bg: #14171c; --surface: #1c2028; --soft: #252a36; --fg: #f1ede4; --muted: #aab0c0; --faint: #8f96a8; --line: #2d323f;
-  --band: #1c2028; --band-fg: #f1ede4; --band-line: rgba(241,237,228,.16); --link: #b9a2fb; --accent: #A78BFA; --accent-ink: #1c1230;
+  --link: #b9a2fb; --accent: #A78BFA; --accent-ink: #1c1230;
   --accent-soft: #2f2350; --off: #2d323f; --warn-bg: #3a2a12; --warn-fg: #f0c27a;
   --v-true: #4f8fd6; --v-mostly_true: #9dc0e6; --v-half_true: #b9b2a4; --v-mostly_false: #f2b57e; --v-false: #e07a32;
   --hatch: #4a525c; --unrated-line: #8d96a1; color-scheme: dark }
 
 body { background: var(--bg); color: var(--fg); font-family: var(--sans); font-size: 15px; line-height: 1.5; }
-.wrap { max-width: 880px; margin: 0 auto; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+.wrap { max-width: 880px; margin: 0 auto; padding-left: max(var(--gutter), env(safe-area-inset-left, 0px)); padding-right: max(var(--gutter), env(safe-area-inset-right, 0px)); }
 a { color: var(--link); }
 h1, h2, h3 { font-family: var(--display); font-weight: 700; text-wrap: balance; margin: 0; line-height: 1.15; }
-h1 { font-size: clamp(28px, 4vw, 40px); }
+h1 { font-size: clamp(26px, 3.6vw + 8px, 38px); }
 h2 { font-size: 24px; }
 .muted { color: var(--muted); }
 .small { font-size: 13px; }
 
-.beta { background: var(--warn-bg); color: var(--warn-fg); font-size: 13px; }
-.beta .wrap { padding-block: 8px; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 6px 16px; }
-header.top { background: var(--band); color: var(--band-fg); border-bottom: 3px solid var(--accent); }
-header.top .wrap { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px 16px; padding-block: 10px; }
-.logo { display: flex; align-items: center; gap: 9px; color: var(--band-fg); text-decoration: none; background: none; border: 0; cursor: pointer; padding: 6px 0; font: inherit; }
-.logo img { width: 40px; height: 32px; object-fit: contain; transition: transform .45s cubic-bezier(.34,1.56,.64,1); }
-.logo:hover img { transform: rotate(-8deg) scale(1.08); }
-.logo .name { font-family: var(--display); font-weight: 700; font-size: 20px; }
-.logo .tag { font-family: var(--mono); font-size: 11px; color: var(--accent); letter-spacing: .06em; }
-nav.main { display: flex; flex-wrap: wrap; gap: 2px; }
-nav.main button { background: none; border: 0; color: var(--band-fg); font: inherit; font-weight: 500; padding: 10px 10px; cursor: pointer; border-bottom: 3px solid transparent; min-height: 44px; }
-nav.main button:hover { color: var(--accent); }
-nav.main button[aria-current="page"] { font-weight: 700; color: var(--accent); border-bottom-color: var(--accent); }
+.masthead { position: sticky; top: 0; z-index: 20; background: var(--bg); }
+/* Bandeau : copie de header.topbar / .brand / .icon-btn de Votona (index.html et pages générées). */
+header.topbar { display: flex; align-items: center; justify-content: space-between; gap: 12px; max-width: 1180px; margin: 0 auto; padding: 16px var(--gutter); border-bottom: 3px solid var(--accent); background: var(--masthead-bg); }
+.brand { display: flex; align-items: center; gap: 9px; min-width: 0; background: none; border: 0; padding: 0; cursor: pointer; font: inherit; color: var(--masthead-ink); text-decoration: none; -webkit-tap-highlight-color: transparent; }
+.brand .mark { width: 40px; height: 32px; flex: none; transition: transform .45s cubic-bezier(.34,1.56,.64,1); }
+.brand:hover .mark { transform: rotate(-8deg) scale(1.08); }
+.brand .mark img { display: block; width: 100%; height: 100%; object-fit: contain; }
+.brand .name { font-family: var(--display); font-weight: 700; font-size: 18px; letter-spacing: .2px; white-space: nowrap; transition: color .15s ease; }
+.brand:hover .name { color: var(--accent); }
+.brand .year { font-family: var(--mono); font-size: 11px; color: var(--accent); letter-spacing: .06em; white-space: nowrap; }
+.brand .beta-tag { font-family: var(--mono); font-size: 10px; letter-spacing: .06em; color: var(--warn-fg); background: #fbecd1; border-radius: 999px; padding: 2px 7px; }
+.topbar-actions { display: flex; align-items: center; gap: 6px; flex: none; }
+.icon-btn { width: 34px; height: 34px; border-radius: 50%; border: 1px solid var(--masthead-line); background: transparent; color: var(--masthead-ink); display: flex; align-items: center; justify-content: center; cursor: pointer; text-decoration: none; padding: 0; }
+.icon-btn:hover, .icon-btn[aria-current="page"] { color: var(--accent); border-color: var(--accent); }
+/* Lien vers le site frère : même composant que le lien « Observatoire » de la barre de Votona. */
+.sister-link { display: inline-flex; align-items: center; gap: 6px; height: 34px; padding: 0 12px 0 10px; border-radius: 999px; border: 1px solid var(--masthead-line); color: var(--masthead-ink); font-family: var(--sans); font-size: 13px; font-weight: 600; text-decoration: none; white-space: nowrap; }
+.sister-link:hover { color: var(--accent); border-color: var(--accent); }
+@media (max-width: 480px) { .sister-link { width: 34px; padding: 0; justify-content: center; } .sister-link span { display: none; } }
+@media (max-width: 420px) { .brand .beta-tag { display: none; } }
+/* Onglets : une rangée sous le bandeau, défilante sur mobile. */
+nav.subnav { border-bottom: 1px solid var(--line); background: var(--bg); }
+nav.subnav .wrap { display: flex; gap: 2px; overflow-x: auto; scrollbar-width: none; }
+nav.subnav .wrap::-webkit-scrollbar { display: none; }
+nav.subnav button { flex: none; background: none; border: 0; border-bottom: 3px solid transparent; color: var(--muted); font: inherit; font-size: 14.5px; font-weight: 600; padding: 12px 12px 9px; cursor: pointer; min-height: 44px; }
+nav.subnav button:first-child { margin-left: -12px; }
+nav.subnav button:hover { color: var(--accent); }
+nav.subnav button[aria-current="page"] { color: var(--accent); border-bottom-color: var(--accent); }
+@media (max-width: 480px) { nav.subnav button { padding: 12px 8px 9px; font-size: 14px; } nav.subnav button:first-child { margin-left: -8px; } nav.subnav .lg { display: none; } }
 
 main.wrap { display: flex; flex-direction: column; gap: 28px; padding-block: 28px 48px; }
 .filters { display: flex; flex-wrap: wrap; align-items: flex-end; gap: 12px 16px; padding: 16px 18px; border: 1px solid var(--line); border-radius: var(--radius); background: var(--surface); }
@@ -77,7 +93,6 @@ main.wrap { display: flex; flex-direction: column; gap: 28px; padding-block: 28p
 .side > div:last-child { border-bottom: 0; }
 .side .k { font-size: 12px; font-weight: 600; color: var(--muted); text-transform: uppercase; letter-spacing: .05em; }
 .side .v { font-family: var(--mono); font-size: 22px; font-weight: 600; font-variant-numeric: tabular-nums; }
-.to-votona { font-weight:700; color:var(--link); white-space:nowrap; }
 .scope-note { font-size: 14px; color: var(--muted); margin: 6px 0 0; }
 
 .cards { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 16px; }
@@ -99,8 +114,18 @@ main.wrap { display: flex; flex-direction: column; gap: 28px; padding-block: 28p
 @media (max-width: 640px) { .fact { grid-template-columns: minmax(0, 1fr); } .fact .right { align-items: flex-start; text-align: left; } .bar-row { grid-template-columns: 100px minmax(0, 1fr) 70px; font-size: 14px; } }
 .report { background: var(--accent-soft); border-radius: 14px; padding: 10px 12px; font-size: 13px; display: flex; flex-wrap: wrap; align-items: center; gap: 8px; }
 .report code { font-size: 12px; }
-.btn { min-height: 40px; padding: 0 16px; border-radius: 14px; border: 1px solid var(--line); background: var(--surface); color: var(--fg); font: inherit; font-size: 13px; cursor: pointer; }
-.more { align-self: center; }
+.btn { display: flex; align-items: center; justify-content: center; gap: 8px; box-sizing: border-box; width: 100%; border-radius: 18px; padding: 14px 22px; font-family: var(--sans); font-size: 15px; font-weight: 800; line-height: 1.25; text-align: center; text-decoration: none; cursor: pointer; border: 0; transition: transform .1s ease, background .15s ease, color .15s ease, border-color .15s ease; }
+.btn:active { transform: translateY(2px); }
+.btn-accent { background: var(--accent); color: var(--accent-ink); border-bottom: 4px solid color-mix(in srgb, var(--accent) 70%, black); animation: softPulse 2.6s ease-in-out infinite; }
+.btn-accent:hover { background: color-mix(in srgb, var(--accent) 90%, black); color: var(--accent-ink); }
+.btn-ghost { background: transparent; color: var(--muted); border: 2px solid color-mix(in srgb, var(--accent) 20%, var(--line)); }
+.btn-ghost:hover { color: var(--accent); border-color: var(--accent); }
+.btn-row { max-width: 420px; margin-left: auto; margin-right: auto; }
+.btn-mascot { width: 34px; height: auto; flex: none; margin: -8px 2px -8px -4px; filter: drop-shadow(0 2px 4px rgba(0,0,0,.25)); transition: transform .35s cubic-bezier(.34,1.56,.64,1); }
+.btn:hover .btn-mascot { transform: rotate(-10deg) scale(1.1); }
+.btn-sm { width: auto; padding: 8px 14px; font-size: 13px; font-weight: 700; border-radius: 14px; }
+@keyframes softPulse { 0%,100% { box-shadow: 0 0 0 0 color-mix(in srgb, var(--accent) 35%, transparent); } 50% { box-shadow: 0 0 0 7px color-mix(in srgb, var(--accent) 0%, transparent); } }
+@media (prefers-reduced-motion: reduce) { .btn-accent { animation: none; } }
 
 .people { display: grid; grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); gap: 0 24px; }
 .people button { display: flex; justify-content: space-between; gap: 8px; width: 100%; text-align: left; padding: 12px 0; border: 0; border-bottom: 1px solid var(--line); background: none; color: var(--fg); font: inherit; cursor: pointer; min-height: 44px; }
@@ -127,13 +152,17 @@ main.wrap { display: flex; flex-direction: column; gap: 28px; padding-block: 28p
 table.plain { border-collapse: collapse; font-size: 14px; min-width: 520px; }
 table.plain th, table.plain td { text-align: left; padding: 8px 12px; border-bottom: 1px solid var(--line); vertical-align: top; }
 table.plain th { font-size: 12px; color: var(--muted); text-transform: uppercase; letter-spacing: .05em; }
-footer { border-top: 1px solid var(--line); padding-top: 16px; font-size: 13px; color: var(--muted); display: flex; flex-wrap: wrap; gap: 8px 20px; justify-content: space-between; }
+footer.gfoot { margin-top: 20px; font-size: 12px; color: var(--faint); text-align: center; line-height: 1.6; }
+footer.gfoot .flinks a, footer.gfoot .flinks button { color: var(--accent); font-weight: 600; }
+footer.gfoot .social { display: flex; justify-content: center; gap: 10px; margin-top: 14px; }
+footer.gfoot .social a { display: inline-flex; align-items: center; justify-content: center; width: 34px; height: 34px; border-radius: 50%; border: 1px solid var(--line); color: var(--accent); text-decoration: none; }
+footer.gfoot .social a:hover { border-color: var(--accent); }
 button:focus-visible, select:focus-visible, input:focus-visible, a:focus-visible { outline: 3px solid var(--v-true); outline-offset: 2px; }
-.btn:hover { border-color: var(--accent); color: var(--accent); }
 .toast { position: fixed; left: 50%; transform: translateX(-50%); bottom: calc(16px + env(safe-area-inset-bottom, 0px)); background: var(--fg); color: var(--bg); padding: 10px 16px; border-radius: 6px; font-size: 14px; }
 
 .lede { max-width:70ch; margin:8px 0 0; }
 .kpis { display:grid; grid-template-columns:repeat(auto-fit,minmax(170px,1fr)); gap:12px; }
+@media (max-width:480px) { .kpis { grid-template-columns:1fr 1fr; } .kpi .v { font-size:22px; } }
 .kpi { border:1px solid var(--line); border-radius:var(--radius); padding:14px 16px; background:var(--surface); display:flex; flex-direction:column; gap:2px; }
 .kpi .v { font-family:var(--mono); font-size:26px; font-weight:600; font-variant-numeric:tabular-nums; }
 .kpi .k { font-size:13px; color:var(--muted); }
@@ -142,18 +171,28 @@ button:focus-visible, select:focus-visible, input:focus-visible, a:focus-visible
 .sect { display:flex; flex-direction:column; gap:14px; }
 .sect-head { display:flex; flex-wrap:wrap; justify-content:space-between; align-items:baseline; gap:8px; }
 .tiles { display:grid; grid-template-columns:repeat(auto-fill,minmax(200px,1fr)); gap:12px; }
-.tile { text-align:left; border:1px solid var(--line); border-radius:var(--radius); padding:14px 16px; background:var(--surface); color:var(--fg); font:inherit; cursor:pointer; display:flex; flex-direction:column; gap:4px; min-height:44px; }
-.tile:hover { border-color:var(--accent); }
+.tile { position:relative; text-align:left; border:1px solid var(--line); border-radius:18px; padding:14px 16px; background:var(--surface); color:var(--fg); font:inherit; cursor:pointer; display:flex; flex-direction:column; gap:4px; min-height:44px; transition:transform .15s, box-shadow .15s, border-color .15s; }
+.tile:hover { border-color:var(--accent); transform:translateY(-2px); }
+.tile.theme { padding-right:62px; background:linear-gradient(150deg, color-mix(in srgb, var(--th) 22%, var(--surface)), color-mix(in srgb, var(--th) 6%, var(--surface))); border-color:color-mix(in srgb, var(--th) 30%, var(--surface)); }
+.tile.theme:hover { border-color:var(--th); }
+.tile .prop { position:absolute; top:10px; right:10px; width:44px; height:44px; object-fit:contain; }
+.theme-hero { position:relative; padding:22px 120px 22px 22px; border-radius:24px; background:linear-gradient(135deg, color-mix(in srgb, var(--th) 26%, var(--surface)), color-mix(in srgb, var(--th) 8%, var(--surface))); border:1px solid color-mix(in srgb, var(--th) 35%, var(--surface)); }
+.theme-hero .prop { position:absolute; right:18px; top:50%; transform:translateY(-50%); width:84px; height:84px; object-fit:contain; }
+.theme-pill { display:inline-flex; align-items:center; gap:6px; font-family:var(--mono); font-size:11px; letter-spacing:.06em; text-transform:uppercase; color:var(--muted); margin-bottom:6px; }
+@media (max-width:520px) { .theme-hero { padding-right:22px; } .theme-hero .prop { position:static; transform:none; width:56px; height:56px; margin-bottom:8px; } }
+.cta-band { display:flex; flex-direction:column; gap:10px; align-items:center; text-align:center; padding:26px 20px; border-radius:26px; background:linear-gradient(135deg, color-mix(in srgb, #7C3AED 16%, var(--surface)), var(--surface) 70%); border:1px solid color-mix(in srgb, #7C3AED 24%, var(--surface)); }
+.cta-band h2 { font-size:22px; }
+.cta-band p { margin:0; color:var(--muted); max-width:52ch; }
 .tile .t { font-family:var(--display); font-weight:700; font-size:18px; line-height:1.2; }
 .tile .c { font-size:13px; color:var(--muted); }
 .mini { display:flex; height:6px; border-radius:3px; overflow:hidden; background:var(--soft); margin-top:4px; }
 .mini span { height:100%; }
 .mini span.unrated { background:repeating-linear-gradient(45deg,var(--surface) 0 2px,var(--hatch) 2px 4px); }
 .tags { display:flex; flex-wrap:wrap; gap:6px; align-items:center; }
-.tag { display:inline-flex; align-items:center; gap:4px; font-size:12px; border-radius:999px; padding:3px 9px; background:var(--soft); color:var(--fg); border:0; font-family:inherit; cursor:pointer; text-decoration:none; }
-.tag.multi { background:var(--accent-soft); font-weight:600; cursor:default; }
-.tag.diverge { background:var(--warn-bg); color:var(--warn-fg); font-weight:600; cursor:help; }
-.tag.votona { background:none; border:1px solid var(--accent); color:var(--link); }
+.chip { display:inline-flex; align-items:center; gap:4px; font-size:12px; border-radius:999px; padding:3px 9px; background:var(--soft); color:var(--fg); border:0; font-family:inherit; cursor:pointer; text-decoration:none; }
+.chip.multi { background:var(--accent-soft); font-weight:600; cursor:default; }
+.chip.diverge { background:var(--warn-bg); color:var(--warn-fg); font-weight:600; cursor:help; }
+.chip.votona { background:none; border:1px solid var(--accent); color:var(--link); }
 .tabs { display:flex; gap:4px; border-bottom:1px solid var(--line); flex-wrap:wrap; }
 .tabs button { background:none; border:0; border-bottom:3px solid transparent; font:inherit; font-weight:600; color:var(--muted); padding:10px 12px; cursor:pointer; min-height:44px; }
 .tabs button[aria-selected="true"] { color:var(--accent); border-bottom-color:var(--accent); }
@@ -168,13 +207,16 @@ button:focus-visible, select:focus-visible, input:focus-visible, a:focus-visible
 .notice { border:1px solid var(--line); border-radius:var(--radius); padding:14px 18px; background:var(--surface); font-size:14px; }
 </style>
 
-<div class="beta"><div class="wrap"><span>Bêta : mise à jour chaque jour, rattachements partisans encore incomplets.</span><a class="to-votona" href="https://votona.fr" target="_blank" rel="noopener">Faire le test Votona ↗</a></div></div>
-<header class="top">
-  <div class="wrap">
-    <button class="logo" type="button" data-go="accueil"><img src="/*__LOGO__*/" alt="" width="40" height="32"><span class="name">Votona</span><span class="tag">OBSERVATOIRE</span></button>
-    <nav class="main" aria-label="Navigation principale" id="nav"></nav>
+<div class="masthead">
+<header class="topbar">
+  <button class="brand" type="button" data-go="accueil" title="Accueil de l'Observatoire"><span class="mark"><img src="/*__LOGO__*/" alt="" width="40" height="32"></span><span class="name">Votona</span><span class="year">OBSERVATOIRE</span><span class="beta-tag" title="Version bêta : mise à jour chaque jour, rattachements partisans encore incomplets">BÊTA</span></button>
+  <div class="topbar-actions">
+    <a class="sister-link" href="https://votona.fr/" title="Votona : le test présidentielle 2027, quel candidat te correspond ?"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="3" width="14" height="18" rx="2"/><path d="M9 8h6M9 12h6M9 16h3"/></svg><span>Le test 2027</span></a>
+    <button class="icon-btn" type="button" data-go="methodologie" id="btn-faq" title="Méthode et FAQ" aria-label="Méthode et FAQ"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M9.3 9.2a2.7 2.7 0 1 1 3.9 2.4c-1 .5-1.7 1.1-1.7 2.4"/><line x1="12" y1="17.2" x2="12" y2="17.21"/></svg></button>
   </div>
 </header>
+<nav class="subnav" aria-label="Navigation de l'Observatoire"><div class="wrap" id="nav"></div></nav>
+</div>
 <main class="wrap" id="app"></main>
 <div class="toast" id="toast" role="status" hidden></div>
 
@@ -188,10 +230,16 @@ const LEVELS = [
 const LEVEL = Object.fromEntries(LEVELS.map(([k, l, i]) => [k, { label: l, idx: i }]));
 // Une vue = un usage : l'accueil résume, « Faits vérifiés » est le seul endroit à filtres complets,
 // les autres vues entrent par une personne, un parti ou un sujet.
-const VIEWS = [["accueil", "Accueil"], ["faits", "Faits vérifiés"], ["personnalites", "Personnalités"], ["partis", "Partis"], ["sujets", "Sujets"], ["methodologie", "Méthode"]];
+const TABS = [["accueil", "Accueil"], ["faits", "Faits vérifiés"], ["personnalites", "Personnalités"], ["partis", "Partis"], ["sujets", "Sujets"]];
+// La Méthode s'ouvre par l'icône « ? » du bandeau et le pied de page, comme la FAQ de Votona.
+const VIEWS = [...TABS, ["methodologie", "Méthode"]];
 const SCOPES = [["candidats", "Candidats 2027"], ["partis", "Leurs partis"], ["tout", "Toute la vie politique"]];
 // Les 7 familles de sujets de Votona, dans son ordre.
 const FAMILIES = [["economie", "Économie & travail"], ["social", "Protection sociale"], ["securite", "Sécurité & immigration"], ["ecologie", "Écologie"], ["europe", "Europe & institutions"], ["societe", "Société"], ["defense", "Défense & numérique"]];
+// Couleur et accessoire de chaque famille : mêmes que Votona (CATEGORY_META.pop, assets/props).
+const THEME = { economie: ["#FFB703", "economie"], social: ["#3A86FF", "protection-sociale"], securite: ["#FF6B6B", "securite"], ecologie: ["#06D6A0", "ecologie"], europe: ["#6C5CE7", "europe"], societe: ["#FF5DA2", "societe"], defense: ["#00B4D8", "defense"] };
+const PROPS = /*__PROPS__*/{};
+const propImg = (id, cls = "prop") => PROPS[THEME[id][1]] ? el("img", { class: cls, src: PROPS[THEME[id][1]], alt: "", width: 44, height: 44, loading: "lazy" }) : null;
 const FAMILY_ID = Object.fromEntries(FAMILIES.map(([id, l]) => [l, id]));
 const VOTONA = "https://votona.fr";
 const SCOPE = "Sur les déclarations vérifiées, pas sur l'ensemble des propos tenus.";
@@ -246,6 +294,8 @@ const toast = (msg) => { const t = $("toast"); t.textContent = msg; t.hidden = f
 const swatch = (k) => el("span", { class: "sw" + (k === "unrated" ? " unrated" : ""), style: k === "unrated" ? null : "background: var(--v-" + k + ")", "aria-hidden": "true" });
 const byDate = (a, b) => ((b.claim_date || "") + b.id).localeCompare((a.claim_date || "") + a.id);
 const ext = (href, text, attrs = {}) => el("a", { href, target: "_blank", rel: "noopener", ...attrs }, text);
+const vlink = (href, text, attrs = {}) => el("a", { href, ...attrs }, text);  // vers votona.fr, même onglet
+const mascot = () => el("img", { class: "btn-mascot", src: document.querySelector(".brand img").getAttribute("src"), alt: "", width: 34, height: 29 });
 
 function periodRange() {
   const p = state.period;
@@ -390,16 +440,17 @@ function personLink(f) {
 function factTags(f) {
   const t = f.topics[0];
   return el("div", { class: "tags" },
-    f.nSources > 1 ? el("span", { class: "tag multi", text: "Vérifié par " + f.nSources + " rédactions" }) : null,
-    f.diverge ? el("span", { class: "tag diverge", title: "Les rédactions ne placent pas cette déclaration au même niveau : chaque verdict est affiché.", text: "Verdicts divergents" }) : null,
-    f.family ? el("button", { type: "button", class: "tag", title: "Thème attribué automatiquement, à titre indicatif", on: { click: () => go("sujet", f.family) } }, f.theme) : null,
-    t ? ext(VOTONA + "/sujets/" + t.slug + "/", "Positions des candidats sur Votona ↗", { class: "tag votona", title: t.label }) : null);
+    f.nSources > 1 ? el("span", { class: "chip multi", text: "Vérifié par " + f.nSources + " rédactions" }) : null,
+    f.diverge ? el("span", { class: "chip diverge", title: "Les rédactions ne placent pas cette déclaration au même niveau : chaque verdict est affiché.", text: "Verdicts divergents" }) : null,
+    f.family ? el("button", { type: "button", class: "chip", title: "Thème attribué automatiquement, à titre indicatif", on: { click: () => go("sujet", f.family) } }, f.theme) : null,
+    t ? vlink(VOTONA + "/sujets/" + t.slug + "/", "Positions des candidats sur Votona", { class: "chip votona", title: t.label }) : null);
 }
 
 function card(f) {
   return el("article", { class: "card" }, personLink(f), el("p", { class: "claim", text: "« " + (f.claim_text || "") + " »" }), meter(f.verdict),
-    el("div", { class: "verdict" }, el("strong", { text: LEVEL[f.verdict].label }), f.reviews.length > 1 ? el("span", { class: "muted", text: " (verdict le plus fréquent sur " + f.reviews.length + " vérifications)" }) : null),
-    verdictLines(f), datesLine(f), factTags(f));
+    el("div", { class: "verdict" }, el("strong", { text: LEVEL[f.verdict].label }),
+      el("span", { class: "muted" }, " selon ", f.reviews.map((r, i) => [i ? ", " : "", ext(r.url, r.source_name)]))),
+    datesLine(f), factTags(f));
 }
 
 function factRow(f, withPerson = true) {
@@ -412,7 +463,7 @@ function factRow(f, withPerson = true) {
       el("div", { class: "small" }, f.reviews.map((r, i) => [i ? " · " : "", ext(r.url, "Lire sur " + r.source_name)]),
         " · ", el("button", { type: "button", class: "linkish", style: "font-weight:400;color:var(--muted)", "aria-expanded": String(open), on: { click: () => { state.report = open ? null : f.id; render(); } } }, "Signaler une erreur")),
       open ? el("div", { class: "report" }, "Écrivez à ", el("strong", { text: DATA.contact }), " en indiquant la référence ", el("code", { text: f.id }), ". Une attribution contestée à raison est retirée sous 48 h.",
-        el("button", { type: "button", class: "btn", on: { click: () => copy(DATA.contact + " — référence " + f.id) } }, "Copier l'adresse et la référence")) : null),
+        el("button", { type: "button", class: "btn btn-ghost btn-sm", on: { click: () => copy(DATA.contact + " — référence " + f.id) } }, "Copier l'adresse et la référence")) : null),
     el("div", { class: "right" }, meter(f.verdict), el("strong", { text: LEVEL[f.verdict].label }), verdictLines(f)));
 }
 
@@ -424,7 +475,7 @@ function factList(list, withPerson = true) {
   const shown = list.slice(0, state.limit);
   return el("section", { class: "facts" },
     shown.length ? shown.map((f) => factRow(f, withPerson)) : el("p", { class: "muted", text: "Aucune déclaration vérifiée ne correspond à ces filtres." }),
-    list.length > shown.length ? el("button", { type: "button", class: "btn more", on: { click: () => { state.limit += 30; render(); } } }, "Afficher 30 de plus (" + (list.length - shown.length) + " restantes)") : null);
+    list.length > shown.length ? el("button", { type: "button", class: "btn btn-ghost btn-row", on: { click: () => { state.limit += 30; render(); } } }, "Afficher 30 de plus (" + (list.length - shown.length) + " restantes)") : null);
 }
 
 const intro = (title, text) => el("div", {}, el("h1", { text: title }), text ? el("p", { class: "muted lede" }, text) : null);
@@ -433,7 +484,7 @@ const sectHead = (title, action) => el("div", { class: "sect-head" }, el("h2", {
 function familyTiles(list, onPick) {
   return el("div", { class: "tiles" }, FAMILIES.map(([id, label]) => {
     const sub = list.filter((f) => f.family === id);
-    return el("button", { type: "button", class: "tile", on: { click: () => onPick(id) } },
+    return el("button", { type: "button", class: "tile theme", style: "--th:" + THEME[id][0], on: { click: () => onPick(id) } }, propImg(id),
       el("span", { class: "t", text: label }), el("span", { class: "c", text: sub.length ? plural(sub.length, "déclaration vérifiée", "déclarations vérifiées") : "Aucune vérification" }), miniBar(sub));
   }));
 }
@@ -462,6 +513,9 @@ const views = {
         el("div", {}, el("strong", { text: "Toutes les rédactions" }), el("span", { class: "small muted", text: "AFP Factuel, Les Décodeurs, CheckNews, franceinfo, Les Surligneurs, TF1 Info, 20 Minutes, Poligraph : réunis au même endroit, recoupés quand ils vérifient la même déclaration." })),
         el("div", {}, el("strong", { text: "Le parti à la date" }), el("span", { class: "small muted", text: "Chaque déclaration est rattachée au parti de la personne le jour où elle l'a faite, d'après des affiliations datées." })),
         el("div", {}, el("strong", { text: "Relié au programme" }), el("span", { class: "small muted", text: "Depuis un fait, retrouvez les positions des candidats sur le même sujet dans le test Votona." }))),
+      el("section", { class: "cta-band" }, el("h2", { text: "Et toi, de quel candidat es-tu le plus proche ?" }),
+        el("p", { text: "Le test Votona compare tes réponses aux positions des candidats, sujet par sujet. Les vérifications de l'Observatoire n'entrent jamais dans ce classement." }),
+        el("a", { class: "btn btn-accent btn-row", href: VOTONA + "/" }, mascot(), "Faire le test présidentielle 2027")),
     ];
   },
   faits() {
@@ -488,7 +542,7 @@ const views = {
             el("span", { class: "cnt", text: list.length ? list.length + " vérif." : "—" })),
           el("div", { class: "small muted", text: c.votona_party + (c.status === "retiré" ? " · candidature retirée" : "") }),
           list.length ? miniBar(list) : null,
-          el("div", { class: "small" }, ext(c.votona_url, "Ses positions sur Votona ↗")));
+          el("div", { class: "small" }, vlink(c.votona_url, "Ses positions sur Votona")));
       })), el("p", { class: "small muted", text: "La même liste que sur Votona. Les vérifications ne comptent jamais dans le classement de Votona : les deux outils sont séparés." })];
     }
     const byPerson = {};
@@ -520,18 +574,20 @@ const views = {
       scopeSwitch, familyTiles(scoped, (id) => go("sujet", id)),
       el("section", { class: "sect" }, el("h2", { text: "Angles morts" }),
         el("p", { class: "muted", style: "margin:0", text: blind.length + " sujets du test Votona sur " + votonaTopics.length + " n'ont aucune déclaration vérifiée dans ce périmètre. Les candidats en parlent dans leurs programmes, les rédactions ne les ont pas (encore) vérifiés sur ces points." }),
-        el("div", { class: "tags" }, blind.map((t) => ext(VOTONA + "/sujets/" + t.slug + "/", t.label + " ↗", { class: "tag" }))))];
+        el("div", { class: "tags" }, blind.map((t) => vlink(VOTONA + "/sujets/" + t.slug + "/", t.label, { class: "chip" }))))];
   },
   sujet() {
     const id = state.id, label = FAMILIES.find(([k]) => k === id)[1];
     const list = facts.filter((f) => f.family === id).sort(byDate);
     const scoped = list.filter(inScope2027);
     const topics = votonaTopics.filter((t) => t.family === id).map((t) => ({ ...t, n: list.filter((f) => f.topics.some((x) => x.slug === t.slug)).length })).sort((a, b) => b.n - a.n || a.label.localeCompare(b.label, "fr"));
-    return [intro(label, "Thème attribué automatiquement, à titre indicatif. " + scoped.length + " de ces déclarations viennent des candidats 2027 ou de leurs partis."),
+    return [el("div", { class: "theme-hero", style: "--th:" + THEME[id][0] }, propImg(id),
+        el("div", { class: "theme-pill", text: "Sujet · " + plural(list.length, "déclaration vérifiée", "déclarations vérifiées") }), el("h1", { text: label }),
+        el("p", { class: "muted", style: "margin:8px 0 0", text: "Thème attribué automatiquement, à titre indicatif. " + scoped.length + " de ces déclarations viennent des candidats 2027 ou de leurs partis." })),
       summary(list, "Toute la vie politique, toute la période."),
       el("section", { class: "sect" }, el("h2", { text: "Les sujets du test Votona" }),
         el("div", { class: "topics" }, topics.map((t) => el("div", { class: "topic" + (t.n ? "" : " blind") },
-          el("div", {}, el("div", { text: t.label }), el("div", { class: "small" }, ext(VOTONA + "/sujets/" + t.slug + "/", "Que proposent les candidats ? (Votona) ↗"))),
+          el("div", {}, el("div", { text: t.label }), el("div", { class: "small" }, vlink(VOTONA + "/sujets/" + t.slug + "/", "Que proposent les candidats ? (Votona)"))),
           el("span", { class: "n2", text: t.n ? t.n + " vérif." : "aucune vérification" }))))),
       el("section", { class: "sect" }, sectHead("Les " + list.length + " faits", el("button", { type: "button", class: "linkish", on: { click: () => openFacts({ family: id, scope: "tout" }) } }, "Filtrer ces faits →")), factList(list))];
   },
@@ -549,15 +605,16 @@ const views = {
       el("div", { class: "head" }, el("div", { class: "avatar", "aria-hidden": "true", text: initials }),
         el("div", { style: "min-width:0" }, el("h1", { text: name }),
           cand ? el("div", { style: "margin-top:6px;display:flex;flex-wrap:wrap;gap:8px;align-items:center" }, el("span", { class: "badge", text: cand.status === "retiré" ? "Candidature 2027 retirée" : "Présidentielle 2027" }),
-            ext(cand.votona_url, "Ses positions sur Votona ↗")) : null,
+            vlink(cand.votona_url, "Ses positions sur Votona")) : null,
           el("p", { class: "muted", style: "margin:4px 0 0" }, partyNames.length ? "Partis sur la période : " + partyNames.join(", ") : (cand ? cand.votona_party + " (selon Votona)" : "Parti non renseigné sur la période"),
             id.startsWith("Q") ? [" · ", ext("https://www.wikidata.org/wiki/" + id, "fiche Wikidata")] : null))),
       list.length ? summary(list, "Toute la période.") : el("p", { class: "notice", text: "Aucune vérification publiée à ce jour par les rédactions suivies. Cela ne dit rien de l'exactitude de ses propos : les rédactions choisissent ce qu'elles vérifient." }),
-      fams.length ? el("div", { class: "tags" }, el("span", { class: "small muted", text: "Sujets vérifiés :" }), fams.map(([k, l]) => el("button", { type: "button", class: "tag", on: { click: () => go("sujet", k) } }, l + " · " + list.filter((f) => f.family === k).length))) : null,
+      fams.length ? el("div", { class: "tags" }, el("span", { class: "small muted", text: "Sujets vérifiés :" }), fams.map(([k, l]) => el("button", { type: "button", class: "chip", on: { click: () => go("sujet", k) } }, l + " · " + list.filter((f) => f.family === k).length))) : null,
       dates.length > 1 ? el("section", { "aria-label": "Frise des vérifications", class: "sect" }, el("h2", { text: "Dans le temps" }),
         el("div", { class: "timeline" }, list.filter((f) => f.claim_date).map((f) => el("span", { class: f.verdict === "unrated" ? "unrated" : null, title: frDate(f.claim_date) + " — " + LEVEL[f.verdict].label, style: "left:" + pos(f.claim_date) + "%" + (f.verdict === "unrated" ? "" : ";background:var(--v-" + f.verdict + ")") }))),
         el("div", { class: "axis" }, el("span", { text: frDate(dates[0]) }), el("span", { text: frDate(dates[dates.length - 1]) }))) : null,
       list.length ? el("section", { class: "sect" }, el("h2", { text: "Les " + list.length + " faits" }), factList(list, false)) : null,
+      cand ? el("a", { class: "btn btn-ghost btn-row", href: cand.votona_url }, "Voir ses positions sur Votona, sujet par sujet") : null,
     ];
   },
   parti() {
@@ -567,7 +624,7 @@ const views = {
     const cands = candidates.filter((c) => c.party_id === id);
     return [
       intro(parties[id] || id, "Déclarations de personnes affiliées à ce parti à la date où elles ont été faites. La couverture dépend des rédactions et des affiliations connues : elle ne représente pas l'ensemble du parti."),
-      cands.length ? el("p", { class: "notice" }, "Candidat 2027 : ", cands.map((c, i) => [i ? ", " : "", el("button", { type: "button", class: "linkish", on: { click: () => go("personne", c.pid) } }, c.name), " (", ext(c.votona_url, "positions sur Votona ↗"), ")"])) : null,
+      cands.length ? el("p", { class: "notice" }, "Candidat 2027 : ", cands.map((c, i) => [i ? ", " : "", el("button", { type: "button", class: "linkish", on: { click: () => go("personne", c.pid) } }, c.name), " (", vlink(c.votona_url, "positions sur Votona"), ")"])) : null,
       summary(list, "Toute la période."),
       el("section", { class: "sect" }, el("h2", { text: "Par personne" }), el("div", { class: "table-box" }, el("table", { class: "plain" },
         el("thead", {}, el("tr", {}, ["Personne", "Vérifications", ...LEVELS.map((l) => l[1])].map((h) => el("th", { text: h })))),
@@ -622,13 +679,28 @@ const views = {
   },
 };
 
+// Pied de page : même composant que celui de Votona (.gfoot), pages légales communes.
+const SOCIAL_HTML = '<a href="https://www.instagram.com/votona2027/" target="_blank" rel="noopener me" aria-label="Votona sur Instagram" title="Instagram"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg></a><a href="https://www.tiktok.com/@votona2027" target="_blank" rel="noopener me" aria-label="Votona sur TikTok" title="TikTok"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16.6 5.8A4.3 4.3 0 0 1 15.5 3h-3.1v12.4a2.6 2.6 0 1 1-2.6-2.6c.3 0 .5 0 .8.1V9.7a5.8 5.8 0 1 0 4.9 5.7V9.1a7.4 7.4 0 0 0 4.3 1.4V7.4a4.3 4.3 0 0 1-3.2-1.6z"/></svg></a><a href="https://x.com/votona2027" target="_blank" rel="noopener me" aria-label="Votona sur X" title="X"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.8 3h3.1l-6.8 7.7L22 21h-6.2l-4.9-6.4L5.3 21H2.2l7.2-8.3L2 3h6.4l4.4 5.8L17.8 3zm-1.1 16.2h1.7L7.4 4.7H5.6l11.1 14.5z"/></svg></a>';
+function siteFooter() {
+  const sep = () => " · ";
+  const social = el("div", { class: "social" }); social.innerHTML = SOCIAL_HTML;
+  return el("footer", { class: "gfoot" },
+    "Votona Observatoire ne produit aucun verdict : il reprend celui de la rédaction, avec un lien vers l'article. Version bêta, mise à jour chaque jour" + (DATA.generated_at ? " (" + frDate(DATA.generated_at, true) + ")" : "") + ".",
+    el("div", { class: "flinks" }, el("button", { type: "button", class: "linkish", "data-go": "methodologie" }, "Méthode"), sep(),
+      DATA.site ? [el("a", { href: "/donnees/facts.csv" }, "Données ouvertes"), sep(), el("a", { href: "/flux.xml" }, "Flux RSS"), sep()] : null,
+      vlink(VOTONA + "/a-propos/", "À propos"), sep(), vlink(VOTONA + "/mentions-legales/", "Mentions légales"), sep(),
+      vlink(VOTONA + "/confidentialite/", "Confidentialité"), sep(), vlink(VOTONA + "/contact/", "Contact")),
+    social);
+}
+
 function render() {
   const navView = { personne: "personnalites", parti: "partis", sujet: "sujets" }[state.view] || state.view;
-  $("nav").replaceChildren(...VIEWS.map(([v, l]) => el("button", { type: "button", "data-go": v, "aria-current": v === navView ? "page" : null }, l)));
-  $("app").replaceChildren(...views[state.view](),
-    el("footer", {}, el("span", { text: "Votona Observatoire ne produit aucun verdict : il reprend celui de la source." }),
-      el("span", {}, ext(VOTONA, "Votona, le test présidentielle 2027"), " · ",
-        el("button", { type: "button", class: "linkish", style: "font-weight:400", "data-go": "methodologie" }, "Méthode"), " · Mise à jour : " + frDate(DATA.generated_at))));
+  $("nav").replaceChildren(...TABS.map(([v, l]) => el("button", { type: "button", "data-go": v, "aria-current": v === navView ? "page" : null },
+    v === "faits" ? ["Faits", el("span", { class: "lg", text: " vérifiés" })] : l)));
+  $("btn-faq").setAttribute("aria-current", navView === "methodologie" ? "page" : "false");
+  $("app").replaceChildren(...views[state.view](), siteFooter());
+  const active = document.querySelector('nav.subnav [aria-current="page"]');
+  if (active) active.scrollIntoView({ block: "nearest", inline: "nearest" });
 }
 
 fromHash();
