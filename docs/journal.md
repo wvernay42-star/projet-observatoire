@@ -17,8 +17,22 @@ Les décisions durables sont aussi consignées dans [decisions.md](decisions.md)
 | 7 | web/beta/index.html (maquette A) | ✅ en ligne (22/10) — 119 déclarations |
 | — | Page web de validation | ✅ en ligne (22/10) — 147 éléments à traiter |
 | — | Sujets (familles et sujets Votona), recoupement, angles morts, données ouvertes, RSS | ✅ fait (22/10) |
-| — | Hébergement préprod (`preprod`) / prod (`main`) | ⏳ dépôt prêt ; Vercel + DNS OVH à faire par le porteur |
-| — | Liens Votona → Observatoire | ⏳ prêts, désactivés (branche votona `claude/liens-observatoire`) |
+| — | Hébergement préprod (`preprod`) / prod (`main`) | ✅ en ligne (26/10) — projet Vercel `votona-observatoire`, noindex |
+| — | Liens Votona → Observatoire | ⏳ actifs sur `draft` (test, 26/10) ; `main` sur demande du porteur |
+
+## 2026-10-26 — Mise en ligne, routine réparée, liens Votona sur draft
+
+- **Routine** : le porteur a ajouté le dépôt (écriture) à la routine Observatoire et `votona.fr`
+  aux domaines autorisés de l'environnement « Observatoire ». Test lancé à 10h16 : réussi (voir
+  entrée suivante) ; accès à votona.fr vérifié (38 candidats lus). La routine Votona n'est pas
+  modifiée : deux boucles, deux environnements, deux dépôts.
+- **Hébergement** : projet Vercel `votona-observatoire` (équipe Votona) ; `observatoire.votona.fr`
+  (production, `main`) et `preview.observatoire.votona.fr` (branche `preprod`) vérifiés, CNAME
+  chez OVH ; déploiements prêts. Protection Vercel « Standard » : les domaines personnalisés,
+  préproduction comprise, restent publics (mais en noindex).
+- **Liens Votona → Observatoire** : `OBSERVATOIRE_URL` renseignée et pages régénérées sur la
+  branche `draft` de Votona (38 candidats, 37 sujets, inchangés). Passage sur `main` (votona.fr)
+  uniquement à la demande du porteur.
 
 ## 2026-10-26 — Routine quotidienne
 
