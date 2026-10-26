@@ -26,7 +26,7 @@ Les décisions durables sont aussi consignées dans [decisions.md](decisions.md)
 - **Collecte** : google_factcheck 38 récupérées / 16 nouvelles ; datacommons_feed 4 / 0. Aucune erreur de connecteur.
 - **Décisions du tableau** : aucune (0 appliquée, 0 ignorée). rating_map.csv non modifié.
 - **Claims** : auto_sure 122, validated 67, rejected 1 916, to_review 0. Base : 2 135 vérifications.
-- **Export** : 189 déclarations (186 avant la veille : +67 validated comptés dans l'export), fichiers data/export/ régénérés. Pas d'alerte d'export.
+- **Export** : 189 déclarations (188 à la dernière entrée), fichiers data/export/ régénérés. Pas d'alerte d'export.
 - **Files de validation** : verdicts 0, attributions 0, partis 51, sources 6 (déposées dans le tableau).
 - **Part de verdicts positifs (vrai + plutôt vrai)** : TF1 Info 15,3 % (875) ; franceinfo Vrai ou Fake 23,1 % (121) ; Poligraph 17,4 % (46) ; AFP Factuel 0 % (780) ; 20 Minutes Fake Off 4,5 % (309) ; Les Décodeurs 0 % (4).
 - **Beta** : régénérée (189 déclarations) et republiée (artefact version 5). Tests : 70 passent.
