@@ -20,6 +20,15 @@ Les décisions durables sont aussi consignées dans [decisions.md](decisions.md)
 | — | Hébergement préprod (`preprod`) / prod (`main`) | ✅ en ligne (26/10) — projet Vercel `votona-observatoire`, noindex |
 | — | Liens Votona → Observatoire | ⏳ actifs sur `draft` (test, 26/10) ; `main` sur demande du porteur |
 
+## 2026-10-26 (fin de journée) — Même largeur que Votona, violet foncé dans le bandeau
+
+- Largeurs : l'Observatoire comptait les marges en plus de la largeur (contenu 880 px au lieu
+  de 800, bandeau 1 260 au lieu de 1 180). Corrigé (`box-sizing: border-box`) : mesures
+  identiques à Votona à 1 440 px (bandeau 1 180, contenu 800).
+- Bandeau : violet foncé #7C3AED (`--masthead-accent`) pour « PRÉSIDENTIELLE 2027 » /
+  « OBSERVATOIRE », le trait du bas et les survols, y compris en mode sombre, sur les deux sites
+  (Votona : index.html et pages générées). Étiquette « BÊTA » lisible en mode sombre.
+
 ## 2026-10-26 (après-midi) — Une seule identité Votona / Observatoire, lien dans la barre de Votona
 
 - **Votona** (en production à la demande du porteur) : lien « Observatoire » dans la barre du haut

@@ -15,7 +15,7 @@
   --sans: "Work Sans", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
   --mono: "IBM Plex Mono", ui-monospace, monospace;
   --radius: 20px; --gutter: clamp(20px, 4vw, 40px);
-  --masthead-bg: #F6F2FE; --masthead-ink: #191d2b; --masthead-line: rgba(25,29,43,.14);
+  --masthead-bg: #F6F2FE; --masthead-ink: #191d2b; --masthead-line: rgba(25,29,43,.14); --masthead-accent: #7C3AED;
 }
 @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
   --bg: #14171c; --surface: #1c2028; --soft: #252a36; --fg: #f1ede4; --muted: #aab0c0; --faint: #8f96a8; --line: #2d323f;
@@ -30,6 +30,7 @@
   --v-true: #4f8fd6; --v-mostly_true: #9dc0e6; --v-half_true: #b9b2a4; --v-mostly_false: #f2b57e; --v-false: #e07a32;
   --hatch: #4a525c; --unrated-line: #8d96a1; color-scheme: dark }
 
+*, *::before, *::after { box-sizing: border-box; }
 body { background: var(--bg); color: var(--fg); font-family: var(--sans); font-size: 15px; line-height: 1.5; }
 .wrap { max-width: 880px; margin: 0 auto; padding-left: max(var(--gutter), env(safe-area-inset-left, 0px)); padding-right: max(var(--gutter), env(safe-area-inset-right, 0px)); }
 a { color: var(--link); }
@@ -41,21 +42,21 @@ h2 { font-size: 24px; }
 
 .masthead { position: sticky; top: 0; z-index: 20; background: var(--bg); }
 /* Bandeau : copie de header.topbar / .brand / .icon-btn de Votona (index.html et pages générées). */
-header.topbar { display: flex; align-items: center; justify-content: space-between; gap: 12px; max-width: 1180px; margin: 0 auto; padding: 16px var(--gutter); border-bottom: 3px solid var(--accent); background: var(--masthead-bg); }
+header.topbar { display: flex; align-items: center; justify-content: space-between; gap: 12px; max-width: 1180px; margin: 0 auto; padding: 16px var(--gutter); border-bottom: 3px solid var(--masthead-accent); background: var(--masthead-bg); }
 .brand { display: flex; align-items: center; gap: 9px; min-width: 0; background: none; border: 0; padding: 0; cursor: pointer; font: inherit; color: var(--masthead-ink); text-decoration: none; -webkit-tap-highlight-color: transparent; }
 .brand .mark { width: 40px; height: 32px; flex: none; transition: transform .45s cubic-bezier(.34,1.56,.64,1); }
 .brand:hover .mark { transform: rotate(-8deg) scale(1.08); }
 .brand .mark img { display: block; width: 100%; height: 100%; object-fit: contain; }
 .brand .name { font-family: var(--display); font-weight: 700; font-size: 18px; letter-spacing: .2px; white-space: nowrap; transition: color .15s ease; }
-.brand:hover .name { color: var(--accent); }
-.brand .year { font-family: var(--mono); font-size: 11px; color: var(--accent); letter-spacing: .06em; white-space: nowrap; }
-.brand .beta-tag { font-family: var(--mono); font-size: 10px; letter-spacing: .06em; color: var(--warn-fg); background: #fbecd1; border-radius: 999px; padding: 2px 7px; }
+.brand:hover .name { color: var(--masthead-accent); }
+.brand .year { font-family: var(--mono); font-size: 11px; color: var(--masthead-accent); letter-spacing: .06em; white-space: nowrap; }
+.brand .beta-tag { font-family: var(--mono); font-size: 10px; letter-spacing: .06em; color: #6b4206; background: #fbecd1; border-radius: 999px; padding: 2px 7px; }
 .topbar-actions { display: flex; align-items: center; gap: 6px; flex: none; }
 .icon-btn { width: 34px; height: 34px; border-radius: 50%; border: 1px solid var(--masthead-line); background: transparent; color: var(--masthead-ink); display: flex; align-items: center; justify-content: center; cursor: pointer; text-decoration: none; padding: 0; }
-.icon-btn:hover, .icon-btn[aria-current="page"] { color: var(--accent); border-color: var(--accent); }
+.icon-btn:hover, .icon-btn[aria-current="page"] { color: var(--masthead-accent); border-color: var(--masthead-accent); }
 /* Lien vers le site frère : même composant que le lien « Observatoire » de la barre de Votona. */
 .sister-link { display: inline-flex; align-items: center; gap: 6px; height: 34px; padding: 0 12px 0 10px; border-radius: 999px; border: 1px solid var(--masthead-line); color: var(--masthead-ink); font-family: var(--sans); font-size: 13px; font-weight: 600; text-decoration: none; white-space: nowrap; }
-.sister-link:hover { color: var(--accent); border-color: var(--accent); }
+.sister-link:hover { color: var(--masthead-accent); border-color: var(--masthead-accent); }
 @media (max-width: 480px) { .sister-link { width: 34px; padding: 0; justify-content: center; } .sister-link span { display: none; } }
 @media (max-width: 420px) { .brand .beta-tag { display: none; } }
 /* Onglets : une rangée sous le bandeau, défilante sur mobile. */
