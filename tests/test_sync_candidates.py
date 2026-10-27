@@ -33,3 +33,6 @@ def test_sync_updates_adds_and_never_deletes(tmp_path):
     assert rows["ancien"]["status"] == "retiré de la liste Votona"
     assert rows["nouveau"]["person_match"] == "à confirmer"
     assert report["ajoutés"] == ["Jean Nouveau"]
+    # Couleur du candidat reprise de Votona (même couleur sur les deux sites), sans compter comme une modification
+    assert rows["lepen"]["color"] == "#2457A6" and rows["nouveau"]["color"] == "#123"
+    assert report["modifiés"] == ["Olivier Faure (Parti socialiste / déclaré ou pressenti -> Parti socialiste / retiré)"]
