@@ -51,3 +51,10 @@ def test_pages_sitemap_and_escaping(tmp_path):
 def test_helpers():
     assert fr_date("2026-10-07") == "7 oct. 2026" and fr_date("2026-10", True) == "octobre 2026" and fr_date(None) == "date inconnue"
     assert slugify("Éric Ciotti") == "eric-ciotti"
+
+
+def test_party_keeps_latest_name_and_address():
+    old = fact("c9", "Q1", "Marine Le Pen", "RN", date="2017-05-01")
+    old["party"].update(name="Front national", short_name="FN")
+    site = Site.load([fact("c1", "Q1", "Marine Le Pen", "RN"), old], CANDIDATES, TOPICS, {}, "2026-10-27")
+    assert site.party_url["RN"] == "/partis/rn/" and site.parties["RN"] == "Parti RN (RN)"

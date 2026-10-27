@@ -143,6 +143,13 @@ a.tile { text-decoration: none; }
 .cands { display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 12px; }
 .cand { border: 1px solid var(--line); border-radius: var(--radius); padding: 14px 16px; background: var(--surface); display: flex; flex-direction: column; gap: 6px; }
 .cand.withdrawn { opacity: .7; }
+/* Couleur du candidat : même dégradé et même pastille que ses fiches sur Votona (--cc). */
+.head.cc { padding: 20px; border-radius: 22px; background: linear-gradient(135deg, color-mix(in srgb, var(--cc) 20%, var(--surface)), color-mix(in srgb, var(--cc) 6%, var(--surface))); border: 1px solid color-mix(in srgb, var(--cc) 28%, var(--surface)); }
+.avatar.cc { background: var(--cc); color: #fff; box-shadow: 0 4px 14px color-mix(in srgb, var(--cc) 40%, transparent); }
+.cand.cc { background: linear-gradient(150deg, color-mix(in srgb, var(--cc) 14%, var(--surface)), var(--surface) 75%); border-color: color-mix(in srgb, var(--cc) 24%, var(--line)); transition: transform .15s, border-color .15s; }
+.cand.cc:hover { border-color: var(--cc); transform: translateY(-2px); }
+.cand .nm { display: inline-flex; align-items: center; gap: 10px; min-width: 0; }
+.av { flex: none; width: 34px; height: 34px; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; background: var(--cc); color: #fff; font-family: var(--display); font-weight: 800; font-size: 13px; box-shadow: 0 3px 8px color-mix(in srgb, var(--cc) 35%, transparent); }
 .cand .top { display: flex; justify-content: space-between; gap: 8px; align-items: baseline; }
 .cand .cnt { font-family: var(--mono); font-weight: 600; white-space: nowrap; }
 .scope { display: flex; flex-wrap: wrap; gap: 6px; }

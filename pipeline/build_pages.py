@@ -13,6 +13,7 @@ extraite du gabarit dans site/assets/observatoire.css) : si une vue change, chan
 import csv
 import json
 import re
+import shutil
 from collections import defaultdict
 from datetime import date
 from dataclasses import dataclass, field
@@ -67,6 +68,10 @@ def fr_date(iso: str | None, long: bool = False) -> str:
     return f"{int(parts[2])} {(MONTHS if long else MONTHS_SHORT)[month - 1]} {parts[0]}"
 
 
+def initials_of(name: str) -> str:
+    return "".join(w[0] for w in re.split(r"[\s-]+", name) if w)[:2].upper()
+
+
 def plural(n: int, one: str, many: str) -> str:
     return f"{n} {many if n > 1 else one}"
 
@@ -97,11 +102,10 @@ class Site:
         enriched.sort(key=lambda f: ((f["claim_date"] or "") + f["id"]), reverse=True)
         site = cls(enriched, [{**c, "pid": c["person_id"] or "votona:" + c["votona_id"]} for c in candidates],
                    topics, sources, generated_at)
-        for f in enriched:
+        for f in enriched:  # du plus récent au plus ancien : un parti garde son nom le plus récent (RN, pas FN)
             site.persons[f["person"]["id"]] = f["person"]["name"]
             if f["party"]["id"]:
-                p = f["party"]
-                site.parties[p["id"]] = f"{p['name']} ({p['short_name']})" if p["short_name"] else p["name"]
+                site.parties.setdefault(f["party"]["id"], party_label(f["party"]))
         site.candidate_by_pid = {c["pid"]: c for c in site.candidates}
         for c in site.candidates:
             site.persons.setdefault(c["pid"], c["name"])
@@ -117,7 +121,10 @@ class Site:
             used.add(slug)
             site.person_url[pid] = f"/personnalites/{slug}/"
         used = set()
-        short = {f["party"]["id"]: f["party"]["short_name"] or f["party"]["name"] for f in enriched if f["party"]["id"]}
+        short: dict[str, str] = {}  # sigle le plus récent : /partis/rn/, pas /partis/fn/
+        for f in enriched:
+            if f["party"]["id"]:
+                short.setdefault(f["party"]["id"], f["party"]["short_name"] or f["party"]["name"])
         for pid in sorted(site.parties):
             slug = slugify(short[pid])
             if slug in used:
@@ -174,6 +181,10 @@ def meter(k: str) -> str:
     i = LEVEL.get(k, ("", -1))[1]
     return '<div class="meter" aria-hidden="true">' + "".join(
         f'<span style="background:var(--v-{k})"></span>' if x == i else "<span></span>" for x in range(5)) + "</div>"
+
+
+def party_label(p: dict[str, Any]) -> str:
+    return f"{p['name']} ({p['short_name']})" if p["short_name"] else p["name"]
 
 
 def party_text(f: dict[str, Any]) -> str:
@@ -332,8 +343,8 @@ def breadcrumb_ld(*items: tuple[str, str]) -> dict[str, Any]:
 def person_page(site: Site, pid: str) -> tuple[str, str, bool]:
     path, name, cand = site.person_url[pid], site.persons[pid], site.candidate_by_pid.get(pid)
     facts = site.of_person(pid)
-    initials = "".join(w[0] for w in re.split(r"[\s-]+", name) if w)[:2].upper()
-    party_names = list(dict.fromkeys(site.parties[f["party"]["id"]] for f in facts if f["party"]["id"]))
+    initials = initials_of(name)
+    party_names = list(dict.fromkeys(party_label(f["party"]) for f in reversed(facts) if f["party"]["id"]))
     party_line = ("Partis sur la période : " + ", ".join(party_names) if party_names
                   else f'{cand["votona_party"]} (selon Votona)' if cand else "Parti non renseigné sur la période")
     wiki = f' · {ext("https://www.wikidata.org/wiki/" + pid, "fiche Wikidata")}' if pid.startswith("Q") else ""
@@ -343,7 +354,8 @@ def person_page(site: Site, pid: str) -> tuple[str, str, bool]:
         badge = (f'<div style="margin-top:6px;display:flex;flex-wrap:wrap;gap:8px;align-items:center"><span class="badge">{status}</span>'
                  f'<a href="{escape(cand["votona_url"])}">Ses positions sur Votona</a></div>')
     parts = [crumbs(("/candidats/", "Candidats 2027") if cand else ("/personnalites/", "Personnalités")),
-             f'<div class="head"><div class="avatar" aria-hidden="true">{escape(initials)}</div><div style="min-width:0">'
+             (f'<div class="head cc" style="--cc:{escape(cand.get("color") or "#7C3AED")}"><div class="avatar cc" aria-hidden="true">' if cand
+              else '<div class="head"><div class="avatar" aria-hidden="true">') + f'{escape(initials)}</div><div style="min-width:0">'
              f'<h1>{escape(name)}</h1>{badge}<p class="muted" style="margin:4px 0 0">{escape(party_line)}{wiki}</p></div></div>']
     if facts:
         parts.append(summary(site, facts, "Toute la période."))
@@ -450,8 +462,10 @@ def index_pages(site: Site) -> dict[str, str]:
     cards = []
     for c in sorted(site.candidates, key=lambda c: (c["status"] == "retiré", c["votona_id"])):
         facts = site.of_person(c["pid"])
-        cards.append(f'<article class="cand{" withdrawn" if c["status"] == "retiré" else ""}"><div class="top">'
-                     f'<a class="linkish" href="{site.person_url[c["pid"]]}">{escape(c["name"])}</a>'
+        initials = initials_of(c["name"])
+        cards.append(f'<article class="cand cc{" withdrawn" if c["status"] == "retiré" else ""}" style="--cc:{escape(c.get("color") or "#7C3AED")}"><div class="top">'
+                     f'<span class="nm"><span class="av" aria-hidden="true">{escape(initials)}</span>'
+                     f'<a class="linkish" href="{site.person_url[c["pid"]]}">{escape(c["name"])}</a></span>'
                      f'<span class="cnt">{f"{len(facts)} vérif." if facts else "—"}</span></div>'
                      f'<div class="small muted">{escape(c["votona_party"])}{" · candidature retirée" if c["status"] == "retiré" else ""}</div>'
                      f'{mini_bar(facts) if facts else ""}<div class="small"><a href="{escape(c["votona_url"])}">Ses positions sur Votona</a></div></article>')
@@ -573,8 +587,8 @@ def build(site: Site, site_dir: Path) -> list[str]:
     (site_dir / "assets").mkdir(parents=True, exist_ok=True)
     (site_dir / "assets" / "observatoire.css").write_text(stylesheet(), encoding="utf-8")
     for d in ("candidats", "personnalites", "partis", "sujets", "methode"):  # pages recréées à chaque fois
-        for old in (site_dir / d).glob("**/index.html") if (site_dir / d).exists() else []:
-            old.unlink()
+        if (site_dir / d).exists():
+            shutil.rmtree(site_dir / d)
     pages: dict[str, str] = {}
     listed = ["/", "/candidats/", "/personnalites/", "/partis/", "/sujets/", "/methode/"]
     for pid in site.person_url:

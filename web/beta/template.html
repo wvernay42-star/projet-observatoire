@@ -147,6 +147,13 @@ a.tile { text-decoration: none; }
 .cands { display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 12px; }
 .cand { border: 1px solid var(--line); border-radius: var(--radius); padding: 14px 16px; background: var(--surface); display: flex; flex-direction: column; gap: 6px; }
 .cand.withdrawn { opacity: .7; }
+/* Couleur du candidat : même dégradé et même pastille que ses fiches sur Votona (--cc). */
+.head.cc { padding: 20px; border-radius: 22px; background: linear-gradient(135deg, color-mix(in srgb, var(--cc) 20%, var(--surface)), color-mix(in srgb, var(--cc) 6%, var(--surface))); border: 1px solid color-mix(in srgb, var(--cc) 28%, var(--surface)); }
+.avatar.cc { background: var(--cc); color: #fff; box-shadow: 0 4px 14px color-mix(in srgb, var(--cc) 40%, transparent); }
+.cand.cc { background: linear-gradient(150deg, color-mix(in srgb, var(--cc) 14%, var(--surface)), var(--surface) 75%); border-color: color-mix(in srgb, var(--cc) 24%, var(--line)); transition: transform .15s, border-color .15s; }
+.cand.cc:hover { border-color: var(--cc); transform: translateY(-2px); }
+.cand .nm { display: inline-flex; align-items: center; gap: 10px; min-width: 0; }
+.av { flex: none; width: 34px; height: 34px; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; background: var(--cc); color: #fff; font-family: var(--display); font-weight: 800; font-size: 13px; box-shadow: 0 3px 8px color-mix(in srgb, var(--cc) 35%, transparent); }
 .cand .top { display: flex; justify-content: space-between; gap: 8px; align-items: baseline; }
 .cand .cnt { font-family: var(--mono); font-weight: 600; white-space: nowrap; }
 .scope { display: flex; flex-wrap: wrap; gap: 6px; }
@@ -262,10 +269,12 @@ const facts = DATA.facts.map((f) => {
     // Divergence : des rédactions placent la même déclaration à des niveaux différents.
     diverge: rated.size > 1 };
 });
+const partyLabel = (p) => p.short_name ? p.name + " (" + p.short_name + ")" : p.name;
 const persons = {}, parties = {};
 for (const f of facts) {
   persons[f.person.id] = f.person.name;
-  if (f.party.id) parties[f.party.id] = f.party.short_name ? f.party.name + " (" + f.party.short_name + ")" : f.party.name;
+  // Du plus récent au plus ancien : un parti garde son nom le plus récent (RN, pas FN).
+  if (f.party.id) parties[f.party.id] ||= partyLabel(f.party);
 }
 const candidates = DATA.candidates.map((c) => ({ ...c, pid: c.person_id || "votona:" + c.votona_id }));
 const candidateById = Object.fromEntries(candidates.map((c) => [c.pid, c]));
@@ -299,6 +308,7 @@ const frDate = (iso, long) => {
   return isNaN(d) ? iso : d.toLocaleDateString("fr-FR", { day: "numeric", month: long ? "long" : "short", year: "numeric" });
 };
 const plural = (n, one, many) => n + " " + (n > 1 ? many : one);
+const initialsOf = (name) => name.split(/[\s-]+/).filter(Boolean).map((w) => w[0]).slice(0, 2).join("").toUpperCase();
 const shift = (days) => { const d = new Date(today + "T12:00:00"); d.setDate(d.getDate() - days); return d.toISOString().slice(0, 10); };
 const toast = (msg) => { const t = $("toast"); t.textContent = msg; t.hidden = false; clearTimeout(toast.h); toast.h = setTimeout(() => (t.hidden = true), 2600); };
 const swatch = (k) => el("span", { class: "sw" + (k === "unrated" ? " unrated" : ""), style: k === "unrated" ? null : "background: var(--v-" + k + ")", "aria-hidden": "true" });
@@ -562,8 +572,9 @@ const views = {
         .sort((a, b) => (a.status === "retiré") - (b.status === "retiré") || a.votona_id.localeCompare(b.votona_id, "fr"));
       return [...head, el("div", { class: "cands" }, sorted.map((c) => {
         const list = count(c.pid);
-        return el("article", { class: "cand" + (c.status === "retiré" ? " withdrawn" : "") },
-          el("div", { class: "top" }, el("button", { type: "button", class: "linkish", on: { click: () => go("personne", c.pid) } }, c.name),
+        return el("article", { class: "cand cc" + (c.status === "retiré" ? " withdrawn" : ""), style: "--cc:" + (c.color || "#7C3AED") },
+          el("div", { class: "top" }, el("span", { class: "nm" }, el("span", { class: "av", "aria-hidden": "true", text: initialsOf(c.name) }),
+            el("button", { type: "button", class: "linkish", on: { click: () => go("personne", c.pid) } }, c.name)),
             el("span", { class: "cnt", text: list.length ? list.length + " vérif." : "—" })),
           el("div", { class: "small muted", text: c.votona_party + (c.status === "retiré" ? " · candidature retirée" : "") }),
           list.length ? miniBar(list) : null,
@@ -620,14 +631,15 @@ const views = {
     const id = state.id;
     const list = facts.filter((f) => f.person.id === id).sort(byDate), cand = candidateById[id];
     const name = persons[id] || id;
-    const initials = name.split(/[\s-]+/).filter(Boolean).map((w) => w[0]).slice(0, 2).join("").toUpperCase();
-    const partyNames = [...new Set(list.filter((f) => f.party.id).map((f) => parties[f.party.id]))];
+    const initials = initialsOf(name);
+    // Noms à la date de chaque déclaration, dans l'ordre chronologique (FN puis RN).
+    const partyNames = [...new Set([...list].reverse().filter((f) => f.party.id).map((f) => partyLabel(f.party)))];
     const dates = list.map((f) => f.claim_date).filter(Boolean).sort();
     const t0 = dates.length ? new Date(dates[0]).getTime() : 0, t1 = dates.length ? new Date(dates[dates.length - 1]).getTime() : 1;
     const pos = (d) => (t1 === t0 ? 50 : 2 + ((new Date(d).getTime() - t0) / (t1 - t0)) * 96);
     const fams = FAMILIES.filter(([k]) => list.some((f) => f.family === k));
     return [
-      el("div", { class: "head" }, el("div", { class: "avatar", "aria-hidden": "true", text: initials }),
+      el("div", { class: "head" + (cand ? " cc" : ""), style: cand ? "--cc:" + (cand.color || "#7C3AED") : null }, el("div", { class: "avatar" + (cand ? " cc" : ""), "aria-hidden": "true", text: initials }),
         el("div", { style: "min-width:0" }, el("h1", { text: name }),
           cand ? el("div", { style: "margin-top:6px;display:flex;flex-wrap:wrap;gap:8px;align-items:center" }, el("span", { class: "badge", text: cand.status === "retiré" ? "Candidature 2027 retirée" : "Présidentielle 2027" }),
             vlink(cand.votona_url, "Ses positions sur Votona")) : null,
