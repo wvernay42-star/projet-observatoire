@@ -156,9 +156,15 @@ def write_queues(conn: sqlite3.Connection, ref: Referential, out_dir: Path = QUE
             if party.status not in ("ok", "no_party"):
                 parties.append({**base, "person": {"id": c["person_id"], "name": ref.full_names.get(c["person_id"])},
                                 "status": party.status, "candidates": list(party.candidates)})
+    # Libellés à valider : seulement ceux qui touchent une déclaration attribuée (ou à attribuer).
+    # Ceux des rumeurs non attribuées ne changent rien à ce qui est publié : inutile de les montrer.
     ratings = [{"source_id": s, "rating_original": o, "occurrences": n} for s, o, n in conn.execute(
-        "SELECT source_id, rating_original, COUNT(*) FROM reviews WHERE rating_method = 'pending'"
-        " GROUP BY source_id, rating_original ORDER BY COUNT(*) DESC")]
+        "SELECT r.source_id, r.rating_original, COUNT(*) FROM reviews r JOIN claims c ON c.id = r.claim_id"
+        " WHERE r.rating_method = 'pending' AND c.attribution_status IN ('to_review', 'auto_sure', 'validated')"
+        " GROUP BY r.source_id, r.rating_original ORDER BY COUNT(*) DESC")]
+    # Les candidats 2027 d'abord (cœur du site) ; tri stable : chaque groupe reste du plus récent au plus ancien.
+    attributions.sort(key=lambda q: not any(c["id"] in ref.candidates for c in q["candidates"]))
+    parties.sort(key=lambda q: q["person"]["id"] not in ref.candidates)
     conn.row_factory = None
 
     out_dir.mkdir(parents=True, exist_ok=True)

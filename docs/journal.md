@@ -31,6 +31,19 @@ Les décisions durables sont aussi consignées dans [decisions.md](decisions.md)
 - Alertes : aucune. 70 tests réussis.
 - Beta republiée (artefact, version 8) ; site statique et flux régénérés.
 
+## 2026-10-27 — Historique 2017-2024 : 189 → 522 déclarations publiées
+
+- Rattrapage `run_daily --connector google_factcheck --days 3587` (depuis le 1er janvier 2017) :
+  7 562 vérifications récupérées, 5 463 nouvelles (dont Les Décodeurs 2017-2021 et CheckNews
+  2020-2023, absents jusqu'ici). Base : 7 582 vérifications ; claims auto_sure 455, validated 67,
+  to_review 113, rejected 6 883 (surtout des rumeurs virales, jamais publiées).
+- Export : **522 déclarations** (189 avant), dont 208 de **20 candidats 2027** sur 38
+  (Le Pen 35, Mélenchon 25, Bardella 25, Philippot 17, Attal 16, Dupont-Aignan 16, Zemmour 13…).
+- Files de validation : la file des libellés ne montre plus que ceux qui touchent une
+  déclaration attribuée (23 au lieu de 484 ; ceux des rumeurs ne changent rien à ce qui est
+  publié). Attributions et partis : candidats 2027 en tête (21 et 63 éléments), puis du plus
+  récent au plus ancien. Files déposées sur la page de validation. rating_map.csv non modifié.
+
 ## 2026-10-26 (fin de journée) — Même largeur que Votona, violet foncé dans le bandeau
 
 - Largeurs : l'Observatoire comptait les marges en plus de la largeur (contenu 880 px au lieu
