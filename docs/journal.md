@@ -20,6 +20,17 @@ Les décisions durables sont aussi consignées dans [decisions.md](decisions.md)
 | — | Hébergement préprod (`preprod`) / prod (`main`) | ✅ en ligne (26/10) — projet Vercel `votona-observatoire`, noindex |
 | — | Liens Votona → Observatoire | ⏳ actifs sur `draft` (test, 26/10) ; `main` sur demande du porteur |
 
+## 2026-10-27 — Routine quotidienne
+
+- Candidats : synchronisation avec https://votona.fr/ (0 ajouté, 0 modifié, 0 absent) ; 2 à confirmer : Selma Labib, Antoine Mikolajczak.
+- Collecte : google_factcheck 25 récupérées / 0 nouvelle ; datacommons_feed 4 / 0 nouvelle. Aucune erreur de connecteur.
+- Décisions du tableau de validation : aucune à rapatrier (0 appliquée, 0 ignorée). rating_map.csv inchangé.
+- Base : 2 135 vérifications ; claims : auto_sure 122, validated 67, to_review 0, rejected 1 916.
+- Exportées : 189 entrées (data/export/facts.json), inchangé depuis la veille.
+- Files de validation : 0 verdict, 0 attribution, 51 partis ; 6 sources suivies (part de verdicts positifs, toutes vérifications : TF1 Info 15,3 %, franceinfo 23,1 %, Poligraph 17,4 %, AFP Factuel 0 % (échelle partielle), 20 Minutes 4,5 %, Décodeurs 0 % sur 4).
+- Alertes : aucune. 70 tests réussis.
+- Beta republiée (artefact, version 8) ; site statique et flux régénérés.
+
 ## 2026-10-26 (fin de journée) — Même largeur que Votona, violet foncé dans le bandeau
 
 - Largeurs : l'Observatoire comptait les marges en plus de la largeur (contenu 880 px au lieu
