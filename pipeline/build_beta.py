@@ -18,6 +18,7 @@ from xml.sax.saxutils import escape
 from datetime import datetime, timezone
 from pathlib import Path
 
+from pipeline import build_pages
 from pipeline.connectors.base import SEEDS_DIR
 from pipeline.export import EXPORT_DIR
 
@@ -50,9 +51,14 @@ def build(export_dir: Path = EXPORT_DIR, template: Path = TEMPLATE, output: Path
     if PLACEHOLDER not in html:
         raise ValueError("Emplacement des données introuvable dans le gabarit")
 
+    pages = build_pages.load_site(facts, data["generated_at"])
+    # Sur le site, une personne, un parti ou un sujet ouvre sa page fixe (pipeline/build_pages.py).
+    urls = {"persons": pages.person_url, "parties": pages.party_url}
+
     def page(site: bool, logo: str) -> str:
         # « </ » échappé : le JSON ne peut pas fermer la balise <script> qui l'embarque.
-        payload = json.dumps({**data, "site": site}, ensure_ascii=False, separators=(",", ":")).replace("</", "<\\/")
+        payload = json.dumps({**data, "site": site, **({"urls": urls} if site else {})}, ensure_ascii=False,
+                             separators=(",", ":")).replace("</", "<\\/")
         if site:
             props = {f.stem: f"/assets/props/{f.name}" for f in sorted(PROPS_DIR.glob("*.webp"))}
         else:
@@ -65,6 +71,7 @@ def build(export_dir: Path = EXPORT_DIR, template: Path = TEMPLATE, output: Path
     output.write_text(page(False, "data:image/webp;base64," + base64.b64encode(LOGO.read_bytes()).decode()), encoding="utf-8")
     build_site(page(True, "/assets/logo-head.webp"))
     write_open_data(facts, generated)
+    build_pages.build(pages, SITE_DIR)
     return len(facts)
 
 
@@ -77,6 +84,13 @@ SITE_HEAD = """<!doctype html>
 <meta name="robots" content="noindex, nofollow">
 <meta name="description" content="Votona Observatoire : les vérifications des fact-checkers français sur les candidats à la présidentielle 2027 et la vie politique, avec le verdict d'origine et un lien vers chaque article.">
 <link rel="icon" href="/assets/favicon-48.png">
+<link rel="canonical" href="https://observatoire.votona.fr/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Votona Observatoire">
+<meta property="og:title" content="Votona Observatoire - les déclarations vérifiées">
+<meta property="og:description" content="Les vérifications des fact-checkers français sur les candidats à la présidentielle 2027 et la vie politique, avec le verdict d'origine.">
+<meta property="og:image" content="https://observatoire.votona.fr/assets/og.jpg">
+<meta name="twitter:card" content="summary_large_image">
 <link rel="alternate" type="application/rss+xml" title="Votona Observatoire - dernières vérifications" href="/flux.xml">
 <style>:root{color-scheme:light}body{margin:0;padding:0;font:14px system-ui,sans-serif}img{max-width:100%}[hidden]{display:none!important}</style>
 </head>
@@ -93,6 +107,7 @@ def build_site(page: str, site_dir: Path = SITE_DIR) -> None:
     head = SITE_HEAD.replace("</head>", "\n".join(head_tags) + "\n</head>")
     (site_dir / "index.html").write_text(head + body + "\n</body>\n</html>\n", encoding="utf-8")
     shutil.copyfile(LOGO, site_dir / "assets" / "logo-head.webp")
+    shutil.copyfile(LOGO.with_name("og.jpg"), site_dir / "assets" / "og.jpg")
     (site_dir / "assets" / "props").mkdir(exist_ok=True)
     for f in PROPS_DIR.glob("*.webp"):
         shutil.copyfile(f, site_dir / "assets" / "props" / f.name)

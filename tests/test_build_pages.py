@@ -1,0 +1,53 @@
+from pipeline.build_pages import Site, build, fr_date, slugify
+
+
+def fact(fid, pid, name, party=None, verdict="false", theme="Écologie", date="2026-10-01"):
+    return {"id": fid, "person": {"id": pid, "name": name, "votona_id": None},
+            "party": {"id": party, "name": "Parti " + (party or ""), "short_name": party or "", "status": "ok" if party else "none"},
+            "claim_text": "Une <affirmation> & chiffrée", "claim_date": date, "date_is_fallback": False, "verdict": verdict,
+            "theme": theme, "votona_topics": [], "reviews": [
+                {"source_id": "afp", "source_name": "AFP Factuel", "url": "https://a/" + fid, "title": "T",
+                 "rating_original": "Faux", "rating_normalized": verdict, "review_date": date}]}
+
+
+CANDIDATES = [
+    {"votona_id": "lepen", "name": "Marine Le Pen", "votona_party": "RN", "status": "déclaré ou pressenti",
+     "person_id": "Q1", "person_match": "sûr", "party_id": "RN", "votona_url": "https://votona.fr/candidats/lepen/"},
+    {"votona_id": "mathieu", "name": "Benoît Mathieu", "votona_party": "Sans étiquette", "status": "déclaré ou pressenti",
+     "person_id": "", "person_match": "", "party_id": "", "votona_url": "https://votona.fr/candidats/mathieu/"},
+]
+TOPICS = [{"slug": "relancer-le-nucleaire", "label": "Construire des réacteurs", "category": "Écologie"}]
+
+
+def make_site():
+    facts = [fact("c1", "Q1", "Marine Le Pen", "RN"), fact("c2", "Q2", "Jean Martin", "RN", "true", date="2025-03-02"),
+             fact("c3", "Q3", "Jean Martin", None, "half_true")]  # homonyme : deux adresses distinctes
+    return Site.load(facts, CANDIDATES, TOPICS, {"afp": "AFP Factuel"}, "2026-10-27T05:00:00+00:00")
+
+
+def test_addresses():
+    site = make_site()
+    assert site.person_url["Q1"] == "/candidats/lepen/"
+    assert site.person_url["votona:mathieu"] == "/candidats/mathieu/"
+    assert {site.person_url["Q2"], site.person_url["Q3"]} == {"/personnalites/jean-martin/", "/personnalites/jean-martin-q3/"}
+    assert site.party_url["RN"] == "/partis/rn/"
+
+
+def test_pages_sitemap_and_escaping(tmp_path):
+    listed = build(make_site(), tmp_path)
+    lepen = (tmp_path / "candidats/lepen/index.html").read_text(encoding="utf-8")
+    assert "<h1>Marine Le Pen</h1>" in lepen and "Une &lt;affirmation&gt; &amp; chiffrée" in lepen
+    assert "https://votona.fr/candidats/lepen/" in lepen and 'rel="canonical"' in lepen
+    # candidat sans vérification : page publiée, hors du plan du site
+    assert (tmp_path / "candidats/mathieu/index.html").exists() and "/candidats/mathieu/" not in listed
+    for p in ("/candidats/lepen/", "/partis/rn/", "/sujets/ecologie/", "/methode/", "/personnalites/jean-martin/"):
+        assert p in listed and (tmp_path / p.strip("/") / "index.html").exists()
+    assert "observatoire.votona.fr/sujets/ecologie/" in (tmp_path / "sitemap.xml").read_text(encoding="utf-8")
+    assert ".topbar" in (tmp_path / "assets/observatoire.css").read_text(encoding="utf-8")
+    # préproduction : jamais indexée tant que la conformité n'est pas validée
+    assert 'content="noindex, nofollow"' in lepen
+
+
+def test_helpers():
+    assert fr_date("2026-10-07") == "7 oct. 2026" and fr_date("2026-10", True) == "octobre 2026" and fr_date(None) == "date inconnue"
+    assert slugify("Éric Ciotti") == "eric-ciotti"

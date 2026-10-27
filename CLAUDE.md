@@ -29,5 +29,6 @@ le tableau d'état.
 - python -m pipeline.run_daily --connector jsonld_crawler --dry-run
 - python -m pipeline.validation_sync seed|apply <dossier>   # tableau de validation (docs/validation.md)
 - python -m pipeline.build_beta   # artefact (web/beta/) + site statique (site/, Vercel, docs/hebergement.md)
+- python -m pipeline.build_pages  # pages fixes candidats/personnalités/partis/sujets/méthode + sitemap (aussi lancé par build_beta)
 - python -m pipeline.sync_candidates <votona>/index.html   # liste commune des candidats (Votona = source)
 - pytest

@@ -17,6 +17,7 @@ Les décisions durables sont aussi consignées dans [decisions.md](decisions.md)
 | 7 | web/beta/index.html (maquette A) | ✅ en ligne (22/10) — 119 déclarations |
 | — | Page web de validation | ✅ en ligne (22/10) — 147 éléments à traiter |
 | — | Sujets (familles et sujets Votona), recoupement, angles morts, données ouvertes, RSS | ✅ fait (22/10) |
+| — | Pages fixes par candidat, personnalité, parti, sujet + plan du site | ⏳ en préproduction (27/10) |
 | — | Hébergement préprod (`preprod`) / prod (`main`) | ✅ en ligne (26/10) — projet Vercel `votona-observatoire`, noindex |
 | — | Liens Votona → Observatoire | ⏳ actifs sur `draft` (test, 26/10) ; `main` sur demande du porteur |
 
@@ -30,6 +31,22 @@ Les décisions durables sont aussi consignées dans [decisions.md](decisions.md)
 - Files de validation : 0 verdict, 0 attribution, 51 partis ; 6 sources suivies (part de verdicts positifs, toutes vérifications : TF1 Info 15,3 %, franceinfo 23,1 %, Poligraph 17,4 %, AFP Factuel 0 % (échelle partielle), 20 Minutes 4,5 %, Décodeurs 0 % sur 4).
 - Alertes : aucune. 70 tests réussis.
 - Beta republiée (artefact, version 8) ; site statique et flux régénérés.
+
+## 2026-10-27 — Une vraie page par candidat, personnalité, parti et sujet
+
+- `pipeline/build_pages.py` (lancé par `build_beta`, donc par la routine) : pages HTML fixes
+  `/candidats/<id Votona>/` (38, mêmes identifiants que votona.fr), `/personnalites/<nom>/`,
+  `/partis/<sigle>/`, `/sujets/<famille>/`, pages d'index, `/methode/`, `sitemap.xml` ; titre,
+  description, adresse canonique, image de partage (`web/beta/og.jpg`), fil d'Ariane (données
+  structurées BreadcrumbList). Lisibles sans JavaScript ; feuille de style extraite du gabarit
+  (`site/assets/observatoire.css`), donc même rendu que l'app. « Signaler une erreur » sans script.
+- 136 pages, 113 au plan du site (candidat sans vérification : page publiée, hors plan, comme
+  sur Votona). Toujours `noindex` (constante `INDEXABLE`) jusqu'au feu vert conformité.
+- L'app (site) envoie vers ces pages (personne, parti, sujet, Méthode) ; les anciennes adresses
+  `#personne-…`, `#candidat-lepen` (liens de votona.fr) redirigent. Dans l'artefact, tout reste
+  dans l'app. Adresses des homonymes stables (ordre nom puis identifiant).
+- Vérifié dans le navigateur : 138 liens internes, aucun cassé ; pas de débordement sur mobile.
+  Tests : 73 passent. Poussé sur `preprod` seulement.
 
 ## 2026-10-26 (fin de journée) — Même largeur que Votona, violet foncé dans le bandeau
 
