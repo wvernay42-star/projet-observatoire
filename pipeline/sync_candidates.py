@@ -3,7 +3,8 @@
     python -m pipeline.sync_candidates /chemin/vers/votona/index.html
     python -m pipeline.sync_candidates https://votona.fr/      # site public (domaine à autoriser)
 
-Votona (dépôt wvernay42-star/votona) est la source de la liste : nom, parti affiché, retrait.
+Votona (dépôt wvernay42-star/votona) est la source de la liste : nom, parti affiché, retrait, et
+couleur du candidat (même couleur sur les deux sites).
 Un candidat existant garde son identifiant Wikidata ; un nouveau candidat est relié au référentiel
 seulement si son nom y correspond exactement et sans homonyme, sinon il est marqué « à confirmer ».
 Un candidat disparu de Votona est gardé et marqué « retiré de la liste Votona » (jamais supprimé).
@@ -18,13 +19,14 @@ from pipeline.attribute import Referential
 from pipeline.connectors.base import SEEDS_DIR
 from pipeline.text import name_key
 
-FIELDS = ["votona_id", "name", "votona_party", "status", "person_id", "person_match", "party_id", "votona_url"]
+FIELDS = ["votona_id", "name", "votona_party", "status", "person_id", "person_match", "party_id", "votona_url", "color"]
 CANDIDATE = re.compile(r'\{\s*id:"([a-z0-9-]+)", name:"([^"]+)", party:"([^"]+)"([^\n]*)')
 
 
 def parse_votona(html: str) -> list[dict[str, str]]:
     return [{"votona_id": vid, "name": name, "votona_party": party,
-             "status": "retiré" if re.search(r"withdrawn\s*:\s*true", rest) else "déclaré ou pressenti"}
+             "status": "retiré" if re.search(r"withdrawn\s*:\s*true", rest) else "déclaré ou pressenti",
+             "color": (m.group(1) if (m := re.search(r'color\s*:\s*"(#[0-9A-Fa-f]{3,8})"', rest)) else "")}
             for vid, name, party, rest in CANDIDATE.findall(html)]
 
 
@@ -51,6 +53,7 @@ def sync(html: str, seeds_dir: Path = SEEDS_DIR, ref: Referential | None = None)
         elif any(row[k] != c[k] for k in ("name", "votona_party", "status")):
             report["modifiés"].append(f"{c['name']} ({row['votona_party']} / {row['status']} -> {c['votona_party']} / {c['status']})")
             row.update(c)
+        row["color"] = c["color"]  # suit Votona sans être signalé comme un changement de candidature
     for vid, row in rows.items():
         if vid not in seen and row["status"] != "retiré de la liste Votona":
             row["status"] = "retiré de la liste Votona"
