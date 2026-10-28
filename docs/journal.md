@@ -21,6 +21,17 @@ Les décisions durables sont aussi consignées dans [decisions.md](decisions.md)
 | — | Hébergement préprod (`preprod`) / prod (`main`) | ✅ en ligne (26/10) — projet Vercel `votona-observatoire` ; production indexable depuis le 28/10 |
 | — | Liens Votona → Observatoire | ⏳ actifs sur `draft` (test, 26/10) ; `main` sur demande du porteur |
 
+## 2026-10-28 (nuit) — Encart sur les fiches Votona, mesure d'audience
+
+- `site/donnees/votona.json` (`build_pages.votona_summary`) : par candidat, nombre de déclarations
+  vérifiées, rédactions, date de la dernière vérification et adresse de la fiche ; par famille,
+  nombre et adresse. Jamais de verdict (test). En-tête CORS sur `/donnees/`.
+- Votona (sur `draft`) : encart « Ses déclarations vérifiées » en bas des fiches candidats qui en
+  ont, avec la mention « hors classement » ; copie du résumé dans `data/observatoire.json`,
+  rafraîchie par `pages.yml`. Liens des pages sujets vers `/sujets/<famille>/`.
+- Vercel Web Analytics : balise ajoutée (pages fixes et application) ; à activer dans le projet
+  Vercel `votona-observatoire`. 80 tests OK. En préproduction.
+
 ## 2026-10-28 (soir, suite) — En production, indexation ouverte
 
 - Mise en production : Observatoire (`main` avancé sur `preprod`) et Votona (fusion `draft` → `main`).
