@@ -20,6 +20,17 @@ Les décisions durables sont aussi consignées dans [decisions.md](decisions.md)
 | — | Hébergement préprod (`preprod`) / prod (`main`) | ✅ en ligne (26/10) — projet Vercel `votona-observatoire`, noindex |
 | — | Liens Votona → Observatoire | ⏳ actifs sur `draft` (test, 26/10) ; `main` sur demande du porteur |
 
+## 2026-10-28 — Routine quotidienne
+
+- Candidats : synchronisation avec https://votona.fr/ (0 ajouté, 0 modifié, 0 absent) ; 2 à confirmer : Selma Labib, Antoine Mikolajczak.
+- Collecte : google_factcheck 29 récupérées / 9 nouvelles ; datacommons_feed 4 / 0 nouvelle. Aucune erreur de connecteur.
+- Décisions du tableau de validation : 354 documents rapatriés, 353 appliquées (22 libellés, 113 attributions, 218 partis), 0 ignorée, documents supprimés de la collection « decisions ». **rating_map.csv modifié : 22 lignes ajoutées** (AFP Factuel : Incomplet, Presque, A nuancer, Pas que, contexte manquant, Non prouvé, missing context, Attention, Erroné, X, Propos sortis de leur contexte, Simplification trompeuse, « Il n'y a pas d'interdiction de prendre l'avion pour les vaccinés », « Le Covid tue, les vaccins protègent du Covid » ; Les Décodeurs : C'est très exagéré, C'est contestable, C'est exagéré, C'est discutable, C'est compliqué, C'est plutôt vrai ; Poligraph : Contestable, C'est très exagéré). Décisions du porteur, reprises telles quelles.
+- Base : 7 591 vérifications ; claims : auto_sure 454, validated 172, to_review 1, rejected 6 894.
+- Exportées : 626 entrées (data/export/facts.json ; 522 la veille), dont 229 de candidats 2027.
+- Files de validation : 0 verdict, 1 attribution, 61 partis ; files déposées sur la page. Part de verdicts positifs (toutes vérifications) : TF1 Info 20,1 %, franceinfo 29,0 %, Poligraph 20,8 %, AFP Factuel 0,4 % (échelle partielle), Décodeurs 1,6 % (partielle), 20 Minutes 11,0 %, CheckNews 0 % (échelle partielle).
+- Alertes : aucune. 70 tests réussis.
+- Beta republiée (artefact, version 10) ; site statique et flux régénérés.
+
 ## 2026-10-27 — Routine quotidienne
 
 - Candidats : synchronisation avec https://votona.fr/ (0 ajouté, 0 modifié, 0 absent) ; 2 à confirmer : Selma Labib, Antoine Mikolajczak.
