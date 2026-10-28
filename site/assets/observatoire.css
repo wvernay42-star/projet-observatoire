@@ -27,7 +27,7 @@
   --hatch: #4a525c; --unrated-line: #8d96a1; color-scheme: dark }
 
 *, *::before, *::after { box-sizing: border-box; }
-body { background: var(--bg); color: var(--fg); font-family: var(--sans); font-size: 15px; line-height: 1.5; }
+body { margin: 0; background: var(--bg); color: var(--fg); font-family: var(--sans); font-size: 15px; line-height: 1.5; }
 .wrap { max-width: 880px; margin: 0 auto; padding-left: max(var(--gutter), env(safe-area-inset-left, 0px)); padding-right: max(var(--gutter), env(safe-area-inset-right, 0px)); }
 a { color: var(--link); }
 h1, h2, h3 { font-family: var(--display); font-weight: 700; text-wrap: balance; margin: 0; line-height: 1.15; }
