@@ -117,7 +117,7 @@ def build_site(page: str, site_dir: Path = SITE_DIR) -> None:
     (site_dir / "robots.txt").write_text("User-agent: *\nDisallow: /\n", encoding="utf-8")
 
 
-OPEN_DATA_COLUMNS = ["id", "person_id", "person_name", "votona_id", "party_id", "party_name", "party_status",
+OPEN_DATA_COLUMNS = ["id", "person_id", "person_name", "votona_id", "party_id", "party_name", "party_name_at_date", "party_status",
                      "claim_text", "claim_date", "date_is_fallback", "verdict", "theme", "votona_topics",
                      "source_id", "source_name", "url", "title", "rating_original", "rating_normalized", "review_date"]
 RSS_ITEMS = 50
@@ -135,7 +135,7 @@ def write_open_data(facts: list[dict], generated: datetime, site_dir: Path = SIT
             for r in fact["reviews"]:
                 w.writerow({"id": fact["id"], "person_id": fact["person"]["id"], "person_name": fact["person"]["name"],
                             "votona_id": fact["person"].get("votona_id") or "", "party_id": fact["party"]["id"] or "",
-                            "party_name": fact["party"]["name"] or "", "party_status": fact["party"]["status"],
+                            "party_name": fact["party"]["name"] or "", "party_name_at_date": fact["party"].get("name_at_date") or "", "party_status": fact["party"]["status"],
                             "claim_text": fact["claim_text"], "claim_date": fact["claim_date"] or "",
                             "date_is_fallback": int(fact["date_is_fallback"]), "verdict": fact["verdict"],
                             "theme": fact.get("theme") or "",

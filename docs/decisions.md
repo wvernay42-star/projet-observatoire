@@ -62,3 +62,5 @@
 ## 2026-10-28
 - Back-office : onglet « Observatoire » de l'admin Votona (choix du porteur), données dans la
   base Supabase de Votona, réservées à l'email admin. La page Claude de validation devient un repli.
+- Partis renommés affichés sous leur nom actuel (décision du porteur) ; le nom à la date de la
+  déclaration est conservé dans les données ouvertes.

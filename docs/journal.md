@@ -17,9 +17,20 @@ Les décisions durables sont aussi consignées dans [decisions.md](decisions.md)
 | 7 | web/beta/index.html (maquette A) | ✅ en ligne (22/10) — 119 déclarations |
 | — | Page web de validation | ✅ en ligne (22/10) — 147 éléments à traiter |
 | — | Sujets (familles et sujets Votona), recoupement, angles morts, données ouvertes, RSS | ✅ fait (22/10) |
-| — | Pages fixes par candidat, personnalité, parti, sujet + plan du site | ⏳ en préproduction (27/10) |
+| — | Pages fixes par candidat, personnalité, parti, sujet + plan du site | ✅ en production (28/10) |
 | — | Hébergement préprod (`preprod`) / prod (`main`) | ✅ en ligne (26/10) — projet Vercel `votona-observatoire`, noindex |
 | — | Liens Votona → Observatoire | ⏳ actifs sur `draft` (test, 26/10) ; `main` sur demande du porteur |
+
+## 2026-10-28 — En production : pages fixes, couleurs des candidats, nom actuel des partis
+
+- À la demande du porteur, mise en production de la préproduction : pages par candidat,
+  personnalité, parti et sujet, couleurs des candidats (Votona), noms de partis.
+- Partis renommés : affichés partout sous leur **nom actuel** (Rassemblement national pour le
+  FN, Renaissance pour EM/LREM), c'est la même organisation. Le nom à la date reste dans
+  l'export (`name_at_date`, `short_name_at_date`) et dans les données ouvertes
+  (`party_name_at_date`). Méthode mise à jour.
+- Base locale reconstruite depuis data/store avant export (627 déclarations, comme la routine).
+  Vérifié : aucune mention « FN » / « LREM » affichée, 223 liens internes, aucun cassé. Tests : 77.
 
 ## 2026-10-28 — Routine quotidienne (3e passage, après ajout de l'identifiant Supabase)
 

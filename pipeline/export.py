@@ -67,14 +67,18 @@ def build_facts(conn: sqlite3.Connection, ref: Referential) -> list[dict[str, An
                                (c["id"],)).fetchall()
         party = ref.party_at(c["person_id"], c["claim_date"])
         p = parties.get(party.party_id or "", {})
-        name, short = party_name_at(p, party_names.get(party.party_id or "", []), c["claim_date"]) if p else (None, None)
+        # Affiché : le nom actuel du parti (RN, Renaissance), même pour une déclaration faite sous un
+        # ancien nom (FN, LREM) ; c'est la même organisation. Le nom à la date reste dans les données.
+        name, short = (p.get("name", ""), p.get("short_name", "")) if p else (None, None)
+        name_at, short_at = party_name_at(p, party_names.get(party.party_id or "", []), c["claim_date"]) if p else (None, None)
         # Thème indicatif (familles et sujets de Votona), tiré de l'affirmation et des titres.
         theme, topics = classify(" ".join([c["text"] or "", *(r["title"] or "" for r in reviews)]), themes)
         facts.append({
             "id": c["id"],
             "person": {"id": c["person_id"], "name": ref.full_names.get(c["person_id"], ""),
                        "votona_id": ref.candidates.get(c["person_id"], {}).get("votona_id")},
-            "party": {"id": party.party_id, "name": name, "short_name": short, "status": party.status},
+            "party": {"id": party.party_id, "name": name, "short_name": short, "status": party.status,
+                      "name_at_date": name_at, "short_name_at_date": short_at},
             "claim_text": c["text"],
             "claim_date": c["claim_date"],
             "date_precision": c["date_precision"],
