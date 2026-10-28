@@ -65,7 +65,8 @@ def fr_date(iso: str | None, long: bool = False) -> str:
     month = int(parts[1])
     if len(parts) == 2:
         return f"{MONTHS[month - 1]} {parts[0]}"
-    return f"{int(parts[2])} {(MONTHS if long else MONTHS_SHORT)[month - 1]} {parts[0]}"
+    day = int(parts[2])
+    return f"{'1er' if day == 1 else day} {(MONTHS if long else MONTHS_SHORT)[month - 1]} {parts[0]}"
 
 
 def initials_of(name: str) -> str:
@@ -247,9 +248,11 @@ def prop_img(fid: str, cls: str = "prop") -> str:
     return f'<img class="{cls}" src="/assets/props/{THEME[fid][1]}.webp" alt="" width="44" height="44" loading="lazy">'
 
 
-def family_tiles(facts: list[dict[str, Any]]) -> str:
+def family_tiles(facts: list[dict[str, Any]], only: list[str] | None = None) -> str:
     tiles = []
     for fid, label in FAMILIES:
+        if only is not None and fid not in only:
+            continue
         sub = [f for f in facts if f["family"] == fid]
         count = plural(len(sub), "déclaration vérifiée", "déclarations vérifiées") if sub else "Aucune vérification"
         tiles.append(f'<a class="tile theme" style="--th:{THEME[fid][0]}" href="/sujets/{fid}/">{prop_img(fid)}'
@@ -257,13 +260,52 @@ def family_tiles(facts: list[dict[str, Any]]) -> str:
     return f'<div class="tiles">{"".join(tiles)}</div>'
 
 
-def intro(title: str, text: str = "") -> str:
-    return f'<div><h1>{escape(title)}</h1>{f"<p class=\"muted lede\">{escape(text)}</p>" if text else ""}</div>'
+def char_img(fid: str, cls: str) -> str:
+    return f'<img class="{cls}" src="/assets/characters/{THEME[fid][1]}.webp" alt="" width="339" height="577">'
 
 
-def crumbs(*links: tuple[str, str]) -> str:
-    return '<nav class="crumbs" aria-label="Fil d\'Ariane">' + "".join(
-        f'<a href="{href}">{escape(label)}</a>' for href, label in links) + "</nav>"
+def intro(title: str, text: str = "", stats: list[tuple[Any, str]] | None = None, crew: tuple[str, ...] = (),
+          color: str = "", kicker: str = "") -> str:
+    """En-tête des pages, comme les « hero » de votona.fr : titre, chapeau, pastilles de chiffres, personnages."""
+    style = f' style="--hc:{color}"' if color else ""
+    pills = ('<div class="stats">' + "".join(f"<span><b>{v}</b> {escape(t)}</span>" for v, t in stats) + "</div>") if stats else ""
+    imgs = "".join(char_img(fid, f"crew c{i + 1}") for i, fid in enumerate(crew))
+    return (f'<section class="vhero{"" if crew else " solo"}"{style}>{f"<span class=\"pill-k\">{escape(kicker)}</span>" if kicker else ""}'
+            f'<h1>{escape(title)}</h1>{f"<p>{escape(text)}</p>" if text else ""}{pills}{imgs}</section>')
+
+
+def theme_hero(fid: str, title: str, text: str, kicker: str) -> str:
+    """En-tête d'une famille de sujets : couleur et personnage de la famille, comme les pages sujets de votona.fr."""
+    return (f'<section class="vhero th one" style="--th:{THEME[fid][0]}"><span class="pill-k">{escape(kicker)}</span>'
+            f'<h1>{escape(title)}</h1><p>{escape(text)}</p>{char_img(fid, "hero-char")}</section>')
+
+
+def crumbs(left: tuple[str, str], right: tuple[str, str] | None = None) -> str:
+    """Fil d'Ariane de votona.fr : « ‹ Tous les … » à gauche, raccourci « … › » à droite."""
+    return (f'<nav class="crumbs" aria-label="Fil d\'Ariane"><a href="{left[0]}">‹ {escape(left[1])}</a>'
+            + (f'<a href="{right[0]}">{escape(right[1])} ›</a>' if right else "") + "</nav>")
+
+
+MASCOT = '<img class="btn-mascot" src="/assets/logo-head.webp" alt="" width="34" height="29">'
+LEGEND = ('<p class="legend">Verdicts des rédactions :' + "".join(
+    f'<i{" class=\"unrated\"" if k == "unrated" else f" style=\"background:var(--v-{k})\""}></i>{label.lower()}' for k, label, _ in LEVELS) + "</p>")
+# Recherche dans une liste (même script que la liste des candidats de votona.fr).
+SEARCH_JS = """<script>
+(function(){
+  var q = document.getElementById("q"), items = Array.prototype.slice.call(document.querySelectorAll("[data-search]"));
+  var norm = function(s){ return s.toLowerCase().normalize("NFD").replace(/[\\u0300-\\u036f]/g, ""); };
+  q.addEventListener("input", function(){
+    var term = norm(q.value.trim()), visible = 0;
+    items.forEach(function(el){ var ok = !term || norm(el.getAttribute("data-search")).indexOf(term) !== -1; el.hidden = !ok; if(ok) visible++; });
+    document.getElementById("no-match").style.display = visible ? "none" : "block";
+  });
+})();
+</script>"""
+
+
+def search_box(placeholder: str, empty: str) -> str:
+    return (f'<input id="q" class="q" type="search" placeholder="{escape(placeholder)}" aria-label="{escape(placeholder.rstrip("…"))}">'
+            f'<p id="no-match" class="no-match">{escape(empty)}</p>')
 
 
 # ---------- pages ----------
@@ -352,22 +394,28 @@ def person_page(site: Site, pid: str) -> tuple[str, str, bool]:
     party_line = ("Partis sur la période : " + ", ".join(party_names) if party_names
                   else f'{cand["votona_party"]} (selon Votona)' if cand else "Parti non renseigné sur la période")
     wiki = f' · {ext("https://www.wikidata.org/wiki/" + pid, "fiche Wikidata")}' if pid.startswith("Q") else ""
-    badge = ""
+    color = escape((cand or {}).get("color") or "#7C3AED")
+    party = (cand["votona_party"] if cand else party_names[-1] if party_names else "Parti non renseigné")
+    if cand and cand["status"] == "retiré":
+        party += " · candidature retirée"
+    fams = sorted(((fid, sum(f["family"] == fid for f in facts)) for fid, _ in FAMILIES), key=lambda x: -x[1])
+    props = "".join(f'<img class="hp hp{i + 1}" src="/assets/props/{THEME[fid][1]}.webp" alt="" width="{size}" height="{size}">'
+                    for i, ((fid, n), size) in enumerate(zip(fams, (58, 46, 40, 34))) if n)
+    stat = plural(len(facts), "déclaration vérifiée", "déclarations vérifiées") if facts else "Aucune vérification à ce jour"
+    parts = [crumbs(("/candidats/", "Tous les candidats") if cand else ("/personnalites/", "Toutes les personnalités"), ("/sujets/", "Tous les sujets")),
+             f'<div class="cand-header" style="--cc:{color}"><div class="cand-avatar" aria-hidden="true">{escape(initials)}</div>'
+             f'<div class="cand-id"><h1>{escape(name)}</h1><p class="party">{escape(party)}</p><p class="cand-stat">{stat}</p></div>'
+             f'<div class="hero-props" aria-hidden="true">{props}</div></div>',
+             f'<p class="intro-p">Déclarations de {escape(name)} vérifiées par les rédactions françaises de fact-checking, avec le verdict '
+             f"de chaque rédaction, son libellé d'origine et le lien vers l'article. {escape(SCOPE)}</p>",
+             f'<p class="src-line">{escape(party_line)}{wiki}</p>']
     if cand:
-        status = "Candidature 2027 retirée" if cand["status"] == "retiré" else "Présidentielle 2027"
-        badge = (f'<div style="margin-top:6px;display:flex;flex-wrap:wrap;gap:8px;align-items:center"><span class="badge">{status}</span>'
-                 f'<a href="{escape(cand["votona_url"])}">Ses positions sur Votona</a></div>')
-    parts = [crumbs(("/candidats/", "Candidats 2027") if cand else ("/personnalites/", "Personnalités")),
-             (f'<div class="head cc" style="--cc:{escape(cand.get("color") or "#7C3AED")}"><div class="avatar cc" aria-hidden="true">' if cand
-              else '<div class="head"><div class="avatar" aria-hidden="true">') + f'{escape(initials)}</div><div style="min-width:0">'
-             f'<h1>{escape(name)}</h1>{badge}<p class="muted" style="margin:4px 0 0">{escape(party_line)}{wiki}</p></div></div>']
+        parts.append(f'<a class="btn btn-accent" href="{escape(cand["votona_url"])}">{MASCOT}Ses positions sur Votona, sujet par sujet</a>')
     if facts:
         parts.append(summary(site, facts, "Toute la période."))
-        fams = [(fid, label) for fid, label in FAMILIES if any(f["family"] == fid for f in facts)]
-        if fams:
-            parts.append('<div class="tags"><span class="small muted">Sujets vérifiés :</span>' + "".join(
-                f'<a class="chip" href="/sujets/{fid}/">{escape(label)} · {sum(f["family"] == fid for f in facts)}</a>'
-                for fid, label in fams) + "</div>")
+        present = [fid for fid, n in fams if n]
+        if present:
+            parts.append(f'<section class="sect"><h2>Ses sujets vérifiés</h2>{family_tiles(facts, present)}</section>')
         dated = sorted(f["claim_date"] for f in facts if f["claim_date"])
         if len(dated) > 1:
             def day(d: str) -> int:
@@ -385,8 +433,6 @@ def person_page(site: Site, pid: str) -> tuple[str, str, bool]:
     else:
         parts.append('<p class="notice">Aucune vérification publiée à ce jour par les rédactions suivies. Cela ne dit rien de '
                      "l'exactitude de ses propos : les rédactions choisissent ce qu'elles vérifient.</p>")
-    if cand:
-        parts.append(f'<a class="btn btn-ghost btn-row" href="{escape(cand["votona_url"])}">Voir ses positions sur Votona, sujet par sujet</a>')
     n = len(facts)
     title = f"{name} : déclarations vérifiées par les fact-checkers - Votona Observatoire"
     desc = (f"{plural(n, 'déclaration', 'déclarations')} de {name} vérifiée{'s' if n > 1 else ''} par les rédactions françaises "
@@ -412,9 +458,11 @@ def party_page(site: Site, party_id: str) -> tuple[str, str]:
         f'<a class="linkish" href="{site.person_url[c["pid"]]}">{escape(c["name"])}</a> '
         f'(<a href="{escape(c["votona_url"])}">positions sur Votona</a>)' for c in cands) + "</p>") if cands else ""
     body = "\n".join([
-        crumbs(("/partis/", "Partis")),
+        crumbs(("/partis/", "Tous les partis"), ("/candidats/", "Tous les candidats")),
         intro(name, "Déclarations de personnes affiliées à ce parti à la date où elles ont été faites. La couverture dépend des "
-                    "rédactions et des affiliations connues : elle ne représente pas l'ensemble du parti."),
+                    "rédactions et des affiliations connues : elle ne représente pas l'ensemble du parti.",
+              [(len(facts), "déclarations vérifiées" if len(facts) > 1 else "déclaration vérifiée"),
+               (len(by_person), "personnes" if len(by_person) > 1 else "personne")], kicker="Parti"),
         cand_note, summary(site, facts, "Toute la période."),
         f'<section class="sect"><h2>Par personne</h2><div class="table-box"><table class="plain"><thead><tr>{head}</tr></thead>'
         f"<tbody>{rows}</tbody></table></div></section>",
@@ -436,11 +484,10 @@ def family_page(site: Site, fid: str) -> tuple[str, str]:
         f'<a href="{VOTONA}/sujets/{t["slug"]}/">Que proposent les candidats ? (Votona)</a></div></div>'
         f'<span class="n2">{str(t["n"]) + " vérif." if t["n"] else "aucune vérification"}</span></div>' for t in topics)
     body = "\n".join([
-        crumbs(("/sujets/", "Sujets")),
-        f'<div class="theme-hero" style="--th:{THEME[fid][0]}">{prop_img(fid)}<div class="theme-pill">Sujet · '
-        f'{plural(len(facts), "déclaration vérifiée", "déclarations vérifiées")}</div><h1>{escape(label)}</h1>'
-        f'<p class="muted" style="margin:8px 0 0">Thème attribué automatiquement, à titre indicatif. {len(scoped)} de ces '
-        f"déclarations viennent des candidats 2027 ou de leurs partis.</p></div>",
+        crumbs(("/sujets/", "Tous les sujets"), ("/candidats/", "Tous les candidats")),
+        theme_hero(fid, label, f"Thème attribué automatiquement, à titre indicatif. {len(scoped)} de ces déclarations viennent "
+                               "des candidats 2027 ou de leurs partis.",
+                   "Sujet · " + plural(len(facts), "déclaration vérifiée", "déclarations vérifiées")),
         summary(site, facts, "Toute la vie politique, toute la période."),
         f'<section class="sect"><h2>Les sujets du test Votona</h2><div class="topics">{topic_rows}</div></section>',
         f'<section class="sect"><h2>Les {len(facts)} faits</h2>{fact_list(site, facts)}</section>'])
@@ -462,32 +509,48 @@ PEOPLE_INTRO = ("Aucun classement : le nombre de vérifications dépend des choi
 
 def index_pages(site: Site) -> dict[str, str]:
     pages = {}
-    # Candidats 2027 : ordre alphabétique du nom de famille (identifiant Votona), retraits en fin de liste.
-    cards = []
+    with_facts = [c for c in site.candidates if site.of_person(c["pid"])]
+    scoped = [f for f in site.facts if site.in_scope_2027(f)]
+    # Candidats 2027 : même carte que la liste des candidats de votona.fr, ordre alphabétique du nom
+    # de famille (identifiant Votona), retraits en fin de liste.
+    items = []
     for c in sorted(site.candidates, key=lambda c: (c["status"] == "retiré", c["votona_id"])):
         facts = site.of_person(c["pid"])
-        initials = initials_of(c["name"])
-        cards.append(f'<article class="cand cc{" withdrawn" if c["status"] == "retiré" else ""}" style="--cc:{escape(c.get("color") or "#7C3AED")}"><div class="top">'
-                     f'<span class="nm"><span class="av" aria-hidden="true">{escape(initials)}</span>'
-                     f'<a class="linkish" href="{site.person_url[c["pid"]]}">{escape(c["name"])}</a></span>'
-                     f'<span class="cnt">{f"{len(facts)} vérif." if facts else "—"}</span></div>'
-                     f'<div class="small muted">{escape(c["votona_party"])}{" · candidature retirée" if c["status"] == "retiré" else ""}</div>'
-                     f'{mini_bar(facts) if facts else ""}<div class="small"><a href="{escape(c["votona_url"])}">Ses positions sur Votona</a></div></article>')
+        party = c["votona_party"] + (" · candidature retirée" if c["status"] == "retiré" else "")
+        meta = (f'{mini_bar(facts)}<span class="meta">{plural(len(facts), "déclaration vérifiée", "déclarations vérifiées")}</span>'
+                if facts else '<span class="meta">Aucune vérification à ce jour</span>')
+        items.append(f'<li data-search="{escape(c["name"] + " " + party)}"{" class=\"out\"" if c["status"] == "retiré" else ""} '
+                     f'style="--cc:{escape(c.get("color") or "#7C3AED")}"><a href="{site.person_url[c["pid"]]}">'
+                     f'<span class="av" aria-hidden="true">{escape(initials_of(c["name"]))}</span><span class="who">'
+                     f'<span class="nm">{escape(c["name"])}</span><span class="party">{escape(party)}</span>{meta}</span></a></li>')
     pages["/candidats/"] = page(site, "/candidats/", "Candidats à la présidentielle 2027 : déclarations vérifiées - Votona Observatoire",
                                 "Les déclarations des candidats à la présidentielle 2027 vérifiées par les rédactions françaises de fact-checking, candidat par candidat.",
-                                "personnalites", "\n".join([intro("Personnalités", PEOPLE_INTRO), people_tabs("candidats"),
-                                f'<div class="cands">{"".join(cards)}</div>',
-                                '<p class="small muted">La même liste que sur Votona. Les vérifications ne comptent jamais dans le classement de Votona : les deux outils sont séparés.</p>']))
+                                "personnalites", "\n".join([
+                                    intro("Les candidats 2027 vérifiés par les fact-\u2060checkers", PEOPLE_INTRO,
+                                          [(len(with_facts), "candidats vérifiés"), (len(scoped), "déclarations vérifiées")],
+                                          ("societe", "europe", "defense")),
+                                    people_tabs("candidats"),
+                                    '<div class="btn-pair"><a class="btn btn-ghost" href="/#faits">Tous les faits, avec filtres</a>'
+                                    '<a class="btn btn-ghost" href="/sujets/">Voir les vérifications sujet par sujet</a></div>',
+                                    search_box("Rechercher un candidat ou un parti…", "Aucun candidat ne correspond à cette recherche."),
+                                    LEGEND, f'<ul class="vlist">{"".join(items)}</ul>',
+                                    '<p class="small muted">La même liste que sur Votona. Les vérifications ne comptent jamais dans le classement de Votona : les deux outils sont séparés.</p>',
+                                    SEARCH_JS]))
     by_person: dict[str, int] = defaultdict(int)
     for f in site.facts:
         by_person[f["person"]["id"]] += 1
-    links = "".join(f'<a href="{site.person_url[pid]}"><span class="n1">{escape(site.persons[pid])}{" · 2027" if pid in site.candidate_by_pid else ""}</span>'
+    links = "".join(f'<a data-search="{escape(site.persons[pid])}" href="{site.person_url[pid]}"><span class="n1">{escape(site.persons[pid])}{" · 2027" if pid in site.candidate_by_pid else ""}</span>'
                     f'<span class="n2">{n} vérif.</span></a>' for pid, n in sorted(by_person.items(), key=lambda x: site.persons[x[0]]))
     pages["/personnalites/"] = page(site, "/personnalites/", "Personnalités politiques : déclarations vérifiées - Votona Observatoire",
                                     "Toutes les personnalités politiques françaises dont une déclaration a été vérifiée par les rédactions de fact-checking.",
-                                    "personnalites", "\n".join([intro("Personnalités", PEOPLE_INTRO), people_tabs("toutes"),
-                                    f'<p class="small muted" style="margin:0">{plural(len(by_person), "personnalité", "personnalités")} avec au moins une vérification, par ordre alphabétique.</p>',
-                                    f'<div class="people">{links}</div>']))
+                                    "personnalites", "\n".join([
+                                        intro("Toutes les personnalités vérifiées", PEOPLE_INTRO,
+                                              [(len(by_person), "personnalités"), (len(site.facts), "déclarations vérifiées")],
+                                              ("economie", "securite", "ecologie")),
+                                        people_tabs("toutes"),
+                                        search_box("Rechercher une personnalité…", "Aucune personnalité ne correspond à cette recherche."),
+                                        f'<p class="small muted" style="margin:0">{plural(len(by_person), "personnalité", "personnalités")} avec au moins une vérification, par ordre alphabétique.</p>',
+                                        f'<div class="people">{links}</div>', SEARCH_JS]))
     by_party: dict[str, list] = defaultdict(list)
     for f in site.facts:
         if f["party"]["id"]:
@@ -500,7 +563,7 @@ def index_pages(site: Site) -> dict[str, str]:
         tiles = []
         for pid in ids:
             cands = [c["name"] for c in site.candidates if c["party_id"] == pid and c["status"] != "retiré"]
-            tiles.append(f'<a class="tile" href="{site.party_url[pid]}"><span class="t">{escape(site.parties[pid])}</span>'
+            tiles.append(f'<a class="tile" data-search="{escape(site.parties[pid] + " " + " ".join(cands))}" href="{site.party_url[pid]}"><span class="t">{escape(site.parties[pid])}</span>'
                          f'<span class="c">{plural(len(by_party[pid]), "déclaration vérifiée", "déclarations vérifiées")}'
                          f'{" · candidat : " + escape(", ".join(cands)) if cands else ""}</span>{mini_bar(by_party[pid])}</a>')
         return f'<section class="sect"><h2>{title}</h2><div class="tiles">{"".join(tiles)}</div></section>'
@@ -508,18 +571,26 @@ def index_pages(site: Site) -> dict[str, str]:
     cp = site.candidate_parties
     pages["/partis/"] = page(site, "/partis/", "Partis politiques : déclarations vérifiées de leurs membres - Votona Observatoire",
                              "Les déclarations des membres de chaque parti, vérifiées par les rédactions françaises de fact-checking, selon le parti à la date de la déclaration.",
-                             "partis", "\n".join([intro("Partis", "Parti en vigueur à la date de chaque déclaration, d'après des affiliations publiques et datées. "
-                                                        + plural(unknown, "déclaration n'a", "déclarations n'ont") + " pas encore de parti renseigné et ne "
-                                                        + ("sont comptées" if unknown > 1 else "est comptée") + " dans aucun parti."),
-                                                  block("Partis des candidats 2027", [p for p in ids if p in cp]),
-                                                  block("Autres partis", [p for p in ids if p not in cp])]))
-    scoped = [f for f in site.facts if site.in_scope_2027(f)]
+                             "partis", "\n".join([
+                                 intro("Les partis et leurs déclarations vérifiées",
+                                       "Parti en vigueur à la date de chaque déclaration, d'après des affiliations publiques et datées. "
+                                       + plural(unknown, "déclaration n'a", "déclarations n'ont") + " pas encore de parti renseigné et ne "
+                                       + ("sont comptées" if unknown > 1 else "est comptée") + " dans aucun parti.",
+                                       [(len(ids), "partis"), (len([p for p in ids if p in cp]), "partis de candidats 2027")],
+                                       ("europe", "economie", "social")),
+                                 search_box("Rechercher un parti ou un candidat…", "Aucun parti ne correspond à cette recherche."),
+                                 block("Partis des candidats 2027", [p for p in ids if p in cp]),
+                                 block("Autres partis", [p for p in ids if p not in cp]), SEARCH_JS]))
     blind = [t for t in site.topics if not any(any(x["slug"] == t["slug"] for x in f["topics"]) for f in scoped)]
     pages["/sujets/"] = page(site, "/sujets/", "Sujets : les déclarations politiques vérifiées par thème - Votona Observatoire",
                              "Les déclarations politiques vérifiées, classées selon les 7 familles et les sujets du test présidentielle 2027 de Votona, avec les angles morts.",
                              "sujets", "\n".join([
-                                 intro("Sujets", f"Les déclarations vérifiées classées selon les 7 familles et les {len(site.topics)} sujets du test Votona. "
-                                                 "Le thème est attribué automatiquement à partir de la déclaration et du titre de l'article : il est indicatif et ne qualifie jamais le propos."),
+                                 intro("Les sujets des déclarations vérifiées",
+                                       f"Les déclarations vérifiées classées selon les 7 familles et les {len(site.topics)} sujets du test Votona. "
+                                       "Le thème est attribué automatiquement à partir de la déclaration et du titre de l'article : il est indicatif et ne qualifie jamais le propos.",
+                                       [(len(site.topics), "sujets suivis"), (7, "thèmes"), (len(site.facts), "déclarations vérifiées")],
+                                       ("ecologie", "defense", "economie"), color="#06D6A0"),
+                                 f'<a class="btn btn-accent" href="{VOTONA}/">{MASCOT}Et toi ? Réponds aux questions et découvre quel candidat te correspond</a>',
                                  family_tiles(site.facts),
                                  '<section class="sect"><h2>Angles morts</h2>'
                                  f'<p class="muted" style="margin:0">{len(blind)} sujets du test Votona sur {len(site.topics)} n\'ont aucune déclaration vérifiée '
@@ -585,8 +656,7 @@ def methode_page(site: Site) -> str:
 def cited_page(site: Site) -> str:
     """« Vous êtes cité ? » : information des personnes citées et procédure (RGPD, cadrage « Conformité »)."""
     body = f"""<div class="prose">
-<h1>Vous êtes cité ?</h1>
-<p class="muted lede">Votona Observatoire rassemble des vérifications publiées par des rédactions de fact-checking sur des déclarations publiques de personnalités politiques. Voici quelles données vous concernant sont traitées, d'où elles viennent, et comment demander une correction ou vous opposer.</p>
+<section class="mhero"><img src="/assets/logo-head.webp" alt="" width="104" height="83"><div><h1>Vous êtes cité ?</h1><p>Votona Observatoire rassemble des vérifications publiées par des rédactions de fact-checking sur des déclarations publiques de personnalités politiques. Voici quelles données vous concernant sont traitées, d'où elles viennent, et comment demander une correction ou vous opposer.</p></div></section>
 <h2>Ce que l'Observatoire publie</h2>
 <ul>
 <li>Votre nom et, s'il est connu, le parti auquel vous étiez affilié à la date de la déclaration, d'après des affiliations publiques et datées.</li>

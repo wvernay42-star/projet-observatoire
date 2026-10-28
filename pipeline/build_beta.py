@@ -31,6 +31,8 @@ LOGO = Path(__file__).resolve().parents[1] / "web" / "beta" / "logo-head.webp"
 # Accessoires des 7 familles de sujets, copiés de Votona (assets/props) : même identité visuelle.
 PROPS_PLACEHOLDER = "/*__PROPS__*/{}"
 PROPS_DIR = LOGO.with_name("props")
+CHARS_DIR = LOGO.with_name("characters")
+CHARS_PLACEHOLDER = "/*__CHARS__*/{}"
 CONTACT = "contact@votona.fr"
 SITE_URL = "https://observatoire.votona.fr"  # adresse de production (liens absolus du flux RSS)
 
@@ -61,11 +63,13 @@ def build(export_dir: Path = EXPORT_DIR, template: Path = TEMPLATE, output: Path
                              separators=(",", ":")).replace("</", "<\\/")
         if site:
             props = {f.stem: f"/assets/props/{f.name}" for f in sorted(PROPS_DIR.glob("*.webp"))}
+            chars = {f.stem: f"/assets/characters/{f.name}" for f in sorted(CHARS_DIR.glob("*.webp"))}
         else:
             props = {f.stem: "data:image/webp;base64," + base64.b64encode(f.read_bytes()).decode()
                      for f in sorted(PROPS_DIR.glob("*.webp"))}
+            chars = {}  # artefact : pas de personnages (poids), l'en-tête s'affiche sans
         return (html.replace(PLACEHOLDER, payload).replace(LOGO_PLACEHOLDER, logo)
-                .replace(PROPS_PLACEHOLDER, json.dumps(props)))
+                .replace(PROPS_PLACEHOLDER, json.dumps(props)).replace(CHARS_PLACEHOLDER, json.dumps(chars)))
 
     # Artefact : logo embarqué (aucune ressource externe) ; site : fichier servi à côté de la page.
     output.write_text(page(False, "data:image/webp;base64," + base64.b64encode(LOGO.read_bytes()).decode()), encoding="utf-8")
@@ -112,6 +116,9 @@ def build_site(page: str, site_dir: Path = SITE_DIR) -> None:
     (site_dir / "assets" / "props").mkdir(exist_ok=True)
     for f in PROPS_DIR.glob("*.webp"):
         shutil.copyfile(f, site_dir / "assets" / "props" / f.name)
+    (site_dir / "assets" / "characters").mkdir(exist_ok=True)  # personnages de Votona (en-têtes)
+    for f in CHARS_DIR.glob("*.webp"):
+        shutil.copyfile(f, site_dir / "assets" / "characters" / f.name)
     favicon = LOGO.with_name("favicon-48.png")
     if favicon.exists():
         shutil.copyfile(favicon, site_dir / "assets" / "favicon-48.png")

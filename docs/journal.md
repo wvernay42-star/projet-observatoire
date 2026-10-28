@@ -21,6 +21,20 @@ Les décisions durables sont aussi consignées dans [decisions.md](decisions.md)
 | — | Hébergement préprod (`preprod`) / prod (`main`) | ✅ en ligne (26/10) — projet Vercel `votona-observatoire` ; production indexable depuis le 28/10 |
 | — | Liens Votona → Observatoire | ⏳ actifs sur `draft` (test, 26/10) ; `main` sur demande du porteur |
 
+## 2026-10-29 — Même ergonomie que les pages de votona.fr
+
+- Composants de `generate-candidate-pages.js` repris à l'identique (`template.html`, `build_pages.py`) :
+  en-tête illustré (`.vhero`, personnages de Votona copiés dans `web/beta/characters/`, pastilles de
+  chiffres), fil d'Ariane « ‹ Tous les … / … › », titres de section à 20 px, espacements, boutons.
+- Fiches personnes : en-tête `.cand-header` de Votona (avatar, parti, pastille du nombre de
+  vérifications, accessoires des familles les plus vérifiées), bouton principal « Ses positions
+  sur Votona », tuiles « Ses sujets vérifiés ».
+- Listes : cartes candidats de votona.fr (carte entière cliquable), recherche sur les pages
+  Candidats, Personnalités et Partis, légende des verdicts ; bouton « Et toi ? » vers le test sur
+  la page Sujets ; en-tête coloré avec le personnage de la famille sur chaque page de sujet.
+- Application (accueil, faits, et vues de l'artefact) alignée de la même façon. « 1er » pour le
+  premier jour du mois. 80 tests OK. En préproduction.
+
 ## 2026-10-28 (nuit) — Encart sur les fiches Votona, mesure d'audience
 
 - `site/donnees/votona.json` (`build_pages.votona_summary`) : par candidat, nombre de déclarations
