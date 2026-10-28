@@ -30,6 +30,7 @@ Les décisions durables sont aussi consignées dans [decisions.md](decisions.md)
 - Files de validation : 0 verdict, 1 attribution, 61 partis ; files déposées sur la page. Part de verdicts positifs (toutes vérifications) : TF1 Info 20,1 %, franceinfo 29,0 %, Poligraph 20,8 %, AFP Factuel 0,4 % (échelle partielle), Décodeurs 1,6 % (partielle), 20 Minutes 11,0 %, CheckNews 0 % (échelle partielle).
 - Alertes : aucune. 70 tests réussis.
 - Beta republiée (artefact, version 10) ; site statique et flux régénérés.
+- Préproduction non mise à jour : changements en attente sur preprod.
 
 ## 2026-10-27 — Routine quotidienne
 
