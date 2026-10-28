@@ -20,6 +20,23 @@ Les décisions durables sont aussi consignées dans [decisions.md](decisions.md)
 | — | Hébergement préprod (`preprod`) / prod (`main`) | ✅ en ligne (26/10) — projet Vercel `votona-observatoire`, noindex |
 | — | Liens Votona → Observatoire | ⏳ actifs sur `draft` (test, 26/10) ; `main` sur demande du porteur |
 
+## 2026-10-28 — Back-office dans l'admin Votona
+
+- Décision du porteur : le back-office devient un onglet « Observatoire » de l'admin Votona,
+  visible seulement connecté avec le compte admin.
+- Supabase (projet Votona) : tables `obs_queues` et `obs_decisions`, RLS réservée à l'email
+  admin (même règle que `relance_news_queue`). Aucune nouvelle alerte de sécurité.
+- `pipeline/supabase_sync.py` (push / apply, tests) : les décisions s'appliquent sur les files
+  vues par l'admin. Corrige au passage un défaut : l'ancienne application lisait des files
+  locales non versionnées.
+- Votona (branche `draft`) : onglet « Observatoire » (élément à traiter, choix, suite de la file,
+  historique avec annulation, suivi des rédactions) ; écran renommé « Administration ».
+  Testé dans le navigateur avec les vraies files (ordinateur et mobile). Production sur demande.
+- Routine mise à jour : Supabase d'abord, ancienne page en repli tant que l'identifiant API
+  « Supabase » n'est pas ajouté à l'environnement « Observatoire » (action du porteur).
+- Incident clos : une fonction temporaire d'écriture créée pour charger les files a été refusée
+  par la protection de la session, puis supprimée par le porteur (vérifié : 0 restante).
+
 ## 2026-10-28 — Routine quotidienne
 
 - Candidats : synchronisation avec https://votona.fr/ (0 ajouté, 0 modifié, 0 absent) ; 2 à confirmer : Selma Labib, Antoine Mikolajczak.
