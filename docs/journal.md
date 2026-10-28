@@ -20,6 +20,18 @@ Les décisions durables sont aussi consignées dans [decisions.md](decisions.md)
 | — | Hébergement préprod (`preprod`) / prod (`main`) | ✅ en ligne (26/10) — projet Vercel `votona-observatoire`, noindex |
 | — | Liens Votona → Observatoire | ⏳ actifs sur `draft` (test, 26/10) ; `main` sur demande du porteur |
 
+## 2026-10-28 — Routine quotidienne (2e passage, lancement manuel)
+
+- Candidats : synchronisation avec https://votona.fr/ (0 ajouté, 0 modifié, 0 absent) ; 2 à confirmer : Selma Labib, Antoine Mikolajczak.
+- **Supabase : accès refusé** (`supabase_sync apply` et `push` : « identifiant API Supabase manquant dans l'environnement Observatoire »). Les files n'ont donc pas pu être déposées dans l'onglet « Observatoire » de l'admin Votona ; repli sur l'ancienne page.
+- Décisions (ancienne page, 62 documents) : 61 appliquées (0 libellé, 1 attribution, 60 partis), 0 ignorée ; documents supprimés de la collection « decisions ». Aucune décision de l'admin Votona (Supabase inaccessible). rating_map.csv inchangé.
+- Collecte : google_factcheck 24 récupérées / 0 nouvelle ; datacommons_feed 4 / 0 nouvelle. Aucune erreur de connecteur.
+- Base : 7 591 vérifications ; claims : auto_sure 454, validated 173, to_review 0, rejected 6 894.
+- Exportées : 627 entrées (626 la veille).
+- Files de validation : 0 verdict, 0 attribution, 2 partis ; déposées sur l'ancienne page uniquement. Part de verdicts positifs (toutes vérifications) : TF1 Info 20,1 %, franceinfo 29,0 %, Poligraph 20,8 %, AFP Factuel 0,4 % (échelle partielle), Décodeurs 1,6 % (partielle), 20 Minutes 11,0 %, CheckNews 0 % (partielle).
+- Alertes : aucune hors accès Supabase. 73 tests réussis.
+- Beta republiée (artefact, version 11) ; site statique et flux régénérés.
+
 ## 2026-10-28 — Back-office dans l'admin Votona
 
 - Décision du porteur : le back-office devient un onglet « Observatoire » de l'admin Votona,

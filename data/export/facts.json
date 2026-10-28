@@ -1,5 +1,44 @@
 [
  {
+  "id": "c_7da686789c2c2cdd",
+  "person": {
+   "id": "Q33138734",
+   "name": "Édouard Geffray",
+   "votona_id": null
+  },
+  "party": {
+   "id": null,
+   "name": null,
+   "short_name": null,
+   "status": "none"
+  },
+  "claim_text": "Les concours d'entrée pour devenir professeur ont fait le plein en 2026",
+  "claim_date": "2026-10-27",
+  "date_precision": "day",
+  "date_is_fallback": true,
+  "country": "FR",
+  "attribution_status": "validated",
+  "theme": "Société",
+  "votona_topics": [
+   {
+    "slug": "redonner-davantage-dautonomie-et-de-selection-aux",
+    "label": "Donner plus d'autonomie aux établissements scolaires, y compris pour choisir leurs élèves"
+   }
+  ],
+  "verdict": "half_true",
+  "reviews": [
+   {
+    "source_id": "tf1info_verificateurs",
+    "source_name": "TF1 Info – Les Vérificateurs",
+    "url": "https://www.tf1info.fr/societe/colere-lyceenne-les-concours-d-entree-pour-devenir-professeur-font-ils-vraiment-le-plein-2472257.html",
+    "title": "VÉRIF' - Colère lycéenne : les concours d'entrée pour devenir professeur font-ils vraiment \"le plein\" ?",
+    "rating_original": "En partie vrai",
+    "rating_normalized": "half_true",
+    "review_date": "2026-10-27"
+   }
+  ]
+ },
+ {
   "id": "c_17ba49cd0974d011",
   "person": {
    "id": "Q3052772",
@@ -7247,10 +7286,10 @@
    "votona_id": "lisnard"
   },
   "party": {
-   "id": null,
-   "name": null,
-   "short_name": null,
-   "status": "ambiguous"
+   "id": "Q123528596",
+   "name": "Nouvelle Énergie",
+   "short_name": "",
+   "status": "ok"
   },
   "claim_text": "\"Les collectivités territoriales ne représentent plus que 8% de la dette\"",
   "claim_date": "2024-10-08",
@@ -7393,10 +7432,10 @@
    "votona_id": null
   },
   "party": {
-   "id": null,
-   "name": null,
-   "short_name": null,
-   "status": "undated"
+   "id": "Q20012759",
+   "name": "Les Républicains",
+   "short_name": "LR",
+   "status": "ok"
   },
   "claim_text": "\"Fusionner des services publics\" permet de faire des économies",
   "claim_date": "2024-10-02",
@@ -7466,10 +7505,10 @@
    "votona_id": null
   },
   "party": {
-   "id": null,
-   "name": null,
-   "short_name": null,
-   "status": "undated"
+   "id": "Q12962",
+   "name": "Debout la France",
+   "short_name": "DLF",
+   "status": "ok"
   },
   "claim_text": "Des migrants \"viennent en France illégalement, se font poser un anneau gastrique et repartent\"",
   "claim_date": "2024-09-29",
@@ -7587,10 +7626,10 @@
    "votona_id": null
   },
   "party": {
-   "id": null,
-   "name": null,
-   "short_name": null,
-   "status": "undated"
+   "id": "Q20012759",
+   "name": "Les Républicains",
+   "short_name": "LR",
+   "status": "ok"
   },
   "claim_text": "Michel Barnier dit qu'il est \"un paysan\"",
   "claim_date": "2024-09-13",
@@ -7621,10 +7660,10 @@
    "votona_id": null
   },
   "party": {
-   "id": null,
-   "name": null,
-   "short_name": null,
-   "status": "undated"
+   "id": "Q613786",
+   "name": "Les Écologistes – Europe Écologie Les Verts",
+   "short_name": "EELV",
+   "status": "ok"
   },
   "claim_text": "Eric Piolle a-t-il parlé de \"balle perdue\" et d'\"accident de la circulation\" concernant le meurtre d'un agent municipal à Grenoble ?",
   "claim_date": "2024-09-11",
@@ -7694,10 +7733,10 @@
    "votona_id": null
   },
   "party": {
-   "id": null,
-   "name": null,
-   "short_name": null,
-   "status": "undated"
+   "id": "Q23731823",
+   "name": "Renaissance",
+   "short_name": "RE",
+   "status": "ok"
   },
   "claim_text": "Le vaccin polio empoisonne les enfants de Gaza",
   "claim_date": "2024-09-10",
@@ -7767,10 +7806,10 @@
    "votona_id": null
   },
   "party": {
-   "id": null,
-   "name": null,
-   "short_name": null,
-   "status": "ambiguous"
+   "id": "Q27978402",
+   "name": "La France insoumise",
+   "short_name": "LFI",
+   "status": "ok"
   },
   "claim_text": "\"Les 500 plus riches de France possèdent 45% du PIB\", \"La France est championne d'Europe des dividendes\", \"La France est championne d'Europe des aides aux entreprises\"",
   "claim_date": "2024-09-08",
@@ -7835,10 +7874,10 @@
    "votona_id": null
   },
   "party": {
-   "id": null,
-   "name": null,
-   "short_name": null,
-   "status": "ambiguous"
+   "id": "Q127038760",
+   "name": "Union des droites pour la République",
+   "short_name": "UDR",
+   "status": "ok"
   },
   "claim_text": "\"Que ce soit les clandestins ou des étrangers en situation légale, on franchit des records\"",
   "claim_date": "2024-09-03",
@@ -7942,10 +7981,10 @@
    "votona_id": null
   },
   "party": {
-   "id": null,
-   "name": null,
-   "short_name": null,
-   "status": "ambiguous"
+   "id": "Q205150",
+   "name": "Rassemblement national",
+   "short_name": "RN",
+   "status": "ok"
   },
   "claim_text": "Il y a \"70 refus d'obtempérer par jour\"",
   "claim_date": "2024-08-26",
@@ -7985,10 +8024,10 @@
    "votona_id": null
   },
   "party": {
-   "id": null,
-   "name": null,
-   "short_name": null,
-   "status": "undated"
+   "id": "Q613786",
+   "name": "Les Écologistes – Europe Écologie Les Verts",
+   "short_name": "EELV",
+   "status": "ok"
   },
   "claim_text": "Les eaux usées de Paris vont directement dans la Seine",
   "claim_date": "2024-07-31",
@@ -8136,10 +8175,10 @@
    "votona_id": "ruffin"
   },
   "party": {
-   "id": null,
-   "name": null,
-   "short_name": null,
-   "status": "undated"
+   "id": "Q192821",
+   "name": "Parti communiste français",
+   "short_name": "PCF",
+   "status": "ok"
   },
   "claim_text": "Les aides aux entreprises sont-elles devenues le \"premier poste de dépense de l'État\" ?",
   "claim_date": "2024-07-03",
@@ -8204,10 +8243,10 @@
    "votona_id": null
   },
   "party": {
-   "id": null,
-   "name": null,
-   "short_name": null,
-   "status": "undated"
+   "id": "Q205150",
+   "name": "Rassemblement national",
+   "short_name": "RN",
+   "status": "ok"
   },
   "claim_text": "Le RN ne peut pas retirer la candidature de ses candidats problématiques",
   "claim_date": "2024-07-02",
@@ -8663,7 +8702,7 @@
    "id": null,
    "name": null,
    "short_name": null,
-   "status": "none"
+   "status": "no_party"
   },
   "claim_text": "Le RN envisage de \"liquider la Poste\" et de \"confier ses activités à Amazon\"",
   "claim_date": "2024-06-13",
@@ -9632,10 +9671,10 @@
    "votona_id": null
   },
   "party": {
-   "id": null,
-   "name": null,
-   "short_name": null,
-   "status": "undated"
+   "id": "Q23731823",
+   "name": "Renaissance",
+   "short_name": "RE",
+   "status": "ok"
   },
   "claim_text": "Deux tiers des Français sont éligibles à un logement social",
   "claim_date": "2024-05-03",
@@ -10506,10 +10545,10 @@
    "votona_id": null
   },
   "party": {
-   "id": null,
-   "name": null,
-   "short_name": null,
-   "status": "undated"
+   "id": "Q12962",
+   "name": "Debout la France",
+   "short_name": "DLF",
+   "status": "ok"
   },
   "claim_text": "\"Si vous passez une musique pour une crémation, il faut payer la SACEM.\"",
   "claim_date": "2024-04-04",
@@ -10543,7 +10582,7 @@
    "id": null,
    "name": null,
    "short_name": null,
-   "status": "none"
+   "status": "no_party"
   },
   "claim_text": "\"Il faudrait aujourd'hui 1500 ans pour que tous les établissements privés sous contrat soient audités\"",
   "claim_date": "2024-04-03",
@@ -10865,10 +10904,10 @@
    "votona_id": null
   },
   "party": {
-   "id": null,
-   "name": null,
-   "short_name": null,
-   "status": "ambiguous"
+   "id": "Q205150",
+   "name": "Rassemblement national",
+   "short_name": "RN",
+   "status": "ok"
   },
   "claim_text": "La France a livré des Mistral à la Russie qui sont désormais probablement utilisés pour faire la guerre en Ukraine",
   "claim_date": "2024-03-07",
@@ -11079,10 +11118,10 @@
    "votona_id": null
   },
   "party": {
-   "id": null,
-   "name": null,
-   "short_name": null,
-   "status": "undated"
+   "id": "Q23731823",
+   "name": "Renaissance",
+   "short_name": "RE",
+   "status": "ok"
   },
   "claim_text": "La polio n'est pas provoquée par un virus donc le vaccin ne fonctionne pas",
   "claim_date": "2024-02-26",
@@ -11293,10 +11332,10 @@
    "votona_id": null
   },
   "party": {
-   "id": null,
-   "name": null,
-   "short_name": null,
-   "status": "undated"
+   "id": "Q23731823",
+   "name": "Renaissance",
+   "short_name": "RE",
+   "status": "ok"
   },
   "claim_text": "Plus un patient consommera de médicaments, plus le médecin sera rémunéré",
   "claim_date": "2024-02-13",
@@ -12275,10 +12314,10 @@
    "votona_id": "faure"
   },
   "party": {
-   "id": null,
-   "name": null,
-   "short_name": null,
-   "status": "undated"
+   "id": "Q170972",
+   "name": "Parti socialiste",
+   "short_name": "PS",
+   "status": "ok"
   },
   "claim_text": "\"97 milliards ont été distribués aux actionnaires dans l'année qui s'est écoulé pour le CAC 40. C'est dix fois plus que l'inflation en vingt ans et quatre fois plus que ce qu'on avait pu observer jusqu'ici\"",
   "claim_date": "2024-01-08",
@@ -12309,10 +12348,10 @@
    "votona_id": null
   },
   "party": {
-   "id": null,
-   "name": null,
-   "short_name": null,
-   "status": "undated"
+   "id": "Q12962",
+   "name": "Debout la France",
+   "short_name": "DLF",
+   "status": "ok"
   },
   "claim_text": "\"Non, ça ne rapporte pas d'accueillir des étudiants étrangers.\"",
   "claim_date": "2023-12-20",
@@ -12856,7 +12895,7 @@
    "id": null,
    "name": null,
    "short_name": null,
-   "status": "none"
+   "status": "no_party"
   },
   "claim_text": "L'Arcom peut-elle réguler la diffusion de la téléréalité \"Frenchie Shore\" et la publication d'extraits sur les réseaux sociaux ?",
   "claim_date": "2023-11-19",
@@ -13028,10 +13067,10 @@
    "votona_id": null
   },
   "party": {
-   "id": null,
-   "name": null,
-   "short_name": null,
-   "status": "none"
+   "id": "Q58366009",
+   "name": "Place publique",
+   "short_name": "PP",
+   "status": "ok"
   },
   "claim_text": "La mortalité des sans-papiers a augmenté de 20% en Espagne, après la réforme réduisant les aides médicales auxquelles ils ont accès",
   "claim_date": "2023-11-06",
@@ -13104,7 +13143,7 @@
    "id": null,
    "name": null,
    "short_name": null,
-   "status": "none"
+   "status": "no_party"
   },
   "claim_text": "Une voiture électrique \"vous permet d'économiser l'équivalent de 1 200 euros d'essence par an\"",
   "claim_date": "2023-11-01",
@@ -13208,10 +13247,10 @@
    "votona_id": null
   },
   "party": {
-   "id": null,
-   "name": null,
-   "short_name": null,
-   "status": "ambiguous"
+   "id": "Q27978402",
+   "name": "La France insoumise",
+   "short_name": "LFI",
+   "status": "ok"
   },
   "claim_text": "\"La France serait le seul endroit [où] on ne pourrait pas manifester notre soutien au peuple palestinien\"",
   "claim_date": "2023-10-28",
@@ -13242,10 +13281,10 @@
    "votona_id": null
   },
   "party": {
-   "id": null,
-   "name": null,
-   "short_name": null,
-   "status": "undated"
+   "id": "Q23731823",
+   "name": "Renaissance",
+   "short_name": "RE",
+   "status": "ok"
   },
   "claim_text": "\"Les Français sont parmi les plus gros consommateurs de médicaments du monde\"",
   "claim_date": "2023-10-26",
@@ -13397,10 +13436,10 @@
    "votona_id": null
   },
   "party": {
-   "id": null,
-   "name": null,
-   "short_name": null,
-   "status": "undated"
+   "id": "Q20012759",
+   "name": "Les Républicains",
+   "short_name": "LR",
+   "status": "ok"
   },
   "claim_text": "\"En temps normal, Israël ne livre que 8% de l’eau consommée à Gaza.\"",
   "claim_date": "2023-10-17",
@@ -13431,10 +13470,10 @@
    "votona_id": null
   },
   "party": {
-   "id": null,
-   "name": null,
-   "short_name": null,
-   "status": "undated"
+   "id": "Q20012759",
+   "name": "Les Républicains",
+   "short_name": "LR",
+   "status": "ok"
   },
   "claim_text": "Le gaz en provenance d'Azerbaïdjan ne représente que 2% de l'approvisionnement de gaz de l'Europe",
   "claim_date": "2023-10-04",
@@ -13499,10 +13538,10 @@
    "votona_id": null
   },
   "party": {
-   "id": null,
-   "name": null,
-   "short_name": null,
-   "status": "undated"
+   "id": "Q170972",
+   "name": "Parti socialiste",
+   "short_name": "PS",
+   "status": "ok"
   },
   "claim_text": "Le trafic routier et la pollution de l'air ont baissé de 40% à Paris en 10 ans",
   "claim_date": "2023-09-28",
@@ -13609,7 +13648,7 @@
    "id": null,
    "name": null,
    "short_name": null,
-   "status": "none"
+   "status": "no_party"
   },
   "claim_text": "L'Etat s'enrichit grâce à l'inflation",
   "claim_date": "2023-09-27",
@@ -13716,7 +13755,7 @@
    "id": null,
    "name": null,
    "short_name": null,
-   "status": "none"
+   "status": "no_party"
   },
   "claim_text": "\"L'inflation enrichit l'Etat\"",
   "claim_date": "2023-09-25",
@@ -13750,7 +13789,7 @@
    "id": null,
    "name": null,
    "short_name": null,
-   "status": "none"
+   "status": "no_party"
   },
   "claim_text": "\"La fraude sociale s'élève à entre 6 et 8 milliards d'euros par an\". / \"Le crédit d'impôt recherche est le dispositif le plus contrôlé\"",
   "claim_date": "2023-09-23",
@@ -13888,10 +13927,10 @@
    "votona_id": null
   },
   "party": {
-   "id": null,
-   "name": null,
-   "short_name": null,
-   "status": "undated"
+   "id": "Q20012759",
+   "name": "Les Républicains",
+   "short_name": "LR",
+   "status": "ok"
   },
   "claim_text": "\"En 2012, la droite exécutait 22% des OQTF, on est tombé à 7% en 2022\"",
   "claim_date": "2023-09-10",
@@ -14148,7 +14187,7 @@
    "id": null,
    "name": null,
    "short_name": null,
-   "status": "none"
+   "status": "no_party"
   },
   "claim_text": "Les jeunes ont-ils achetés 300 000 livres différents via le Pass culture, et \"pas que des mangas\" ?",
   "claim_date": "2023-09-05",
@@ -14213,10 +14252,10 @@
    "votona_id": null
   },
   "party": {
-   "id": null,
-   "name": null,
-   "short_name": null,
-   "status": "ambiguous"
+   "id": "Q27978402",
+   "name": "La France insoumise",
+   "short_name": "LFI",
+   "status": "ok"
   },
   "claim_text": "Le don de 10 millions d'euros que Bernard Arnault fait aux Restos du Coeur ne représente que 0,004% de sa fortune",
   "claim_date": "2023-09-04",
@@ -14247,10 +14286,10 @@
    "votona_id": null
   },
   "party": {
-   "id": null,
-   "name": null,
-   "short_name": null,
-   "status": "undated"
+   "id": "Q170972",
+   "name": "Parti socialiste",
+   "short_name": "PS",
+   "status": "ok"
   },
   "claim_text": "La non prise en charge de la santé mentale coûte 110 milliards d'euros à la France",
   "claim_date": "2023-08-28",
@@ -14349,10 +14388,10 @@
    "votona_id": null
   },
   "party": {
-   "id": null,
-   "name": null,
-   "short_name": null,
-   "status": "undated"
+   "id": "Q20012759",
+   "name": "Les Républicains",
+   "short_name": "LR",
+   "status": "ok"
   },
   "claim_text": "\"La France est devenue le premier pays en Europe pour les homicides par million d'habitants\"",
   "claim_date": "2023-08-27",
@@ -14493,7 +14532,7 @@
    "id": null,
    "name": null,
    "short_name": null,
-   "status": "none"
+   "status": "no_party"
   },
   "claim_text": "Un milliard de m3 d'eau est perdu par an à cause des fuites",
   "claim_date": "2023-08-22",
@@ -14572,10 +14611,10 @@
    "votona_id": null
   },
   "party": {
-   "id": null,
-   "name": null,
-   "short_name": null,
-   "status": "undated"
+   "id": "Q613786",
+   "name": "Les Écologistes – Europe Écologie Les Verts",
+   "short_name": "EELV",
+   "status": "ok"
   },
   "claim_text": "La France représente à elle seule 40% des communes de toute l'Union européenne",
   "claim_date": "2023-08-22",
@@ -14606,10 +14645,10 @@
    "votona_id": "faure"
   },
   "party": {
-   "id": null,
-   "name": null,
-   "short_name": null,
-   "status": "undated"
+   "id": "Q170972",
+   "name": "Parti socialiste",
+   "short_name": "PS",
+   "status": "ok"
   },
   "claim_text": "La consommation annuelle d'eau des golfs français équivaut à celle d'une ville de 500 000 habitants.",
   "claim_date": "2023-08-19",
@@ -14994,10 +15033,10 @@
    "votona_id": null
   },
   "party": {
-   "id": null,
-   "name": null,
-   "short_name": null,
-   "status": "undated"
+   "id": "Q170972",
+   "name": "Parti socialiste",
+   "short_name": "PS",
+   "status": "ok"
   },
   "claim_text": "L'Etat a diminué les subventions dédiées aux vacances d'été pour les familles défavorisées",
   "claim_date": "2023-07-12",
@@ -15031,7 +15070,7 @@
    "id": null,
    "name": null,
    "short_name": null,
-   "status": "none"
+   "status": "no_party"
   },
   "claim_text": "Un Français utilise en moyenne 148 litres d'eau chaque jour",
   "claim_date": "2023-07-11",
@@ -15450,10 +15489,10 @@
    "votona_id": null
   },
   "party": {
-   "id": null,
-   "name": null,
-   "short_name": null,
-   "status": "ambiguous"
+   "id": "Q27978402",
+   "name": "La France insoumise",
+   "short_name": "LFI",
+   "status": "ok"
   },
   "claim_text": "Les trois quarts de l'inflation sont-ils dus à l'augmentation des marges des entreprises ?",
   "claim_date": "2023-06-26",
@@ -15668,10 +15707,10 @@
    "votona_id": null
   },
   "party": {
-   "id": null,
-   "name": null,
-   "short_name": null,
-   "status": "ambiguous"
+   "id": "Q205150",
+   "name": "Rassemblement national",
+   "short_name": "RN",
+   "status": "ok"
   },
   "claim_text": "Richard Ferrand a-t-il appelé à modifier la Constitution pour qu'Emmanuel Macron puisse faire un 3ème mandat ?",
   "claim_date": "2023-06-18",
@@ -15702,10 +15741,10 @@
    "votona_id": "melenchon"
   },
   "party": {
-   "id": null,
-   "name": null,
-   "short_name": null,
-   "status": "ambiguous"
+   "id": "Q27978402",
+   "name": "La France insoumise",
+   "short_name": "LFI",
+   "status": "ok"
   },
   "claim_text": "Lyon-Turin : le fret ferroviaire a-t-il été divisé par sept sous le tunnel du Mont-Cenis ?",
   "claim_date": "2023-06-17",
@@ -15736,10 +15775,10 @@
    "votona_id": null
   },
   "party": {
-   "id": null,
-   "name": null,
-   "short_name": null,
-   "status": "undated"
+   "id": "Q613786",
+   "name": "Les Écologistes – Europe Écologie Les Verts",
+   "short_name": "EELV",
+   "status": "ok"
   },
   "claim_text": "800 millions d'oiseaux ont disparu en Europe",
   "claim_date": "2023-06-16",
@@ -16062,10 +16101,10 @@
    "votona_id": null
   },
   "party": {
-   "id": null,
-   "name": null,
-   "short_name": null,
-   "status": "undated"
+   "id": "Q51844819",
+   "name": "Révolution écologique pour le vivant",
+   "short_name": "REV",
+   "status": "ok"
   },
   "claim_text": "L'ultradroite est-elle vraiment la première menace terroriste en France ?",
   "claim_date": "2023-06-04",
@@ -16096,10 +16135,10 @@
    "votona_id": null
   },
   "party": {
-   "id": null,
-   "name": null,
-   "short_name": null,
-   "status": "ambiguous"
+   "id": "Q613786",
+   "name": "Les Écologistes – Europe Écologie Les Verts",
+   "short_name": "EELV",
+   "status": "ok"
   },
   "claim_text": "Emmanuel Macron a-t-il employé l'expression \"d'arrangement à l'africaine\" pour parler d'élection présidentielle en Afrique ?",
   "claim_date": "2023-06-04",
@@ -16490,10 +16529,10 @@
    "votona_id": "lisnard"
   },
   "party": {
-   "id": null,
-   "name": null,
-   "short_name": null,
-   "status": "ambiguous"
+   "id": "Q123528596",
+   "name": "Nouvelle Énergie",
+   "short_name": "",
+   "status": "ok"
   },
   "claim_text": "\"On est en déclassement. On était la 7ème puissance économique il n'y a pas si longtemps, on est aujourd'hui, en PIB par habitant, passé au 24ème rang.\"",
   "claim_date": "2023-05-09",
@@ -16592,10 +16631,10 @@
    "votona_id": null
   },
   "party": {
-   "id": null,
-   "name": null,
-   "short_name": null,
-   "status": "undated"
+   "id": "Q587370",
+   "name": "MoDem",
+   "short_name": "MoDem",
+   "status": "ok"
   },
   "claim_text": "La France est-elle le leader européen en matière de déploiement de la fibre optique ?",
   "claim_date": "2023-05-02",
@@ -16833,7 +16872,7 @@
    "id": null,
    "name": null,
    "short_name": null,
-   "status": "none"
+   "status": "no_party"
   },
   "claim_text": "\" On est confrontés à une hausse de demandeurs de titres d'identités\"",
   "claim_date": "2023-04-24",
@@ -17136,10 +17175,10 @@
    "votona_id": null
   },
   "party": {
-   "id": null,
-   "name": null,
-   "short_name": null,
-   "status": "undated"
+   "id": "Q20012759",
+   "name": "Les Républicains",
+   "short_name": "LR",
+   "status": "ok"
   },
   "claim_text": "Aucune arme de guerre n'a été utilisée par les forces de l'ordre à Sainte-Soline",
   "claim_date": "2023-03-29",
@@ -17837,10 +17876,10 @@
    "votona_id": null
   },
   "party": {
-   "id": null,
-   "name": null,
-   "short_name": null,
-   "status": "undated"
+   "id": "Q587370",
+   "name": "MoDem",
+   "short_name": "MoDem",
+   "status": "ok"
   },
   "claim_text": "L'interdiction d'une grève pendant les vacances est possible",
   "claim_date": "2023-02-02",
@@ -18231,10 +18270,10 @@
    "votona_id": null
   },
   "party": {
-   "id": null,
-   "name": null,
-   "short_name": null,
-   "status": "undated"
+   "id": "Q23731823",
+   "name": "Renaissance",
+   "short_name": "RE",
+   "status": "ok"
   },
   "claim_text": "Le dimanche n'est pas un jour plus accidentogène que les autres chez les chasseurs",
   "claim_date": "2023-01-09",
@@ -18620,10 +18659,10 @@
    "votona_id": null
   },
   "party": {
-   "id": null,
-   "name": null,
-   "short_name": null,
-   "status": "undated"
+   "id": "Q1230558",
+   "name": "divers droite",
+   "short_name": "DVD",
+   "status": "ok"
   },
   "claim_text": "Le gaspillage alimentaire représente un coût annuel de 16 milliards d'euros en France",
   "claim_date": "2022-11-18",
@@ -19897,7 +19936,7 @@
    "id": null,
    "name": null,
    "short_name": null,
-   "status": "none"
+   "status": "no_party"
   },
   "claim_text": "Le Tribunal Arbitral du Sport ordonne à la FIFA d'intégrer la Russie",
   "claim_date": "2022-03-12",
@@ -20707,10 +20746,10 @@
    "votona_id": "zemmour"
   },
   "party": {
-   "id": null,
-   "name": null,
-   "short_name": null,
-   "status": "undated"
+   "id": "Q109932430",
+   "name": "Reconquête!",
+   "short_name": "",
+   "status": "ok"
   },
   "claim_text": "Deux millions d'immigrés sont entrés en France pendant le mandat d'Emmanuel Macron",
   "claim_date": "2021-09-24",
@@ -21200,7 +21239,7 @@
    "id": null,
    "name": null,
    "short_name": null,
-   "status": "none"
+   "status": "no_party"
   },
   "claim_text": "Il est possible en France de tuer impunément \"juste parce qu'on a fumé ou pris de la drogue\"",
   "claim_date": "2021-04-19",
@@ -21739,10 +21778,10 @@
    "votona_id": null
   },
   "party": {
-   "id": null,
-   "name": null,
-   "short_name": null,
-   "status": "ambiguous"
+   "id": "Q205150",
+   "name": "Rassemblement national",
+   "short_name": "RN",
+   "status": "ok"
   },
   "claim_text": "« L'aide médicale d'Etat n'existe pas ailleurs, il y a d'autres dispositifs bien moins généreux dans d'autres pays »",
   "claim_date": "2019-09-24",
@@ -21919,10 +21958,10 @@
    "votona_id": null
   },
   "party": {
-   "id": null,
-   "name": null,
-   "short_name": null,
-   "status": "undated"
+   "id": "Q23731823",
+   "name": "La République en marche !",
+   "short_name": "LREM",
+   "status": "ok"
   },
   "claim_text": "«Si on interdit tous les vols là où il y a un train qui fait moins de cinq heures, cela veut dire qu'on ne peut plus utiliser l'avion en France»",
   "claim_date": "2019-06-04",
