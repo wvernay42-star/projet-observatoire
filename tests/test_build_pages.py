@@ -1,3 +1,4 @@
+import json
 from pipeline.build_pages import Site, build, fr_date, slugify
 
 
@@ -59,3 +60,12 @@ def test_party_keeps_latest_name_and_address():
     old["party"].update(name="Front national", short_name="FN")
     site = Site.load([fact("c1", "Q1", "Marine Le Pen", "RN"), old], CANDIDATES, TOPICS, {}, "2026-10-27")
     assert site.party_url["RN"] == "/partis/rn/" and site.parties["RN"] == "Parti RN (RN)"
+
+
+def test_votona_summary_has_counts_never_verdicts(tmp_path):
+    build(make_site(), tmp_path)
+    data = json.loads((tmp_path / "donnees/votona.json").read_text(encoding="utf-8"))
+    lepen = data["candidats"]["lepen"]
+    assert lepen["url"] == "https://observatoire.votona.fr/candidats/lepen/" and lepen["n"] >= 1
+    assert lepen["sources"] == ["AFP Factuel"] and "mathieu" not in data["candidats"]
+    assert "rating" not in json.dumps(data) and "verdict" not in json.dumps(data)

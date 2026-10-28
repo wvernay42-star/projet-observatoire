@@ -1,0 +1,253 @@
+{
+ "generated_at": "2026-10-28T08:37:55+00:00",
+ "scope": "Sur les déclarations vérifiées, pas sur l'ensemble des propos tenus.",
+ "candidats": {
+  "bardella": {
+   "n": 28,
+   "url": "https://observatoire.votona.fr/candidats/bardella/",
+   "sources": [
+    "20 Minutes – Fake Off",
+    "AFP Factuel",
+    "Poligraph",
+    "TF1 Info – Les Vérificateurs",
+    "franceinfo Vrai ou Fake"
+   ],
+   "last_review": "2026-09-01"
+  },
+  "philippe": {
+   "n": 1,
+   "url": "https://observatoire.votona.fr/candidats/philippe/",
+   "sources": [
+    "Poligraph",
+    "TF1 Info – Les Vérificateurs"
+   ],
+   "last_review": "2026-08-27"
+  },
+  "attal": {
+   "n": 17,
+   "url": "https://observatoire.votona.fr/candidats/attal/",
+   "sources": [
+    "20 Minutes – Fake Off",
+    "AFP Factuel",
+    "Poligraph",
+    "TF1 Info – Les Vérificateurs",
+    "franceinfo Vrai ou Fake"
+   ],
+   "last_review": "2026-04-09"
+  },
+  "retailleau": {
+   "n": 13,
+   "url": "https://observatoire.votona.fr/candidats/retailleau/",
+   "sources": [
+    "AFP Factuel",
+    "Poligraph",
+    "TF1 Info – Les Vérificateurs",
+    "franceinfo Vrai ou Fake"
+   ],
+   "last_review": "2026-10-08"
+  },
+  "melenchon": {
+   "n": 26,
+   "url": "https://observatoire.votona.fr/candidats/melenchon/",
+   "sources": [
+    "20 Minutes – Fake Off",
+    "AFP Factuel",
+    "Les Décodeurs (Le Monde)",
+    "Poligraph",
+    "TF1 Info – Les Vérificateurs",
+    "franceinfo Vrai ou Fake"
+   ],
+   "last_review": "2026-10-13"
+  },
+  "glucksmann": {
+   "n": 3,
+   "url": "https://observatoire.votona.fr/candidats/glucksmann/",
+   "sources": [
+    "TF1 Info – Les Vérificateurs"
+   ],
+   "last_review": "2026-08-24"
+  },
+  "tondelier": {
+   "n": 13,
+   "url": "https://observatoire.votona.fr/candidats/tondelier/",
+   "sources": [
+    "AFP Factuel",
+    "TF1 Info – Les Vérificateurs",
+    "franceinfo Vrai ou Fake"
+   ],
+   "last_review": "2026-09-02"
+  },
+  "bertrand": {
+   "n": 2,
+   "url": "https://observatoire.votona.fr/candidats/bertrand/",
+   "sources": [
+    "TF1 Info – Les Vérificateurs",
+    "franceinfo Vrai ou Fake"
+   ],
+   "last_review": "2023-09-27"
+  },
+  "lepen": {
+   "n": 38,
+   "url": "https://observatoire.votona.fr/candidats/lepen/",
+   "sources": [
+    "20 Minutes – Fake Off",
+    "AFP Factuel",
+    "Les Décodeurs (Le Monde)",
+    "Poligraph",
+    "TF1 Info – Les Vérificateurs",
+    "franceinfo Vrai ou Fake"
+   ],
+   "last_review": "2026-09-17"
+  },
+  "lisnard": {
+   "n": 5,
+   "url": "https://observatoire.votona.fr/candidats/lisnard/",
+   "sources": [
+    "Poligraph",
+    "TF1 Info – Les Vérificateurs",
+    "franceinfo Vrai ou Fake"
+   ],
+   "last_review": "2025-12-01"
+  },
+  "dupont-aignan": {
+   "n": 16,
+   "url": "https://observatoire.votona.fr/candidats/dupont-aignan/",
+   "sources": [
+    "20 Minutes – Fake Off",
+    "AFP Factuel",
+    "Les Décodeurs (Le Monde)",
+    "TF1 Info – Les Vérificateurs",
+    "franceinfo Vrai ou Fake"
+   ],
+   "last_review": "2025-09-30"
+  },
+  "faure": {
+   "n": 3,
+   "url": "https://observatoire.votona.fr/candidats/faure/",
+   "sources": [
+    "TF1 Info – Les Vérificateurs",
+    "franceinfo Vrai ou Fake"
+   ],
+   "last_review": "2025-09-02"
+  },
+  "philippot": {
+   "n": 18,
+   "url": "https://observatoire.votona.fr/candidats/philippot/",
+   "sources": [
+    "AFP Factuel",
+    "Poligraph",
+    "TF1 Info – Les Vérificateurs",
+    "franceinfo Vrai ou Fake"
+   ],
+   "last_review": "2026-08-07"
+  },
+  "asselineau": {
+   "n": 3,
+   "url": "https://observatoire.votona.fr/candidats/asselineau/",
+   "sources": [
+    "Les Décodeurs (Le Monde)",
+    "TF1 Info – Les Vérificateurs",
+    "franceinfo Vrai ou Fake"
+   ],
+   "last_review": "2024-09-02"
+  },
+  "branco": {
+   "n": 1,
+   "url": "https://observatoire.votona.fr/candidats/branco/",
+   "sources": [
+    "AFP Factuel"
+   ],
+   "last_review": "2022-02-09"
+  },
+  "ruffin": {
+   "n": 12,
+   "url": "https://observatoire.votona.fr/candidats/ruffin/",
+   "sources": [
+    "AFP Factuel",
+    "TF1 Info – Les Vérificateurs",
+    "franceinfo Vrai ou Fake"
+   ],
+   "last_review": "2026-06-04"
+  },
+  "royal": {
+   "n": 6,
+   "url": "https://observatoire.votona.fr/candidats/royal/",
+   "sources": [
+    "AFP Factuel",
+    "TF1 Info – Les Vérificateurs",
+    "franceinfo Vrai ou Fake"
+   ],
+   "last_review": "2026-04-14"
+  },
+  "lalanne": {
+   "n": 2,
+   "url": "https://observatoire.votona.fr/candidats/lalanne/",
+   "sources": [
+    "AFP Factuel"
+   ],
+   "last_review": "2022-01-11"
+  },
+  "maurel": {
+   "n": 1,
+   "url": "https://observatoire.votona.fr/candidats/maurel/",
+   "sources": [
+    "Poligraph",
+    "TF1 Info – Les Vérificateurs"
+   ],
+   "last_review": "2026-09-25"
+  },
+  "roussel": {
+   "n": 7,
+   "url": "https://observatoire.votona.fr/candidats/roussel/",
+   "sources": [
+    "AFP Factuel",
+    "TF1 Info – Les Vérificateurs",
+    "franceinfo Vrai ou Fake"
+   ],
+   "last_review": "2024-06-20"
+  },
+  "zemmour": {
+   "n": 14,
+   "url": "https://observatoire.votona.fr/candidats/zemmour/",
+   "sources": [
+    "20 Minutes – Fake Off",
+    "AFP Factuel",
+    "Les Décodeurs (Le Monde)",
+    "Poligraph",
+    "TF1 Info – Les Vérificateurs",
+    "franceinfo Vrai ou Fake"
+   ],
+   "last_review": "2023-12-05"
+  }
+ },
+ "sujets": {
+  "economie": {
+   "n": 89,
+   "url": "https://observatoire.votona.fr/sujets/economie/"
+  },
+  "social": {
+   "n": 39,
+   "url": "https://observatoire.votona.fr/sujets/social/"
+  },
+  "securite": {
+   "n": 88,
+   "url": "https://observatoire.votona.fr/sujets/securite/"
+  },
+  "ecologie": {
+   "n": 59,
+   "url": "https://observatoire.votona.fr/sujets/ecologie/"
+  },
+  "europe": {
+   "n": 76,
+   "url": "https://observatoire.votona.fr/sujets/europe/"
+  },
+  "societe": {
+   "n": 50,
+   "url": "https://observatoire.votona.fr/sujets/societe/"
+  },
+  "defense": {
+   "n": 41,
+   "url": "https://observatoire.votona.fr/sujets/defense/"
+  }
+ }
+}

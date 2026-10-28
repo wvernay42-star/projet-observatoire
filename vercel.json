@@ -18,6 +18,15 @@
       ]
     },
     {
+      "source": "/donnees/(.*)",
+      "headers": [
+        {
+          "key": "Access-Control-Allow-Origin",
+          "value": "*"
+        }
+      ]
+    },
+    {
       "source": "/(.*)",
       "missing": [
         {

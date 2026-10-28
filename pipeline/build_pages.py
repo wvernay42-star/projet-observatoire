@@ -313,6 +313,7 @@ def page(site: Site, path: str, title: str, description: str, tab: str, body: st
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Work+Sans:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/assets/observatoire.css">
+<script defer src="/_vercel/insights/script.js"></script>
 {ld_html}</head>
 <body>
 <div class="masthead">
@@ -617,6 +618,21 @@ def stylesheet() -> str:
     return html[html.index("<style>") + len("<style>"):html.index("</style>")]
 
 
+def votona_summary(site: Site) -> dict[str, Any]:
+    """Résumé lu par le générateur de Votona (encart des fiches candidats) : nombres et rédactions, jamais de verdict."""
+    cands = {}
+    for c in site.candidates:
+        facts = site.of_person(c["pid"])
+        if facts:
+            cands[c["votona_id"]] = {
+                "n": len(facts), "url": SITE_URL + site.person_url[c["pid"]],
+                "sources": sorted({site.sources.get(r["source_id"], r["source_id"]) for f in facts for r in f["reviews"]}),
+                "last_review": max((f["review_date"] or "" for f in facts), default="") or None}
+    families = {fid: {"n": n, "url": f"{SITE_URL}/sujets/{fid}/"} for fid, _ in FAMILIES
+                if (n := sum(f["family"] == fid for f in site.facts))}
+    return {"generated_at": site.generated_at, "scope": SCOPE, "candidats": cands, "sujets": families}
+
+
 def build(site: Site, site_dir: Path) -> list[str]:
     """Écrit toutes les pages et le plan du site ; renvoie les adresses indexables."""
     (site_dir / "assets").mkdir(parents=True, exist_ok=True)
@@ -647,6 +663,9 @@ def build(site: Site, site_dir: Path) -> list[str]:
         out = site_dir / path.strip("/") / "index.html"
         out.parent.mkdir(parents=True, exist_ok=True)
         out.write_text(html, encoding="utf-8")
+    (site_dir / "donnees").mkdir(exist_ok=True)
+    (site_dir / "donnees" / "votona.json").write_text(
+        json.dumps(votona_summary(site), ensure_ascii=False, indent=1), encoding="utf-8")
     lastmod = site.generated_at[:10]
     (site_dir / "sitemap.xml").write_text(
         '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
