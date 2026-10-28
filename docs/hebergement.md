@@ -47,7 +47,7 @@ supposerait de posséder `observatoire.fr`.)
 
 Chaque push redéploie automatiquement la branche concernée.
 
-## Ouvrir l'indexation de la production (plus tard, sur feu vert)
+## Indexation de la production (ouverte le 28/10/2026)
 
 Tout est prêt derrière un seul interrupteur, `INDEXABLE` dans `pipeline/build_pages.py` :
 - `vercel.json` met l'en-tête `X-Robots-Tag: noindex` sur tout domaine autre que
@@ -55,5 +55,5 @@ Tout est prêt derrière un seul interrupteur, `INDEXABLE` dans `pipeline/build_
 - avec `INDEXABLE = False`, la production est fermée par la balise `<meta name="robots">` de chaque
   page et par `robots.txt` (Disallow) ; avec `True`, les balises disparaissent et `robots.txt`
   ouvre le site et déclare `sitemap.xml`.
-Ne passer à `True` qu'après la section 5 de `docs/conformite.md`, puis déclarer le site dans
-Google Search Console et Bing Webmaster Tools.
+Interrupteur passé à `True` le 28/10/2026 (décision du porteur, conformité complète différée) ;
+site à déclarer dans Google Search Console et Bing Webmaster Tools (plan : `/sitemap.xml`).

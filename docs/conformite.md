@@ -6,6 +6,11 @@ référencement), avec l'état réel du projet et les preuves. Ce n'est pas un a
 
 État au 28/10/2026. ✅ fait · ⏳ à faire ou à valider · ⚖️ à faire relire par un avocat.
 
+> **En veille (décision du porteur, 28/10/2026).** L'indexation est ouverte avec les garde-fous
+> déjà en place (aucun verdict propre, lien source, signalement et retrait sous 48 h, pages
+> légales). Les points ⏳ et ⚖️ restants seront traités quand le site aura beaucoup de trafic :
+> c'est le déclencheur de la mise en conformité complète.
+
 ## 1. Liste du cadrage
 
 **RGPD**
@@ -100,7 +105,7 @@ Reste à noter, pour chaque rédaction, ses conditions de réutilisation dans
 Piste : un courriel aux rédactions présentant l'Observatoire (métadonnées, lien, pas de verdict
 propre) vaut aussi pour la relation avec elles. ⚖️
 
-## 5. Avant d'ouvrir le référencement
+## 5. Avant d'ouvrir le référencement (référencement ouvert le 28/10/2026, points 2 et 3 différés)
 
 1. Relire et publier les pages légales (votona.fr : mentions légales, confidentialité, À propos ;
    Observatoire : « Vous êtes cité ? »).

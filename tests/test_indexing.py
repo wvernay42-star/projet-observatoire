@@ -13,6 +13,6 @@ def test_preprod_never_indexed_and_prod_follows_switch():
     assert noindex and all(r.get("missing") == [{"type": "host", "value": "observatoire.votona.fr"}] for r in noindex)
 
 
-def test_production_closed_until_compliance_is_validated():
-    # Passer à True seulement après la liste « Conformité » (docs/conformite.md, section 5).
-    assert build_pages.INDEXABLE is False
+def test_production_open_with_sitemap(tmp_path):
+    # Indexation ouverte le 28/10/2026 (docs/decisions.md) ; la préproduction reste en noindex (en-tête).
+    assert build_pages.INDEXABLE is True

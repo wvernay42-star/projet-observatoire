@@ -18,8 +18,17 @@ Les décisions durables sont aussi consignées dans [decisions.md](decisions.md)
 | — | Page web de validation | ✅ en ligne (22/10) — 147 éléments à traiter |
 | — | Sujets (familles et sujets Votona), recoupement, angles morts, données ouvertes, RSS | ✅ fait (22/10) |
 | — | Pages fixes par candidat, personnalité, parti, sujet + plan du site | ✅ en production (28/10) |
-| — | Hébergement préprod (`preprod`) / prod (`main`) | ✅ en ligne (26/10) — projet Vercel `votona-observatoire`, noindex |
+| — | Hébergement préprod (`preprod`) / prod (`main`) | ✅ en ligne (26/10) — projet Vercel `votona-observatoire` ; production indexable depuis le 28/10 |
 | — | Liens Votona → Observatoire | ⏳ actifs sur `draft` (test, 26/10) ; `main` sur demande du porteur |
+
+## 2026-10-28 (soir, suite) — En production, indexation ouverte
+
+- Mise en production : Observatoire (`main` avancé sur `preprod`) et Votona (fusion `draft` → `main`).
+- Indexation ouverte (`INDEXABLE = True`) : plus de balise noindex en production, `robots.txt`
+  ouvert avec le plan du site. La préproduction reste en noindex (en-tête `vercel.json`).
+- Conformité mise en veille (décision du porteur) jusqu'à un trafic important ; voir
+  `docs/conformite.md`. 79 tests OK.
+- Suite : déclarer le site dans Google Search Console et Bing Webmaster Tools.
 
 ## 2026-10-28 (soir) — Méthodes réunies : deux onglets communs aux deux sites
 

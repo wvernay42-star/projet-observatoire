@@ -44,8 +44,9 @@ def test_pages_sitemap_and_escaping(tmp_path):
         assert p in listed and (tmp_path / p.strip("/") / "index.html").exists()
     assert "observatoire.votona.fr/sujets/ecologie/" in (tmp_path / "sitemap.xml").read_text(encoding="utf-8")
     assert ".topbar" in (tmp_path / "assets/observatoire.css").read_text(encoding="utf-8")
-    # préproduction : jamais indexée tant que la conformité n'est pas validée
-    assert 'content="noindex, nofollow"' in lepen
+    # indexable ; une fiche sans fait reste en noindex
+    assert "noindex" not in lepen
+    assert 'content="noindex, nofollow"' in (tmp_path / "candidats/mathieu/index.html").read_text(encoding="utf-8")
 
 
 def test_helpers():

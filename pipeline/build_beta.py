@@ -114,7 +114,7 @@ def build_site(page: str, site_dir: Path = SITE_DIR) -> None:
     favicon = LOGO.with_name("favicon-48.png")
     if favicon.exists():
         shutil.copyfile(favicon, site_dir / "assets" / "favicon-48.png")
-    # Fermé tant que la conformité n'est pas validée (build_pages.INDEXABLE) ; la préproduction reste
+    # Ouvert selon build_pages.INDEXABLE ; la préproduction reste
     # en noindex de toute façon (en-tête X-Robots-Tag hors du domaine de production, vercel.json).
     (site_dir / "robots.txt").write_text(
         f"User-agent: *\nAllow: /\nSitemap: {build_pages.SITE_URL}/sitemap.xml\n" if build_pages.INDEXABLE

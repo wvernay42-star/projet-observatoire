@@ -30,8 +30,8 @@ TEMPLATE = ROOT / "web" / "beta" / "template.html"
 SITE_URL = "https://observatoire.votona.fr"
 VOTONA = "https://votona.fr"
 CONTACT = "contact@votona.fr"
-# Tant que la liste de conformité du cadrage n'est pas cochée, aucune page n'est indexée.
-INDEXABLE = False
+# Indexation ouverte le 28/10/2026 à la demande du porteur (conformité complète différée, docs/conformite.md).
+INDEXABLE = True
 SCOPE = "Sur les déclarations vérifiées, pas sur l'ensemble des propos tenus."
 
 LEVELS = [("true", "Vrai", 0), ("mostly_true", "Plutôt vrai", 1), ("half_true", "À moitié vrai", 2),

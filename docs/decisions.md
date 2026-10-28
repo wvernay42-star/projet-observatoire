@@ -64,3 +64,9 @@
   base Supabase de Votona, réservées à l'email admin. La page Claude de validation devient un repli.
 - Partis renommés affichés sous leur nom actuel (décision du porteur) ; le nom à la date de la
   déclaration est conservé dans les données ouvertes.
+- Méthodes réunies : mêmes onglets « Le test Votona » | « L'Observatoire » en tête des deux pages
+  `/methode/`, chacune restant sur son domaine.
+- Indexation de la production ouverte (`INDEXABLE = True`, décision du porteur). Conformité en veille :
+  les garde-fous déjà en place suffisent pour l'instant ; la mise en conformité complète (relecture
+  par un avocat, AIPD, licences des rédactions, user-agent) sera faite quand le trafic deviendra
+  important (`docs/conformite.md`).
