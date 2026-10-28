@@ -21,6 +21,19 @@ Les décisions durables sont aussi consignées dans [decisions.md](decisions.md)
 | — | Hébergement préprod (`preprod`) / prod (`main`) | ✅ en ligne (26/10) — projet Vercel `votona-observatoire`, noindex |
 | — | Liens Votona → Observatoire | ⏳ actifs sur `draft` (test, 26/10) ; `main` sur demande du porteur |
 
+## 2026-10-28 (après-midi) — Compte dans la barre, conformité, interrupteur d'indexation
+
+- Barre du haut de l'Observatoire : icône « Mon compte » (vers le compte Votona), comme sur Votona.
+- Conformité (étape 1) : `docs/conformite.md` (état de la liste du cadrage, registre de
+  traitement, projet d'AIPD, licences des sources à compléter, user-agent à décider) ; page
+  « Vous êtes cité ? » (`/vous-etes-cite/`, pied de page et Méthode) ; côté Votona (branche
+  `draft`) : sections Observatoire dans les mentions légales, la confidentialité (personnalités
+  citées : finalité, base légale, sources, droits, délais) et À propos. À relire par le porteur,
+  idéalement avec un avocat.
+- Indexation (étape 2) préparée : interrupteur `INDEXABLE` (encore `False`), noindex par en-tête
+  limité aux domaines hors production, robots.txt et balises liés à l'interrupteur ; tests.
+- En préproduction ; 224 liens internes vérifiés ; tests : 79.
+
 ## 2026-10-28 — En production : pages fixes, couleurs des candidats, nom actuel des partis
 
 - À la demande du porteur, mise en production de la préproduction : pages par candidat,

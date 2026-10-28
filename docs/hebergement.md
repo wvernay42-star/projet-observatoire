@@ -49,11 +49,11 @@ Chaque push redéploie automatiquement la branche concernée.
 
 ## Ouvrir l'indexation de la production (plus tard, sur feu vert)
 
-Tant que la liste « Conformité » de `docs/cadrage.md` (RGPD, licences, avis d'avocat) n'est pas
-cochée, la production est en ligne mais non indexée : on peut partager le lien, les moteurs ne
-le référencent pas. Pour ouvrir :
-1. `vercel.json` : n'appliquer l'en-tête `noindex` qu'hors production, avec
-   `"missing": [{ "type": "host", "value": "observatoire.votona.fr" }]` sur la règle d'en-têtes.
-2. `pipeline/build_beta.py` : retirer la balise `<meta name="robots">` et écrire un robots.txt
-   ouvert avec le sitemap ; la préproduction reste protégée par l'en-tête et la protection Vercel.
-3. Ajouter les liens depuis votona.fr (voir `docs/liens-votona.md`).
+Tout est prêt derrière un seul interrupteur, `INDEXABLE` dans `pipeline/build_pages.py` :
+- `vercel.json` met l'en-tête `X-Robots-Tag: noindex` sur tout domaine autre que
+  `observatoire.votona.fr` (préproduction et adresses *.vercel.app restent toujours fermées) ;
+- avec `INDEXABLE = False`, la production est fermée par la balise `<meta name="robots">` de chaque
+  page et par `robots.txt` (Disallow) ; avec `True`, les balises disparaissent et `robots.txt`
+  ouvre le site et déclare `sitemap.xml`.
+Ne passer à `True` qu'après la section 5 de `docs/conformite.md`, puis déclarer le site dans
+Google Search Console et Bing Webmaster Tools.

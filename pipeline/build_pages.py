@@ -274,6 +274,8 @@ ICON_TEST = ('<svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke
 ICON_FAQ = ('<svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" '
             'stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/>'
             '<path d="M9.3 9.2a2.7 2.7 0 1 1 3.9 2.4c-1 .5-1.7 1.1-1.7 2.4"/><line x1="12" y1="17.2" x2="12" y2="17.21"/></svg>')
+ICON_USER = ('<svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 4-6 8-6s8 2 8 6"/></svg>')
+# Le compte est celui de Votona (même base Supabase) : l'icône mène à « Mon compte » sur votona.fr.
 TABS = [("accueil", "/", "Accueil"), ("faits", "/#faits", "Faits"), ("personnalites", "/candidats/", "Personnalités"),
         ("partis", "/partis/", "Partis"), ("sujets", "/sujets/", "Sujets")]
 
@@ -318,6 +320,7 @@ def page(site: Site, path: str, title: str, description: str, tab: str, body: st
   <a class="brand" href="/" title="Accueil de l'Observatoire"><span class="mark"><img src="/assets/logo-head.webp" alt="" width="40" height="32"></span><span class="name">Votona</span><span class="year">OBSERVATOIRE</span><span class="beta-tag" title="Version bêta : mise à jour chaque jour, rattachements partisans encore incomplets">BÊTA</span></a>
   <div class="topbar-actions">
     <a class="sister-link" href="{VOTONA}/" title="Votona : le test présidentielle 2027, quel candidat te correspond ?">{ICON_TEST}<span>Le test 2027</span></a>
+    <a class="icon-btn" href="{VOTONA}/?screen=account" title="Mon compte (Votona)" aria-label="Mon compte (Votona)">{ICON_USER}</a>
     <a class="icon-btn" href="/methode/" title="Méthode et FAQ" aria-label="Méthode et FAQ"{' aria-current="page"' if tab == "methode" else ""}>{ICON_FAQ}</a>
   </div>
 </header>
@@ -326,7 +329,7 @@ def page(site: Site, path: str, title: str, description: str, tab: str, body: st
 <main class="wrap">
 {body}
 <footer class="gfoot">Votona Observatoire ne produit aucun verdict : il reprend celui de la rédaction, avec un lien vers l'article. Version bêta, mise à jour chaque jour ({fr_date(site.generated_at, True)}).
-<div class="flinks"><a href="/methode/">Méthode</a> · <a href="/donnees/facts.csv">Données ouvertes</a> · <a href="/flux.xml">Flux RSS</a> · <a href="{VOTONA}/a-propos/">À propos</a> · <a href="{VOTONA}/mentions-legales/">Mentions légales</a> · <a href="{VOTONA}/confidentialite/">Confidentialité</a> · <a href="{VOTONA}/contact/">Contact</a></div>
+<div class="flinks"><a href="/methode/">Méthode</a> · <a href="/vous-etes-cite/">Vous êtes cité ?</a> · <a href="/donnees/facts.csv">Données ouvertes</a> · <a href="/flux.xml">Flux RSS</a> · <a href="{VOTONA}/a-propos/">À propos</a> · <a href="{VOTONA}/mentions-legales/">Mentions légales</a> · <a href="{VOTONA}/confidentialite/">Confidentialité</a> · <a href="{VOTONA}/contact/">Contact</a></div>
 <div class="social">{social_html()}</div>
 </footer>
 </main>
@@ -568,11 +571,41 @@ def methode_page(site: Site) -> str:
 <li>Le thème est attribué par mots-clés : certaines déclarations restent sans sujet.</li>
 </ul>
 <h2>Contester une entrée, vos droits</h2>
-<p>Pour signaler une erreur, demander une rectification ou vous opposer au traitement de données vous concernant, écrivez à <strong>{CONTACT}</strong> en indiquant la référence de l'entrée (lien « Signaler une erreur »). Une attribution contestée à raison est retirée sous 48 heures.</p>
+<p>Pour signaler une erreur, demander une rectification ou vous opposer au traitement de données vous concernant, écrivez à <strong>{CONTACT}</strong> en indiquant la référence de l'entrée (lien « Signaler une erreur »). Une attribution contestée à raison est retirée sous 48 heures. Personnalité citée : voir <a href="/vous-etes-cite/">Vous êtes cité ?</a></p>
 <p class="small muted">Données mises à jour le {fr_date(site.generated_at, True)}.</p>
 </div>"""
     return page(site, "/methode/", "Méthode et FAQ - Votona Observatoire",
                 "Comment Votona Observatoire recense les vérifications des fact-checkers : verdict d'origine, parti à la date, recoupement, sujets, données ouvertes.",
+                "methode", body)
+
+
+def cited_page(site: Site) -> str:
+    """« Vous êtes cité ? » : information des personnes citées et procédure (RGPD, cadrage « Conformité »)."""
+    body = f"""<div class="prose">
+<h1>Vous êtes cité ?</h1>
+<p class="muted lede">Votona Observatoire rassemble des vérifications publiées par des rédactions de fact-checking sur des déclarations publiques de personnalités politiques. Voici quelles données vous concernant sont traitées, d'où elles viennent, et comment demander une correction ou vous opposer.</p>
+<h2>Ce que l'Observatoire publie</h2>
+<ul>
+<li>Votre nom et, s'il est connu, le parti auquel vous étiez affilié à la date de la déclaration, d'après des affiliations publiques et datées.</li>
+<li>La déclaration telle que la rédaction l'a formulée, le verdict de la rédaction avec son libellé d'origine, les dates et le lien vers l'article.</li>
+<li>Rien d'autre : aucun verdict propre à l'Observatoire, aucun classement des personnalités, jamais le contenu des articles.</li>
+</ul>
+<h2>D'où viennent ces données</h2>
+<p>Des rédactions de fact-checking, via l'API Google Fact Check Tools et le flux ClaimReview de Data Commons ; de Wikidata pour les fonctions et les affiliations ; de la liste des candidats de <a href="{VOTONA}/">Votona</a>. Toute attribution incertaine (homonyme, nom incomplet) est vérifiée à la main avant d'être publiée.</p>
+<h2>Pourquoi, et sur quelle base</h2>
+<p>Pour informer le public sur la vérification des propos politiques, en réunissant ce que les rédactions ont publié. Le traitement repose sur l'intérêt légitime d'information du public sur la vie politique (article 6.1.f du RGPD), dans le cadre de la liberté d'expression et d'information. L'affiliation partisane n'est reprise que lorsqu'elle a été rendue publique par la personne elle-même (article 9.2.e du RGPD).</p>
+<h2>Vos droits</h2>
+<p>Vous pouvez demander l'accès à ces données, leur rectification, leur effacement ou la limitation de leur traitement, et vous opposer à leur traitement (article 21 du RGPD). Écrivez à <strong>{CONTACT}</strong> en indiquant la référence de l'entrée (lien « Signaler une erreur » sous chaque déclaration) ou l'adresse de votre fiche.</p>
+<ul>
+<li><strong>Attribution erronée</strong> (la déclaration n'est pas de vous, ou le parti indiqué est faux) : l'entrée est retirée ou corrigée sous 48 heures si la demande est fondée.</li>
+<li><strong>Désaccord avec un verdict</strong> : l'Observatoire reprend le verdict de la rédaction sans le modifier ; adressez-vous à la rédaction concernée (lien sur chaque entrée). Si elle corrige son article, la correction est reprise à la mise à jour suivante.</li>
+<li><strong>Autres demandes</strong> : réponse sous un mois.</li>
+</ul>
+<p>Vous pouvez aussi introduire une réclamation auprès de la CNIL (<a href="https://www.cnil.fr" target="_blank" rel="noopener">cnil.fr</a>). Le responsable du traitement est l'éditeur de Votona ; voir les <a href="{VOTONA}/mentions-legales/">mentions légales</a> et la <a href="{VOTONA}/confidentialite/#observatoire">politique de confidentialité</a>.</p>
+<p class="small muted">Page mise à jour le {fr_date(site.generated_at, True)}.</p>
+</div>"""
+    return page(site, "/vous-etes-cite/", "Vous êtes cité ? Données personnelles et droits - Votona Observatoire",
+                "Personnalité politique citée sur Votona Observatoire : données traitées, sources, base légale et procédure de rectification ou d'opposition.",
                 "methode", body)
 
 
@@ -586,11 +619,11 @@ def build(site: Site, site_dir: Path) -> list[str]:
     """Écrit toutes les pages et le plan du site ; renvoie les adresses indexables."""
     (site_dir / "assets").mkdir(parents=True, exist_ok=True)
     (site_dir / "assets" / "observatoire.css").write_text(stylesheet(), encoding="utf-8")
-    for d in ("candidats", "personnalites", "partis", "sujets", "methode"):  # pages recréées à chaque fois
+    for d in ("candidats", "personnalites", "partis", "sujets", "methode", "vous-etes-cite"):  # pages recréées à chaque fois
         if (site_dir / d).exists():
             shutil.rmtree(site_dir / d)
     pages: dict[str, str] = {}
-    listed = ["/", "/candidats/", "/personnalites/", "/partis/", "/sujets/", "/methode/"]
+    listed = ["/", "/candidats/", "/personnalites/", "/partis/", "/sujets/", "/methode/", "/vous-etes-cite/"]
     for pid in site.person_url:
         if pid in site.candidate_by_pid or site.of_person(pid):
             path, html, indexable = person_page(site, pid)
@@ -607,6 +640,7 @@ def build(site: Site, site_dir: Path) -> list[str]:
         listed.append(path)
     pages.update(index_pages(site))
     pages["/methode/"] = methode_page(site)
+    pages["/vous-etes-cite/"] = cited_page(site)
     for path, html in pages.items():
         out = site_dir / path.strip("/") / "index.html"
         out.parent.mkdir(parents=True, exist_ok=True)

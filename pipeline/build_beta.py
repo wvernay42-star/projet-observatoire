@@ -81,8 +81,7 @@ SITE_HEAD = """<!doctype html>
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<meta name="robots" content="noindex, nofollow">
-<meta name="description" content="Votona Observatoire : les vérifications des fact-checkers français sur les candidats à la présidentielle 2027 et la vie politique, avec le verdict d'origine et un lien vers chaque article.">
+__ROBOTS__<meta name="description" content="Votona Observatoire : les vérifications des fact-checkers français sur les candidats à la présidentielle 2027 et la vie politique, avec le verdict d'origine et un lien vers chaque article.">
 <link rel="icon" href="/assets/favicon-48.png">
 <link rel="canonical" href="https://observatoire.votona.fr/">
 <meta property="og:type" content="website">
@@ -99,12 +98,13 @@ SITE_HEAD = """<!doctype html>
 
 
 def build_site(page: str, site_dir: Path = SITE_DIR) -> None:
-    """Version site (Vercel) : même page, document complet, en noindex tant que c'est la préproduction."""
+    """Version site (Vercel) : même page, document complet ; indexable seulement si build_pages.INDEXABLE."""
     (site_dir / "assets").mkdir(parents=True, exist_ok=True)
     # Le titre et les liens de polices du gabarit vont dans le <head> du document complet.
     head_tags = re.findall(r"^(?:<title>.*?</title>|<link [^>]*>)\s*$", page, flags=re.M)
     body = re.sub(r"^(?:<title>.*?</title>|<link [^>]*>|<meta name=\"claude:[^>]*>)\s*\n", "", page, flags=re.M)
-    head = SITE_HEAD.replace("</head>", "\n".join(head_tags) + "\n</head>")
+    robots = "" if build_pages.INDEXABLE else '<meta name="robots" content="noindex, nofollow">\n'
+    head = SITE_HEAD.replace("__ROBOTS__", robots).replace("</head>", "\n".join(head_tags) + "\n</head>")
     (site_dir / "index.html").write_text(head + body + "\n</body>\n</html>\n", encoding="utf-8")
     shutil.copyfile(LOGO, site_dir / "assets" / "logo-head.webp")
     shutil.copyfile(LOGO.with_name("og.jpg"), site_dir / "assets" / "og.jpg")
@@ -114,7 +114,11 @@ def build_site(page: str, site_dir: Path = SITE_DIR) -> None:
     favicon = LOGO.with_name("favicon-48.png")
     if favicon.exists():
         shutil.copyfile(favicon, site_dir / "assets" / "favicon-48.png")
-    (site_dir / "robots.txt").write_text("User-agent: *\nDisallow: /\n", encoding="utf-8")
+    # Fermé tant que la conformité n'est pas validée (build_pages.INDEXABLE) ; la préproduction reste
+    # en noindex de toute façon (en-tête X-Robots-Tag hors du domaine de production, vercel.json).
+    (site_dir / "robots.txt").write_text(
+        f"User-agent: *\nAllow: /\nSitemap: {build_pages.SITE_URL}/sitemap.xml\n" if build_pages.INDEXABLE
+        else "User-agent: *\nDisallow: /\n", encoding="utf-8")
 
 
 OPEN_DATA_COLUMNS = ["id", "person_id", "person_name", "votona_id", "party_id", "party_name", "party_name_at_date", "party_status",
