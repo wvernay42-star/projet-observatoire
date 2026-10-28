@@ -1,5 +1,22 @@
 # Tableau de validation
 
+## Back-office dans l'admin Votona (depuis le 28/10/2026)
+
+Le back-office est l'onglet **« Observatoire »** de l'admin de votona.fr (`?admin=1`, connecté
+avec l'email admin). Files et décisions dans la base Supabase de Votona :
+- `obs_queues` (une ligne par file : `ratings`, `attributions`, `parties`, `sources`), écrite
+  par la routine : `python -m pipeline.supabase_sync push` après `validation_sync seed` ;
+- `obs_decisions` (une ligne par décision), écrite par l'onglet ; la routine l'applique sur les
+  files telles que l'admin les a vues puis la retire : `python -m pipeline.supabase_sync apply`.
+- Lecture et écriture réservées à l'email admin (RLS) ; la routine passe par l'identifiant API
+  « Supabase » de l'environnement cloud « Observatoire » (clé secrète, jamais dans le dépôt).
+
+L'ancienne page ci-dessous reste lue pendant la transition (décisions encore présentes) et sert
+de repli si l'accès Supabase manque. Code de l'onglet : bloc « ADMIN — OBSERVATOIRE » de
+l'`index.html` de Votona.
+
+## Ancienne page (repli)
+
 Page privée : https://claude.ai/artifact/At6BYDaT6SbwLv5P2LuSLU (source : `web/validation/index.html`).
 Base partagée de la page : collection `queues` (3 documents : `ratings`, `attributions`,
 `parties`, déposés par Claude) et collection `decisions` (un document par décision, écrit par

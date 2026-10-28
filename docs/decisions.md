@@ -58,3 +58,7 @@
   (bleu → orange) le distinguent. Liens entre les deux sites dans le même onglet.
 - Pages légales communes (celles de votona.fr) : à compléter pour mentionner l'Observatoire avant
   l'ouverture au référencement.
+
+## 2026-10-28
+- Back-office : onglet « Observatoire » de l'admin Votona (choix du porteur), données dans la
+  base Supabase de Votona, réservées à l'email admin. La page Claude de validation devient un repli.

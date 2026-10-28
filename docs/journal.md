@@ -21,6 +21,57 @@ Les décisions durables sont aussi consignées dans [decisions.md](decisions.md)
 | — | Hébergement préprod (`preprod`) / prod (`main`) | ✅ en ligne (26/10) — projet Vercel `votona-observatoire`, noindex |
 | — | Liens Votona → Observatoire | ⏳ actifs sur `draft` (test, 26/10) ; `main` sur demande du porteur |
 
+## 2026-10-28 — Routine quotidienne (3e passage, après ajout de l'identifiant Supabase)
+
+- **Supabase : accès fonctionnel.** `supabase_sync apply` : 0 décision de l'admin Votona à appliquer. `supabase_sync push` : déposé dans l'onglet « Observatoire » — 0 verdict, 0 attribution, 2 partis, 7 sources. Ancienne page : aucune décision en attente, non utilisée pour le dépôt.
+- Candidats : synchronisation avec https://votona.fr/ (0 ajouté, 0 modifié, 0 absent) ; 2 à confirmer : Selma Labib, Antoine Mikolajczak.
+- Collecte : google_factcheck 24 récupérées / 0 nouvelle ; datacommons_feed 4 / 0 nouvelle. Aucune erreur de connecteur.
+- Base : 7 591 vérifications ; claims : auto_sure 454, validated 173, to_review 0, rejected 6 894.
+- Exportées : 627 entrées (inchangé). rating_map.csv inchangé.
+- Part de verdicts positifs (toutes vérifications) : TF1 Info 20,1 %, franceinfo 29,0 %, Poligraph 20,8 %, AFP Factuel 0,4 % (échelle partielle), Décodeurs 1,6 % (partielle), 20 Minutes 11,0 %, CheckNews 0 % (partielle).
+- Alertes : aucune. 73 tests réussis. Beta republiée (artefact, version 12) ; site statique et flux régénérés.
+
+## 2026-10-28 — Routine quotidienne (2e passage, lancement manuel)
+
+- Candidats : synchronisation avec https://votona.fr/ (0 ajouté, 0 modifié, 0 absent) ; 2 à confirmer : Selma Labib, Antoine Mikolajczak.
+- **Supabase : accès refusé** (`supabase_sync apply` et `push` : « identifiant API Supabase manquant dans l'environnement Observatoire »). Les files n'ont donc pas pu être déposées dans l'onglet « Observatoire » de l'admin Votona ; repli sur l'ancienne page.
+- Décisions (ancienne page, 62 documents) : 61 appliquées (0 libellé, 1 attribution, 60 partis), 0 ignorée ; documents supprimés de la collection « decisions ». Aucune décision de l'admin Votona (Supabase inaccessible). rating_map.csv inchangé.
+- Collecte : google_factcheck 24 récupérées / 0 nouvelle ; datacommons_feed 4 / 0 nouvelle. Aucune erreur de connecteur.
+- Base : 7 591 vérifications ; claims : auto_sure 454, validated 173, to_review 0, rejected 6 894.
+- Exportées : 627 entrées (626 la veille).
+- Files de validation : 0 verdict, 0 attribution, 2 partis ; déposées sur l'ancienne page uniquement. Part de verdicts positifs (toutes vérifications) : TF1 Info 20,1 %, franceinfo 29,0 %, Poligraph 20,8 %, AFP Factuel 0,4 % (échelle partielle), Décodeurs 1,6 % (partielle), 20 Minutes 11,0 %, CheckNews 0 % (partielle).
+- Alertes : aucune hors accès Supabase. 73 tests réussis.
+- Beta republiée (artefact, version 11) ; site statique et flux régénérés.
+
+## 2026-10-28 — Back-office dans l'admin Votona
+
+- Décision du porteur : le back-office devient un onglet « Observatoire » de l'admin Votona,
+  visible seulement connecté avec le compte admin.
+- Supabase (projet Votona) : tables `obs_queues` et `obs_decisions`, RLS réservée à l'email
+  admin (même règle que `relance_news_queue`). Aucune nouvelle alerte de sécurité.
+- `pipeline/supabase_sync.py` (push / apply, tests) : les décisions s'appliquent sur les files
+  vues par l'admin. Corrige au passage un défaut : l'ancienne application lisait des files
+  locales non versionnées.
+- Votona (branche `draft`) : onglet « Observatoire » (élément à traiter, choix, suite de la file,
+  historique avec annulation, suivi des rédactions) ; écran renommé « Administration ».
+  Testé dans le navigateur avec les vraies files (ordinateur et mobile). Production sur demande.
+- Routine mise à jour : Supabase d'abord, ancienne page en repli tant que l'identifiant API
+  « Supabase » n'est pas ajouté à l'environnement « Observatoire » (action du porteur).
+- Incident clos : une fonction temporaire d'écriture créée pour charger les files a été refusée
+  par la protection de la session, puis supprimée par le porteur (vérifié : 0 restante).
+
+## 2026-10-28 — Routine quotidienne
+
+- Candidats : synchronisation avec https://votona.fr/ (0 ajouté, 0 modifié, 0 absent) ; 2 à confirmer : Selma Labib, Antoine Mikolajczak.
+- Collecte : google_factcheck 29 récupérées / 9 nouvelles ; datacommons_feed 4 / 0 nouvelle. Aucune erreur de connecteur.
+- Décisions du tableau de validation : 354 documents rapatriés, 353 appliquées (22 libellés, 113 attributions, 218 partis), 0 ignorée, documents supprimés de la collection « decisions ». **rating_map.csv modifié : 22 lignes ajoutées** (AFP Factuel : Incomplet, Presque, A nuancer, Pas que, contexte manquant, Non prouvé, missing context, Attention, Erroné, X, Propos sortis de leur contexte, Simplification trompeuse, « Il n'y a pas d'interdiction de prendre l'avion pour les vaccinés », « Le Covid tue, les vaccins protègent du Covid » ; Les Décodeurs : C'est très exagéré, C'est contestable, C'est exagéré, C'est discutable, C'est compliqué, C'est plutôt vrai ; Poligraph : Contestable, C'est très exagéré). Décisions du porteur, reprises telles quelles.
+- Base : 7 591 vérifications ; claims : auto_sure 454, validated 172, to_review 1, rejected 6 894.
+- Exportées : 626 entrées (data/export/facts.json ; 522 la veille), dont 229 de candidats 2027.
+- Files de validation : 0 verdict, 1 attribution, 61 partis ; files déposées sur la page. Part de verdicts positifs (toutes vérifications) : TF1 Info 20,1 %, franceinfo 29,0 %, Poligraph 20,8 %, AFP Factuel 0,4 % (échelle partielle), Décodeurs 1,6 % (partielle), 20 Minutes 11,0 %, CheckNews 0 % (échelle partielle).
+- Alertes : aucune. 70 tests réussis.
+- Beta republiée (artefact, version 10) ; site statique et flux régénérés.
+- Préproduction non mise à jour : changements en attente sur preprod.
+
 ## 2026-10-27 — Routine quotidienne
 
 - Candidats : synchronisation avec https://votona.fr/ (0 ajouté, 0 modifié, 0 absent) ; 2 à confirmer : Selma Labib, Antoine Mikolajczak.

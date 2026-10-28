@@ -139,3 +139,25 @@ afp_factuel,Partiellement faux,mostly_false,human
 afp_factuel,1,unrated,human
 afp_factuel,Photo manipulée,mostly_false,human
 franceinfo_vraioufake,C’est plus compliqué,half_true,human
+afp_factuel,Incomplet,half_true,human
+afp_factuel,Presque,half_true,human
+les_decodeurs,C’est très exagéré,mostly_false,human
+afp_factuel,A nuancer,unrated,human
+poligraph_fr,Contestable,half_true,human
+les_decodeurs,C’est contestable,half_true,human
+afp_factuel,Pas que,unrated,human
+afp_factuel,contexte manquant,unrated,human
+les_decodeurs,C'est exagéré,mostly_false,human
+afp_factuel,Il n'y a pas d'interdiction de prendre l'avion pour les vaccinés,mostly_true,human
+afp_factuel,Non prouvé,unrated,human
+afp_factuel,missing context,unrated,human
+les_decodeurs,C'est discutable,half_true,human
+afp_factuel,Attention,mostly_false,human
+afp_factuel,Erroné,mostly_false,human
+afp_factuel,"Le Covid tue, les vaccins protègent du Covid",mostly_true,human
+afp_factuel,X,unrated,human
+afp_factuel,Propos sortis de leur contexte,unrated,human
+les_decodeurs,C'est compliqué,half_true,human
+afp_factuel,Simplification trompeuse,mostly_false,human
+les_decodeurs,C’est plutôt vrai,mostly_true,human
+poligraph_fr,C’est très exagéré,mostly_false,human
