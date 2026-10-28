@@ -21,6 +21,15 @@ Les décisions durables sont aussi consignées dans [decisions.md](decisions.md)
 | — | Hébergement préprod (`preprod`) / prod (`main`) | ✅ en ligne (26/10) — projet Vercel `votona-observatoire`, noindex |
 | — | Liens Votona → Observatoire | ⏳ actifs sur `draft` (test, 26/10) ; `main` sur demande du porteur |
 
+## 2026-10-28 (soir) — Méthodes réunies : deux onglets communs aux deux sites
+
+- `/methode/` de l'Observatoire et de votona.fr ouvrent sur les mêmes onglets « Le test Votona » |
+  « L'Observatoire » ; chaque page reste sur son domaine. Même en-tête (mascotte, titre, chapeau),
+  sommaire en pastilles, même largeur que la page de Votona ; ancres sur chaque section.
+- Vue Méthode de l'application : mêmes onglets. 79 tests OK.
+- En préproduction (preview.observatoire.votona.fr) et sur le `draft` de Votona ; mise en
+  production à la demande.
+
 ## 2026-10-28 (après-midi) — Compte dans la barre, conformité, interrupteur d'indexation
 
 - Barre du haut de l'Observatoire : icône « Mon compte » (vers le compte Votona), comme sur Votona.

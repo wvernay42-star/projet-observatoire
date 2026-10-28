@@ -180,6 +180,21 @@ a.tile { text-decoration: none; }
 .timeline span.unrated { background: var(--surface); border: 2px dashed var(--unrated-line); }
 .axis { display: flex; justify-content: space-between; font-size: 12px; color: var(--muted); }
 
+/* Méthode : mêmes onglets et même en-tête que votona.fr/methode/ (.mtabs, .hero, .toc). */
+.mtabs { display: flex; gap: 4px; padding: 4px; border-radius: 999px; background: var(--surface); border: 1px solid var(--line); width: fit-content; max-width: 100%; }
+.mtabs a { padding: 8px 16px; border-radius: 999px; font-size: 14px; font-weight: 700; color: var(--muted); text-decoration: none; white-space: nowrap; }
+.mtabs a[aria-current="page"] { background: var(--accent); color: var(--accent-ink); }
+.mtabs a:not([aria-current]):hover { color: var(--accent); }
+.mhero { display: flex; align-items: center; gap: 22px; padding: 26px 28px; border-radius: 26px; background: linear-gradient(135deg, color-mix(in srgb, #7C3AED 16%, var(--surface)), var(--surface) 70%); border: 1px solid color-mix(in srgb, #7C3AED 24%, var(--surface)); }
+.mhero img { width: 104px; height: auto; flex: none; filter: drop-shadow(0 6px 12px rgba(0,0,0,.18)); }
+.mhero h1 { margin: 0 0 8px; }
+.mhero p { color: var(--muted); margin: 0; }
+@media (max-width: 560px) { .mhero { flex-direction: column; text-align: center; } .mhero img { width: 88px; } }
+.prose:has(> .mhero) { max-width: none; } /* même largeur que la méthode de votona.fr */
+.mtoc { display: flex; flex-wrap: wrap; gap: 8px; }
+.mtoc a { padding: 6px 13px; border-radius: 99px; border: 1px solid var(--line); background: var(--surface); color: var(--muted); font-size: 13px; font-weight: 700; text-decoration: none; }
+.mtoc a:hover { color: var(--accent); border-color: var(--accent); }
+.prose h2 { scroll-margin-top: 130px; }
 .prose { max-width: 70ch; display: flex; flex-direction: column; gap: 14px; }
 .prose p, .prose ul { margin: 0; }
 .prose li { margin-bottom: 6px; }
@@ -694,7 +709,8 @@ const views = {
   methodologie() {
     const n = Object.fromEntries(usedSources.map((s) => [s, facts.filter((f) => f.reviews.some((r) => r.source_id === s)).length]));
     return [el("div", { class: "prose" },
-      el("h1", { text: "Méthode" }),
+      el("nav", { class: "mtabs", "aria-label": "Méthodes de Votona" }, el("a", { href: VOTONA + "/methode/" }, "Le test Votona"), el("a", { href: "#methodologie", "aria-current": "page" }, "L'Observatoire")),
+      el("h1", { text: "Méthode de l'Observatoire" }),
       el("p", { text: "L'Observatoire ne produit aucun verdict. Il recense des vérifications publiées par des rédactions de fact-checking, les rattache à des personnalités politiques identifiées et les rend consultables par période, parti, personne, sujet, verdict et rédaction." }),
       el("h2", { text: "Principes" }),
       el("ul", {},

@@ -538,9 +538,11 @@ def methode_page(site: Site) -> str:
                     else f'<span class="sw" style="background: var(--v-{k})" aria-hidden="true"></span>')
     scale_rows = "".join(f"<tr><td>{sw(k)} {LEVEL[k][0]}</td><td>{ex}</td></tr>" for k, ex in scale)
     body = f"""<div class="prose">
-<h1>Méthode</h1>
+<nav class="mtabs" aria-label="Méthodes de Votona"><a href="{VOTONA}/methode/">Le test Votona</a><a href="/methode/" aria-current="page">L'Observatoire</a></nav>
+<section class="mhero"><img src="/assets/logo-head.webp" alt="" width="104" height="83"><div><h1>Méthode de l'Observatoire</h1><p>D'où viennent les vérifications, comment elles sont rattachées aux personnalités et aux partis, et ce que l'Observatoire ne fait jamais.</p></div></section>
+<nav class="mtoc" aria-label="Sommaire"><a href="#principes">Principes</a><a href="#recoupement">Recoupement et divergences</a><a href="#sujets">Sujets</a><a href="#votona">Votona et l'Observatoire</a><a href="#redactions">Rédactions suivies</a><a href="#echelle">Échelle commune</a><a href="#donnees">Données ouvertes</a><a href="#limites">Limites de la version bêta</a><a href="#droits">Contester une entrée, vos droits</a></nav>
 <p>L'Observatoire ne produit aucun verdict. Il recense des vérifications publiées par des rédactions de fact-checking, les rattache à des personnalités politiques identifiées et les rend consultables par période, parti, personne, sujet, verdict et rédaction.</p>
-<h2>Principes</h2>
+<h2 id="principes">Principes</h2>
 <ul>
 <li>Le verdict affiché est celui de la source, avec son libellé d'origine toujours visible.</li>
 <li>Chaque entrée donne le lien vers l'article, la date de la déclaration, la date de la vérification et le nom de la rédaction.</li>
@@ -550,31 +552,31 @@ def methode_page(site: Site) -> str:
 <li>Seules des métadonnées sont reprises (titre, verdict, dates, lien), jamais le contenu des articles.</li>
 <li>Toute attribution incertaine est vérifiée à la main avant publication. Aucun classement des personnalités n'est proposé.</li>
 </ul>
-<h2>Recoupement et divergences</h2>
+<h2 id="recoupement">Recoupement et divergences</h2>
 <p>Quand plusieurs rédactions vérifient la même déclaration, toutes les vérifications sont affichées, avec la mention « Vérifié par N rédactions ». Le compteur retient le verdict le plus fréquent, et « non classable » en cas d'égalité. Si les rédactions placent la déclaration à des niveaux différents, la mention « Verdicts divergents » le signale : l'Observatoire ne tranche pas.</p>
-<h2>Sujets</h2>
+<h2 id="sujets">Sujets</h2>
 <p>Chaque déclaration est rangée, si possible, dans l'une des 7 familles et l'un des sujets du test Votona, à partir de mots-clés lus dans la déclaration et le titre de l'article. Ce classement automatique est indicatif ; il sert à relier un fait aux positions des candidats sur Votona, et à repérer les sujets que personne n'a vérifiés (angles morts).</p>
-<h2>Votona et l'Observatoire</h2>
+<h2 id="votona">Votona et l'Observatoire</h2>
 <p>Votona compare vos positions à celles des candidats ; l'Observatoire recense ce que les rédactions de fact-checking ont vérifié. Les deux outils partagent la liste des candidats et les sujets, mais <strong>les vérifications n'entrent jamais dans le classement de Votona</strong>, et l'Observatoire n'interprète aucune position.</p>
-<h2>Rédactions suivies</h2>
+<h2 id="redactions">Rédactions suivies</h2>
 <div class="table-box"><table class="plain"><thead><tr><th>Rédaction</th><th>Déclarations dans la base</th></tr></thead><tbody>{rows}</tbody></table></div>
 <p class="small muted">Collecte : API Google Fact Check Tools (vérifications déclarées par les rédactions) et flux ClaimReview de Data Commons (licence CC BY). Personnalités et affiliations : Wikidata.</p>
-<h2>Échelle commune</h2>
+<h2 id="echelle">Échelle commune</h2>
 <div class="table-box"><table class="plain"><thead><tr><th>Niveau</th><th>Exemples de libellés d'origine</th></tr></thead><tbody>{scale_rows}</tbody></table></div>
-<h2>Données ouvertes</h2>
+<h2 id="donnees">Données ouvertes</h2>
 <p>Toute la base publiée est téléchargeable et réutilisable en citant l'Observatoire et chaque rédaction : <a href="/donnees/facts.json">JSON</a>, <a href="/donnees/facts.csv">CSV</a> et <a href="/flux.xml">flux RSS des dernières vérifications</a>. Métadonnées seulement : pour lire une vérification, suivez le lien vers la rédaction.</p>
-<h2>Limites de la version bêta</h2>
+<h2 id="limites">Limites de la version bêta</h2>
 <ul>
 <li>Périmètre : France ; personnalités ayant exercé une fonction publique depuis 2017, et tous les candidats 2027 de la liste Votona.</li>
 <li>Certains libellés intermédiaires sont classés « non classable » en attendant leur validation.</li>
 <li>Les affiliations partisanes de Wikidata sont souvent non datées : beaucoup de déclarations n'ont pas encore de parti indiqué.</li>
 <li>Le thème est attribué par mots-clés : certaines déclarations restent sans sujet.</li>
 </ul>
-<h2>Contester une entrée, vos droits</h2>
+<h2 id="droits">Contester une entrée, vos droits</h2>
 <p>Pour signaler une erreur, demander une rectification ou vous opposer au traitement de données vous concernant, écrivez à <strong>{CONTACT}</strong> en indiquant la référence de l'entrée (lien « Signaler une erreur »). Une attribution contestée à raison est retirée sous 48 heures. Personnalité citée : voir <a href="/vous-etes-cite/">Vous êtes cité ?</a></p>
 <p class="small muted">Données mises à jour le {fr_date(site.generated_at, True)}.</p>
 </div>"""
-    return page(site, "/methode/", "Méthode et FAQ - Votona Observatoire",
+    return page(site, "/methode/", "Méthode de l'Observatoire - Votona Observatoire",
                 "Comment Votona Observatoire recense les vérifications des fact-checkers : verdict d'origine, parti à la date, recoupement, sujets, données ouvertes.",
                 "methode", body)
 
