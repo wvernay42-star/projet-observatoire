@@ -21,6 +21,16 @@ Les décisions durables sont aussi consignées dans [decisions.md](decisions.md)
 | — | Hébergement préprod (`preprod`) / prod (`main`) | ✅ en ligne (26/10) — projet Vercel `votona-observatoire` ; production indexable depuis le 28/10 |
 | — | Liens Votona → Observatoire | ⏳ actifs sur `draft` (test, 26/10) ; `main` sur demande du porteur |
 
+## 2026-10-29 — Routine quotidienne
+
+- Candidats : synchronisation avec votona.fr, 0 ajout, 0 modification, 0 absent ; 2 à confirmer (Selma Labib, Antoine Mikolajczak).
+- Collecte : google_factcheck 25 récupérées / 1 nouvelle ; datacommons_feed 4 / 0. Aucune erreur de connecteur.
+- Décisions appliquées : 2 de l'admin Votona (1 parti, 0 libellé, 0 attribution), 0 ignorée ; ancienne page : aucune décision. rating_map.csv non modifié (affiliations_manual.csv : 1 ligne ajoutée, validation manuelle d'un parti).
+- Claims : auto_sure 454, validated 173, to_review 0, rejected 6 895. Exportées : 627 déclarations (data/export/facts.json).
+- Files de validation : 0 libellé, 0 attribution, 1 parti, 7 sources ; déposées sur Supabase (obs_queues, back-office admin Votona).
+- Part de verdicts positifs (toutes entrées / attribuées) : TF1 Info 20 % / 35 % ; franceinfo Vrai ou Fake 29 % / 38 % ; AFP Factuel 0,4 % / 3 % ; Poligraph 21 % / 23 % ; Les Décodeurs 1,6 % / 4 % ; 20 Minutes Fakeoff 11 % / 29 % ; Libération CheckNews 0 % / —.
+- Alertes : aucune. Beta republiée (artefact version 13), site statique régénéré. 80 tests OK.
+
 ## 2026-10-29 — Même ergonomie que les pages de votona.fr
 
 - Composants de `generate-candidate-pages.js` repris à l'identique (`template.html`, `build_pages.py`) :
