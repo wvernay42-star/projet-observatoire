@@ -82,3 +82,20 @@ def test_share_image_per_candidate_when_available(tmp_path, monkeypatch):
     mathieu = (tmp_path / "site/candidats/mathieu/index.html").read_text(encoding="utf-8")
     assert 'og:image" content="https://observatoire.votona.fr/assets/og/candidats/lepen.jpg"' in lepen
     assert 'og:image" content="https://observatoire.votona.fr/assets/og.jpg"' in mathieu
+
+
+def test_portrait_and_credit_only_for_candidates_with_a_free_photo(tmp_path):
+    site = make_site()
+    site.portraits = {"lepen": {"author": "Auteur <b>", "license": "CC BY 4.0", "license_url": "https://creativecommons.org/licenses/by/4.0/",
+                                "date": "2025-06-09", "page": "https://commons.wikimedia.org/wiki/File:X.jpg"}}
+    listed = build(site, tmp_path)
+    lepen = (tmp_path / "candidats/lepen/index.html").read_text(encoding="utf-8")
+    mathieu = (tmp_path / "candidats/mathieu/index.html").read_text(encoding="utf-8")
+    assert 'src="/assets/portraits/lepen.webp"' in lepen and "Auteur &lt;b&gt;" in lepen and "CC BY 4.0" in lepen
+    assert "portraits/" not in mathieu and "Photo :" not in mathieu          # initiales, pas de crédit
+    credits = (tmp_path / "credits-photos/index.html").read_text(encoding="utf-8")
+    assert "Marine Le Pen" in credits and "/credits-photos/" in listed
+
+
+def test_no_credits_page_without_portraits(tmp_path):
+    assert "/credits-photos/" not in build(make_site(), tmp_path) and not (tmp_path / "credits-photos").exists()

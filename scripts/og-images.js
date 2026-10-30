@@ -4,7 +4,8 @@
 // justes d'un jour à l'autre. build_beta les copie dans site/assets/og/, build_pages les utilise
 // quand elles existent (sinon l'image générale assets/og.jpg).
 //
-// Les images existantes ne sont jamais réécrites (--force pour tout refaire). Demande Node,
+// Les images existantes ne sont jamais réécrites (--force pour tout refaire, --candidates pour
+// refaire seulement celles des candidats, par exemple après l'ajout de portraits). Demande Node,
 // Playwright + Chromium (présents dans les sessions cloud) et l'accès à Google Fonts.
 //
 // Usage : node scripts/og-images.js [--force]
@@ -67,16 +68,19 @@ const initials = (name) => String(name || "").split(/[\s-]+/).filter(Boolean).ma
 
 function candidateHtml(c) {
   const color = hex(c.color, "#7C3AED");
+  // Portrait libre (web/beta/portraits/<id>.webp) à la place des initiales quand il existe.
+  const has = fs.existsSync(path.join(BETA, "portraits", c.votona_id + ".webp"));
+  const face = has ? `<img src="${img("portraits/" + c.votona_id + ".webp")}" alt="" style="width:100%;height:100%;object-fit:cover;display:block">` : esc(initials(c.name));
   return `<!DOCTYPE html><html><head><meta charset="utf-8">${FONTS}
 <style>${BASE_CSS}
 body{background:linear-gradient(115deg, ${color} 0%, #14121F 100%);}
 .who{position:absolute;left:70px;top:200px;width:700px;height:270px;display:flex;align-items:center;gap:28px}
-.av{flex:none;width:112px;height:112px;border-radius:50%;background:#fff;color:${color};display:flex;align-items:center;justify-content:center;font-family:'Baloo 2',sans-serif;font-weight:800;font-size:44px;box-shadow:0 6px 24px rgba(0,0,0,.2)}
+.av{flex:none;width:132px;height:132px;border-radius:50%;overflow:hidden;border:4px solid #fff;background:#fff;color:${color};display:flex;align-items:center;justify-content:center;font-family:'Baloo 2',sans-serif;font-weight:800;font-size:44px;box-shadow:0 6px 24px rgba(0,0,0,.2)}
 .name{font-family:'Baloo 2',sans-serif;font-weight:800;font-size:62px;line-height:1.02}
 .party{margin-top:10px;font-weight:700;font-size:24px;color:rgba(255,255,255,.85)}
 .kick{margin-top:16px;display:inline-block;padding:7px 16px;border-radius:99px;background:#fff;color:#191d2b;font-weight:700;font-size:18px}
 </style></head><body>${HEAD}${LENS}
-<div class="who"><div class="av">${esc(initials(c.name))}</div><div><div class="name">${esc(c.name)}</div><div class="party">${esc(c.votona_party)}</div><div class="kick">Ses déclarations vérifiées</div></div></div>
+<div class="who"><div class="av">${face}</div><div><div class="name">${esc(c.name)}</div><div class="party">${esc(c.votona_party)}</div><div class="kick">Ses déclarations vérifiées</div></div></div>
 <div class="foot">Le verdict des fact-checkers, avec le lien vers chaque article - observatoire.votona.fr</div></body></html>`;
 }
 
@@ -105,7 +109,8 @@ async function main() {
     jobs.push({ out: path.join(OUT, "candidats", c.votona_id + ".jpg"), html: candidateHtml(c) });
   }
   for (const f of FAMILIES) jobs.push({ out: path.join(OUT, "sujets", f[0] + ".jpg"), html: familyHtml(f) });
-  const todo = jobs.filter((j) => force || !fs.existsSync(j.out));
+  const forceCandidates = process.argv.includes("--candidates");
+  const todo = jobs.filter((j) => force || (forceCandidates && j.out.includes(path.join("og", "candidats"))) || !fs.existsSync(j.out));
   if (!todo.length) { console.log("Images de partage : rien à créer."); return; }
   const { chromium } = require("playwright");
   const browser = await chromium.launch();

@@ -283,6 +283,12 @@ input.q:focus { outline: 2px solid var(--accent); outline-offset: 1px; }
 .cand-header .hp1 { right: 26px; top: 14px; transform: rotate(10deg); } .cand-header .hp2 { right: 92px; top: 52px; transform: rotate(-12deg); }
 .cand-header .hp3 { right: 30px; bottom: 12px; transform: rotate(-6deg); } .cand-header .hp4 { right: 120px; top: 8px; transform: rotate(14deg); opacity: .9; }
 @media (max-width: 640px) { .cand-header .hero-props { display: none; } .cand-header .cand-id { padding-right: 0; } }
+.ph { width: 100%; height: 100%; object-fit: cover; display: block; border-radius: 50%; }
+.vlist .av, .cand-header .cand-avatar { overflow: hidden; }
+.cand-header .cand-avatar.has-ph { width: 84px; height: 84px; box-shadow: 0 0 0 3px #fff, 0 6px 18px color-mix(in srgb, var(--cc) 45%, transparent); }
+.photo-credit { margin: -8px 0 0; font-size: 12px; color: var(--faint); line-height: 1.5; }
+.photo-credit a { color: inherit; text-decoration: underline; }
+.credits { padding-left: 20px; display: flex; flex-direction: column; gap: 8px; }
 .intro-p { color: var(--muted); line-height: 1.6; margin: 0; }
 .intro-p a, .src-line a { color: var(--accent); font-weight: 600; }
 .src-line { color: var(--muted); font-size: 14px; margin: -8px 0 0; }
@@ -322,6 +328,7 @@ const FAMILIES = [["economie", "Économie & travail"], ["social", "Protection so
 // Couleur et accessoire de chaque famille : mêmes que Votona (CATEGORY_META.pop, assets/props).
 const THEME = { economie: ["#FFB703", "economie"], social: ["#3A86FF", "protection-sociale"], securite: ["#FF6B6B", "securite"], ecologie: ["#06D6A0", "ecologie"], europe: ["#6C5CE7", "europe"], societe: ["#FF5DA2", "societe"], defense: ["#00B4D8", "defense"] };
 const PROPS = /*__PROPS__*/{};
+const PORTRAIT_URLS = /*__PORTRAITS__*/{};  // portraits libres des candidats (votona_id -> image), absents de l'artefact
 const CHARS = /*__CHARS__*/{};  // personnages de Votona (en-têtes), absents de l'artefact
 const propImg = (id, cls = "prop") => PROPS[THEME[id][1]] ? el("img", { class: cls, src: PROPS[THEME[id][1]], alt: "", width: 44, height: 44, loading: "lazy" }) : null;
 const FAMILY_ID = Object.fromEntries(FAMILIES.map(([id, l]) => [l, id]));
@@ -375,6 +382,7 @@ const frDate = (iso, long) => {
   return isNaN(d) ? iso : d.toLocaleDateString("fr-FR", { day: "numeric", month: long ? "long" : "short", year: "numeric" }).replace(/^1 /, "1er ");
 };
 const plural = (n, one, many) => n + " " + (n > 1 ? many : one);
+const faceOf = (cand, name) => cand && PORTRAIT_URLS[cand.votona_id] ? el("img", { class: "ph", src: PORTRAIT_URLS[cand.votona_id], alt: "", width: 96, height: 96, loading: "lazy" }) : initialsOf(name);
 const initialsOf = (name) => name.split(/[\s-]+/).filter(Boolean).map((w) => w[0]).slice(0, 2).join("").toUpperCase();
 const shift = (days) => { const d = new Date(today + "T12:00:00"); d.setDate(d.getDate() - days); return d.toISOString().slice(0, 10); };
 const toast = (msg) => { const t = $("toast"); t.textContent = msg; t.hidden = false; clearTimeout(toast.h); toast.h = setTimeout(() => (t.hidden = true), 2600); };
@@ -645,7 +653,7 @@ const views = {
       return [...head, el("ul", { class: "vlist" }, sorted.map((c) => {
         const list = count(c.pid);
         return el("li", { class: c.status === "retiré" ? "out" : null, style: "--cc:" + (c.color || "#7C3AED") },
-          el("button", { type: "button", on: { click: () => go("personne", c.pid) } }, el("span", { class: "av", "aria-hidden": "true", text: initialsOf(c.name) }),
+          el("button", { type: "button", on: { click: () => go("personne", c.pid) } }, el("span", { class: "av", "aria-hidden": "true" }, faceOf(c, c.name)),
             el("span", { class: "who" }, el("span", { class: "nm", text: c.name }),
               el("span", { class: "party", text: c.votona_party + (c.status === "retiré" ? " · candidature retirée" : "") }),
               list.length ? miniBar(list) : null,
@@ -711,7 +719,7 @@ const views = {
     const fams = FAMILIES.filter(([k]) => list.some((f) => f.family === k));
     return [
       // Même en-tête que les fiches candidats de votona.fr (et les pages fixes, build_pages.person_page).
-      el("div", { class: "cand-header", style: "--cc:" + ((cand && cand.color) || "#7C3AED") }, el("div", { class: "cand-avatar", "aria-hidden": "true", text: initials }),
+      el("div", { class: "cand-header", style: "--cc:" + ((cand && cand.color) || "#7C3AED") }, el("div", { class: "cand-avatar" + (cand && PORTRAIT_URLS[cand.votona_id] ? " has-ph" : ""), "aria-hidden": "true" }, faceOf(cand, name)),
         el("div", { class: "cand-id" }, el("h1", { text: name }),
           el("p", { class: "party", text: cand ? cand.votona_party + (cand.status === "retiré" ? " · candidature retirée" : "") : (partyNames[partyNames.length - 1] || "Parti non renseigné") }),
           el("p", { class: "cand-stat", text: list.length ? plural(list.length, "déclaration vérifiée", "déclarations vérifiées") : "Aucune vérification à ce jour" })),

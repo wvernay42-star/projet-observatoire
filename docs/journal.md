@@ -21,6 +21,19 @@ Les décisions durables sont aussi consignées dans [decisions.md](decisions.md)
 | — | Hébergement préprod (`preprod`) / prod (`main`) | ✅ en ligne (26/10) — projet Vercel `votona-observatoire` ; production indexable depuis le 28/10 |
 | — | Liens Votona → Observatoire | ⏳ actifs sur `draft` (test, 26/10) ; `main` sur demande du porteur |
 
+## 2026-10-30 (soir) — Portraits libres des candidats
+
+- 30 des 38 candidats ont un portrait sous licence libre (Wikimedia Commons : Wikidata P18 et
+  catégorie du candidat), le plus récent où un seul visage net occupe le cadre (détection OpenCV),
+  validé par le porteur sur planche. Recadrage carré sur le visage, 192×192 WebP (≈ 6 Ko chacun) dans
+  `web/beta/portraits/`, crédits (auteur, licence, lien, date) dans `data/seeds/portraits.json`.
+  Les 8 autres (Guedj, Egger, Labib, Mikolajczak, Royal, Mathieu, Bouamrane, Markovic) : initiales.
+- Pages fixes et application : pastilles de la liste des candidats, en-tête des fiches (84 px, ligne
+  « Photo : auteur, licence, via Wikimedia Commons »), page `/credits-photos/` (pied de page, plan du
+  site), images de partage des candidats avec le visage. Artefact : initiales (poids).
+- Même jeu de photos et de crédits côté Votona (`assets/portraits/`, `data/portraits.json`, section
+  « Crédits photos » de /a-propos/). 88 tests OK.
+
 ## 2026-10-30 (suite) — Ancienne page de validation retirée, images de partage
 
 - Routine : étapes de repli sur l'ancienne page Claude de validation supprimées (lecture des

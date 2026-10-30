@@ -28,6 +28,7 @@ from pipeline.connectors.base import SEEDS_DIR
 ROOT = Path(__file__).resolve().parents[1]
 TEMPLATE = ROOT / "web" / "beta" / "template.html"
 OG_DIR = ROOT / "web" / "beta" / "og"  # images de partage (scripts/og-images.js)
+PORTRAITS_DIR = ROOT / "web" / "beta" / "portraits"  # portraits libres des candidats (192×192 WebP)
 SITE_URL = "https://observatoire.votona.fr"
 VOTONA = "https://votona.fr"
 CONTACT = "contact@votona.fr"
@@ -91,6 +92,7 @@ class Site:
     candidate_by_pid: dict[str, dict[str, str]] = field(default_factory=dict)
     person_url: dict[str, str] = field(default_factory=dict)
     party_url: dict[str, str] = field(default_factory=dict)
+    portraits: dict[str, dict[str, str]] = field(default_factory=dict)  # votona_id -> crédit (data/seeds/portraits.json)
 
     @classmethod
     def load(cls, facts: list[dict[str, Any]], candidates: list[dict[str, str]], topics: list[dict[str, str]],
@@ -265,6 +267,25 @@ def char_img(fid: str, cls: str) -> str:
     return f'<img class="{cls}" src="/assets/characters/{THEME[fid][1]}.webp" alt="" width="339" height="577">'
 
 
+def avatar_inner(site: Site, cand: dict[str, Any] | None, name: str, size: int = 96) -> str:
+    """Pastille d'un candidat : son portrait libre s'il existe, sinon ses initiales."""
+    if cand and cand["votona_id"] in site.portraits:
+        return f'<img class="ph" src="/assets/portraits/{cand["votona_id"]}.webp" width="{size}" height="{size}" alt="" loading="lazy">'
+    return escape(initials_of(name))
+
+
+def photo_credit(site: Site, cand: dict[str, Any] | None) -> str:
+    """Ligne de crédit sous l'en-tête d'une fiche (licences libres : auteur et licence à citer)."""
+    cr = site.portraits.get(cand["votona_id"]) if cand else None
+    if not cr:
+        return ""
+    lic = (f'<a href="{escape(cr["license_url"])}" target="_blank" rel="noopener nofollow">{escape(cr["license"])}</a>'
+           if cr.get("license_url") else escape(cr["license"]))
+    return (f'<p class="photo-credit">Photo : {escape(cr.get("author") or "auteur inconnu")}, {lic}, '
+            f'<a href="{escape(cr["page"])}" target="_blank" rel="noopener nofollow">via Wikimedia Commons</a> · '
+            f'<a href="/credits-photos/">Crédits photos</a></p>')
+
+
 def intro(title: str, text: str = "", stats: list[tuple[Any, str]] | None = None, crew: tuple[str, ...] = (),
           color: str = "", kicker: str = "") -> str:
     """En-tête des pages, comme les « hero » de votona.fr : titre, chapeau, pastilles de chiffres, personnages."""
@@ -381,7 +402,7 @@ def page(site: Site, path: str, title: str, description: str, tab: str, body: st
 <main class="wrap">
 {body}
 <footer class="gfoot">Votona Observatoire ne produit aucun verdict : il reprend celui de la rédaction, avec un lien vers l'article. Version bêta, mise à jour chaque jour ({fr_date(site.generated_at, True)}).
-<div class="flinks"><a href="/methode/">Méthode</a> · <a href="/vous-etes-cite/">Vous êtes cité ?</a> · <a href="/donnees/facts.csv">Données ouvertes</a> · <a href="/flux.xml">Flux RSS</a> · <a href="{VOTONA}/a-propos/">À propos</a> · <a href="{VOTONA}/mentions-legales/">Mentions légales</a> · <a href="{VOTONA}/confidentialite/">Confidentialité</a> · <a href="{VOTONA}/contact/">Contact</a></div>
+<div class="flinks"><a href="/methode/">Méthode</a> · <a href="/vous-etes-cite/">Vous êtes cité ?</a> · <a href="/credits-photos/">Crédits photos</a> · <a href="/donnees/facts.csv">Données ouvertes</a> · <a href="/flux.xml">Flux RSS</a> · <a href="{VOTONA}/a-propos/">À propos</a> · <a href="{VOTONA}/mentions-legales/">Mentions légales</a> · <a href="{VOTONA}/confidentialite/">Confidentialité</a> · <a href="{VOTONA}/contact/">Contact</a></div>
 <div class="social">{social_html()}</div>
 </footer>
 </main>
@@ -398,7 +419,6 @@ def breadcrumb_ld(*items: tuple[str, str]) -> dict[str, Any]:
 def person_page(site: Site, pid: str) -> tuple[str, str, bool]:
     path, name, cand = site.person_url[pid], site.persons[pid], site.candidate_by_pid.get(pid)
     facts = site.of_person(pid)
-    initials = initials_of(name)
     party_names = list(dict.fromkeys(party_label(f["party"]) for f in reversed(facts) if f["party"]["id"]))
     party_line = ("Partis sur la période : " + ", ".join(party_names) if party_names
                   else f'{cand["votona_party"]} (selon Votona)' if cand else "Parti non renseigné sur la période")
@@ -412,9 +432,10 @@ def person_page(site: Site, pid: str) -> tuple[str, str, bool]:
                     for i, ((fid, n), size) in enumerate(zip(fams, (58, 46, 40, 34))) if n)
     stat = plural(len(facts), "déclaration vérifiée", "déclarations vérifiées") if facts else "Aucune vérification à ce jour"
     parts = [crumbs(("/candidats/", "Tous les candidats") if cand else ("/personnalites/", "Toutes les personnalités"), ("/sujets/", "Tous les sujets")),
-             f'<div class="cand-header" style="--cc:{color}"><div class="cand-avatar" aria-hidden="true">{escape(initials)}</div>'
+             f'<div class="cand-header" style="--cc:{color}"><div class="cand-avatar{" has-ph" if cand and cand["votona_id"] in site.portraits else ""}" aria-hidden="true">{avatar_inner(site, cand, name, 168)}</div>'
              f'<div class="cand-id"><h1>{escape(name)}</h1><p class="party">{escape(party)}</p><p class="cand-stat">{stat}</p></div>'
              f'<div class="hero-props" aria-hidden="true">{props}</div></div>',
+             photo_credit(site, cand),
              f'<p class="intro-p">Déclarations de {escape(name)} vérifiées par les rédactions françaises de fact-checking, avec le verdict '
              f"de chaque rédaction, son libellé d'origine et le lien vers l'article. {escape(SCOPE)}</p>",
              f'<p class="src-line">{escape(party_line)}{wiki}</p>']
@@ -532,7 +553,7 @@ def index_pages(site: Site) -> dict[str, str]:
                 if facts else '<span class="meta">Aucune vérification à ce jour</span>')
         items.append(f'<li data-search="{escape(c["name"] + " " + party)}"{" class=\"out\"" if c["status"] == "retiré" else ""} '
                      f'style="--cc:{escape(c.get("color") or "#7C3AED")}"><a href="{site.person_url[c["pid"]]}">'
-                     f'<span class="av" aria-hidden="true">{escape(initials_of(c["name"]))}</span><span class="who">'
+                     f'<span class="av" aria-hidden="true">{avatar_inner(site, c, c["name"])}</span><span class="who">'
                      f'<span class="nm">{escape(c["name"])}</span><span class="party">{escape(party)}</span>{meta}</span></a></li>')
     pages["/candidats/"] = page(site, "/candidats/", "Candidats à la présidentielle 2027 : déclarations vérifiées - Votona Observatoire",
                                 "Les déclarations des candidats à la présidentielle 2027 vérifiées par les rédactions françaises de fact-checking, candidat par candidat.",
@@ -693,6 +714,29 @@ def cited_page(site: Site) -> str:
                 "methode", body)
 
 
+def credits_page(site: Site) -> str:
+    """Crédits photos : auteur, licence et source de chaque portrait (licences libres, Wikimedia Commons)."""
+    rows = []
+    for c in sorted(site.candidates, key=lambda c: c["votona_id"]):
+        cr = site.portraits.get(c["votona_id"])
+        if not cr:
+            continue
+        lic = (f'<a href="{escape(cr["license_url"])}" target="_blank" rel="noopener nofollow">{escape(cr["license"])}</a>'
+               if cr.get("license_url") else escape(cr["license"]))
+        rows.append(f'<li><b>{escape(c["name"])}</b> : {escape(cr.get("author") or "auteur inconnu")}'
+                    f'{", " + escape(cr["date"]) if cr.get("date") else ""}, {lic}, '
+                    f'<a href="{escape(cr["page"])}" target="_blank" rel="noopener nofollow">fichier sur Wikimedia Commons</a>.</li>')
+    body = f"""<div class="prose">
+<section class="mhero"><img src="/assets/logo-head.webp" alt="" width="104" height="83"><div><h1>Crédits photos</h1><p>Les portraits des candidats viennent de Wikimedia Commons et sont sous licence libre : voici leurs auteurs et leurs licences.</p></div></section>
+<p>Pour chaque candidat, la photo libre la plus récente où le visage est net est retenue ; les candidats sans photo libre gardent leurs initiales. Les images sont recadrées sur le visage. C'est la même sélection que sur <a href="{VOTONA}/a-propos/#credits-photos">Votona</a>. Une photo vous concerne et vous souhaitez son retrait ? Écrivez à <strong>{CONTACT}</strong>.</p>
+<ul class="credits">
+{"".join(rows)}
+</ul>
+</div>"""
+    return page(site, "/credits-photos/", "Crédits photos - Votona Observatoire",
+                "Auteurs et licences des portraits des candidats à la présidentielle 2027, issus de Wikimedia Commons.", "methode", body)
+
+
 def stylesheet() -> str:
     """Feuille de style des pages fixes : celle du gabarit de l'app, sans copie à maintenir."""
     html = TEMPLATE.read_text(encoding="utf-8")
@@ -718,11 +762,13 @@ def build(site: Site, site_dir: Path) -> list[str]:
     """Écrit toutes les pages et le plan du site ; renvoie les adresses indexables."""
     (site_dir / "assets").mkdir(parents=True, exist_ok=True)
     (site_dir / "assets" / "observatoire.css").write_text(stylesheet(), encoding="utf-8")
-    for d in ("candidats", "personnalites", "partis", "sujets", "methode", "vous-etes-cite"):  # pages recréées à chaque fois
+    for d in ("candidats", "personnalites", "partis", "sujets", "methode", "vous-etes-cite", "credits-photos"):  # pages recréées à chaque fois
         if (site_dir / d).exists():
             shutil.rmtree(site_dir / d)
     pages: dict[str, str] = {}
     listed = ["/", "/candidats/", "/personnalites/", "/partis/", "/sujets/", "/methode/", "/vous-etes-cite/"]
+    if site.portraits:
+        listed.append("/credits-photos/")
     for pid in site.person_url:
         if pid in site.candidate_by_pid or site.of_person(pid):
             path, html, indexable = person_page(site, pid)
@@ -740,6 +786,8 @@ def build(site: Site, site_dir: Path) -> list[str]:
     pages.update(index_pages(site))
     pages["/methode/"] = methode_page(site)
     pages["/vous-etes-cite/"] = cited_page(site)
+    if site.portraits:
+        pages["/credits-photos/"] = credits_page(site)
     for path, html in pages.items():
         out = site_dir / path.strip("/") / "index.html"
         out.parent.mkdir(parents=True, exist_ok=True)
@@ -755,6 +803,14 @@ def build(site: Site, site_dir: Path) -> list[str]:
     return listed
 
 
+def load_portraits() -> dict[str, dict[str, str]]:
+    """Crédits des portraits libres (Wikimedia Commons) : un fichier web/beta/portraits/<votona_id>.webp par entrée."""
+    path = SEEDS_DIR / "portraits.json"
+    if not path.exists():
+        return {}
+    return {k: v for k, v in json.loads(path.read_text(encoding="utf-8")).items() if (PORTRAITS_DIR / f"{k}.webp").exists()}
+
+
 def load_site(facts: list[dict[str, Any]], generated_at: str) -> Site:
     with (SEEDS_DIR / "sources.csv").open(encoding="utf-8") as f:
         sources = {s["id"]: s["name"] for s in csv.DictReader(f)}
@@ -762,7 +818,9 @@ def load_site(facts: list[dict[str, Any]], generated_at: str) -> Site:
         candidates = list(csv.DictReader(f))
     with (SEEDS_DIR / "themes.csv").open(encoding="utf-8") as f:
         topics = [{"slug": t["key"], "label": t["label"], "category": t["category"]} for t in csv.DictReader(f) if t["kind"] == "topic"]
-    return Site.load(facts, candidates, topics, sources, generated_at)
+    site = Site.load(facts, candidates, topics, sources, generated_at)
+    site.portraits = load_portraits()
+    return site
 
 
 if __name__ == "__main__":
