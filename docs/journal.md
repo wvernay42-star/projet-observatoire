@@ -21,6 +21,22 @@ Les décisions durables sont aussi consignées dans [decisions.md](decisions.md)
 | — | Hébergement préprod (`preprod`) / prod (`main`) | ✅ en ligne (26/10) — projet Vercel `votona-observatoire` ; production indexable depuis le 28/10 |
 | — | Liens Votona → Observatoire | ⏳ actifs sur `draft` (test, 26/10) ; `main` sur demande du porteur |
 
+## 2026-10-30 — Couverture : diagnostic et attributions récupérées
+
+- Diagnostic des rédactions manquantes : l'API Google Fact Check n'a plus rien du Monde depuis
+  janvier 2021 ni de Libération depuis octobre 2023, rien des Surligneurs ni de Science Feedback.
+  Leurs articles ne portent pas de balisage ClaimReview (Le Monde, Les Surligneurs) ou refusent
+  les robots (Libération) : pas de verdict structuré à reprendre, donc pas de connecteur possible
+  sans déduire un verdict du texte (interdit). Aucun autre éditeur français dans l'API ; le flux
+  Data Commons n'ajoute que des sites belges et un ancien lot du Monde (alerte « rien de nouveau
+  depuis 3 jours » normale). Piste restante : écrire aux rédactions (reprise du balisage).
+- Attribution : « Le député LFI X », « L'ancien Premier ministre X » (nom complet en fin de
+  libellé) et « X et Y » vont en validation (`to_review`) au lieu d'être rejetés comme libellés
+  vagues. Estimation sur la base actuelle : 162 vérifications à valider (148 TF1 Info), dont
+  15 concernant un candidat 2027. Jamais attribuées automatiquement. 85 tests OK.
+- Hors périmètre volontaire : les personnalités sans fonction depuis 2017 (ex. Nicolas Sarkozy)
+  restent hors référentiel.
+
 ## 2026-10-30 — Routine quotidienne
 
 - Candidats : synchronisation avec votona.fr, 0 ajout, 0 modification, 0 absent ; 2 à confirmer (Selma Labib, Antoine Mikolajczak).

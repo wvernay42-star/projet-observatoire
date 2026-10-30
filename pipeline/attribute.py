@@ -4,7 +4,8 @@ Règles (docs/cadrage.md, « Attribution et dédoublonnage ») :
 1. référentiel fermé : seules les personnes de persons.csv peuvent être attribuées ;
 2. claimant identique (casse, accents, tirets près) à un nom ou alias d'une seule personne -> auto_sure ;
 3. libellé vague (« des internautes », « un post Facebook »…) -> jamais attribué (rejected) ;
-4. correspondance partielle ou ambiguë (homonymes, nom seul, nom + média) -> to_review ;
+4. correspondance partielle ou ambiguë (homonymes, nom seul, nom + média, « le député LFI X »,
+   « X et Y ») -> to_review ;
 5. le parti vient de affiliations.csv à la date du fait, jamais de l'article.
 """
 
@@ -116,6 +117,19 @@ class Referential:
         if stripped != key and (found := self.names.get(stripped)):
             return Attribution("to_review", candidates=tuple(sorted(found)),
                                reason="nom retrouvé après retrait du contexte")
+        # « Le député LFI X », « L'ancien Premier ministre X », « La tête de liste du RN X » : le nom
+        # complet (deux mots au moins) termine le libellé. Toujours vérifié à la main.
+        # « Marine Le Pen et Eric Ciotti » : chaque nom est proposé, la validation choisit.
+        if " et " in key:
+            both = [self.names.get(part.strip(), set()) for part in key.split(" et ")]
+            if all(both):
+                return Attribution("to_review", candidates=tuple(sorted(set().union(*both))),
+                                   reason="plusieurs personnes")
+        tokens = key.split()
+        for start in range(1, len(tokens) - 1):
+            if found := self.names.get(" ".join(tokens[start:])):
+                return Attribution("to_review", candidates=tuple(sorted(found)),
+                                   reason="nom retrouvé à la fin du libellé")
 
         if _VAGUE.search(key) or _VAGUE_START.match(key) or _VAGUE_WHOLE.match(key):
             return Attribution("rejected", reason="libellé vague")

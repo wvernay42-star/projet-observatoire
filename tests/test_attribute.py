@@ -45,6 +45,18 @@ def test_vague_labels_are_never_attributed(ref, claimant):
     assert ref.attribute(claimant).status == "rejected"
 
 
+@pytest.mark.parametrize("claimant", ["Le député LFI Marine Le Pen", "L'eurodéputée du RN Marine Le Pen",
+                                      "Le premier secrétaire du PS, Marine Le Pen", "La tête de liste RN Marine Le Pen"])
+def test_title_and_party_before_the_name_go_to_review(ref, claimant):
+    result = ref.attribute(claimant)
+    assert (result.status, result.candidates) == ("to_review", ("Q2",))
+
+
+def test_several_people_are_all_proposed(ref):
+    assert ref.attribute("Marine Le Pen et Eric Ciotti") == Attribution(
+        "to_review", candidates=("Q2", "Q5"), reason="plusieurs personnes")
+
+
 def test_surname_only_goes_to_review(ref):
     assert ref.attribute("Ciotti") == Attribution("to_review", candidates=("Q5",), reason="nom seul")
 
