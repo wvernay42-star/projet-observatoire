@@ -11,30 +11,22 @@ avec l'email admin). Files et décisions dans la base Supabase de Votona :
 - Lecture et écriture réservées à l'email admin (RLS) ; la routine passe par l'identifiant API
   « Supabase » de l'environnement cloud « Observatoire » (clé secrète, jamais dans le dépôt).
 
-L'ancienne page ci-dessous reste lue pendant la transition (décisions encore présentes) et sert
-de repli si l'accès Supabase manque. Code de l'onglet : bloc « ADMIN — OBSERVATOIRE » de
-l'`index.html` de Votona.
+Code de l'onglet : bloc « ADMIN — OBSERVATOIRE » de l'`index.html` de Votona. Si l'accès
+Supabase manque, la routine le signale en alerte : les décisions restent dans `obs_decisions` et
+sont appliquées au passage suivant.
 
-## Ancienne page (repli)
+## Cycle (à chaque lancement de la routine)
 
-Page privée : https://claude.ai/artifact/At6BYDaT6SbwLv5P2LuSLU (source : `web/validation/index.html`).
-Base partagée de la page : collection `queues` (3 documents : `ratings`, `attributions`,
-`parties`, déposés par Claude) et collection `decisions` (un document par décision, écrit par
-la page ; écriture réservée aux éditeurs du projet).
+1. **Appliquer les décisions** : `python -m pipeline.supabase_sync apply` → écrit `rating_map.csv`
+   (decided_by = human), `data/validations/attributions.csv`, `data/seeds/affiliations_manual.csv`,
+   puis retire les décisions appliquées. Idempotent.
+2. **Relancer la routine** : `python -m pipeline.run_daily`.
+3. **Préparer et déposer les files** : `python -m pipeline.validation_sync seed`, puis
+   `python -m pipeline.supabase_sync push`.
+4. Commiter et pousser.
 
-## Cycle (à chaque lancement de la routine, par Claude)
-
-1. **Rapatrier les décisions** : `ArtifactData list` de la collection `decisions` avec
-   `out_dir` = un dossier temporaire, puis
-   `python -m pipeline.validation_sync apply <dossier>/decisions`
-   → écrit `rating_map.csv` (decided_by = human), `data/validations/attributions.csv`,
-   `data/seeds/affiliations_manual.csv`. Idempotent.
-2. **Supprimer** dans la base les décisions appliquées (`ArtifactData batch delete`).
-3. **Relancer la routine** : `python -m pipeline.run_daily`.
-4. **Préparer les files** : `python -m pipeline.validation_sync seed`, puis déposer
-   `data/review_queue/validation/{ratings,attributions,parties}.json` dans `queues`
-   (`ArtifactData batch set` avec `file_path`, `if_version` = version lue).
-5. Commiter et pousser.
+L'ancienne page Claude de validation (artefact, source `web/validation/index.html`) n'est plus
+lue par la routine depuis le 30/10/2026.
 
 ## Ce que valide chaque file
 

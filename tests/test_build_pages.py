@@ -1,4 +1,5 @@
 import json
+from pipeline import build_pages
 from pipeline.build_pages import Site, build, fr_date, slugify
 
 
@@ -69,3 +70,15 @@ def test_votona_summary_has_counts_never_verdicts(tmp_path):
     assert lepen["url"] == "https://observatoire.votona.fr/candidats/lepen/" and lepen["n"] >= 1
     assert lepen["sources"] == ["AFP Factuel"] and "mathieu" not in data["candidats"]
     assert "rating" not in json.dumps(data) and "verdict" not in json.dumps(data)
+
+
+def test_share_image_per_candidate_when_available(tmp_path, monkeypatch):
+    og = tmp_path / "og"
+    (og / "candidats").mkdir(parents=True)
+    (og / "candidats" / "lepen.jpg").write_bytes(b"jpg")
+    monkeypatch.setattr(build_pages, "OG_DIR", og)
+    build(make_site(), tmp_path / "site")
+    lepen = (tmp_path / "site/candidats/lepen/index.html").read_text(encoding="utf-8")
+    mathieu = (tmp_path / "site/candidats/mathieu/index.html").read_text(encoding="utf-8")
+    assert 'og:image" content="https://observatoire.votona.fr/assets/og/candidats/lepen.jpg"' in lepen
+    assert 'og:image" content="https://observatoire.votona.fr/assets/og.jpg"' in mathieu

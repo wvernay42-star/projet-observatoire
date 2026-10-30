@@ -27,6 +27,7 @@ from pipeline.connectors.base import SEEDS_DIR
 
 ROOT = Path(__file__).resolve().parents[1]
 TEMPLATE = ROOT / "web" / "beta" / "template.html"
+OG_DIR = ROOT / "web" / "beta" / "og"  # images de partage (scripts/og-images.js)
 SITE_URL = "https://observatoire.votona.fr"
 VOTONA = "https://votona.fr"
 CONTACT = "contact@votona.fr"
@@ -328,8 +329,13 @@ def social_html() -> str:
     return m.group(1) if m else ""
 
 
+def og_image(kind: str, key: str) -> str:
+    """Image de partage propre à la page (scripts/og-images.js), sinon l'image générale."""
+    return f"/assets/og/{kind}/{key}.jpg" if (OG_DIR / kind / f"{key}.jpg").exists() else "/assets/og.jpg"
+
+
 def page(site: Site, path: str, title: str, description: str, tab: str, body: str,
-         indexable: bool = True, ld: list[dict[str, Any]] | None = None) -> str:
+         indexable: bool = True, ld: list[dict[str, Any]] | None = None, og: str = "/assets/og.jpg") -> str:
     robots = "" if INDEXABLE and indexable else '<meta name="robots" content="noindex, nofollow">\n'
     nav = "".join(f'<a href="{href}"{" aria-current=\"page\"" if key == tab else ""}>'
                   f'{label}{"<span class=\"lg\"> vérifiés</span>" if key == "faits" else ""}</a>' for key, href, label in TABS)
@@ -348,8 +354,11 @@ def page(site: Site, path: str, title: str, description: str, tab: str, body: st
 <meta property="og:title" content="{escape(title)}">
 <meta property="og:description" content="{escape(description)}">
 <meta property="og:url" content="{url}">
-<meta property="og:image" content="{SITE_URL}/assets/og.jpg">
+<meta property="og:image" content="{SITE_URL}{og}">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="{SITE_URL}{og}">
 <link rel="icon" href="/assets/favicon-48.png">
 <link rel="alternate" type="application/rss+xml" title="Votona Observatoire - dernières vérifications" href="/flux.xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -439,7 +448,8 @@ def person_page(site: Site, pid: str) -> tuple[str, str, bool]:
             f"de fact-checking, avec le verdict d'origine et le lien vers chaque article." if n else
             f"{name} : aucune déclaration vérifiée à ce jour par les rédactions françaises de fact-checking suivies.")
     ld = [breadcrumb_ld(("/", "Observatoire"), ("/candidats/" if cand else "/personnalites/", "Candidats 2027" if cand else "Personnalités"), (path, name))]
-    return path, page(site, path, title, desc, "personnalites", "\n".join(parts), indexable=bool(facts), ld=ld), bool(facts)
+    og = og_image("candidats", cand["votona_id"]) if cand else "/assets/og.jpg"
+    return path, page(site, path, title, desc, "personnalites", "\n".join(parts), indexable=bool(facts), ld=ld, og=og), bool(facts)
 
 
 def party_page(site: Site, party_id: str) -> tuple[str, str]:
@@ -494,7 +504,8 @@ def family_page(site: Site, fid: str) -> tuple[str, str]:
     title = f"{label} : les déclarations politiques vérifiées - Votona Observatoire"
     desc = (f"{label} : {plural(len(facts), 'déclaration politique vérifiée', 'déclarations politiques vérifiées')} par les rédactions "
             "françaises de fact-checking, reliées aux sujets du test présidentielle 2027 de Votona.")
-    return path, page(site, path, title, desc, "sujets", body, ld=[breadcrumb_ld(("/", "Observatoire"), ("/sujets/", "Sujets"), (path, label))])
+    return path, page(site, path, title, desc, "sujets", body, ld=[breadcrumb_ld(("/", "Observatoire"), ("/sujets/", "Sujets"), (path, label))],
+                      og=og_image("sujets", fid))
 
 
 def people_tabs(active: str) -> str:

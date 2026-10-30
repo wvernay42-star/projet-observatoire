@@ -21,6 +21,18 @@ Les décisions durables sont aussi consignées dans [decisions.md](decisions.md)
 | — | Hébergement préprod (`preprod`) / prod (`main`) | ✅ en ligne (26/10) — projet Vercel `votona-observatoire` ; production indexable depuis le 28/10 |
 | — | Liens Votona → Observatoire | ⏳ actifs sur `draft` (test, 26/10) ; `main` sur demande du porteur |
 
+## 2026-10-30 (suite) — Ancienne page de validation retirée, images de partage
+
+- Routine : étapes de repli sur l'ancienne page Claude de validation supprimées (lecture des
+  décisions, dépôt des files) ; l'onglet « Observatoire » de l'admin Votona est le seul
+  back-office. docs/validation.md et docs/decisions.md mis à jour.
+- Images de partage 1200×630 sur le modèle de Votona (`scripts/og-images.js`, Node + Playwright) :
+  une par candidat 2027 (couleur du candidat, initiales, parti, loupe) et une par famille de
+  sujets (couleur et personnage de la famille), sans chiffre ni verdict. Rangées dans
+  `web/beta/og/`, copiées par build_beta dans `site/assets/og/`, utilisées par les fiches
+  (`og:image`, `twitter:image`) ; image générale sinon. La routine crée celles qui manquent
+  (nouveau candidat) avant la régénération du site. 86 tests OK.
+
 ## 2026-10-30 — Couverture : diagnostic et attributions récupérées
 
 - Diagnostic des rédactions manquantes : l'API Google Fact Check n'a plus rien du Monde depuis

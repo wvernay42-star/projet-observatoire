@@ -113,6 +113,10 @@ def build_site(page: str, site_dir: Path = SITE_DIR) -> None:
     (site_dir / "index.html").write_text(head + body + "\n</body>\n</html>\n", encoding="utf-8")
     shutil.copyfile(LOGO, site_dir / "assets" / "logo-head.webp")
     shutil.copyfile(LOGO.with_name("og.jpg"), site_dir / "assets" / "og.jpg")
+    if (site_dir / "assets" / "og").exists():  # images de partage par page (scripts/og-images.js)
+        shutil.rmtree(site_dir / "assets" / "og")
+    if build_pages.OG_DIR.exists():
+        shutil.copytree(build_pages.OG_DIR, site_dir / "assets" / "og")
     (site_dir / "assets" / "props").mkdir(exist_ok=True)
     for f in PROPS_DIR.glob("*.webp"):
         shutil.copyfile(f, site_dir / "assets" / "props" / f.name)

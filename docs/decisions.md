@@ -70,3 +70,8 @@
   les garde-fous déjà en place suffisent pour l'instant ; la mise en conformité complète (relecture
   par un avocat, AIPD, licences des rédactions, user-agent) sera faite quand le trafic deviendra
   important (`docs/conformite.md`).
+
+## 2026-10-30
+- Ancienne page Claude de validation retirée de la routine : l'onglet « Observatoire » de l'admin
+  Votona est le seul back-office (la page elle-même n'est pas supprimée).
+- Attribution : titres, partis et « X et Y » avant un nom connu → validation humaine, jamais automatique.
