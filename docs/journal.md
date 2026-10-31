@@ -21,6 +21,22 @@ Les décisions durables sont aussi consignées dans [decisions.md](decisions.md)
 | — | Hébergement préprod (`preprod`) / prod (`main`) | ✅ en ligne (26/10) — projet Vercel `votona-observatoire` ; production indexable depuis le 28/10 |
 | — | Liens Votona → Observatoire | ⏳ actifs sur `draft` (test, 26/10) ; `main` sur demande du porteur |
 
+## 2026-10-31 — Routine quotidienne
+
+- Candidats : synchronisation depuis https://votona.fr/ (pas de clone Votona) : 0 ajouté, 0 modifié,
+  0 absent ; 2 à confirmer (Selma Labib, Antoine Mikolajczak).
+- Décisions de l'admin (Supabase) : 1 décision appliquée, 0 note/attribution/parti modifié, 0 ignorée.
+  rating_map.csv inchangé.
+- Collecte : google_factcheck 23 récupérées, 3 nouvelles ; datacommons_feed 4 récupérées, 0 nouvelle.
+- Base : 7 598 vérifications ; claims : auto_sure 454, validated 173, to_review 163, rejected 6 738.
+- Export : 627 entrées (identique à la veille, aucune nouvelle déclaration exportée).
+- Files déposées dans Supabase : attributions 163, partis 1, notes 0, sources 7.
+- Part de verdicts positifs (toutes vérifications / attribuées) : TF1 Info 20 % / 35 % ; franceinfo
+  Vrai ou Fake 29 % / 38 % ; AFP Factuel 0,4 % / 2,8 % ; Poligraph 21 % / 23 % ; Décodeurs 1,6 % / 4,2 % ;
+  20 Minutes 11 % / 29 % ; CheckNews 0 % / sans attribution.
+- Alerte : aucun résultat nouveau depuis 3 jours pour datacommons_feed (attendue, voir 30/10).
+- Images de partage : rien à créer. Beta republiée (version 15 de l'artefact). 88 tests OK.
+
 ## 2026-10-30 (soir) — Portraits libres des candidats
 
 - 30 des 38 candidats ont un portrait sous licence libre (Wikimedia Commons : Wikidata P18 et

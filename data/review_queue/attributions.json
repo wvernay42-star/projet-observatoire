@@ -1,1 +1,3656 @@
-[]
+[
+ {
+  "claim_id": "c_b389b614fb54f736",
+  "claim_text": "Les Nations unies peuvent déployer les Casques bleus en Ukraine pour maintenir la paix",
+  "claim_date": "2025-03-21",
+  "reviews": [
+   {
+    "url": "https://www.tf1info.fr/international/verif-guerre-ukraine-est-il-envisageable-de-deployer-les-casques-bleus-des-nations-unies-pour-le-maintien-de-la-paix-avec-la-russie-dans-le-cas-d-un-cessez-le-feu-2360685.html",
+    "source_id": "tf1info_verificateurs",
+    "claimant": "Jan-Luc Mélenchon et Marine Le Pen",
+    "rating_original": "Plutôt faux",
+    "rating_normalized": "mostly_false",
+    "review_date": "2025-03-21"
+   }
+  ],
+  "reason": "nom retrouvé à la fin du libellé",
+  "candidates": [
+   {
+    "id": "Q12927",
+    "name": "Marine Le Pen"
+   }
+  ]
+ },
+ {
+  "claim_id": "c_3a6f222b9fc6f5e3",
+  "claim_text": "Météo France n'a émis \"aucune alerte\" avant les orages qui ont inondé la ville de Cannes",
+  "claim_date": "2024-09-23",
+  "reviews": [
+   {
+    "url": "https://www.tf1info.fr/meteo/inondation-a-cannes-meteo-france-n-a-t-elle-emis-aucune-alerte-comme-le-deplore-le-maire-de-la-ville-david-lisnard-2322554.html",
+    "source_id": "tf1info_verificateurs",
+    "claimant": "Le maire LR de Cannes, David Lisnard",
+    "rating_original": "Faux",
+    "rating_normalized": "false",
+    "review_date": "2024-09-23"
+   }
+  ],
+  "reason": "nom retrouvé à la fin du libellé",
+  "candidates": [
+   {
+    "id": "Q3018298",
+    "name": "David Lisnard"
+   }
+  ]
+ },
+ {
+  "claim_id": "c_5bc7824d15fc956f",
+  "claim_text": "Certains postes sont interdits aux binationaux en France.",
+  "claim_date": "2024-07-04",
+  "reviews": [
+   {
+    "url": "https://www.franceinfo.fr/vrai-ou-fake/vrai-ou-faux-certains-postes-sont-ils-deja-interdits-aux-binationaux-comme-l-affirment-marine-le-pen-et-eric-ciotti_6640269.html",
+    "source_id": "franceinfo_vraioufake",
+    "claimant": "Marine Le Pen et Eric Ciotti",
+    "rating_original": "Plutôt Faux",
+    "rating_normalized": "mostly_false",
+    "review_date": "2024-07-04"
+   }
+  ],
+  "reason": "plusieurs personnes",
+  "candidates": [
+   {
+    "id": "Q12927",
+    "name": "Marine Le Pen"
+   },
+   {
+    "id": "Q1844180",
+    "name": "Éric Ciotti"
+   }
+  ]
+ },
+ {
+  "claim_id": "c_a3e1398e61ea4705",
+  "claim_text": "On compte en France 3,3 millions de binationaux",
+  "claim_date": "2024-06-30",
+  "reviews": [
+   {
+    "url": "https://www.tf1info.fr/politique/elections/legislatives/elections-legislatives-compte-t-on-en-france-3-3-millions-de-citoyens-binationaux-2306607.html",
+    "source_id": "tf1info_verificateurs",
+    "claimant": "L'écologiste Marine Tondelier",
+    "rating_original": "Plutôt vrai",
+    "rating_normalized": "mostly_true",
+    "review_date": "2024-07-01"
+   }
+  ],
+  "reason": "nom retrouvé à la fin du libellé",
+  "candidates": [
+   {
+    "id": "Q29917987",
+    "name": "Marine Tondelier"
+   }
+  ]
+ },
+ {
+  "claim_id": "c_5a44b77361db20c9",
+  "claim_text": "\"On a le taux de chômage le plus bas depuis 25 ans, le taux de chômage des jeunes le plus bas depuis 40 ans\"",
+  "claim_date": "2024-06-20",
+  "reviews": [
+   {
+    "url": "https://www.franceinfo.fr/replay-radio/le-vrai-du-faux/vrai-ou-faux-legislatives-2024-le-taux-de-chomage-en-france-est-il-le-plus-bas-depuis-25-ans-comme-l-affirment-aurore-berge-et-gabriel-attal_6594480.html",
+    "source_id": "franceinfo_vraioufake",
+    "claimant": "Aurore Bergé et Gabriel Attal",
+    "rating_original": "Plutôt Faux",
+    "rating_normalized": "mostly_false",
+    "review_date": "2024-06-24"
+   }
+  ],
+  "reason": "plusieurs personnes",
+  "candidates": [
+   {
+    "id": "Q29570183",
+    "name": "Aurore Bergé"
+   },
+   {
+    "id": "Q30339350",
+    "name": "Gabriel Attal"
+   }
+  ]
+ },
+ {
+  "claim_id": "c_dcc72e5b8fe07c06",
+  "claim_text": "\"Aujourd'hui, vous arrivez en France, de l'étranger, vous avez plus de 65 ans, vous touchez 600 ou 700 euros de retraite minimum\", dénonce le président du Rassemblement national et tête de liste aux européennes, sur France Inter. \"Je ne trouve pas ça normal que quelqu'un qui n'a pas la nationalité française, qui arrive de l'étranger, qui a plus de 65 ans et qui n'a jamais cotisé, touche le minimum vieillesse\", s'insurge la cheffe de fil des députés RN à l'Assemblée nationale, sur BFM TV",
+  "claim_date": "2024-05-06",
+  "reviews": [
+   {
+    "url": "https://www.franceinfo.fr/replay-radio/le-vrai-du-faux/vrai-ou-faux-est-ce-vrai-qu-un-etranger-de-plus-de-65-ans-qui-vient-d-arriver-en-france-touche-le-minimum-vieillesse-comme-l-affirment-marine-le-pen-et-jordan-bardella_6504236.html",
+    "source_id": "franceinfo_vraioufake",
+    "claimant": "Jordan Bardella et Marine Le Pen",
+    "rating_original": "Faux",
+    "rating_normalized": "false",
+    "review_date": "2024-05-08"
+   }
+  ],
+  "reason": "plusieurs personnes",
+  "candidates": [
+   {
+    "id": "Q12927",
+    "name": "Marine Le Pen"
+   },
+   {
+    "id": "Q40655898",
+    "name": "Jordan Bardella"
+   }
+  ]
+ },
+ {
+  "claim_id": "c_8a80a8221555ab63",
+  "claim_text": "Les parlementaires allemands sont bien mieux payés qu'en France, de même que les parlementaires européens",
+  "claim_date": "2024-04-10",
+  "reviews": [
+   {
+    "url": "https://www.tf1info.fr/international/les-parlementaires-allemands-et-les-eurodeputes-sont-ils-mieux-payes-que-les-deputes-et-senateurs-francais-comme-le-dit-bruno-retailleau-2295095.html",
+    "source_id": "tf1info_verificateurs",
+    "claimant": "Le sénateur LR Bruno Retailleau",
+    "rating_original": "En partie vrai",
+    "rating_normalized": "half_true",
+    "review_date": "2024-04-10"
+   }
+  ],
+  "reason": "nom retrouvé à la fin du libellé",
+  "candidates": [
+   {
+    "id": "Q2926942",
+    "name": "Bruno Retailleau"
+   }
+  ]
+ },
+ {
+  "claim_id": "c_9be1412f314e4072",
+  "claim_text": "La France détient un \"record d'Europe\" des accidents du travail mortels",
+  "claim_date": "2024-04-04",
+  "reviews": [
+   {
+    "url": "https://www.tf1info.fr/societe/la-france-detient-elle-le-triste-record-d-europe-des-accidents-du-travail-mortels-2294468.html",
+    "source_id": "tf1info_verificateurs",
+    "claimant": "Le premier secrétaire du PS, Olivier Faure",
+    "rating_original": "Plutôt faux",
+    "rating_normalized": "mostly_false",
+    "review_date": "2024-04-05"
+   }
+  ],
+  "reason": "nom retrouvé à la fin du libellé",
+  "candidates": [
+   {
+    "id": "Q3351018",
+    "name": "Olivier Faure"
+   },
+   {
+    "id": "Q98251361",
+    "name": "Olivier Faure"
+   }
+  ]
+ },
+ {
+  "claim_id": "c_99909ab664b68152",
+  "claim_text": "La dette de la France a-t-elle augmenté de 900 milliards d'euros depuis l'arrivée au pouvoir d'Emmanuel Macron en 2017 ?",
+  "claim_date": "2024-02-20",
+  "reviews": [
+   {
+    "url": "https://www.tf1info.fr/politique/la-dette-de-la-france-a-t-elle-augmente-de-900-milliards-d-euros-depuis-l-arrivee-au-pouvoir-d-emmanuel-macron-en-2017-2286787.html",
+    "source_id": "tf1info_verificateurs",
+    "claimant": "Marine Le Pen et Eric Ciotti",
+    "rating_original": "Vrai",
+    "rating_normalized": "true",
+    "review_date": "2024-02-20"
+   }
+  ],
+  "reason": "plusieurs personnes",
+  "candidates": [
+   {
+    "id": "Q12927",
+    "name": "Marine Le Pen"
+   },
+   {
+    "id": "Q1844180",
+    "name": "Éric Ciotti"
+   }
+  ]
+ },
+ {
+  "claim_id": "c_c7337b04669994ac",
+  "claim_text": "Ne pas soumettre au Parlement l'accord de défense avec l'Ukraine est contraire à la Constitution",
+  "claim_date": "2024-02-20",
+  "reviews": [
+   {
+    "url": "https://www.tf1info.fr/politique/guerre-en-ukraine-russie-accord-de-securite-avec-kiev-ne-pas-le-soumettre-au-vote-du-parlement-est-il-contraire-a-la-constitution-francaise-2287030.html",
+    "source_id": "tf1info_verificateurs",
+    "claimant": "Les parlementaires Alain Houpert et Nicolas Dupont-Aignan",
+    "rating_original": "Plutôt faux",
+    "rating_normalized": "mostly_false",
+    "review_date": "2024-02-22"
+   }
+  ],
+  "reason": "nom retrouvé à la fin du libellé",
+  "candidates": [
+   {
+    "id": "Q12961",
+    "name": "Nicolas Dupont-Aignan"
+   }
+  ]
+ },
+ {
+  "claim_id": "c_d9e1e99aa551df1c",
+  "claim_text": "La dette de la France a-t-elle augmenté de 900 milliards d'euros depuis l'arrivée au pouvoir d'Emmanuel Macron en 2017 ?",
+  "claim_date": "2024-02-20",
+  "reviews": [
+   {
+    "url": "https://poligraph.fr/factchecks/2024-02-20-la-dette-de-la-france-a-t-elle-augmente-de-900-milliards-d-euros-depu",
+    "source_id": "poligraph_fr",
+    "claimant": "Marine Le Pen et Eric Ciotti",
+    "rating_original": "Vrai",
+    "rating_normalized": "true",
+    "review_date": "2024-02-20"
+   }
+  ],
+  "reason": "plusieurs personnes",
+  "candidates": [
+   {
+    "id": "Q12927",
+    "name": "Marine Le Pen"
+   },
+   {
+    "id": "Q1844180",
+    "name": "Éric Ciotti"
+   }
+  ]
+ },
+ {
+  "claim_id": "c_84e48619c5e60ddf",
+  "claim_text": "La France n'a jamais connu un taux aussi élevé de prélèvements obligatoires",
+  "claim_date": "2024-01-16",
+  "reviews": [
+   {
+    "url": "https://www.tf1info.fr/societe/le-niveau-des-prelevements-obligatoires-atteint-il-un-niveau-historique-en-france-2283030.html",
+    "source_id": "tf1info_verificateurs",
+    "claimant": "Le président du RN Jordan Bardella",
+    "rating_original": "Vrai",
+    "rating_normalized": "true",
+    "review_date": "2024-01-17"
+   }
+  ],
+  "reason": "nom retrouvé à la fin du libellé",
+  "candidates": [
+   {
+    "id": "Q40655898",
+    "name": "Jordan Bardella"
+   }
+  ]
+ },
+ {
+  "claim_id": "c_ccc63c3f69e28cda",
+  "claim_text": "La France a refusé de voter à l'ONU un texte appelant à un cessez-le-feu humanitaire à Gaza",
+  "claim_date": "2023-10-18",
+  "reviews": [
+   {
+    "url": "https://www.tf1info.fr/international/guerre-israel-hamas-gaza-la-france-a-t-elle-refuse-de-voter-a-l-onu-un-texte-appelant-a-un-cessez-le-feu-humanitaire-2273414.html",
+    "source_id": "tf1info_verificateurs",
+    "claimant": "L'avocat Juan Branco",
+    "rating_original": "En partie vrai",
+    "rating_normalized": "half_true",
+    "review_date": "2023-10-18"
+   }
+  ],
+  "reason": "nom retrouvé à la fin du libellé",
+  "candidates": [
+   {
+    "id": "Q21890311",
+    "name": "Juan Branco"
+   }
+  ]
+ },
+ {
+  "claim_id": "c_163da42b4fcafc63",
+  "claim_text": "Le décret sur le secteur aérien adopté au printemps n'a entraîné la suppression que de 2,5% des vols intérieurs en France",
+  "claim_date": "2023-09-08",
+  "reviews": [
+   {
+    "url": "https://www.tf1info.fr/environnement-ecologie/interdiction-des-trajets-courts-en-avion-seuls-2-5-des-vols-interieurs-finalement-supprimes-2269640.html",
+    "source_id": "tf1info_verificateurs",
+    "claimant": "La cheffe de file d'EELV, Marine Tondelier",
+    "rating_original": "Vrai",
+    "rating_normalized": "true",
+    "review_date": "2023-09-13"
+   }
+  ],
+  "reason": "nom retrouvé à la fin du libellé",
+  "candidates": [
+   {
+    "id": "Q29917987",
+    "name": "Marine Tondelier"
+   }
+  ]
+ },
+ {
+  "claim_id": "c_a7fe4ae63508d29c",
+  "claim_text": "78% des Français sont aujourd'hui \"en situation de privation\"",
+  "claim_date": "2023-09-06",
+  "reviews": [
+   {
+    "url": "https://www.tf1info.fr/societe/inflation-precarite-78-pourcents-des-francais-sont-ils-aujourd-hui-en-situation-de-privation-comme-l-affirme-olivier-faure-2269016.html",
+    "source_id": "tf1info_verificateurs",
+    "claimant": "Le premier secrétaire du PS, Olivier Faure",
+    "rating_original": "Faux",
+    "rating_normalized": "false",
+    "review_date": "2023-09-07"
+   }
+  ],
+  "reason": "nom retrouvé à la fin du libellé",
+  "candidates": [
+   {
+    "id": "Q3351018",
+    "name": "Olivier Faure"
+   },
+   {
+    "id": "Q98251361",
+    "name": "Olivier Faure"
+   }
+  ]
+ },
+ {
+  "claim_id": "c_4b63af72ce3253d7",
+  "claim_text": "Les concours d'entrée pour devenir professeur ont fait le plein en 2026",
+  "claim_date": "2026-10-27",
+  "reviews": [
+   {
+    "url": "https://poligraph.fr/factchecks/2026-10-27-verif-colere-lyceenne-les-concours-d-entree-pour-devenir-professeur-f",
+    "source_id": "poligraph_fr",
+    "claimant": "Édouard Geffray, ministre de l'Éducation nationale",
+    "rating_original": "En partie vrai",
+    "rating_normalized": "half_true",
+    "review_date": "2026-10-27"
+   }
+  ],
+  "reason": "nom retrouvé après retrait du contexte",
+  "candidates": [
+   {
+    "id": "Q33138734",
+    "name": "Édouard Geffray"
+   }
+  ]
+ },
+ {
+  "claim_id": "c_77d2607800ae74f3",
+  "claim_text": "Dans une baguette de pain qui coûte 1,10 euros, la part du blé qui revient à l'agriculteur, c'est 7 à 8 centimes",
+  "claim_date": "2026-09-08",
+  "reviews": [
+   {
+    "url": "https://www.tf1info.fr/societe/verif-inflation-prix-quand-une-baguette-est-vendue-la-part-qui-revient-a-l-agriculteur-est-elle-seulement-de-7-a-8-centimes-2464066.html",
+    "source_id": "tf1info_verificateurs",
+    "claimant": "Le patron de la FNSEA, Arnaud Rousseau",
+    "rating_original": "Plutôt faux",
+    "rating_normalized": "mostly_false",
+    "review_date": "2026-09-14"
+   }
+  ],
+  "reason": "nom retrouvé à la fin du libellé",
+  "candidates": [
+   {
+    "id": "Q62077623",
+    "name": "Arnaud Rousseau"
+   },
+   {
+    "id": "Q65601193",
+    "name": "Arnaud Rousseau"
+   }
+  ]
+ },
+ {
+  "claim_id": "c_d0ed983dc5bd4fb3",
+  "claim_text": "Dans une baguette de pain qui coûte 1,10 euros, la part du blé qui revient à l'agriculteur, c'est 7 à 8 centimes",
+  "claim_date": "2026-09-08",
+  "reviews": [
+   {
+    "url": "https://poligraph.fr/factchecks/2026-09-14-verif-x27-les-agriculteurs-touchent-ils-reellement-7-a-8-centimes-sur",
+    "source_id": "poligraph_fr",
+    "claimant": "Le patron de la FNSEA, Arnaud Rousseau",
+    "rating_original": "Plutôt faux",
+    "rating_normalized": "mostly_false",
+    "review_date": "2026-09-14"
+   }
+  ],
+  "reason": "nom retrouvé à la fin du libellé",
+  "candidates": [
+   {
+    "id": "Q62077623",
+    "name": "Arnaud Rousseau"
+   },
+   {
+    "id": "Q65601193",
+    "name": "Arnaud Rousseau"
+   }
+  ]
+ },
+ {
+  "claim_id": "c_48554958aa0229dd",
+  "claim_text": "Le prix des fournitures scolaires augmente de 10% fin août, juste avant la rentrée des classes",
+  "claim_date": "2026-08-20",
+  "reviews": [
+   {
+    "url": "https://poligraph.fr/factchecks/2026-08-20-verif-le-prix-des-fournitures-scolaires-augmente-t-il-de-10-fin-aout-juste-avant-la-rentree-des-classes",
+    "source_id": "poligraph_fr",
+    "claimant": "Le député LFI Hadrien Clouet",
+    "rating_original": "Plutôt faux",
+    "rating_normalized": "mostly_false",
+    "review_date": "2026-08-20"
+   }
+  ],
+  "reason": "nom retrouvé à la fin du libellé",
+  "candidates": [
+   {
+    "id": "Q112649548",
+    "name": "Hadrien Clouet"
+   }
+  ]
+ },
+ {
+  "claim_id": "c_ca5eb5663079c3e3",
+  "claim_text": "Le prix des fournitures scolaires augmente de 10% fin août, juste avant la rentrée des classes",
+  "claim_date": "2026-08-20",
+  "reviews": [
+   {
+    "url": "https://www.tf1info.fr/societe/verif-rentree-scolaire-le-prix-des-fournitures-augmente-t-il-de-10-fin-aout-juste-avant-la-rentree-des-classes-2459432.html",
+    "source_id": "tf1info_verificateurs",
+    "claimant": "Le député LFI Hadrien Clouet",
+    "rating_original": "Plutôt faux",
+    "rating_normalized": "mostly_false",
+    "review_date": "2026-08-20"
+   }
+  ],
+  "reason": "nom retrouvé à la fin du libellé",
+  "candidates": [
+   {
+    "id": "Q112649548",
+    "name": "Hadrien Clouet"
+   }
+  ]
+ },
+ {
+  "claim_id": "c_4f1c068d4da69278",
+  "claim_text": "Une vingtaine de départements sont encore dépourvus d'unités de soins palliatifs en France",
+  "claim_date": "2026-07-16",
+  "reviews": [
+   {
+    "url": "https://www.tf1info.fr/sante/verif-une-vingtaine-de-departements-sont-ils-encore-depourvus-d-unites-de-soins-palliatifs-en-france-2453503.html",
+    "source_id": "tf1info_verificateurs",
+    "claimant": "La députée du RN Hélène Laporte",
+    "rating_original": "Vrai",
+    "rating_normalized": "true",
+    "review_date": "2026-07-17"
+   }
+  ],
+  "reason": "nom retrouvé à la fin du libellé",
+  "candidates": [
+   {
+    "id": "Q60604421",
+    "name": "Hélène Laporte"
+   }
+  ]
+ },
+ {
+  "claim_id": "c_12c9d9104eac8f59",
+  "claim_text": "Jean-Luc Mélenchon déclaré dans une interview en 1991 que \"le Front national réhabilite la politique\"",
+  "claim_date": "2026-07-15",
+  "reviews": [
+   {
+    "url": "https://www.tf1info.fr/politique/verif-jean-luc-melenchon-a-t-il-vraiment-affirme-dans-une-interview-que-le-front-national-rehabilite-la-politique-2453279.html",
+    "source_id": "tf1info_verificateurs",
+    "claimant": "Publications X et Jean-Philippe Tanguy",
+    "rating_original": "Plutôt faux",
+    "rating_normalized": "mostly_false",
+    "review_date": "2026-07-15"
+   }
+  ],
+  "reason": "nom retrouvé à la fin du libellé",
+  "candidates": [
+   {
+    "id": "Q46138822",
+    "name": "Jean-Philippe Tanguy"
+   }
+  ]
+ },
+ {
+  "claim_id": "c_3afb5c1c51baed76",
+  "claim_text": "Tous nos voisins européens ont baissé les taxes sur les carburants",
+  "claim_date": "2026-04-21",
+  "reviews": [
+   {
+    "url": "https://www.tf1info.fr/international/verif-prix-des-carburants-pouvoir-d-achat-est-il-vrai-que-tous-nos-voisins-ont-baisse-les-taxes-sur-l-essence-et-le-gasoil-2437326.html",
+    "source_id": "tf1info_verificateurs",
+    "claimant": "Le député du RN Julien Odoul",
+    "rating_original": "Faux",
+    "rating_normalized": "false",
+    "review_date": "2026-04-21"
+   }
+  ],
+  "reason": "nom retrouvé à la fin du libellé",
+  "candidates": [
+   {
+    "id": "Q41102798",
+    "name": "Julien Odoul"
+   }
+  ]
+ },
+ {
+  "claim_id": "c_7c5954b92130de79",
+  "claim_text": "Tous nos voisins européens ont baissé les taxes sur les carburants",
+  "claim_date": "2026-04-21",
+  "reviews": [
+   {
+    "url": "https://poligraph.fr/factchecks/2026-04-21-verif-pouvoir-d-achat-est-il-vrai-que-tous-nos-voisins-ont-baisse-les-taxes-sur-les-carburants",
+    "source_id": "poligraph_fr",
+    "claimant": "Le député du RN Julien Odoul",
+    "rating_original": "Faux",
+    "rating_normalized": "false",
+    "review_date": "2026-04-21"
+   }
+  ],
+  "reason": "nom retrouvé à la fin du libellé",
+  "candidates": [
+   {
+    "id": "Q41102798",
+    "name": "Julien Odoul"
+   }
+  ]
+ },
+ {
+  "claim_id": "c_081cfae6b5848d66",
+  "claim_text": "En France, 85% du territoire est un désert médical",
+  "claim_date": "2026-04-19",
+  "reviews": [
+   {
+    "url": "https://www.tf1info.fr/societe/verif-sante-france-85-du-territoire-francais-est-il-un-desert-medical-2437118.html",
+    "source_id": "tf1info_verificateurs",
+    "claimant": "Le député RN Philippe Ballard",
+    "rating_original": "Vrai",
+    "rating_normalized": "true",
+    "review_date": "2026-04-20"
+   }
+  ],
+  "reason": "nom retrouvé à la fin du libellé",
+  "candidates": [
+   {
+    "id": "Q106635078",
+    "name": "Philippe Ballard"
+   }
+  ]
+ },
+ {
+  "claim_id": "c_576a9e6e71cc8a39",
+  "claim_text": "Le nombre d'expulsions locatives a doublé en France depuis 2017",
+  "claim_date": "2026-03-31",
+  "reviews": [
+   {
+    "url": "https://www.tf1info.fr/immobilier/verif-fin-de-la-treve-hivernale-les-expulsions-locatives-ont-elles-vraiment-double-depuis-2017-2433399.html",
+    "source_id": "tf1info_verificateurs",
+    "claimant": "Le député LFI François Piquemal",
+    "rating_original": "Vrai",
+    "rating_normalized": "true",
+    "review_date": "2026-03-31"
+   }
+  ],
+  "reason": "nom retrouvé à la fin du libellé",
+  "candidates": [
+   {
+    "id": "Q112110960",
+    "name": "François Piquemal"
+   }
+  ]
+ },
+ {
+  "claim_id": "c_56ed058326115a0d",
+  "claim_text": "Il y a 48% de cadmium en moins dans l'alimentation bio",
+  "claim_date": "2026-03-26",
+  "reviews": [
+   {
+    "url": "https://www.tf1info.fr/societe/verif-les-produits-bio-contiennent-ils-vraiment-48-de-cadmium-en-moins-2433410.html",
+    "source_id": "tf1info_verificateurs",
+    "claimant": "Le député écologiste benoît Biteau",
+    "rating_original": "En partie vrai",
+    "rating_normalized": "half_true",
+    "review_date": "2026-04-02"
+   }
+  ],
+  "reason": "nom retrouvé à la fin du libellé",
+  "candidates": [
+   {
+    "id": "Q63348995",
+    "name": "Benoît Biteau"
+   }
+  ]
+ },
+ {
+  "claim_id": "c_ff7aefcec91db364",
+  "claim_text": "En France, 70% des fruits consommés sont importés",
+  "claim_date": "2026-02-09",
+  "reviews": [
+   {
+    "url": "https://www.tf1info.fr/conso/verif-en-france-70-des-fruits-consommes-sont-ils-importes-comme-l-affirme-une-deputee-renaissance-2423917.html",
+    "source_id": "tf1info_verificateurs",
+    "claimant": "Une publication sur X relayée par la députée Sandra Marsaud",
+    "rating_original": "En partie vrai",
+    "rating_normalized": "half_true",
+    "review_date": "2026-02-10"
+   }
+  ],
+  "reason": "nom retrouvé à la fin du libellé",
+  "candidates": [
+   {
+    "id": "Q30349074",
+    "name": "Sandra Marsaud"
+   }
+  ]
+ },
+ {
+  "claim_id": "c_66fd74410fb77f49",
+  "claim_text": "La plupart des dirigeants, dont Emmanuel Macron et Nicolas Sarkozy, ont été formés par la CIA",
+  "claim_date": "2026-01-15",
+  "reviews": [
+   {
+    "url": "https://www.tf1info.fr/politique/verif-est-il-vrai-que-la-plupart-des-dirigeants-francais-macron-hollande-sarkozy-ont-ete-formes-par-la-cia-selon-pierre-de-gaulle-2418911.html",
+    "source_id": "tf1info_verificateurs",
+    "claimant": "Pierre de Gaulle",
+    "rating_original": "Faux",
+    "rating_normalized": "false",
+    "review_date": "2026-01-15"
+   }
+  ],
+  "reason": "nom retrouvé à la fin du libellé",
+  "candidates": [
+   {
+    "id": "Q2042",
+    "name": "Charles de Gaulle"
+   }
+  ]
+ },
+ {
+  "claim_id": "c_f77cbec517c4d8cd",
+  "claim_text": "La prostitution concerne 20.000 mineurs en France",
+  "claim_date": "2026-01-04",
+  "reviews": [
+   {
+    "url": "https://www.tf1info.fr/societe/verif-la-prostitution-concerne-t-elle-20000-mineurs-en-france-comme-declare-deputee-maud-petit-2417008.html",
+    "source_id": "tf1info_verificateurs",
+    "claimant": "Un chiffre relayé par le députée du MoDem Maud Petit",
+    "rating_original": "Plutôt vrai",
+    "rating_normalized": "mostly_true",
+    "review_date": "2026-01-06"
+   }
+  ],
+  "reason": "nom retrouvé à la fin du libellé",
+  "candidates": [
+   {
+    "id": "Q30511580",
+    "name": "Maud Petit"
+   }
+  ]
+ },
+ {
+  "claim_id": "c_40b195b1d3503286",
+  "claim_text": "L'industrie automobile française a perdu 40.000 emplois en à peine six ans",
+  "claim_date": "2025-12-16",
+  "reviews": [
+   {
+    "url": "https://www.tf1info.fr/economie/verif-en-six-ans-a-peine-l-industrie-automobile-francaise-a-t-elle-perdu-40-000-emplois-2413398.html",
+    "source_id": "tf1info_verificateurs",
+    "claimant": "Le député RN Pierre Meurin",
+    "rating_original": "Vrai",
+    "rating_normalized": "true",
+    "review_date": "2025-12-17"
+   }
+  ],
+  "reason": "nom retrouvé à la fin du libellé",
+  "candidates": [
+   {
+    "id": "Q61769367",
+    "name": "Pierre Meurin"
+   }
+  ]
+ },
+ {
+  "claim_id": "c_a5406d33a5c3a2bc",
+  "claim_text": "Les actes médicaux des infirmières libérales n'on connu aucune revalorisation en 15 ans",
+  "claim_date": "2025-12-15",
+  "reviews": [
+   {
+    "url": "https://www.tf1info.fr/sante/verif-les-actes-medicaux-des-infirmieres-liberales-n-ont-ils-connu-aucune-revalorisation-en-15-ans-2413201.html",
+    "source_id": "tf1info_verificateurs",
+    "claimant": "Le député LFi Damien Maudet",
+    "rating_original": "En partie vrai",
+    "rating_normalized": "half_true",
+    "review_date": "2025-12-16"
+   }
+  ],
+  "reason": "nom retrouvé à la fin du libellé",
+  "candidates": [
+   {
+    "id": "Q112635145",
+    "name": "Damien Maudet"
+   }
+  ]
+ },
+ {
+  "claim_id": "c_30a9cb505b77559a",
+  "claim_text": "On compte à Paris 262.000 logements vides",
+  "claim_date": "2025-11-23",
+  "reviews": [
+   {
+    "url": "https://www.tf1info.fr/immobilier/verif-paris-compte-t-elle-vraiment-262-000-logements-vides-2408578.html",
+    "source_id": "tf1info_verificateurs",
+    "claimant": "La députée LFI Clémence Guetté",
+    "rating_original": "Plutôt faux",
+    "rating_normalized": "mostly_false",
+    "review_date": "2025-11-26"
+   }
+  ],
+  "reason": "nom retrouvé à la fin du libellé",
+  "candidates": [
+   {
+    "id": "Q109969696",
+    "name": "Clémence Guetté"
+   }
+  ]
+ },
+ {
+  "claim_id": "c_ddc04017d791c101",
+  "claim_text": "La dette communale a augmenté de 10 milliards depuis 2017, celle de l'État de près de 1000 milliards",
+  "claim_date": "2025-11-23",
+  "reviews": [
+   {
+    "url": "https://www.tf1info.fr/economie/verif-la-dette-des-communes-a-t-elle-augmente-de-10-milliards-depuis-2017-contre-1000-pour-celle-de-l-etat-2408656.html",
+    "source_id": "tf1info_verificateurs",
+    "claimant": "Le sénateur RN Aymeric Durox",
+    "rating_original": "Plutôt vrai",
+    "rating_normalized": "mostly_true",
+    "review_date": "2025-11-24"
+   }
+  ],
+  "reason": "nom retrouvé à la fin du libellé",
+  "candidates": [
+   {
+    "id": "Q122803056",
+    "name": "Aymeric Durox"
+   }
+  ]
+ },
+ {
+  "claim_id": "c_21d1112cc318f956",
+  "claim_text": "Des véhicules électriques ont été développés en France il y a plus de cent ans",
+  "claim_date": "2025-11-20",
+  "reviews": [
+   {
+    "url": "https://www.tf1info.fr/transports/verif-des-voitures-electriques-ont-elles-vraiment-vu-le-jour-en-france-des-le-debut-du-20-siecle-2408183.html",
+    "source_id": "tf1info_verificateurs",
+    "claimant": "La députée LFI Alma Dufour",
+    "rating_original": "Vrai",
+    "rating_normalized": "true",
+    "review_date": "2025-11-21"
+   }
+  ],
+  "reason": "nom retrouvé à la fin du libellé",
+  "candidates": [
+   {
+    "id": "Q110998923",
+    "name": "Alma Dufour"
+   }
+  ]
+ },
+ {
+  "claim_id": "c_7d585abcdf29c60a",
+  "claim_text": "Paris a perdu 140.000 habitants en l'espace de dix ans",
+  "claim_date": "2025-11-17",
+  "reviews": [
+   {
+    "url": "https://www.tf1info.fr/politique/elections/legislatives/verif-compte-t-on-140-000-habitants-de-moins-a-paris-qu-il-y-a-dix-ans-2407450.html",
+    "source_id": "tf1info_verificateurs",
+    "claimant": "Le député Renaissance Sylvain Maillard",
+    "rating_original": "Plutôt vrai",
+    "rating_normalized": "mostly_true",
+    "review_date": "2025-11-18"
+   }
+  ],
+  "reason": "nom retrouvé à la fin du libellé",
+  "candidates": [
+   {
+    "id": "Q138759136",
+    "name": "Sylvain Maillard"
+   },
+   {
+    "id": "Q30239185",
+    "name": "Sylvain Maillard"
+   }
+  ]
+ },
+ {
+  "claim_id": "c_fece982d56f838a2",
+  "claim_text": "À Lille, l'eau est \"impropre à la consommation\" pour les bébés, sans réaction des autorités",
+  "claim_date": "2025-11-16",
+  "reviews": [
+   {
+    "url": "https://www.tf1info.fr/societe/verif-a-lille-l-eau-est-elle-impropre-a-la-consommation-pour-les-bebes-sans-reaction-des-autorites-2407264.html",
+    "source_id": "tf1info_verificateurs",
+    "claimant": "Le député LFI Aurélien Le Coq",
+    "rating_original": "En partie vrai",
+    "rating_normalized": "half_true",
+    "review_date": "2025-11-20"
+   }
+  ],
+  "reason": "nom retrouvé à la fin du libellé",
+  "candidates": [
+   {
+    "id": "Q127256660",
+    "name": "Aurélien Le Coq"
+   }
+  ]
+ },
+ {
+  "claim_id": "c_44eb89f9725c6b11",
+  "claim_text": "Chez Franprix ou Naturalia, les dons par carte financent un réseau d'écoles privées accusées de violences",
+  "claim_date": "2025-11-10",
+  "reviews": [
+   {
+    "url": "https://www.tf1info.fr/societe/chez-franprix-ou-naturalia-l-arrondi-en-caisse-finance-t-il-un-reseau-d-ecoles-privees-accusees-de-violences-2395462.html",
+    "source_id": "tf1info_verificateurs",
+    "claimant": "Le député LFI Thomas Portes",
+    "rating_original": "Plutôt vrai",
+    "rating_normalized": "mostly_true",
+    "review_date": "2025-11-11"
+   }
+  ],
+  "reason": "nom retrouvé à la fin du libellé",
+  "candidates": [
+   {
+    "id": "Q112653860",
+    "name": "Thomas Portes"
+   }
+  ]
+ },
+ {
+  "claim_id": "c_79db6cc4d1bec8eb",
+  "claim_text": "Les deux seules périodes récentes où les déficits ont été réduits, c'est sous Lionel Jospin et sous François Hollande",
+  "claim_date": "2025-11-04",
+  "reviews": [
+   {
+    "url": "https://www.tf1info.fr/politique/dans-l-histoire-recente-les-socialistes-sont-ils-vraiment-les-seuls-a-avoir-reduit-le-deficit-2404926.html",
+    "source_id": "tf1info_verificateurs",
+    "claimant": "Le député PS Boris Vallaud",
+    "rating_original": "Plutôt faux",
+    "rating_normalized": "mostly_false",
+    "review_date": "2025-11-05"
+   }
+  ],
+  "reason": "nom retrouvé à la fin du libellé",
+  "candidates": [
+   {
+    "id": "Q29021094",
+    "name": "Boris Vallaud"
+   }
+  ]
+ },
+ {
+  "claim_id": "c_931a7fd3387ba2a8",
+  "claim_text": "On compte 17% de salariés au Smic en France",
+  "claim_date": "2025-11-04",
+  "reviews": [
+   {
+    "url": "https://www.tf1info.fr/vie-pro/verif-plus-d-un-salarie-sur-six-est-il-aujourd-hui-paye-au-smic-salaire-en-france-comme-dit-sebastien-chenu-rn-2404671.html",
+    "source_id": "tf1info_verificateurs",
+    "claimant": "Le député du RN Sébastien Chenu",
+    "rating_original": "Plutôt faux",
+    "rating_normalized": "mostly_false",
+    "review_date": "2025-11-04"
+   }
+  ],
+  "reason": "nom retrouvé à la fin du libellé",
+  "candidates": [
+   {
+    "id": "Q21294609",
+    "name": "Sébastien Chenu"
+   }
+  ]
+ },
+ {
+  "claim_id": "c_02d5731b5ba39156",
+  "claim_text": "Le nombre de personnes sans domicile a doublé en France depuis 2012",
+  "claim_date": "2025-11-02",
+  "reviews": [
+   {
+    "url": "https://www.tf1info.fr/immobilier/verif-chiffres-fondation-logement-insee-nombre-de-personnes-sans-domicile-a-t-il-vraiment-double-en-france-depuis-2012-2404452.html",
+    "source_id": "tf1info_verificateurs",
+    "claimant": "Le député LFI Antoine Léaument",
+    "rating_original": "Plutôt vrai",
+    "rating_normalized": "mostly_true",
+    "review_date": "2025-11-04"
+   }
+  ],
+  "reason": "nom retrouvé à la fin du libellé",
+  "candidates": [
+   {
+    "id": "Q62976462",
+    "name": "Antoine Léaument"
+   }
+  ]
+ },
+ {
+  "claim_id": "c_659da11ac8055222",
+  "claim_text": "La France détient le \"record du monde\" des cancers du sein",
+  "claim_date": "2025-10-31",
+  "reviews": [
+   {
+    "url": "https://www.tf1info.fr/sante/verif-la-france-detient-elle-reellement-le-record-du-monde-des-incidences-des-cancers-du-sein-2404426.html",
+    "source_id": "tf1info_verificateurs",
+    "claimant": "La députée LFI Ersilia Soudais",
+    "rating_original": "Plutôt vrai",
+    "rating_normalized": "mostly_true",
+    "review_date": "2025-11-08"
+   }
+  ],
+  "reason": "nom retrouvé à la fin du libellé",
+  "candidates": [
+   {
+    "id": "Q112652742",
+    "name": "Ersilia Soudais"
+   }
+  ]
+ },
+ {
+  "claim_id": "c_ba3d07d030250fcf",
+  "claim_text": "Un jeune français sur quatre est en dépression",
+  "claim_date": "2025-10-06",
+  "reviews": [
+   {
+    "url": "https://www.tf1info.fr/sante/verif-un-jeune-francais-sur-quatre-est-il-en-depression-comme-l-assure-le-depute-lfi-louis-boyard-2399146.html",
+    "source_id": "tf1info_verificateurs",
+    "claimant": "Le député LFI Louis Boyard",
+    "rating_original": "En partie vrai",
+    "rating_normalized": "half_true",
+    "review_date": "2025-10-08"
+   }
+  ],
+  "reason": "nom retrouvé à la fin du libellé",
+  "candidates": [
+   {
+    "id": "Q112654108",
+    "name": "Louis Boyard"
+   }
+  ]
+ },
+ {
+  "claim_id": "c_d3bd681eedcadf12",
+  "claim_text": "La France a versé 400 millions d'euros à la Chine entre 2018 et 2020 au titre de l'aide au développement",
+  "claim_date": "2025-09-01",
+  "reviews": [
+   {
+    "url": "https://poligraph.fr/factchecks/2025-09-01-verif-la-france-a-t-elle-verse-400-millions-d-euros-d-aides-a-la-chin",
+    "source_id": "poligraph_fr",
+    "claimant": "Le député RN Sébastien Chenu",
+    "rating_original": "Plutôt vrai",
+    "rating_normalized": "mostly_true",
+    "review_date": "2025-09-01"
+   }
+  ],
+  "reason": "nom retrouvé à la fin du libellé",
+  "candidates": [
+   {
+    "id": "Q21294609",
+    "name": "Sébastien Chenu"
+   }
+  ]
+ },
+ {
+  "claim_id": "c_d7e4dfafd004fdc9",
+  "claim_text": "La France a versé 400 millions d'euros à la Chine entre 2018 et 2020 au titre de l'aide au développement",
+  "claim_date": "2025-09-01",
+  "reviews": [
+   {
+    "url": "https://www.tf1info.fr/politique/verif-finances-publiques-la-france-a-t-elle-verse-400-millions-euros-d-aides-a-la-chine-entre-2018-et-2020-2392063.html",
+    "source_id": "tf1info_verificateurs",
+    "claimant": "Le député RN Sébastien Chenu",
+    "rating_original": "Plutôt vrai",
+    "rating_normalized": "mostly_true",
+    "review_date": "2025-09-01"
+   }
+  ],
+  "reason": "nom retrouvé à la fin du libellé",
+  "candidates": [
+   {
+    "id": "Q21294609",
+    "name": "Sébastien Chenu"
+   }
+  ]
+ },
+ {
+  "claim_id": "c_799477306e66e7ad",
+  "claim_text": "La France est l'un des seuls pays Alliés à célébrer le 8 mai avec un jour férié",
+  "claim_date": "2025-07-16",
+  "reviews": [
+   {
+    "url": "https://www.tf1info.fr/societe/verif-la-france-est-elle-l-un-des-rares-pays-allies-a-faire-du-8-mai-un-jour-ferie-2383742.html",
+    "source_id": "tf1info_verificateurs",
+    "claimant": "La ministre du Travail Astrid Panosyan-Bouvet",
+    "rating_original": "Plutôt vrai",
+    "rating_normalized": "mostly_true",
+    "review_date": "2025-07-18"
+   }
+  ],
+  "reason": "nom retrouvé à la fin du libellé",
+  "candidates": [
+   {
+    "id": "Q33106414",
+    "name": "Astrid Panosyan-Bouvet"
+   }
+  ]
+ },
+ {
+  "claim_id": "c_8dbb1cbe466e16b7",
+  "claim_text": "Des \"chasses aux migrants\" sont organisées en Pologne par des néonazis",
+  "claim_date": "2025-07-10",
+  "reviews": [
+   {
+    "url": "https://www.tf1info.fr/international/verif-des-chasses-aux-migrants-sont-elles-vraiment-organisees-en-pologne-par-des-groupes-neonazis-2382414.html",
+    "source_id": "tf1info_verificateurs",
+    "claimant": "Le député LFI Raphaël Arnault",
+    "rating_original": "Plutôt faux",
+    "rating_normalized": "mostly_false",
+    "review_date": "2025-07-11"
+   }
+  ],
+  "reason": "nom retrouvé à la fin du libellé",
+  "candidates": [
+   {
+    "id": "Q116870344",
+    "name": "Raphaël Arnault"
+   }
+  ]
+ },
+ {
+  "claim_id": "c_b1dfe5bda6f1167a",
+  "claim_text": "4,8 millions d'enfants ne partiront pas en vacances cet été",
+  "claim_date": "2025-07-08",
+  "reviews": [
+   {
+    "url": "https://www.tf1info.fr/societe/verif-faute-de-moyens-4-8-millions-d-enfants-sont-ils-prives-de-departs-en-vacances-2382202.html",
+    "source_id": "tf1info_verificateurs",
+    "claimant": "Le député LFI Antoine Léaument",
+    "rating_original": "Vrai",
+    "rating_normalized": "true",
+    "review_date": "2025-07-10"
+   }
+  ],
+  "reason": "nom retrouvé à la fin du libellé",
+  "candidates": [
+   {
+    "id": "Q62976462",
+    "name": "Antoine Léaument"
+   }
+  ]
+ },
+ {
+  "claim_id": "c_5362b4bacdc7bf68",
+  "claim_text": "Chaque jour ou presque, des adolescents tuent à l'arme blanche en France",
+  "claim_date": "2025-06-10",
+  "reviews": [
+   {
+    "url": "https://www.tf1info.fr/justice-faits-divers/verif-un-homicide-est-il-vraiment-commis-par-un-mineur-chaque-jour-ou-presque-en-france-2376429.html",
+    "source_id": "tf1info_verificateurs",
+    "claimant": "La députée Horizons Naïma Moutchou",
+    "rating_original": "Plutôt faux",
+    "rating_normalized": "mostly_false",
+    "review_date": "2025-06-11"
+   }
+  ],
+  "reason": "nom retrouvé à la fin du libellé",
+  "candidates": [
+   {
+    "id": "Q30379800",
+    "name": "Naïma Moutchou"
+   }
+  ]
+ },
+ {
+  "claim_id": "c_bab8b8ef073ca5e9",
+  "claim_text": "La bande de Gaza est aujourd'hui détruite à 70%",
+  "claim_date": "2025-06-10",
+  "reviews": [
+   {
+    "url": "https://www.tf1info.fr/international/verif-la-bande-de-gaza-detruite-a-70-on-decortique-ce-chiffre-massivement-relaye-2376181.html",
+    "source_id": "tf1info_verificateurs",
+    "claimant": "La députée LFI Clémence Guetté",
+    "rating_original": "Vrai",
+    "rating_normalized": "true",
+    "review_date": "2025-06-11"
+   }
+  ],
+  "reason": "nom retrouvé à la fin du libellé",
+  "candidates": [
+   {
+    "id": "Q109969696",
+    "name": "Clémence Guetté"
+   }
+  ]
+ },
+ {
+  "claim_id": "c_5096b47cbff17c94",
+  "claim_text": "On se dirige à l'avenir vers un \"tsunami\" de nouveaux cas de cancer",
+  "claim_date": "2025-06-03",
+  "reviews": [
+   {
+    "url": "https://www.tf1info.fr/sante/verif-se-dirige-t-on-vers-un-tsunami-de-cancers-comme-l-anticipe-l-ex-ministre-de-la-sante-aurelien-rousseau-2375159.html",
+    "source_id": "tf1info_verificateurs",
+    "claimant": "L'ancien ministre de la Santé et député PS Aurélien Rousseau",
+    "rating_original": "En partie vrai",
+    "rating_normalized": "half_true",
+    "review_date": "2025-06-05"
+   }
+  ],
+  "reason": "nom retrouvé à la fin du libellé",
+  "candidates": [
+   {
+    "id": "Q139886967",
+    "name": "Aurélien Rousseau"
+   },
+   {
+    "id": "Q29738515",
+    "name": "Aurélien Rousseau"
+   }
+  ]
+ },
+ {
+  "claim_id": "c_736e4865a7424589",
+  "claim_text": "On a observé en France \"une augmentation de 56% des arrêts maladie en cinq ans\"",
+  "claim_date": "2025-05-27",
+  "reviews": [
+   {
+    "url": "https://www.tf1info.fr/sante/verif-les-arrets-maladie-ont-ils-vraiment-bondi-de-56-en-l-espace-de-cinq-ans-2373409.html",
+    "source_id": "tf1info_verificateurs",
+    "claimant": "Le député LR Philippe Juvin",
+    "rating_original": "Faux",
+    "rating_normalized": "false",
+    "review_date": "2025-05-27"
+   }
+  ],
+  "reason": "nom retrouvé à la fin du libellé",
+  "candidates": [
+   {
+    "id": "Q445705",
+    "name": "Philippe Juvin"
+   }
+  ]
+ },
+ {
+  "claim_id": "c_facb90cf0493bd4b",
+  "claim_text": "En France, 85% des fleurs coupées sont importées de pays hors UE",
+  "claim_date": "2025-05-25",
+  "reviews": [
+   {
+    "url": "https://www.tf1info.fr/economie/verif-en-france-85-des-fleurs-coupees-sont-elles-importees-de-pays-hors-union-europeenne-ue-2373187.html",
+    "source_id": "tf1info_verificateurs",
+    "claimant": "La députée LFI Mathilde Panot",
+    "rating_original": "Plutôt faux",
+    "rating_normalized": "mostly_false",
+    "review_date": "2025-05-26"
+   }
+  ],
+  "reason": "nom retrouvé à la fin du libellé",
+  "candidates": [
+   {
+    "id": "Q30343128",
+    "name": "Mathilde Panot"
+   }
+  ]
+ },
+ {
+  "claim_id": "c_9fb3f088d51c5df7",
+  "claim_text": "Nous travaillons en moyenne 100 heures de moins par an que les Allemands",
+  "claim_date": "2025-04-29",
+  "reviews": [
+   {
+    "url": "https://www.tf1info.fr/societe/verif-travail-en-france-est-il-vrai-que-nous-travaillons-en-moyenne-100-heures-de-moins-par-an-que-les-allemands-2368137.html",
+    "source_id": "tf1info_verificateurs",
+    "claimant": "La ministre du Travail, Astrid Panosyan-Bouvet",
+    "rating_original": "Plutôt vrai",
+    "rating_normalized": "mostly_true",
+    "review_date": "2025-04-30"
+   }
+  ],
+  "reason": "nom retrouvé à la fin du libellé",
+  "candidates": [
+   {
+    "id": "Q33106414",
+    "name": "Astrid Panosyan-Bouvet"
+   }
+  ]
+ },
+ {
+  "claim_id": "c_9ac1728de396c106",
+  "claim_text": "Seuls les 10% les plus riches ont vu leur imposition baisser depuis deux ans",
+  "claim_date": "2025-04-14",
+  "reviews": [
+   {
+    "url": "https://www.tf1info.fr/economie/verif-les-impots-ont-ils-augmente-pour-tous-les-francais-sauf-pour-les-10-les-plus-riches-2365088.html",
+    "source_id": "tf1info_verificateurs",
+    "claimant": "Le député LFI Eric Coquerel",
+    "rating_original": "Plutôt vrai",
+    "rating_normalized": "mostly_true",
+    "review_date": "2025-04-14"
+   }
+  ],
+  "reason": "nom retrouvé à la fin du libellé",
+  "candidates": [
+   {
+    "id": "Q17485936",
+    "name": "Éric Coquerel"
+   }
+  ]
+ },
+ {
+  "claim_id": "c_f1b797ae19b660ea",
+  "claim_text": "En 2023, la France a perdu une surface agricole équivalente à 18.500 terrains de football",
+  "claim_date": "2025-03-11",
+  "reviews": [
+   {
+    "url": "https://www.tf1info.fr/environnement-ecologie/verif-rien-qu-en-2023-la-france-a-t-elle-perdu-l-equivalent-de-18-500-terrains-de-foot-en-terres-agricoles-2358995.html",
+    "source_id": "tf1info_verificateurs",
+    "claimant": "La députée du RN Catherine Rimbert",
+    "rating_original": "Plutôt faux",
+    "rating_normalized": "mostly_false",
+    "review_date": "2025-03-12"
+   }
+  ],
+  "reason": "nom retrouvé à la fin du libellé",
+  "candidates": [
+   {
+    "id": "Q126364255",
+    "name": "Catherine Rimbert"
+   }
+  ]
+ },
+ {
+  "claim_id": "c_ee5aa658538ceba0",
+  "claim_text": "La France est le pays en Europe où l'on travaille le moins dans la journée, le moins dans l'année, le moins dans la vie",
+  "claim_date": "2025-03-10",
+  "reviews": [
+   {
+    "url": "https://www.tf1info.fr/societe/verif-la-france-est-elle-le-pays-en-europe-ou-l-on-travaille-le-moins-dans-la-journee-dans-l-annee-et-dans-la-vie-2358766.html",
+    "source_id": "tf1info_verificateurs",
+    "claimant": "Le député LR Jean-Didier Berger",
+    "rating_original": "Faux",
+    "rating_normalized": "false",
+    "review_date": "2025-03-11"
+   }
+  ],
+  "reason": "nom retrouvé à la fin du libellé",
+  "candidates": [
+   {
+    "id": "Q17496948",
+    "name": "Jean-Didier Berger"
+   }
+  ]
+ },
+ {
+  "claim_id": "c_4a26003ba2a06b27",
+  "claim_text": "Le Danemark a \"décidé de reporter à 70 ans l'âge légal de départ à la retraite pour que l'économie sache financer un effort de guerre\"",
+  "claim_date": "2025-03-04",
+  "reviews": [
+   {
+    "url": "https://www.tf1info.fr/international/verif-le-danemark-a-t-il-reporte-a-70-ans-l-age-de-depart-a-la-retraite-pour-financer-un-effort-de-guerre-2357645.html",
+    "source_id": "tf1info_verificateurs",
+    "claimant": "Le président du Medef Patrick Martin",
+    "rating_original": "Plutôt faux",
+    "rating_normalized": "mostly_false",
+    "review_date": "2025-03-05"
+   }
+  ],
+  "reason": "nom retrouvé à la fin du libellé",
+  "candidates": [
+   {
+    "id": "Q139887231",
+    "name": "Patrick Martin"
+   },
+   {
+    "id": "Q65592131",
+    "name": "Patrick Martin"
+   },
+   {
+    "id": "Q65592132",
+    "name": "Patrick Martin"
+   },
+   {
+    "id": "Q65592133",
+    "name": "Patrick Martin"
+   },
+   {
+    "id": "Q98246929",
+    "name": "Patrick Martin"
+   }
+  ]
+ },
+ {
+  "claim_id": "c_65238cfd830a1305",
+  "claim_text": "Pour 100 euros investis dans le réarmement des pays de l'UE, 63 euros vont aux États-Unis",
+  "claim_date": "2025-03-04",
+  "reviews": [
+   {
+    "url": "https://www.tf1info.fr/international/defense-europeenne-europe-les-investissements-de-l-ue-en-matiere-de-defense-sont-ils-a-63-realises-aupres-des-etats-unis-2357623.html",
+    "source_id": "tf1info_verificateurs",
+    "claimant": "Le député LFI François Piquemal",
+    "rating_original": "Plutôt vrai",
+    "rating_normalized": "mostly_true",
+    "review_date": "2025-03-05"
+   }
+  ],
+  "reason": "nom retrouvé à la fin du libellé",
+  "candidates": [
+   {
+    "id": "Q112110960",
+    "name": "François Piquemal"
+   }
+  ]
+ },
+ {
+  "claim_id": "c_c633a022ed0e211a",
+  "claim_text": "\"Nous avons 209 milliards d’avoir russes gelés dans nos banques\", pouvant être utilisés pour aider l'Ukraine",
+  "claim_date": "2025-03-03",
+  "reviews": [
+   {
+    "url": "https://www.tf1info.fr/international/verif-guerre-ukraine-russie-l-europe-peut-elle-saisir-les-209-milliards-d-euros-d-avoirs-russes-geles-depuis-trois-ans-pour-aider-kiev-2357424.html",
+    "source_id": "tf1info_verificateurs",
+    "claimant": "Le député Renaissance Pieyre-Alexandre Anglade",
+    "rating_original": "Plutôt faux",
+    "rating_normalized": "mostly_false",
+    "review_date": "2025-03-04"
+   }
+  ],
+  "reason": "nom retrouvé à la fin du libellé",
+  "candidates": [
+   {
+    "id": "Q30342405",
+    "name": "Pieyre-Alexandre Anglade"
+   }
+  ]
+ },
+ {
+  "claim_id": "c_276f5acfdc723790",
+  "claim_text": "Une carte relayée en ligne montre une division électorale est/ouest qui perdure en Allemagne malgré la réunification",
+  "claim_date": "2025-02-23",
+  "reviews": [
+   {
+    "url": "https://www.tf1info.fr/international/verif-elections-en-allemagne-la-carte-du-resultat-montre-t-elle-la-meme-fracture-est-ouest-qu-avant-la-reunification-2355909.html",
+    "source_id": "tf1info_verificateurs",
+    "claimant": "Une publication repartagée par le député LFI Christophe Bex",
+    "rating_original": "Plutôt faux",
+    "rating_normalized": "mostly_false",
+    "review_date": "2025-02-24"
+   }
+  ],
+  "reason": "nom retrouvé à la fin du libellé",
+  "candidates": [
+   {
+    "id": "Q112650053",
+    "name": "Christophe Bex"
+   }
+  ]
+ },
+ {
+  "claim_id": "c_b4086db574766eb0",
+  "claim_text": "60% des logements ayant fait l’objet de rénovations énergétiques demeurent, après travaux, des passoires thermiques",
+  "claim_date": "2025-01-29",
+  "reviews": [
+   {
+    "url": "https://www.tf1info.fr/immobilier/verif-renovations-energetiques-apres-travaux-60-des-logements-restent-ils-des-passoires-thermiques-2348151.html",
+    "source_id": "tf1info_verificateurs",
+    "claimant": "Le député du RN, Frédéric Falcon",
+    "rating_original": "Plutôt faux",
+    "rating_normalized": "mostly_false",
+    "review_date": "2025-01-31"
+   }
+  ],
+  "reason": "nom retrouvé à la fin du libellé",
+  "candidates": [
+   {
+    "id": "Q112639617",
+    "name": "Frédéric Falcon"
+   }
+  ]
+ },
+ {
+  "claim_id": "c_ea6aafb5c66a74aa",
+  "claim_text": "On compte 12 millions de mal-logés en France",
+  "claim_date": "2025-01-14",
+  "reviews": [
+   {
+    "url": "https://www.tf1info.fr/immobilier/verif-compte-t-on-vraiment-12-millions-de-mal-loges-en-france-2345004.html",
+    "source_id": "tf1info_verificateurs",
+    "claimant": "Le député LFI Aurélien Le Coq",
+    "rating_original": "Plutôt faux",
+    "rating_normalized": "mostly_false",
+    "review_date": "2025-01-15"
+   }
+  ],
+  "reason": "nom retrouvé à la fin du libellé",
+  "candidates": [
+   {
+    "id": "Q127256660",
+    "name": "Aurélien Le Coq"
+   }
+  ]
+ },
+ {
+  "claim_id": "c_c6220ff245c70348",
+  "claim_text": "Les transports en commun à Montpellier, c'est \"33% d’augmentation de fréquentation et autant de voitures en moins\"",
+  "claim_date": "2024-12-21",
+  "reviews": [
+   {
+    "url": "https://www.tf1info.fr/transports/verif-transports-en-commun-gratuits-a-montpellier-33-de-frequentation-en-plus-et-autant-de-voitures-en-moins-2341022.html",
+    "source_id": "tf1info_verificateurs",
+    "claimant": "La députée socialiste Fanny Dombre-Coste",
+    "rating_original": "En partie vrai",
+    "rating_normalized": "half_true",
+    "review_date": "2024-12-23"
+   }
+  ],
+  "reason": "nom retrouvé à la fin du libellé",
+  "candidates": [
+   {
+    "id": "Q3066450",
+    "name": "Fanny Dombre-Coste"
+   }
+  ]
+ },
+ {
+  "claim_id": "c_7e9127015bbdb39b",
+  "claim_text": "À Mayotte, 30% des gens ne sont pas raccordés à l'eau",
+  "claim_date": "2024-12-20",
+  "reviews": [
+   {
+    "url": "https://www.tf1info.fr/societe/verif-a-mayotte-30-des-logements-etaient-ils-prives-d-eau-courante-avant-le-passage-du-cyclone-chido-2340702.html",
+    "source_id": "tf1info_verificateurs",
+    "claimant": "Le député LFI Hadrien Clouet",
+    "rating_original": "Plutôt vrai",
+    "rating_normalized": "mostly_true",
+    "review_date": "2024-12-20"
+   }
+  ],
+  "reason": "nom retrouvé à la fin du libellé",
+  "candidates": [
+   {
+    "id": "Q112649548",
+    "name": "Hadrien Clouet"
+   }
+  ]
+ },
+ {
+  "claim_id": "c_3f7d7a4f88f8059c",
+  "claim_text": "Le budget de l'enseignement supérieur est en baisse continue depuis sept ans, malgré 12% d'étudiants en plus",
+  "claim_date": "2024-12-13",
+  "reviews": [
+   {
+    "url": "https://www.tf1info.fr/education/verif-le-budget-du-ministere-de-l-enseignement-superieur-est-il-en-baisse-continue-depuis-7-ans-malgre-une-hausse-du-nombre-d-etudiants-2339382.html",
+    "source_id": "tf1info_verificateurs",
+    "claimant": "Le député PS Fabrice Roussel",
+    "rating_original": "En partie vrai",
+    "rating_normalized": "half_true",
+    "review_date": "2024-12-13"
+   }
+  ],
+  "reason": "nom retrouvé à la fin du libellé",
+  "candidates": [
+   {
+    "id": "Q65601249",
+    "name": "Fabrice Roussel"
+   }
+  ]
+ },
+ {
+  "claim_id": "c_df3c1b8ef59cd615",
+  "claim_text": "Le calendrier de l'Avent est à l'origine une coutume allemande",
+  "claim_date": "2024-12-03",
+  "reviews": [
+   {
+    "url": "https://www.tf1info.fr/traditions-et-patrimoine/verif-le-calendrier-de-l-avent-est-il-a-l-origine-une-tradition-francaise-2337709.html",
+    "source_id": "tf1info_verificateurs",
+    "claimant": "Le député LFI Antoine Léaument",
+    "rating_original": "Vrai",
+    "rating_normalized": "true",
+    "review_date": "2024-12-04"
+   }
+  ],
+  "reason": "nom retrouvé à la fin du libellé",
+  "candidates": [
+   {
+    "id": "Q62976462",
+    "name": "Antoine Léaument"
+   }
+  ]
+ },
+ {
+  "claim_id": "c_c50e027422c35e01",
+  "claim_text": "On dénombre 465 niches fiscales en France",
+  "claim_date": "2024-11-07",
+  "reviews": [
+   {
+    "url": "https://www.tf1info.fr/economie/verif-budget-2025-est-il-vrai-que-la-france-compte-465-niches-fiscales-2332904.html",
+    "source_id": "tf1info_verificateurs",
+    "claimant": "Le député LFI Aurélien Le Coq",
+    "rating_original": "Vrai",
+    "rating_normalized": "true",
+    "review_date": "2024-11-07"
+   }
+  ],
+  "reason": "nom retrouvé à la fin du libellé",
+  "candidates": [
+   {
+    "id": "Q127256660",
+    "name": "Aurélien Le Coq"
+   }
+  ]
+ },
+ {
+  "claim_id": "c_6b9cf944054d5bf4",
+  "claim_text": "Les bénéfices des paris hippiques sont reversés à la filière équine",
+  "claim_date": "2024-11-04",
+  "reviews": [
+   {
+    "url": "https://www.tf1info.fr/societe/verif-les-benefices-generes-par-les-paris-hippiques-sont-ils-reverses-en-integralite-a-la-filiere-equine-2332711.html",
+    "source_id": "tf1info_verificateurs",
+    "claimant": "La députée RN Marine Hamelet",
+    "rating_original": "Vrai",
+    "rating_normalized": "true",
+    "review_date": "2024-11-06"
+   }
+  ],
+  "reason": "nom retrouvé à la fin du libellé",
+  "candidates": [
+   {
+    "id": "Q112652898",
+    "name": "Marine Hamelet"
+   }
+  ]
+ },
+ {
+  "claim_id": "c_c38821819eae5c90",
+  "claim_text": "Un français sur deux est en surpoids ou en obésité",
+  "claim_date": "2024-10-23",
+  "reviews": [
+   {
+    "url": "https://www.tf1info.fr/sante/surpoids-obesite-un-francais-sur-deux-est-il-touche-imc-2330392.html",
+    "source_id": "tf1info_verificateurs",
+    "claimant": "Le député MoDem Cyrille Isaac-Sibille",
+    "rating_original": "Vrai",
+    "rating_normalized": "true",
+    "review_date": "2024-10-24"
+   }
+  ],
+  "reason": "nom retrouvé à la fin du libellé",
+  "candidates": [
+   {
+    "id": "Q30342132",
+    "name": "Cyrille Isaac-Sibille"
+   }
+  ]
+ },
+ {
+  "claim_id": "c_c786d1154ff36323",
+  "claim_text": "La France verse un milliard d'euros sans contrepartie à l'Afrique du Sud pour financer sa transition énergétique",
+  "claim_date": "2024-10-23",
+  "reviews": [
+   {
+    "url": "https://www.tf1info.fr/politique/la-france-verse-t-elle-un-milliard-d-euros-sans-contrepartie-a-l-afrique-du-sud-pour-financer-sa-transition-energetique-2330607.html",
+    "source_id": "tf1info_verificateurs",
+    "claimant": "Le député du RN Julien Odoul",
+    "rating_original": "Faux",
+    "rating_normalized": "false",
+    "review_date": "2024-10-30"
+   }
+  ],
+  "reason": "nom retrouvé à la fin du libellé",
+  "candidates": [
+   {
+    "id": "Q41102798",
+    "name": "Julien Odoul"
+   }
+  ]
+ },
+ {
+  "claim_id": "c_1d14efeee544c7f7",
+  "claim_text": "Un viol est commis tous les 15 jours au sein de l'armée française",
+  "claim_date": "2024-10-22",
+  "reviews": [
+   {
+    "url": "https://www.tf1info.fr/societe/un-viol-est-il-commis-tous-les-15-jours-au-sein-de-l-armee-francaise-selon-depute-lfi-bastien-lachaud-2330200.html",
+    "source_id": "tf1info_verificateurs",
+    "claimant": "Le député LFI Bastien Lachaud",
+    "rating_original": "Plutôt vrai",
+    "rating_normalized": "mostly_true",
+    "review_date": "2024-10-23"
+   }
+  ],
+  "reason": "nom retrouvé à la fin du libellé",
+  "candidates": [
+   {
+    "id": "Q30349862",
+    "name": "Bastien Lachaud"
+   }
+  ]
+ },
+ {
+  "claim_id": "c_aa123d5ad629a371",
+  "claim_text": "L'endométriose touche 1,5 à 2,5 millions de femmes en France",
+  "claim_date": "2024-10-19",
+  "reviews": [
+   {
+    "url": "https://www.tf1info.fr/sante/1-5-a-2-5-millions-de-femmes-touchees-par-l-endometriose-en-france-d-ou-vient-ce-chiffre-2329994.html",
+    "source_id": "tf1info_verificateurs",
+    "claimant": "La députée RN Hélène Laporte",
+    "rating_original": "Plutôt vrai",
+    "rating_normalized": "mostly_true",
+    "review_date": "2024-10-22"
+   }
+  ],
+  "reason": "nom retrouvé à la fin du libellé",
+  "candidates": [
+   {
+    "id": "Q60604421",
+    "name": "Hélène Laporte"
+   }
+  ]
+ },
+ {
+  "claim_id": "c_77f2010f9f3df770",
+  "claim_text": "Nous sommes en France plus de 19 millions dans ce pays à avoir au moins un ancêtre immigré",
+  "claim_date": "2024-09-29",
+  "reviews": [
+   {
+    "url": "https://www.tf1info.fr/politique/immigration-en-france-sommes-nous-19-millions-a-avoir-au-moins-un-ancetre-immigre-2325833.html",
+    "source_id": "tf1info_verificateurs",
+    "claimant": "Le député LFI Antoine Léaument",
+    "rating_original": "Vrai",
+    "rating_normalized": "true",
+    "review_date": "2024-09-30"
+   }
+  ],
+  "reason": "nom retrouvé à la fin du libellé",
+  "candidates": [
+   {
+    "id": "Q62976462",
+    "name": "Antoine Léaument"
+   }
+  ]
+ },
+ {
+  "claim_id": "c_8bfb349b267e6616",
+  "claim_text": "Gérald Darmanin affiche le \"pire bilan\" en matière d'exécution des OQTF",
+  "claim_date": "2024-09-25",
+  "reviews": [
+   {
+    "url": "https://www.tf1info.fr/politique/gerald-darmanin-a-t-il-le-pire-bilan-en-matiere-d-execution-des-oqtf-2325195.html",
+    "source_id": "tf1info_verificateurs",
+    "claimant": "La députée RN Laure Lavalette",
+    "rating_original": "En partie vrai",
+    "rating_normalized": "half_true",
+    "review_date": "2024-09-26"
+   }
+  ],
+  "reason": "nom retrouvé à la fin du libellé",
+  "candidates": [
+   {
+    "id": "Q112308110",
+    "name": "Laure Lavalette"
+   }
+  ]
+ },
+ {
+  "claim_id": "c_dfde55cf662039a3",
+  "claim_text": "La rémunération des profs français est \"beaucoup plus faible que dans le reste de l'OCDE\"",
+  "claim_date": "2024-09-09",
+  "reviews": [
+   {
+    "url": "https://www.tf1info.fr/education/la-remuneration-des-profs-francais-est-elle-beaucoup-plus-faible-que-dans-le-reste-de-l-ocde-2318855.html",
+    "source_id": "tf1info_verificateurs",
+    "claimant": "Le député LFI Manuel Bompard",
+    "rating_original": "Faux",
+    "rating_normalized": "false",
+    "review_date": "2024-09-10"
+   }
+  ],
+  "reason": "nom retrouvé à la fin du libellé",
+  "candidates": [
+   {
+    "id": "Q29575749",
+    "name": "Manuel Bompard"
+   }
+  ]
+ },
+ {
+  "claim_id": "c_7cb96e2472f06fcc",
+  "claim_text": "Tous les pays européens rencontrent des problèmes de pénuries d'enseignants",
+  "claim_date": "2024-07-09",
+  "reviews": [
+   {
+    "url": "https://www.tf1info.fr/education/education-nationale-recrutement-la-penurie-d-enseignants-un-probleme-commun-a-tous-les-pays-d-europe-2307860.html",
+    "source_id": "tf1info_verificateurs",
+    "claimant": "La ministre de l'Éducation nationale, Nicole Belloubet",
+    "rating_original": "Plutôt vrai",
+    "rating_normalized": "mostly_true",
+    "review_date": "2024-07-09"
+   }
+  ],
+  "reason": "nom retrouvé à la fin du libellé",
+  "candidates": [
+   {
+    "id": "Q11984595",
+    "name": "Nicole Belloubet"
+   }
+  ]
+ },
+ {
+  "claim_id": "c_d1f857dd30834695",
+  "claim_text": "Un Premier ministre du Nouveau Front populaire pourrait \"abroger la réforme des retraites en une heure\"",
+  "claim_date": "2024-07-08",
+  "reviews": [
+   {
+    "url": "https://www.tf1info.fr/politique/elections/legislatives/video-une-fois-a-matignon-la-gauche-peut-elle-abroger-la-reforme-des-retraites-en-une-heure-comme-l-assure-manon-aubry-2307871.html",
+    "source_id": "tf1info_verificateurs",
+    "claimant": "L'eurodéputée LFI Manon Aubry",
+    "rating_original": "En partie vrai",
+    "rating_normalized": "half_true",
+    "review_date": "2024-07-09"
+   }
+  ],
+  "reason": "nom retrouvé à la fin du libellé",
+  "candidates": [
+   {
+    "id": "Q59601214",
+    "name": "Manon Aubry"
+   }
+  ]
+ },
+ {
+  "claim_id": "c_0bcdb04b31b7c11f",
+  "claim_text": "La France peut diminuer sa contribution annuelle au budget de l'UE",
+  "claim_date": "2024-07-05",
+  "reviews": [
+   {
+    "url": "https://poligraph.fr/factchecks/2024-07-05-reduire-la-contribution-annuelle-de-la-france-a-l-ue-une-promesse-ina",
+    "source_id": "poligraph_fr",
+    "claimant": "Le député sortant RN Jean-Philippe Tanguy",
+    "rating_original": "Plutôt faux",
+    "rating_normalized": "mostly_false",
+    "review_date": "2024-07-05"
+   }
+  ],
+  "reason": "nom retrouvé à la fin du libellé",
+  "candidates": [
+   {
+    "id": "Q46138822",
+    "name": "Jean-Philippe Tanguy"
+   }
+  ]
+ },
+ {
+  "claim_id": "c_94808b42e2c0a258",
+  "claim_text": "La France peut diminuer sa contribution annuelle au budget de l'UE",
+  "claim_date": "2024-07-05",
+  "reviews": [
+   {
+    "url": "https://www.tf1info.fr/politique/elections/europeennes/elections-legislatives-2024-reduire-de-plusieurs-milliards-la-contribution-annuelle-de-la-france-a-l-union-europeenne-ue-une-promesse-intenable-du-rn-2307300.html",
+    "source_id": "tf1info_verificateurs",
+    "claimant": "Le député sortant RN Jean-Philippe Tanguy",
+    "rating_original": "Plutôt faux",
+    "rating_normalized": "mostly_false",
+    "review_date": "2024-07-05"
+   }
+  ],
+  "reason": "nom retrouvé à la fin du libellé",
+  "candidates": [
+   {
+    "id": "Q46138822",
+    "name": "Jean-Philippe Tanguy"
+   }
+  ]
+ },
+ {
+  "claim_id": "c_037e54a0a46971f1",
+  "claim_text": "En France, 80% de la population française vit en ville",
+  "claim_date": "2024-07-01",
+  "reviews": [
+   {
+    "url": "https://www.tf1info.fr/politique/elections/legislatives/en-france-80-de-la-population-vit-elle-en-ville-urbain-ruraux-selon-insee-2306783.html",
+    "source_id": "tf1info_verificateurs",
+    "claimant": "La députée LFI Sophia Chikirou",
+    "rating_original": "Vrai",
+    "rating_normalized": "true",
+    "review_date": "2024-07-02"
+   }
+  ],
+  "reason": "nom retrouvé à la fin du libellé",
+  "candidates": [
+   {
+    "id": "Q28964087",
+    "name": "Sophia Chikirou"
+   }
+  ]
+ },
+ {
+  "claim_id": "c_07b0eef17da785b4",
+  "claim_text": "En tant que ministre de l'Éducation nationale, Najat Vallaud-Belkacem \"a voulu instituer au CP des cours d'arabe\"",
+  "claim_date": "2024-06-28",
+  "reviews": [
+   {
+    "url": "https://www.tf1info.fr/politique/elections/municipales/fake-news-education-nationale-quand-elle-etait-ministre-najat-vallaud-belkacem-voulait-elle-vraiment-instituer-des-cours-d-arabe-des-le-cp-2306200.html",
+    "source_id": "tf1info_verificateurs",
+    "claimant": "Le député RN sortant Roger Chudeau",
+    "rating_original": "En partie vrai",
+    "rating_normalized": "half_true",
+    "review_date": "2024-06-28"
+   }
+  ],
+  "reason": "nom retrouvé à la fin du libellé",
+  "candidates": [
+   {
+    "id": "Q33111018",
+    "name": "Roger Chudeau"
+   }
+  ]
+ },
+ {
+  "claim_id": "c_64d81394ff2d04d9",
+  "claim_text": "La France est le seul pays occidental incapable de présenter un budget à l'équilibre depuis 50 ans",
+  "claim_date": "2024-06-21",
+  "reviews": [
+   {
+    "url": "https://www.tf1info.fr/politique/elections/legislatives/la-france-est-elle-le-seul-pays-occidental-incapable-de-presenter-un-budget-a-l-equilibre-depuis-50-ans-2305161.html",
+    "source_id": "tf1info_verificateurs",
+    "claimant": "Le député du RN Jean-Philippe Tanguy",
+    "rating_original": "Faux",
+    "rating_normalized": "false",
+    "review_date": "2024-06-21"
+   }
+  ],
+  "reason": "nom retrouvé à la fin du libellé",
+  "candidates": [
+   {
+    "id": "Q46138822",
+    "name": "Jean-Philippe Tanguy"
+   }
+  ]
+ },
+ {
+  "claim_id": "c_adace0d312677fc9",
+  "claim_text": "La France est le seul pays occidental incapable de présenter un budget à l'équilibre depuis 50 ans",
+  "claim_date": "2024-06-21",
+  "reviews": [
+   {
+    "url": "https://poligraph.fr/factchecks/2024-06-21-la-france-est-elle-le-seul-pays-occidental-incapable-de-presenter-un",
+    "source_id": "poligraph_fr",
+    "claimant": "Le député du RN Jean-Philippe Tanguy",
+    "rating_original": "Faux",
+    "rating_normalized": "false",
+    "review_date": "2024-06-21"
+   }
+  ],
+  "reason": "nom retrouvé à la fin du libellé",
+  "candidates": [
+   {
+    "id": "Q46138822",
+    "name": "Jean-Philippe Tanguy"
+   }
+  ]
+ },
+ {
+  "claim_id": "c_e7fc1f02a24baf1f",
+  "claim_text": "Feux de forêt : la flotte française de Canadair presque entièrement clouée au sol par manque d'entretien ?",
+  "claim_date": "2024-06-13",
+  "reviews": [
+   {
+    "url": "https://www.tf1info.fr/societe/incendie-feux-de-foret-pompiers-la-flotte-francaise-de-canadair-presque-entierement-clouee-au-sol-par-manque-d-entretien-2303892.html",
+    "source_id": "tf1info_verificateurs",
+    "claimant": "Le député RN Julien Rancoule",
+    "rating_original": "Plutôt vrai",
+    "rating_normalized": "mostly_true",
+    "review_date": "2024-06-13"
+   }
+  ],
+  "reason": "nom retrouvé à la fin du libellé",
+  "candidates": [
+   {
+    "id": "Q112639781",
+    "name": "Julien Rancoule"
+   }
+  ]
+ },
+ {
+  "claim_id": "c_796cbcf71bac146f",
+  "claim_text": "45% des viols sont commis en France par les conjoints ou ex-conjoints des victimes",
+  "claim_date": "2024-05-27",
+  "reviews": [
+   {
+    "url": "https://www.tf1info.fr/justice-faits-divers/45-des-viols-sont-ils-commis-en-france-par-les-conjoints-ou-ex-conjoints-des-victimes-2301414.html",
+    "source_id": "tf1info_verificateurs",
+    "claimant": "La tête de liste LFI aux européennes Manon Aubry",
+    "rating_original": "Vrai",
+    "rating_normalized": "true",
+    "review_date": "2024-05-29"
+   }
+  ],
+  "reason": "nom retrouvé à la fin du libellé",
+  "candidates": [
+   {
+    "id": "Q59601214",
+    "name": "Manon Aubry"
+   }
+  ]
+ },
+ {
+  "claim_id": "c_b15e520c5acbe527",
+  "claim_text": "Seuls 17% des Ukrainiens font désormais confiance à Volodymyr Zelensky",
+  "claim_date": "2024-05-26",
+  "reviews": [
+   {
+    "url": "https://www.tf1info.fr/international/guerre-ukraine-russie-volodymyr-zelensky-n-a-t-il-desormais-plus-la-confiance-que-de-17-des-ukrainiens-2301254.html",
+    "source_id": "tf1info_verificateurs",
+    "claimant": "L'ancien sénateur Yves Pozzo di Borgo",
+    "rating_original": "Faux",
+    "rating_normalized": "false",
+    "review_date": "2024-05-27"
+   }
+  ],
+  "reason": "nom retrouvé à la fin du libellé",
+  "candidates": [
+   {
+    "id": "Q3573907",
+    "name": "Yves Pozzo di Borgo"
+   }
+  ]
+ },
+ {
+  "claim_id": "c_5a8ff8e83d2e3e1e",
+  "claim_text": "Le budget chinois consacré à la défense a augmenté de 600% entre 1999 et 2021",
+  "claim_date": "2024-05-15",
+  "reviews": [
+   {
+    "url": "https://www.tf1info.fr/international/chiffres-armee-le-budget-chinois-consacre-a-la-defense-a-t-il-augmente-de-600-en-l-espace-de-20-ans-2300571.html",
+    "source_id": "tf1info_verificateurs",
+    "claimant": "Le député centriste Jean-Charles Larsonneur",
+    "rating_original": "Plutôt vrai",
+    "rating_normalized": "mostly_true",
+    "review_date": "2024-05-23"
+   }
+  ],
+  "reason": "nom retrouvé à la fin du libellé",
+  "candidates": [
+   {
+    "id": "Q30343212",
+    "name": "Jean-Charles Larsonneur"
+   }
+  ]
+ },
+ {
+  "claim_id": "c_3a16868e509775bd",
+  "claim_text": "La France est \"le pays des 1.200 fromages\"",
+  "claim_date": "2024-05-10",
+  "reviews": [
+   {
+    "url": "https://www.tf1info.fr/societe/la-france-est-elle-vraiment-le-pays-des-1200-fromages-comme-le-dit-depute-lfi-alexis-corbiere-2298972.html",
+    "source_id": "tf1info_verificateurs",
+    "claimant": "Le député LFI Alexis Corbière",
+    "rating_original": "Plutôt vrai",
+    "rating_normalized": "mostly_true",
+    "review_date": "2024-05-10"
+   }
+  ],
+  "reason": "nom retrouvé à la fin du libellé",
+  "candidates": [
+   {
+    "id": "Q2834481",
+    "name": "Alexis Corbière"
+   }
+  ]
+ },
+ {
+  "claim_id": "c_15c3a75089d7e881",
+  "claim_text": "35% des logements sociaux sont occupés par des étrangers",
+  "claim_date": "2024-05-07",
+  "reviews": [
+   {
+    "url": "https://www.tf1info.fr/societe/logements-sociaux-france-plus-du-tiers-du-parc-de-logement-social-occupes-par-des-immigres-c-est-faux-depute-rassemblement-national-2298935.html",
+    "source_id": "tf1info_verificateurs",
+    "claimant": "Le député RN Frédéric Falcon",
+    "rating_original": "Faux",
+    "rating_normalized": "false",
+    "review_date": "2024-05-10"
+   }
+  ],
+  "reason": "nom retrouvé à la fin du libellé",
+  "candidates": [
+   {
+    "id": "Q112639617",
+    "name": "Frédéric Falcon"
+   }
+  ]
+ },
+ {
+  "claim_id": "c_c0d81b701b4f8a1e",
+  "claim_text": "55% des jeunes guadeloupéens font face à des idées suicidaires",
+  "claim_date": "2024-05-07",
+  "reviews": [
+   {
+    "url": "https://www.tf1info.fr/sante/guadeloupe-55-des-jeunes-ont-ils-des-pensees-suicidaires-comme-l-affirme-le-depute-olivier-serva-2298637.html",
+    "source_id": "tf1info_verificateurs",
+    "claimant": "Le député du groupe LIOT Olivier Serva",
+    "rating_original": "Plutôt faux",
+    "rating_normalized": "mostly_false",
+    "review_date": "2024-05-07"
+   }
+  ],
+  "reason": "nom retrouvé à la fin du libellé",
+  "candidates": [
+   {
+    "id": "Q30390327",
+    "name": "Olivier Serva"
+   }
+  ]
+ },
+ {
+  "claim_id": "c_024ddaffc480ae2a",
+  "claim_text": "Les fonctionnaires ont perdu 20% de pouvoir d'achat en vingt ans",
+  "claim_date": "2024-04-10",
+  "reviews": [
+   {
+    "url": "https://www.tf1info.fr/vie-pro/les-fonctionnaires-fonction-publique-ont-ils-perdu-20-de-pouvoir-d-achat-en-vingt-ans-selon-deputes-lfi-hendrik-davi-aurelie-trouve-2295222.html",
+    "source_id": "tf1info_verificateurs",
+    "claimant": "La députée LFI Aurélie Trouvé",
+    "rating_original": "Plutôt vrai",
+    "rating_normalized": "mostly_true",
+    "review_date": "2024-04-11"
+   }
+  ],
+  "reason": "nom retrouvé à la fin du libellé",
+  "candidates": [
+   {
+    "id": "Q2872015",
+    "name": "Aurélie Trouvé"
+   }
+  ]
+ },
+ {
+  "claim_id": "c_c2fb77317b82a5e0",
+  "claim_text": "20% des 7-19 ans n'arrivent pas à lire plus de 15 minutes d'affilée",
+  "claim_date": "2024-04-10",
+  "reviews": [
+   {
+    "url": "https://www.tf1info.fr/societe/lecture-chez-les-enfants-et-adolescents-un-jeune-sur-cinq-incapable-de-lire-plus-de-quinze-minutes-d-affilee-2295238.html",
+    "source_id": "tf1info_verificateurs",
+    "claimant": "Le député Horizons Laurent Marcangeli",
+    "rating_original": "En partie vrai",
+    "rating_normalized": "half_true",
+    "review_date": "2024-04-12"
+   }
+  ],
+  "reason": "nom retrouvé à la fin du libellé",
+  "candidates": [
+   {
+    "id": "Q2514772",
+    "name": "Laurent Marcangeli"
+   }
+  ]
+ },
+ {
+  "claim_id": "c_2bfce8c7236fd6ac",
+  "claim_text": "Le salaire minimum en Ukraine est inférieur à 200 euros",
+  "claim_date": "2024-04-04",
+  "reviews": [
+   {
+    "url": "https://www.tf1info.fr/international/en-ukraine-le-salaire-minimum-est-il-vraiment-inferieur-a-200-euros-comme-l-affirme-manon-aubry-tete-de-liste-lfi-aux-elections-europeennes-2294586.html",
+    "source_id": "tf1info_verificateurs",
+    "claimant": "La tête de liste LFI aux élections européennes, Manon Aubry",
+    "rating_original": "Vrai",
+    "rating_normalized": "true",
+    "review_date": "2024-04-05"
+   }
+  ],
+  "reason": "nom retrouvé à la fin du libellé",
+  "candidates": [
+   {
+    "id": "Q59601214",
+    "name": "Manon Aubry"
+   }
+  ]
+ },
+ {
+  "claim_id": "c_e0215f42b87e9d5b",
+  "claim_text": "La France donne beaucoup plus d’argent à l’Union européenne qu’elle n’en touche par Bruxelles.",
+  "claim_date": "2024-04-03",
+  "reviews": [
+   {
+    "url": "https://www.tf1info.fr/politique/elections/europeennes/verificateurs-tf1-europe-chiffres-budget-la-france-donne-t-elle-beaucoup-plus-d-argent-a-l-union-europeenne-qu-elle-n-en-recoit-de-bruxelles-2294296.html",
+    "source_id": "tf1info_verificateurs",
+    "claimant": "La députée du RN Edwige Diaz",
+    "rating_original": "Plutôt vrai",
+    "rating_normalized": "mostly_true",
+    "review_date": "2024-06-02"
+   }
+  ],
+  "reason": "nom retrouvé à la fin du libellé",
+  "candidates": [
+   {
+    "id": "Q63349008",
+    "name": "Edwige Diaz"
+   }
+  ]
+ },
+ {
+  "claim_id": "c_23e1f98548cfff02",
+  "claim_text": "La France est la \"championne de l'addiction\" au cannbais chez les mineurs",
+  "claim_date": "2024-04-01",
+  "reviews": [
+   {
+    "url": "https://www.tf1info.fr/societe/consommation-de-cannabis-la-france-est-elle-la-championne-de-l-addiction-chez-les-mineurs-2294182.html",
+    "source_id": "tf1info_verificateurs",
+    "claimant": "Le député écologiste Julien Bayou",
+    "rating_original": "Plutôt vrai",
+    "rating_normalized": "mostly_true",
+    "review_date": "2024-04-03"
+   }
+  ],
+  "reason": "nom retrouvé à la fin du libellé",
+  "candidates": [
+   {
+    "id": "Q3189355",
+    "name": "Julien Bayou"
+   }
+  ]
+ },
+ {
+  "claim_id": "c_885eeb6ce7cbbbe8",
+  "claim_text": "Une promenade dans une forêt privée expose-t-elle à des sanctions aussi élevées qu'une conduite en état d'ivresse ?",
+  "claim_date": "2024-03-28",
+  "reviews": [
+   {
+    "url": "https://www.tf1info.fr/environnement-ecologie/se-promener-dans-une-foret-privee-est-il-passible-d-une-sanction-aussi-lourde-que-conduire-en-etat-d-ivresse-2293303.html",
+    "source_id": "tf1info_verificateurs",
+    "claimant": "La députée EELV Lisa Belluco",
+    "rating_original": "Vrai",
+    "rating_normalized": "true",
+    "review_date": "2024-03-29"
+   }
+  ],
+  "reason": "nom retrouvé à la fin du libellé",
+  "candidates": [
+   {
+    "id": "Q112654007",
+    "name": "Lisa Belluco"
+   }
+  ]
+ },
+ {
+  "claim_id": "c_37954c9fac97e8bc",
+  "claim_text": "\"Ca fait 50 ans que la France est systématiquemet en déficit\", a dénoncé le premier sur LCI ; \"La France n'a pas eu un budget à l'équilibre depuis 1974\", constate la seconde.",
+  "claim_date": "2024-03-24",
+  "reviews": [
+   {
+    "url": "https://www.franceinfo.fr/replay-radio/le-vrai-du-faux/vrai-ou-faux-la-france-est-elle-systematiquement-en-deficit-depuis-50-ans_6418339.html",
+    "source_id": "franceinfo_vraioufake",
+    "claimant": "Jean-Philippe Tanguy et Valérie Hayer",
+    "rating_original": "Vrai",
+    "rating_normalized": "true",
+    "review_date": "2024-03-26"
+   }
+  ],
+  "reason": "plusieurs personnes",
+  "candidates": [
+   {
+    "id": "Q46138822",
+    "name": "Jean-Philippe Tanguy"
+   },
+   {
+    "id": "Q63764512",
+    "name": "Valérie Hayer"
+   }
+  ]
+ },
+ {
+  "claim_id": "c_944a7f4eff85fa62",
+  "claim_text": "Au cours du discours de Ioulia Navalnaïa, Jordan Bardella a été le seul député européen à ne pas applaudir",
+  "claim_date": "2024-02-28",
+  "reviews": [
+   {
+    "url": "https://www.tf1info.fr/politique/lors-du-discours-de-ioulia-navalnaia-veuve-de-navalny-president-du-rn-jordan-bardella-a-t-il-ete-le-seul-depute-europeen-a-ne-pas-applaudir-2287680.html",
+    "source_id": "tf1info_verificateurs",
+    "claimant": "L'eurodéputée du groupe Renew  Laurence Farreng",
+    "rating_original": "Faux",
+    "rating_normalized": "false",
+    "review_date": "2024-02-28"
+   }
+  ],
+  "reason": "nom retrouvé à la fin du libellé",
+  "candidates": [
+   {
+    "id": "Q64038074",
+    "name": "Laurence Farreng"
+   }
+  ]
+ },
+ {
+  "claim_id": "c_79dd36c3a5bf795d",
+  "claim_text": "Un compte en moyenne 70 lobbyistes pour un seul eurodéputé",
+  "claim_date": "2024-02-27",
+  "reviews": [
+   {
+    "url": "https://poligraph.fr/factchecks/2024-06-02-compte-t-on-vraiment-en-moyenne-70-lobbyistes-par-depute-europeen",
+    "source_id": "poligraph_fr",
+    "claimant": "L'eurodéputée LFI Manon Aubry",
+    "rating_original": "Vrai",
+    "rating_normalized": "true",
+    "review_date": "2024-06-02"
+   }
+  ],
+  "reason": "nom retrouvé à la fin du libellé",
+  "candidates": [
+   {
+    "id": "Q59601214",
+    "name": "Manon Aubry"
+   }
+  ]
+ },
+ {
+  "claim_id": "c_a2e338b848578a52",
+  "claim_text": "Un compte en moyenne 70 lobbyistes pour un seul eurodéputé",
+  "claim_date": "2024-02-27",
+  "reviews": [
+   {
+    "url": "https://www.tf1info.fr/politique/elections/europeennes/video-union-europeenne-compte-t-on-vraiment-70-lobbyistes-pour-un-depute-europeen-a-bruxelles-et-strasbourg-2287676.html",
+    "source_id": "tf1info_verificateurs",
+    "claimant": "L'eurodéputée LFI Manon Aubry",
+    "rating_original": "Vrai",
+    "rating_normalized": "true",
+    "review_date": "2024-06-02"
+   }
+  ],
+  "reason": "nom retrouvé à la fin du libellé",
+  "candidates": [
+   {
+    "id": "Q59601214",
+    "name": "Manon Aubry"
+   }
+  ]
+ },
+ {
+  "claim_id": "c_dd6bf9741a48cfbd",
+  "claim_text": "Des visites médicales obligatoires sont-elles déjà imposées aux automobilistes dans de multiples pays d'Europe",
+  "claim_date": "2024-02-26",
+  "reviews": [
+   {
+    "url": "https://www.tf1info.fr/societe/permis-de-conduire-des-visites-medicales-obligatoires-sont-elles-deja-imposees-aux-automobilistes-dans-de-multiples-pays-d-europe-2287416.html",
+    "source_id": "tf1info_verificateurs",
+    "claimant": "L'eurodéputée écologiste Karima Delli",
+    "rating_original": "Vrai",
+    "rating_normalized": "true",
+    "review_date": "2024-02-26"
+   }
+  ],
+  "reason": "nom retrouvé à la fin du libellé",
+  "candidates": [
+   {
+    "id": "Q433637",
+    "name": "Karima Delli"
+   }
+  ]
+ },
+ {
+  "claim_id": "c_ae1b7f7888531d6b",
+  "claim_text": "D'ici 10 ans, un exploitant agricole sur deux partira à la retraite",
+  "claim_date": "2024-02-21",
+  "reviews": [
+   {
+    "url": "https://www.tf1info.fr/societe/un-agriculteur-sur-deux-va-t-il-partir-a-la-retraite-d-ici-a-dix-ans-2287183.html",
+    "source_id": "tf1info_verificateurs",
+    "claimant": "Le député du RN Grégoire de Fournas",
+    "rating_original": "Vrai",
+    "rating_normalized": "true",
+    "review_date": "2024-02-23"
+   }
+  ],
+  "reason": "nom retrouvé à la fin du libellé",
+  "candidates": [
+   {
+    "id": "Q63763125",
+    "name": "Grégoire de Fournas"
+   }
+  ]
+ },
+ {
+  "claim_id": "c_e14bbea9ac38da01",
+  "claim_text": "Depuis 1947, il n'y a pas eu une année où la SNCF n'a pas été en grève",
+  "claim_date": "2024-02-15",
+  "reviews": [
+   {
+    "url": "https://www.tf1info.fr/societe/a-la-sncf-a-t-on-enregistre-au-moins-une-greve-par-an-depuis-1947-2286333.html",
+    "source_id": "tf1info_verificateurs",
+    "claimant": "Le député et président des Républicains Eric Ciotti",
+    "rating_original": "Vrai",
+    "rating_normalized": "true",
+    "review_date": "2024-02-15"
+   }
+  ],
+  "reason": "nom retrouvé à la fin du libellé",
+  "candidates": [
+   {
+    "id": "Q1844180",
+    "name": "Éric Ciotti"
+   }
+  ]
+ },
+ {
+  "claim_id": "c_fa589567583a7571",
+  "claim_text": "Il serait possible de faire appel aux réservistes de l'armée, de la police ou de la gendarmerie pour faire rouler les trains lors des grèves SNCF",
+  "claim_date": "2024-02-14",
+  "reviews": [
+   {
+    "url": "https://www.tf1info.fr/societe/greve-sncf-peut-on-faire-appel-aux-reservistes-de-l-armee-de-la-police-et-de-la-gendarmerie-pour-faire-rouler-les-trains-2286408.html",
+    "source_id": "tf1info_verificateurs",
+    "claimant": "Le maire de Nice, Christian Estrosi",
+    "rating_original": "Faux",
+    "rating_normalized": "false",
+    "review_date": "2024-02-21"
+   }
+  ],
+  "reason": "nom retrouvé à la fin du libellé",
+  "candidates": [
+   {
+    "id": "Q749029",
+    "name": "Christian Estrosi"
+   }
+  ]
+ },
+ {
+  "claim_id": "c_7a4807a1a0a73094",
+  "claim_text": "En seulement 60 ans, la population de Mayotte a été multipliée par 12",
+  "claim_date": "2024-02-12",
+  "reviews": [
+   {
+    "url": "https://www.tf1info.fr/societe/immigration-crise-securite-la-population-de-mayotte-a-t-elle-ete-multipliee-par-12-en-seulement-60-ans-2286096.html",
+    "source_id": "tf1info_verificateurs",
+    "claimant": "Le député Renaissance Christopher Weissberg",
+    "rating_original": "Vrai",
+    "rating_normalized": "true",
+    "review_date": "2024-02-13"
+   }
+  ],
+  "reason": "nom retrouvé à la fin du libellé",
+  "candidates": [
+   {
+    "id": "Q112893812",
+    "name": "Christopher Weissberg"
+   }
+  ]
+ },
+ {
+  "claim_id": "c_18da92028def8317",
+  "claim_text": "Quarante maires démissionnent tous les mois en raison des violences à leur encontre",
+  "claim_date": "2024-02-06",
+  "reviews": [
+   {
+    "url": "https://www.tf1info.fr/societe/quarante-maires-demissionnent-ils-chaque-mois-en-france-a-cause-des-violences-qu-ils-subissent-2285579.html",
+    "source_id": "tf1info_verificateurs",
+    "claimant": "La députée RN Edwige Diaz",
+    "rating_original": "Plutôt faux",
+    "rating_normalized": "mostly_false",
+    "review_date": "2024-02-08"
+   }
+  ],
+  "reason": "nom retrouvé à la fin du libellé",
+  "candidates": [
+   {
+    "id": "Q63349008",
+    "name": "Edwige Diaz"
+   }
+  ]
+ },
+ {
+  "claim_id": "c_e49aaedefce98618",
+  "claim_text": "\"Les SUV sont lpus dangereux\" et \"les SUV ont amélioré la sécurité passive et active\"",
+  "claim_date": "2024-02-06",
+  "reviews": [
+   {
+    "url": "https://www.franceinfo.fr/replay-radio/le-vrai-du-faux/vrai-ou-faux-les-suv-sont-ils-plus-dangereux-que-les-autres-vehicules_6320205.html",
+    "source_id": "franceinfo_vraioufake",
+    "claimant": "Yves Carra et Emmanuel Grégoire",
+    "rating_original": "Plutôt Vrai",
+    "rating_normalized": "mostly_true",
+    "review_date": "2024-02-06"
+   }
+  ],
+  "reason": "nom retrouvé à la fin du libellé",
+  "candidates": [
+   {
+    "id": "Q64281962",
+    "name": "Emmanuel Grégoire"
+   }
+  ]
+ },
+ {
+  "claim_id": "c_126fc3ceb9c77688",
+  "claim_text": "On compte 330.000 personnes sans domicile en France, un chiffre qui a doublé en dix ans",
+  "claim_date": "2024-01-15",
+  "reviews": [
+   {
+    "url": "https://www.tf1info.fr/societe/pres-de-300-000-personnes-sans-domicile-en-france-ce-chiffre-a-t-il-double-depuis-2012-2282898.html",
+    "source_id": "tf1info_verificateurs",
+    "claimant": "Le député LFI Thomas Portes",
+    "rating_original": "Plutôt vrai",
+    "rating_normalized": "mostly_true",
+    "review_date": "2024-01-17"
+   }
+  ],
+  "reason": "nom retrouvé à la fin du libellé",
+  "candidates": [
+   {
+    "id": "Q112653860",
+    "name": "Thomas Portes"
+   }
+  ]
+ },
+ {
+  "claim_id": "c_711d4cc490b4bf5d",
+  "claim_text": "Le cannabis représente 70.000 condamnations par an et 12% des peines prononcées en justice",
+  "claim_date": "2024-01-08",
+  "reviews": [
+   {
+    "url": "https://www.tf1info.fr/societe/le-cannabis-engendre-t-il-70-000-condamnations-par-an-et-12-des-peines-penales-2282080.html",
+    "source_id": "tf1info_verificateurs",
+    "claimant": "Le député LFI Christophe Bex",
+    "rating_original": "En partie vrai",
+    "rating_normalized": "half_true",
+    "review_date": "2024-01-09"
+   }
+  ],
+  "reason": "nom retrouvé à la fin du libellé",
+  "candidates": [
+   {
+    "id": "Q112650053",
+    "name": "Christophe Bex"
+   }
+  ]
+ },
+ {
+  "claim_id": "c_e27e20310b0fc662",
+  "claim_text": "Depuis 2020, les Français sont les Européens les mieux protégés de l'inflation",
+  "claim_date": "2024-01-08",
+  "reviews": [
+   {
+    "url": "https://www.tf1info.fr/economie/pouvoir-d-achat-depuis-2020-les-francais-sont-ils-vraiment-les-europeens-les-mieux-proteges-de-l-inflation-2282209.html",
+    "source_id": "tf1info_verificateurs",
+    "claimant": "Le député Renaissance Jean-René Cazeneuve",
+    "rating_original": "Faux",
+    "rating_normalized": "false",
+    "review_date": "2024-01-10"
+   }
+  ],
+  "reason": "nom retrouvé à la fin du libellé",
+  "candidates": [
+   {
+    "id": "Q30417849",
+    "name": "Jean-René Cazeneuve"
+   }
+  ]
+ },
+ {
+  "claim_id": "c_516c4bc0aa8dcbe7",
+  "claim_text": "Les trains de nuit vers des destinations françaises sont inaccessibles aux personnes à mobilité réduite",
+  "claim_date": "2023-12-12",
+  "reviews": [
+   {
+    "url": "https://www.tf1info.fr/societe/transports-sncf-de-retour-les-trains-de-nuit-sont-ils-totalement-inaccessibles-aux-personnes-a-mobilite-reduite-2279344.html",
+    "source_id": "tf1info_verificateurs",
+    "claimant": "Le député LFI Sébastien Peytavie",
+    "rating_original": "Vrai",
+    "rating_normalized": "true",
+    "review_date": "2023-12-13"
+   }
+  ],
+  "reason": "nom retrouvé à la fin du libellé",
+  "candidates": [
+   {
+    "id": "Q112641851",
+    "name": "Sébastien Peytavie"
+   }
+  ]
+ },
+ {
+  "claim_id": "c_5bf717abeb436054",
+  "claim_text": "Deux tiers des 300.000 patients qui nécessiteraient des soins palliatifs en sont privés",
+  "claim_date": "2023-12-12",
+  "reviews": [
+   {
+    "url": "https://www.tf1info.fr/sante/projet-loi-fin-de-vie-deux-tiers-des-300-000-patients-qui-necessiteraient-des-soins-palliatifs-en-sont-ils-prives-2279327.html",
+    "source_id": "tf1info_verificateurs",
+    "claimant": "Le député LFI Sébastien Rome",
+    "rating_original": "Vrai",
+    "rating_normalized": "true",
+    "review_date": "2023-12-13"
+   }
+  ],
+  "reason": "nom retrouvé à la fin du libellé",
+  "candidates": [
+   {
+    "id": "Q112635222",
+    "name": "Sébastien Rome"
+   }
+  ]
+ },
+ {
+  "claim_id": "c_f7d0bb121c4ec716",
+  "claim_text": "Lors des tempêtes Céline et Ciarán, les éoliennes françaises étaient à l'arrêt ?",
+  "claim_date": "2023-12-06",
+  "reviews": [
+   {
+    "url": "https://www.tf1info.fr/societe/lors-des-tempetes-celine-et-ciaran-les-eoliennes-francaises-etaient-elles-vraiment-a-l-arret-2278697.html",
+    "source_id": "tf1info_verificateurs",
+    "claimant": "Le député RN Daniel Grenon",
+    "rating_original": "Faux",
+    "rating_normalized": "false",
+    "review_date": "2023-12-07"
+   }
+  ],
+  "reason": "nom retrouvé à la fin du libellé",
+  "candidates": [
+   {
+    "id": "Q112653386",
+    "name": "Daniel Grenon"
+   }
+  ]
+ },
+ {
+  "claim_id": "c_26e7c6978ac2e25f",
+  "claim_text": "Six ans après #MeToo, \"rien n'a changé\" en matière de condamnations judiciaires des viols",
+  "claim_date": "2023-12-05",
+  "reviews": [
+   {
+    "url": "https://www.tf1info.fr/justice-faits-divers/condamnations-pour-viol-six-ans-apres-metoo-peut-on-dire-que-rien-n-a-change-en-france-2278600.html",
+    "source_id": "tf1info_verificateurs",
+    "claimant": "La députée écologiste Marie-Charlotte Garin",
+    "rating_original": "Plutôt vrai",
+    "rating_normalized": "mostly_true",
+    "review_date": "2023-12-07"
+   }
+  ],
+  "reason": "nom retrouvé à la fin du libellé",
+  "candidates": [
+   {
+    "id": "Q112652262",
+    "name": "Marie-Charlotte Garin"
+   }
+  ]
+ },
+ {
+  "claim_id": "c_b19574c88f48e415",
+  "claim_text": "La France rassemble 40% des casinos européens ?",
+  "claim_date": "2023-12-05",
+  "reviews": [
+   {
+    "url": "https://www.tf1info.fr/societe/la-france-rassemble-t-elle-40-des-casinos-europeens-2278548.html",
+    "source_id": "tf1info_verificateurs",
+    "claimant": "Le député EELV Jérémie Iordanoff",
+    "rating_original": "Plutôt faux",
+    "rating_normalized": "mostly_false",
+    "review_date": "2023-12-06"
+   }
+  ],
+  "reason": "nom retrouvé à la fin du libellé",
+  "candidates": [
+   {
+    "id": "Q112650363",
+    "name": "Jérémie Iordanoff"
+   }
+  ]
+ },
+ {
+  "claim_id": "c_68a53508c79ac3c4",
+  "claim_text": "Le trafic de drogue représente un chiffre d’affaires de 4 milliards d’euros",
+  "claim_date": "2023-11-26",
+  "reviews": [
+   {
+    "url": "https://www.tf1info.fr/societe/les-drogues-un-marche-de-4-milliards-d-euros-par-an-en-france-2277587.html",
+    "source_id": "tf1info_verificateurs",
+    "claimant": "Le président des Républicains, Eric Ciotti",
+    "rating_original": "En partie vrai",
+    "rating_normalized": "half_true",
+    "review_date": "2023-11-27"
+   }
+  ],
+  "reason": "nom retrouvé à la fin du libellé",
+  "candidates": [
+   {
+    "id": "Q1844180",
+    "name": "Éric Ciotti"
+   }
+  ]
+ },
+ {
+  "claim_id": "c_d825b10ef489bda6",
+  "claim_text": "Seule la moitié des migrants qui pourraient bénéficier de l'AME en font la demande",
+  "claim_date": "2023-11-23",
+  "reviews": [
+   {
+    "url": "https://www.tf1info.fr/societe/aide-medicale-d-etat-seule-la-moitie-des-migrants-qui-pourraient-beneficier-de-l-ame-en-font-ils-la-demande-2277341.html",
+    "source_id": "tf1info_verificateurs",
+    "claimant": "Le député PS Boris Vallaud",
+    "rating_original": "Plutôt vrai",
+    "rating_normalized": "mostly_true",
+    "review_date": "2023-11-24"
+   }
+  ],
+  "reason": "nom retrouvé à la fin du libellé",
+  "candidates": [
+   {
+    "id": "Q29021094",
+    "name": "Boris Vallaud"
+   }
+  ]
+ },
+ {
+  "claim_id": "c_aa2bdb23fddd4e7f",
+  "claim_text": "On importe 80% du miel en France alors qu'il serait possible d'en produire assez pour couvrir nos besoins",
+  "claim_date": "2023-11-19",
+  "reviews": [
+   {
+    "url": "https://www.tf1info.fr/conso/alimentation-le-miel-consomme-en-france-est-il-importe-a-80-pourcents-2276874.html",
+    "source_id": "tf1info_verificateurs",
+    "claimant": "Le député RN Grégoire de Fournas",
+    "rating_original": "Plutôt faux",
+    "rating_normalized": "mostly_false",
+    "review_date": "2023-11-20"
+   }
+  ],
+  "reason": "nom retrouvé à la fin du libellé",
+  "candidates": [
+   {
+    "id": "Q63763125",
+    "name": "Grégoire de Fournas"
+   }
+  ]
+ },
+ {
+  "claim_id": "c_d1b6a2a852758a77",
+  "claim_text": "8 logements sur 100 sont vides en France",
+  "claim_date": "2023-10-24",
+  "reviews": [
+   {
+    "url": "https://www.tf1info.fr/immobilier/8-des-logements-francais-sont-ils-vacants-2274063.html",
+    "source_id": "tf1info_verificateurs",
+    "claimant": "La députée socialiste Fatiha Keloua Hachi",
+    "rating_original": "En partie vrai",
+    "rating_normalized": "half_true",
+    "review_date": "2023-10-25"
+   }
+  ],
+  "reason": "nom retrouvé à la fin du libellé",
+  "candidates": [
+   {
+    "id": "Q112653927",
+    "name": "Fatiha Keloua-Hachi"
+   }
+  ]
+ },
+ {
+  "claim_id": "c_f8544d300fdcdbd4",
+  "claim_text": "Israël ne reconnaît pas la Cour pénale internationale, au contraire de l'Autorité palestinienne",
+  "claim_date": "2023-10-24",
+  "reviews": [
+   {
+    "url": "https://www.tf1info.fr/international/crimes-de-guerre-cpi-la-cour-penale-internationale-est-elle-reconnue-par-l-autorite-palestinienne-mais-pas-par-israel-2274253.html",
+    "source_id": "tf1info_verificateurs",
+    "claimant": "Le député LFI Antoine Léaument",
+    "rating_original": "Vrai",
+    "rating_normalized": "true",
+    "review_date": "2023-11-01"
+   }
+  ],
+  "reason": "nom retrouvé à la fin du libellé",
+  "candidates": [
+   {
+    "id": "Q62976462",
+    "name": "Antoine Léaument"
+   }
+  ]
+ },
+ {
+  "claim_id": "c_b1dfac91100d0d1e",
+  "claim_text": "Les 3/4 des résidents en Ehpad n'ont pas des revenus suffisants pour assumer le reste à charge",
+  "claim_date": "2023-10-03",
+  "reviews": [
+   {
+    "url": "https://www.tf1info.fr/societe/en-ehpad-trois-quarts-des-residents-ont-ils-vraiment-des-revenus-insuffisants-pour-payer-leur-hebergement-2272077.html",
+    "source_id": "tf1info_verificateurs",
+    "claimant": "La députée PS Christine Pirès Beaune",
+    "rating_original": "Vrai",
+    "rating_normalized": "true",
+    "review_date": "2023-10-05"
+   }
+  ],
+  "reason": "nom retrouvé à la fin du libellé",
+  "candidates": [
+   {
+    "id": "Q2413788",
+    "name": "Christine Pirès-Beaune"
+   }
+  ]
+ },
+ {
+  "claim_id": "c_498286db55e355ff",
+  "claim_text": "La grande majorité des établissements qui accueillent du public restent inaccessibles aux personnes à mobilité réduite",
+  "claim_date": "2023-09-30",
+  "reviews": [
+   {
+    "url": "https://www.tf1info.fr/societe/handicap-les-etablissements-recevant-du-public-erp-encore-inaccessibles-en-grande-majorite-en-france-2268319.html",
+    "source_id": "tf1info_verificateurs",
+    "claimant": "La ministre déléguée Olivia Grégoire",
+    "rating_original": "Plutôt vrai",
+    "rating_normalized": "mostly_true",
+    "review_date": "2023-09-01"
+   }
+  ],
+  "reason": "nom retrouvé à la fin du libellé",
+  "candidates": [
+   {
+    "id": "Q30349408",
+    "name": "Olivia Grégoire"
+   }
+  ]
+ },
+ {
+  "claim_id": "c_c9f558af436b7075",
+  "claim_text": "10 millions de logements sont vulnérables face aux sécheresses en France",
+  "claim_date": "2023-09-14",
+  "reviews": [
+   {
+    "url": "https://www.tf1info.fr/societe/fissures-degats-la-france-compte-t-elle-10-millions-de-logements-vulnerables-face-aux-secheresses-2269889.html",
+    "source_id": "tf1info_verificateurs",
+    "claimant": "Le député Renaissance Vincent Ledoux",
+    "rating_original": "Vrai",
+    "rating_normalized": "true",
+    "review_date": "2023-09-15"
+   }
+  ],
+  "reason": "nom retrouvé à la fin du libellé",
+  "candidates": [
+   {
+    "id": "Q23384045",
+    "name": "Vincent Ledoux"
+   },
+   {
+    "id": "Q98235474",
+    "name": "Vincent Ledoux"
+   }
+  ]
+ },
+ {
+  "claim_id": "c_8bb48b808bf84dc3",
+  "claim_text": "Les SUV causent-ils 10% d'accidents en plus que les autres véhicules",
+  "claim_date": "2023-09-12",
+  "reviews": [
+   {
+    "url": "https://www.tf1info.fr/societe/securite-routiere-les-suv-causent-ils-10-d-accidents-en-plus-que-les-autres-vehicules-2269664.html",
+    "source_id": "tf1info_verificateurs",
+    "claimant": "L'eurodéputée EELV Karima Delli",
+    "rating_original": "Plutôt vrai",
+    "rating_normalized": "mostly_true",
+    "review_date": "2023-09-14"
+   }
+  ],
+  "reason": "nom retrouvé à la fin du libellé",
+  "candidates": [
+   {
+    "id": "Q433637",
+    "name": "Karima Delli"
+   }
+  ]
+ },
+ {
+  "claim_id": "c_a5dd014bfb3b881f",
+  "claim_text": "L'Etat perçoit 1,25 euro par litre de carburant, contre 1 euro il y a cinq ans",
+  "claim_date": "2023-09-07",
+  "reviews": [
+   {
+    "url": "https://www.tf1info.fr/societe/carburants-prix-les-hausses-observees-depuis-5-ans-sont-elles-en-bonne-partie-dues-a-un-boom-des-taxes-2269362.html",
+    "source_id": "tf1info_verificateurs",
+    "claimant": "L'élu du RN Aleksandar Nikolic",
+    "rating_original": "Faux",
+    "rating_normalized": "false",
+    "review_date": "2023-09-12"
+   }
+  ],
+  "reason": "nom retrouvé à la fin du libellé",
+  "candidates": [
+   {
+    "id": "Q107316188",
+    "name": "Aleksandar Nikolic"
+   }
+  ]
+ },
+ {
+  "claim_id": "c_dd25a31792fcbebe",
+  "claim_text": "2.700 bébés meurent chaque année en France avant leur premier anniversaire",
+  "claim_date": "2023-09-05",
+  "reviews": [
+   {
+    "url": "https://www.tf1info.fr/sante/mortalite-infantile-bebes-2700-nourrissons-decedent-ils-chaque-annee-avant-leur-premier-anniversaire-2268884.html",
+    "source_id": "tf1info_verificateurs",
+    "claimant": "La députée LFI Danièle Obono",
+    "rating_original": "Vrai",
+    "rating_normalized": "true",
+    "review_date": "2023-09-06"
+   }
+  ],
+  "reason": "nom retrouvé à la fin du libellé",
+  "candidates": [
+   {
+    "id": "Q30335340",
+    "name": "Danièle Obono"
+   }
+  ]
+ },
+ {
+  "claim_id": "c_35d29fe63e16596c",
+  "claim_text": "12 milliards d'euros d'argent public sont versés chaque année pour l'enseignement privé",
+  "claim_date": "2023-09-04",
+  "reviews": [
+   {
+    "url": "https://www.tf1info.fr/education/rentree-des-classes-12-milliards-d-euros-d-argent-public-verses-chaque-annee-pour-l-enseignement-prive-2268604.html",
+    "source_id": "tf1info_verificateurs",
+    "claimant": "Le député LFI Paul Vannier",
+    "rating_original": "Vrai",
+    "rating_normalized": "true",
+    "review_date": "2023-09-04"
+   }
+  ],
+  "reason": "nom retrouvé à la fin du libellé",
+  "candidates": [
+   {
+    "id": "Q112654146",
+    "name": "Paul Vannier"
+   }
+  ]
+ },
+ {
+  "claim_id": "c_45319aa7a886103b",
+  "claim_text": "En France, 8 Ehpad sur 10 sont en déficit",
+  "claim_date": "2023-08-30",
+  "reviews": [
+   {
+    "url": "https://www.tf1info.fr/societe/etablissement-sante-en-france-8-ehpad-sur-10-sont-ils-en-deficit-2268245.html",
+    "source_id": "tf1info_verificateurs",
+    "claimant": "Le député PS Boris Vallaud",
+    "rating_original": "En partie vrai",
+    "rating_normalized": "half_true",
+    "review_date": "2023-09-01"
+   }
+  ],
+  "reason": "nom retrouvé à la fin du libellé",
+  "candidates": [
+   {
+    "id": "Q29021094",
+    "name": "Boris Vallaud"
+   }
+  ]
+ },
+ {
+  "claim_id": "c_2f55b8f01d943045",
+  "claim_text": "Le nombre de titres de séjours délivrés en France bat des records sous la présidence d'Emmanuel Macron",
+  "claim_date": "2023-08-27",
+  "reviews": [
+   {
+    "url": "https://www.tf1info.fr/societe/immigration-un-record-de-titres-de-sejour-delivres-sous-la-presidence-macron-2267902.html",
+    "source_id": "tf1info_verificateurs",
+    "claimant": "Le député du RN Nicolas Meizonnet",
+    "rating_original": "Vrai",
+    "rating_normalized": "true",
+    "review_date": "2023-08-28"
+   }
+  ],
+  "reason": "nom retrouvé à la fin du libellé",
+  "candidates": [
+   {
+    "id": "Q44508694",
+    "name": "Nicolas Meizonnet"
+   }
+  ]
+ },
+ {
+  "claim_id": "c_fa4508a8c7a9b310",
+  "claim_text": "Il y a à Mayotte 250.000 clandestins sur une île qui compte 300.000 habitants",
+  "claim_date": "2023-08-25",
+  "reviews": [
+   {
+    "url": "https://www.tf1info.fr/societe/mayotte-immigration-illegale-une-population-composee-a-plus-de-80-de-clandestins-250000-sur-une-ile-de-300000-habitants-2267657.html",
+    "source_id": "tf1info_verificateurs",
+    "claimant": "Le député RN Grégoire de Fournas",
+    "rating_original": "Faux",
+    "rating_normalized": "false",
+    "review_date": "2023-08-25"
+   }
+  ],
+  "reason": "nom retrouvé à la fin du libellé",
+  "candidates": [
+   {
+    "id": "Q63763125",
+    "name": "Grégoire de Fournas"
+   }
+  ]
+ },
+ {
+  "claim_id": "c_b2fdccddf85275f9",
+  "claim_text": "L'empreinte carbone des Chinois est inférieure à celle des Français",
+  "claim_date": "2023-08-23",
+  "reviews": [
+   {
+    "url": "https://www.tf1info.fr/environnement-ecologie/changement-climatique-empreinte-carbone-un-francais-emet-il-plus-de-co2-gaz-a-effet-de-serre-qu-un-chinois-2267462.html",
+    "source_id": "tf1info_verificateurs",
+    "claimant": "L'eurodéputée EELV Marie Toussaint",
+    "rating_original": "En partie vrai",
+    "rating_normalized": "half_true",
+    "review_date": "2023-08-25"
+   }
+  ],
+  "reason": "nom retrouvé à la fin du libellé",
+  "candidates": [
+   {
+    "id": "Q63347906",
+    "name": "Marie Toussaint"
+   }
+  ]
+ },
+ {
+  "claim_id": "c_6cbedc2f796a1cde",
+  "claim_text": "La contribution française au budget de l'UE va \"exploser\" à l'avenir",
+  "claim_date": "2023-08-22",
+  "reviews": [
+   {
+    "url": "https://www.tf1info.fr/economie/budget-de-l-ue-vers-une-explosion-de-la-contribution-francaise-dans-les-prochaines-annees-2267516.html",
+    "source_id": "tf1info_verificateurs",
+    "claimant": "Le député du RN Alexandre Loubet",
+    "rating_original": "En partie vrai",
+    "rating_normalized": "half_true",
+    "review_date": "2023-08-28"
+   }
+  ],
+  "reason": "nom retrouvé à la fin du libellé",
+  "candidates": [
+   {
+    "id": "Q112651358",
+    "name": "Alexandre Loubet"
+   }
+  ]
+ },
+ {
+  "claim_id": "c_d4cf490d9173e1d6",
+  "claim_text": "La consommation en eau des golfs français est égale à celle d'une ville comme Lyon",
+  "claim_date": "2023-08-21",
+  "reviews": [
+   {
+    "url": "https://www.tf1info.fr/environnement-ecologie/secheresse-les-golfs-francais-consomment-ils-chaque-annee-autant-d-eau-que-la-ville-de-lyon-2267356.html",
+    "source_id": "tf1info_verificateurs",
+    "claimant": "L'eurodéputée LFI Manon Aubry",
+    "rating_original": "Plutôt vrai",
+    "rating_normalized": "mostly_true",
+    "review_date": "2023-08-22"
+   }
+  ],
+  "reason": "nom retrouvé à la fin du libellé",
+  "candidates": [
+   {
+    "id": "Q59601214",
+    "name": "Manon Aubry"
+   }
+  ]
+ },
+ {
+  "claim_id": "c_ac7fab6afb865318",
+  "claim_text": "Au 2e trimestre, les faillites d'entreprises ont atteint un niveau \"record depuis presque une décennie\"",
+  "claim_date": "2023-07-17",
+  "reviews": [
+   {
+    "url": "https://www.tf1info.fr/economie/defaillances-d-entreprises-des-niveaux-inedits-depuis-10-ans-comme-le-dit-le-depute-rn-alexis-jolly-2264040.html",
+    "source_id": "tf1info_verificateurs",
+    "claimant": "Le député RN Alexis Jolly",
+    "rating_original": "Plutôt faux",
+    "rating_normalized": "mostly_false",
+    "review_date": "2023-07-18"
+   }
+  ],
+  "reason": "nom retrouvé à la fin du libellé",
+  "candidates": [
+   {
+    "id": "Q62887660",
+    "name": "Alexis Jolly"
+   }
+  ]
+ },
+ {
+  "claim_id": "c_4229172ffa4c334a",
+  "claim_text": "Les subventions aux chasseurs sont passées de 27.000 à 11 millions d'euros en seulement 4 ans",
+  "claim_date": "2023-07-13",
+  "reviews": [
+   {
+    "url": "https://www.tf1info.fr/societe/les-subventions-aux-chasseurs-sont-elles-passees-de-27-000-a-11-millions-d-euros-en-seulement-4-ans-2263648.html",
+    "source_id": "tf1info_verificateurs",
+    "claimant": "Le député EELV Nicolas Thierry",
+    "rating_original": "En partie vrai",
+    "rating_normalized": "half_true",
+    "review_date": "2023-07-14"
+   }
+  ],
+  "reason": "nom retrouvé à la fin du libellé",
+  "candidates": [
+   {
+    "id": "Q63349080",
+    "name": "Nicolas Thierry"
+   }
+  ]
+ },
+ {
+  "claim_id": "c_2b91f65a425eb855",
+  "claim_text": "On bat chaque mois le record d'incarcérations en prison",
+  "claim_date": "2023-07-12",
+  "reviews": [
+   {
+    "url": "https://www.tf1info.fr/societe/prisons-la-france-bat-elle-chaque-mois-son-record-de-detenus-comme-le-dit-le-depute-lfi-ugo-bernalicis-2263495.html",
+    "source_id": "tf1info_verificateurs",
+    "claimant": "Le député LFI Ugo Bernalicis",
+    "rating_original": "Vrai",
+    "rating_normalized": "true",
+    "review_date": "2023-07-13"
+   }
+  ],
+  "reason": "nom retrouvé à la fin du libellé",
+  "candidates": [
+   {
+    "id": "Q30339370",
+    "name": "Ugo Bernalicis"
+   }
+  ]
+ },
+ {
+  "claim_id": "c_694cceaf2a0df39f",
+  "claim_text": "En France, un chef d'entreprise sur quatre a plus de 60 ans ?",
+  "claim_date": "2023-06-22",
+  "reviews": [
+   {
+    "url": "https://www.tf1info.fr/vie-pro/un-chef-d-entreprise-sur-quatre-a-t-il-plus-de-60-ans-2261358.html",
+    "source_id": "tf1info_verificateurs",
+    "claimant": "Le député Renaissance Alexis Izard",
+    "rating_original": "Vrai",
+    "rating_normalized": "true",
+    "review_date": "2023-06-22"
+   }
+  ],
+  "reason": "nom retrouvé à la fin du libellé",
+  "candidates": [
+   {
+    "id": "Q112653602",
+    "name": "Alexis Izard"
+   }
+  ]
+ },
+ {
+  "claim_id": "c_617f23da329413a2",
+  "claim_text": "Des races de loup qui n'avait jamais peuplé la France ont été réintroduite dans notre pays",
+  "claim_date": "2023-06-20",
+  "reviews": [
+   {
+    "url": "https://www.tf1info.fr/environnement-ecologie/video-animaux-a-t-on-reintroduit-en-france-des-races-de-loups-qui-n-ont-jamais-peuple-notre-pays-2261315.html",
+    "source_id": "tf1info_verificateurs",
+    "claimant": "Le député du RN Daniel Grenon",
+    "rating_original": "Faux",
+    "rating_normalized": "false",
+    "review_date": "2023-06-22"
+   }
+  ],
+  "reason": "nom retrouvé à la fin du libellé",
+  "candidates": [
+   {
+    "id": "Q112653386",
+    "name": "Daniel Grenon"
+   }
+  ]
+ },
+ {
+  "claim_id": "c_17f2db7bf7304908",
+  "claim_text": "Les étrangers qui ont vu leur demande s'asile refusée restent en France tout en percevant une allocation mensuelle",
+  "claim_date": "2023-06-12",
+  "reviews": [
+   {
+    "url": "https://www.tf1info.fr/societe/un-etranger-deboute-d-une-demande-d-asile-touche-t-il-une-allocation-mensuelle-2260304.html",
+    "source_id": "tf1info_verificateurs",
+    "claimant": "Le député RN Julien Odoul",
+    "rating_original": "Faux",
+    "rating_normalized": "false",
+    "review_date": "2023-06-13"
+   }
+  ],
+  "reason": "nom retrouvé à la fin du libellé",
+  "candidates": [
+   {
+    "id": "Q41102798",
+    "name": "Julien Odoul"
+   }
+  ]
+ },
+ {
+  "claim_id": "c_532e567affd598f0",
+  "claim_text": "La France fait partie des pays de l'UE qui accueillent le moins d'étrangers",
+  "claim_date": "2023-06-10",
+  "reviews": [
+   {
+    "url": "https://www.tf1info.fr/societe/la-france-fait-elle-partie-des-pays-de-l-ue-europe-qui-accueillent-le-moins-d-etrangers-sur-leur-sol-selon-depute-lfi-aymeric-caron-2260127.html",
+    "source_id": "tf1info_verificateurs",
+    "claimant": "Le député LFI Aymeric Caron",
+    "rating_original": "Vrai",
+    "rating_normalized": "true",
+    "review_date": "2023-06-12"
+   }
+  ],
+  "reason": "nom retrouvé à la fin du libellé",
+  "candidates": [
+   {
+    "id": "Q2874956",
+    "name": "Aymeric Caron"
+   }
+  ]
+ },
+ {
+  "claim_id": "c_e9f07209fde11fc2",
+  "claim_text": "La consommation moyenne de viande des Français chaque année a augmenté de 3% depuis 2013",
+  "claim_date": "2023-06-05",
+  "reviews": [
+   {
+    "url": "https://www.tf1info.fr/environnement-ecologie/environnement-ecologie-viande-la-consommation-annuelle-des-francais-a-t-elle-augmente-de-3-pour-cent-en-10-ans-comme-le-dit-bruno-bernard-2259613.html",
+    "source_id": "tf1info_verificateurs",
+    "claimant": "Le président EELV de la Métropole du Grand Lyon, Bruno Bernard",
+    "rating_original": "Plutôt vrai",
+    "rating_normalized": "mostly_true",
+    "review_date": "2023-06-07"
+   }
+  ],
+  "reason": "nom retrouvé à la fin du libellé",
+  "candidates": [
+   {
+    "id": "Q139853922",
+    "name": "Bruno Bernard"
+   }
+  ]
+ },
+ {
+  "claim_id": "c_cdaf43b2993d0d43",
+  "claim_text": "Moins de 1% des accidents mortels impliquant des deux roues sont causés par une défaillance",
+  "claim_date": "2023-06-02",
+  "reviews": [
+   {
+    "url": "https://www.tf1info.fr/societe/controle-technique-des-deux-roues-les-defaillances-ne-causent-elles-que-1-des-accidents-mortels-2259398.html",
+    "source_id": "tf1info_verificateurs",
+    "claimant": "Le sénateur LR Alain Houpert",
+    "rating_original": "Faux",
+    "rating_normalized": "false",
+    "review_date": "2023-06-05"
+   }
+  ],
+  "reason": "nom retrouvé à la fin du libellé",
+  "candidates": [
+   {
+    "id": "Q2829913",
+    "name": "Alain Houpert"
+   }
+  ]
+ },
+ {
+  "claim_id": "c_f9e6bffd953a7b62",
+  "claim_text": "La moitié des logements loués appartient à seulement 3,5% des propriétaires",
+  "claim_date": "2023-06-01",
+  "reviews": [
+   {
+    "url": "https://www.tf1info.fr/immobilier/immobilier-la-moitie-des-logements-loues-appartient-elle-a-seulement-3-5-des-proprietaires-2258992.html",
+    "source_id": "tf1info_verificateurs",
+    "claimant": "La députée LFI Alma Dufour",
+    "rating_original": "Vrai",
+    "rating_normalized": "true",
+    "review_date": "2023-06-01"
+   }
+  ],
+  "reason": "nom retrouvé à la fin du libellé",
+  "candidates": [
+   {
+    "id": "Q110998923",
+    "name": "Alma Dufour"
+   }
+  ]
+ },
+ {
+  "claim_id": "c_148c85aeab28f8c0",
+  "claim_text": "25.000 arbres ont été plantés en l'espace de six mois à Paris",
+  "claim_date": "2023-05-27",
+  "reviews": [
+   {
+    "url": "https://www.tf1info.fr/environnement-ecologie/25-000-arbres-plantes-a-paris-en-seulement-6-mois-selon-anne-hidalgo-un-chiffre-a-nuancer-2258874.html",
+    "source_id": "tf1info_verificateurs",
+    "claimant": "La maire de Paris, Anne Hidalgo",
+    "rating_original": "En partie vrai",
+    "rating_normalized": "half_true",
+    "review_date": "2023-05-31"
+   }
+  ],
+  "reason": "nom retrouvé à la fin du libellé",
+  "candidates": [
+   {
+    "id": "Q2851133",
+    "name": "Anne Hidalgo"
+   }
+  ]
+ },
+ {
+  "claim_id": "c_40e03b4aa0f91e27",
+  "claim_text": "500.000 étrangers sont accueillis en France par an",
+  "claim_date": "2023-05-25",
+  "reviews": [
+   {
+    "url": "https://www.tf1info.fr/societe/immigration-500-000-etrangers-sont-ils-accueillis-en-france-chaque-annee-le-point-sur-les-chiffres-2258832.html",
+    "source_id": "tf1info_verificateurs",
+    "claimant": "Le député LR Olivier Marleix",
+    "rating_original": "Plutôt vrai",
+    "rating_normalized": "mostly_true",
+    "review_date": "2023-05-31"
+   }
+  ],
+  "reason": "nom retrouvé à la fin du libellé",
+  "candidates": [
+   {
+    "id": "Q3351188",
+    "name": "Olivier Marleix"
+   }
+  ]
+ },
+ {
+  "claim_id": "c_9f7966a239ff77ae",
+  "claim_text": "100.000 animaux abandonnés par an : un triste \"record d'Europe\" détenu par la France ?",
+  "claim_date": "2023-05-05",
+  "reviews": [
+   {
+    "url": "https://www.tf1info.fr/societe/100-000-animaux-abandonnes-chaque-annee-un-triste-record-d-europe-detenu-par-la-france-selon-edwige-diaz-du-rn-2256493.html",
+    "source_id": "tf1info_verificateurs",
+    "claimant": "La députée du RN Edwige Diaz",
+    "rating_original": "Plutôt faux",
+    "rating_normalized": "mostly_false",
+    "review_date": "2023-05-08"
+   }
+  ],
+  "reason": "nom retrouvé à la fin du libellé",
+  "candidates": [
+   {
+    "id": "Q63349008",
+    "name": "Edwige Diaz"
+   }
+  ]
+ },
+ {
+  "claim_id": "c_a860aa10568ff49f",
+  "claim_text": "Seul 1% des eaux usées sont réutilisées en France",
+  "claim_date": "2023-04-25",
+  "reviews": [
+   {
+    "url": "https://www.tf1info.fr/environnement-ecologie/environnement-eaux-usees-la-france-en-reutilise-t-elle-seulement-1-pour-cent-2255194.html",
+    "source_id": "tf1info_verificateurs",
+    "claimant": "La secrétaire d'État chargée de l'Écologie Bérangère Couillard",
+    "rating_original": "Vrai",
+    "rating_normalized": "true",
+    "review_date": "2023-04-25"
+   }
+  ],
+  "reason": "nom retrouvé à la fin du libellé",
+  "candidates": [
+   {
+    "id": "Q30440777",
+    "name": "Bérangère Couillard"
+   }
+  ]
+ },
+ {
+  "claim_id": "c_2f924af6cbe48a2b",
+  "claim_text": "6 Britanniques sur 10 désormais favorables à un retour dans l'UE",
+  "claim_date": "2023-04-23",
+  "reviews": [
+   {
+    "url": "https://www.tf1info.fr/international/brexit-6-britanniques-sur-10-sont-ils-desormais-favorables-a-un-retour-dans-l-ue-2255091.html",
+    "source_id": "tf1info_verificateurs",
+    "claimant": "Un sondage relayé par le député Renaissance Pieyre-Alexandre Anglade",
+    "rating_original": "En partie vrai",
+    "rating_normalized": "half_true",
+    "review_date": "2023-04-24"
+   }
+  ],
+  "reason": "nom retrouvé à la fin du libellé",
+  "candidates": [
+   {
+    "id": "Q30342405",
+    "name": "Pieyre-Alexandre Anglade"
+   }
+  ]
+ },
+ {
+  "claim_id": "c_b2513dd0c4a9e423",
+  "claim_text": "En marge de la grève des éboueurs, un rat \"obèse\" a été filmé à Paris",
+  "claim_date": "2023-04-03",
+  "reviews": [
+   {
+    "url": "https://www.tf1info.fr/societe/video-rat-obese-paris-non-mais-un-ragondin-filme-a-rome-en-italie-2253047.html",
+    "source_id": "tf1info_verificateurs",
+    "claimant": "L'élu du Conseil de Paris Aurélien Véron",
+    "rating_original": "Faux",
+    "rating_normalized": "false",
+    "review_date": "2023-04-04"
+   }
+  ],
+  "reason": "nom retrouvé à la fin du libellé",
+  "candidates": [
+   {
+    "id": "Q21498744",
+    "name": "Aurélien Véron"
+   }
+  ]
+ },
+ {
+  "claim_id": "c_2a08ab378504fbf5",
+  "claim_text": "Depuis les réformes de 2010 et 2013, le nombre de Français partis à la retraite avec une décote a doublé",
+  "claim_date": "2023-03-14",
+  "reviews": [
+   {
+    "url": "https://www.tf1info.fr/societe/retraites-depuis-les-reformes-de-2010-et-2013-le-nombre-de-francais-partis-avec-une-decote-a-t-il-vraiment-double-2250984.html",
+    "source_id": "tf1info_verificateurs",
+    "claimant": "Le député RN Franck Allisio",
+    "rating_original": "Plutôt faux",
+    "rating_normalized": "mostly_false",
+    "review_date": "2023-03-14"
+   }
+  ],
+  "reason": "nom retrouvé à la fin du libellé",
+  "candidates": [
+   {
+    "id": "Q47539353",
+    "name": "Franck Allisio"
+   }
+  ]
+ },
+ {
+  "claim_id": "c_aae828565779d8db",
+  "claim_text": "40% des vols en jet privé sont réalisés à vide",
+  "claim_date": "2023-03-09",
+  "reviews": [
+   {
+    "url": "https://www.tf1info.fr/societe/jets-prives-40-des-vols-a-vide-2250602.html",
+    "source_id": "tf1info_verificateurs",
+    "claimant": "L'eurodéputée écologiste Leïla Chaibi",
+    "rating_original": "Vrai",
+    "rating_normalized": "true",
+    "review_date": "2023-03-10"
+   }
+  ],
+  "reason": "nom retrouvé à la fin du libellé",
+  "candidates": [
+   {
+    "id": "Q28549362",
+    "name": "Leïla Chaibi"
+   }
+  ]
+ },
+ {
+  "claim_id": "c_05fba00f9712f25e",
+  "claim_text": "Le nombre de naissances en France est-il au plus bas depuis la Libération ?",
+  "claim_date": "2023-02-13",
+  "reviews": [
+   {
+    "url": "https://www.tf1info.fr/societe/le-nombre-de-naissances-en-2022-au-plus-bas-depuis-la-liberation-selon-les-chiffres-insee-2248171.html",
+    "source_id": "tf1info_verificateurs",
+    "claimant": "Le député du RN Alexandre Sabatou",
+    "rating_original": "Vrai",
+    "rating_normalized": "true",
+    "review_date": "2023-02-15"
+   }
+  ],
+  "reason": "nom retrouvé à la fin du libellé",
+  "candidates": [
+   {
+    "id": "Q112651552",
+    "name": "Alexandre Sabatou"
+   }
+  ]
+ },
+ {
+  "claim_id": "c_bf50a52c69cf52bc",
+  "claim_text": "Les capacités cardiovasculaires ont baissé de 40% en 40 ans.",
+  "claim_date": "2023-02-06",
+  "reviews": [
+   {
+    "url": "https://www.tf1info.fr/sante/les-capacites-cardiovasculaires-des-jeunes-en-baisse-de-40-en-40-ans-gare-a-ce-chiffre-avance-par-le-ministre-pap-ndiaye-2247408.html",
+    "source_id": "tf1info_verificateurs",
+    "claimant": "Le ministre de l'Education nationale, Pap Ndiaye",
+    "rating_original": "Faux",
+    "rating_normalized": "false",
+    "review_date": "2023-02-07"
+   }
+  ],
+  "reason": "nom retrouvé à la fin du libellé",
+  "candidates": [
+   {
+    "id": "Q3362697",
+    "name": "Pap Ndiaye"
+   }
+  ]
+ },
+ {
+  "claim_id": "c_40981d643ff52e1d",
+  "claim_text": "20% des côtes françaises sont-elles menacées par l'érosion ?",
+  "claim_date": "2023-02-03",
+  "reviews": [
+   {
+    "url": "https://www.tf1info.fr/environnement-ecologie/risques-d-erosion-20-des-cotes-francaises-sont-elles-menacees-2247021.html",
+    "source_id": "tf1info_verificateurs",
+    "claimant": "La secrétaire d'État chargée de l'Écologie Bérangère Couillard",
+    "rating_original": "Vrai",
+    "rating_normalized": "true",
+    "review_date": "2023-02-03"
+   }
+  ],
+  "reason": "nom retrouvé à la fin du libellé",
+  "candidates": [
+   {
+    "id": "Q30440777",
+    "name": "Bérangère Couillard"
+   }
+  ]
+ },
+ {
+  "claim_id": "c_0127af46117064a9",
+  "claim_text": "Les tarifs des autoroutes augmentent alors même que les sociétés concessionnaires réalisent d'importants profits",
+  "claim_date": "2023-01-31",
+  "reviews": [
+   {
+    "url": "https://www.tf1info.fr/societe/les-societes-d-autoroutes-peuvent-elles-augmenter-les-tarifs-de-peage-alors-qu-elles-font-des-superprofits-2246915.html",
+    "source_id": "tf1info_verificateurs",
+    "claimant": "Le député de la Nupes Antoine Léaument",
+    "rating_original": "Vrai",
+    "rating_normalized": "true",
+    "review_date": "2023-02-02"
+   }
+  ],
+  "reason": "nom retrouvé à la fin du libellé",
+  "candidates": [
+   {
+    "id": "Q62976462",
+    "name": "Antoine Léaument"
+   }
+  ]
+ },
+ {
+  "claim_id": "c_7bd784e103195733",
+  "claim_text": "Dans les prochaines décennies, plus d'un million d'espèces végétales et animales sont amenées à disparaître",
+  "claim_date": "2022-12-15",
+  "reviews": [
+   {
+    "url": "https://www.tf1info.fr/environnement-ecologie/biodiversite-dans-les-prochaines-decennies-plus-d-un-million-d-especes-sont-elles-amenees-a-disparaitre-2242034.html",
+    "source_id": "tf1info_verificateurs",
+    "claimant": "La députée EELV Cyrielle Chatelain",
+    "rating_original": "Vrai",
+    "rating_normalized": "true",
+    "review_date": "2022-12-15"
+   }
+  ],
+  "reason": "nom retrouvé à la fin du libellé",
+  "candidates": [
+   {
+    "id": "Q112648926",
+    "name": "Cyrielle Chatelain"
+   }
+  ]
+ },
+ {
+  "claim_id": "c_a605a2d978b7d81d",
+  "claim_text": "De nos jours, les déménageurs [...] sont équipés d'exosquelettes (rendant leur métier moins pénible)",
+  "claim_date": "2022-12-13",
+  "reviews": [
+   {
+    "url": "https://www.tf1info.fr/societe/reforme-des-retraites-penibilite-l-usage-d-exosquelettes-est-il-vraiment-generalise-chez-les-demenageurs-patriat-2241782.html",
+    "source_id": "tf1info_verificateurs",
+    "claimant": "Le sénateur Renaissance François Patriat",
+    "rating_original": "Faux",
+    "rating_normalized": "false",
+    "review_date": "2022-12-13"
+   }
+  ],
+  "reason": "nom retrouvé à la fin du libellé",
+  "candidates": [
+   {
+    "id": "Q3085525",
+    "name": "François Patriat"
+   }
+  ]
+ },
+ {
+  "claim_id": "c_2c93e58b900df7b5",
+  "claim_text": "On compte \"42.000 enfants à la rue aujourd'hui en France\"",
+  "claim_date": "2022-11-29",
+  "reviews": [
+   {
+    "url": "https://www.tf1info.fr/immobilier/compte-t-on-42-000-enfants-a-la-rue-aujourd-hui-en-france-2240217.html",
+    "source_id": "tf1info_verificateurs",
+    "claimant": "La députée LFI Raquel Garrido",
+    "rating_original": "Plutôt faux",
+    "rating_normalized": "mostly_false",
+    "review_date": "2022-11-29"
+   }
+  ],
+  "reason": "nom retrouvé à la fin du libellé",
+  "candidates": [
+   {
+    "id": "Q28477665",
+    "name": "Raquel Garrido"
+   }
+  ]
+ },
+ {
+  "claim_id": "c_44de94fbb85989ac",
+  "claim_text": "À l'hôpital de Pontoise, il faut amener ses propres couvertures car les réserves \"manquent\"",
+  "claim_date": "2022-11-24",
+  "reviews": [
+   {
+    "url": "https://www.tf1info.fr/sante/a-l-hopital-de-pontoise-faut-il-amener-ses-propres-couvertures-faute-de-reserves-suffisantes-2240236.html",
+    "source_id": "tf1info_verificateurs",
+    "claimant": "Le député LFI Paul Vannier",
+    "rating_original": "Faux",
+    "rating_normalized": "false",
+    "review_date": "2022-11-29"
+   }
+  ],
+  "reason": "nom retrouvé à la fin du libellé",
+  "candidates": [
+   {
+    "id": "Q112654146",
+    "name": "Paul Vannier"
+   }
+  ]
+ },
+ {
+  "claim_id": "c_8beb4543688f0226",
+  "claim_text": "On compte en France 5,2 millions de passoires thermiques",
+  "claim_date": "2022-11-23",
+  "reviews": [
+   {
+    "url": "https://www.tf1info.fr/environnement-ecologie/logement-5-2-millions-de-passoires-energetiques-en-france-que-sait-on-de-ce-chiffre-2239603.html",
+    "source_id": "tf1info_verificateurs",
+    "claimant": "Le député Renaissance Antoine Armand",
+    "rating_original": "Vrai",
+    "rating_normalized": "true",
+    "review_date": "2022-11-23"
+   }
+  ],
+  "reason": "nom retrouvé à la fin du libellé",
+  "candidates": [
+   {
+    "id": "Q63436533",
+    "name": "Antoine Armand"
+   }
+  ]
+ },
+ {
+  "claim_id": "c_9764df726a439f00",
+  "claim_text": "Les billets de trains illimités pour 9 euros proposés durant l'été en Allemagne ont-ils permis de réduire le trafic de 10% sur les routes ?",
+  "claim_date": "2022-11-04",
+  "reviews": [
+   {
+    "url": "https://www.tf1info.fr/societe/allemagne-le-train-illimite-a-prix-casse-9-euros-a-t-il-permis-de-faire-chuter-de-10-le-trafic-automobile-cet-ete-2237640.html",
+    "source_id": "tf1info_verificateurs",
+    "claimant": "La députée PS Valérie Rabault",
+    "rating_original": "Plutôt faux",
+    "rating_normalized": "mostly_false",
+    "review_date": "2022-11-04"
+   }
+  ],
+  "reason": "nom retrouvé à la fin du libellé",
+  "candidates": [
+   {
+    "id": "Q3554304",
+    "name": "Valérie Rabault"
+   }
+  ]
+ },
+ {
+  "claim_id": "c_e72ba69768ed36b1",
+  "claim_text": "Les éoliennes fonctionnent 75 % du temps",
+  "claim_date": "2021-06-03",
+  "reviews": [
+   {
+    "url": "https://www.20minutes.fr/societe/3053743-20210603-eoliennes-fonctionnent-elles-75-temps-comme-affirme-barbara-pompili",
+    "source_id": "20minutes_fakeoff",
+    "claimant": "Déclaration de Barbara Pompili",
+    "rating_original": "Vrai",
+    "rating_normalized": "true",
+    "review_date": "2021-06-03"
+   }
+  ],
+  "reason": "nom retrouvé à la fin du libellé",
+  "candidates": [
+   {
+    "id": "Q117402",
+    "name": "Barbara Pompili"
+   }
+  ]
+ }
+]
