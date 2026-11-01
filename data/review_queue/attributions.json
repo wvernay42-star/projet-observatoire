@@ -358,6 +358,50 @@
   ]
  },
  {
+  "claim_id": "c_2d142c7e49585184",
+  "claim_text": "La France est moins sélective à l'université que les autres pays de l'OCDE",
+  "claim_date": "2026-10-30",
+  "reviews": [
+   {
+    "url": "https://www.tf1info.fr/societe/verif-la-france-est-elle-moins-selective-a-l-universite-que-ses-voisins-de-l-ocde-comme-l-avance-le-ministre-de-l-enseignement-superieur-2472784.html",
+    "source_id": "tf1info_verificateurs",
+    "claimant": "Philippe Baptiste, ministre de l'Enseignement supérieur et de la Recherche",
+    "rating_original": "Plutôt vrai",
+    "rating_normalized": "mostly_true",
+    "review_date": "2026-10-30"
+   }
+  ],
+  "reason": "nom retrouvé après retrait du contexte",
+  "candidates": [
+   {
+    "id": "Q98234202",
+    "name": "Philippe Baptiste"
+   }
+  ]
+ },
+ {
+  "claim_id": "c_e769608af3bd95c7",
+  "claim_text": "\"Nous sommes le pays le moins sélectif de l'ensemble des pays de l'OCDE\"",
+  "claim_date": "2026-10-29",
+  "reviews": [
+   {
+    "url": "https://www.franceinfo.fr/vrai-ou-fake/vrai-ou-faux-la-france-est-elle-le-pays-le-moins-selectif-pour-acceder-a-l-enseignement-superieur-comme-l-affirme-le-ministre-philippe-baptiste_8260157.html",
+    "source_id": "franceinfo_vraioufake",
+    "claimant": "Philippe Baptiste, ministre de l'Enseignement supérieur",
+    "rating_original": "C’est plus compliqué",
+    "rating_normalized": "half_true",
+    "review_date": "2026-10-31"
+   }
+  ],
+  "reason": "nom retrouvé après retrait du contexte",
+  "candidates": [
+   {
+    "id": "Q98234202",
+    "name": "Philippe Baptiste"
+   }
+  ]
+ },
+ {
   "claim_id": "c_4b63af72ce3253d7",
   "claim_text": "Les concours d'entrée pour devenir professeur ont fait le plein en 2026",
   "claim_date": "2026-10-27",
