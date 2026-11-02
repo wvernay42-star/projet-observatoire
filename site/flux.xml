@@ -1,10 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <rss version="2.0"><channel><title>Votona Observatoire - dernières vérifications</title><link>https://observatoire.votona.fr/</link>
 <description>Les dernières déclarations politiques vérifiées par les rédactions françaises de fact-checking, avec le verdict d'origine.</description>
-<language>fr</language><lastBuildDate>Sun, 01 Nov 2026 05:00:48 +0000</lastBuildDate>
+<language>fr</language><lastBuildDate>Mon, 02 Nov 2026 05:00:55 +0000</lastBuildDate>
+<item><title>Philippe Baptiste : « "Nous sommes le pays le moins sélectif de l'ensemble des pays de l'OCDE" »</title>
+<link>https://www.franceinfo.fr/vrai-ou-fake/vrai-ou-faux-la-france-est-elle-le-pays-le-moins-selectif-pour-acceder-a-l-enseignement-superieur-comme-l-affirme-le-ministre-philippe-baptiste_8260157.html</link><guid isPermaLink="false">c_e769608af3bd95c7</guid><pubDate>Sat, 31 Oct 2026 12:00:00 +0000</pubDate>
+<description>« C’est plus compliqué » selon franceinfo Vrai ou Fake</description></item>
+<item><title>Philippe Baptiste : « La France est moins sélective à l'université que les autres pays de l'OCDE »</title>
+<link>https://www.tf1info.fr/societe/verif-la-france-est-elle-moins-selective-a-l-universite-que-ses-voisins-de-l-ocde-comme-l-avance-le-ministre-de-l-enseignement-superieur-2472784.html</link><guid isPermaLink="false">c_2d142c7e49585184</guid><pubDate>Fri, 30 Oct 2026 12:00:00 +0000</pubDate>
+<description>« Plutôt vrai » selon TF1 Info – Les Vérificateurs</description></item>
 <item><title>Édouard Geffray : « Les concours d'entrée pour devenir professeur ont fait le plein en 2026 »</title>
-<link>https://www.tf1info.fr/societe/colere-lyceenne-les-concours-d-entree-pour-devenir-professeur-font-ils-vraiment-le-plein-2472257.html</link><guid isPermaLink="false">c_7da686789c2c2cdd</guid><pubDate>Tue, 27 Oct 2026 12:00:00 +0000</pubDate>
-<description>« En partie vrai » selon TF1 Info – Les Vérificateurs</description></item>
+<link>https://poligraph.fr/factchecks/2026-10-27-verif-colere-lyceenne-les-concours-d-entree-pour-devenir-professeur-f</link><guid isPermaLink="false">c_4b63af72ce3253d7</guid><pubDate>Tue, 27 Oct 2026 12:00:00 +0000</pubDate>
+<description>« En partie vrai » selon Poligraph ; « En partie vrai » selon TF1 Info – Les Vérificateurs</description></item>
 <item><title>Emmanuel Macron : « Il y a eu une manipulation étrangère de l'information après le 17 octobre »</title>
 <link>https://poligraph.fr/factchecks/2026-10-23-verif-une-manipulation-etrangere-de-l-information-de-quoi-parle-exact</link><guid isPermaLink="false">c_17ba49cd0974d011</guid><pubDate>Fri, 23 Oct 2026 12:00:00 +0000</pubDate>
 <description>« En partie vrai » selon Poligraph ; « En partie vrai » selon TF1 Info – Les Vérificateurs</description></item>
@@ -50,6 +56,9 @@
 <item><title>Marine Le Pen : « On compte en France 9 millions de mètres carrés de bureaux inutilisés »</title>
 <link>https://poligraph.fr/factchecks/2026-09-14-verif-penurie-de-logements-y-a-t-il-9-millions-de-metres-carres-de-bu</link><guid isPermaLink="false">c_2c23915a4552ed2e</guid><pubDate>Mon, 14 Sep 2026 12:00:00 +0000</pubDate>
 <description>« En partie vrai » selon Poligraph ; « En partie vrai » selon TF1 Info – Les Vérificateurs</description></item>
+<item><title>Arnaud Rousseau : « Dans une baguette de pain qui coûte 1,10 euros, la part du blé qui revient à l'agriculteur, c'est 7 à 8 centimes »</title>
+<link>https://poligraph.fr/factchecks/2026-09-14-verif-x27-les-agriculteurs-touchent-ils-reellement-7-a-8-centimes-sur</link><guid isPermaLink="false">c_77d2607800ae74f3</guid><pubDate>Mon, 14 Sep 2026 12:00:00 +0000</pubDate>
+<description>« Plutôt faux » selon Poligraph ; « Plutôt faux » selon TF1 Info – Les Vérificateurs</description></item>
 <item><title>Mathilde Panot : « Le blocage des prix du carburant ne coûte pas un seul euro d'argent public »</title>
 <link>https://www.tf1info.fr/politique/verif-blocage-des-prix-du-carburant-une-mesure-qui-ne-coute-pas-un-seul-euro-d-argent-public-vraiment-2463427.html</link><guid isPermaLink="false">c_e4eb0075c71fba49</guid><pubDate>Thu, 10 Sep 2026 12:00:00 +0000</pubDate>
 <description>« En partie vrai » selon TF1 Info – Les Vérificateurs</description></item>
@@ -89,6 +98,9 @@
 <item><title>Jean-Luc Mélenchon : « On peut annuler la dette de la France détenue par la BCE »</title>
 <link>https://factuel.afp.com/doc.afp.com.C4NT3ZQ</link><guid isPermaLink="false">c_cf73e93a7a41b8e5</guid><pubDate>Mon, 24 Aug 2026 12:00:00 +0000</pubDate>
 <description>« Trompeur » selon AFP Factuel</description></item>
+<item><title>Hadrien Clouet : « Le prix des fournitures scolaires augmente de 10% fin août, juste avant la rentrée des classes »</title>
+<link>https://poligraph.fr/factchecks/2026-08-20-verif-le-prix-des-fournitures-scolaires-augmente-t-il-de-10-fin-aout-juste-avant-la-rentree-des-classes</link><guid isPermaLink="false">c_48554958aa0229dd</guid><pubDate>Thu, 20 Aug 2026 12:00:00 +0000</pubDate>
+<description>« Plutôt faux » selon Poligraph ; « Plutôt faux » selon TF1 Info – Les Vérificateurs</description></item>
 <item><title>Marine Tondelier : « Pour lutter contre les ingérences étrangères, la France peut suspendre X le temps des élections »</title>
 <link>https://www.tf1info.fr/politique/verif-ingerence-etrangere-suspendre-x-le-temps-des-elections-en-france-comme-le-demande-marine-tondelier-est-ce-possible-2457725.html</link><guid isPermaLink="false">c_93d411a620e4664a</guid><pubDate>Mon, 10 Aug 2026 12:00:00 +0000</pubDate>
 <description>« Plutôt faux » selon TF1 Info – Les Vérificateurs</description></item>
@@ -101,9 +113,12 @@
 <item><title>François-Xavier Bellamy : « Un seul médecin rencontrera le patient avant la validation d'une demande d'aide à mourir »</title>
 <link>https://www.franceinfo.fr/vrai-ou-fake/vrai-ou-faux-aide-a-mourir-le-patient-ne-rencontrera-t-il-qu-un-seul-medecin-avant-la-validation-de-sa-demande-comme-le-denonce-francois-xavier-bellamy_8110238.html</link><guid isPermaLink="false">c_1545375921ee6831</guid><pubDate>Sat, 18 Jul 2026 12:00:00 +0000</pubDate>
 <description>« Plutôt Faux » selon franceinfo Vrai ou Fake</description></item>
+<item><title>Hélène Laporte : « Une vingtaine de départements sont encore dépourvus d'unités de soins palliatifs en France »</title>
+<link>https://www.tf1info.fr/sante/verif-une-vingtaine-de-departements-sont-ils-encore-depourvus-d-unites-de-soins-palliatifs-en-france-2453503.html</link><guid isPermaLink="false">c_4f1c068d4da69278</guid><pubDate>Fri, 17 Jul 2026 12:00:00 +0000</pubDate>
+<description>« Vrai » selon TF1 Info – Les Vérificateurs</description></item>
 <item><title>Jean-Philippe Tanguy : « Jean-Luc Mélenchon a déclaré "'Le seul parti qui réhabilite la politique, c'est le Front national" »</title>
-<link>https://www.franceinfo.fr/vrai-ou-fake/vrai-ou-faux-jean-luc-melenchon-a-t-il-declare-que-le-seul-parti-qui-rehabilite-la-politique-c-est-le-front-national-comme-le-pretend-une-interview-relayee-par-jean-philippe-tanguy_8108606.html</link><guid isPermaLink="false">c_7808336aef9fe7f4</guid><pubDate>Fri, 17 Jul 2026 12:00:00 +0000</pubDate>
-<description>« C’est plus compliqué » selon franceinfo Vrai ou Fake</description></item>
+<link>https://www.franceinfo.fr/vrai-ou-fake/vrai-ou-faux-jean-luc-melenchon-a-t-il-declare-que-le-seul-parti-qui-rehabilite-la-politique-c-est-le-front-national-comme-le-pretend-une-interview-relayee-par-jean-philippe-tanguy_8108606.html</link><guid isPermaLink="false">c_12c9d9104eac8f59</guid><pubDate>Fri, 17 Jul 2026 12:00:00 +0000</pubDate>
+<description>« Plutôt faux » selon TF1 Info – Les Vérificateurs ; « C’est plus compliqué » selon franceinfo Vrai ou Fake</description></item>
 <item><title>Sarah Knafo : « Les droits de succession frappent d'abord les plus modestes »</title>
 <link>https://www.tf1info.fr/conso-argent/verif-droits-de-succession-cet-impot-sur-l-heritage-frappe-t-il-d-abord-les-plus-modestes-2452008.html</link><guid isPermaLink="false">c_ed8c9ee066117044</guid><pubDate>Wed, 08 Jul 2026 12:00:00 +0000</pubDate>
 <description>« Faux » selon TF1 Info – Les Vérificateurs</description></item>
@@ -128,28 +143,13 @@
 <item><title>Jordan Bardella : « Les personnes régularisées en Espagne pourront s'installer en France »</title>
 <link>https://factuel.afp.com/doc.afp.com.A86L4G3</link><guid isPermaLink="false">c_a1b984943402b778</guid><pubDate>Wed, 22 Apr 2026 12:00:00 +0000</pubDate>
 <description>« Trompeur » selon AFP Factuel</description></item>
+<item><title>Julien Odoul : « Tous nos voisins européens ont baissé les taxes sur les carburants »</title>
+<link>https://poligraph.fr/factchecks/2026-04-21-verif-pouvoir-d-achat-est-il-vrai-que-tous-nos-voisins-ont-baisse-les-taxes-sur-les-carburants</link><guid isPermaLink="false">c_3afb5c1c51baed76</guid><pubDate>Tue, 21 Apr 2026 12:00:00 +0000</pubDate>
+<description>« Faux » selon Poligraph ; « Faux » selon TF1 Info – Les Vérificateurs</description></item>
+<item><title>Philippe Ballard : « En France, 85% du territoire est un désert médical »</title>
+<link>https://www.tf1info.fr/societe/verif-sante-france-85-du-territoire-francais-est-il-un-desert-medical-2437118.html</link><guid isPermaLink="false">c_081cfae6b5848d66</guid><pubDate>Mon, 20 Apr 2026 12:00:00 +0000</pubDate>
+<description>« Vrai » selon TF1 Info – Les Vérificateurs</description></item>
 <item><title>Ségolène Royal : « Le gouvernement a freiné le déploiement des bornes de recharge électrique »</title>
 <link>https://www.tf1info.fr/transports/verif-le-gouvernement-a-t-il-freine-sur-le-deploiement-des-bornes-de-recharge-pour-les-voitures-electriques-comme-le-dit-segolene-royal-2435887.html</link><guid isPermaLink="false">c_a74f7f2b24a1bfff</guid><pubDate>Tue, 14 Apr 2026 12:00:00 +0000</pubDate>
 <description>« Plutôt faux » selon TF1 Info – Les Vérificateurs</description></item>
-<item><title>Sarah Knafo : « A peine élu maire de Paris, Emmanuel Grégoire a augmenté son salaire de 25% »</title>
-<link>https://poligraph.fr/factchecks/2026-04-13-verif-a-peine-elu-a-la-mairie-de-paris-emmanuel-gregoire-a-t-il-augmente-son-salaire-de-25</link><guid isPermaLink="false">c_64072ce56678b9fc</guid><pubDate>Mon, 13 Apr 2026 12:00:00 +0000</pubDate>
-<description>« Faux » selon Poligraph ; « Faux » selon TF1 Info – Les Vérificateurs</description></item>
-<item><title>Jean-Noël Barrot : « Le projet de péage dans le détroit d'Ormuz est illégal. »</title>
-<link>https://www.franceinfo.fr/vrai-ou-fake/vrai-ou-faux-le-projet-de-peage-dans-le-detroit-d-ormuz-evoque-par-l-iran-et-donald-trump-viole-t-il-le-droit-international_7926188.html</link><guid isPermaLink="false">c_a5d9a41247ae026c</guid><pubDate>Thu, 09 Apr 2026 12:00:00 +0000</pubDate>
-<description>« C’est plus compliqué » selon franceinfo Vrai ou Fake</description></item>
-<item><title>Gabriel Attal : « Fleuristes et boulangers interdits d'ouvrir le 1er mai »</title>
-<link>https://factuel.afp.com/doc.afp.com.A73F4CR</link><guid isPermaLink="false">c_4600bcd2800cb9e0</guid><pubDate>Thu, 09 Apr 2026 12:00:00 +0000</pubDate>
-<description>« Manque de contexte » selon AFP Factuel</description></item>
-<item><title>Marine Le Pen : « L'Etat profite-t-il vraiment de la crise des carburants ? »</title>
-<link>https://www.franceinfo.fr/vrai-ou-fake/vrai-ou-faux-l-etat-profite-t-il-vraiment-de-la-crise-des-carburants-pour-s-en-mettre-plein-les-poches-comme-l-affirme-le-rassemblement-national_7895645.html</link><guid isPermaLink="false">c_4f524e4ed74a13ba</guid><pubDate>Fri, 27 Mar 2026 12:00:00 +0000</pubDate>
-<description>« Plutôt Faux » selon franceinfo Vrai ou Fake</description></item>
-<item><title>Marine Le Pen : « Le vin n'est pas mauvais pour la santé si on en n'abuse pas »</title>
-<link>https://factuel.afp.com/doc.afp.com.A2ZQ6KF</link><guid isPermaLink="false">c_7f2cfff2b3c28df6</guid><pubDate>Wed, 25 Mar 2026 12:00:00 +0000</pubDate>
-<description>« Faux » selon AFP Factuel</description></item>
-<item><title>Rachida Dati : « La réduction de la vitesse à 50 km/h sur le périphérique parisien n'a pas démontré que ça réduisait la pollution »</title>
-<link>https://www.tf1info.fr/politique/elections/municipales/verif-le-passage-a-50-km-h-sur-le-peripherique-parisien-n-a-t-il-vraiment-eu-aucun-impact-sur-la-pollution-2429763.html</link><guid isPermaLink="false">c_faa5e0a1549c25d0</guid><pubDate>Fri, 13 Mar 2026 12:00:00 +0000</pubDate>
-<description>« Plutôt faux » selon TF1 Info – Les Vérificateurs</description></item>
-<item><title>Jean-Luc Mélenchon : « L'Iran et Oman sont souverains dans le détroit d'Ormuz »</title>
-<link>https://factuel.afp.com/doc.afp.com.A2YV3KE</link><guid isPermaLink="false">c_4111e2441636ae50</guid><pubDate>Fri, 13 Mar 2026 12:00:00 +0000</pubDate>
-<description>« Manque de contexte » selon AFP Factuel</description></item>
 </channel></rss>

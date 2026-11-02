@@ -1,9 +1,9 @@
 {
- "generated_at": "2026-11-01T05:00:48+00:00",
+ "generated_at": "2026-11-02T05:00:55+00:00",
  "scope": "Sur les déclarations vérifiées, pas sur l'ensemble des propos tenus.",
  "candidats": {
   "bardella": {
-   "n": 28,
+   "n": 29,
    "url": "https://observatoire.votona.fr/candidats/bardella/",
    "sources": [
     "20 Minutes – Fake Off",
@@ -24,7 +24,7 @@
    "last_review": "2026-08-27"
   },
   "attal": {
-   "n": 17,
+   "n": 18,
    "url": "https://observatoire.votona.fr/candidats/attal/",
    "sources": [
     "20 Minutes – Fake Off",
@@ -68,7 +68,7 @@
    "last_review": "2026-08-24"
   },
   "tondelier": {
-   "n": 13,
+   "n": 15,
    "url": "https://observatoire.votona.fr/candidats/tondelier/",
    "sources": [
     "AFP Factuel",
@@ -87,7 +87,7 @@
    "last_review": "2023-09-27"
   },
   "lepen": {
-   "n": 38,
+   "n": 41,
    "url": "https://observatoire.votona.fr/candidats/lepen/",
    "sources": [
     "20 Minutes – Fake Off",
@@ -100,7 +100,7 @@
    "last_review": "2026-09-17"
   },
   "lisnard": {
-   "n": 5,
+   "n": 6,
    "url": "https://observatoire.votona.fr/candidats/lisnard/",
    "sources": [
     "Poligraph",
@@ -110,7 +110,7 @@
    "last_review": "2025-12-01"
   },
   "dupont-aignan": {
-   "n": 16,
+   "n": 17,
    "url": "https://observatoire.votona.fr/candidats/dupont-aignan/",
    "sources": [
     "20 Minutes – Fake Off",
@@ -122,7 +122,7 @@
    "last_review": "2025-09-30"
   },
   "faure": {
-   "n": 3,
+   "n": 5,
    "url": "https://observatoire.votona.fr/candidats/faure/",
    "sources": [
     "TF1 Info – Les Vérificateurs",
@@ -152,12 +152,13 @@
    "last_review": "2024-09-02"
   },
   "branco": {
-   "n": 1,
+   "n": 2,
    "url": "https://observatoire.votona.fr/candidats/branco/",
    "sources": [
-    "AFP Factuel"
+    "AFP Factuel",
+    "TF1 Info – Les Vérificateurs"
    ],
-   "last_review": "2022-02-09"
+   "last_review": "2023-10-18"
   },
   "ruffin": {
    "n": 12,
@@ -222,31 +223,31 @@
  },
  "sujets": {
   "economie": {
-   "n": 89,
+   "n": 106,
    "url": "https://observatoire.votona.fr/sujets/economie/"
   },
   "social": {
-   "n": 39,
+   "n": 48,
    "url": "https://observatoire.votona.fr/sujets/social/"
   },
   "securite": {
-   "n": 88,
+   "n": 107,
    "url": "https://observatoire.votona.fr/sujets/securite/"
   },
   "ecologie": {
-   "n": 59,
+   "n": 69,
    "url": "https://observatoire.votona.fr/sujets/ecologie/"
   },
   "europe": {
-   "n": 76,
+   "n": 86,
    "url": "https://observatoire.votona.fr/sujets/europe/"
   },
   "societe": {
-   "n": 50,
+   "n": 63,
    "url": "https://observatoire.votona.fr/sujets/societe/"
   },
   "defense": {
-   "n": 41,
+   "n": 50,
    "url": "https://observatoire.votona.fr/sujets/defense/"
   }
  }
