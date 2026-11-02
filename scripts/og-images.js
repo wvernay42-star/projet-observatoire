@@ -48,7 +48,7 @@ function readCsv(file) {
   return body.map((r) => Object.fromEntries(head.map((h, i) => [h, r[i] || ""])));
 }
 
-const LOGO = img("logo-head.webp");
+const LOGO = img("logo-mark.svg", "svg+xml");
 const FONTS = `<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@700;800&family=Work+Sans:wght@600;700&family=IBM+Plex+Mono:wght@600&display=block" rel="stylesheet">`;
 const BASE_CSS = `
 *{margin:0;box-sizing:border-box}
@@ -93,8 +93,8 @@ body{background:linear-gradient(115deg, color-mix(in srgb, ${color} 72%, #14121F
 .t{position:absolute;left:70px;width:720px;top:256px;font-family:'Baloo 2',sans-serif;font-weight:800;font-size:72px;line-height:1.05}
 .s{position:absolute;left:70px;width:700px;top:430px;font-weight:700;font-size:26px;color:rgba(255,255,255,.88)}
 </style></head><body>${HEAD}
-<img class="art" src="${img("characters/" + file + ".webp")}" style="left:842px;top:150px;height:450px" alt="">
-<img class="art" src="${img("props/" + file + ".webp")}" style="left:1040px;top:96px;width:120px;transform:rotate(12deg)" alt="">
+${LENS}
+<img class="art" src="${img("props/" + file + ".webp")}" style="left:1030px;top:380px;width:120px;transform:rotate(12deg)" alt="">
 <div class="cat"><span class="dot"></span>Sujet</div>
 <div class="t">${esc(label)}</div>
 <div class="s">Les déclarations politiques vérifiées par les fact-\u2060checkers</div>

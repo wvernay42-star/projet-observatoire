@@ -1,5 +1,13 @@
 # Décisions
 
+## 2026-11-02
+
+- **Pas de mascotte sur l'Observatoire** : logo sobre (loupe cochée, `web/beta/logo-mark.svg`),
+  ni ourson dans les boutons ni personnages costumés dans les en-têtes et images de partage. Le sujet
+  (vérification des faits) demande un ton sérieux ; la mascotte reste propre à l'app Votona.
+  Pour revenir en arrière : `SHOW_CHARACTERS = True` (build_pages.py), `MASCOT` et `mascot()`, et
+  l'ancien logo `logo-head.webp` (conservé dans `web/beta/`).
+
 ## 2026-10-21
 
 - **Maquette retenue : variante A « Jauge »** (codes PolitiFact, version sobre).

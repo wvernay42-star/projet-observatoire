@@ -21,6 +21,20 @@ Les décisions durables sont aussi consignées dans [decisions.md](decisions.md)
 | — | Hébergement préprod (`preprod`) / prod (`main`) | ✅ en ligne (26/10) — projet Vercel `votona-observatoire` ; production indexable depuis le 28/10 |
 | — | Liens Votona → Observatoire | ⏳ actifs sur `draft` (test, 26/10) ; `main` sur demande du porteur |
 
+## 2026-11-02 — Identité visuelle plus sobre : logo loupe, sans mascotte
+
+- Après un retour utilisateur (« l'ourson n'est pas assez sérieux pour le sujet »), l'Observatoire
+  quitte la mascotte de Votona : logo `web/beta/logo-mark.svg` (loupe cochée sur fond violet, le
+  pictogramme du lien « Observatoire » de votona.fr) dans le bandeau, favicon refait, plus de tête
+  d'ourson dans les boutons (`MASCOT`, `mascot()`), plus de personnages costumés dans les en-têtes
+  (`SHOW_CHARACTERS = False` dans `build_pages.py`, repris par `build_beta.py`), plus d'ourson dans
+  les en-têtes des pages Méthode, « Vous êtes cité ? » et Crédits photos.
+- Images de partage refaites (`node scripts/og-images.js --force`) : nouveau logo, et la loupe à la
+  place du personnage costumé sur les images des familles de sujets.
+- Votona garde l'ourson dans l'app (test, résultats, Starter Pack) ; ses pages d'information sont
+  allégées de la même façon (réglage `SOBER_INFO_PAGES` de son générateur).
+- Poussé sur `preprod` pour validation ; `main` à la demande du porteur.
+
 ## 2026-11-03 — Portraits des autres personnalités : collecte étalée par la routine
 
 - Wikimedia limite fortement les adresses partagées des environnements cloud (429, ou 403 « robot

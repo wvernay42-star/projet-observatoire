@@ -27,7 +27,11 @@ TEMPLATE = ROOT / "web" / "beta" / "template.html"
 OUTPUT = ROOT / "web" / "beta" / "index.html"
 PLACEHOLDER = '/*__DATA__*/{"generated_at":null,"facts":[],"sources":[],"contact":"","candidates":[]}'
 LOGO_PLACEHOLDER = "/*__LOGO__*/"
-LOGO = Path(__file__).resolve().parents[1] / "web" / "beta" / "logo-head.webp"
+# Logo sobre (loupe cochée, le pictogramme du lien « Observatoire » de votona.fr) : pas de
+# mascotte sur l'Observatoire, dont le sujet (vérification des faits) demande un ton sérieux.
+LOGO = Path(__file__).resolve().parents[1] / "web" / "beta" / "logo-mark.svg"
+# Pas de personnages costumés en en-tête (voir LOGO) : réglage commun avec build_pages.
+SHOW_CHARACTERS = build_pages.SHOW_CHARACTERS
 # Accessoires des 7 familles de sujets, copiés de Votona (assets/props) : même identité visuelle.
 PROPS_PLACEHOLDER = "/*__PROPS__*/{}"
 PROPS_DIR = LOGO.with_name("props")
@@ -65,7 +69,7 @@ def build(export_dir: Path = EXPORT_DIR, template: Path = TEMPLATE, output: Path
                              separators=(",", ":")).replace("</", "<\\/")
         if site:
             props = {f.stem: f"/assets/props/{f.name}" for f in sorted(PROPS_DIR.glob("*.webp"))}
-            chars = {f.stem: f"/assets/characters/{f.name}" for f in sorted(CHARS_DIR.glob("*.webp"))}
+            chars = {f.stem: f"/assets/characters/{f.name}" for f in sorted(CHARS_DIR.glob("*.webp"))} if SHOW_CHARACTERS else {}
             portraits = {k: f"/assets/portraits/{k}.webp" for k in sorted(pages.portraits)}
         else:
             props = {f.stem: "data:image/webp;base64," + base64.b64encode(f.read_bytes()).decode()
@@ -77,8 +81,8 @@ def build(export_dir: Path = EXPORT_DIR, template: Path = TEMPLATE, output: Path
                 .replace(PORTRAITS_PLACEHOLDER, json.dumps(portraits)))
 
     # Artefact : logo embarqué (aucune ressource externe) ; site : fichier servi à côté de la page.
-    output.write_text(page(False, "data:image/webp;base64," + base64.b64encode(LOGO.read_bytes()).decode()), encoding="utf-8")
-    build_site(page(True, "/assets/logo-head.webp"))
+    output.write_text(page(False, "data:image/svg+xml;base64," + base64.b64encode(LOGO.read_bytes()).decode()), encoding="utf-8")
+    build_site(page(True, "/assets/logo-mark.svg"))
     write_open_data(facts, generated)
     build_pages.build(pages, SITE_DIR)
     return len(facts)
@@ -116,7 +120,7 @@ def build_site(page: str, site_dir: Path = SITE_DIR) -> None:
     robots = "" if build_pages.INDEXABLE else '<meta name="robots" content="noindex, nofollow">\n'
     head = SITE_HEAD.replace("__ROBOTS__", robots).replace("</head>", "\n".join(head_tags) + "\n</head>")
     (site_dir / "index.html").write_text(head + body + "\n</body>\n</html>\n", encoding="utf-8")
-    shutil.copyfile(LOGO, site_dir / "assets" / "logo-head.webp")
+    shutil.copyfile(LOGO, site_dir / "assets" / "logo-mark.svg")
     shutil.copyfile(LOGO.with_name("og.jpg"), site_dir / "assets" / "og.jpg")
     if (site_dir / "assets" / "og").exists():  # images de partage par page (scripts/og-images.js)
         shutil.rmtree(site_dir / "assets" / "og")

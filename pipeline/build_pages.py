@@ -273,7 +273,14 @@ def family_tiles(facts: list[dict[str, Any]], only: list[str] | None = None) -> 
     return f'<div class="tiles">{"".join(tiles)}</div>'
 
 
+# Personnages costumés de Votona dans les en-têtes : désactivés (ton sobre de l'Observatoire).
+SHOW_CHARACTERS = False
+
+
 def char_img(fid: str, cls: str) -> str:
+    # Personnages costumés de Votona retirés des en-têtes (ton sobre de l'Observatoire).
+    if not SHOW_CHARACTERS:
+        return ""
     return f'<img class="{cls}" src="/assets/characters/{THEME[fid][1]}.webp" alt="" width="339" height="577">'
 
 
@@ -319,7 +326,8 @@ def crumbs(left: tuple[str, str], right: tuple[str, str] | None = None) -> str:
             + (f'<a href="{right[0]}">{escape(right[1])} ›</a>' if right else "") + "</nav>")
 
 
-MASCOT = '<img class="btn-mascot" src="/assets/logo-head.webp" alt="" width="34" height="29">'
+# Pas de mascotte sur l'Observatoire (ton sobre, voir LOGO de build_beta) : boutons sans tête d'ourson.
+MASCOT = ''
 LEGEND = ('<p class="legend">Verdicts des rédactions :' + "".join(
     f'<i{" class=\"unrated\"" if k == "unrated" else f" style=\"background:var(--v-{k})\""}></i>{label.lower()}' for k, label, _ in LEVELS) + "</p>")
 # Recherche dans une liste (même script que la liste des candidats de votona.fr).
@@ -401,7 +409,7 @@ def page(site: Site, path: str, title: str, description: str, tab: str, body: st
 <body>
 <div class="masthead">
 <header class="topbar">
-  <a class="brand" href="/" title="Accueil de l'Observatoire"><span class="mark"><img src="/assets/logo-head.webp" alt="" width="40" height="32"></span><span class="name">Votona</span><span class="year">OBSERVATOIRE</span><span class="beta-tag" title="Version bêta : mise à jour chaque jour, rattachements partisans encore incomplets">BÊTA</span></a>
+  <a class="brand" href="/" title="Accueil de l'Observatoire"><span class="mark"><img src="/assets/logo-mark.svg" alt="" width="32" height="32"></span><span class="name">Votona</span><span class="year">OBSERVATOIRE</span><span class="beta-tag" title="Version bêta : mise à jour chaque jour, rattachements partisans encore incomplets">BÊTA</span></a>
   <div class="topbar-actions">
     <a class="sister-link" href="{VOTONA}/" title="Votona : le test présidentielle 2027, quel candidat te correspond ?">{ICON_TEST}<span>Le test 2027</span></a>
     <a class="icon-btn" href="{VOTONA}/?screen=account" title="Mon compte (Votona)" aria-label="Mon compte (Votona)">{ICON_USER}</a>
@@ -662,7 +670,7 @@ def methode_page(site: Site) -> str:
     scale_rows = "".join(f"<tr><td>{sw(k)} {LEVEL[k][0]}</td><td>{ex}</td></tr>" for k, ex in scale)
     body = f"""<div class="prose">
 <nav class="mtabs" aria-label="Méthodes de Votona"><a href="{VOTONA}/methode/">Le test Votona</a><a href="/methode/" aria-current="page">L'Observatoire</a></nav>
-<section class="mhero"><img src="/assets/logo-head.webp" alt="" width="104" height="83"><div><h1>Méthode de l'Observatoire</h1><p>D'où viennent les vérifications, comment elles sont rattachées aux personnalités et aux partis, et ce que l'Observatoire ne fait jamais.</p></div></section>
+<section class="mhero"><div><h1>Méthode de l'Observatoire</h1><p>D'où viennent les vérifications, comment elles sont rattachées aux personnalités et aux partis, et ce que l'Observatoire ne fait jamais.</p></div></section>
 <nav class="mtoc" aria-label="Sommaire"><a href="#principes">Principes</a><a href="#recoupement">Recoupement et divergences</a><a href="#sujets">Sujets</a><a href="#votona">Votona et l'Observatoire</a><a href="#redactions">Rédactions suivies</a><a href="#echelle">Échelle commune</a><a href="#donnees">Données ouvertes</a><a href="#limites">Limites de la version bêta</a><a href="#droits">Contester une entrée, vos droits</a></nav>
 <p>L'Observatoire ne produit aucun verdict. Il recense des vérifications publiées par des rédactions de fact-checking, les rattache à des personnalités politiques identifiées et les rend consultables par période, parti, personne, sujet, verdict et rédaction.</p>
 <h2 id="principes">Principes</h2>
@@ -707,7 +715,7 @@ def methode_page(site: Site) -> str:
 def cited_page(site: Site) -> str:
     """« Vous êtes cité ? » : information des personnes citées et procédure (RGPD, cadrage « Conformité »)."""
     body = f"""<div class="prose">
-<section class="mhero"><img src="/assets/logo-head.webp" alt="" width="104" height="83"><div><h1>Vous êtes cité ?</h1><p>Votona Observatoire rassemble des vérifications publiées par des rédactions de fact-checking sur des déclarations publiques de personnalités politiques. Voici quelles données vous concernant sont traitées, d'où elles viennent, et comment demander une correction ou vous opposer.</p></div></section>
+<section class="mhero"><div><h1>Vous êtes cité ?</h1><p>Votona Observatoire rassemble des vérifications publiées par des rédactions de fact-checking sur des déclarations publiques de personnalités politiques. Voici quelles données vous concernant sont traitées, d'où elles viennent, et comment demander une correction ou vous opposer.</p></div></section>
 <h2>Ce que l'Observatoire publie</h2>
 <ul>
 <li>Votre nom et, s'il est connu, le parti auquel vous étiez affilié à la date de la déclaration, d'après des affiliations publiques et datées.</li>
@@ -750,7 +758,7 @@ def credits_page(site: Site) -> str:
     if others:
         rows.append("<h2>Autres personnalités</h2><ul class=\"credits\">" + "".join(others) + "</ul>")
     body = f"""<div class="prose">
-<section class="mhero"><img src="/assets/logo-head.webp" alt="" width="104" height="83"><div><h1>Crédits photos</h1><p>Les portraits des candidats viennent de Wikimedia Commons et sont sous licence libre : voici leurs auteurs et leurs licences.</p></div></section>
+<section class="mhero"><div><h1>Crédits photos</h1><p>Les portraits des candidats viennent de Wikimedia Commons et sont sous licence libre : voici leurs auteurs et leurs licences.</p></div></section>
 <p>Pour chaque candidat, la photo libre la plus récente où le visage est net est retenue ; pour les autres personnalités, c'est l'image de référence de leur fiche Wikidata, quand elle est sous licence libre et que le visage est net. Sans photo libre, la personne garde ses initiales. Les images sont recadrées sur le visage. C'est la même sélection que sur <a href="{VOTONA}/a-propos/#credits-photos">Votona</a>. Une photo vous concerne et vous souhaitez son retrait ? Écrivez à <strong>{CONTACT}</strong>.</p>
 {"".join(rows)}
 </div>"""
