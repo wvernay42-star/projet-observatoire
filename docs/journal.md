@@ -21,6 +21,18 @@ Les décisions durables sont aussi consignées dans [decisions.md](decisions.md)
 | — | Hébergement préprod (`preprod`) / prod (`main`) | ✅ en ligne (26/10) — projet Vercel `votona-observatoire` ; production indexable depuis le 28/10 |
 | — | Liens Votona → Observatoire | ⏳ actifs sur `draft` (test, 26/10) ; `main` sur demande du porteur |
 
+## 2026-11-02 (journée) — Navigation : Personnalités et Partis dans « Faits vérifiés »
+
+- Barre du haut ramenée à trois entrées : Accueil · Faits vérifiés · Sujets. Personnalités et
+  Partis deviennent des vues de « Faits vérifiés », avec une barre d'onglets commune : Tous les
+  faits · Candidats 2027 · Personnalités · Partis (libellés raccourcis sur mobile). « Faits
+  vérifiés » reste allumée sur les listes, les fiches de personne et les pages de parti.
+- Adresses inchangées (`/candidats/`, `/personnalites/`, `/partis/`, fiches) : référencement et
+  liens partagés intacts. Appliqué aux pages fixes (`facts_tabs`) et à l'application (`factsTabs`).
+- Prêt, non publié : photos des autres personnalités (pastille devant chaque nom, photo sur la fiche,
+  crédits sur `/credits-photos/`) ; la collecte des images est ralentie par Wikimedia (36 sur 127).
+  88 tests OK.
+
 ## 2026-11-02 — Routine quotidienne
 
 - Candidats : synchronisation depuis https://votona.fr/ (pas de clone Votona) : 0 ajouté, 0 modifié,

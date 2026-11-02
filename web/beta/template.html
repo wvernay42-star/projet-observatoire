@@ -141,6 +141,9 @@ a.tile { text-decoration: none; }
 .people button, .people a { text-decoration: none; display: flex; justify-content: space-between; gap: 8px; width: 100%; text-align: left; padding: 12px 0; border: 0; border-bottom: 1px solid var(--line); background: none; color: var(--fg); font: inherit; cursor: pointer; min-height: 44px; }
 .people button:hover .n1, .people a:hover .n1 { text-decoration: underline; }
 .people .n2 { color: var(--muted); font-variant-numeric: tabular-nums; white-space: nowrap; }
+.people .n1 { display: inline-flex; align-items: center; gap: 10px; min-width: 0; }
+.pav { flex: none; width: 34px; height: 34px; border-radius: 50%; overflow: hidden; display: inline-flex; align-items: center; justify-content: center; background: var(--accent-soft); color: var(--accent); font: 800 12px var(--display); }
+.pav.has-ph { box-shadow: 0 0 0 2px var(--surface), 0 0 0 3px var(--line); }
 .head { display: flex; flex-wrap: wrap; gap: 20px; align-items: center; }
 .avatar { width: 84px; height: 84px; border-radius: 50%; background: var(--accent-soft); color: var(--accent); display: flex; align-items: center; justify-content: center; font-family: var(--display); font-size: 30px; font-weight: 800; flex: none; }
 .badge { display: inline-flex; align-items: center; gap: 6px; font-family: var(--mono); font-size: 11px; letter-spacing: .04em; text-transform: uppercase; background: var(--accent-soft); color: var(--fg); border-radius: 999px; padding: 4px 10px; }
@@ -228,6 +231,10 @@ button:focus-visible, select:focus-visible, input:focus-visible, a:focus-visible
 .tabs { display:flex; gap:4px; border-bottom:1px solid var(--line); flex-wrap:wrap; }
 .tabs button, .tabs a { text-decoration:none; background:none; border:0; border-bottom:3px solid transparent; font:inherit; font-weight:600; color:var(--muted); padding:10px 12px; cursor:pointer; min-height:44px; }
 .tabs [aria-selected="true"] { color:var(--accent); border-bottom-color:var(--accent); }
+.tabs { flex-wrap:nowrap; overflow-x:auto; scrollbar-width:none; }
+.tabs::-webkit-scrollbar { display:none; }
+.tabs button, .tabs a { white-space:nowrap; flex:none; }
+@media (max-width:480px) { .tabs .lg { display:none; } .tabs button, .tabs a { padding:10px 10px; font-size:14px; } }
 .search { min-height:44px; font:inherit; font-size:14px; padding:0 12px; border:1px solid var(--line); border-radius:14px; background:var(--surface); color:var(--fg); width:100%; max-width:360px; }
 .topics { display:flex; flex-direction:column; }
 .topic { display:grid; grid-template-columns:minmax(0,1fr) auto; gap:4px 16px; padding:12px 0; border-top:1px solid var(--line); align-items:baseline; }
@@ -319,9 +326,10 @@ const LEVELS = [
 const LEVEL = Object.fromEntries(LEVELS.map(([k, l, i]) => [k, { label: l, idx: i }]));
 // Une vue = un usage : l'accueil résume, « Faits vérifiés » est le seul endroit à filtres complets,
 // les autres vues entrent par une personne, un parti ou un sujet.
-const TABS = [["accueil", "Accueil"], ["faits", "Faits vérifiés"], ["personnalites", "Personnalités"], ["partis", "Partis"], ["sujets", "Sujets"]];
+// Personnalités et partis sont des vues de « Faits vérifiés » (onglets factsTabs), pas des entrées de la barre.
+const TABS = [["accueil", "Accueil"], ["faits", "Faits vérifiés"], ["sujets", "Sujets"]];
 // La Méthode s'ouvre par l'icône « ? » du bandeau et le pied de page, comme la FAQ de Votona.
-const VIEWS = [...TABS, ["methodologie", "Méthode"]];
+const VIEWS = [...TABS, ["personnalites", "Personnalités"], ["partis", "Partis"], ["methodologie", "Méthode"]];
 const SCOPES = [["candidats", "Candidats 2027"], ["partis", "Leurs partis"], ["tout", "Toute la vie politique"]];
 // Les 7 familles de sujets de Votona, dans son ordre.
 const FAMILIES = [["economie", "Économie & travail"], ["social", "Protection sociale"], ["securite", "Sécurité & immigration"], ["ecologie", "Écologie"], ["europe", "Europe & institutions"], ["societe", "Société"], ["defense", "Défense & numérique"]];
@@ -463,6 +471,17 @@ function fromHash() {
 document.addEventListener("click", (e) => { const b = e.target.closest("[data-go]"); if (b) go(b.dataset.go); });
 
 /* ---------- composants ---------- */
+// Onglets de « Faits vérifiés » : tous les faits, par candidat, par personnalité, par parti.
+const FACT_TABS = [["faits", ["Tous", el("span", { class: "lg", text: " les faits" })]], ["candidats", ["Candidats", el("span", { class: "lg", text: " 2027" })]], ["toutes", "Personnalités"], ["partis", "Partis"]];
+function factsTabs(active) {
+  return el("div", { class: "tabs", role: "tablist", "aria-label": "Faits vérifiés par" }, FACT_TABS.map(([k, label]) => {
+    const view = k === "faits" ? "faits" : k === "partis" ? "partis" : "personnalites";
+    const attrs = { role: "tab", "aria-selected": String(k === active) };
+    const href = k === "faits" ? null : k === "partis" ? staticUrl("partis") : k === "candidats" ? staticUrl("personnalites") : (DATA.urls ? "/personnalites/" : null);
+    return href ? el("a", { ...attrs, href }, label)
+      : el("button", { ...attrs, type: "button", on: { click: () => { if (view === "personnalites") { state.who = k; state.q = ""; } go(view); } } }, label);
+  }));
+}
 function filtersBar() {
   const sel = (id, label, value, options, onChange) => el("label", { for: id }, label,
     el("select", { id, on: { change: (e) => { onChange(e.target.value); state.limit = 30; render(); } } },
@@ -636,15 +655,14 @@ const views = {
   faits() {
     const list = filtered();
     return [intro("Tous les faits vérifiés", ["Toutes les déclarations, de la plus récente à la plus ancienne. Les dates en ", el("em", { text: "italique" }), " sont des dates de vérification, faute de date de déclaration."], { stats: [[facts.length, "déclarations vérifiées"], [usedSources.length, "rédactions"]], crew: ["europe", "social", "ecologie"] }),
-      filtersBar(), summary(list), factList(list)];
+      factsTabs("faits"), filtersBar(), summary(list), factList(list)];
   },
   personnalites() {
-    const tab = (k, l) => el("button", { type: "button", role: "tab", "aria-selected": String(state.who === k), on: { click: () => { state.who = k; state.q = ""; render(); } } }, l);
     const q = state.q.trim().toLowerCase();
     const search = el("input", { type: "search", class: "search q", placeholder: state.who === "candidats" ? "Chercher un candidat" : "Chercher une personnalité", value: state.q, "aria-label": "Chercher",
       on: { input: (e) => { state.q = e.target.value; const pos = e.target.selectionStart; render(); const s = document.querySelector("input.search"); s.focus(); s.setSelectionRange(pos, pos); } } });
     const head = [intro("Personnalités", "Aucun classement : le nombre de vérifications dépend des choix des rédactions, pas de la sincérité des personnes. L'absence de vérification ne dit rien de l'exactitude des propos."),
-      el("div", { class: "tabs", role: "tablist" }, tab("candidats", "Candidats 2027"), tab("toutes", "Toutes les personnalités")), search];
+      factsTabs(state.who), search];
     if (state.who === "candidats") {
       const count = (pid) => facts.filter((f) => f.person.id === pid);
       // Ordre alphabétique du nom de famille (l'identifiant Votona en est tiré : « lepen », « dupont-aignan »).
@@ -678,7 +696,7 @@ const views = {
         el("span", { class: "c", text: plural(byParty[id].length, "déclaration vérifiée", "déclarations vérifiées") + (cands.length ? " · candidat : " + cands.join(", ") : "") }), miniBar(byParty[id]));
     }))) : null;
     return [intro("Partis", "Parti en vigueur à la date de chaque déclaration, d'après des affiliations publiques et datées. " + plural(unknown, "déclaration n'a", "déclarations n'ont") + " pas encore de parti renseigné et ne " + (unknown > 1 ? "sont comptées" : "est comptée") + " dans aucun parti."),
-      block("Partis des candidats 2027", ids.filter((id) => candidateParties.has(id))), block("Autres partis", ids.filter((id) => !candidateParties.has(id)))];
+      factsTabs("partis"), block("Partis des candidats 2027", ids.filter((id) => candidateParties.has(id))), block("Autres partis", ids.filter((id) => !candidateParties.has(id)))];
   },
   sujets() {
     const scoped = state.scope === "tout" ? facts : facts.filter(inScope2027);
@@ -816,7 +834,7 @@ function siteFooter() {
 }
 
 function render() {
-  const navView = { personne: "personnalites", parti: "partis", sujet: "sujets" }[state.view] || state.view;
+  const navView = { personne: "faits", personnalites: "faits", parti: "faits", partis: "faits", sujet: "sujets" }[state.view] || state.view;
   $("nav").replaceChildren(...TABS.map(([v, l]) => el(staticUrl(v) ? "a" : "button", staticUrl(v) ? { href: staticUrl(v), "aria-current": v === navView ? "page" : null } : { type: "button", "data-go": v, "aria-current": v === navView ? "page" : null },
     v === "faits" ? ["Faits", el("span", { class: "lg", text: " vérifiés" })] : l)));
   $("btn-faq").setAttribute("aria-current", navView === "methodologie" ? "page" : "false");

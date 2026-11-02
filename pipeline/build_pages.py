@@ -92,7 +92,13 @@ class Site:
     candidate_by_pid: dict[str, dict[str, str]] = field(default_factory=dict)
     person_url: dict[str, str] = field(default_factory=dict)
     party_url: dict[str, str] = field(default_factory=dict)
-    portraits: dict[str, dict[str, str]] = field(default_factory=dict)  # votona_id -> crédit (data/seeds/portraits.json)
+    portraits: dict[str, dict[str, str]] = field(default_factory=dict)  # clé -> crédit (data/seeds/portraits.json)
+
+    def portrait_key(self, pid: str) -> str | None:
+        """Clé du portrait d'une personne : identifiant Votona pour un candidat 2027, sinon identifiant Wikidata."""
+        cand = self.candidate_by_pid.get(pid)
+        key = cand["votona_id"] if cand else pid
+        return key if key in self.portraits else None
 
     @classmethod
     def load(cls, facts: list[dict[str, Any]], candidates: list[dict[str, str]], topics: list[dict[str, str]],
@@ -267,16 +273,17 @@ def char_img(fid: str, cls: str) -> str:
     return f'<img class="{cls}" src="/assets/characters/{THEME[fid][1]}.webp" alt="" width="339" height="577">'
 
 
-def avatar_inner(site: Site, cand: dict[str, Any] | None, name: str, size: int = 96) -> str:
-    """Pastille d'un candidat : son portrait libre s'il existe, sinon ses initiales."""
-    if cand and cand["votona_id"] in site.portraits:
-        return f'<img class="ph" src="/assets/portraits/{cand["votona_id"]}.webp" width="{size}" height="{size}" alt="" loading="lazy">'
+def avatar_inner(site: Site, pid: str, name: str, size: int = 96) -> str:
+    """Pastille d'une personne : son portrait libre s'il existe, sinon ses initiales."""
+    if key := site.portrait_key(pid):
+        return f'<img class="ph" src="/assets/portraits/{key}.webp" width="{size}" height="{size}" alt="" loading="lazy">'
     return escape(initials_of(name))
 
 
-def photo_credit(site: Site, cand: dict[str, Any] | None) -> str:
+def photo_credit(site: Site, pid: str) -> str:
     """Ligne de crédit sous l'en-tête d'une fiche (licences libres : auteur et licence à citer)."""
-    cr = site.portraits.get(cand["votona_id"]) if cand else None
+    key = site.portrait_key(pid)
+    cr = site.portraits.get(key) if key else None
     if not cr:
         return ""
     lic = (f'<a href="{escape(cr["license_url"])}" target="_blank" rel="noopener nofollow">{escape(cr["license"])}</a>'
@@ -340,8 +347,8 @@ ICON_FAQ = ('<svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke=
             '<path d="M9.3 9.2a2.7 2.7 0 1 1 3.9 2.4c-1 .5-1.7 1.1-1.7 2.4"/><line x1="12" y1="17.2" x2="12" y2="17.21"/></svg>')
 ICON_USER = ('<svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 4-6 8-6s8 2 8 6"/></svg>')
 # Le compte est celui de Votona (même base Supabase) : l'icône mène à « Mon compte » sur votona.fr.
-TABS = [("accueil", "/", "Accueil"), ("faits", "/#faits", "Faits"), ("personnalites", "/candidats/", "Personnalités"),
-        ("partis", "/partis/", "Partis"), ("sujets", "/sujets/", "Sujets")]
+# Personnalités et partis sont des vues de « Faits vérifiés » (onglets facts_tabs), pas des entrées de la barre.
+TABS = [("accueil", "/", "Accueil"), ("faits", "/#faits", "Faits"), ("sujets", "/sujets/", "Sujets")]
 
 
 def social_html() -> str:
@@ -432,10 +439,10 @@ def person_page(site: Site, pid: str) -> tuple[str, str, bool]:
                     for i, ((fid, n), size) in enumerate(zip(fams, (58, 46, 40, 34))) if n)
     stat = plural(len(facts), "déclaration vérifiée", "déclarations vérifiées") if facts else "Aucune vérification à ce jour"
     parts = [crumbs(("/candidats/", "Tous les candidats") if cand else ("/personnalites/", "Toutes les personnalités"), ("/sujets/", "Tous les sujets")),
-             f'<div class="cand-header" style="--cc:{color}"><div class="cand-avatar{" has-ph" if cand and cand["votona_id"] in site.portraits else ""}" aria-hidden="true">{avatar_inner(site, cand, name, 168)}</div>'
+             f'<div class="cand-header" style="--cc:{color}"><div class="cand-avatar{" has-ph" if site.portrait_key(pid) else ""}" aria-hidden="true">{avatar_inner(site, pid, name, 168)}</div>'
              f'<div class="cand-id"><h1>{escape(name)}</h1><p class="party">{escape(party)}</p><p class="cand-stat">{stat}</p></div>'
              f'<div class="hero-props" aria-hidden="true">{props}</div></div>',
-             photo_credit(site, cand),
+             photo_credit(site, pid),
              f'<p class="intro-p">Déclarations de {escape(name)} vérifiées par les rédactions françaises de fact-checking, avec le verdict '
              f"de chaque rédaction, son libellé d'origine et le lien vers l'article. {escape(SCOPE)}</p>",
              f'<p class="src-line">{escape(party_line)}{wiki}</p>']
@@ -470,7 +477,7 @@ def person_page(site: Site, pid: str) -> tuple[str, str, bool]:
             f"{name} : aucune déclaration vérifiée à ce jour par les rédactions françaises de fact-checking suivies.")
     ld = [breadcrumb_ld(("/", "Observatoire"), ("/candidats/" if cand else "/personnalites/", "Candidats 2027" if cand else "Personnalités"), (path, name))]
     og = og_image("candidats", cand["votona_id"]) if cand else "/assets/og.jpg"
-    return path, page(site, path, title, desc, "personnalites", "\n".join(parts), indexable=bool(facts), ld=ld, og=og), bool(facts)
+    return path, page(site, path, title, desc, "faits", "\n".join(parts), indexable=bool(facts), ld=ld, og=og), bool(facts)
 
 
 def party_page(site: Site, party_id: str) -> tuple[str, str]:
@@ -501,7 +508,7 @@ def party_page(site: Site, party_id: str) -> tuple[str, str]:
     title = f"{name} : déclarations vérifiées de ses membres - Votona Observatoire"
     desc = (f"{plural(len(facts), 'déclaration', 'déclarations')} de membres de {name}, vérifiée{'s' if len(facts) > 1 else ''} par "
             "les rédactions françaises de fact-checking, avec le parti à la date de chaque déclaration.")
-    return path, page(site, path, title, desc, "partis", body, ld=[breadcrumb_ld(("/", "Observatoire"), ("/partis/", "Partis"), (path, name))])
+    return path, page(site, path, title, desc, "faits", body, ld=[breadcrumb_ld(("/", "Observatoire"), ("/partis/", "Partis"), (path, name))])
 
 
 def family_page(site: Site, fid: str) -> tuple[str, str]:
@@ -529,10 +536,14 @@ def family_page(site: Site, fid: str) -> tuple[str, str]:
                       og=og_image("sujets", fid))
 
 
-def people_tabs(active: str) -> str:
-    return ('<div class="tabs" role="tablist">'
-            f'<a href="/candidats/" role="tab" aria-selected="{str(active == "candidats").lower()}">Candidats 2027</a>'
-            f'<a href="/personnalites/" role="tab" aria-selected="{str(active == "toutes").lower()}">Toutes les personnalités</a></div>')
+FACT_TABS = [("faits", 'Tous<span class="lg"> les faits</span>', "/#faits"), ("candidats", 'Candidats<span class="lg"> 2027</span>', "/candidats/"),
+             ("toutes", "Personnalités", "/personnalites/"), ("partis", "Partis", "/partis/")]
+
+
+def facts_tabs(active: str) -> str:
+    """Onglets de « Faits vérifiés » : tous les faits, par candidat, par personnalité, par parti."""
+    return ('<div class="tabs" role="tablist" aria-label="Faits vérifiés par">' + "".join(
+        f'<a href="{href}" role="tab" aria-selected="{str(key == active).lower()}">{label}</a>' for key, label, href in FACT_TABS) + "</div>")
 
 
 PEOPLE_INTRO = ("Aucun classement : le nombre de vérifications dépend des choix des rédactions, pas de la sincérité des personnes. "
@@ -553,15 +564,15 @@ def index_pages(site: Site) -> dict[str, str]:
                 if facts else '<span class="meta">Aucune vérification à ce jour</span>')
         items.append(f'<li data-search="{escape(c["name"] + " " + party)}"{" class=\"out\"" if c["status"] == "retiré" else ""} '
                      f'style="--cc:{escape(c.get("color") or "#7C3AED")}"><a href="{site.person_url[c["pid"]]}">'
-                     f'<span class="av" aria-hidden="true">{avatar_inner(site, c, c["name"])}</span><span class="who">'
+                     f'<span class="av" aria-hidden="true">{avatar_inner(site, c["pid"], c["name"])}</span><span class="who">'
                      f'<span class="nm">{escape(c["name"])}</span><span class="party">{escape(party)}</span>{meta}</span></a></li>')
     pages["/candidats/"] = page(site, "/candidats/", "Candidats à la présidentielle 2027 : déclarations vérifiées - Votona Observatoire",
                                 "Les déclarations des candidats à la présidentielle 2027 vérifiées par les rédactions françaises de fact-checking, candidat par candidat.",
-                                "personnalites", "\n".join([
+                                "faits", "\n".join([
                                     intro("Les candidats 2027 vérifiés par les fact-\u2060checkers", PEOPLE_INTRO,
                                           [(len(with_facts), "candidats vérifiés"), (len(scoped), "déclarations vérifiées")],
                                           ("societe", "europe", "defense")),
-                                    people_tabs("candidats"),
+                                    facts_tabs("candidats"),
                                     '<div class="btn-pair"><a class="btn btn-ghost" href="/#faits">Tous les faits, avec filtres</a>'
                                     '<a class="btn btn-ghost" href="/sujets/">Voir les vérifications sujet par sujet</a></div>',
                                     search_box("Rechercher un candidat ou un parti…", "Aucun candidat ne correspond à cette recherche."),
@@ -571,15 +582,15 @@ def index_pages(site: Site) -> dict[str, str]:
     by_person: dict[str, int] = defaultdict(int)
     for f in site.facts:
         by_person[f["person"]["id"]] += 1
-    links = "".join(f'<a data-search="{escape(site.persons[pid])}" href="{site.person_url[pid]}"><span class="n1">{escape(site.persons[pid])}{" · 2027" if pid in site.candidate_by_pid else ""}</span>'
+    links = "".join(f'<a data-search="{escape(site.persons[pid])}" href="{site.person_url[pid]}"><span class="n1"><span class="pav{" has-ph" if site.portrait_key(pid) else ""}" aria-hidden="true">{avatar_inner(site, pid, site.persons[pid], 68)}</span><span>{escape(site.persons[pid])}{" · 2027" if pid in site.candidate_by_pid else ""}</span></span>'
                     f'<span class="n2">{n} vérif.</span></a>' for pid, n in sorted(by_person.items(), key=lambda x: site.persons[x[0]]))
     pages["/personnalites/"] = page(site, "/personnalites/", "Personnalités politiques : déclarations vérifiées - Votona Observatoire",
                                     "Toutes les personnalités politiques françaises dont une déclaration a été vérifiée par les rédactions de fact-checking.",
-                                    "personnalites", "\n".join([
+                                    "faits", "\n".join([
                                         intro("Toutes les personnalités vérifiées", PEOPLE_INTRO,
                                               [(len(by_person), "personnalités"), (len(site.facts), "déclarations vérifiées")],
                                               ("economie", "securite", "ecologie")),
-                                        people_tabs("toutes"),
+                                        facts_tabs("toutes"),
                                         search_box("Rechercher une personnalité…", "Aucune personnalité ne correspond à cette recherche."),
                                         f'<p class="small muted" style="margin:0">{plural(len(by_person), "personnalité", "personnalités")} avec au moins une vérification, par ordre alphabétique.</p>',
                                         f'<div class="people">{links}</div>', SEARCH_JS]))
@@ -603,13 +614,14 @@ def index_pages(site: Site) -> dict[str, str]:
     cp = site.candidate_parties
     pages["/partis/"] = page(site, "/partis/", "Partis politiques : déclarations vérifiées de leurs membres - Votona Observatoire",
                              "Les déclarations des membres de chaque parti, vérifiées par les rédactions françaises de fact-checking, selon le parti à la date de la déclaration.",
-                             "partis", "\n".join([
+                             "faits", "\n".join([
                                  intro("Les partis et leurs déclarations vérifiées",
                                        "Parti en vigueur à la date de chaque déclaration, d'après des affiliations publiques et datées. "
                                        + plural(unknown, "déclaration n'a", "déclarations n'ont") + " pas encore de parti renseigné et ne "
                                        + ("sont comptées" if unknown > 1 else "est comptée") + " dans aucun parti.",
                                        [(len(ids), "partis"), (len([p for p in ids if p in cp]), "partis de candidats 2027")],
                                        ("europe", "economie", "social")),
+                                 facts_tabs("partis"),
                                  search_box("Rechercher un parti ou un candidat…", "Aucun parti ne correspond à cette recherche."),
                                  block("Partis des candidats 2027", [p for p in ids if p in cp]),
                                  block("Autres partis", [p for p in ids if p not in cp]), SEARCH_JS]))
@@ -716,22 +728,24 @@ def cited_page(site: Site) -> str:
 
 def credits_page(site: Site) -> str:
     """Crédits photos : auteur, licence et source de chaque portrait (licences libres, Wikimedia Commons)."""
-    rows = []
-    for c in sorted(site.candidates, key=lambda c: c["votona_id"]):
-        cr = site.portraits.get(c["votona_id"])
-        if not cr:
-            continue
+    def row(name: str, cr: dict[str, str]) -> str:
         lic = (f'<a href="{escape(cr["license_url"])}" target="_blank" rel="noopener nofollow">{escape(cr["license"])}</a>'
                if cr.get("license_url") else escape(cr["license"]))
-        rows.append(f'<li><b>{escape(c["name"])}</b> : {escape(cr.get("author") or "auteur inconnu")}'
-                    f'{", " + escape(cr["date"]) if cr.get("date") else ""}, {lic}, '
-                    f'<a href="{escape(cr["page"])}" target="_blank" rel="noopener nofollow">fichier sur Wikimedia Commons</a>.</li>')
+        return (f'<li><b>{escape(name)}</b> : {escape(cr.get("author") or "auteur inconnu")}'
+                f'{", " + escape(cr["date"]) if cr.get("date") else ""}, {lic}, '
+                f'<a href="{escape(cr["page"])}" target="_blank" rel="noopener nofollow">fichier sur Wikimedia Commons</a>.</li>')
+    cand_keys = {c["votona_id"]: c["name"] for c in site.candidates}
+    cands = [row(cand_keys[k], site.portraits[k]) for k in sorted(cand_keys) if k in site.portraits]
+    by_pid_key = {k: n for k, n in ((p, site.persons[p]) for p in site.persons)}
+    others = [row(by_pid_key[k], site.portraits[k]) for k in sorted(site.portraits, key=lambda k: by_pid_key.get(k, k))
+              if k not in cand_keys and k in by_pid_key]
+    rows = ["<h2>Candidats 2027</h2><ul class=\"credits\">" + "".join(cands) + "</ul>"] if cands else []
+    if others:
+        rows.append("<h2>Autres personnalités</h2><ul class=\"credits\">" + "".join(others) + "</ul>")
     body = f"""<div class="prose">
 <section class="mhero"><img src="/assets/logo-head.webp" alt="" width="104" height="83"><div><h1>Crédits photos</h1><p>Les portraits des candidats viennent de Wikimedia Commons et sont sous licence libre : voici leurs auteurs et leurs licences.</p></div></section>
-<p>Pour chaque candidat, la photo libre la plus récente où le visage est net est retenue ; les candidats sans photo libre gardent leurs initiales. Les images sont recadrées sur le visage. C'est la même sélection que sur <a href="{VOTONA}/a-propos/#credits-photos">Votona</a>. Une photo vous concerne et vous souhaitez son retrait ? Écrivez à <strong>{CONTACT}</strong>.</p>
-<ul class="credits">
+<p>Pour chaque candidat, la photo libre la plus récente où le visage est net est retenue ; pour les autres personnalités, c'est l'image de référence de leur fiche Wikidata, quand elle est sous licence libre et que le visage est net. Sans photo libre, la personne garde ses initiales. Les images sont recadrées sur le visage. C'est la même sélection que sur <a href="{VOTONA}/a-propos/#credits-photos">Votona</a>. Une photo vous concerne et vous souhaitez son retrait ? Écrivez à <strong>{CONTACT}</strong>.</p>
 {"".join(rows)}
-</ul>
 </div>"""
     return page(site, "/credits-photos/", "Crédits photos - Votona Observatoire",
                 "Auteurs et licences des portraits des candidats à la présidentielle 2027, issus de Wikimedia Commons.", "methode", body)
