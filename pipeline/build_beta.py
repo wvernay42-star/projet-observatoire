@@ -125,9 +125,11 @@ def build_site(page: str, site_dir: Path = SITE_DIR) -> None:
     (site_dir / "assets" / "props").mkdir(exist_ok=True)
     for f in PROPS_DIR.glob("*.webp"):
         shutil.copyfile(f, site_dir / "assets" / "props" / f.name)
-    (site_dir / "assets" / "portraits").mkdir(exist_ok=True)  # portraits libres des candidats
-    for f in PORTRAITS_DIR.glob("*.webp"):
-        shutil.copyfile(f, site_dir / "assets" / "portraits" / f.name)
+    if (site_dir / "assets" / "portraits").exists():
+        shutil.rmtree(site_dir / "assets" / "portraits")
+    (site_dir / "assets" / "portraits").mkdir(parents=True)  # portraits libres, seulement ceux qui sont affichés
+    for key in sorted(build_pages.displayed_portraits()):
+        shutil.copyfile(PORTRAITS_DIR / f"{key}.webp", site_dir / "assets" / "portraits" / f"{key}.webp")
     (site_dir / "assets" / "characters").mkdir(exist_ok=True)  # personnages de Votona (en-têtes)
     for f in CHARS_DIR.glob("*.webp"):
         shutil.copyfile(f, site_dir / "assets" / "characters" / f.name)

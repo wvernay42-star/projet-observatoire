@@ -21,6 +21,23 @@ Les décisions durables sont aussi consignées dans [decisions.md](decisions.md)
 | — | Hébergement préprod (`preprod`) / prod (`main`) | ✅ en ligne (26/10) — projet Vercel `votona-observatoire` ; production indexable depuis le 28/10 |
 | — | Liens Votona → Observatoire | ⏳ actifs sur `draft` (test, 26/10) ; `main` sur demande du porteur |
 
+## 2026-11-03 — Portraits des autres personnalités : collecte étalée par la routine
+
+- Wikimedia limite fortement les adresses partagées des environnements cloud (429, ou 403 « robot
+  policy ») : une collecte d'un seul tenant n'aboutit pas. Nouveau module `pipeline/portraits_sync.py` :
+  traite au plus 20 photos par passage, enregistre chaque décision (retenue, sans photo, non libre,
+  visage inutilisable) dans `data/seeds/portraits_state.json`, s'arrête proprement au premier refus
+  et reprend au passage suivant. Image principale Wikidata (P18), licence libre obligatoire, un seul
+  visage net et centré (OpenCV, dépendance ajoutée), recadrage 192×192 WebP dans `web/beta/portraits/`,
+  crédits dans `data/seeds/portraits.json`.
+- Point de départ : 209 personnes hors candidats ; 129 traitées (38 portraits retenus, 78 sans photo
+  Wikidata, 4 non libres, 9 visages inutilisables), 80 à traiter (environ 4 passages).
+- Affichage coupé (`build_pages.OTHERS_PORTRAITS = False`) tant que tout n'est pas traité : à passer à
+  True avec l'accord du porteur quand `--status` affiche 0 restante. Le site ne publie que les
+  portraits affichés. La routine quotidienne lance `portraits_sync --max 20` avant la régénération ;
+  hôtes à autoriser dans l'environnement « Observatoire » : query.wikidata.org, commons.wikimedia.org,
+  upload.wikimedia.org, fr.wikipedia.org. 95 tests OK.
+
 ## 2026-11-02 (journée) — Navigation : Personnalités et Partis dans « Faits vérifiés »
 
 - Barre du haut ramenée à trois entrées : Accueil · Faits vérifiés · Sujets. Personnalités et

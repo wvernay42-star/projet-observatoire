@@ -28,7 +28,11 @@ from pipeline.connectors.base import SEEDS_DIR
 ROOT = Path(__file__).resolve().parents[1]
 TEMPLATE = ROOT / "web" / "beta" / "template.html"
 OG_DIR = ROOT / "web" / "beta" / "og"  # images de partage (scripts/og-images.js)
-PORTRAITS_DIR = ROOT / "web" / "beta" / "portraits"  # portraits libres des candidats (192×192 WebP)
+PORTRAITS_DIR = ROOT / "web" / "beta" / "portraits"  # portraits libres (192×192 WebP)
+# Portraits des personnalités hors candidats (pipeline/portraits_sync.py, collecte par petits lots) : coupés
+# tant que toutes les personnes n'ont pas été traitées (python -m pipeline.portraits_sync --status), pour
+# traiter tout le monde de la même façon. À passer à True avec l'accord du porteur.
+OTHERS_PORTRAITS = False
 SITE_URL = "https://observatoire.votona.fr"
 VOTONA = "https://votona.fr"
 CONTACT = "contact@votona.fr"
@@ -820,12 +824,20 @@ def build(site: Site, site_dir: Path) -> list[str]:
     return listed
 
 
-def load_portraits() -> dict[str, dict[str, str]]:
-    """Crédits des portraits libres (Wikimedia Commons) : un fichier web/beta/portraits/<votona_id>.webp par entrée."""
+def load_portraits(candidate_keys: set[str] | None = None) -> dict[str, dict[str, str]]:
+    """Crédits des portraits libres (Wikimedia Commons) : un fichier web/beta/portraits/<clé>.webp par entrée.
+    Clé = identifiant Votona (candidats) ou identifiant Wikidata (autres personnalités, si OTHERS_PORTRAITS)."""
     path = SEEDS_DIR / "portraits.json"
     if not path.exists():
         return {}
-    return {k: v for k, v in json.loads(path.read_text(encoding="utf-8")).items() if (PORTRAITS_DIR / f"{k}.webp").exists()}
+    return {k: v for k, v in json.loads(path.read_text(encoding="utf-8")).items()
+            if (PORTRAITS_DIR / f"{k}.webp").exists() and (OTHERS_PORTRAITS or candidate_keys is None or k in candidate_keys)}
+
+
+def displayed_portraits() -> set[str]:
+    """Clés des portraits publiés (candidats, et autres personnalités si OTHERS_PORTRAITS)."""
+    with (SEEDS_DIR / "candidates_2027.csv").open(encoding="utf-8") as f:
+        return set(load_portraits({r["votona_id"] for r in csv.DictReader(f)}))
 
 
 def load_site(facts: list[dict[str, Any]], generated_at: str) -> Site:
@@ -836,7 +848,7 @@ def load_site(facts: list[dict[str, Any]], generated_at: str) -> Site:
     with (SEEDS_DIR / "themes.csv").open(encoding="utf-8") as f:
         topics = [{"slug": t["key"], "label": t["label"], "category": t["category"]} for t in csv.DictReader(f) if t["kind"] == "topic"]
     site = Site.load(facts, candidates, topics, sources, generated_at)
-    site.portraits = load_portraits()
+    site.portraits = load_portraits({c["votona_id"] for c in candidates})
     return site
 
 

@@ -31,5 +31,6 @@ le tableau d'état.
 - python -m pipeline.build_beta   # artefact (web/beta/) + site statique (site/, Vercel, docs/hebergement.md)
 - python -m pipeline.build_pages  # pages fixes candidats/personnalités/partis/sujets/méthode + sitemap (aussi lancé par build_beta)
 - python -m pipeline.sync_candidates <votona>/index.html   # liste commune des candidats (Votona = source)
+- python -m pipeline.portraits_sync [--max 20|--status]   # portraits libres des autres personnalités, par petits lots (Wikimedia)
 - node scripts/og-images.js [--force|--candidates]   # images de partage manquantes (candidats, familles), web/beta/og/
 - pytest

@@ -1,242 +1,546 @@
 {
- "bardella": {
-  "title": "File:MEP Jordan Bardella.jpg",
+ "Q104032664": {
+  "author": "Ministère de l'Europe et des Affaires étrangères",
+  "date": "2023-11-14",
+  "license": "CC BY 3.0",
+  "license_url": "https://creativecommons.org/licenses/by/3.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Maud_Bregeon_(2023).jpg",
+  "title": "File:Maud Bregeon (2023).jpg"
+ },
+ "Q108823633": {
+  "author": "TrisHR",
+  "date": "2024-07-08",
+  "license": "CC BY 4.0",
+  "license_url": "https://creativecommons.org/licenses/by/4.0",
+  "page": "https://commons.wikimedia.org/wiki/File:20240708-P1010459_St%C3%A9phane_Vojetta_Wikipedia.jpg",
+  "title": "File:20240708-P1010459 Stéphane Vojetta Wikipedia.jpg"
+ },
+ "Q109043455": {
+  "author": "Xavier Cantat",
+  "date": "2022",
+  "license": "CC BY 4.0",
+  "license_url": "https://creativecommons.org/licenses/by/4.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Rodrigo_Arenas.jpg",
+  "title": "File:Rodrigo Arenas.jpg"
+ },
+ "Q109711972": {
+  "author": "Sikora62",
+  "date": "2023-08-26",
+  "license": "CC0",
+  "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+  "page": "https://commons.wikimedia.org/wiki/File:Sandra_Regol_(cropped).jpg",
+  "title": "File:Sandra Regol (cropped).jpg"
+ },
+ "Q112079050": {
+  "author": "Sacha Vaytet",
+  "date": "2023-01-29",
+  "license": "CC BY-SA 4.0",
+  "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Portrait_de_Madame_Sabrina_Agresti-Roubache.jpg",
+  "title": "File:Portrait de Madame Sabrina Agresti-Roubache.jpg"
+ },
+ "Q112079659": {
+  "author": "Ministère de la Culture - Thibaut Chapotot",
+  "date": "2022-05-20",
+  "license": "CC BY-SA 3.0 fr",
+  "license_url": "https://creativecommons.org/licenses/by-sa/3.0/fr/deed.en",
+  "page": "https://commons.wikimedia.org/wiki/File:Rima_Abdul-Malak_portrait.jpg",
+  "title": "File:Rima Abdul-Malak portrait.jpg"
+ },
+ "Q112448632": {
+  "author": "TrisHR",
+  "date": "2026-10-07",
+  "license": "CC BY-SA 4.0",
+  "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Sarah_Legrain,_d%C3%A9put%C3%A9_de_la_seizi%C3%A8me_circonscription_de_Paris.jpg",
+  "title": "File:Sarah Legrain, député de la seizième circonscription de Paris.jpg"
+ },
+ "Q112572505": {
+  "author": "TrisHR",
+  "date": "2024-07-08",
+  "license": "CC BY 4.0",
+  "license_url": "https://creativecommons.org/licenses/by/4.0",
+  "page": "https://commons.wikimedia.org/wiki/File:20240708-P1020422_Benjamin_Haddad_Wikipedia.jpg",
+  "title": "File:20240708-P1020422 Benjamin Haddad Wikipedia.jpg"
+ },
+ "Q112641115": {
+  "author": "TrisHR",
+  "date": "2024-07-08",
+  "license": "CC BY 4.0",
+  "license_url": "https://creativecommons.org/licenses/by/4.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Arthur_Delaporte,_2024.jpg",
+  "title": "File:Arthur Delaporte, 2024.jpg"
+ },
+ "Q112650653": {
+  "author": "TrisHR",
+  "date": "2026-02-17",
+  "license": "CC BY-SA 4.0",
+  "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+  "page": "https://commons.wikimedia.org/wiki/File:20260217-P1380269_Vermorel-Marques_Antoine_Wikipedia.jpg",
+  "title": "File:20260217-P1380269 Vermorel-Marques Antoine Wikipedia.jpg"
+ },
+ "Q112650795": {
+  "author": "VenteXe",
+  "date": "2023-07-05",
+  "license": "CC BY-SA 4.0",
+  "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Thomas.M%C3%A9nag%C3%A9.jpg",
+  "title": "File:Thomas.Ménagé.jpg"
+ },
+ "Q113015802": {
+  "author": "TrisHR",
+  "date": "2024-07-08",
+  "license": "CC BY 4.0",
+  "license_url": "https://creativecommons.org/licenses/by/4.0",
+  "page": "https://commons.wikimedia.org/wiki/File:20240708-P1020183_Caroline_Yadan_Wikipedia.jpg",
+  "title": "File:20240708-P1020183 Caroline Yadan Wikipedia.jpg"
+ },
+ "Q117340": {
+  "author": "bruno perroud",
+  "date": "2017-08-11",
+  "license": "CC BY-SA 4.0",
+  "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Fran%C3%A7ois_de_Rugy.jpg",
+  "title": "File:François de Rugy.jpg"
+ },
+ "Q123232131": {
   "author": "European Union",
+  "date": "2025-06-30",
   "license": "European Parliament",
   "license_url": "https://www.europarl.europa.eu/legal-notice/",
-  "date": "2024-06-21",
-  "page": "https://commons.wikimedia.org/wiki/File:MEP_Jordan_Bardella.jpg"
+  "page": "https://commons.wikimedia.org/wiki/File:Rima_Hassan_MEP_(2025).jpg",
+  "title": "File:Rima Hassan MEP (2025).jpg"
  },
- "philippe": {
-  "title": "File:Édouard Philippe 2019 (cropped).jpg",
-  "author": "Jacques Paquier",
-  "license": "CC BY 2.0",
-  "license_url": "https://creativecommons.org/licenses/by/2.0",
-  "date": "2019-04-01",
-  "page": "https://commons.wikimedia.org/wiki/File:%C3%89douard_Philippe_2019_(cropped).jpg"
- },
- "attal": {
-  "title": "File:Gabriel attal 02.jpg",
-  "author": "Politics2026F",
-  "license": "CC BY-SA 4.0",
-  "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
-  "date": "2026-09-14",
-  "page": "https://commons.wikimedia.org/wiki/File:Gabriel_attal_02.jpg"
- },
- "retailleau": {
-  "title": "File:Bruno Retailleau - Ministre de l'Intérieur français (cropped).jpg",
-  "author": "Anthonymontardyfr",
-  "license": "CC BY 4.0",
-  "license_url": "https://creativecommons.org/licenses/by/4.0",
-  "date": "2025-06-05",
-  "page": "https://commons.wikimedia.org/wiki/File:Bruno_Retailleau_-_Ministre_de_l%27Int%C3%A9rieur_fran%C3%A7ais_(cropped).jpg"
- },
- "melenchon": {
-  "title": "File:Mélenchon 2027 - 55261894422 (cropped).jpg",
-  "author": "jlm2017.fr",
-  "license": "CC BY 4.0",
-  "license_url": "https://creativecommons.org/licenses/by/4.0",
-  "date": "2026-05-06",
-  "page": "https://commons.wikimedia.org/wiki/File:Jean_Luc_M%C3%A9lenchon_en_mai_2026-_55261894422_(cropped).jpg"
- },
- "glucksmann": {
-  "title": "File:1720448398743 20240708 GLUCKSMANN Raphael FR 006.jpg",
+ "Q125398344": {
   "author": "European Union 2024 - Source : EP",
+  "date": "2024-06",
   "license": "European Parliament",
   "license_url": "https://www.europarl.europa.eu/legal-notice/",
-  "date": "2024-07",
-  "page": "https://commons.wikimedia.org/wiki/File:1720448398743_20240708_GLUCKSMANN_Raphael_FR_006.jpg"
+  "page": "https://commons.wikimedia.org/wiki/File:1718798707847_20240618_VALET_Matthieu_FR_004.jpg",
+  "title": "File:1718798707847 20240618 VALET Matthieu FR 004.jpg"
  },
- "tondelier": {
-  "title": "File:Huma2023MarineTondelier (cropped).jpg",
-  "author": "Selbymay",
+ "Q127270999": {
+  "author": "TrisHR",
+  "date": "2024-07-09",
   "license": "CC BY 4.0",
   "license_url": "https://creativecommons.org/licenses/by/4.0",
-  "date": "2023-09-17",
-  "page": "https://commons.wikimedia.org/wiki/File:Huma2023MarineTondelier_(cropped).jpg"
+  "page": "https://commons.wikimedia.org/wiki/File:Anne_Sicard_(cropped).jpg",
+  "title": "File:Anne Sicard (cropped).jpg"
  },
- "bertrand": {
-  "title": "File:Xavier Bertrand - 2025 (cropped).jpg",
-  "author": "Claudio Centonze / European Union, 2025 / EC - Audiovisual Service",
-  "license": "CC BY 4.0",
-  "license_url": "https://creativecommons.org/licenses/by/4.0",
-  "date": "2025-04-08",
-  "page": "https://commons.wikimedia.org/wiki/File:Xavier_Bertrand_-_2025_(cropped).jpg"
- },
- "lepen": {
-  "title": "File:Marine Le Pen à Mormant-sur-Vernisson le 9 juin 2025.jpg",
-  "author": "Vox España",
-  "license": "CC0",
-  "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
-  "date": "2025-06-09",
-  "page": "https://commons.wikimedia.org/wiki/File:Marine_Le_Pen_%C3%A0_Mormant-sur-Vernisson_le_9_juin_2025.jpg"
- },
- "lisnard": {
-  "title": "File:David Lisnard en 2026.jpg",
-  "author": "Grégor Sauvagère",
-  "license": "CC BY-SA 4.0",
-  "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
-  "date": "2026-10-08",
-  "page": "https://commons.wikimedia.org/wiki/File:David_Lisnard_en_2026.jpg"
- },
- "dupont-aignan": {
-  "title": "File:Nicolas Dupont-Aignan, homme politique français.jpg",
-  "author": "Debout la France",
-  "license": "CC BY-SA 4.0",
-  "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
-  "date": "2019-03-01",
-  "page": "https://commons.wikimedia.org/wiki/File:Nicolas_Dupont-Aignan,_homme_politique_fran%C3%A7ais.jpg"
- },
- "faure": {
-  "title": "File:Olivier Faure PSE-CARCA--1194 (cropped).jpg",
-  "author": "PES Group Committee of the Regions",
-  "license": "CC BY 2.0",
-  "license_url": "https://creativecommons.org/licenses/by/2.0",
-  "date": "2018-09-07",
-  "page": "https://commons.wikimedia.org/wiki/File:Olivier_Faure_PSE-CARCA--1194_(cropped).jpg"
- },
- "arthaud": {
-  "title": "File:Nathalie Arthaud (LO) 19-05-2024.jpg",
-  "author": "Kokluts",
-  "license": "CC BY-SA 4.0",
-  "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
-  "date": "2024-05-19",
-  "page": "https://commons.wikimedia.org/wiki/File:Nathalie_Arthaud_(LO)_19-05-2024.jpg"
- },
- "philippot": {
-  "title": "File:Florian Philippot1.jpg",
-  "author": "tocsin",
+ "Q12944": {
+  "author": "groupe UMP Sénat",
+  "date": "2012",
   "license": "CC BY 3.0",
   "license_url": "https://creativecommons.org/licenses/by/3.0",
-  "date": "2025-09-22",
-  "page": "https://commons.wikimedia.org/wiki/File:Florian_Philippot1.jpg"
+  "page": "https://commons.wikimedia.org/wiki/File:Fran%C3%A7ois-No%C3%ABl_Buffet_Etats_g%C3%A9n%C3%A9raux_de_la_d%C3%A9mocratie_territoriale_2012_(crop).jpg",
+  "title": "File:François-Noël Buffet Etats généraux de la démocratie territoriale 2012 (crop).jpg"
  },
- "asselineau": {
-  "title": "File:François ASSELINEAU.jpg",
-  "author": "Union Populaire Républicaine",
-  "license": "CC BY-SA 4.0",
-  "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
-  "date": "2014-01-01",
-  "page": "https://commons.wikimedia.org/wiki/File:Fran%C3%A7ois_ASSELINEAU.jpg"
+ "Q12963": {
+  "author": "Service photographique de Matignon",
+  "date": "2025",
+  "license": "Licence Ouverte",
+  "license_url": "https://www.etalab.gouv.fr/licence-ouverte-open-licence",
+  "page": "https://commons.wikimedia.org/wiki/File:Bayrou_Matignon_(cropped).jpg",
+  "title": "File:Bayrou Matignon (cropped).jpg"
  },
- "kazib": {
-  "title": "File:Anasse Kazib - La Voce delle Lotte 2020 (cropped).png",
-  "author": "La Voce delle Lotte",
-  "license": "CC BY 3.0",
-  "license_url": "https://creativecommons.org/licenses/by/3.0",
-  "date": "2020",
-  "page": "https://commons.wikimedia.org/wiki/File:Anasse_Kazib_-_La_Voce_delle_Lotte_2020_(cropped).png"
- },
- "branco": {
-  "title": "File:2019 - Centre Stage - Day 2 VJR21625 (49024215596).jpg",
+ "Q157": {
   "author": "Web Summit",
+  "date": "2017-11-30",
   "license": "CC BY 2.0",
   "license_url": "https://creativecommons.org/licenses/by/2.0",
-  "date": "2019-11-06",
-  "page": "https://commons.wikimedia.org/wiki/File:2019_-_Centre_Stage_-_Day_2_VJR21625_(49024215596).jpg"
+  "page": "https://commons.wikimedia.org/wiki/File:Fran%C3%A7ois_Hollande_-_2017_(27869823159)_(cropped_2).jpg",
+  "title": "File:François Hollande - 2017 (27869823159) (cropped 2).jpg"
  },
- "ruffin": {
-  "title": "File:François Ruffin (cropped).jpg",
-  "author": "Thinkerview",
+ "Q268634": {
+  "author": "Marie-Lan Nguyen",
+  "date": "2010-03-10",
+  "license": "CC BY 3.0",
+  "license_url": "https://creativecommons.org/licenses/by/3.0",
+  "page": "https://commons.wikimedia.org/wiki/File:C%C3%A9cile_Duflot,_2010_(cropped).jpg",
+  "title": "File:Cécile Duflot, 2010 (cropped).jpg"
+ },
+ "Q27182": {
+  "author": "Thesupermat",
+  "date": "2016-01-26",
   "license": "CC BY-SA 4.0",
   "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
-  "date": "2022-10-06",
-  "page": "https://commons.wikimedia.org/wiki/File:Fran%C3%A7ois_Ruffin_(cropped).jpg"
+  "page": "https://commons.wikimedia.org/wiki/File:Festival_automobile_international_2016_-_Photocall_-_043_(cropped).jpg",
+  "title": "File:Festival automobile international 2016 - Photocall - 043 (cropped).jpg"
  },
- "brun": {
-  "title": "File:LOUVIERS - 4e circo Eure - Philippe Brun nouveau député 22 juin 2022 (1) (cropped).jpg",
-  "author": "Pierre2777",
-  "license": "CC BY-SA 4.0",
-  "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
-  "date": "2022-06-22",
-  "page": "https://commons.wikimedia.org/wiki/File:LOUVIERS_-_4e_circo_Eure_-_Philippe_Brun_nouveau_d%C3%A9put%C3%A9_22_juin_2022_(1)_(cropped).jpg"
+ "Q292458": {
+  "author": "European Union 2024 - Source : EP",
+  "date": "2024-06",
+  "license": "European Parliament",
+  "license_url": "https://www.europarl.europa.eu/legal-notice/",
+  "page": "https://commons.wikimedia.org/wiki/File:Marion_Mar%C3%A9chal_MEP_(2024).jpg",
+  "title": "File:Marion Maréchal MEP (2024).jpg"
  },
- "massard": {
-  "title": "File:Member of the European Parliament for France Lydie Massard (cropped).jpg",
-  "author": "© European Union, 1998 – 2026",
-  "license": "Attribution",
-  "license_url": "",
-  "date": "2023-09-25",
-  "page": "https://commons.wikimedia.org/wiki/File:Member_of_the_European_Parliament_for_France_Lydie_Massard_(cropped).jpg"
- },
- "lalanne": {
-  "title": "File:Lalanne 2021 (cropped).jpg",
-  "author": "Thomas Bresson",
-  "license": "CC BY 4.0",
-  "license_url": "https://creativecommons.org/licenses/by/4.0",
-  "date": "2021-07-17",
-  "page": "https://commons.wikimedia.org/wiki/File:Lalanne_2021_(cropped).jpg"
- },
- "cazeneuve": {
-  "title": "File:Bernard Cazeneuve, (42399145362) (cropped).jpg",
-  "author": "Jérémy Barande",
-  "license": "CC BY-SA 2.0",
-  "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
-  "date": "2018-05-29",
-  "page": "https://commons.wikimedia.org/wiki/File:Bernard_Cazeneuve,_(42399145362)_(cropped).jpg"
- },
- "batho": {
-  "title": "File:Delphine Batho (cropped).png",
-  "author": "DeuxSevres79",
-  "license": "CC BY-SA 4.0",
-  "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
-  "date": "2018-09-08",
-  "page": "https://commons.wikimedia.org/wiki/File:Delphine_Batho_(cropped).png"
- },
- "verdier": {
-  "title": "File:Fabien Verdier Primaire socialiste.jpg",
-  "author": "Thamrielle",
-  "license": "CC BY-SA 4.0",
-  "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
-  "date": "2015",
-  "page": "https://commons.wikimedia.org/wiki/File:Fabien_Verdier_Primaire_socialiste.jpg"
- },
- "maurel": {
-  "title": "File:Emmanuel Maurel (231019).jpg",
-  "author": "GUE/NGL",
-  "license": "CC BY-SA 2.0",
-  "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
-  "date": "2019-10-23",
-  "page": "https://commons.wikimedia.org/wiki/File:Emmanuel_Maurel_(231019).jpg"
- },
- "roussel": {
-  "title": "File:Fabien Roussel au 40e congrès du PCF à Lille.jpg",
-  "author": "NakaraZn",
-  "license": "CC0",
-  "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
-  "date": "2026-07-03",
-  "page": "https://commons.wikimedia.org/wiki/File:Fabien_Roussel_au_40e_congr%C3%A8s_du_PCF_%C3%A0_Lille.jpg"
- },
- "zemmour": {
-  "title": "File:Éric zemmour 2023.jpg",
-  "author": "ManoSolo13241324",
-  "license": "CC BY-SA 4.0",
-  "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
-  "date": "2023-03-16",
-  "page": "https://commons.wikimedia.org/wiki/File:%C3%89ric_zemmour_2023.jpg"
- },
- "becht": {
-  "title": "File:Olivier Becht 2023 (cropped).jpg",
-  "author": "Palácio do Planalto from Brasilia, Brasil",
+ "Q433637": {
+  "author": "Belgian Presidency of the Council of the EU 2024 from Belgium",
+  "date": "2024-04-03",
   "license": "CC BY 2.0",
   "license_url": "https://creativecommons.org/licenses/by/2.0",
-  "date": "2023-01-04",
-  "page": "https://commons.wikimedia.org/wiki/File:Olivier_Becht_2023_(cropped).jpg"
+  "page": "https://commons.wikimedia.org/wiki/File:EU2024BE_240403_Informal_meeting_of_Transport_Ministers_Egmont_Palace_JNZT_0115_(53629377538).jpg",
+  "title": "File:EU2024BE 240403 Informal meeting of Transport Ministers Egmont Palace JNZT 0115 (53629377538).jpg"
  },
- "platret": {
-  "title": "File:GPlatret.jpg",
-  "author": "Jérémy Viger",
-  "license": "CC0",
-  "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
-  "date": "2017-01-03",
-  "page": "https://commons.wikimedia.org/wiki/File:GPlatret.jpg"
+ "Q438465": {
+  "author": "Florian David Pm",
+  "date": "2024-12-12",
+  "license": "CC BY-SA 4.0",
+  "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Barnier_cropped.jpg",
+  "title": "File:Barnier cropped.jpg"
  },
- "polony": {
-  "title": "File:Natacha Polony Cannes 2015.jpg",
-  "author": "Georges Biard",
+ "Q441791": {
+  "author": "greensefa",
+  "date": "2014-10-02",
+  "license": "CC BY 2.0",
+  "license_url": "https://creativecommons.org/licenses/by/2.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Yannick_Jadot,_2014_(cropped).jpg",
+  "title": "File:Yannick Jadot, 2014 (cropped).jpg"
+ },
+ "Q445705": {
+  "author": "Andy Mabbett",
+  "date": "2014-02-04",
   "license": "CC BY-SA 3.0",
   "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Philippe_Juvin_02.JPG",
+  "title": "File:Philippe Juvin 02.JPG"
+ },
+ "Q455023": {
+  "author": "Gail Leenstra",
+  "date": "2024-09-07",
+  "license": "CC BY-SA 4.0",
+  "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Val%C3%A9rie_P%C3%A9cresse_at_a_2024_Paralympic_Games_media_conference_in_2024_3_(cropped).jpg",
+  "title": "File:Valérie Pécresse at a 2024 Paralympic Games media conference in 2024 3 (cropped).jpg"
+ },
+ "Q47502155": {
+  "author": "B.MODIFICATEUR",
+  "date": "2023-03-22",
+  "license": "CC BY-SA 4.0",
+  "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+  "page": "https://commons.wikimedia.org/wiki/File:David-amiel.jpg",
+  "title": "File:David-amiel.jpg"
+ },
+ "Q59601214": {
+  "author": "European Parliament from EU",
+  "date": "2022-09-14",
+  "license": "CC BY 2.0",
+  "license_url": "https://creativecommons.org/licenses/by/2.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Manon_Aubry_,_SOTEU_2022_(52359513224)_(cropped).jpg",
+  "title": "File:Manon Aubry , SOTEU 2022 (52359513224) (cropped).jpg"
+ },
+ "Q60604481": {
+  "author": "European Union 2024 - Source : EP",
+  "date": "2024-06",
+  "license": "European Parliament",
+  "license_url": "https://www.europarl.europa.eu/legal-notice/",
+  "page": "https://commons.wikimedia.org/wiki/File:1718810508494_20240619_JORON_Virginie_FR_004.jpg",
+  "title": "File:1718810508494 20240619 JORON Virginie FR 004.jpg"
+ },
+ "Q62976462": {
+  "author": "Tomkiou",
+  "date": "2024-07-21",
+  "license": "CC0",
+  "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+  "page": "https://commons.wikimedia.org/wiki/File:Antoine_L%C3%A9aument_le_21_juillet_2024.jpg",
+  "title": "File:Antoine Léaument le 21 juillet 2024.jpg"
+ },
+ "Q63347906": {
+  "author": "European Union 2024 - Source : EP",
+  "date": "2024-06",
+  "license": "European Parliament",
+  "license_url": "https://www.europarl.europa.eu/legal-notice/",
+  "page": "https://commons.wikimedia.org/wiki/File:1720621117032_20240710_TOUSSAINT_Marie_FR_011.jpg",
+  "title": "File:1720621117032 20240710 TOUSSAINT Marie FR 011.jpg"
+ },
+ "Q63371085": {
+  "author": "Jdei87",
+  "date": "2022-06-20",
+  "license": "CC BY-SA 4.0",
+  "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Christelle_d%27Intorni_(cropped).png",
+  "title": "File:Christelle d'Intorni (cropped).png"
+ },
+ "Q63655": {
+  "author": "ФРД",
+  "date": "2014-05-01",
+  "license": "CC BY-SA 4.0",
+  "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Thierry.Mariani.jpg",
+  "title": "File:Thierry.Mariani.jpg"
+ },
+ "Q63764512": {
+  "author": "Christophe Licoppe / European Union",
+  "date": "2024-07-10",
+  "license": "CC BY 4.0",
+  "license_url": "https://creativecommons.org/licenses/by/4.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Val%C3%A9rie_Hayer_at_a_Renew_Europe_meeting_in_European_Parliament_-_2024_(P064202-298895)_(cropped).jpg",
+  "title": "File:Valérie Hayer at a Renew Europe meeting in European Parliament - 2024 (P064202-298895) (cropped).jpg"
+ },
+ "Q65580703": {
+  "author": "LouisCLDS",
+  "date": "2022-07-04",
+  "license": "CC BY-SA 4.0",
+  "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Portrait_officiel_-_Dominique_Faure.jpg",
+  "title": "File:Portrait officiel - Dominique Faure.jpg"
+ },
+ "Q82637284": {
+  "author": "Anh De France",
+  "date": "2021-12-08",
+  "license": "CC BY-SA 2.0",
+  "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Sarah_Knafo,_d%C3%A9cembre_2021_(52104057536).jpg",
+  "title": "File:Sarah Knafo, décembre 2021 (52104057536).jpg"
+ },
+ "Q98251954": {
+  "author": "Floreal41",
+  "date": "2024-07-14",
+  "license": "CC0",
+  "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+  "page": "https://commons.wikimedia.org/wiki/File:Alexandre_Avril_2024.jpg",
+  "title": "File:Alexandre Avril 2024.jpg"
+ },
+ "arthaud": {
+  "author": "Kokluts",
+  "date": "2024-05-19",
+  "license": "CC BY-SA 4.0",
+  "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Nathalie_Arthaud_(LO)_19-05-2024.jpg",
+  "title": "File:Nathalie Arthaud (LO) 19-05-2024.jpg"
+ },
+ "asselineau": {
+  "author": "Union Populaire Républicaine",
+  "date": "2014-01-01",
+  "license": "CC BY-SA 4.0",
+  "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Fran%C3%A7ois_ASSELINEAU.jpg",
+  "title": "File:François ASSELINEAU.jpg"
+ },
+ "attal": {
+  "author": "Politics2026F",
+  "date": "2026-09-14",
+  "license": "CC BY-SA 4.0",
+  "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Gabriel_attal_02.jpg",
+  "title": "File:Gabriel attal 02.jpg"
+ },
+ "bardella": {
+  "author": "European Union",
+  "date": "2024-06-21",
+  "license": "European Parliament",
+  "license_url": "https://www.europarl.europa.eu/legal-notice/",
+  "page": "https://commons.wikimedia.org/wiki/File:MEP_Jordan_Bardella.jpg",
+  "title": "File:MEP Jordan Bardella.jpg"
+ },
+ "batho": {
+  "author": "DeuxSevres79",
+  "date": "2018-09-08",
+  "license": "CC BY-SA 4.0",
+  "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Delphine_Batho_(cropped).png",
+  "title": "File:Delphine Batho (cropped).png"
+ },
+ "becht": {
+  "author": "Palácio do Planalto from Brasilia, Brasil",
+  "date": "2023-01-04",
+  "license": "CC BY 2.0",
+  "license_url": "https://creativecommons.org/licenses/by/2.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Olivier_Becht_2023_(cropped).jpg",
+  "title": "File:Olivier Becht 2023 (cropped).jpg"
+ },
+ "bertrand": {
+  "author": "Claudio Centonze / European Union, 2025 / EC - Audiovisual Service",
+  "date": "2025-04-08",
+  "license": "CC BY 4.0",
+  "license_url": "https://creativecommons.org/licenses/by/4.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Xavier_Bertrand_-_2025_(cropped).jpg",
+  "title": "File:Xavier Bertrand - 2025 (cropped).jpg"
+ },
+ "branco": {
+  "author": "Web Summit",
+  "date": "2019-11-06",
+  "license": "CC BY 2.0",
+  "license_url": "https://creativecommons.org/licenses/by/2.0",
+  "page": "https://commons.wikimedia.org/wiki/File:2019_-_Centre_Stage_-_Day_2_VJR21625_(49024215596).jpg",
+  "title": "File:2019 - Centre Stage - Day 2 VJR21625 (49024215596).jpg"
+ },
+ "brun": {
+  "author": "Pierre2777",
+  "date": "2022-06-22",
+  "license": "CC BY-SA 4.0",
+  "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+  "page": "https://commons.wikimedia.org/wiki/File:LOUVIERS_-_4e_circo_Eure_-_Philippe_Brun_nouveau_d%C3%A9put%C3%A9_22_juin_2022_(1)_(cropped).jpg",
+  "title": "File:LOUVIERS - 4e circo Eure - Philippe Brun nouveau député 22 juin 2022 (1) (cropped).jpg"
+ },
+ "cazeneuve": {
+  "author": "Jérémy Barande",
+  "date": "2018-05-29",
+  "license": "CC BY-SA 2.0",
+  "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Bernard_Cazeneuve,_(42399145362)_(cropped).jpg",
+  "title": "File:Bernard Cazeneuve, (42399145362) (cropped).jpg"
+ },
+ "dupont-aignan": {
+  "author": "Debout la France",
+  "date": "2019-03-01",
+  "license": "CC BY-SA 4.0",
+  "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Nicolas_Dupont-Aignan,_homme_politique_fran%C3%A7ais.jpg",
+  "title": "File:Nicolas Dupont-Aignan, homme politique français.jpg"
+ },
+ "faure": {
+  "author": "PES Group Committee of the Regions",
+  "date": "2018-09-07",
+  "license": "CC BY 2.0",
+  "license_url": "https://creativecommons.org/licenses/by/2.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Olivier_Faure_PSE-CARCA--1194_(cropped).jpg",
+  "title": "File:Olivier Faure PSE-CARCA--1194 (cropped).jpg"
+ },
+ "glucksmann": {
+  "author": "European Union 2024 - Source : EP",
+  "date": "2024-07",
+  "license": "European Parliament",
+  "license_url": "https://www.europarl.europa.eu/legal-notice/",
+  "page": "https://commons.wikimedia.org/wiki/File:1720448398743_20240708_GLUCKSMANN_Raphael_FR_006.jpg",
+  "title": "File:1720448398743 20240708 GLUCKSMANN Raphael FR 006.jpg"
+ },
+ "kazib": {
+  "author": "La Voce delle Lotte",
+  "date": "2020",
+  "license": "CC BY 3.0",
+  "license_url": "https://creativecommons.org/licenses/by/3.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Anasse_Kazib_-_La_Voce_delle_Lotte_2020_(cropped).png",
+  "title": "File:Anasse Kazib - La Voce delle Lotte 2020 (cropped).png"
+ },
+ "lalanne": {
+  "author": "Thomas Bresson",
+  "date": "2021-07-17",
+  "license": "CC BY 4.0",
+  "license_url": "https://creativecommons.org/licenses/by/4.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Lalanne_2021_(cropped).jpg",
+  "title": "File:Lalanne 2021 (cropped).jpg"
+ },
+ "lepen": {
+  "author": "Vox España",
+  "date": "2025-06-09",
+  "license": "CC0",
+  "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+  "page": "https://commons.wikimedia.org/wiki/File:Marine_Le_Pen_%C3%A0_Mormant-sur-Vernisson_le_9_juin_2025.jpg",
+  "title": "File:Marine Le Pen à Mormant-sur-Vernisson le 9 juin 2025.jpg"
+ },
+ "lisnard": {
+  "author": "Grégor Sauvagère",
+  "date": "2026-10-08",
+  "license": "CC BY-SA 4.0",
+  "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+  "page": "https://commons.wikimedia.org/wiki/File:David_Lisnard_en_2026.jpg",
+  "title": "File:David Lisnard en 2026.jpg"
+ },
+ "massard": {
+  "author": "© European Union, 1998 – 2026",
+  "date": "2023-09-25",
+  "license": "Attribution",
+  "license_url": "",
+  "page": "https://commons.wikimedia.org/wiki/File:Member_of_the_European_Parliament_for_France_Lydie_Massard_(cropped).jpg",
+  "title": "File:Member of the European Parliament for France Lydie Massard (cropped).jpg"
+ },
+ "maurel": {
+  "author": "GUE/NGL",
+  "date": "2019-10-23",
+  "license": "CC BY-SA 2.0",
+  "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Emmanuel_Maurel_(231019).jpg",
+  "title": "File:Emmanuel Maurel (231019).jpg"
+ },
+ "melenchon": {
+  "author": "jlm2017.fr",
+  "date": "2026-05-06",
+  "license": "CC BY 4.0",
+  "license_url": "https://creativecommons.org/licenses/by/4.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Jean_Luc_M%C3%A9lenchon_en_mai_2026-_55261894422_(cropped).jpg",
+  "title": "File:Mélenchon 2027 - 55261894422 (cropped).jpg"
+ },
+ "philippe": {
+  "author": "Jacques Paquier",
+  "date": "2019-04-01",
+  "license": "CC BY 2.0",
+  "license_url": "https://creativecommons.org/licenses/by/2.0",
+  "page": "https://commons.wikimedia.org/wiki/File:%C3%89douard_Philippe_2019_(cropped).jpg",
+  "title": "File:Édouard Philippe 2019 (cropped).jpg"
+ },
+ "philippot": {
+  "author": "tocsin",
+  "date": "2025-09-22",
+  "license": "CC BY 3.0",
+  "license_url": "https://creativecommons.org/licenses/by/3.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Florian_Philippot1.jpg",
+  "title": "File:Florian Philippot1.jpg"
+ },
+ "platret": {
+  "author": "Jérémy Viger",
+  "date": "2017-01-03",
+  "license": "CC0",
+  "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+  "page": "https://commons.wikimedia.org/wiki/File:GPlatret.jpg",
+  "title": "File:GPlatret.jpg"
+ },
+ "polony": {
+  "author": "Georges Biard",
   "date": "2015-05",
-  "page": "https://commons.wikimedia.org/wiki/File:Natacha_Polony_Cannes_2015.jpg"
+  "license": "CC BY-SA 3.0",
+  "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Natacha_Polony_Cannes_2015.jpg",
+  "title": "File:Natacha Polony Cannes 2015.jpg"
+ },
+ "retailleau": {
+  "author": "Anthonymontardyfr",
+  "date": "2025-06-05",
+  "license": "CC BY 4.0",
+  "license_url": "https://creativecommons.org/licenses/by/4.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Bruno_Retailleau_-_Ministre_de_l%27Int%C3%A9rieur_fran%C3%A7ais_(cropped).jpg",
+  "title": "File:Bruno Retailleau - Ministre de l'Intérieur français (cropped).jpg"
+ },
+ "roussel": {
+  "author": "NakaraZn",
+  "date": "2026-07-03",
+  "license": "CC0",
+  "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+  "page": "https://commons.wikimedia.org/wiki/File:Fabien_Roussel_au_40e_congr%C3%A8s_du_PCF_%C3%A0_Lille.jpg",
+  "title": "File:Fabien Roussel au 40e congrès du PCF à Lille.jpg"
+ },
+ "ruffin": {
+  "author": "Thinkerview",
+  "date": "2022-10-06",
+  "license": "CC BY-SA 4.0",
+  "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Fran%C3%A7ois_Ruffin_(cropped).jpg",
+  "title": "File:François Ruffin (cropped).jpg"
+ },
+ "tondelier": {
+  "author": "Selbymay",
+  "date": "2023-09-17",
+  "license": "CC BY 4.0",
+  "license_url": "https://creativecommons.org/licenses/by/4.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Huma2023MarineTondelier_(cropped).jpg",
+  "title": "File:Huma2023MarineTondelier (cropped).jpg"
+ },
+ "verdier": {
+  "author": "Thamrielle",
+  "date": "2015",
+  "license": "CC BY-SA 4.0",
+  "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Fabien_Verdier_Primaire_socialiste.jpg",
+  "title": "File:Fabien Verdier Primaire socialiste.jpg"
+ },
+ "zemmour": {
+  "author": "ManoSolo13241324",
+  "date": "2023-03-16",
+  "license": "CC BY-SA 4.0",
+  "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+  "page": "https://commons.wikimedia.org/wiki/File:%C3%89ric_zemmour_2023.jpg",
+  "title": "File:Éric zemmour 2023.jpg"
  }
 }

@@ -75,3 +75,13 @@
 - Ancienne page Claude de validation retirée de la routine : l'onglet « Observatoire » de l'admin
   Votona est le seul back-office (la page elle-même n'est pas supprimée).
 - Attribution : titres, partis et « X et Y » avant un nom connu → validation humaine, jamais automatique.
+
+## 2026-11-03
+- Portraits : photos sous licence libre de Wikimedia Commons uniquement, crédits publiés
+  (`/credits-photos/`). Candidats : la plus récente photo libre avec un seul visage net, validée par le
+  porteur. Autres personnalités : image principale de leur fiche Wikidata, même filtre de licence et de
+  visage ; collecte étalée par la routine, publication quand toutes les personnes sont traitées (même
+  traitement pour tous).
+- Navigation : Personnalités et Partis dans « Faits vérifiés » ; l'onglet « Personnalités » est retiré,
+  la liste complète s'ouvre depuis « Candidats 2027 ».
+
