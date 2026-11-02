@@ -27,6 +27,9 @@ Les décisions durables sont aussi consignées dans [decisions.md](decisions.md)
   Partis deviennent des vues de « Faits vérifiés », avec une barre d'onglets commune : Tous les
   faits · Candidats 2027 · Personnalités · Partis (libellés raccourcis sur mobile). « Faits
   vérifiés » reste allumée sur les listes, les fiches de personne et les pages de parti.
+- Dans la foulée (demande du porteur) : l'onglet « Personnalités » est retiré ; onglets restants :
+  Tous les faits · Candidats 2027 · Partis. La liste de toutes les personnalités (`/personnalites/`,
+  adresse inchangée) s'ouvre par un bouton en bas de « Candidats 2027 », avec un retour « ‹ Candidats 2027 ».
 - Adresses inchangées (`/candidats/`, `/personnalites/`, `/partis/`, fiches) : référencement et
   liens partagés intacts. Appliqué aux pages fixes (`facts_tabs`) et à l'application (`factsTabs`).
 - Prêt, non publié : photos des autres personnalités (pastille devant chaque nom, photo sur la fiche,

@@ -489,13 +489,14 @@ function fromHash() {
 document.addEventListener("click", (e) => { const b = e.target.closest("[data-go]"); if (b) go(b.dataset.go); });
 
 /* ---------- composants ---------- */
-// Onglets de « Faits vérifiés » : tous les faits, par candidat, par personnalité, par parti.
-const FACT_TABS = [["faits", ["Tous", el("span", { class: "lg", text: " les faits" })]], ["candidats", ["Candidats", el("span", { class: "lg", text: " 2027" })]], ["toutes", "Personnalités"], ["partis", "Partis"]];
+// Onglets de « Faits vérifiés » : tous les faits, par candidat, par parti.
+// La liste de toutes les personnalités n'est pas un onglet : on y va depuis « Candidats 2027 ».
+const FACT_TABS = [["faits", ["Tous", el("span", { class: "lg", text: " les faits" })]], ["candidats", ["Candidats", el("span", { class: "lg", text: " 2027" })]], ["partis", "Partis"]];
 function factsTabs(active) {
   return el("div", { class: "tabs", role: "tablist", "aria-label": "Faits vérifiés par" }, FACT_TABS.map(([k, label]) => {
     const view = k === "faits" ? "faits" : k === "partis" ? "partis" : "personnalites";
     const attrs = { role: "tab", "aria-selected": String(k === active) };
-    const href = k === "faits" ? null : k === "partis" ? staticUrl("partis") : k === "candidats" ? staticUrl("personnalites") : (DATA.urls ? "/personnalites/" : null);
+    const href = k === "faits" ? null : k === "partis" ? staticUrl("partis") : staticUrl("personnalites");
     return href ? el("a", { ...attrs, href }, label)
       : el("button", { ...attrs, type: "button", on: { click: () => { if (view === "personnalites") { state.who = k; state.q = ""; } go(view); } } }, label);
   }));
@@ -679,7 +680,7 @@ const views = {
     const q = state.q.trim().toLowerCase();
     const search = el("input", { type: "search", class: "search q", placeholder: state.who === "candidats" ? "Chercher un candidat" : "Chercher une personnalité", value: state.q, "aria-label": "Chercher",
       on: { input: (e) => { state.q = e.target.value; const pos = e.target.selectionStart; render(); const s = document.querySelector("input.search"); s.focus(); s.setSelectionRange(pos, pos); } } });
-    const head = [intro("Personnalités", "Aucun classement : le nombre de vérifications dépend des choix des rédactions, pas de la sincérité des personnes. L'absence de vérification ne dit rien de l'exactitude des propos."),
+    const head = [intro(state.who === "candidats" ? "Les candidats 2027 vérifiés par les fact-\u2060checkers" : "Toutes les personnalités vérifiées", "Aucun classement : le nombre de vérifications dépend des choix des rédactions, pas de la sincérité des personnes. L'absence de vérification ne dit rien de l'exactitude des propos."),
       factsTabs(state.who), search];
     if (state.who === "candidats") {
       const count = (pid) => facts.filter((f) => f.person.id === pid);
@@ -694,12 +695,15 @@ const views = {
               el("span", { class: "party", text: c.votona_party + (c.status === "retiré" ? " · candidature retirée" : "") }),
               list.length ? miniBar(list) : null,
               el("span", { class: "meta", text: list.length ? plural(list.length, "déclaration vérifiée", "déclarations vérifiées") : "Aucune vérification à ce jour" }))));
-      })), el("p", { class: "small muted", text: "La même liste que sur Votona. Les vérifications ne comptent jamais dans le classement de Votona : les deux outils sont séparés." })];
+      })), el("button", { type: "button", class: "btn btn-ghost btn-row", on: { click: () => { state.who = "toutes"; state.q = ""; go("personnalites"); } } },
+        "Toutes les personnalités vérifiées (" + new Set(facts.map((f) => f.person.id)).size + ")"),
+        el("p", { class: "small muted", text: "La même liste que sur Votona. Les vérifications ne comptent jamais dans le classement de Votona : les deux outils sont séparés." })];
     }
     const byPerson = {};
     for (const f of facts) (byPerson[f.person.id] ||= []).push(f);
     const ids = Object.keys(byPerson).filter((id) => !q || persons[id].toLowerCase().includes(q)).sort((a, b) => persons[a].localeCompare(persons[b], "fr"));
-    return [...head, el("p", { class: "small muted", style: "margin:0", text: plural(ids.length, "personnalité", "personnalités") + " avec au moins une vérification, par ordre alphabétique." }),
+    return [el("nav", { class: "crumbs", "aria-label": "Fil d'Ariane" }, el("button", { type: "button", class: "linkish", on: { click: () => { state.who = "candidats"; state.q = ""; go("personnalites"); } } }, "‹ Candidats 2027")),
+      ...head, el("p", { class: "small muted", style: "margin:0", text: plural(ids.length, "personnalité", "personnalités") + " avec au moins une vérification, par ordre alphabétique." }),
       ids.length ? el("div", { class: "people" }, ids.map((id) => el("button", { type: "button", on: { click: () => go("personne", id) } },
         el("span", { class: "n1", text: persons[id] + (candidateById[id] ? " · 2027" : "") }), el("span", { class: "n2", text: byPerson[id].length + " vérif." })))) : el("p", { class: "muted", text: "Aucune personnalité trouvée." })];
   },

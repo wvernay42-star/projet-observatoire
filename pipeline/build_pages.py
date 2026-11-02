@@ -536,12 +536,13 @@ def family_page(site: Site, fid: str) -> tuple[str, str]:
                       og=og_image("sujets", fid))
 
 
+# La liste de toutes les personnalités (/personnalites/) n'est pas un onglet : on y va depuis « Candidats 2027 ».
 FACT_TABS = [("faits", 'Tous<span class="lg"> les faits</span>', "/#faits"), ("candidats", 'Candidats<span class="lg"> 2027</span>', "/candidats/"),
-             ("toutes", "Personnalités", "/personnalites/"), ("partis", "Partis", "/partis/")]
+             ("partis", "Partis", "/partis/")]
 
 
 def facts_tabs(active: str) -> str:
-    """Onglets de « Faits vérifiés » : tous les faits, par candidat, par personnalité, par parti."""
+    """Onglets de « Faits vérifiés » : tous les faits, par candidat, par parti."""
     return ('<div class="tabs" role="tablist" aria-label="Faits vérifiés par">' + "".join(
         f'<a href="{href}" role="tab" aria-selected="{str(key == active).lower()}">{label}</a>' for key, label, href in FACT_TABS) + "</div>")
 
@@ -577,6 +578,7 @@ def index_pages(site: Site) -> dict[str, str]:
                                     '<a class="btn btn-ghost" href="/sujets/">Voir les vérifications sujet par sujet</a></div>',
                                     search_box("Rechercher un candidat ou un parti…", "Aucun candidat ne correspond à cette recherche."),
                                     LEGEND, f'<ul class="vlist">{"".join(items)}</ul>',
+                                    f'<a class="btn btn-ghost btn-row" href="/personnalites/">Toutes les personnalités vérifiées ({len({f["person"]["id"] for f in site.facts})})</a>',
                                     '<p class="small muted">La même liste que sur Votona. Les vérifications ne comptent jamais dans le classement de Votona : les deux outils sont séparés.</p>',
                                     SEARCH_JS]))
     by_person: dict[str, int] = defaultdict(int)
@@ -590,6 +592,7 @@ def index_pages(site: Site) -> dict[str, str]:
                                         intro("Toutes les personnalités vérifiées", PEOPLE_INTRO,
                                               [(len(by_person), "personnalités"), (len(site.facts), "déclarations vérifiées")],
                                               ("economie", "securite", "ecologie")),
+                                        crumbs(("/candidats/", "Candidats 2027"), ("/sujets/", "Tous les sujets")),
                                         facts_tabs("toutes"),
                                         search_box("Rechercher une personnalité…", "Aucune personnalité ne correspond à cette recherche."),
                                         f'<p class="small muted" style="margin:0">{plural(len(by_person), "personnalité", "personnalités")} avec au moins une vérification, par ordre alphabétique.</p>',
