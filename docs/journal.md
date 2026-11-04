@@ -21,6 +21,18 @@ Les décisions durables sont aussi consignées dans [decisions.md](decisions.md)
 | — | Hébergement préprod (`preprod`) / prod (`main`) | ✅ en ligne (26/10) — projet Vercel `votona-observatoire` ; production indexable depuis le 28/10 |
 | — | Liens Votona → Observatoire | ⏳ actifs sur `draft` (test, 26/10) ; `main` sur demande du porteur |
 
+## 2026-11-04 — Routine quotidienne
+
+- Candidats : synchronisation avec https://votona.fr/ — 0 ajouté, 0 modifié, 0 absent ; 2 à confirmer (Selma Labib, Antoine Mikolajczak).
+- Décisions de l'admin (Supabase) : 1 décision lue, 0 appliquée (0 libellé, 0 attribution, 0 parti), 0 ignorée ; `rating_map.csv` inchangé.
+- Collecte : google_factcheck 17 récupérées / 1 nouvelle ; datacommons_feed 4 / 0 nouvelle.
+- Base : 7 604 vérifications ; claims : auto_sure 454, validated 326, rejected 6 742, to_review 0. Exportées : 780 (dont 241 liées à un candidat Votona).
+- Files déposées dans le back-office : libellés 0, attributions 0, partis 1, sources 7.
+- Part de verdicts positifs (sources.json, toutes déclarations) : TF1 Info 20,1 %, franceinfo Vrai ou Fake 28,9 %, AFP Factuel 0,4 %, Poligraph 20,6 %, 20 Minutes 11,0 %, Les Décodeurs 1,6 %.
+- Alerte : aucun résultat nouveau depuis 3 jours pour datacommons_feed.
+- Images de partage : rien à créer. Portraits : Wikimedia a limité l'accès, lot interrompu (0 traité) ; restantes 80 sur 209.
+- Beta régénérée (780 déclarations) et artefact republié (version 19). 95 tests OK.
+
 ## 2026-11-03 — Routine quotidienne
 
 - Candidats : synchronisation avec https://votona.fr/ — 0 ajouté, 0 modifié, 0 absent ; 2 à confirmer (Selma Labib, Antoine Mikolajczak).
