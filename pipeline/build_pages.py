@@ -541,7 +541,7 @@ def person_page(site: Site, pid: str) -> tuple[str, str, bool]:
             f"de fact-checking, avec le verdict d'origine et le lien vers chaque article." if n else
             f"{name} : aucune déclaration vérifiée à ce jour par les rédactions françaises de fact-checking suivies.")
     ld = [breadcrumb_ld(("/", "Observatoire"), ("/candidats/" if cand else "/personnalites/", "Candidats 2027" if cand else "Personnalités"), (path, name))]
-    og = og_image("candidats", cand["votona_id"]) if cand else "/assets/og.jpg"
+    og = og_image("candidats", cand["votona_id"]) if cand else og_image("pages", "personnalites")
     return path, page(site, path, title, desc, "faits", "\n".join(parts), indexable=bool(facts), ld=ld, og=og), bool(facts)
 
 
@@ -573,7 +573,7 @@ def party_page(site: Site, party_id: str) -> tuple[str, str]:
     title = f"{name} : déclarations vérifiées de ses membres - Votona Observatoire"
     desc = (f"{plural(len(facts), 'déclaration', 'déclarations')} de membres de {name}, vérifiée{'s' if len(facts) > 1 else ''} par "
             "les rédactions françaises de fact-checking, avec le parti à la date de chaque déclaration.")
-    return path, page(site, path, title, desc, "faits", body + "\n" + GUIDE_LINKS, ld=[breadcrumb_ld(("/", "Observatoire"), ("/partis/", "Partis"), (path, name))])
+    return path, page(site, path, title, desc, "faits", body + "\n" + GUIDE_LINKS, ld=[breadcrumb_ld(("/", "Observatoire"), ("/partis/", "Partis"), (path, name))], og=og_image("pages", "partis"))
 
 
 def family_page(site: Site, fid: str) -> tuple[str, str]:
@@ -648,7 +648,7 @@ def index_pages(site: Site) -> dict[str, str]:
                                     f'<ul class="vlist">{"".join(items_none)}</ul></section>',
                                     f'<a class="btn btn-ghost btn-row" href="/personnalites/">Toutes les personnalités vérifiées ({len({f["person"]["id"] for f in site.facts})})</a>',
                                     '<p class="small muted">La même liste que sur Votona. Les vérifications ne comptent jamais dans le classement de Votona : les deux outils sont séparés.</p>',
-                                    SEARCH_JS]))
+                                    SEARCH_JS]), og=og_image("pages", "candidats"))
     by_person: dict[str, int] = defaultdict(int)
     for f in site.facts:
         by_person[f["person"]["id"]] += 1
@@ -664,7 +664,7 @@ def index_pages(site: Site) -> dict[str, str]:
                                         facts_tabs("toutes"),
                                         search_box("Rechercher une personnalité…", "Aucune personnalité ne correspond à cette recherche."),
                                         f'<h2 class="sr-h">Liste alphabétique</h2><p class="small muted" style="margin:0">{plural(len(by_person), "personnalité", "personnalités")} avec au moins une vérification, par ordre alphabétique.</p>',
-                                        f'<div class="people">{links}</div>', SEARCH_JS]))
+                                        f'<div class="people">{links}</div>', SEARCH_JS]), og=og_image("pages", "personnalites"))
     by_party: dict[str, list] = defaultdict(list)
     for f in site.facts:
         if f["party"]["id"]:
@@ -695,7 +695,7 @@ def index_pages(site: Site) -> dict[str, str]:
                                  facts_tabs("partis"),
                                  search_box("Rechercher un parti ou un candidat…", "Aucun parti ne correspond à cette recherche."),
                                  block("Partis des candidats 2027", [p for p in ids if p in cp]),
-                                 block("Autres partis", [p for p in ids if p not in cp]), SEARCH_JS]))
+                                 block("Autres partis", [p for p in ids if p not in cp]), SEARCH_JS]), og=og_image("pages", "partis"))
     blind = [t for t in site.topics if not any(any(x["slug"] == t["slug"] for x in f["topics"]) for f in scoped)]
     pages["/sujets/"] = page(site, "/sujets/", "Sujets : les déclarations politiques vérifiées par thème - Votona Observatoire",
                              "Les déclarations politiques vérifiées, classées selon les 7 familles et les sujets du test présidentielle 2027 de Votona, avec les angles morts.",
@@ -711,7 +711,7 @@ def index_pages(site: Site) -> dict[str, str]:
                                  f'<p class="muted" style="margin:0">{len(blind)} sujets du test Votona sur {len(site.topics)} n\'ont aucune déclaration vérifiée '
                                  "des candidats 2027 ou de leurs partis. Les candidats en parlent dans leurs programmes, les rédactions ne les ont pas (encore) vérifiés sur ces points.</p>"
                                  '<div class="tags">' + "".join(f'<a class="chip" href="{VOTONA}/sujets/{t["slug"]}/">{escape(t["label"])}</a>' for t in blind)
-                                 + "</div></section>"]))
+                                 + "</div></section>"]), og=og_image("pages", "sujets"))
     return pages
 
 
@@ -765,7 +765,7 @@ def methode_page(site: Site) -> str:
 </div>"""
     return page(site, "/methode/", "Méthode de l'Observatoire - Votona Observatoire",
                 "Comment Votona Observatoire recense les vérifications des fact-checkers : verdict d'origine, parti à la date, recoupement, sujets, données ouvertes.",
-                "methode", body)
+                "methode", body, og=og_image("pages", "methode"))
 
 
 def cited_page(site: Site) -> str:

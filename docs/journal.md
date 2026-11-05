@@ -21,6 +21,11 @@ Les décisions durables sont aussi consignées dans [decisions.md](decisions.md)
 | — | Hébergement préprod (`preprod`) / prod (`main`) | ✅ en ligne (26/10) — projet Vercel `votona-observatoire` ; production indexable depuis le 28/10 |
 | — | Liens Votona → Observatoire | ⏳ actifs sur `draft` (test, 26/10) ; `main` sur demande du porteur |
 
+## 2026-11-05 (nuit, fin) — Lot 5 de la veille UX : images de partage par type de page
+
+- 5 images de partage ajoutées (`web/beta/og/pages/` : candidats, personnalités, partis, sujets, méthode), générées par `scripts/og-images.js` ; les 35 pages de partis partagent la leur, les 210 personnalités aussi ; les candidats gardent leur image individuelle. Aucun chiffre ni verdict dessus. `rating_map.csv` non modifié.
+- Non fait : harmonisation des libellés de navigation (« Faits vérifiés » / « Candidats 2027 »), en attente de l'avis du porteur.
+
 ## 2026-11-05 (nuit, suite) — Lot 4 de la veille UX : liste des candidats, titres, maillage
 
 - Page Candidats : deux sections titrées (« 21 candidats avec au moins une vérification », « 17 candidats sans vérification à ce jour », avec rappel que l'absence ne dit rien de l'exactitude des propos). Page Personnalités : titre de liste (masqué visuellement) pour le plan de titres.

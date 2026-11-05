@@ -101,6 +101,27 @@ ${LENS}
 <div class="foot">Le verdict de chaque rédaction, jamais le nôtre - observatoire.votona.fr</div></body></html>`;
 }
 
+function hubHtml(kicker, title, sub) {
+  return `<!DOCTYPE html><html><head><meta charset="utf-8">${FONTS}
+<style>${BASE_CSS}
+body{background:linear-gradient(115deg, #7C3AED 0%, #14121F 100%);}
+.cat{position:absolute;left:70px;top:186px;padding:9px 20px;border-radius:99px;background:#fff;color:#191d2b;font-weight:700;font-size:19px}
+.t{position:absolute;left:70px;width:720px;top:256px;font-family:'Baloo 2',sans-serif;font-weight:800;font-size:68px;line-height:1.05}
+.s{position:absolute;left:70px;width:700px;top:440px;font-weight:700;font-size:26px;color:rgba(255,255,255,.88)}
+</style></head><body>${HEAD}${LENS}
+<div class="cat">${esc(kicker)}</div><div class="t">${esc(title)}</div><div class="s">${esc(sub)}</div>
+<div class="foot">Le verdict de chaque rédaction, jamais le nôtre - observatoire.votona.fr</div></body></html>`;
+}
+
+// Pages d'ensemble : une image par type de page (les 35 partis partagent la leur, les personnalités aussi).
+const HUBS = [
+  ["candidats", "Présidentielle 2027", "Les candidats vérifiés par les fact-\u2060checkers", "Aucun classement, jamais de verdict de notre part"],
+  ["personnalites", "Personnalité politique", "Ses déclarations vérifiées par les fact-\u2060checkers", "Le verdict d'origine, avec le lien vers chaque article"],
+  ["partis", "Parti politique", "Les déclarations de ses membres, vérifiées", "Le parti à la date de chaque déclaration"],
+  ["sujets", "Tous les sujets", "Les déclarations vérifiées, thème par thème", "7 familles de sujets, avec les angles morts"],
+  ["methode", "Méthode", "Comment l'Observatoire recense les vérifications", "Verdict d'origine, recoupement, données ouvertes"],
+];
+
 async function main() {
   const force = process.argv.includes("--force");
   const jobs = [];
@@ -109,6 +130,7 @@ async function main() {
     jobs.push({ out: path.join(OUT, "candidats", c.votona_id + ".jpg"), html: candidateHtml(c) });
   }
   for (const f of FAMILIES) jobs.push({ out: path.join(OUT, "sujets", f[0] + ".jpg"), html: familyHtml(f) });
+  for (const [key, kicker, title, sub] of HUBS) jobs.push({ out: path.join(OUT, "pages", key + ".jpg"), html: hubHtml(kicker, title, sub) });
   const forceCandidates = process.argv.includes("--candidates");
   const todo = jobs.filter((j) => force || (forceCandidates && j.out.includes(path.join("og", "candidats"))) || !fs.existsSync(j.out));
   if (!todo.length) { console.log("Images de partage : rien à créer."); return; }
