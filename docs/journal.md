@@ -21,6 +21,11 @@ Les décisions durables sont aussi consignées dans [decisions.md](decisions.md)
 | — | Hébergement préprod (`preprod`) / prod (`main`) | ✅ en ligne (26/10) — projet Vercel `votona-observatoire` ; production indexable depuis le 28/10 |
 | — | Liens Votona → Observatoire | ⏳ actifs sur `draft` (test, 26/10) ; `main` sur demande du porteur |
 
+## 2026-11-05 (nuit, fin) — Lot 6 de la veille UX : parcours d'entrée et page 404
+
+- Accueil (HTML et app) : section « Comment lire une vérification » (le verdict est celui de la rédaction ; une vérification ne résume pas une personne ; plusieurs rédactions, plusieurs avis) avec liens vers la méthode, le guide de Votona et le flux RSS.
+- Page 404 dédiée (`site/404.html`, noindex) avec des chemins utiles. Libellés de navigation inchangés (choix laissé au porteur). `rating_map.csv` non modifié.
+
 ## 2026-11-05 (nuit, fin) — Lot 5 de la veille UX : images de partage par type de page
 
 - 5 images de partage ajoutées (`web/beta/og/pages/` : candidats, personnalités, partis, sujets, méthode), générées par `scripts/og-images.js` ; les 35 pages de partis partagent la leur, les 210 personnalités aussi ; les candidats gardent leur image individuelle. Aucun chiffre ni verdict dessus. `rating_map.csv` non modifié.

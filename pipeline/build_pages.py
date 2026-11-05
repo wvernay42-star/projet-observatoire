@@ -441,6 +441,15 @@ def page(site: Site, path: str, title: str, description: str, tab: str, body: st
 """
 
 
+READ_HELP = ('<section class="sect" id="lire"><h2>Comment lire une vérification</h2><ul class="read-help">'
+             "<li><strong>Le verdict est celui de la rédaction</strong>, avec son libellé d'origine : l'Observatoire ne juge jamais.</li>"
+             "<li><strong>Une vérification ne résume pas une personne</strong> : les rédactions choisissent ce qu'elles vérifient.</li>"
+             "<li><strong>Plusieurs rédactions, plusieurs avis</strong> : quand elles vérifient la même déclaration, tous les verdicts sont affichés.</li></ul>"
+             '<p class="intro-p"><a href="/methode/">La méthode complète</a> · '
+             '<a href="https://votona.fr/guide/verifier-une-information-politique/">Guide : comment vérifier une information politique</a> · '
+             '<a href="/flux.xml">S\'abonner au flux RSS</a></p></section>')
+
+
 def home_prerender(site: Site) -> str:
     """Contenu de l'accueil rendu côté serveur : lisible sans JavaScript (moteurs, aperçus), puis remplacé par l'app."""
     scoped = [f for f in site.facts if site.in_scope_2027(f)]
@@ -466,6 +475,7 @@ def home_prerender(site: Site) -> str:
             + '<section class="sect"><div class="sect-head"><h2>Par sujet</h2><a class="linkish" href="/sujets/">Sujets et angles morts →</a></div>'
             + '<p class="muted small" style="margin:0">Les 7 familles de sujets de Votona. Répartition des verdicts des rédactions, jamais une note.</p>'
             + family_tiles(site.facts) + "</section>"
+            + READ_HELP
             + '<section class="sect"><h2>Explorer</h2><p class="intro-p"><a href="/candidats/">Les candidats 2027</a> · <a href="/partis/">Les partis</a> · '
               '<a href="/personnalites/">Toutes les personnalités</a> · <a href="/methode/">La méthode</a></p></section>'
             + '<section class="cta-band"><h2>Et toi, de quel candidat es-tu le plus proche ?</h2>'
@@ -797,6 +807,20 @@ def cited_page(site: Site) -> str:
                 "methode", body)
 
 
+def not_found_page(site: Site) -> str:
+    """404 : des chemins utiles plutôt qu'une page vide."""
+    body = "\n".join([
+        intro("Page introuvable", "Cette adresse n'existe pas (ou plus). Voici des chemins pour retrouver ce que vous cherchiez."),
+        '<section class="sect"><div class="tiles">'
+        '<a class="tile" href="/"><span class="t">Accueil</span><span class="c">Les dernières vérifications</span></a>'
+        '<a class="tile" href="/candidats/"><span class="t">Candidats 2027</span><span class="c">Leurs déclarations vérifiées</span></a>'
+        '<a class="tile" href="/partis/"><span class="t">Partis</span><span class="c">Déclarations de leurs membres</span></a>'
+        '<a class="tile" href="/sujets/"><span class="t">Sujets</span><span class="c">Par thème, avec les angles morts</span></a>'
+        '<a class="tile" href="/personnalites/"><span class="t">Personnalités</span><span class="c">Liste alphabétique</span></a>'
+        '<a class="tile" href="/methode/"><span class="t">Méthode</span><span class="c">Comment lire une vérification</span></a></div></section>'])
+    return page(site, "/404", "Page introuvable - Votona Observatoire", "Page introuvable sur Votona Observatoire.", "faits", body, indexable=False)
+
+
 def credits_page(site: Site) -> str:
     """Crédits photos : auteur, licence et source de chaque portrait (licences libres, Wikimedia Commons)."""
     def row(name: str, cr: dict[str, str]) -> str:
@@ -877,6 +901,7 @@ def build(site: Site, site_dir: Path) -> list[str]:
         out = site_dir / path.strip("/") / "index.html"
         out.parent.mkdir(parents=True, exist_ok=True)
         out.write_text(html, encoding="utf-8")
+    (site_dir / "404.html").write_text(not_found_page(site), encoding="utf-8")
     (site_dir / "donnees").mkdir(exist_ok=True)
     (site_dir / "donnees" / "votona.json").write_text(
         json.dumps(votona_summary(site), ensure_ascii=False, indent=1), encoding="utf-8")
