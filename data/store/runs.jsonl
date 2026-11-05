@@ -36,3 +36,5 @@
 {"connector": "datacommons_feed", "errors": null, "fetched": 4, "id": 36, "new_reviews": 0, "started_at": "2026-11-03T05:00:19+00:00"}
 {"connector": "google_factcheck", "errors": null, "fetched": 17, "id": 37, "new_reviews": 1, "started_at": "2026-11-04T05:06:08+00:00"}
 {"connector": "datacommons_feed", "errors": null, "fetched": 4, "id": 38, "new_reviews": 0, "started_at": "2026-11-04T05:06:08+00:00"}
+{"connector": "google_factcheck", "errors": null, "fetched": 13, "id": 39, "new_reviews": 2, "started_at": "2026-11-05T05:00:29+00:00"}
+{"connector": "datacommons_feed", "errors": null, "fetched": 4, "id": 40, "new_reviews": 0, "started_at": "2026-11-05T05:00:29+00:00"}
