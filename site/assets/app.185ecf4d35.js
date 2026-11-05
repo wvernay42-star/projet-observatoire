@@ -234,9 +234,10 @@ function partyText(f) {
 }
 
 function verdictLines(f) {
+  const single = f.reviews.length === 1;  // un seul avis : le niveau est déjà affiché au-dessus, on ne le répète pas
   return f.reviews.map((r) => el("div", { class: "verdict" },
-    el("strong", { text: LEVEL[r.rating_normalized]?.label || r.rating_normalized }),
-    el("span", { class: "muted" }, " — « " + (r.rating_original || "sans libellé") + " » selon ", ext(r.url, r.source_name))));
+    single ? null : el("strong", { text: (LEVEL[r.rating_normalized]?.label || r.rating_normalized) + " — " }),
+    el("span", { class: "muted" }, "« " + (r.rating_original || "sans libellé") + " » selon ", ext(r.url, r.source_name))));
 }
 
 function datesLine(f) {

@@ -242,9 +242,11 @@ def fact_row(site: Site, f: dict[str, Any], with_person: bool = True) -> str:
     report = (f'<details class="report-d"><summary>Signaler une erreur</summary><div class="report">Écrivez à '
               f'<strong>{CONTACT}</strong> en indiquant la référence <code>{escape(f["id"])}</code>. '
               f'Une attribution contestée à raison est retirée sous 48 h.</div></details>')
+    single = len(f["reviews"]) == 1
     verdicts = "".join(
-        f'<div class="verdict"><strong>{LEVEL.get(r["rating_normalized"], (r["rating_normalized"],))[0]}</strong>'
-        f'<span class="muted"> — « {escape(r["rating_original"] or "sans libellé")} » selon {ext(r["url"], r["source_name"])}</span></div>'
+        '<div class="verdict">'
+        + ("" if single else f'<strong>{LEVEL.get(r["rating_normalized"], (r["rating_normalized"],))[0]}</strong> — ')
+        + f'<span class="muted">« {escape(r["rating_original"] or "sans libellé")} » selon {ext(r["url"], r["source_name"])}</span></div>'
         for r in f["reviews"])
     return (f'<article class="fact"><div style="display:flex;flex-direction:column;gap:6px;min-width:0">{who}'
             f'<p class="claim">« {escape(f["claim_text"] or "")} »</p>{dates_line(f)}{fact_chips(f)}'
@@ -252,9 +254,18 @@ def fact_row(site: Site, f: dict[str, Any], with_person: bool = True) -> str:
             f'<div class="right">{meter(f["verdict"])}<strong>{LEVEL[f["verdict"]][0]}</strong>{verdicts}</div></article>')
 
 
-def fact_list(site: Site, facts: list[dict[str, Any]], with_person: bool = True) -> str:
-    rows = "".join(fact_row(site, f, with_person) for f in facts)
-    return f'<section class="facts">{rows or "<p class=\"muted\">Aucune déclaration vérifiée.</p>"}</section>'
+FACTS_SHOWN = 10  # au-delà, les faits suivants sont repliés (liste longue sur mobile) mais restent dans le HTML
+
+
+def fact_list(site: Site, facts: list[dict[str, Any]], with_person: bool = True, limit: int | None = None) -> str:
+    rows = [fact_row(site, f, with_person) for f in facts]
+    if limit and len(rows) > limit + 2:
+        rest = len(rows) - limit
+        body = ("".join(rows[:limit]) + f'<details class="more-facts"><summary>Voir les {rest} autres faits</summary>'
+                + "".join(rows[limit:]) + "</details>")
+    else:
+        body = "".join(rows)
+    return f'<section class="facts">{body or "<p class=\"muted\">Aucune déclaration vérifiée.</p>"}</section>'
 
 
 def prop_img(fid: str, cls: str = "prop") -> str:
@@ -515,7 +526,7 @@ def person_page(site: Site, pid: str) -> tuple[str, str, bool]:
                 for f in facts if f["claim_date"])
             parts.append(f'<section aria-label="Frise des vérifications" class="sect"><h2>Dans le temps</h2><div class="timeline">{dots}</div>'
                          f'<div class="axis"><span>{fr_date(dated[0])}</span><span>{fr_date(dated[-1])}</span></div></section>')
-        parts.append(f'<section class="sect"><h2>Les {len(facts)} faits</h2>{fact_list(site, facts, False)}</section>')
+        parts.append(f'<section class="sect"><h2>Les {len(facts)} faits</h2>{fact_list(site, facts, False, limit=FACTS_SHOWN)}</section>')
     else:
         parts.append('<p class="notice">Aucune vérification publiée à ce jour par les rédactions suivies. Cela ne dit rien de '
                      "l'exactitude de ses propos : les rédactions choisissent ce qu'elles vérifient.</p>")
@@ -553,7 +564,7 @@ def party_page(site: Site, party_id: str) -> tuple[str, str]:
         cand_note, summary(site, facts, "Toute la période."),
         f'<section class="sect"><h2>Par personne</h2><div class="table-box"><table class="plain"><thead><tr>{head}</tr></thead>'
         f"<tbody>{rows}</tbody></table></div></section>",
-        f'<section class="sect"><h2>Les {len(facts)} faits</h2>{fact_list(site, facts)}</section>'])
+        f'<section class="sect"><h2>Les {len(facts)} faits</h2>{fact_list(site, facts, limit=FACTS_SHOWN)}</section>'])
     title = f"{name} : déclarations vérifiées de ses membres - Votona Observatoire"
     desc = (f"{plural(len(facts), 'déclaration', 'déclarations')} de membres de {name}, vérifiée{'s' if len(facts) > 1 else ''} par "
             "les rédactions françaises de fact-checking, avec le parti à la date de chaque déclaration.")
@@ -577,7 +588,7 @@ def family_page(site: Site, fid: str) -> tuple[str, str]:
                    "Sujet · " + plural(len(facts), "déclaration vérifiée", "déclarations vérifiées")),
         summary(site, facts, "Toute la vie politique, toute la période."),
         f'<section class="sect"><h2>Les sujets du test Votona</h2><div class="topics">{topic_rows}</div></section>',
-        f'<section class="sect"><h2>Les {len(facts)} faits</h2>{fact_list(site, facts)}</section>'])
+        f'<section class="sect"><h2>Les {len(facts)} faits</h2>{fact_list(site, facts, limit=FACTS_SHOWN)}</section>'])
     title = f"{label} : les déclarations politiques vérifiées - Votona Observatoire"
     desc = (f"{label} : {plural(len(facts), 'déclaration politique vérifiée', 'déclarations politiques vérifiées')} par les rédactions "
             "françaises de fact-checking, reliées aux sujets du test présidentielle 2027 de Votona.")

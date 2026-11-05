@@ -21,6 +21,11 @@ Les décisions durables sont aussi consignées dans [decisions.md](decisions.md)
 | — | Hébergement préprod (`preprod`) / prod (`main`) | ✅ en ligne (26/10) — projet Vercel `votona-observatoire` ; production indexable depuis le 28/10 |
 | — | Liens Votona → Observatoire | ⏳ actifs sur `draft` (test, 26/10) ; `main` sur demande du porteur |
 
+## 2026-11-05 (nuit) — Lots 2 et 3 de la veille UX : pages longues et affichage d'un fait
+
+- Pages candidat, parti et sujet : 10 faits affichés, les suivants repliés dans « Voir les N autres faits » (restent dans le HTML, donc indexables). Hauteur mobile : parti LR 27 332 → 5 946 px, Bardella 11 502 → 5 518 px.
+- Un fait vérifié par une seule rédaction n'affiche plus son niveau deux fois (page et app) : « libellé d'origine » selon la rédaction. Avec plusieurs rédactions, le niveau de chacune reste affiché. Zones cliquables des liens « Lire sur… » et « Signaler une erreur » agrandies. `rating_map.csv` non modifié.
+
 ## 2026-11-05 (soir) — Accueil rendu côté serveur (lot 1 de la veille UX/SEO)
 
 - Constat : l'accueil était entièrement construit par JavaScript (HTML de 949 Ko, 88 caractères de texte, aucun `<h1>` pour les moteurs).
