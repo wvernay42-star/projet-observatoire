@@ -21,6 +21,13 @@ Les décisions durables sont aussi consignées dans [decisions.md](decisions.md)
 | — | Hébergement préprod (`preprod`) / prod (`main`) | ✅ en ligne (26/10) — projet Vercel `votona-observatoire` ; production indexable depuis le 28/10 |
 | — | Liens Votona → Observatoire | ⏳ actifs sur `draft` (test, 26/10) ; `main` sur demande du porteur |
 
+## 2026-11-05 (nuit, fin) — Lot 7 de la veille UX : libellés, sitemap, filtre, méthode
+
+- Libellés harmonisés : retours en fil d'Ariane « ‹ Candidats 2027 / Partis / Sujets / Personnalités » (plus de « Tous les … »), « Tous les faits » (sans « avec filtres »), « Les faits par sujet », « Personnalités vérifiées (n) ».
+- Sitemap : `lastmod` par page (vérification la plus récente de la personne, du parti ou de la famille) au lieu de la date du jour partout.
+- Pages longues : filtre par verdict (liste déroulante avec effectifs) ; lien « Haut de page » sur toutes les pages fixes.
+- Méthode : section « Libellés d'origine par rédaction », calculée d'après la base (libellé, niveau commun, nombre). `rating_map.csv` non modifié.
+
 ## 2026-11-05 (nuit, fin) — Lot 6 de la veille UX : parcours d'entrée et page 404
 
 - Accueil (HTML et app) : section « Comment lire une vérification » (le verdict est celui de la rédaction ; une vérification ne résume pas une personne ; plusieurs rédactions, plusieurs avis) avec liens vers la méthode, le guide de Votona et le flux RSS.

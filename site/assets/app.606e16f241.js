@@ -323,7 +323,7 @@ const views = {
         el("div", { class: "kpi" }, el("span", { class: "v", text: withFacts + "/" + covered.length }), el("span", { class: "k", text: "candidats 2027 avec au moins une vérification" }), el("div", { class: "cov" }, el("div", { style: "width:" + (covered.length ? withFacts / covered.length * 100 : 0) + "%" }))),
         el("div", { class: "kpi" }, el("span", { class: "v", text: String(usedSources.length) }), el("span", { class: "k", text: "rédactions, " + multi + " déclarations recoupées par plusieurs" })),
         el("div", { class: "kpi" }, el("span", { class: "v", text: String(week) }), el("span", { class: "k", text: "vérifications publiées ces 7 derniers jours" }))),
-      el("section", { class: "sect" }, sectHead("Dernières vérifications", el("button", { type: "button", class: "linkish", "data-go": "faits" }, "Tous les faits, avec filtres →")),
+      el("section", { class: "sect" }, sectHead("Dernières vérifications", el("button", { type: "button", class: "linkish", "data-go": "faits" }, "Tous les faits →")),
         el("div", { class: "cards" }, [...facts].sort((a, b) => (b.reviewDate || "").localeCompare(a.reviewDate || "") || byDate(a, b)).slice(0, 6).map(card))),
       el("section", { class: "sect" }, sectHead("Par sujet", el("button", { type: "button", class: "linkish", "data-go": "sujets" }, "Sujets et angles morts →")),
         el("p", { class: "muted small", style: "margin:0", text: "Les 7 familles de sujets de Votona. Répartition des verdicts des rédactions, jamais une note." }),
@@ -353,7 +353,7 @@ const views = {
     const q = state.q.trim().toLowerCase();
     const search = el("input", { type: "search", class: "search q", placeholder: state.who === "candidats" ? "Chercher un candidat" : "Chercher une personnalité", value: state.q, "aria-label": "Chercher",
       on: { input: (e) => { state.q = e.target.value; const pos = e.target.selectionStart; render(); const s = document.querySelector("input.search"); s.focus(); s.setSelectionRange(pos, pos); } } });
-    const head = [intro(state.who === "candidats" ? "Les candidats 2027 vérifiés par les fact-\u2060checkers" : "Toutes les personnalités vérifiées", "Aucun classement : le nombre de vérifications dépend des choix des rédactions, pas de la sincérité des personnes. L'absence de vérification ne dit rien de l'exactitude des propos."),
+    const head = [intro(state.who === "candidats" ? "Les candidats 2027 vérifiés par les fact-\u2060checkers" : "Les personnalités vérifiées par les fact-\u2060checkers", "Aucun classement : le nombre de vérifications dépend des choix des rédactions, pas de la sincérité des personnes. L'absence de vérification ne dit rien de l'exactitude des propos."),
       factsTabs(state.who), search];
     if (state.who === "candidats") {
       const count = (pid) => facts.filter((f) => f.person.id === pid);
@@ -369,7 +369,7 @@ const views = {
               list.length ? miniBar(list) : null,
               el("span", { class: "meta", text: list.length ? plural(list.length, "déclaration vérifiée", "déclarations vérifiées") : "Aucune vérification à ce jour" }))));
       })), el("button", { type: "button", class: "btn btn-ghost btn-row", on: { click: () => { state.who = "toutes"; state.q = ""; go("personnalites"); } } },
-        "Toutes les personnalités vérifiées (" + new Set(facts.map((f) => f.person.id)).size + ")"),
+        "Personnalités vérifiées (" + new Set(facts.map((f) => f.person.id)).size + ")"),
         el("p", { class: "small muted", text: "La même liste que sur Votona. Les vérifications ne comptent jamais dans le classement de Votona : les deux outils sont séparés." })];
     }
     const byPerson = {};

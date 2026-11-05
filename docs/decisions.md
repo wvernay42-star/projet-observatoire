@@ -93,3 +93,8 @@
 - Navigation : Personnalités et Partis dans « Faits vérifiés » ; l'onglet « Personnalités » est retiré,
   la liste complète s'ouvre depuis « Candidats 2027 ».
 
+## 2026-11-05 — Vocabulaire de navigation
+
+- Section « Faits vérifiés » (barre du haut), avec les onglets « Tous les faits », « Candidats 2027 » et « Partis » ; « Personnalités » est la liste complète, atteinte par un bouton depuis « Candidats 2027 ».
+- Les retours en fil d'Ariane reprennent le nom de l'onglet (« ‹ Candidats 2027 », « ‹ Partis », « ‹ Sujets », « ‹ Personnalités »). Les listes déroulantes de filtres gardent « Tous les sujets » / « Tous les partis » (valeur par défaut d'un filtre).
+- Pas de `ClaimReview` sur le site : l'Observatoire ne produit aucun verdict (balisage réservé à l'auteur d'une vérification).

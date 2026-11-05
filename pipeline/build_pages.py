@@ -248,7 +248,7 @@ def fact_row(site: Site, f: dict[str, Any], with_person: bool = True) -> str:
         + ("" if single else f'<strong>{LEVEL.get(r["rating_normalized"], (r["rating_normalized"],))[0]}</strong> — ')
         + f'<span class="muted">« {escape(r["rating_original"] or "sans libellé")} » selon {ext(r["url"], r["source_name"])}</span></div>'
         for r in f["reviews"])
-    return (f'<article class="fact"><div style="display:flex;flex-direction:column;gap:6px;min-width:0">{who}'
+    return (f'<article class="fact" data-verdict="{f["verdict"]}"><div style="display:flex;flex-direction:column;gap:6px;min-width:0">{who}'
             f'<p class="claim">« {escape(f["claim_text"] or "")} »</p>{dates_line(f)}{fact_chips(f)}'
             f'<div class="small">{reads} · {report}</div></div>'
             f'<div class="right">{meter(f["verdict"])}<strong>{LEVEL[f["verdict"]][0]}</strong>{verdicts}</div></article>')
@@ -257,15 +257,35 @@ def fact_row(site: Site, f: dict[str, Any], with_person: bool = True) -> str:
 FACTS_SHOWN = 10  # au-delà, les faits suivants sont repliés (liste longue sur mobile) mais restent dans le HTML
 
 
+FILTER_JS = """<script>
+(function(){
+  var sel = document.getElementById("fact-filter"); if(!sel) return;
+  var box = sel.closest(".facts"), more = box.querySelector("details.more-facts");
+  sel.addEventListener("change", function(){
+    var v = sel.value;
+    box.querySelectorAll("article.fact").forEach(function(a){ a.hidden = !!v && a.getAttribute("data-verdict") !== v; });
+    if(more){ if(v) more.open = true; more.querySelector("summary").hidden = !!v; }
+  });
+})();
+</script>"""
+
+
 def fact_list(site: Site, facts: list[dict[str, Any]], with_person: bool = True, limit: int | None = None) -> str:
     rows = [fact_row(site, f, with_person) for f in facts]
+    flt = ""
     if limit and len(rows) > limit + 2:
         rest = len(rows) - limit
         body = ("".join(rows[:limit]) + f'<details class="more-facts"><summary>Voir les {rest} autres faits</summary>'
                 + "".join(rows[limit:]) + "</details>")
+        c = counts(facts)
+        opts = '<option value="">Tous les verdicts</option>' + "".join(
+            f'<option value="{k}">{label} ({c[k]})</option>' for k, label, _ in LEVELS if c[k])
+        flt = (f'<div class="fact-filter-bar"><label for="fact-filter">Filtrer par verdict</label>'
+               f'<select id="fact-filter">{opts}</select></div>')
     else:
         body = "".join(rows)
-    return f'<section class="facts">{body or "<p class=\"muted\">Aucune déclaration vérifiée.</p>"}</section>'
+    return (f'<section class="facts">{flt}{body or "<p class=\"muted\">Aucune déclaration vérifiée.</p>"}</section>'
+            + (FILTER_JS if flt else ""))
 
 
 def prop_img(fid: str, cls: str = "prop") -> str:
@@ -418,7 +438,7 @@ def page(site: Site, path: str, title: str, description: str, tab: str, body: st
 <script defer src="/_vercel/insights/script.js"></script>
 {ld_html}</head>
 <body>
-<div class="masthead">
+<div class="masthead" id="top">
 <header class="topbar">
   <a class="brand" href="/" title="Accueil de l'Observatoire"><span class="mark"><img src="/assets/logo-mark.svg" alt="" width="32" height="32"></span><span class="name">Votona</span><span class="year">OBSERVATOIRE</span><span class="beta-tag" title="Version bêta : mise à jour chaque jour, rattachements partisans encore incomplets">BÊTA</span></a>
   <div class="topbar-actions">
@@ -431,6 +451,7 @@ def page(site: Site, path: str, title: str, description: str, tab: str, body: st
 </div>
 <main class="wrap">
 {body}
+<p class="to-top"><a href="#top">↑ Haut de page</a></p>
 <footer class="gfoot">Votona Observatoire ne produit aucun verdict : il reprend celui de la rédaction, avec un lien vers l'article. Version bêta, mise à jour chaque jour ({fr_date(site.generated_at, True)}).
 <div class="flinks"><a href="/methode/">Méthode</a> · <a href="/vous-etes-cite/">Vous êtes cité ?</a> · <a href="/credits-photos/">Crédits photos</a> · <a href="/donnees/facts.csv">Données ouvertes</a> · <a href="/flux.xml">Flux RSS</a> · <a href="{VOTONA}/a-propos/">À propos</a> · <a href="{VOTONA}/mentions-legales/">Mentions légales</a> · <a href="{VOTONA}/confidentialite/">Confidentialité</a> · <a href="{VOTONA}/contact/">Contact</a></div>
 <div class="social">{social_html()}</div>
@@ -470,7 +491,7 @@ def home_prerender(site: Site) -> str:
                   "aux candidats à la présidentielle 2027, à leurs partis et à toute la vie politique. Il ne juge jamais : chaque verdict est "
                   "celui de la rédaction, avec son libellé d'origine et le lien vers l'article.")
             + kpis
-            + '<section class="sect"><div class="sect-head"><h2>Dernières vérifications</h2><a class="linkish" href="/#faits">Tous les faits, avec filtres →</a></div>'
+            + '<section class="sect"><div class="sect-head"><h2>Dernières vérifications</h2><a class="linkish" href="/#faits">Tous les faits →</a></div>'
             + fact_list(site, latest) + "</section>"
             + '<section class="sect"><div class="sect-head"><h2>Par sujet</h2><a class="linkish" href="/sujets/">Sujets et angles morts →</a></div>'
             + '<p class="muted small" style="margin:0">Les 7 familles de sujets de Votona. Répartition des verdicts des rédactions, jamais une note.</p>'
@@ -512,7 +533,7 @@ def person_page(site: Site, pid: str) -> tuple[str, str, bool]:
     props = "".join(f'<img class="hp hp{i + 1}" src="/assets/props/{THEME[fid][1]}.webp" alt="" width="{size}" height="{size}">'
                     for i, ((fid, n), size) in enumerate(zip(fams, (58, 46, 40, 34))) if n)
     stat = plural(len(facts), "déclaration vérifiée", "déclarations vérifiées") if facts else "Aucune vérification à ce jour"
-    parts = [crumbs(("/candidats/", "Tous les candidats") if cand else ("/personnalites/", "Toutes les personnalités"), ("/sujets/", "Tous les sujets")),
+    parts = [crumbs(("/candidats/", "Candidats 2027") if cand else ("/personnalites/", "Personnalités"), ("/sujets/", "Sujets")),
              f'<div class="cand-header" style="--cc:{color}"><div class="cand-avatar{" has-ph" if site.portrait_key(pid) else ""}" aria-hidden="true">{avatar_inner(site, pid, name, 168)}</div>'
              f'<div class="cand-id"><h1>{escape(name)}</h1><p class="party">{escape(party)}</p><p class="cand-stat">{stat}</p></div>'
              f'<div class="hero-props" aria-hidden="true">{props}</div></div>',
@@ -571,7 +592,7 @@ def party_page(site: Site, party_id: str) -> tuple[str, str]:
         f'<a class="linkish" href="{site.person_url[c["pid"]]}">{escape(c["name"])}</a> '
         f'(<a href="{escape(c["votona_url"])}">positions sur Votona</a>)' for c in cands) + "</p>") if cands else ""
     body = "\n".join([
-        crumbs(("/partis/", "Tous les partis"), ("/candidats/", "Tous les candidats")),
+        crumbs(("/partis/", "Partis"), ("/candidats/", "Candidats 2027")),
         intro(name, "Déclarations de personnes affiliées à ce parti à la date où elles ont été faites. La couverture dépend des "
                     "rédactions et des affiliations connues : elle ne représente pas l'ensemble du parti.",
               [(len(facts), "déclarations vérifiées" if len(facts) > 1 else "déclaration vérifiée"),
@@ -597,7 +618,7 @@ def family_page(site: Site, fid: str) -> tuple[str, str]:
         f'<a href="{VOTONA}/sujets/{t["slug"]}/">Que proposent les candidats ? (Votona)</a></div></div>'
         f'<span class="n2">{str(t["n"]) + " vérif." if t["n"] else "aucune vérification"}</span></div>' for t in topics)
     body = "\n".join([
-        crumbs(("/sujets/", "Tous les sujets"), ("/candidats/", "Tous les candidats")),
+        crumbs(("/sujets/", "Sujets"), ("/candidats/", "Candidats 2027")),
         theme_hero(fid, label, f"Thème attribué automatiquement, à titre indicatif. {len(scoped)} de ces déclarations viennent "
                                "des candidats 2027 ou de leurs partis.",
                    "Sujet · " + plural(len(facts), "déclaration vérifiée", "déclarations vérifiées")),
@@ -649,14 +670,14 @@ def index_pages(site: Site) -> dict[str, str]:
                                           [(len(with_facts), "candidats vérifiés"), (len(scoped), "déclarations vérifiées")],
                                           ("societe", "europe", "defense")),
                                     facts_tabs("candidats"),
-                                    '<div class="btn-pair"><a class="btn btn-ghost" href="/#faits">Tous les faits, avec filtres</a>'
-                                    '<a class="btn btn-ghost" href="/sujets/">Voir les vérifications sujet par sujet</a></div>',
+                                    '<div class="btn-pair"><a class="btn btn-ghost" href="/#faits">Tous les faits</a>'
+                                    '<a class="btn btn-ghost" href="/sujets/">Les faits par sujet</a></div>',
                                     search_box("Rechercher un candidat ou un parti…", "Aucun candidat ne correspond à cette recherche."),
                                     LEGEND, f'<section class="sect"><h2>{plural(len(items), "candidat avec vérification", "candidats avec au moins une vérification")}</h2><ul class="vlist">{"".join(items)}</ul></section>',
                                     f'<section class="sect"><h2>{plural(len(items_none), "candidat sans vérification à ce jour", "candidats sans vérification à ce jour")}</h2>'
                                     '<p class="small muted" style="margin:0">Les rédactions choisissent ce qu\'elles vérifient : cette absence ne dit rien de l\'exactitude des propos.</p>'
                                     f'<ul class="vlist">{"".join(items_none)}</ul></section>',
-                                    f'<a class="btn btn-ghost btn-row" href="/personnalites/">Toutes les personnalités vérifiées ({len({f["person"]["id"] for f in site.facts})})</a>',
+                                    f'<a class="btn btn-ghost btn-row" href="/personnalites/">Personnalités vérifiées ({len({f["person"]["id"] for f in site.facts})})</a>',
                                     '<p class="small muted">La même liste que sur Votona. Les vérifications ne comptent jamais dans le classement de Votona : les deux outils sont séparés.</p>',
                                     SEARCH_JS]), og=og_image("pages", "candidats"))
     by_person: dict[str, int] = defaultdict(int)
@@ -667,10 +688,10 @@ def index_pages(site: Site) -> dict[str, str]:
     pages["/personnalites/"] = page(site, "/personnalites/", "Personnalités politiques : déclarations vérifiées - Votona Observatoire",
                                     "Toutes les personnalités politiques françaises dont une déclaration a été vérifiée par les rédactions de fact-checking.",
                                     "faits", "\n".join([
-                                        intro("Toutes les personnalités vérifiées", PEOPLE_INTRO,
+                                        intro("Les personnalités vérifiées par les fact-\u2060checkers", PEOPLE_INTRO,
                                               [(len(by_person), "personnalités"), (len(site.facts), "déclarations vérifiées")],
                                               ("economie", "securite", "ecologie")),
-                                        crumbs(("/candidats/", "Candidats 2027"), ("/sujets/", "Tous les sujets")),
+                                        crumbs(("/candidats/", "Candidats 2027"), ("/sujets/", "Sujets")),
                                         facts_tabs("toutes"),
                                         search_box("Rechercher une personnalité…", "Aucune personnalité ne correspond à cette recherche."),
                                         f'<h2 class="sr-h">Liste alphabétique</h2><p class="small muted" style="margin:0">{plural(len(by_person), "personnalité", "personnalités")} avec au moins une vérification, par ordre alphabétique.</p>',
@@ -734,6 +755,17 @@ def methode_page(site: Site) -> str:
     sw = lambda k: ('<span class="sw unrated" aria-hidden="true"></span>' if k == "unrated"
                     else f'<span class="sw" style="background: var(--v-{k})" aria-hidden="true"></span>')
     scale_rows = "".join(f"<tr><td>{sw(k)} {LEVEL[k][0]}</td><td>{ex}</td></tr>" for k, ex in scale)
+    by_src: dict[str, dict[tuple[str, str], int]] = {}
+    for f in site.facts:
+        for r in f["reviews"]:
+            key = (r["rating_original"] or "sans libellé", r["rating_normalized"])
+            by_src.setdefault(r["source_id"], {})[key] = by_src.get(r["source_id"], {}).get(key, 0) + 1
+    labels_html = "".join(
+        f'<details class="src-labels"><summary>{escape(site.sources.get(sid, sid))} ({len(labs)} libellé{"s" if len(labs) > 1 else ""})</summary>'
+        '<div class="table-box"><table class="plain"><thead><tr><th>Libellé d\'origine</th><th>Niveau commun</th><th>Fois</th></tr></thead><tbody>'
+        + "".join(f'<tr><td>« {escape(lab)} »</td><td>{LEVEL.get(norm, (norm,))[0]}</td><td class="num">{n}</td></tr>'
+                  for (lab, norm), n in sorted(labs.items(), key=lambda x: -x[1]))
+        + "</tbody></table></div></details>" for sid, labs in sorted(by_src.items(), key=lambda x: site.sources.get(x[0], x[0])))
     body = f"""<div class="prose">
 <nav class="mtabs" aria-label="Méthodes de Votona"><a href="{VOTONA}/methode/">Le test Votona</a><a href="/methode/" aria-current="page">L'Observatoire</a></nav>
 <section class="mhero"><div><h1>Méthode de l'Observatoire</h1><p>D'où viennent les vérifications, comment elles sont rattachées aux personnalités et aux partis, et ce que l'Observatoire ne fait jamais.</p></div></section>
@@ -760,6 +792,9 @@ def methode_page(site: Site) -> str:
 <p class="small muted">Collecte : API Google Fact Check Tools (vérifications déclarées par les rédactions) et flux ClaimReview de Data Commons (licence CC BY). Personnalités et affiliations : Wikidata.</p>
 <h2 id="echelle">Échelle commune</h2>
 <div class="table-box"><table class="plain"><thead><tr><th>Niveau</th><th>Exemples de libellés d'origine</th></tr></thead><tbody>{scale_rows}</tbody></table></div>
+<h2 id="libelles">Libellés d'origine par rédaction</h2>
+<p>Chaque rédaction a son échelle. Voici, d'après la base, les libellés effectivement repris et le niveau commun auquel ils sont rattachés (le libellé d'origine reste toujours affiché à côté).</p>
+{labels_html}
 <h2 id="donnees">Données ouvertes</h2>
 <p>Toute la base publiée est téléchargeable et réutilisable en citant l'Observatoire et chaque rédaction : <a href="/donnees/facts.json">JSON</a>, <a href="/donnees/facts.csv">CSV</a> et <a href="/flux.xml">flux RSS des dernières vérifications</a>. Métadonnées seulement : pour lire une vérification, suivez le lien vers la rédaction.</p>
 <h2 id="limites">Limites de la version bêta</h2>
@@ -876,6 +911,10 @@ def build(site: Site, site_dir: Path) -> list[str]:
             shutil.rmtree(site_dir / d)
     pages: dict[str, str] = {}
     listed = ["/", "/candidats/", "/personnalites/", "/partis/", "/sujets/", "/methode/", "/vous-etes-cite/"]
+    modified: dict[str, str] = {}  # date de la vérification la plus récente de la page (sitemap)
+
+    def newest(facts: list[dict[str, Any]]) -> str:
+        return max((f["review_date"] or "" for f in facts), default="")[:10]
     if site.portraits:
         listed.append("/credits-photos/")
     for pid in site.person_url:
@@ -884,14 +923,17 @@ def build(site: Site, site_dir: Path) -> list[str]:
             pages[path] = html
             if indexable:
                 listed.append(path)
+                modified[path] = newest(site.of_person(pid))
     for party_id in site.party_url:
         path, html = party_page(site, party_id)
         pages[path] = html
         listed.append(path)
+        modified[path] = newest([f for f in site.facts if f["party"]["id"] == party_id])
     for fid, _ in FAMILIES:
         path, html = family_page(site, fid)
         pages[path] = html
         listed.append(path)
+        modified[path] = newest([f for f in site.facts if f["family"] == fid])
     pages.update(index_pages(site))
     pages["/methode/"] = methode_page(site)
     pages["/vous-etes-cite/"] = cited_page(site)
@@ -908,7 +950,7 @@ def build(site: Site, site_dir: Path) -> list[str]:
     lastmod = site.generated_at[:10]
     (site_dir / "sitemap.xml").write_text(
         '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
-        + "".join(f"<url><loc>{SITE_URL}{p}</loc><lastmod>{lastmod}</lastmod></url>\n" for p in listed) + "</urlset>\n",
+        + "".join(f"<url><loc>{SITE_URL}{p}</loc><lastmod>{modified.get(p) or lastmod}</lastmod></url>\n" for p in listed) + "</urlset>\n",
         encoding="utf-8")
     return listed
 

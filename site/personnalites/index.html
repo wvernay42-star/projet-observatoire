@@ -24,7 +24,7 @@
 <script defer src="/_vercel/insights/script.js"></script>
 </head>
 <body>
-<div class="masthead">
+<div class="masthead" id="top">
 <header class="topbar">
   <a class="brand" href="/" title="Accueil de l'Observatoire"><span class="mark"><img src="/assets/logo-mark.svg" alt="" width="32" height="32"></span><span class="name">Votona</span><span class="year">OBSERVATOIRE</span><span class="beta-tag" title="Version bêta : mise à jour chaque jour, rattachements partisans encore incomplets">BÊTA</span></a>
   <div class="topbar-actions">
@@ -36,8 +36,8 @@
 <nav class="subnav" aria-label="Navigation de l'Observatoire"><div class="wrap"><a href="/">Accueil</a><a href="/#faits" aria-current="page">Faits<span class="lg"> vérifiés</span></a><a href="/sujets/">Sujets</a></div></nav>
 </div>
 <main class="wrap">
-<section class="vhero"><h1>Toutes les personnalités vérifiées</h1><p>Aucun classement : le nombre de vérifications dépend des choix des rédactions, pas de la sincérité des personnes. L&#x27;absence de vérification ne dit rien de l&#x27;exactitude des propos.</p><div class="stats"><span><b>230</b> personnalités</span><span><b>780</b> déclarations vérifiées</span></div></section>
-<nav class="crumbs" aria-label="Fil d'Ariane"><a href="/candidats/">‹ Candidats 2027</a><a href="/sujets/">Tous les sujets ›</a></nav>
+<section class="vhero"><h1>Les personnalités vérifiées par les fact-⁠checkers</h1><p>Aucun classement : le nombre de vérifications dépend des choix des rédactions, pas de la sincérité des personnes. L&#x27;absence de vérification ne dit rien de l&#x27;exactitude des propos.</p><div class="stats"><span><b>230</b> personnalités</span><span><b>780</b> déclarations vérifiées</span></div></section>
+<nav class="crumbs" aria-label="Fil d'Ariane"><a href="/candidats/">‹ Candidats 2027</a><a href="/sujets/">Sujets ›</a></nav>
 <div class="tabs" role="tablist" aria-label="Faits vérifiés par"><a href="/#faits" role="tab" aria-selected="false">Tous<span class="lg"> les faits</span></a><a href="/candidats/" role="tab" aria-selected="false">Candidats<span class="lg"> 2027</span></a><a href="/partis/" role="tab" aria-selected="false">Partis</a></div>
 <input id="q" class="q" type="search" placeholder="Rechercher une personnalité…" aria-label="Rechercher une personnalité"><p id="no-match" class="no-match">Aucune personnalité ne correspond à cette recherche.</p>
 <h2 class="sr-h">Liste alphabétique</h2><p class="small muted" style="margin:0">230 personnalités avec au moins une vérification, par ordre alphabétique.</p>
@@ -53,6 +53,7 @@
   });
 })();
 </script>
+<p class="to-top"><a href="#top">↑ Haut de page</a></p>
 <footer class="gfoot">Votona Observatoire ne produit aucun verdict : il reprend celui de la rédaction, avec un lien vers l'article. Version bêta, mise à jour chaque jour (5 novembre 2026).
 <div class="flinks"><a href="/methode/">Méthode</a> · <a href="/vous-etes-cite/">Vous êtes cité ?</a> · <a href="/credits-photos/">Crédits photos</a> · <a href="/donnees/facts.csv">Données ouvertes</a> · <a href="/flux.xml">Flux RSS</a> · <a href="https://votona.fr/a-propos/">À propos</a> · <a href="https://votona.fr/mentions-legales/">Mentions légales</a> · <a href="https://votona.fr/confidentialite/">Confidentialité</a> · <a href="https://votona.fr/contact/">Contact</a></div>
 <div class="social"><a href="https://www.instagram.com/votona2027/" target="_blank" rel="noopener me" aria-label="Votona sur Instagram" title="Instagram"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg></a><a href="https://www.tiktok.com/@votona2027" target="_blank" rel="noopener me" aria-label="Votona sur TikTok" title="TikTok"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16.6 5.8A4.3 4.3 0 0 1 15.5 3h-3.1v12.4a2.6 2.6 0 1 1-2.6-2.6c.3 0 .5 0 .8.1V9.7a5.8 5.8 0 1 0 4.9 5.7V9.1a7.4 7.4 0 0 0 4.3 1.4V7.4a4.3 4.3 0 0 1-3.2-1.6z"/></svg></a><a href="https://x.com/votona2027" target="_blank" rel="noopener me" aria-label="Votona sur X" title="X"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.8 3h3.1l-6.8 7.7L22 21h-6.2l-4.9-6.4L5.3 21H2.2l7.2-8.3L2 3h6.4l4.4 5.8L17.8 3zm-1.1 16.2h1.7L7.4 4.7H5.6l11.1 14.5z"/></svg></a></div>
