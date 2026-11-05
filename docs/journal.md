@@ -21,6 +21,23 @@ Les décisions durables sont aussi consignées dans [decisions.md](decisions.md)
 | — | Hébergement préprod (`preprod`) / prod (`main`) | ✅ en ligne (26/10) — projet Vercel `votona-observatoire` ; production indexable depuis le 28/10 |
 | — | Liens Votona → Observatoire | ⏳ actifs sur `draft` (test, 26/10) ; `main` sur demande du porteur |
 
+## 2026-11-05 (journée) — Diagnostic de la routine : boucle Wauquiez corrigée
+
+- Collecte saine : l'API Google Fact Check ne voit rien de plus récent que la base (Poligraph et
+  20 Minutes : rien depuis le 27 et le 26 octobre côté API) ; les quelques liens « absents » viennent
+  d'un miroir (defacto-observatoire.fr), correctement exclu. Peu de nouveautés publiables : la plupart des
+  entrées récentes ont pour auteur « Sources multiples », « Publications X » ou une personne hors
+  référentiel (Donald Trump) ; 1 à 5 vérifications publiables par semaine ces dernières semaines,
+  dernière le 31/10. L'export reste à 780 entrées depuis le 02/11.
+- Boucle de l'élément « Laurent Wauquiez, 12 janv. 2025 » : une ancienne décision manuelle (21/10) l'avait
+  rattaché à l'UMP, dissoute en 2015, donc ignorée par le calcul du parti (l'élément restait « parti non
+  daté ») ; la nouvelle décision (LR), pour la même (personne, date), était jetée en silence par
+  `validation_sync.apply` (« 0 appliquée, 0 ignorée ») puis supprimée de Supabase. Correction : la
+  dernière décision de l'admin REMPLACE l'ancienne pour une même (personne, date) ; le résultat distingue
+  « replaced » (remplacée) et « already » (déjà enregistrée). Vérifié sur une copie des données :
+  Wauquiez passe à « Les Républicains / ok » et rejouer la décision ne change plus rien. 96 tests OK.
+- Reste une ligne manuelle impossible (Wauquiez, UMP, 15/11/2024), sans vérification rattachée : sans effet.
+
 ## 2026-11-05 — Routine quotidienne
 
 - Candidats : synchronisation avec https://votona.fr/ — 0 ajouté, 0 modifié, 0 absent ; 2 à confirmer (Selma Labib, Antoine Mikolajczak).

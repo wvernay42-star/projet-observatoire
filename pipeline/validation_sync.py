@@ -156,6 +156,13 @@ def seed(out_dir: Path = OUT_DIR) -> None:
         print(f"{kind}: {len(doc['items'])} éléments -> {path.relative_to(ROOT)} ({path.stat().st_size // 1024} Ko)")
 
 
+def _write_csv(path: Path, fieldnames: list[str], rows: list[dict[str, str]]) -> None:
+    with path.open("w", newline="", encoding="utf-8") as f:
+        writer = csv.DictWriter(f, fieldnames=fieldnames, extrasaction="ignore")
+        writer.writeheader()
+        writer.writerows(rows)
+
+
 def _append_csv(path: Path, fieldnames: list[str], rows: list[dict[str, str]]) -> None:
     exists = path.exists() and path.stat().st_size > 0
     with path.open("a", newline="", encoding="utf-8") as f:
@@ -167,12 +174,19 @@ def _append_csv(path: Path, fieldnames: list[str], rows: list[dict[str, str]]) -
 
 def apply(decisions: list[dict[str, Any]], queues: dict[str, dict[str, Any]], seeds_dir: Path = SEEDS_DIR,
           attributions_csv: Path = ATTRIBUTIONS_CSV) -> dict[str, int]:
-    """Écrit les décisions dans le repo ; ignore celles déjà appliquées ou incohérentes."""
+    """Écrit les décisions dans le repo ; ignore celles incohérentes.
+
+    Une décision identique à celle déjà enregistrée est comptée dans « already ». Pour un parti, la dernière
+    décision de l'admin pour une même (personne, date) REMPLACE l'ancienne (« replaced ») : sinon une
+    ancienne décision, par exemple pour un parti qui n'existait pas à cette date, bloquerait à jamais la
+    correction et l'élément reviendrait dans la file chaque matin."""
     items = {i["id"]: (kind, i) for kind, q in queues.items() for i in q["items"]}
-    rating_rows, attribution_rows, affiliation_rows = [], [], []
+    rating_rows, attribution_rows = [], []
     known_ratings = {(r["source_id"], label_key(r["rating_original"])) for r in _read_csv(seeds_dir / "rating_map.csv")}
     known_urls = {r["review_url"] for r in _read_csv(attributions_csv)} if attributions_csv.exists() else set()
-    known_parties = {(a["person_id"], a["start_date"]) for a in _read_csv(seeds_dir / "affiliations_manual.csv")}
+    manual = _read_csv(seeds_dir / "affiliations_manual.csv")
+    manual_index = {(a["person_id"], a["start_date"]): i for i, a in enumerate(manual)}
+    parties_added = parties_replaced = already = 0
     from pipeline.attribute import Referential
     parties_path = seeds_dir / "parties.csv"
     periods = Referential([], [], [], _read_csv(parties_path) if parties_path.exists() else [])
@@ -189,29 +203,41 @@ def apply(decisions: list[dict[str, Any]], queues: dict[str, dict[str, Any]], se
                 known_ratings.add(key)
                 rating_rows.append({"source_id": item["source_id"], "rating_original": item["label"],
                                     "rating_normalized": value, "decided_by": "human"})
+            else:
+                already += 1
         elif kind == "attributions" and (value == "reject" or value in {c["id"] for c in item["candidates"]}):
             for r in item["reviews"]:
                 if r["url"] not in known_urls:
                     known_urls.add(r["url"])
                     attribution_rows.append({"review_url": r["url"], "decision": value, "decided_at": at,
                                              "note": d.get("note", "")})
+                else:
+                    already += 1
         elif kind == "parties" and item["claim_date"] and \
                 (value == NO_PARTY or (value in {c["id"] for c in item["candidates"]} | {a["id"] for a in item["known_affiliations"]}
                                        and periods.party_existed(value, item["claim_date"]))):
             key = (item["person"]["id"], item["claim_date"])
-            if key not in known_parties:
-                known_parties.add(key)
-                affiliation_rows.append({"person_id": item["person"]["id"], "party_id": value,
-                                         "start_date": item["claim_date"], "end_date": item["claim_date"],
-                                         "source_url": "validation manuelle", "decided_at": at})
+            row = {"person_id": item["person"]["id"], "party_id": value, "start_date": item["claim_date"],
+                   "end_date": item["claim_date"], "source_url": "validation manuelle", "decided_at": at}
+            if key not in manual_index:
+                manual_index[key] = len(manual)
+                manual.append(row)
+                parties_added += 1
+            elif manual[manual_index[key]]["party_id"] == value:
+                already += 1
+            else:
+                manual[manual_index[key]] = row
+                parties_replaced += 1
         else:
             skipped += 1
     _append_csv(seeds_dir / "rating_map.csv", ["source_id", "rating_original", "rating_normalized", "decided_by"], rating_rows)
     _append_csv(attributions_csv, ["review_url", "decision", "decided_at", "note"], attribution_rows)
-    _append_csv(seeds_dir / "affiliations_manual.csv",
-                ["person_id", "party_id", "start_date", "end_date", "source_url", "decided_at"], affiliation_rows)
+    if parties_added or parties_replaced:
+        _write_csv(seeds_dir / "affiliations_manual.csv",
+                   ["person_id", "party_id", "start_date", "end_date", "source_url", "decided_at"], manual)
     return {"ratings": len(rating_rows), "attributions": len(attribution_rows),
-            "parties": len(affiliation_rows), "skipped": skipped}
+            "parties": parties_added + parties_replaced, "replaced": parties_replaced, "already": already,
+            "skipped": skipped}
 
 
 def main() -> None:
