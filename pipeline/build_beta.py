@@ -10,6 +10,7 @@ et flux.xml (RSS des dernières vérifications).
 
 import base64
 import csv
+import hashlib
 import json
 import re
 import shutil
@@ -82,7 +83,7 @@ def build(export_dir: Path = EXPORT_DIR, template: Path = TEMPLATE, output: Path
 
     # Artefact : logo embarqué (aucune ressource externe) ; site : fichier servi à côté de la page.
     output.write_text(page(False, "data:image/svg+xml;base64," + base64.b64encode(LOGO.read_bytes()).decode()), encoding="utf-8")
-    build_site(page(True, "/assets/logo-mark.svg"))
+    build_site(page(True, "/assets/logo-mark.svg"), pages)
     write_open_data(facts, generated)
     build_pages.build(pages, SITE_DIR)
     return len(facts)
@@ -111,7 +112,35 @@ __ROBOTS__<meta name="description" content="Votona Observatoire : les vérificat
 """
 
 
-def build_site(page: str, site_dir: Path = SITE_DIR) -> None:
+# Données structurées de l'accueil : le site et son éditeur (pas de ClaimReview : l'Observatoire ne produit aucun verdict).
+HOME_LD = ('<script type="application/ld+json">' + json.dumps([
+    {"@context": "https://schema.org", "@type": "WebSite", "name": "Votona Observatoire", "url": "__URL__/", "inLanguage": "fr-FR",
+     "description": "Les vérifications des fact-checkers français sur les candidats à la présidentielle 2027 et la vie politique, avec le verdict d'origine."},
+    {"@context": "https://schema.org", "@type": "Organization", "name": "Votona", "url": "https://votona.fr/",
+     "sameAs": ["__URL__/"]},
+    {"@context": "https://schema.org", "@type": "Dataset", "name": "Déclarations politiques vérifiées par les rédactions françaises",
+     "description": "Base ouverte des vérifications de fact-checking rattachées aux personnalités politiques, avec le verdict d'origine, la date et le lien vers chaque article.",
+     "url": "__URL__/methode/", "inLanguage": "fr-FR", "isAccessibleForFree": True,
+     "creator": {"@type": "Organization", "name": "Votona", "url": "https://votona.fr/"},
+     "distribution": [{"@type": "DataDownload", "encodingFormat": "application/json", "contentUrl": "__URL__/donnees/facts.json"},
+                      {"@type": "DataDownload", "encodingFormat": "text/csv", "contentUrl": "__URL__/donnees/facts.csv"}]}],
+    ensure_ascii=False) + "</script>\n")
+
+
+def externalize_app(body: str, site_dir: Path) -> str:
+    """Sort le gros script de l'app (données embarquées) du HTML : fichier à nom empreinte, chargé en différé et mis en cache."""
+    m = re.search(r"<script>([\s\S]*)</script>", body)
+    if not m:
+        return body
+    code = m.group(1)
+    name = f"app.{hashlib.sha256(code.encode()).hexdigest()[:10]}.js"
+    for old in (site_dir / "assets").glob("app.*.js"):
+        old.unlink()
+    (site_dir / "assets" / name).write_text(code, encoding="utf-8")
+    return body[:m.start()] + f'<script defer src="/assets/{name}"></script>' + body[m.end():]
+
+
+def build_site(page: str, pages: "build_pages.Site | None" = None, site_dir: Path = SITE_DIR) -> None:
     """Version site (Vercel) : même page, document complet ; indexable seulement si build_pages.INDEXABLE."""
     (site_dir / "assets").mkdir(parents=True, exist_ok=True)
     # Le titre et les liens de polices du gabarit vont dans le <head> du document complet.
@@ -119,6 +148,11 @@ def build_site(page: str, site_dir: Path = SITE_DIR) -> None:
     body = re.sub(r"^(?:<title>.*?</title>|<link [^>]*>|<meta name=\"claude:[^>]*>)\s*\n", "", page, flags=re.M)
     robots = "" if build_pages.INDEXABLE else '<meta name="robots" content="noindex, nofollow">\n'
     head = SITE_HEAD.replace("__ROBOTS__", robots).replace("</head>", "\n".join(head_tags) + "\n</head>")
+    if pages is not None:
+        body = externalize_app(body, site_dir)
+        body = body.replace('<div class="wrap" id="nav"></div>', f'<div class="wrap" id="nav">{build_pages.home_nav()}</div>', 1)
+        body = body.replace('<main class="wrap" id="app"></main>', f'<main class="wrap" id="app">{build_pages.home_prerender(pages)}</main>', 1)
+        head = head.replace("</head>", HOME_LD.replace("__URL__", SITE_URL) + "</head>", 1)
     (site_dir / "index.html").write_text(head + body + "\n</body>\n</html>\n", encoding="utf-8")
     shutil.copyfile(LOGO, site_dir / "assets" / "logo-mark.svg")
     shutil.copyfile(LOGO.with_name("og.jpg"), site_dir / "assets" / "og.jpg")

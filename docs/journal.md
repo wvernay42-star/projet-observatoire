@@ -21,6 +21,12 @@ Les décisions durables sont aussi consignées dans [decisions.md](decisions.md)
 | — | Hébergement préprod (`preprod`) / prod (`main`) | ✅ en ligne (26/10) — projet Vercel `votona-observatoire` ; production indexable depuis le 28/10 |
 | — | Liens Votona → Observatoire | ⏳ actifs sur `draft` (test, 26/10) ; `main` sur demande du porteur |
 
+## 2026-11-05 (soir) — Accueil rendu côté serveur (lot 1 de la veille UX/SEO)
+
+- Constat : l'accueil était entièrement construit par JavaScript (HTML de 949 Ko, 88 caractères de texte, aucun `<h1>` pour les moteurs).
+- Fait : l'accueil du site contient maintenant son contenu en HTML (titre, chiffres clés, 6 dernières vérifications, familles de sujets, liens, appel au test), puis l'app le remplace au chargement ; le script de l'app est sorti du HTML (`assets/app.<empreinte>.js`, différé, cache immuable) : HTML ≈ 58 Ko. Données structurées `WebSite`, `Organization`, `Dataset` ajoutées (pas de `ClaimReview` : l'Observatoire ne produit aucun verdict). `rating_map.csv` non modifié.
+- Suite (veille) : pages longues (pagination, filtres), refonte de l'affichage d'un fait, libellés, images de partage, maillage.
+
 ## 2026-11-05 (journée) — Diagnostic de la routine : boucle Wauquiez corrigée
 
 - Collecte saine : l'API Google Fact Check ne voit rien de plus récent que la base (Poligraph et

@@ -15,7 +15,7 @@ import json
 import re
 import shutil
 from collections import defaultdict
-from datetime import date
+from datetime import date, datetime, timedelta
 from dataclasses import dataclass, field
 from html import escape
 from pathlib import Path
@@ -428,6 +428,43 @@ def page(site: Site, path: str, title: str, description: str, tab: str, body: st
 </body>
 </html>
 """
+
+
+def home_prerender(site: Site) -> str:
+    """Contenu de l'accueil rendu côté serveur : lisible sans JavaScript (moteurs, aperçus), puis remplacé par l'app."""
+    scoped = [f for f in site.facts if site.in_scope_2027(f)]
+    covered = [c for c in site.candidates if c.get("status") != "retiré"]
+    with_facts = sum(1 for c in covered if site.of_person(c["pid"]))
+    sources = {r["source_id"] for f in site.facts for r in f["reviews"]}
+    multi = sum(f["n_sources"] > 1 for f in site.facts)
+    since = (datetime.fromisoformat(site.generated_at[:10]) - timedelta(days=7)).date().isoformat()
+    week = sum((f["review_date"] or "") >= since for f in site.facts)
+    kpis = ('<section class="kpis" aria-label="Chiffres clés">'
+            f'<div class="kpi"><span class="v">{len(site.facts)}</span><span class="k">déclarations vérifiées, dont {len(scoped)} de candidats 2027 ou de leurs partis</span></div>'
+            f'<div class="kpi"><span class="v">{with_facts}/{len(covered)}</span><span class="k">candidats 2027 avec au moins une vérification</span></div>'
+            f'<div class="kpi"><span class="v">{len(sources)}</span><span class="k">rédactions, {multi} déclarations recoupées par plusieurs</span></div>'
+            f'<div class="kpi"><span class="v">{week}</span><span class="k">vérifications publiées ces 7 derniers jours</span></div></section>')
+    latest = sorted(site.facts, key=lambda f: f["review_date"] or "", reverse=True)[:6]
+    return (intro("Ce que les fact-\u2060checkers ont vérifié",
+                  "Votona Observatoire rassemble les vérifications publiées par les rédactions françaises de fact-checking et les rattache "
+                  "aux candidats à la présidentielle 2027, à leurs partis et à toute la vie politique. Il ne juge jamais : chaque verdict est "
+                  "celui de la rédaction, avec son libellé d'origine et le lien vers l'article.")
+            + kpis
+            + '<section class="sect"><div class="sect-head"><h2>Dernières vérifications</h2><a class="linkish" href="/#faits">Tous les faits, avec filtres →</a></div>'
+            + fact_list(site, latest) + "</section>"
+            + '<section class="sect"><div class="sect-head"><h2>Par sujet</h2><a class="linkish" href="/sujets/">Sujets et angles morts →</a></div>'
+            + '<p class="muted small" style="margin:0">Les 7 familles de sujets de Votona. Répartition des verdicts des rédactions, jamais une note.</p>'
+            + family_tiles(site.facts) + "</section>"
+            + '<section class="sect"><h2>Explorer</h2><p class="intro-p"><a href="/candidats/">Les candidats 2027</a> · <a href="/partis/">Les partis</a> · '
+              '<a href="/personnalites/">Toutes les personnalités</a> · <a href="/methode/">La méthode</a></p></section>'
+            + '<section class="cta-band"><h2>Et toi, de quel candidat es-tu le plus proche ?</h2>'
+              "<p>Le test Votona compare tes réponses aux positions des candidats, sujet par sujet. Les vérifications de l'Observatoire n'entrent jamais dans ce classement.</p>"
+              f'<a class="btn btn-accent btn-row" href="{VOTONA}/">Faire le test présidentielle 2027</a></section>')
+
+
+def home_nav() -> str:
+    return "".join(f'<a href="{href}"{" aria-current=\"page\"" if key == "accueil" else ""}>{label}'
+                   f'{"<span class=\"lg\"> vérifiés</span>" if key == "faits" else ""}</a>' for key, href, label in TABS)
 
 
 def breadcrumb_ld(*items: tuple[str, str]) -> dict[str, Any]:
