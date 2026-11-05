@@ -483,6 +483,10 @@ def breadcrumb_ld(*items: tuple[str, str]) -> dict[str, Any]:
         {"@type": "ListItem", "position": i + 1, "name": name, "item": SITE_URL + path} for i, (path, name) in enumerate(items)]}
 
 
+GUIDE_LINKS = ('<p class="small muted guide-links">Pour aller plus loin : <a href="https://votona.fr/guide/verifier-une-information-politique/">comment vérifier une information politique</a> · '
+               '<a href="https://votona.fr/guide/glossaire-presidentielle/">le glossaire de la présidentielle</a> · <a href="/methode/">la méthode de l\'Observatoire</a></p>')
+
+
 def person_page(site: Site, pid: str) -> tuple[str, str, bool]:
     path, name, cand = site.person_url[pid], site.persons[pid], site.candidate_by_pid.get(pid)
     facts = site.of_person(pid)
@@ -530,6 +534,7 @@ def person_page(site: Site, pid: str) -> tuple[str, str, bool]:
     else:
         parts.append('<p class="notice">Aucune vérification publiée à ce jour par les rédactions suivies. Cela ne dit rien de '
                      "l'exactitude de ses propos : les rédactions choisissent ce qu'elles vérifient.</p>")
+    parts.append(GUIDE_LINKS)
     n = len(facts)
     title = f"{name} : déclarations vérifiées par les fact-checkers - Votona Observatoire"
     desc = (f"{plural(n, 'déclaration', 'déclarations')} de {name} vérifiée{'s' if n > 1 else ''} par les rédactions françaises "
@@ -568,7 +573,7 @@ def party_page(site: Site, party_id: str) -> tuple[str, str]:
     title = f"{name} : déclarations vérifiées de ses membres - Votona Observatoire"
     desc = (f"{plural(len(facts), 'déclaration', 'déclarations')} de membres de {name}, vérifiée{'s' if len(facts) > 1 else ''} par "
             "les rédactions françaises de fact-checking, avec le parti à la date de chaque déclaration.")
-    return path, page(site, path, title, desc, "faits", body, ld=[breadcrumb_ld(("/", "Observatoire"), ("/partis/", "Partis"), (path, name))])
+    return path, page(site, path, title, desc, "faits", body + "\n" + GUIDE_LINKS, ld=[breadcrumb_ld(("/", "Observatoire"), ("/partis/", "Partis"), (path, name))])
 
 
 def family_page(site: Site, fid: str) -> tuple[str, str]:
@@ -617,13 +622,13 @@ def index_pages(site: Site) -> dict[str, str]:
     scoped = [f for f in site.facts if site.in_scope_2027(f)]
     # Candidats 2027 : même carte que la liste des candidats de votona.fr, ordre alphabétique du nom
     # de famille (identifiant Votona), retraits en fin de liste.
-    items = []
+    items, items_none = [], []
     for c in sorted(site.candidates, key=lambda c: (c["status"] == "retiré", c["votona_id"])):
         facts = site.of_person(c["pid"])
         party = c["votona_party"] + (" · candidature retirée" if c["status"] == "retiré" else "")
         meta = (f'{mini_bar(facts)}<span class="meta">{plural(len(facts), "déclaration vérifiée", "déclarations vérifiées")}</span>'
                 if facts else '<span class="meta">Aucune vérification à ce jour</span>')
-        items.append(f'<li data-search="{escape(c["name"] + " " + party)}"{" class=\"out\"" if c["status"] == "retiré" else ""} '
+        (items if facts else items_none).append(f'<li data-search="{escape(c["name"] + " " + party)}"{" class=\"out\"" if c["status"] == "retiré" else ""} '
                      f'style="--cc:{escape(c.get("color") or "#7C3AED")}"><a href="{site.person_url[c["pid"]]}">'
                      f'<span class="av" aria-hidden="true">{avatar_inner(site, c["pid"], c["name"])}</span><span class="who">'
                      f'<span class="nm">{escape(c["name"])}</span><span class="party">{escape(party)}</span>{meta}</span></a></li>')
@@ -637,7 +642,10 @@ def index_pages(site: Site) -> dict[str, str]:
                                     '<div class="btn-pair"><a class="btn btn-ghost" href="/#faits">Tous les faits, avec filtres</a>'
                                     '<a class="btn btn-ghost" href="/sujets/">Voir les vérifications sujet par sujet</a></div>',
                                     search_box("Rechercher un candidat ou un parti…", "Aucun candidat ne correspond à cette recherche."),
-                                    LEGEND, f'<ul class="vlist">{"".join(items)}</ul>',
+                                    LEGEND, f'<section class="sect"><h2>{plural(len(items), "candidat avec vérification", "candidats avec au moins une vérification")}</h2><ul class="vlist">{"".join(items)}</ul></section>',
+                                    f'<section class="sect"><h2>{plural(len(items_none), "candidat sans vérification à ce jour", "candidats sans vérification à ce jour")}</h2>'
+                                    '<p class="small muted" style="margin:0">Les rédactions choisissent ce qu\'elles vérifient : cette absence ne dit rien de l\'exactitude des propos.</p>'
+                                    f'<ul class="vlist">{"".join(items_none)}</ul></section>',
                                     f'<a class="btn btn-ghost btn-row" href="/personnalites/">Toutes les personnalités vérifiées ({len({f["person"]["id"] for f in site.facts})})</a>',
                                     '<p class="small muted">La même liste que sur Votona. Les vérifications ne comptent jamais dans le classement de Votona : les deux outils sont séparés.</p>',
                                     SEARCH_JS]))
@@ -655,7 +663,7 @@ def index_pages(site: Site) -> dict[str, str]:
                                         crumbs(("/candidats/", "Candidats 2027"), ("/sujets/", "Tous les sujets")),
                                         facts_tabs("toutes"),
                                         search_box("Rechercher une personnalité…", "Aucune personnalité ne correspond à cette recherche."),
-                                        f'<p class="small muted" style="margin:0">{plural(len(by_person), "personnalité", "personnalités")} avec au moins une vérification, par ordre alphabétique.</p>',
+                                        f'<h2 class="sr-h">Liste alphabétique</h2><p class="small muted" style="margin:0">{plural(len(by_person), "personnalité", "personnalités")} avec au moins une vérification, par ordre alphabétique.</p>',
                                         f'<div class="people">{links}</div>', SEARCH_JS]))
     by_party: dict[str, list] = defaultdict(list)
     for f in site.facts:

@@ -21,6 +21,11 @@ Les décisions durables sont aussi consignées dans [decisions.md](decisions.md)
 | — | Hébergement préprod (`preprod`) / prod (`main`) | ✅ en ligne (26/10) — projet Vercel `votona-observatoire` ; production indexable depuis le 28/10 |
 | — | Liens Votona → Observatoire | ⏳ actifs sur `draft` (test, 26/10) ; `main` sur demande du porteur |
 
+## 2026-11-05 (nuit, suite) — Lot 4 de la veille UX : liste des candidats, titres, maillage
+
+- Page Candidats : deux sections titrées (« 21 candidats avec au moins une vérification », « 17 candidats sans vérification à ce jour », avec rappel que l'absence ne dit rien de l'exactitude des propos). Page Personnalités : titre de liste (masqué visuellement) pour le plan de titres.
+- Pages candidat/personnalité et parti : ligne « Pour aller plus loin » vers deux articles du guide de Votona (vérifier une information, glossaire) et la méthode. Aucun verdict ajouté ; `rating_map.csv` non modifié.
+
 ## 2026-11-05 (nuit) — Lots 2 et 3 de la veille UX : pages longues et affichage d'un fait
 
 - Pages candidat, parti et sujet : 10 faits affichés, les suivants repliés dans « Voir les N autres faits » (restent dans le HTML, donc indexables). Hauteur mobile : parti LR 27 332 → 5 946 px, Bardella 11 502 → 5 518 px.
