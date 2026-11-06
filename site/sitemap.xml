@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-<url><loc>https://observatoire.votona.fr/</loc><lastmod>2026-11-05</lastmod></url>
-<url><loc>https://observatoire.votona.fr/candidats/</loc><lastmod>2026-11-05</lastmod></url>
-<url><loc>https://observatoire.votona.fr/personnalites/</loc><lastmod>2026-11-05</lastmod></url>
-<url><loc>https://observatoire.votona.fr/partis/</loc><lastmod>2026-11-05</lastmod></url>
-<url><loc>https://observatoire.votona.fr/sujets/</loc><lastmod>2026-11-05</lastmod></url>
-<url><loc>https://observatoire.votona.fr/methode/</loc><lastmod>2026-11-05</lastmod></url>
-<url><loc>https://observatoire.votona.fr/vous-etes-cite/</loc><lastmod>2026-11-05</lastmod></url>
-<url><loc>https://observatoire.votona.fr/credits-photos/</loc><lastmod>2026-11-05</lastmod></url>
+<url><loc>https://observatoire.votona.fr/</loc><lastmod>2026-11-06</lastmod></url>
+<url><loc>https://observatoire.votona.fr/candidats/</loc><lastmod>2026-11-06</lastmod></url>
+<url><loc>https://observatoire.votona.fr/personnalites/</loc><lastmod>2026-11-06</lastmod></url>
+<url><loc>https://observatoire.votona.fr/partis/</loc><lastmod>2026-11-06</lastmod></url>
+<url><loc>https://observatoire.votona.fr/sujets/</loc><lastmod>2026-11-06</lastmod></url>
+<url><loc>https://observatoire.votona.fr/methode/</loc><lastmod>2026-11-06</lastmod></url>
+<url><loc>https://observatoire.votona.fr/vous-etes-cite/</loc><lastmod>2026-11-06</lastmod></url>
+<url><loc>https://observatoire.votona.fr/credits-photos/</loc><lastmod>2026-11-06</lastmod></url>
 <url><loc>https://observatoire.votona.fr/candidats/bardella/</loc><lastmod>2026-09-01</lastmod></url>
 <url><loc>https://observatoire.votona.fr/candidats/philippe/</loc><lastmod>2026-08-27</lastmod></url>
 <url><loc>https://observatoire.votona.fr/candidats/attal/</loc><lastmod>2026-04-09</lastmod></url>
@@ -23,7 +23,7 @@
 <url><loc>https://observatoire.votona.fr/candidats/philippot/</loc><lastmod>2026-08-07</lastmod></url>
 <url><loc>https://observatoire.votona.fr/candidats/asselineau/</loc><lastmod>2024-09-02</lastmod></url>
 <url><loc>https://observatoire.votona.fr/candidats/branco/</loc><lastmod>2023-10-18</lastmod></url>
-<url><loc>https://observatoire.votona.fr/candidats/ruffin/</loc><lastmod>2026-06-04</lastmod></url>
+<url><loc>https://observatoire.votona.fr/candidats/ruffin/</loc><lastmod>2026-11-04</lastmod></url>
 <url><loc>https://observatoire.votona.fr/candidats/royal/</loc><lastmod>2026-04-14</lastmod></url>
 <url><loc>https://observatoire.votona.fr/candidats/lalanne/</loc><lastmod>2022-01-11</lastmod></url>
 <url><loc>https://observatoire.votona.fr/candidats/maurel/</loc><lastmod>2026-09-25</lastmod></url>
@@ -277,6 +277,6 @@
 <url><loc>https://observatoire.votona.fr/sujets/securite/</loc><lastmod>2026-09-01</lastmod></url>
 <url><loc>https://observatoire.votona.fr/sujets/ecologie/</loc><lastmod>2026-10-16</lastmod></url>
 <url><loc>https://observatoire.votona.fr/sujets/europe/</loc><lastmod>2026-09-25</lastmod></url>
-<url><loc>https://observatoire.votona.fr/sujets/societe/</loc><lastmod>2026-10-27</lastmod></url>
+<url><loc>https://observatoire.votona.fr/sujets/societe/</loc><lastmod>2026-11-04</lastmod></url>
 <url><loc>https://observatoire.votona.fr/sujets/defense/</loc><lastmod>2026-03-13</lastmod></url>
 </urlset>

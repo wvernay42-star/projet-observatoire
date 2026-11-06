@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-05T09:32:38+00:00",
+ "generated_at": "2026-11-06T05:00:19+00:00",
  "scope": "Sur les déclarations vérifiées, pas sur l'ensemble des propos tenus.",
  "candidats": {
   "bardella": {
@@ -161,14 +161,14 @@
    "last_review": "2023-10-18"
   },
   "ruffin": {
-   "n": 12,
+   "n": 13,
    "url": "https://observatoire.votona.fr/candidats/ruffin/",
    "sources": [
     "AFP Factuel",
     "TF1 Info – Les Vérificateurs",
     "franceinfo Vrai ou Fake"
    ],
-   "last_review": "2026-06-04"
+   "last_review": "2026-11-04"
   },
   "royal": {
    "n": 6,
@@ -243,7 +243,7 @@
    "url": "https://observatoire.votona.fr/sujets/europe/"
   },
   "societe": {
-   "n": 63,
+   "n": 64,
    "url": "https://observatoire.votona.fr/sujets/societe/"
   },
   "defense": {

@@ -1,5 +1,46 @@
 [
  {
+  "id": "c_2e2764bdbdc88f40",
+  "person": {
+   "id": "Q3085763",
+   "name": "François Ruffin",
+   "votona_id": "ruffin"
+  },
+  "party": {
+   "id": null,
+   "name": null,
+   "short_name": null,
+   "status": "undated",
+   "name_at_date": null,
+   "short_name_at_date": null
+  },
+  "claim_text": "C’est la première fois depuis vingt ans qu’on a un mouvement de jeunesse qui est en train de gagner",
+  "claim_date": "2026-11-04",
+  "date_precision": "day",
+  "date_is_fallback": true,
+  "country": "FR",
+  "attribution_status": "auto_sure",
+  "theme": "Société",
+  "votona_topics": [
+   {
+    "slug": "redonner-davantage-dautonomie-et-de-selection-aux",
+    "label": "Donner plus d'autonomie aux établissements scolaires, y compris pour choisir leurs élèves"
+   }
+  ],
+  "verdict": "mostly_true",
+  "reviews": [
+   {
+    "source_id": "tf1info_verificateurs",
+    "source_name": "TF1 Info – Les Vérificateurs",
+    "url": "https://www.tf1info.fr/societe/verif-est-il-vrai-que-le-mouvement-lyceen-est-en-train-de-gagner-pour-la-premiere-fois-depuis-vingt-ans-comme-le-suggere-francois-ruffin-2473661.html",
+    "title": "VÉRIF - Est-il vrai que le mouvement lycéen \"est en train de gagner pour la première fois depuis vingt ans\", comme le suggère François Ruffin ?",
+    "rating_original": "Plutôt vrai",
+    "rating_normalized": "mostly_true",
+    "review_date": "2026-11-04"
+   }
+  ]
+ },
+ {
   "id": "c_2d142c7e49585184",
   "person": {
    "id": "Q98234202",
@@ -8221,12 +8262,12 @@
    "votona_id": null
   },
   "party": {
-   "id": null,
-   "name": null,
-   "short_name": null,
-   "status": "undated",
-   "name_at_date": null,
-   "short_name_at_date": null
+   "id": "Q20012759",
+   "name": "Les Républicains",
+   "short_name": "LR",
+   "status": "ok",
+   "name_at_date": "Les Républicains",
+   "short_name_at_date": "LR"
   },
   "claim_text": "Les titres de séjour pour soins coûtent plusieurs centaines de millions d'euros par an et bénéficient aussi à des ressortissants de pays riches",
   "claim_date": "2025-01-12",

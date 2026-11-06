@@ -1,33 +1,26 @@
 [
  {
-  "claim_id": "c_224212e798dbef7d",
-  "claim_text": "Les titres de séjour pour soins coûtent plusieurs centaines de millions d'euros par an et bénéficient aussi à des ressortissants de pays riches",
-  "claim_date": "2025-01-12",
+  "claim_id": "c_2e2764bdbdc88f40",
+  "claim_text": "C’est la première fois depuis vingt ans qu’on a un mouvement de jeunesse qui est en train de gagner",
+  "claim_date": "2026-11-04",
   "reviews": [
    {
-    "url": "https://poligraph.fr/factchecks/2025-01-13-verif-des-etrangers-venus-de-pays-riches-viennent-ils-se-faire-soigne",
-    "source_id": "poligraph_fr",
-    "claimant": "Laurent Wauquiez",
-    "rating_original": "En partie vrai",
-    "rating_normalized": "half_true",
-    "review_date": "2025-01-13"
-   },
-   {
-    "url": "https://www.tf1info.fr/sante/verif-des-etrangers-venus-de-pays-riches-viennent-ils-se-faire-soigner-en-france-avec-des-titres-de-sejour-pour-soins-2344562.html",
+    "url": "https://www.tf1info.fr/societe/verif-est-il-vrai-que-le-mouvement-lyceen-est-en-train-de-gagner-pour-la-premiere-fois-depuis-vingt-ans-comme-le-suggere-francois-ruffin-2473661.html",
     "source_id": "tf1info_verificateurs",
-    "claimant": "Laurent Wauquiez",
-    "rating_original": "En partie vrai",
-    "rating_normalized": "half_true",
-    "review_date": "2025-01-13"
+    "claimant": "François Ruffin",
+    "rating_original": "Plutôt vrai",
+    "rating_normalized": "mostly_true",
+    "review_date": "2026-11-04"
    }
   ],
   "person": {
-   "id": "Q984375",
-   "name": "Laurent Wauquiez"
+   "id": "Q3085763",
+   "name": "François Ruffin"
   },
   "status": "undated",
   "candidates": [
-   "Q20012759"
+   "Q192821",
+   "Q62079328"
   ]
  }
 ]

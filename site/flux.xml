@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <rss version="2.0"><channel><title>Votona Observatoire - dernières vérifications</title><link>https://observatoire.votona.fr/</link>
 <description>Les dernières déclarations politiques vérifiées par les rédactions françaises de fact-checking, avec le verdict d'origine.</description>
-<language>fr</language><lastBuildDate>Thu, 05 Nov 2026 09:32:38 +0000</lastBuildDate>
+<language>fr</language><lastBuildDate>Fri, 06 Nov 2026 05:00:19 +0000</lastBuildDate>
+<item><title>François Ruffin : « C’est la première fois depuis vingt ans qu’on a un mouvement de jeunesse qui est en train de gagner »</title>
+<link>https://www.tf1info.fr/societe/verif-est-il-vrai-que-le-mouvement-lyceen-est-en-train-de-gagner-pour-la-premiere-fois-depuis-vingt-ans-comme-le-suggere-francois-ruffin-2473661.html</link><guid isPermaLink="false">c_2e2764bdbdc88f40</guid><pubDate>Wed, 04 Nov 2026 12:00:00 +0000</pubDate>
+<description>« Plutôt vrai » selon TF1 Info – Les Vérificateurs</description></item>
 <item><title>Philippe Baptiste : « "Nous sommes le pays le moins sélectif de l'ensemble des pays de l'OCDE" »</title>
 <link>https://www.franceinfo.fr/vrai-ou-fake/vrai-ou-faux-la-france-est-elle-le-pays-le-moins-selectif-pour-acceder-a-l-enseignement-superieur-comme-l-affirme-le-ministre-philippe-baptiste_8260157.html</link><guid isPermaLink="false">c_e769608af3bd95c7</guid><pubDate>Sat, 31 Oct 2026 12:00:00 +0000</pubDate>
 <description>« C’est plus compliqué » selon franceinfo Vrai ou Fake</description></item>
@@ -149,7 +152,4 @@
 <item><title>Philippe Ballard : « En France, 85% du territoire est un désert médical »</title>
 <link>https://www.tf1info.fr/societe/verif-sante-france-85-du-territoire-francais-est-il-un-desert-medical-2437118.html</link><guid isPermaLink="false">c_081cfae6b5848d66</guid><pubDate>Mon, 20 Apr 2026 12:00:00 +0000</pubDate>
 <description>« Vrai » selon TF1 Info – Les Vérificateurs</description></item>
-<item><title>Ségolène Royal : « Le gouvernement a freiné le déploiement des bornes de recharge électrique »</title>
-<link>https://www.tf1info.fr/transports/verif-le-gouvernement-a-t-il-freine-sur-le-deploiement-des-bornes-de-recharge-pour-les-voitures-electriques-comme-le-dit-segolene-royal-2435887.html</link><guid isPermaLink="false">c_a74f7f2b24a1bfff</guid><pubDate>Tue, 14 Apr 2026 12:00:00 +0000</pubDate>
-<description>« Plutôt faux » selon TF1 Info – Les Vérificateurs</description></item>
 </channel></rss>
