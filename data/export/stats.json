@@ -3344,6 +3344,19 @@
    "n_sources": 4,
    "last_review_date": "2026-09-02"
   },
+  "Q62079328": {
+   "n_claims": 1,
+   "verdicts": {
+    "true": 0,
+    "mostly_true": 1,
+    "half_true": 0,
+    "mostly_false": 0,
+    "false": 0,
+    "unrated": 0
+   },
+   "n_sources": 1,
+   "last_review_date": "2026-11-04"
+  },
   "Q64503948": {
    "n_claims": 1,
    "verdicts": {

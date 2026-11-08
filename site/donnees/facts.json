@@ -7,12 +7,12 @@
    "votona_id": "ruffin"
   },
   "party": {
-   "id": null,
-   "name": null,
-   "short_name": null,
-   "status": "undated",
-   "name_at_date": null,
-   "short_name_at_date": null
+   "id": "Q62079328",
+   "name": "Debout !",
+   "short_name": "",
+   "status": "ok",
+   "name_at_date": "Debout !",
+   "short_name_at_date": ""
   },
   "claim_text": "C’est la première fois depuis vingt ans qu’on a un mouvement de jeunesse qui est en train de gagner",
   "claim_date": "2026-11-04",

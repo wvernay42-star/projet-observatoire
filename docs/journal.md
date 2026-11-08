@@ -21,6 +21,19 @@ Les décisions durables sont aussi consignées dans [decisions.md](decisions.md)
 | — | Hébergement préprod (`preprod`) / prod (`main`) | ✅ en ligne (26/10) — projet Vercel `votona-observatoire` ; production indexable depuis le 28/10 |
 | — | Liens Votona → Observatoire | ⏳ actifs sur `draft` (test, 26/10) ; `main` sur demande du porteur |
 
+## 2026-11-08 — Routine quotidienne
+
+- Candidats : synchronisation depuis https://votona.fr/ (pas de clone Votona) : 0 ajouté, 0 modifié, 0 absent ; 2 à confirmer (Selma Labib, Antoine Mikolajczak).
+- Décisions de l'admin (Supabase) : 1 décision appliquée (parti de Q3085763 → Q62079328, affiliations_manual.csv), 0 ignorée. `rating_map.csv` non modifié.
+- Collecte : google_factcheck 17 récupérées, 4 nouvelles ; datacommons_feed 4 récupérées, 0 nouvelle. Base : 7 615 vérifications.
+- Claims : auto_sure 455, validated 326, to_review 0, rejected 6 752. Exportées : 781 (781 la veille, +0), dont candidats 2027 inclus dans ce total.
+- Files déposées dans Supabase : libellés 0, attributions 0, partis 0, sources 7.
+- Part de verdicts positifs (toutes / attribuées) : TF1 Info 20,1 % / 40,5 % ; franceinfo 28,9 % / 37,6 % ; AFP Factuel 0,4 % / 2,8 % ; Poligraph 20,6 % / 24,3 % ; Les Décodeurs 1,6 % / 4,2 % ; 20 Minutes 11,0 % / 31,8 % ; Libération CheckNews 0 % / —.
+- Alertes : aucun résultat nouveau depuis 3 jours pour datacommons_feed. Aucune erreur de connecteur.
+- Images de partage : rien à créer.
+- Portraits : 209 personnes, 129 traitées (38 ok), 80 restantes ; lot interrompu car Wikimedia limite l'accès (normal).
+- Beta : build_beta exécuté, artefact republié (version 22). 96 tests passent.
+
 ## 2026-11-06 — Routine quotidienne
 
 - Candidats : synchronisation depuis https://votona.fr/ (pas de clone Votona) : 0 ajouté, 0 modifié, 0 absent ; 2 à confirmer (Selma Labib, Antoine Mikolajczak).
