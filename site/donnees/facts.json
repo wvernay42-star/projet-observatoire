@@ -41,6 +41,51 @@
   ]
  },
  {
+  "id": "c_bd9ff492ea275fd9",
+  "person": {
+   "id": "Q127256695",
+   "name": "Marie Mesmeur",
+   "votona_id": null
+  },
+  "party": {
+   "id": null,
+   "name": null,
+   "short_name": null,
+   "status": "undated",
+   "name_at_date": null,
+   "short_name_at_date": null
+  },
+  "claim_text": "Le ministère de l'Education nationale a-t-il envoyé un mail demandant de signaler les enseignants grévistes, solidaires de la mobilisation des lycéens ?",
+  "claim_date": "2026-11-02",
+  "date_precision": "day",
+  "date_is_fallback": false,
+  "country": "FR",
+  "attribution_status": "auto_sure",
+  "theme": "Société",
+  "votona_topics": [
+   {
+    "slug": "plafonner-les-effectifs-a-19-eleves-par-classe-en-recrutant",
+    "label": "Plafonner les effectifs à 19 élèves par classe en recrutant davantage d'enseignants"
+   },
+   {
+    "slug": "redonner-davantage-dautonomie-et-de-selection-aux",
+    "label": "Donner plus d'autonomie aux établissements scolaires, y compris pour choisir leurs élèves"
+   }
+  ],
+  "verdict": "true",
+  "reviews": [
+   {
+    "source_id": "franceinfo_vraioufake",
+    "source_name": "franceinfo Vrai ou Fake",
+    "url": "https://www.franceinfo.fr/vrai-ou-fake/vrai-ou-faux-le-ministere-de-l-education-nationale-a-t-il-envoye-un-mail-demandant-de-signaler-les-enseignants-grevistes-solidaires-de-la-mobilisation-des-lyceens_8269187.html",
+    "title": "VRAI OU FAUX. Le ministère de l'Education nationale a-t-il envoyé un mail demandant de signaler les enseignants grévistes solidaires de la mobilisation des lycéens ?",
+    "rating_original": "Vrai",
+    "rating_normalized": "true",
+    "review_date": "2026-11-07"
+   }
+  ]
+ },
+ {
   "id": "c_2d142c7e49585184",
   "person": {
    "id": "Q98234202",

@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <rss version="2.0"><channel><title>Votona Observatoire - dernières vérifications</title><link>https://observatoire.votona.fr/</link>
 <description>Les dernières déclarations politiques vérifiées par les rédactions françaises de fact-checking, avec le verdict d'origine.</description>
-<language>fr</language><lastBuildDate>Sun, 08 Nov 2026 05:00:23 +0000</lastBuildDate>
+<language>fr</language><lastBuildDate>Mon, 09 Nov 2026 05:00:12 +0000</lastBuildDate>
+<item><title>Marie Mesmeur : « Le ministère de l'Education nationale a-t-il envoyé un mail demandant de signaler les enseignants grévistes, solidaires de la mobilisation des lycéens ? »</title>
+<link>https://www.franceinfo.fr/vrai-ou-fake/vrai-ou-faux-le-ministere-de-l-education-nationale-a-t-il-envoye-un-mail-demandant-de-signaler-les-enseignants-grevistes-solidaires-de-la-mobilisation-des-lyceens_8269187.html</link><guid isPermaLink="false">c_bd9ff492ea275fd9</guid><pubDate>Sat, 07 Nov 2026 12:00:00 +0000</pubDate>
+<description>« Vrai » selon franceinfo Vrai ou Fake</description></item>
 <item><title>François Ruffin : « C’est la première fois depuis vingt ans qu’on a un mouvement de jeunesse qui est en train de gagner »</title>
 <link>https://www.tf1info.fr/societe/verif-est-il-vrai-que-le-mouvement-lyceen-est-en-train-de-gagner-pour-la-premiere-fois-depuis-vingt-ans-comme-le-suggere-francois-ruffin-2473661.html</link><guid isPermaLink="false">c_2e2764bdbdc88f40</guid><pubDate>Wed, 04 Nov 2026 12:00:00 +0000</pubDate>
 <description>« Plutôt vrai » selon TF1 Info – Les Vérificateurs</description></item>
@@ -149,7 +152,4 @@
 <item><title>Julien Odoul : « Tous nos voisins européens ont baissé les taxes sur les carburants »</title>
 <link>https://poligraph.fr/factchecks/2026-04-21-verif-pouvoir-d-achat-est-il-vrai-que-tous-nos-voisins-ont-baisse-les-taxes-sur-les-carburants</link><guid isPermaLink="false">c_3afb5c1c51baed76</guid><pubDate>Tue, 21 Apr 2026 12:00:00 +0000</pubDate>
 <description>« Faux » selon Poligraph ; « Faux » selon TF1 Info – Les Vérificateurs</description></item>
-<item><title>Philippe Ballard : « En France, 85% du territoire est un désert médical »</title>
-<link>https://www.tf1info.fr/societe/verif-sante-france-85-du-territoire-francais-est-il-un-desert-medical-2437118.html</link><guid isPermaLink="false">c_081cfae6b5848d66</guid><pubDate>Mon, 20 Apr 2026 12:00:00 +0000</pubDate>
-<description>« Vrai » selon TF1 Info – Les Vérificateurs</description></item>
 </channel></rss>

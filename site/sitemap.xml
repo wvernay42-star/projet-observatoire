@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-<url><loc>https://observatoire.votona.fr/</loc><lastmod>2026-11-08</lastmod></url>
-<url><loc>https://observatoire.votona.fr/candidats/</loc><lastmod>2026-11-08</lastmod></url>
-<url><loc>https://observatoire.votona.fr/personnalites/</loc><lastmod>2026-11-08</lastmod></url>
-<url><loc>https://observatoire.votona.fr/partis/</loc><lastmod>2026-11-08</lastmod></url>
-<url><loc>https://observatoire.votona.fr/sujets/</loc><lastmod>2026-11-08</lastmod></url>
-<url><loc>https://observatoire.votona.fr/methode/</loc><lastmod>2026-11-08</lastmod></url>
-<url><loc>https://observatoire.votona.fr/vous-etes-cite/</loc><lastmod>2026-11-08</lastmod></url>
-<url><loc>https://observatoire.votona.fr/credits-photos/</loc><lastmod>2026-11-08</lastmod></url>
+<url><loc>https://observatoire.votona.fr/</loc><lastmod>2026-11-09</lastmod></url>
+<url><loc>https://observatoire.votona.fr/candidats/</loc><lastmod>2026-11-09</lastmod></url>
+<url><loc>https://observatoire.votona.fr/personnalites/</loc><lastmod>2026-11-09</lastmod></url>
+<url><loc>https://observatoire.votona.fr/partis/</loc><lastmod>2026-11-09</lastmod></url>
+<url><loc>https://observatoire.votona.fr/sujets/</loc><lastmod>2026-11-09</lastmod></url>
+<url><loc>https://observatoire.votona.fr/methode/</loc><lastmod>2026-11-09</lastmod></url>
+<url><loc>https://observatoire.votona.fr/vous-etes-cite/</loc><lastmod>2026-11-09</lastmod></url>
+<url><loc>https://observatoire.votona.fr/credits-photos/</loc><lastmod>2026-11-09</lastmod></url>
 <url><loc>https://observatoire.votona.fr/candidats/bardella/</loc><lastmod>2026-09-01</lastmod></url>
 <url><loc>https://observatoire.votona.fr/candidats/philippe/</loc><lastmod>2026-08-27</lastmod></url>
 <url><loc>https://observatoire.votona.fr/candidats/attal/</loc><lastmod>2026-04-09</lastmod></url>
@@ -154,6 +154,7 @@
 <url><loc>https://observatoire.votona.fr/personnalites/manon-aubry/</loc><lastmod>2025-03-12</lastmod></url>
 <url><loc>https://observatoire.votona.fr/personnalites/manuel-bompard/</loc><lastmod>2026-01-28</lastmod></url>
 <url><loc>https://observatoire.votona.fr/personnalites/marc-fesneau/</loc><lastmod>2023-05-10</lastmod></url>
+<url><loc>https://observatoire.votona.fr/personnalites/marie-mesmeur/</loc><lastmod>2026-11-07</lastmod></url>
 <url><loc>https://observatoire.votona.fr/personnalites/marie-toussaint/</loc><lastmod>2024-05-31</lastmod></url>
 <url><loc>https://observatoire.votona.fr/personnalites/marie-charlotte-garin/</loc><lastmod>2023-12-07</lastmod></url>
 <url><loc>https://observatoire.votona.fr/personnalites/marina-ferrari/</loc><lastmod>2024-06-14</lastmod></url>
@@ -278,6 +279,6 @@
 <url><loc>https://observatoire.votona.fr/sujets/securite/</loc><lastmod>2026-09-01</lastmod></url>
 <url><loc>https://observatoire.votona.fr/sujets/ecologie/</loc><lastmod>2026-10-16</lastmod></url>
 <url><loc>https://observatoire.votona.fr/sujets/europe/</loc><lastmod>2026-09-25</lastmod></url>
-<url><loc>https://observatoire.votona.fr/sujets/societe/</loc><lastmod>2026-11-04</lastmod></url>
+<url><loc>https://observatoire.votona.fr/sujets/societe/</loc><lastmod>2026-11-07</lastmod></url>
 <url><loc>https://observatoire.votona.fr/sujets/defense/</loc><lastmod>2026-03-13</lastmod></url>
 </urlset>
