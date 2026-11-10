@@ -730,17 +730,17 @@
    "last_review_date": "2025-07-11"
   },
   "Q12927": {
-   "n_claims": 41,
+   "n_claims": 42,
    "verdicts": {
     "true": 5,
     "mostly_true": 4,
     "half_true": 5,
     "mostly_false": 10,
-    "false": 16,
+    "false": 17,
     "unrated": 1
    },
    "n_sources": 6,
-   "last_review_date": "2026-09-17"
+   "last_review_date": "2026-11-09"
   },
   "Q12944": {
    "n_claims": 1,
@@ -3176,17 +3176,17 @@
    "last_review_date": "2026-10-08"
   },
   "Q205150": {
-   "n_claims": 114,
+   "n_claims": 115,
    "verdicts": {
     "true": 11,
     "mostly_true": 11,
     "half_true": 13,
     "mostly_false": 30,
-    "false": 45,
+    "false": 46,
     "unrated": 4
    },
    "n_sources": 6,
-   "last_review_date": "2026-09-17"
+   "last_review_date": "2026-11-09"
   },
   "Q23731823": {
    "n_claims": 142,
@@ -3202,9 +3202,9 @@
    "last_review_date": "2026-10-23"
   },
   "Q27978402": {
-   "n_claims": 108,
+   "n_claims": 109,
    "verdicts": {
-    "true": 28,
+    "true": 29,
     "mostly_true": 22,
     "half_true": 16,
     "mostly_false": 17,
@@ -3212,7 +3212,7 @@
     "unrated": 3
    },
    "n_sources": 6,
-   "last_review_date": "2026-10-16"
+   "last_review_date": "2026-11-07"
   },
   "Q3058074": {
    "n_claims": 3,
@@ -3464,17 +3464,17 @@
  },
  "country": {
   "FR": {
-   "n_claims": 782,
+   "n_claims": 783,
    "verdicts": {
     "true": 132,
     "mostly_true": 127,
     "half_true": 125,
     "mostly_false": 169,
-    "false": 204,
+    "false": 205,
     "unrated": 25
    },
    "n_sources": 6,
-   "last_review_date": "2026-11-07"
+   "last_review_date": "2026-11-09"
   }
  },
  "month": {
@@ -4688,17 +4688,17 @@
    "last_review_date": "2026-10-31"
   },
   "2026-11": {
-   "n_claims": 2,
+   "n_claims": 3,
    "verdicts": {
     "true": 1,
     "mostly_true": 1,
     "half_true": 0,
     "mostly_false": 0,
-    "false": 0,
+    "false": 1,
     "unrated": 0
    },
    "n_sources": 2,
-   "last_review_date": "2026-11-07"
+   "last_review_date": "2026-11-09"
   }
  }
 }

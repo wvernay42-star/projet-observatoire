@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-09T05:00:12+00:00",
+ "generated_at": "2026-11-10T05:00:55+00:00",
  "scope": "Sur les déclarations vérifiées, pas sur l'ensemble des propos tenus.",
  "candidats": {
   "bardella": {
@@ -87,7 +87,7 @@
    "last_review": "2023-09-27"
   },
   "lepen": {
-   "n": 41,
+   "n": 42,
    "url": "https://observatoire.votona.fr/candidats/lepen/",
    "sources": [
     "20 Minutes – Fake Off",
@@ -97,7 +97,7 @@
     "TF1 Info – Les Vérificateurs",
     "franceinfo Vrai ou Fake"
    ],
-   "last_review": "2026-09-17"
+   "last_review": "2026-11-09"
   },
   "lisnard": {
    "n": 6,

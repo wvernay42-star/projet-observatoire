@@ -1,5 +1,41 @@
 [
  {
+  "id": "c_0db884152806432d",
+  "person": {
+   "id": "Q12927",
+   "name": "Marine Le Pen",
+   "votona_id": "lepen"
+  },
+  "party": {
+   "id": "Q205150",
+   "name": "Rassemblement national",
+   "short_name": "RN",
+   "status": "ok",
+   "name_at_date": "Rassemblement national",
+   "short_name_at_date": "RN"
+  },
+  "claim_text": "\"Il n'y a pas de discriminations en France\"",
+  "claim_date": "2026-11-08",
+  "date_precision": "day",
+  "date_is_fallback": false,
+  "country": "FR",
+  "attribution_status": "auto_sure",
+  "theme": null,
+  "votona_topics": [],
+  "verdict": "false",
+  "reviews": [
+   {
+    "source_id": "tf1info_verificateurs",
+    "source_name": "TF1 Info – Les Vérificateurs",
+    "url": "https://www.tf1info.fr/politique/elections/presidentielle/verif-pas-de-discriminations-en-france-selon-marine-le-pen-ce-que-disent-les-dernieres-enquetes-2474781.html",
+    "title": "VÉRIF' - \"Pas de discriminations\" en France, selon Marine Le Pen ? Ce que disent les dernières enquêtes",
+    "rating_original": "Faux",
+    "rating_normalized": "false",
+    "review_date": "2026-11-09"
+   }
+  ]
+ },
+ {
   "id": "c_2e2764bdbdc88f40",
   "person": {
    "id": "Q3085763",
@@ -48,12 +84,12 @@
    "votona_id": null
   },
   "party": {
-   "id": null,
-   "name": null,
-   "short_name": null,
-   "status": "undated",
-   "name_at_date": null,
-   "short_name_at_date": null
+   "id": "Q27978402",
+   "name": "La France insoumise",
+   "short_name": "LFI",
+   "status": "ok",
+   "name_at_date": "La France insoumise",
+   "short_name_at_date": "LFI"
   },
   "claim_text": "Le ministère de l'Education nationale a-t-il envoyé un mail demandant de signaler les enseignants grévistes, solidaires de la mobilisation des lycéens ?",
   "claim_date": "2026-11-02",
