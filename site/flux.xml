@@ -1,10 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <rss version="2.0"><channel><title>Votona Observatoire - dernières vérifications</title><link>https://observatoire.votona.fr/</link>
 <description>Les dernières déclarations politiques vérifiées par les rédactions françaises de fact-checking, avec le verdict d'origine.</description>
-<language>fr</language><lastBuildDate>Tue, 10 Nov 2026 05:00:55 +0000</lastBuildDate>
+<language>fr</language><lastBuildDate>Wed, 11 Nov 2026 05:01:39 +0000</lastBuildDate>
+<item><title>Clémence Guetté : « La France est un des pays européens qui a le moins augmenté le SMIC en matière de pouvoir d'achat »</title>
+<link>https://poligraph.fr/factchecks/2026-11-09-verif-la-france-est-elle-le-pays-europeen-a-avoir-le-moins-augmente-s</link><guid isPermaLink="false">c_10f3f57a1ae99001</guid><pubDate>Mon, 09 Nov 2026 12:00:00 +0000</pubDate>
+<description>« Plutôt vrai » selon Poligraph ; « Plutôt vrai » selon TF1 Info – Les Vérificateurs</description></item>
 <item><title>Marine Le Pen : « "Il n'y a pas de discriminations en France" »</title>
-<link>https://www.tf1info.fr/politique/elections/presidentielle/verif-pas-de-discriminations-en-france-selon-marine-le-pen-ce-que-disent-les-dernieres-enquetes-2474781.html</link><guid isPermaLink="false">c_0db884152806432d</guid><pubDate>Mon, 09 Nov 2026 12:00:00 +0000</pubDate>
-<description>« Faux » selon TF1 Info – Les Vérificateurs</description></item>
+<link>https://poligraph.fr/factchecks/2026-11-09-verif-pas-de-discriminations-en-france-selon-marine-le-pen-ce-que-dis</link><guid isPermaLink="false">c_0db884152806432d</guid><pubDate>Mon, 09 Nov 2026 12:00:00 +0000</pubDate>
+<description>« Faux » selon Poligraph ; « Faux » selon TF1 Info – Les Vérificateurs</description></item>
 <item><title>Marie Mesmeur : « Le ministère de l'Education nationale a-t-il envoyé un mail demandant de signaler les enseignants grévistes, solidaires de la mobilisation des lycéens ? »</title>
 <link>https://www.franceinfo.fr/vrai-ou-fake/vrai-ou-faux-le-ministere-de-l-education-nationale-a-t-il-envoye-un-mail-demandant-de-signaler-les-enseignants-grevistes-solidaires-de-la-mobilisation-des-lyceens_8269187.html</link><guid isPermaLink="false">c_bd9ff492ea275fd9</guid><pubDate>Sat, 07 Nov 2026 12:00:00 +0000</pubDate>
 <description>« Vrai » selon franceinfo Vrai ou Fake</description></item>
@@ -149,7 +152,4 @@
 <item><title>Yaël Braun-Pivet : « "46% des jeunes Français n'ont jamais entendu parler de la Shoah" »</title>
 <link>https://www.franceinfo.fr/societe/antisemitisme/vrai-ou-faux-pres-de-la-moitie-des-jeunes-francais-n-ont-ils-jamais-entendu-parler-de-la-shoah-comme-l-affirme-la-presidente-de-l-assemblee-nationale-yael-braun-pivet_7969649.html</link><guid isPermaLink="false">c_54005784cad99232</guid><pubDate>Wed, 29 Apr 2026 12:00:00 +0000</pubDate>
 <description>« C’est plus compliqué » selon franceinfo Vrai ou Fake</description></item>
-<item><title>Jordan Bardella : « Les personnes régularisées en Espagne pourront s'installer en France »</title>
-<link>https://factuel.afp.com/doc.afp.com.A86L4G3</link><guid isPermaLink="false">c_a1b984943402b778</guid><pubDate>Wed, 22 Apr 2026 12:00:00 +0000</pubDate>
-<description>« Trompeur » selon AFP Factuel</description></item>
 </channel></rss>

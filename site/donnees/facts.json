@@ -1,5 +1,55 @@
 [
  {
+  "id": "c_10f3f57a1ae99001",
+  "person": {
+   "id": "Q109969696",
+   "name": "Clémence Guetté",
+   "votona_id": null
+  },
+  "party": {
+   "id": null,
+   "name": null,
+   "short_name": null,
+   "status": "ambiguous",
+   "name_at_date": null,
+   "short_name_at_date": null
+  },
+  "claim_text": "La France est un des pays européens qui a le moins augmenté le SMIC en matière de pouvoir d'achat",
+  "claim_date": "2026-11-09",
+  "date_precision": "day",
+  "date_is_fallback": true,
+  "country": "FR",
+  "attribution_status": "auto_sure",
+  "theme": "Protection sociale",
+  "votona_topics": [
+   {
+    "slug": "augmenter-significativement-le-smic",
+    "label": "Augmenter le SMIC au-delà de sa revalorisation automatique"
+   }
+  ],
+  "verdict": "mostly_true",
+  "reviews": [
+   {
+    "source_id": "poligraph_fr",
+    "source_name": "Poligraph",
+    "url": "https://poligraph.fr/factchecks/2026-11-09-verif-la-france-est-elle-le-pays-europeen-a-avoir-le-moins-augmente-s",
+    "title": "Plutôt vrai — VÉRIF' - La France est-elle le pays européen à avoir le moins augmenté son Smic ?",
+    "rating_original": "Plutôt vrai",
+    "rating_normalized": "mostly_true",
+    "review_date": "2026-11-09"
+   },
+   {
+    "source_id": "tf1info_verificateurs",
+    "source_name": "TF1 Info – Les Vérificateurs",
+    "url": "https://www.tf1info.fr/economie/verif-salaire-minimum-la-france-est-elle-le-pays-europeen-a-avoir-le-moins-augmente-son-smic-2474850.html",
+    "title": "VÉRIF' - La France est-elle le pays européen à avoir le moins augmenté son Smic ?",
+    "rating_original": "Plutôt vrai",
+    "rating_normalized": "mostly_true",
+    "review_date": "2026-11-09"
+   }
+  ]
+ },
+ {
   "id": "c_0db884152806432d",
   "person": {
    "id": "Q12927",
@@ -24,6 +74,15 @@
   "votona_topics": [],
   "verdict": "false",
   "reviews": [
+   {
+    "source_id": "poligraph_fr",
+    "source_name": "Poligraph",
+    "url": "https://poligraph.fr/factchecks/2026-11-09-verif-pas-de-discriminations-en-france-selon-marine-le-pen-ce-que-dis",
+    "title": "Faux — VÉRIF' - \"Pas de discriminations\" en France, selon Marine Le Pen ? Ce que disent les dernières enquêtes",
+    "rating_original": "Faux",
+    "rating_normalized": "false",
+    "review_date": "2026-11-09"
+   },
    {
     "source_id": "tf1info_verificateurs",
     "source_name": "TF1 Info – Les Vérificateurs",

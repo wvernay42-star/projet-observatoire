@@ -1,1 +1,34 @@
-[]
+[
+ {
+  "claim_id": "c_10f3f57a1ae99001",
+  "claim_text": "La France est un des pays européens qui a le moins augmenté le SMIC en matière de pouvoir d'achat",
+  "claim_date": "2026-11-09",
+  "reviews": [
+   {
+    "url": "https://poligraph.fr/factchecks/2026-11-09-verif-la-france-est-elle-le-pays-europeen-a-avoir-le-moins-augmente-s",
+    "source_id": "poligraph_fr",
+    "claimant": "Clémence Guetté",
+    "rating_original": "Plutôt vrai",
+    "rating_normalized": "mostly_true",
+    "review_date": "2026-11-09"
+   },
+   {
+    "url": "https://www.tf1info.fr/economie/verif-salaire-minimum-la-france-est-elle-le-pays-europeen-a-avoir-le-moins-augmente-son-smic-2474850.html",
+    "source_id": "tf1info_verificateurs",
+    "claimant": "Clémence Guetté",
+    "rating_original": "Plutôt vrai",
+    "rating_normalized": "mostly_true",
+    "review_date": "2026-11-09"
+   }
+  ],
+  "person": {
+   "id": "Q109969696",
+   "name": "Clémence Guetté"
+  },
+  "status": "ambiguous",
+  "candidates": [
+   "Q27978402",
+   "Q922707"
+  ]
+ }
+]

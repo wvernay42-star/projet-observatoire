@@ -21,6 +21,19 @@ Les décisions durables sont aussi consignées dans [decisions.md](decisions.md)
 | — | Hébergement préprod (`preprod`) / prod (`main`) | ✅ en ligne (26/10) — projet Vercel `votona-observatoire` ; production indexable depuis le 28/10 |
 | — | Liens Votona → Observatoire | ⏳ actifs sur `draft` (test, 26/10) ; `main` sur demande du porteur |
 
+## 2026-11-11 — Routine quotidienne
+
+- Candidats : synchronisation depuis https://votona.fr/ (pas de clone Votona) : 0 ajouté, 0 modifié, 0 absent ; 2 à confirmer (Selma Labib, Antoine Mikolajczak).
+- Décisions de l'admin (Supabase) : 0 décision appliquée, 0 ignorée. `rating_map.csv` non modifié.
+- Collecte : google_factcheck 20 récupérées, 4 nouvelles ; datacommons_feed 4 récupérées, 0 nouvelle. Base : 7 624 vérifications (rechargée depuis data/store : 7 620).
+- Claims : auto_sure 458, validated 326, to_review 0, rejected 6 756. Exportées : 784 (783 la veille, +1), dont 243 de candidats 2027.
+- Files déposées dans Supabase : libellés 0, attributions 0, partis 1 (Clémence Guetté, déclaration du 09/11 : LFI ou PG), sources 7.
+- Part de verdicts positifs (toutes / attribuées) : TF1 Info 20,2 % / 40,5 % ; franceinfo 29,1 % / 37,8 % ; AFP Factuel 0,4 % / 2,8 % ; Poligraph 21,2 % / 25,0 % ; Les Décodeurs 1,6 % / 4,2 % ; 20 Minutes 11,0 % / 31,8 % ; Libération CheckNews 0 % / —.
+- Alertes : aucun résultat nouveau depuis 3 jours pour datacommons_feed. Aucune erreur de connecteur.
+- Images de partage : rien à créer.
+- Portraits : 210 personnes, 129 traitées (38 ok), 81 restantes ; 0 traité ce jour, lot interrompu car Wikimedia limite l'accès. À noter : aucun portrait traité depuis le 06/11 au moins ; les quatre hôtes sont autorisés par la politique réseau, mais commons.wikimedia.org et fr.wikipedia.org répondent 429 dès la première requête (query.wikidata.org et upload.wikimedia.org répondent 200).
+- Beta : build_beta exécuté (784 déclarations), artefact republié (version 25). 96 tests passent.
+
 ## 2026-11-10 — Routine quotidienne
 
 - Candidats : synchronisation depuis https://votona.fr/ (pas de clone Votona) : 0 ajouté, 0 modifié, 0 absent ; 2 à confirmer (Selma Labib, Antoine Mikolajczak).
