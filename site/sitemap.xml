@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-<url><loc>https://observatoire.votona.fr/</loc><lastmod>2026-11-11</lastmod></url>
-<url><loc>https://observatoire.votona.fr/candidats/</loc><lastmod>2026-11-11</lastmod></url>
-<url><loc>https://observatoire.votona.fr/personnalites/</loc><lastmod>2026-11-11</lastmod></url>
-<url><loc>https://observatoire.votona.fr/partis/</loc><lastmod>2026-11-11</lastmod></url>
-<url><loc>https://observatoire.votona.fr/sujets/</loc><lastmod>2026-11-11</lastmod></url>
-<url><loc>https://observatoire.votona.fr/methode/</loc><lastmod>2026-11-11</lastmod></url>
-<url><loc>https://observatoire.votona.fr/vous-etes-cite/</loc><lastmod>2026-11-11</lastmod></url>
-<url><loc>https://observatoire.votona.fr/credits-photos/</loc><lastmod>2026-11-11</lastmod></url>
+<url><loc>https://observatoire.votona.fr/</loc><lastmod>2026-11-13</lastmod></url>
+<url><loc>https://observatoire.votona.fr/candidats/</loc><lastmod>2026-11-13</lastmod></url>
+<url><loc>https://observatoire.votona.fr/personnalites/</loc><lastmod>2026-11-13</lastmod></url>
+<url><loc>https://observatoire.votona.fr/partis/</loc><lastmod>2026-11-13</lastmod></url>
+<url><loc>https://observatoire.votona.fr/sujets/</loc><lastmod>2026-11-13</lastmod></url>
+<url><loc>https://observatoire.votona.fr/methode/</loc><lastmod>2026-11-13</lastmod></url>
+<url><loc>https://observatoire.votona.fr/vous-etes-cite/</loc><lastmod>2026-11-13</lastmod></url>
+<url><loc>https://observatoire.votona.fr/credits-photos/</loc><lastmod>2026-11-13</lastmod></url>
 <url><loc>https://observatoire.votona.fr/candidats/bardella/</loc><lastmod>2026-09-01</lastmod></url>
 <url><loc>https://observatoire.votona.fr/candidats/philippe/</loc><lastmod>2026-08-27</lastmod></url>
 <url><loc>https://observatoire.votona.fr/candidats/attal/</loc><lastmod>2026-04-09</lastmod></url>
@@ -16,7 +16,7 @@
 <url><loc>https://observatoire.votona.fr/candidats/glucksmann/</loc><lastmod>2026-08-24</lastmod></url>
 <url><loc>https://observatoire.votona.fr/candidats/tondelier/</loc><lastmod>2026-09-02</lastmod></url>
 <url><loc>https://observatoire.votona.fr/candidats/bertrand/</loc><lastmod>2023-09-27</lastmod></url>
-<url><loc>https://observatoire.votona.fr/candidats/lepen/</loc><lastmod>2026-11-09</lastmod></url>
+<url><loc>https://observatoire.votona.fr/candidats/lepen/</loc><lastmod>2026-11-10</lastmod></url>
 <url><loc>https://observatoire.votona.fr/candidats/lisnard/</loc><lastmod>2025-12-01</lastmod></url>
 <url><loc>https://observatoire.votona.fr/candidats/dupont-aignan/</loc><lastmod>2025-09-30</lastmod></url>
 <url><loc>https://observatoire.votona.fr/candidats/faure/</loc><lastmod>2025-09-02</lastmod></url>
@@ -28,7 +28,8 @@
 <url><loc>https://observatoire.votona.fr/candidats/lalanne/</loc><lastmod>2022-01-11</lastmod></url>
 <url><loc>https://observatoire.votona.fr/candidats/maurel/</loc><lastmod>2026-09-25</lastmod></url>
 <url><loc>https://observatoire.votona.fr/candidats/roussel/</loc><lastmod>2024-06-20</lastmod></url>
-<url><loc>https://observatoire.votona.fr/candidats/zemmour/</loc><lastmod>2023-12-05</lastmod></url>
+<url><loc>https://observatoire.votona.fr/candidats/zemmour/</loc><lastmod>2026-11-11</lastmod></url>
+<url><loc>https://observatoire.votona.fr/candidats/riner/</loc><lastmod>2024-09-18</lastmod></url>
 <url><loc>https://observatoire.votona.fr/personnalites/agnes-pannier-runacher/</loc><lastmod>2023-08-25</lastmod></url>
 <url><loc>https://observatoire.votona.fr/personnalites/alain-houpert/</loc><lastmod>2024-11-21</lastmod></url>
 <url><loc>https://observatoire.votona.fr/personnalites/aleksandar-nikolic/</loc><lastmod>2023-09-12</lastmod></url>
@@ -252,9 +253,9 @@
 <url><loc>https://observatoire.votona.fr/partis/ps/</loc><lastmod>2026-09-01</lastmod></url>
 <url><loc>https://observatoire.votona.fr/partis/pcf/</loc><lastmod>2026-06-04</lastmod></url>
 <url><loc>https://observatoire.votona.fr/partis/lr/</loc><lastmod>2026-10-08</lastmod></url>
-<url><loc>https://observatoire.votona.fr/partis/rn/</loc><lastmod>2026-11-09</lastmod></url>
+<url><loc>https://observatoire.votona.fr/partis/rn/</loc><lastmod>2026-11-10</lastmod></url>
 <url><loc>https://observatoire.votona.fr/partis/re/</loc><lastmod>2026-10-23</lastmod></url>
-<url><loc>https://observatoire.votona.fr/partis/lfi/</loc><lastmod>2026-11-07</lastmod></url>
+<url><loc>https://observatoire.votona.fr/partis/lfi/</loc><lastmod>2026-11-09</lastmod></url>
 <url><loc>https://observatoire.votona.fr/partis/rps/</loc><lastmod>2024-01-29</lastmod></url>
 <url><loc>https://observatoire.votona.fr/partis/g-s/</loc><lastmod>2023-12-13</lastmod></url>
 <url><loc>https://observatoire.votona.fr/partis/se/</loc><lastmod>2018-11-06</lastmod></url>
@@ -274,8 +275,8 @@
 <url><loc>https://observatoire.votona.fr/partis/udi/</loc><lastmod>2025-06-18</lastmod></url>
 <url><loc>https://observatoire.votona.fr/partis/pg/</loc><lastmod>2025-01-20</lastmod></url>
 <url><loc>https://observatoire.votona.fr/partis/tdp/</loc><lastmod>2023-09-21</lastmod></url>
-<url><loc>https://observatoire.votona.fr/sujets/economie/</loc><lastmod>2026-10-15</lastmod></url>
-<url><loc>https://observatoire.votona.fr/sujets/social/</loc><lastmod>2026-11-09</lastmod></url>
+<url><loc>https://observatoire.votona.fr/sujets/economie/</loc><lastmod>2026-11-10</lastmod></url>
+<url><loc>https://observatoire.votona.fr/sujets/social/</loc><lastmod>2026-11-11</lastmod></url>
 <url><loc>https://observatoire.votona.fr/sujets/securite/</loc><lastmod>2026-09-01</lastmod></url>
 <url><loc>https://observatoire.votona.fr/sujets/ecologie/</loc><lastmod>2026-10-16</lastmod></url>
 <url><loc>https://observatoire.votona.fr/sujets/europe/</loc><lastmod>2026-09-25</lastmod></url>

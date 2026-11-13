@@ -1,5 +1,104 @@
 [
  {
+  "id": "c_5f4efa81909220ef",
+  "person": {
+   "id": "Q288477",
+   "name": "Éric Zemmour",
+   "votona_id": "zemmour"
+  },
+  "party": {
+   "id": null,
+   "name": null,
+   "short_name": null,
+   "status": "undated",
+   "name_at_date": null,
+   "short_name_at_date": null
+  },
+  "claim_text": "Les États-Unis et la Suisse expulsent les étrangers après six mois passés au chômage",
+  "claim_date": "2026-11-10",
+  "date_precision": "day",
+  "date_is_fallback": false,
+  "country": "FR",
+  "attribution_status": "auto_sure",
+  "theme": "Protection sociale",
+  "votona_topics": [
+   {
+    "slug": "durcir-les-conditions-dindemnisation-du-chomage",
+    "label": "Restreindre les conditions d'indemnisation du chômage"
+   },
+   {
+    "slug": "reduire-drastiquement-limmigration-par-des-quotas-stricts",
+    "label": "Réduire l'immigration en instaurant des quotas annuels"
+   }
+  ],
+  "verdict": "mostly_false",
+  "reviews": [
+   {
+    "source_id": "tf1info_verificateurs",
+    "source_name": "TF1 Info – Les Vérificateurs",
+    "url": "https://www.tf1info.fr/international/verif-les-etats-unis-et-la-suisse-expulsent-ils-les-etrangers-depuis-plus-de-six-mois-au-chomage-comme-l-affirme-eric-zemmour-2475294.html",
+    "title": "VÉRIF' - Les États-Unis et la Suisse expulsent-ils les étrangers au chômage depuis plus de six mois, comme l'affirme Éric Zemmour ?",
+    "rating_original": "Plutôt faux",
+    "rating_normalized": "mostly_false",
+    "review_date": "2026-11-11"
+   }
+  ]
+ },
+ {
+  "id": "c_0db884152806432d",
+  "person": {
+   "id": "Q12927",
+   "name": "Marine Le Pen",
+   "votona_id": "lepen"
+  },
+  "party": {
+   "id": "Q205150",
+   "name": "Rassemblement national",
+   "short_name": "RN",
+   "status": "ok",
+   "name_at_date": "Rassemblement national",
+   "short_name_at_date": "RN"
+  },
+  "claim_text": "Il n'y a pas de discriminations en France",
+  "claim_date": "2026-11-09",
+  "date_precision": "day",
+  "date_is_fallback": false,
+  "country": "FR",
+  "attribution_status": "auto_sure",
+  "theme": "Économie & travail",
+  "votona_topics": [],
+  "verdict": "false",
+  "reviews": [
+   {
+    "source_id": "poligraph_fr",
+    "source_name": "Poligraph",
+    "url": "https://poligraph.fr/factchecks/2026-11-09-verif-pas-de-discriminations-en-france-selon-marine-le-pen-ce-que-dis",
+    "title": "Faux — VÉRIF' - \"Pas de discriminations\" en France, selon Marine Le Pen ? Ce que disent les dernières enquêtes",
+    "rating_original": "Faux",
+    "rating_normalized": "false",
+    "review_date": "2026-11-09"
+   },
+   {
+    "source_id": "tf1info_verificateurs",
+    "source_name": "TF1 Info – Les Vérificateurs",
+    "url": "https://www.tf1info.fr/politique/elections/presidentielle/verif-pas-de-discriminations-en-france-selon-marine-le-pen-ce-que-disent-les-dernieres-enquetes-2474781.html",
+    "title": "VÉRIF' - \"Pas de discriminations\" en France, selon Marine Le Pen ? Ce que disent les dernières enquêtes",
+    "rating_original": "Faux",
+    "rating_normalized": "false",
+    "review_date": "2026-11-09"
+   },
+   {
+    "source_id": "afp_factuel",
+    "source_name": "AFP Factuel",
+    "url": "https://factuel.afp.com/doc.afp.com.D6ZJ3ZQ",
+    "title": "\"Pas de discriminations\" à l'emploi en France ? Ce que disent les études",
+    "rating_original": "Faux",
+    "rating_normalized": "false",
+    "review_date": "2026-11-10"
+   }
+  ]
+ },
+ {
   "id": "c_10f3f57a1ae99001",
   "person": {
    "id": "Q109969696",
@@ -7,12 +106,12 @@
    "votona_id": null
   },
   "party": {
-   "id": null,
-   "name": null,
-   "short_name": null,
-   "status": "ambiguous",
-   "name_at_date": null,
-   "short_name_at_date": null
+   "id": "Q27978402",
+   "name": "La France insoumise",
+   "short_name": "LFI",
+   "status": "ok",
+   "name_at_date": "La France insoumise",
+   "short_name_at_date": "LFI"
   },
   "claim_text": "La France est un des pays européens qui a le moins augmenté le SMIC en matière de pouvoir d'achat",
   "claim_date": "2026-11-09",
@@ -50,51 +149,6 @@
   ]
  },
  {
-  "id": "c_0db884152806432d",
-  "person": {
-   "id": "Q12927",
-   "name": "Marine Le Pen",
-   "votona_id": "lepen"
-  },
-  "party": {
-   "id": "Q205150",
-   "name": "Rassemblement national",
-   "short_name": "RN",
-   "status": "ok",
-   "name_at_date": "Rassemblement national",
-   "short_name_at_date": "RN"
-  },
-  "claim_text": "\"Il n'y a pas de discriminations en France\"",
-  "claim_date": "2026-11-08",
-  "date_precision": "day",
-  "date_is_fallback": false,
-  "country": "FR",
-  "attribution_status": "auto_sure",
-  "theme": null,
-  "votona_topics": [],
-  "verdict": "false",
-  "reviews": [
-   {
-    "source_id": "poligraph_fr",
-    "source_name": "Poligraph",
-    "url": "https://poligraph.fr/factchecks/2026-11-09-verif-pas-de-discriminations-en-france-selon-marine-le-pen-ce-que-dis",
-    "title": "Faux — VÉRIF' - \"Pas de discriminations\" en France, selon Marine Le Pen ? Ce que disent les dernières enquêtes",
-    "rating_original": "Faux",
-    "rating_normalized": "false",
-    "review_date": "2026-11-09"
-   },
-   {
-    "source_id": "tf1info_verificateurs",
-    "source_name": "TF1 Info – Les Vérificateurs",
-    "url": "https://www.tf1info.fr/politique/elections/presidentielle/verif-pas-de-discriminations-en-france-selon-marine-le-pen-ce-que-disent-les-dernieres-enquetes-2474781.html",
-    "title": "VÉRIF' - \"Pas de discriminations\" en France, selon Marine Le Pen ? Ce que disent les dernières enquêtes",
-    "rating_original": "Faux",
-    "rating_normalized": "false",
-    "review_date": "2026-11-09"
-   }
-  ]
- },
- {
   "id": "c_2e2764bdbdc88f40",
   "person": {
    "id": "Q3085763",
@@ -124,6 +178,15 @@
   ],
   "verdict": "mostly_true",
   "reviews": [
+   {
+    "source_id": "poligraph_fr",
+    "source_name": "Poligraph",
+    "url": "https://poligraph.fr/factchecks/2026-11-04-verif-est-il-vrai-que-le-mouvement-lyceen-est-en-train-de-gagner-pour",
+    "title": "Plutôt vrai — VÉRIF - Est-il vrai que le mouvement lycéen \"est en train de gagner pour la première fois depuis vingt ans\", comme le suggère François Ruffin ?",
+    "rating_original": "Plutôt vrai",
+    "rating_normalized": "mostly_true",
+    "review_date": "2026-11-04"
+   },
    {
     "source_id": "tf1info_verificateurs",
     "source_name": "TF1 Info – Les Vérificateurs",
@@ -10410,6 +10473,42 @@
     "rating_original": "En partie vrai",
     "rating_normalized": "half_true",
     "review_date": "2024-09-24"
+   }
+  ]
+ },
+ {
+  "id": "c_156b1ab9cb4f5ff1",
+  "person": {
+   "id": "votona:riner",
+   "name": "Teddy Riner",
+   "votona_id": "riner"
+  },
+  "party": {
+   "id": null,
+   "name": null,
+   "short_name": null,
+   "status": "none",
+   "name_at_date": null,
+   "short_name_at_date": null
+  },
+  "claim_text": "Un judoka est considéré comme une arme blanche",
+  "claim_date": "2024-09-18",
+  "date_precision": "day",
+  "date_is_fallback": true,
+  "country": "FR",
+  "attribution_status": "auto_sure",
+  "theme": null,
+  "votona_topics": [],
+  "verdict": "false",
+  "reviews": [
+   {
+    "source_id": "tf1info_verificateurs",
+    "source_name": "TF1 Info – Les Vérificateurs",
+    "url": "https://www.tf1info.fr/justice-faits-divers/legitime-defense-prises-de-judo-non-un-judoka-n-est-pas-considere-comme-une-arme-blanche-comme-l-assure-teddy-riner-2320370.html",
+    "title": "Un judoka est-il considéré comme une \"arme blanche\" ?",
+    "rating_original": "Faux",
+    "rating_normalized": "false",
+    "review_date": "2024-09-18"
    }
   ]
  },

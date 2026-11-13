@@ -21,6 +21,19 @@ Les décisions durables sont aussi consignées dans [decisions.md](decisions.md)
 | — | Hébergement préprod (`preprod`) / prod (`main`) | ✅ en ligne (26/10) — projet Vercel `votona-observatoire` ; production indexable depuis le 28/10 |
 | — | Liens Votona → Observatoire | ⏳ actifs sur `draft` (test, 26/10) ; `main` sur demande du porteur |
 
+## 2026-11-13 — Routine quotidienne
+
+- Candidats : synchronisation depuis https://votona.fr/ (pas de clone Votona) : 1 ajouté (Teddy Riner, sans étiquette, « déclaré ou pressenti », non rattaché au référentiel), 0 modifié, 0 absent ; 3 à confirmer (Selma Labib, Antoine Mikolajczak, Teddy Riner).
+- Décisions de l'admin (Supabase) : 1 décision appliquée (parti de Q109969696 Clémence Guetté → Q27978402 LFI au 09/11, affiliations_manual.csv), 0 ignorée. `rating_map.csv` non modifié.
+- Collecte : google_factcheck 23 récupérées, 5 nouvelles ; datacommons_feed 4 récupérées, 0 nouvelle. Base : 7 629 vérifications (rechargée depuis data/store : 7 624).
+- Claims : auto_sure 460, validated 326, to_review 0, rejected 6 757. Exportées : 786 (784 au dernier passage, +2), dont 244 de candidats 2027.
+- Files déposées dans Supabase : libellés 0, attributions 0, partis 2 (Éric Zemmour, déclaration du 10/11 : Reconquête ! à confirmer ; Teddy Riner, déclaration du 18/09/2024 : aucun parti connu), sources 7.
+- Part de verdicts positifs (toutes / attribuées) : TF1 Info 20,2 % / 40,3 % ; franceinfo 29,1 % / 37,8 % ; AFP Factuel 0,4 % / 2,7 % ; Poligraph 22,0 % / 26,0 % ; Les Décodeurs 1,6 % / 4,2 % ; 20 Minutes 11,0 % / 31,8 % ; Libération CheckNews 0 % / —.
+- Alertes : aucun résultat nouveau depuis 3 jours pour datacommons_feed. Aucune erreur de connecteur.
+- Images de partage : 1 créée (web/beta/og/candidats/riner.jpg).
+- Portraits : 210 personnes, 129 traitées (38 ok), 81 restantes ; 0 traité ce jour, lot interrompu car Wikimedia limite l'accès (pas de portrait traité depuis le 06/11 au moins).
+- Beta : build_beta exécuté (786 déclarations, page candidat Teddy Riner créée), artefact republié (version 26). 96 tests passent.
+
 ## 2026-11-11 — Routine quotidienne
 
 - Candidats : synchronisation depuis https://votona.fr/ (pas de clone Votona) : 0 ajouté, 0 modifié, 0 absent ; 2 à confirmer (Selma Labib, Antoine Mikolajczak).

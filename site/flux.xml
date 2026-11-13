@@ -1,19 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <rss version="2.0"><channel><title>Votona Observatoire - dernières vérifications</title><link>https://observatoire.votona.fr/</link>
 <description>Les dernières déclarations politiques vérifiées par les rédactions françaises de fact-checking, avec le verdict d'origine.</description>
-<language>fr</language><lastBuildDate>Wed, 11 Nov 2026 05:01:39 +0000</lastBuildDate>
+<language>fr</language><lastBuildDate>Fri, 13 Nov 2026 05:00:20 +0000</lastBuildDate>
+<item><title>Éric Zemmour : « Les États-Unis et la Suisse expulsent les étrangers après six mois passés au chômage »</title>
+<link>https://www.tf1info.fr/international/verif-les-etats-unis-et-la-suisse-expulsent-ils-les-etrangers-depuis-plus-de-six-mois-au-chomage-comme-l-affirme-eric-zemmour-2475294.html</link><guid isPermaLink="false">c_5f4efa81909220ef</guid><pubDate>Wed, 11 Nov 2026 12:00:00 +0000</pubDate>
+<description>« Plutôt faux » selon TF1 Info – Les Vérificateurs</description></item>
+<item><title>Marine Le Pen : « Il n'y a pas de discriminations en France »</title>
+<link>https://factuel.afp.com/doc.afp.com.D6ZJ3ZQ</link><guid isPermaLink="false">c_0db884152806432d</guid><pubDate>Tue, 10 Nov 2026 12:00:00 +0000</pubDate>
+<description>« Faux » selon Poligraph ; « Faux » selon TF1 Info – Les Vérificateurs ; « Faux » selon AFP Factuel</description></item>
 <item><title>Clémence Guetté : « La France est un des pays européens qui a le moins augmenté le SMIC en matière de pouvoir d'achat »</title>
 <link>https://poligraph.fr/factchecks/2026-11-09-verif-la-france-est-elle-le-pays-europeen-a-avoir-le-moins-augmente-s</link><guid isPermaLink="false">c_10f3f57a1ae99001</guid><pubDate>Mon, 09 Nov 2026 12:00:00 +0000</pubDate>
 <description>« Plutôt vrai » selon Poligraph ; « Plutôt vrai » selon TF1 Info – Les Vérificateurs</description></item>
-<item><title>Marine Le Pen : « "Il n'y a pas de discriminations en France" »</title>
-<link>https://poligraph.fr/factchecks/2026-11-09-verif-pas-de-discriminations-en-france-selon-marine-le-pen-ce-que-dis</link><guid isPermaLink="false">c_0db884152806432d</guid><pubDate>Mon, 09 Nov 2026 12:00:00 +0000</pubDate>
-<description>« Faux » selon Poligraph ; « Faux » selon TF1 Info – Les Vérificateurs</description></item>
 <item><title>Marie Mesmeur : « Le ministère de l'Education nationale a-t-il envoyé un mail demandant de signaler les enseignants grévistes, solidaires de la mobilisation des lycéens ? »</title>
 <link>https://www.franceinfo.fr/vrai-ou-fake/vrai-ou-faux-le-ministere-de-l-education-nationale-a-t-il-envoye-un-mail-demandant-de-signaler-les-enseignants-grevistes-solidaires-de-la-mobilisation-des-lyceens_8269187.html</link><guid isPermaLink="false">c_bd9ff492ea275fd9</guid><pubDate>Sat, 07 Nov 2026 12:00:00 +0000</pubDate>
 <description>« Vrai » selon franceinfo Vrai ou Fake</description></item>
 <item><title>François Ruffin : « C’est la première fois depuis vingt ans qu’on a un mouvement de jeunesse qui est en train de gagner »</title>
-<link>https://www.tf1info.fr/societe/verif-est-il-vrai-que-le-mouvement-lyceen-est-en-train-de-gagner-pour-la-premiere-fois-depuis-vingt-ans-comme-le-suggere-francois-ruffin-2473661.html</link><guid isPermaLink="false">c_2e2764bdbdc88f40</guid><pubDate>Wed, 04 Nov 2026 12:00:00 +0000</pubDate>
-<description>« Plutôt vrai » selon TF1 Info – Les Vérificateurs</description></item>
+<link>https://poligraph.fr/factchecks/2026-11-04-verif-est-il-vrai-que-le-mouvement-lyceen-est-en-train-de-gagner-pour</link><guid isPermaLink="false">c_2e2764bdbdc88f40</guid><pubDate>Wed, 04 Nov 2026 12:00:00 +0000</pubDate>
+<description>« Plutôt vrai » selon Poligraph ; « Plutôt vrai » selon TF1 Info – Les Vérificateurs</description></item>
 <item><title>Philippe Baptiste : « "Nous sommes le pays le moins sélectif de l'ensemble des pays de l'OCDE" »</title>
 <link>https://www.franceinfo.fr/vrai-ou-fake/vrai-ou-faux-la-france-est-elle-le-pays-le-moins-selectif-pour-acceder-a-l-enseignement-superieur-comme-l-affirme-le-ministre-philippe-baptiste_8260157.html</link><guid isPermaLink="false">c_e769608af3bd95c7</guid><pubDate>Sat, 31 Oct 2026 12:00:00 +0000</pubDate>
 <description>« C’est plus compliqué » selon franceinfo Vrai ou Fake</description></item>
@@ -149,7 +152,4 @@
 <item><title>Marine Le Pen : « Il n'y a qu'en France où la victoire d'un club de foot provoque des émeutes. »</title>
 <link>https://www.franceinfo.fr/vrai-ou-fake/vrai-ou-faux-violences-apres-le-sacre-europeen-du-psg-la-france-est-elle-le-seul-pays-ou-la-victoire-d-un-club-de-foot-provoque-des-emeutes-comme-l-affirme-marine-le-pen_8039525.html</link><guid isPermaLink="false">c_ef51da92ed700c16</guid><pubDate>Tue, 02 Jun 2026 12:00:00 +0000</pubDate>
 <description>« Faux » selon franceinfo Vrai ou Fake</description></item>
-<item><title>Yaël Braun-Pivet : « "46% des jeunes Français n'ont jamais entendu parler de la Shoah" »</title>
-<link>https://www.franceinfo.fr/societe/antisemitisme/vrai-ou-faux-pres-de-la-moitie-des-jeunes-francais-n-ont-ils-jamais-entendu-parler-de-la-shoah-comme-l-affirme-la-presidente-de-l-assemblee-nationale-yael-braun-pivet_7969649.html</link><guid isPermaLink="false">c_54005784cad99232</guid><pubDate>Wed, 29 Apr 2026 12:00:00 +0000</pubDate>
-<description>« C’est plus compliqué » selon franceinfo Vrai ou Fake</description></item>
 </channel></rss>

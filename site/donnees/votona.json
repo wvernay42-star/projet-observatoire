@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-11T05:01:39+00:00",
+ "generated_at": "2026-11-13T05:00:20+00:00",
  "scope": "Sur les déclarations vérifiées, pas sur l'ensemble des propos tenus.",
  "candidats": {
   "bardella": {
@@ -97,7 +97,7 @@
     "TF1 Info – Les Vérificateurs",
     "franceinfo Vrai ou Fake"
    ],
-   "last_review": "2026-11-09"
+   "last_review": "2026-11-10"
   },
   "lisnard": {
    "n": 6,
@@ -165,6 +165,7 @@
    "url": "https://observatoire.votona.fr/candidats/ruffin/",
    "sources": [
     "AFP Factuel",
+    "Poligraph",
     "TF1 Info – Les Vérificateurs",
     "franceinfo Vrai ou Fake"
    ],
@@ -208,7 +209,7 @@
    "last_review": "2024-06-20"
   },
   "zemmour": {
-   "n": 14,
+   "n": 15,
    "url": "https://observatoire.votona.fr/candidats/zemmour/",
    "sources": [
     "20 Minutes – Fake Off",
@@ -218,16 +219,24 @@
     "TF1 Info – Les Vérificateurs",
     "franceinfo Vrai ou Fake"
    ],
-   "last_review": "2023-12-05"
+   "last_review": "2026-11-11"
+  },
+  "riner": {
+   "n": 1,
+   "url": "https://observatoire.votona.fr/candidats/riner/",
+   "sources": [
+    "TF1 Info – Les Vérificateurs"
+   ],
+   "last_review": "2024-09-18"
   }
  },
  "sujets": {
   "economie": {
-   "n": 106,
+   "n": 107,
    "url": "https://observatoire.votona.fr/sujets/economie/"
   },
   "social": {
-   "n": 49,
+   "n": 50,
    "url": "https://observatoire.votona.fr/sujets/social/"
   },
   "securite": {

@@ -1,34 +1,46 @@
 [
  {
-  "claim_id": "c_10f3f57a1ae99001",
-  "claim_text": "La France est un des pays européens qui a le moins augmenté le SMIC en matière de pouvoir d'achat",
-  "claim_date": "2026-11-09",
+  "claim_id": "c_5f4efa81909220ef",
+  "claim_text": "Les États-Unis et la Suisse expulsent les étrangers après six mois passés au chômage",
+  "claim_date": "2026-11-10",
   "reviews": [
    {
-    "url": "https://poligraph.fr/factchecks/2026-11-09-verif-la-france-est-elle-le-pays-europeen-a-avoir-le-moins-augmente-s",
-    "source_id": "poligraph_fr",
-    "claimant": "Clémence Guetté",
-    "rating_original": "Plutôt vrai",
-    "rating_normalized": "mostly_true",
-    "review_date": "2026-11-09"
-   },
-   {
-    "url": "https://www.tf1info.fr/economie/verif-salaire-minimum-la-france-est-elle-le-pays-europeen-a-avoir-le-moins-augmente-son-smic-2474850.html",
+    "url": "https://www.tf1info.fr/international/verif-les-etats-unis-et-la-suisse-expulsent-ils-les-etrangers-depuis-plus-de-six-mois-au-chomage-comme-l-affirme-eric-zemmour-2475294.html",
     "source_id": "tf1info_verificateurs",
-    "claimant": "Clémence Guetté",
-    "rating_original": "Plutôt vrai",
-    "rating_normalized": "mostly_true",
-    "review_date": "2026-11-09"
+    "claimant": "Eric Zemmour",
+    "rating_original": "Plutôt faux",
+    "rating_normalized": "mostly_false",
+    "review_date": "2026-11-11"
    }
   ],
   "person": {
-   "id": "Q109969696",
-   "name": "Clémence Guetté"
+   "id": "Q288477",
+   "name": "Éric Zemmour"
   },
-  "status": "ambiguous",
+  "status": "undated",
   "candidates": [
-   "Q27978402",
-   "Q922707"
+   "Q109932430"
   ]
+ },
+ {
+  "claim_id": "c_156b1ab9cb4f5ff1",
+  "claim_text": "Un judoka est considéré comme une arme blanche",
+  "claim_date": "2024-09-18",
+  "reviews": [
+   {
+    "url": "https://www.tf1info.fr/justice-faits-divers/legitime-defense-prises-de-judo-non-un-judoka-n-est-pas-considere-comme-une-arme-blanche-comme-l-assure-teddy-riner-2320370.html",
+    "source_id": "tf1info_verificateurs",
+    "claimant": "Teddy Riner",
+    "rating_original": "Faux",
+    "rating_normalized": "false",
+    "review_date": "2024-09-18"
+   }
+  ],
+  "person": {
+   "id": "votona:riner",
+   "name": "Teddy Riner"
+  },
+  "status": "none",
+  "candidates": []
  }
 ]
