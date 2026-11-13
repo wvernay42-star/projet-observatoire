@@ -6,7 +6,7 @@ THEMES = load_themes()
 def test_topic_and_family():
     cat, topics = classify("La France n'a pas eu de budget à l'équilibre, la dette explose", THEMES)
     assert cat == "Économie & travail"
-    assert [t["slug"] for t in topics] == ["reduire-la-dette-publique-en-priorite-par-la-baisse-des"]
+    assert [t["slug"] for t in topics] == ["baisser-les-depenses-publiques"]
 
 
 def test_family_without_topic():

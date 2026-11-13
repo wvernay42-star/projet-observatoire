@@ -21,6 +21,13 @@ Les décisions durables sont aussi consignées dans [decisions.md](decisions.md)
 | — | Hébergement préprod (`preprod`) / prod (`main`) | ✅ en ligne (26/10) — projet Vercel `votona-observatoire` ; production indexable depuis le 28/10 |
 | — | Liens Votona → Observatoire | ⏳ actifs sur `draft` (test, 26/10) ; `main` sur demande du porteur |
 
+## 2026-11-13 — Sujets de Votona : nouvelle liste (refonte du questionnaire)
+
+- Votona a refondu son questionnaire le 13/11/2026 : 32 sujets simples (15 retirés, 18 reformulés, 7 nouveaux : 35 heures, régularisation des travailleurs sans papiers, voitures thermiques en 2035, sortie de l'UE, cannabis, voile dans l'espace public, service national obligatoire), avec de nouvelles adresses `votona.fr/sujets/<slug>/` (les anciennes redirigent en 301).
+- `data/seeds/themes.csv` réécrit sur ces 32 sujets : mots-clés repris des sujets gardés, nouveaux mots-clés pour les 10 sujets qui n'en avaient pas (dont RIC, droit du sol, éoliennes), « régularisation » et « sans papiers » déplacés vers le sujet dédié. Les familles ne changent pas ; le sujet retraites passe en « Protection sociale ».
+- Test `test_themes` mis à jour (nouvelle adresse du sujet dépenses publiques). `pytest` : 96 réussis.
+- Les déclarations déjà exportées gardent leurs anciens sujets jusqu'au prochain export de la routine quotidienne, qui les reclassera.
+
 ## 2026-11-13 — Routine quotidienne
 
 - Candidats : synchronisation depuis https://votona.fr/ (pas de clone Votona) : 1 ajouté (Teddy Riner, sans étiquette, « déclaré ou pressenti », non rattaché au référentiel), 0 modifié, 0 absent ; 3 à confirmer (Selma Labib, Antoine Mikolajczak, Teddy Riner).
