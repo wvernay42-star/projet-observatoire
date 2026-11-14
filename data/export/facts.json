@@ -7,12 +7,12 @@
    "votona_id": "zemmour"
   },
   "party": {
-   "id": null,
-   "name": null,
-   "short_name": null,
-   "status": "undated",
-   "name_at_date": null,
-   "short_name_at_date": null
+   "id": "Q109932430",
+   "name": "Reconquête!",
+   "short_name": "",
+   "status": "ok",
+   "name_at_date": "Reconquête!",
+   "short_name_at_date": ""
   },
   "claim_text": "Les États-Unis et la Suisse expulsent les étrangers après six mois passés au chômage",
   "claim_date": "2026-11-10",
@@ -23,12 +23,12 @@
   "theme": "Protection sociale",
   "votona_topics": [
    {
-    "slug": "durcir-les-conditions-dindemnisation-du-chomage",
-    "label": "Restreindre les conditions d'indemnisation du chômage"
+    "slug": "reduire-la-duree-dindemnisation-du-chomage",
+    "label": "Réduire la durée d'indemnisation du chômage"
    },
    {
-    "slug": "reduire-drastiquement-limmigration-par-des-quotas-stricts",
-    "label": "Réduire l'immigration en instaurant des quotas annuels"
+    "slug": "reduire-limmigration",
+    "label": "Réduire l'immigration"
    }
   ],
   "verdict": "mostly_false",
@@ -122,8 +122,8 @@
   "theme": "Protection sociale",
   "votona_topics": [
    {
-    "slug": "augmenter-significativement-le-smic",
-    "label": "Augmenter le SMIC au-delà de sa revalorisation automatique"
+    "slug": "augmenter-le-smic",
+    "label": "Augmenter le SMIC"
    }
   ],
   "verdict": "mostly_true",
@@ -170,12 +170,7 @@
   "country": "FR",
   "attribution_status": "auto_sure",
   "theme": "Société",
-  "votona_topics": [
-   {
-    "slug": "redonner-davantage-dautonomie-et-de-selection-aux",
-    "label": "Donner plus d'autonomie aux établissements scolaires, y compris pour choisir leurs élèves"
-   }
-  ],
+  "votona_topics": [],
   "verdict": "mostly_true",
   "reviews": [
    {
@@ -220,16 +215,7 @@
   "country": "FR",
   "attribution_status": "auto_sure",
   "theme": "Société",
-  "votona_topics": [
-   {
-    "slug": "plafonner-les-effectifs-a-19-eleves-par-classe-en-recrutant",
-    "label": "Plafonner les effectifs à 19 élèves par classe en recrutant davantage d'enseignants"
-   },
-   {
-    "slug": "redonner-davantage-dautonomie-et-de-selection-aux",
-    "label": "Donner plus d'autonomie aux établissements scolaires, y compris pour choisir leurs élèves"
-   }
-  ],
+  "votona_topics": [],
   "verdict": "true",
   "reviews": [
    {
@@ -336,13 +322,8 @@
   "date_is_fallback": true,
   "country": "FR",
   "attribution_status": "validated",
-  "theme": "Société",
-  "votona_topics": [
-   {
-    "slug": "redonner-davantage-dautonomie-et-de-selection-aux",
-    "label": "Donner plus d'autonomie aux établissements scolaires, y compris pour choisir leurs élèves"
-   }
-  ],
+  "theme": null,
+  "votona_topics": [],
   "verdict": "half_true",
   "reviews": [
    {
@@ -434,8 +415,8 @@
   "theme": "Économie & travail",
   "votona_topics": [
    {
-    "slug": "reduire-la-dette-publique-en-priorite-par-la-baisse-des",
-    "label": "Réduire la dette publique en priorité par la baisse des dépenses de l'État"
+    "slug": "baisser-les-depenses-publiques",
+    "label": "Baisser les dépenses publiques"
    }
   ],
   "verdict": "half_true",
@@ -481,13 +462,8 @@
   "date_is_fallback": false,
   "country": "FR",
   "attribution_status": "auto_sure",
-  "theme": "Société",
-  "votona_topics": [
-   {
-    "slug": "redonner-davantage-dautonomie-et-de-selection-aux",
-    "label": "Donner plus d'autonomie aux établissements scolaires, y compris pour choisir leurs élèves"
-   }
-  ],
+  "theme": "Europe & institutions",
+  "votona_topics": [],
   "verdict": "half_true",
   "reviews": [
    {
@@ -615,8 +591,8 @@
   "theme": "Écologie",
   "votona_topics": [
    {
-    "slug": "interdire-rapidement-les-pesticides-de-synthese-en",
-    "label": "Fixer une date de sortie des pesticides de synthèse en agriculture"
+    "slug": "sortir-des-pesticides-de-synthese-dans-lagriculture",
+    "label": "Sortir des pesticides de synthèse dans l'agriculture"
    }
   ],
   "verdict": "half_true",
@@ -662,13 +638,8 @@
   "date_is_fallback": true,
   "country": "FR",
   "attribution_status": "auto_sure",
-  "theme": "Société",
-  "votona_topics": [
-   {
-    "slug": "redonner-davantage-dautonomie-et-de-selection-aux",
-    "label": "Donner plus d'autonomie aux établissements scolaires, y compris pour choisir leurs élèves"
-   }
-  ],
+  "theme": "Europe & institutions",
+  "votona_topics": [],
   "verdict": "true",
   "reviews": [
    {
@@ -712,13 +683,8 @@
   "date_is_fallback": true,
   "country": "FR",
   "attribution_status": "auto_sure",
-  "theme": "Société",
-  "votona_topics": [
-   {
-    "slug": "redonner-davantage-dautonomie-et-de-selection-aux",
-    "label": "Donner plus d'autonomie aux établissements scolaires, y compris pour choisir leurs élèves"
-   }
-  ],
+  "theme": null,
+  "votona_topics": [],
   "verdict": "mostly_false",
   "reviews": [
    {
@@ -801,8 +767,8 @@
   "theme": "Protection sociale",
   "votona_topics": [
    {
-    "slug": "durcir-les-conditions-dindemnisation-du-chomage",
-    "label": "Restreindre les conditions d'indemnisation du chômage"
+    "slug": "reduire-la-duree-dindemnisation-du-chomage",
+    "label": "Réduire la durée d'indemnisation du chômage"
    }
   ],
   "verdict": "false",
@@ -1022,8 +988,8 @@
   "theme": "Société",
   "votona_topics": [
    {
-    "slug": "encadrer-plus-strictement-les-loyers-dans-les-zones-tendues",
-    "label": "Encadrer plus strictement les loyers dans les zones tendues"
+    "slug": "encadrer-les-loyers-dans-les-grandes-villes",
+    "label": "Encadrer les loyers dans les grandes villes"
    }
   ],
   "verdict": "mostly_false",
@@ -1081,8 +1047,8 @@
   "theme": "Économie & travail",
   "votona_topics": [
    {
-    "slug": "baisser-la-tva-et-la-ticpe-sur-les-carburants-pour-redonner",
-    "label": "Baisser la TVA et la TICPE sur les carburants"
+    "slug": "baisser-les-taxes-sur-lessence-et-le-gazole",
+    "label": "Baisser les taxes sur l'essence et le gazole"
    }
   ],
   "verdict": "half_true",
@@ -1245,8 +1211,13 @@
   "date_is_fallback": false,
   "country": "FR",
   "attribution_status": "auto_sure",
-  "theme": null,
-  "votona_topics": [],
+  "theme": "Écologie",
+  "votona_topics": [
+   {
+    "slug": "interdire-la-vente-de-voitures-neuves-essence-et-diesel-a",
+    "label": "Interdire la vente de voitures neuves essence et diesel à partir de 2035"
+   }
+  ],
   "verdict": "half_true",
   "reviews": [
    {
@@ -1284,8 +1255,8 @@
   "theme": "Sécurité & immigration",
   "votona_topics": [
    {
-    "slug": "reduire-drastiquement-limmigration-par-des-quotas-stricts",
-    "label": "Réduire l'immigration en instaurant des quotas annuels"
+    "slug": "reduire-limmigration",
+    "label": "Réduire l'immigration"
    }
   ],
   "verdict": "mostly_false",
@@ -1367,11 +1338,11 @@
   "date_is_fallback": true,
   "country": "FR",
   "attribution_status": "auto_sure",
-  "theme": "Économie & travail",
+  "theme": "Protection sociale",
   "votona_topics": [
    {
-    "slug": "ramener-lage-legal-de-depart-a-la-retraite-a-60-ans",
-    "label": "Ramener l'âge légal de départ à la retraite à 60 ans"
+    "slug": "abaisser-lage-legal-de-depart-a-la-retraite",
+    "label": "Abaisser l'âge légal de départ à la retraite"
    }
   ],
   "verdict": "half_true",
@@ -1409,12 +1380,7 @@
   "country": "FR",
   "attribution_status": "auto_sure",
   "theme": "Société",
-  "votona_topics": [
-   {
-    "slug": "plafonner-les-effectifs-a-19-eleves-par-classe-en-recrutant",
-    "label": "Plafonner les effectifs à 19 élèves par classe en recrutant davantage d'enseignants"
-   }
-  ],
+  "votona_topics": [],
   "verdict": "half_true",
   "reviews": [
    {
@@ -1458,8 +1424,13 @@
   "date_is_fallback": false,
   "country": "FR",
   "attribution_status": "auto_sure",
-  "theme": "Sécurité & immigration",
-  "votona_topics": [],
+  "theme": "Société",
+  "votona_topics": [
+   {
+    "slug": "interdire-le-port-du-voile-dans-lespace-public",
+    "label": "Interdire le port du voile dans l'espace public"
+   }
+  ],
   "verdict": "false",
   "reviews": [
    {
@@ -1575,13 +1546,8 @@
   "date_is_fallback": false,
   "country": "FR",
   "attribution_status": "auto_sure",
-  "theme": "Société",
-  "votona_topics": [
-   {
-    "slug": "plafonner-les-effectifs-a-19-eleves-par-classe-en-recrutant",
-    "label": "Plafonner les effectifs à 19 élèves par classe en recrutant davantage d'enseignants"
-   }
-  ],
+  "theme": "Europe & institutions",
+  "votona_topics": [],
   "verdict": "mostly_false",
   "reviews": [
    {
@@ -1700,8 +1666,8 @@
   "theme": "Économie & travail",
   "votona_topics": [
    {
-    "slug": "reduire-la-dette-publique-en-priorite-par-la-baisse-des",
-    "label": "Réduire la dette publique en priorité par la baisse des dépenses de l'État"
+    "slug": "baisser-les-depenses-publiques",
+    "label": "Baisser les dépenses publiques"
    }
   ],
   "verdict": "mostly_false",
@@ -1775,7 +1741,16 @@
   "country": "FR",
   "attribution_status": "validated",
   "theme": "Écologie",
-  "votona_topics": [],
+  "votona_topics": [
+   {
+    "slug": "arreter-de-construire-de-nouvelles-eoliennes",
+    "label": "Arrêter de construire de nouvelles éoliennes"
+   },
+   {
+    "slug": "interdire-la-vente-de-voitures-neuves-essence-et-diesel-a",
+    "label": "Interdire la vente de voitures neuves essence et diesel à partir de 2035"
+   }
+  ],
   "verdict": "false",
   "reviews": [
    {
@@ -1849,8 +1824,8 @@
   "theme": "Société",
   "votona_topics": [
    {
-    "slug": "reconnaitre-un-droit-a-laide-active-a-mourir-comme-la-loi",
-    "label": "Autoriser l'aide active à mourir, sous conditions, pour les personnes atteintes d'une maladie grave et incurable"
+    "slug": "maintenir-le-droit-a-laide-a-mourir-pour-les-malades",
+    "label": "Maintenir le droit à l'aide à mourir pour les malades incurables"
    }
   ],
   "verdict": "mostly_false",
@@ -1935,8 +1910,8 @@
   "theme": "Économie & travail",
   "votona_topics": [
    {
-    "slug": "alourdir-la-fiscalite-sur-les-tres-gros-heritages-mega",
-    "label": "Augmenter la fiscalité sur les très gros héritages"
+    "slug": "augmenter-les-impots-sur-les-gros-heritages",
+    "label": "Augmenter les impôts sur les gros héritages"
    }
   ],
   "verdict": "false",
@@ -2127,12 +2102,7 @@
   "country": "FR",
   "attribution_status": "auto_sure",
   "theme": "Sécurité & immigration",
-  "votona_topics": [
-   {
-    "slug": "reserver-le-jugement-de-tous-les-crimes-sexuels-aux-cours",
-    "label": "Réserver le jugement de tous les crimes sexuels aux cours d'assises avec jury populaire, en les excluant des cours criminelles départementales"
-   }
-  ],
+  "votona_topics": [],
   "verdict": "false",
   "reviews": [
    {
@@ -2206,8 +2176,8 @@
   "theme": "Économie & travail",
   "votona_topics": [
    {
-    "slug": "baisser-la-tva-et-la-ticpe-sur-les-carburants-pour-redonner",
-    "label": "Baisser la TVA et la TICPE sur les carburants"
+    "slug": "baisser-les-taxes-sur-lessence-et-le-gazole",
+    "label": "Baisser les taxes sur l'essence et le gazole"
    }
   ],
   "verdict": "false",
@@ -2292,8 +2262,8 @@
   "theme": "Sécurité & immigration",
   "votona_topics": [
    {
-    "slug": "reduire-drastiquement-limmigration-par-des-quotas-stricts",
-    "label": "Réduire l'immigration en instaurant des quotas annuels"
+    "slug": "regulariser-les-sans-papiers-qui-travaillent-dans-les",
+    "label": "Régulariser les sans-papiers qui travaillent dans les métiers qui recrutent"
    }
   ],
   "verdict": "mostly_false",
@@ -2330,8 +2300,13 @@
   "date_is_fallback": true,
   "country": "FR",
   "attribution_status": "auto_sure",
-  "theme": "Europe & institutions",
-  "votona_topics": [],
+  "theme": "Écologie",
+  "votona_topics": [
+   {
+    "slug": "interdire-la-vente-de-voitures-neuves-essence-et-diesel-a",
+    "label": "Interdire la vente de voitures neuves essence et diesel à partir de 2035"
+   }
+  ],
   "verdict": "mostly_false",
   "reviews": [
    {
@@ -2411,13 +2386,8 @@
   "date_is_fallback": false,
   "country": "FR",
   "attribution_status": "auto_sure",
-  "theme": "Sécurité & immigration",
-  "votona_topics": [
-   {
-    "slug": "reserver-le-jugement-de-tous-les-crimes-sexuels-aux-cours",
-    "label": "Réserver le jugement de tous les crimes sexuels aux cours d'assises avec jury populaire, en les excluant des cours criminelles départementales"
-   }
-  ],
+  "theme": "Défense & numérique",
+  "votona_topics": [],
   "verdict": "half_true",
   "reviews": [
    {
@@ -2563,8 +2533,8 @@
   "theme": "Économie & travail",
   "votona_topics": [
    {
-    "slug": "baisser-la-tva-et-la-ticpe-sur-les-carburants-pour-redonner",
-    "label": "Baisser la TVA et la TICPE sur les carburants"
+    "slug": "baisser-les-taxes-sur-lessence-et-le-gazole",
+    "label": "Baisser les taxes sur l'essence et le gazole"
    }
   ],
   "verdict": "mostly_false",
@@ -2865,8 +2835,8 @@
   "theme": "Économie & travail",
   "votona_topics": [
    {
-    "slug": "baisser-la-tva-et-la-ticpe-sur-les-carburants-pour-redonner",
-    "label": "Baisser la TVA et la TICPE sur les carburants"
+    "slug": "baisser-les-taxes-sur-lessence-et-le-gazole",
+    "label": "Baisser les taxes sur l'essence et le gazole"
    }
   ],
   "verdict": "half_true",
@@ -2906,8 +2876,8 @@
   "theme": "Défense & numérique",
   "votona_topics": [
    {
-    "slug": "maintenir-un-soutien-militaire-et-financier-fort-a-lukraine",
-    "label": "Maintenir le soutien militaire et financier de la France à l'Ukraine"
+    "slug": "continuer-laide-militaire-a-lukraine",
+    "label": "Continuer l'aide militaire à l'Ukraine"
    }
   ],
   "verdict": "true",
@@ -2956,8 +2926,8 @@
   "theme": "Sécurité & immigration",
   "votona_topics": [
    {
-    "slug": "retablir-des-peines-minimales-peines-planchers-pour-les",
-    "label": "Rétablir des peines minimales (peines planchers) pour les récidivistes"
+    "slug": "instaurer-des-peines-minimales-pour-les-recidivistes",
+    "label": "Instaurer des peines minimales pour les récidivistes"
    }
   ],
   "verdict": "false",
@@ -3123,8 +3093,8 @@
   "theme": "Écologie",
   "votona_topics": [
    {
-    "slug": "interdire-rapidement-les-pesticides-de-synthese-en",
-    "label": "Fixer une date de sortie des pesticides de synthèse en agriculture"
+    "slug": "sortir-des-pesticides-de-synthese-dans-lagriculture",
+    "label": "Sortir des pesticides de synthèse dans l'agriculture"
    }
   ],
   "verdict": "mostly_true",
@@ -3164,8 +3134,8 @@
   "theme": "Sécurité & immigration",
   "votona_topics": [
    {
-    "slug": "renforcer-les-moyens-de-la-police-et-allonger-les-peines-de",
-    "label": "Augmenter les effectifs et les moyens de la police et de la gendarmerie"
+    "slug": "augmenter-les-effectifs-de-police-et-de-gendarmerie",
+    "label": "Augmenter les effectifs de police et de gendarmerie"
    }
   ],
   "verdict": "mostly_false",
@@ -3214,8 +3184,8 @@
   "theme": "Écologie",
   "votona_topics": [
    {
-    "slug": "interdire-rapidement-les-pesticides-de-synthese-en",
-    "label": "Fixer une date de sortie des pesticides de synthèse en agriculture"
+    "slug": "sortir-des-pesticides-de-synthese-dans-lagriculture",
+    "label": "Sortir des pesticides de synthèse dans l'agriculture"
    }
   ],
   "verdict": "mostly_false",
@@ -3552,8 +3522,8 @@
   "theme": "Sécurité & immigration",
   "votona_topics": [
    {
-    "slug": "renforcer-les-moyens-de-la-police-et-allonger-les-peines-de",
-    "label": "Augmenter les effectifs et les moyens de la police et de la gendarmerie"
+    "slug": "augmenter-les-effectifs-de-police-et-de-gendarmerie",
+    "label": "Augmenter les effectifs de police et de gendarmerie"
    }
   ],
   "verdict": "mostly_false",
@@ -3629,8 +3599,8 @@
   "theme": "Protection sociale",
   "votona_topics": [
    {
-    "slug": "augmenter-significativement-le-smic",
-    "label": "Augmenter le SMIC au-delà de sa revalorisation automatique"
+    "slug": "augmenter-le-smic",
+    "label": "Augmenter le SMIC"
    }
   ],
   "verdict": "mostly_false",
@@ -3739,13 +3709,8 @@
   "date_is_fallback": false,
   "country": "FR",
   "attribution_status": "validated",
-  "theme": "Société",
-  "votona_topics": [
-   {
-    "slug": "recruter-massivement-du-personnel-soignant-et-revaloriser",
-    "label": "Recruter davantage de soignants et augmenter leurs salaires à l'hôpital public"
-   }
-  ],
+  "theme": null,
+  "votona_topics": [],
   "verdict": "half_true",
   "reviews": [
    {
@@ -3783,8 +3748,8 @@
   "theme": "Défense & numérique",
   "votona_topics": [
    {
-    "slug": "maintenir-un-soutien-militaire-et-financier-fort-a-lukraine",
-    "label": "Maintenir le soutien militaire et financier de la France à l'Ukraine"
+    "slug": "continuer-laide-militaire-a-lukraine",
+    "label": "Continuer l'aide militaire à l'Ukraine"
    }
   ],
   "verdict": "half_true",
@@ -3824,8 +3789,8 @@
   "theme": "Défense & numérique",
   "votona_topics": [
    {
-    "slug": "maintenir-un-soutien-militaire-et-financier-fort-a-lukraine",
-    "label": "Maintenir le soutien militaire et financier de la France à l'Ukraine"
+    "slug": "continuer-laide-militaire-a-lukraine",
+    "label": "Continuer l'aide militaire à l'Ukraine"
    }
   ],
   "verdict": "false",
@@ -3973,8 +3938,8 @@
   "theme": "Économie & travail",
   "votona_topics": [
    {
-    "slug": "reduire-la-dette-publique-en-priorite-par-la-baisse-des",
-    "label": "Réduire la dette publique en priorité par la baisse des dépenses de l'État"
+    "slug": "baisser-les-depenses-publiques",
+    "label": "Baisser les dépenses publiques"
    }
   ],
   "verdict": "mostly_true",
@@ -4011,8 +3976,13 @@
   "date_is_fallback": false,
   "country": "FR",
   "attribution_status": "validated",
-  "theme": null,
-  "votona_topics": [],
+  "theme": "Écologie",
+  "votona_topics": [
+   {
+    "slug": "interdire-la-vente-de-voitures-neuves-essence-et-diesel-a",
+    "label": "Interdire la vente de voitures neuves essence et diesel à partir de 2035"
+   }
+  ],
   "verdict": "true",
   "reviews": [
    {
@@ -4156,12 +4126,7 @@
   "country": "FR",
   "attribution_status": "validated",
   "theme": "Sécurité & immigration",
-  "votona_topics": [
-   {
-    "slug": "reserver-le-jugement-de-tous-les-crimes-sexuels-aux-cours",
-    "label": "Réserver le jugement de tous les crimes sexuels aux cours d'assises avec jury populaire, en les excluant des cours criminelles départementales"
-   }
-  ],
+  "votona_topics": [],
   "verdict": "mostly_true",
   "reviews": [
    {
@@ -4199,8 +4164,8 @@
   "theme": "Économie & travail",
   "votona_topics": [
    {
-    "slug": "reduire-la-dette-publique-en-priorite-par-la-baisse-des",
-    "label": "Réduire la dette publique en priorité par la baisse des dépenses de l'État"
+    "slug": "baisser-les-depenses-publiques",
+    "label": "Baisser les dépenses publiques"
    }
   ],
   "verdict": "mostly_false",
@@ -4240,8 +4205,8 @@
   "theme": "Protection sociale",
   "votona_topics": [
    {
-    "slug": "augmenter-significativement-le-smic",
-    "label": "Augmenter le SMIC au-delà de sa revalorisation automatique"
+    "slug": "augmenter-le-smic",
+    "label": "Augmenter le SMIC"
    }
   ],
   "verdict": "mostly_false",
@@ -4398,8 +4363,8 @@
   "theme": "Sécurité & immigration",
   "votona_topics": [
    {
-    "slug": "reduire-drastiquement-limmigration-par-des-quotas-stricts",
-    "label": "Réduire l'immigration en instaurant des quotas annuels"
+    "slug": "reduire-limmigration",
+    "label": "Réduire l'immigration"
    }
   ],
   "verdict": "mostly_false",
@@ -4439,8 +4404,8 @@
   "theme": "Protection sociale",
   "votona_topics": [
    {
-    "slug": "augmenter-significativement-le-smic",
-    "label": "Augmenter le SMIC au-delà de sa revalorisation automatique"
+    "slug": "augmenter-le-smic",
+    "label": "Augmenter le SMIC"
    }
   ],
   "verdict": "false",
@@ -4549,11 +4514,11 @@
   "date_is_fallback": false,
   "country": "FR",
   "attribution_status": "auto_sure",
-  "theme": "Économie & travail",
+  "theme": "Protection sociale",
   "votona_topics": [
    {
-    "slug": "ramener-lage-legal-de-depart-a-la-retraite-a-60-ans",
-    "label": "Ramener l'âge légal de départ à la retraite à 60 ans"
+    "slug": "abaisser-lage-legal-de-depart-a-la-retraite",
+    "label": "Abaisser l'âge légal de départ à la retraite"
    }
   ],
   "verdict": "false",
@@ -4701,8 +4666,8 @@
   "theme": "Sécurité & immigration",
   "votona_topics": [
    {
-    "slug": "retablir-des-peines-minimales-peines-planchers-pour-les",
-    "label": "Rétablir des peines minimales (peines planchers) pour les récidivistes"
+    "slug": "instaurer-des-peines-minimales-pour-les-recidivistes",
+    "label": "Instaurer des peines minimales pour les récidivistes"
    }
   ],
   "verdict": "mostly_false",
@@ -4850,8 +4815,8 @@
   "theme": "Défense & numérique",
   "votona_topics": [
    {
-    "slug": "maintenir-un-soutien-militaire-et-financier-fort-a-lukraine",
-    "label": "Maintenir le soutien militaire et financier de la France à l'Ukraine"
+    "slug": "continuer-laide-militaire-a-lukraine",
+    "label": "Continuer l'aide militaire à l'Ukraine"
    }
   ],
   "verdict": "mostly_true",
@@ -4933,8 +4898,13 @@
   "date_is_fallback": false,
   "country": "FR",
   "attribution_status": "validated",
-  "theme": "Économie & travail",
-  "votona_topics": [],
+  "theme": "Europe & institutions",
+  "votona_topics": [
+   {
+    "slug": "instaurer-le-referendum-dinitiative-citoyenne-ric",
+    "label": "Instaurer le référendum d'initiative citoyenne (RIC)"
+   }
+  ],
   "verdict": "true",
   "reviews": [
    {
@@ -5053,8 +5023,8 @@
   "theme": "Économie & travail",
   "votona_topics": [
    {
-    "slug": "retablir-un-impot-renforce-sur-les-grandes-fortunes",
-    "label": "Rétablir un impôt sur la fortune (ISF)"
+    "slug": "retablir-limpot-sur-la-fortune-isf",
+    "label": "Rétablir l'impôt sur la fortune (ISF)"
    }
   ],
   "verdict": "half_true",
@@ -5166,8 +5136,8 @@
   "theme": "Économie & travail",
   "votona_topics": [
    {
-    "slug": "reduire-la-dette-publique-en-priorite-par-la-baisse-des",
-    "label": "Réduire la dette publique en priorité par la baisse des dépenses de l'État"
+    "slug": "baisser-les-depenses-publiques",
+    "label": "Baisser les dépenses publiques"
    }
   ],
   "verdict": "half_true",
@@ -5358,12 +5328,7 @@
   "country": "FR",
   "attribution_status": "auto_sure",
   "theme": "Protection sociale",
-  "votona_topics": [
-   {
-    "slug": "allonger-le-delai-de-carence-non-indemnise-pour-les-arrets",
-    "label": "Allonger le délai de carence non indemnisé pour les arrêts de travail courts"
-   }
-  ],
+  "votona_topics": [],
   "verdict": "mostly_true",
   "reviews": [
    {
@@ -5398,8 +5363,13 @@
   "date_is_fallback": true,
   "country": "FR",
   "attribution_status": "validated",
-  "theme": "Économie & travail",
-  "votona_topics": [],
+  "theme": "Europe & institutions",
+  "votona_topics": [
+   {
+    "slug": "instaurer-le-referendum-dinitiative-citoyenne-ric",
+    "label": "Instaurer le référendum d'initiative citoyenne (RIC)"
+   }
+  ],
   "verdict": "mostly_false",
   "reviews": [
    {
@@ -5437,8 +5407,8 @@
   "theme": "Économie & travail",
   "votona_topics": [
    {
-    "slug": "reduire-la-dette-publique-en-priorite-par-la-baisse-des",
-    "label": "Réduire la dette publique en priorité par la baisse des dépenses de l'État"
+    "slug": "baisser-les-depenses-publiques",
+    "label": "Baisser les dépenses publiques"
    }
   ],
   "verdict": "true",
@@ -5550,8 +5520,8 @@
   "theme": "Sécurité & immigration",
   "votona_topics": [
    {
-    "slug": "reduire-drastiquement-limmigration-par-des-quotas-stricts",
-    "label": "Réduire l'immigration en instaurant des quotas annuels"
+    "slug": "reduire-limmigration",
+    "label": "Réduire l'immigration"
    }
   ],
   "verdict": "mostly_false",
@@ -5669,13 +5639,8 @@
   "date_is_fallback": false,
   "country": "FR",
   "attribution_status": "auto_sure",
-  "theme": "Protection sociale",
-  "votona_topics": [
-   {
-    "slug": "geler-la-revalorisation-des-pensions-de-retraite-depassant",
-    "label": "Geler en 2027 la revalorisation des pensions de retraite supérieures à 2 034 euros par mois"
-   }
-  ],
+  "theme": null,
+  "votona_topics": [],
   "verdict": "mostly_false",
   "reviews": [
    {
@@ -5749,8 +5714,8 @@
   "theme": "Écologie",
   "votona_topics": [
    {
-    "slug": "interdire-rapidement-les-pesticides-de-synthese-en",
-    "label": "Fixer une date de sortie des pesticides de synthèse en agriculture"
+    "slug": "sortir-des-pesticides-de-synthese-dans-lagriculture",
+    "label": "Sortir des pesticides de synthèse dans l'agriculture"
    }
   ],
   "verdict": "mostly_false",
@@ -5788,7 +5753,12 @@
   "country": "FR",
   "attribution_status": "validated",
   "theme": "Défense & numérique",
-  "votona_topics": [],
+  "votona_topics": [
+   {
+    "slug": "rendre-le-service-national-obligatoire-pour-tous-les-jeunes",
+    "label": "Rendre le service national obligatoire pour tous les jeunes"
+   }
+  ],
   "verdict": "true",
   "reviews": [
    {
@@ -5905,12 +5875,7 @@
   "country": "FR",
   "attribution_status": "validated",
   "theme": "Sécurité & immigration",
-  "votona_topics": [
-   {
-    "slug": "reserver-le-jugement-de-tous-les-crimes-sexuels-aux-cours",
-    "label": "Réserver le jugement de tous les crimes sexuels aux cours d'assises avec jury populaire, en les excluant des cours criminelles départementales"
-   }
-  ],
+  "votona_topics": [],
   "verdict": "mostly_true",
   "reviews": [
    {
@@ -6029,8 +5994,8 @@
   "theme": "Société",
   "votona_topics": [
    {
-    "slug": "encadrer-plus-strictement-les-loyers-dans-les-zones-tendues",
-    "label": "Encadrer plus strictement les loyers dans les zones tendues"
+    "slug": "encadrer-les-loyers-dans-les-grandes-villes",
+    "label": "Encadrer les loyers dans les grandes villes"
    }
   ],
   "verdict": "half_true",
@@ -6104,7 +6069,12 @@
   "country": "FR",
   "attribution_status": "auto_sure",
   "theme": "Écologie",
-  "votona_topics": [],
+  "votona_topics": [
+   {
+    "slug": "arreter-de-construire-de-nouvelles-eoliennes",
+    "label": "Arrêter de construire de nouvelles éoliennes"
+   }
+  ],
   "verdict": "false",
   "reviews": [
    {
@@ -6139,13 +6109,8 @@
   "date_is_fallback": false,
   "country": "FR",
   "attribution_status": "validated",
-  "theme": "Société",
-  "votona_topics": [
-   {
-    "slug": "redonner-davantage-dautonomie-et-de-selection-aux",
-    "label": "Donner plus d'autonomie aux établissements scolaires, y compris pour choisir leurs élèves"
-   }
-  ],
+  "theme": null,
+  "votona_topics": [],
   "verdict": "true",
   "reviews": [
    {
@@ -6216,13 +6181,8 @@
   "date_is_fallback": false,
   "country": "FR",
   "attribution_status": "validated",
-  "theme": "Protection sociale",
-  "votona_topics": [
-   {
-    "slug": "allonger-le-delai-de-carence-non-indemnise-pour-les-arrets",
-    "label": "Allonger le délai de carence non indemnisé pour les arrêts de travail courts"
-   }
-  ],
+  "theme": null,
+  "votona_topics": [],
   "verdict": "false",
   "reviews": [
    {
@@ -6296,8 +6256,8 @@
   "theme": "Écologie",
   "votona_topics": [
    {
-    "slug": "interdire-rapidement-les-pesticides-de-synthese-en",
-    "label": "Fixer une date de sortie des pesticides de synthèse en agriculture"
+    "slug": "sortir-des-pesticides-de-synthese-dans-lagriculture",
+    "label": "Sortir des pesticides de synthèse dans l'agriculture"
    }
   ],
   "verdict": "mostly_false",
@@ -6334,8 +6294,13 @@
   "date_is_fallback": false,
   "country": "FR",
   "attribution_status": "validated",
-  "theme": "Économie & travail",
-  "votona_topics": [],
+  "theme": "Europe & institutions",
+  "votona_topics": [
+   {
+    "slug": "instaurer-le-referendum-dinitiative-citoyenne-ric",
+    "label": "Instaurer le référendum d'initiative citoyenne (RIC)"
+   }
+  ],
   "verdict": "true",
   "reviews": [
    {
@@ -6409,8 +6374,8 @@
   "theme": "Sécurité & immigration",
   "votona_topics": [
    {
-    "slug": "renforcer-les-moyens-de-la-police-et-allonger-les-peines-de",
-    "label": "Augmenter les effectifs et les moyens de la police et de la gendarmerie"
+    "slug": "augmenter-les-effectifs-de-police-et-de-gendarmerie",
+    "label": "Augmenter les effectifs de police et de gendarmerie"
    }
   ],
   "verdict": "half_true",
@@ -6459,8 +6424,8 @@
   "theme": "Défense & numérique",
   "votona_topics": [
    {
-    "slug": "maintenir-un-soutien-militaire-et-financier-fort-a-lukraine",
-    "label": "Maintenir le soutien militaire et financier de la France à l'Ukraine"
+    "slug": "continuer-laide-militaire-a-lukraine",
+    "label": "Continuer l'aide militaire à l'Ukraine"
    }
   ],
   "verdict": "true",
@@ -6572,8 +6537,8 @@
   "theme": "Économie & travail",
   "votona_topics": [
    {
-    "slug": "baisser-la-tva-et-la-ticpe-sur-les-carburants-pour-redonner",
-    "label": "Baisser la TVA et la TICPE sur les carburants"
+    "slug": "baisser-les-taxes-sur-lessence-et-le-gazole",
+    "label": "Baisser les taxes sur l'essence et le gazole"
    }
   ],
   "verdict": "mostly_false",
@@ -6649,8 +6614,8 @@
   "theme": "Sécurité & immigration",
   "votona_topics": [
    {
-    "slug": "retablir-des-peines-minimales-peines-planchers-pour-les",
-    "label": "Rétablir des peines minimales (peines planchers) pour les récidivistes"
+    "slug": "instaurer-des-peines-minimales-pour-les-recidivistes",
+    "label": "Instaurer des peines minimales pour les récidivistes"
    }
   ],
   "verdict": "true",
@@ -6690,8 +6655,8 @@
   "theme": "Sécurité & immigration",
   "votona_topics": [
    {
-    "slug": "reduire-drastiquement-limmigration-par-des-quotas-stricts",
-    "label": "Réduire l'immigration en instaurant des quotas annuels"
+    "slug": "reduire-limmigration",
+    "label": "Réduire l'immigration"
    }
   ],
   "verdict": "false",
@@ -6731,8 +6696,8 @@
   "theme": "Sécurité & immigration",
   "votona_topics": [
    {
-    "slug": "retablir-des-peines-minimales-peines-planchers-pour-les",
-    "label": "Rétablir des peines minimales (peines planchers) pour les récidivistes"
+    "slug": "instaurer-des-peines-minimales-pour-les-recidivistes",
+    "label": "Instaurer des peines minimales pour les récidivistes"
    }
   ],
   "verdict": "half_true",
@@ -6769,8 +6734,13 @@
   "date_is_fallback": false,
   "country": "FR",
   "attribution_status": "validated",
-  "theme": "Économie & travail",
-  "votona_topics": [],
+  "theme": "Europe & institutions",
+  "votona_topics": [
+   {
+    "slug": "instaurer-le-referendum-dinitiative-citoyenne-ric",
+    "label": "Instaurer le référendum d'initiative citoyenne (RIC)"
+   }
+  ],
   "verdict": "mostly_true",
   "reviews": [
    {
@@ -7004,12 +6974,7 @@
   "country": "FR",
   "attribution_status": "auto_sure",
   "theme": "Sécurité & immigration",
-  "votona_topics": [
-   {
-    "slug": "reserver-le-jugement-de-tous-les-crimes-sexuels-aux-cours",
-    "label": "Réserver le jugement de tous les crimes sexuels aux cours d'assises avec jury populaire, en les excluant des cours criminelles départementales"
-   }
-  ],
+  "votona_topics": [],
   "verdict": "false",
   "reviews": [
    {
@@ -7047,12 +7012,12 @@
   "theme": "Sécurité & immigration",
   "votona_topics": [
    {
-    "slug": "reduire-drastiquement-limmigration-par-des-quotas-stricts",
-    "label": "Réduire l'immigration en instaurant des quotas annuels"
+    "slug": "instaurer-des-peines-minimales-pour-les-recidivistes",
+    "label": "Instaurer des peines minimales pour les récidivistes"
    },
    {
-    "slug": "retablir-des-peines-minimales-peines-planchers-pour-les",
-    "label": "Rétablir des peines minimales (peines planchers) pour les récidivistes"
+    "slug": "reduire-limmigration",
+    "label": "Réduire l'immigration"
    }
   ],
   "verdict": "mostly_true",
@@ -7092,8 +7057,8 @@
   "theme": "Défense & numérique",
   "votona_topics": [
    {
-    "slug": "maintenir-un-soutien-militaire-et-financier-fort-a-lukraine",
-    "label": "Maintenir le soutien militaire et financier de la France à l'Ukraine"
+    "slug": "continuer-laide-militaire-a-lukraine",
+    "label": "Continuer l'aide militaire à l'Ukraine"
    }
   ],
   "verdict": "mostly_false",
@@ -7133,8 +7098,8 @@
   "theme": "Économie & travail",
   "votona_topics": [
    {
-    "slug": "reduire-la-dette-publique-en-priorite-par-la-baisse-des",
-    "label": "Réduire la dette publique en priorité par la baisse des dépenses de l'État"
+    "slug": "baisser-les-depenses-publiques",
+    "label": "Baisser les dépenses publiques"
    }
   ],
   "verdict": "mostly_false",
@@ -7183,8 +7148,8 @@
   "theme": "Sécurité & immigration",
   "votona_topics": [
    {
-    "slug": "reduire-drastiquement-limmigration-par-des-quotas-stricts",
-    "label": "Réduire l'immigration en instaurant des quotas annuels"
+    "slug": "reduire-limmigration",
+    "label": "Réduire l'immigration"
    }
   ],
   "verdict": "mostly_false",
@@ -7224,8 +7189,8 @@
   "theme": "Défense & numérique",
   "votona_topics": [
    {
-    "slug": "augmenter-fortement-le-budget-de-la-defense-face-aux",
-    "label": "Augmenter le budget de la défense au-delà de la programmation militaire actuelle"
+    "slug": "augmenter-le-budget-de-larmee",
+    "label": "Augmenter le budget de l'armée"
    }
   ],
   "verdict": "false",
@@ -7301,8 +7266,8 @@
   "theme": "Sécurité & immigration",
   "votona_topics": [
    {
-    "slug": "reduire-drastiquement-limmigration-par-des-quotas-stricts",
-    "label": "Réduire l'immigration en instaurant des quotas annuels"
+    "slug": "reduire-limmigration",
+    "label": "Réduire l'immigration"
    }
   ],
   "verdict": "half_true",
@@ -7378,12 +7343,12 @@
   "theme": "Société",
   "votona_topics": [
    {
-    "slug": "encadrer-plus-strictement-les-loyers-dans-les-zones-tendues",
-    "label": "Encadrer plus strictement les loyers dans les zones tendues"
+    "slug": "encadrer-les-loyers-dans-les-grandes-villes",
+    "label": "Encadrer les loyers dans les grandes villes"
    },
    {
-    "slug": "reduire-drastiquement-limmigration-par-des-quotas-stricts",
-    "label": "Réduire l'immigration en instaurant des quotas annuels"
+    "slug": "reduire-limmigration",
+    "label": "Réduire l'immigration"
    }
   ],
   "verdict": "false",
@@ -7429,8 +7394,13 @@
   "date_is_fallback": false,
   "country": "FR",
   "attribution_status": "validated",
-  "theme": null,
-  "votona_topics": [],
+  "theme": "Europe & institutions",
+  "votona_topics": [
+   {
+    "slug": "instaurer-le-referendum-dinitiative-citoyenne-ric",
+    "label": "Instaurer le référendum d'initiative citoyenne (RIC)"
+   }
+  ],
   "verdict": "half_true",
   "reviews": [
    {
@@ -7519,11 +7489,11 @@
   "date_is_fallback": false,
   "country": "FR",
   "attribution_status": "validated",
-  "theme": "Économie & travail",
+  "theme": "Protection sociale",
   "votona_topics": [
    {
-    "slug": "ramener-lage-legal-de-depart-a-la-retraite-a-60-ans",
-    "label": "Ramener l'âge légal de départ à la retraite à 60 ans"
+    "slug": "abaisser-lage-legal-de-depart-a-la-retraite",
+    "label": "Abaisser l'âge légal de départ à la retraite"
    }
   ],
   "verdict": "mostly_false",
@@ -7563,8 +7533,8 @@
   "theme": "Défense & numérique",
   "votona_topics": [
    {
-    "slug": "augmenter-fortement-le-budget-de-la-defense-face-aux",
-    "label": "Augmenter le budget de la défense au-delà de la programmation militaire actuelle"
+    "slug": "augmenter-le-budget-de-larmee",
+    "label": "Augmenter le budget de l'armée"
    }
   ],
   "verdict": "mostly_true",
@@ -7604,8 +7574,8 @@
   "theme": "Défense & numérique",
   "votona_topics": [
    {
-    "slug": "maintenir-un-soutien-militaire-et-financier-fort-a-lukraine",
-    "label": "Maintenir le soutien militaire et financier de la France à l'Ukraine"
+    "slug": "continuer-laide-militaire-a-lukraine",
+    "label": "Continuer l'aide militaire à l'Ukraine"
    }
   ],
   "verdict": "mostly_false",
@@ -7643,12 +7613,7 @@
   "country": "FR",
   "attribution_status": "validated",
   "theme": "Protection sociale",
-  "votona_topics": [
-   {
-    "slug": "geler-la-revalorisation-des-pensions-de-retraite-depassant",
-    "label": "Geler en 2027 la revalorisation des pensions de retraite supérieures à 2 034 euros par mois"
-   }
-  ],
+  "votona_topics": [],
   "verdict": "true",
   "reviews": [
    {
@@ -7722,8 +7687,8 @@
   "theme": "Défense & numérique",
   "votona_topics": [
    {
-    "slug": "maintenir-un-soutien-militaire-et-financier-fort-a-lukraine",
-    "label": "Maintenir le soutien militaire et financier de la France à l'Ukraine"
+    "slug": "continuer-laide-militaire-a-lukraine",
+    "label": "Continuer l'aide militaire à l'Ukraine"
    }
   ],
   "verdict": "mostly_true",
@@ -7799,8 +7764,8 @@
   "theme": "Défense & numérique",
   "votona_topics": [
    {
-    "slug": "maintenir-un-soutien-militaire-et-financier-fort-a-lukraine",
-    "label": "Maintenir le soutien militaire et financier de la France à l'Ukraine"
+    "slug": "continuer-laide-militaire-a-lukraine",
+    "label": "Continuer l'aide militaire à l'Ukraine"
    }
   ],
   "verdict": "unrated",
@@ -7882,8 +7847,13 @@
   "date_is_fallback": true,
   "country": "FR",
   "attribution_status": "validated",
-  "theme": null,
-  "votona_topics": [],
+  "theme": "Société",
+  "votona_topics": [
+   {
+    "slug": "legaliser-le-cannabis",
+    "label": "Légaliser le cannabis"
+   }
+  ],
   "verdict": "mostly_true",
   "reviews": [
    {
@@ -7990,13 +7960,8 @@
   "date_is_fallback": true,
   "country": "FR",
   "attribution_status": "validated",
-  "theme": "Sécurité & immigration",
-  "votona_topics": [
-   {
-    "slug": "reserver-le-jugement-de-tous-les-crimes-sexuels-aux-cours",
-    "label": "Réserver le jugement de tous les crimes sexuels aux cours d'assises avec jury populaire, en les excluant des cours criminelles départementales"
-   }
-  ],
+  "theme": null,
+  "votona_topics": [],
   "verdict": "mostly_true",
   "reviews": [
    {
@@ -8106,8 +8071,8 @@
   "theme": "Sécurité & immigration",
   "votona_topics": [
    {
-    "slug": "reduire-drastiquement-limmigration-par-des-quotas-stricts",
-    "label": "Réduire l'immigration en instaurant des quotas annuels"
+    "slug": "reduire-limmigration",
+    "label": "Réduire l'immigration"
    }
   ],
   "verdict": "false",
@@ -8183,8 +8148,8 @@
   "theme": "Sécurité & immigration",
   "votona_topics": [
    {
-    "slug": "reduire-drastiquement-limmigration-par-des-quotas-stricts",
-    "label": "Réduire l'immigration en instaurant des quotas annuels"
+    "slug": "reduire-limmigration",
+    "label": "Réduire l'immigration"
    }
   ],
   "verdict": "half_true",
@@ -8260,8 +8225,8 @@
   "theme": "Société",
   "votona_topics": [
    {
-    "slug": "reconnaitre-un-droit-a-laide-active-a-mourir-comme-la-loi",
-    "label": "Autoriser l'aide active à mourir, sous conditions, pour les personnes atteintes d'une maladie grave et incurable"
+    "slug": "maintenir-le-droit-a-laide-a-mourir-pour-les-malades",
+    "label": "Maintenir le droit à l'aide à mourir pour les malades incurables"
    }
   ],
   "verdict": "false",
@@ -8478,11 +8443,15 @@
   "date_is_fallback": false,
   "country": "FR",
   "attribution_status": "auto_sure",
-  "theme": "Sécurité & immigration",
+  "theme": "Europe & institutions",
   "votona_topics": [
    {
-    "slug": "reduire-drastiquement-limmigration-par-des-quotas-stricts",
-    "label": "Réduire l'immigration en instaurant des quotas annuels"
+    "slug": "instaurer-le-referendum-dinitiative-citoyenne-ric",
+    "label": "Instaurer le référendum d'initiative citoyenne (RIC)"
+   },
+   {
+    "slug": "reduire-limmigration",
+    "label": "Réduire l'immigration"
    }
   ],
   "verdict": "half_true",
@@ -8675,8 +8644,8 @@
   "theme": "Défense & numérique",
   "votona_topics": [
    {
-    "slug": "maintenir-un-soutien-militaire-et-financier-fort-a-lukraine",
-    "label": "Maintenir le soutien militaire et financier de la France à l'Ukraine"
+    "slug": "continuer-laide-militaire-a-lukraine",
+    "label": "Continuer l'aide militaire à l'Ukraine"
    }
   ],
   "verdict": "half_true",
@@ -9076,8 +9045,8 @@
   "theme": "Sécurité & immigration",
   "votona_topics": [
    {
-    "slug": "reduire-drastiquement-limmigration-par-des-quotas-stricts",
-    "label": "Réduire l'immigration en instaurant des quotas annuels"
+    "slug": "reduire-limmigration",
+    "label": "Réduire l'immigration"
    }
   ],
   "verdict": "half_true",
@@ -9198,8 +9167,8 @@
   "theme": "Économie & travail",
   "votona_topics": [
    {
-    "slug": "reduire-la-dette-publique-en-priorite-par-la-baisse-des",
-    "label": "Réduire la dette publique en priorité par la baisse des dépenses de l'État"
+    "slug": "baisser-les-depenses-publiques",
+    "label": "Baisser les dépenses publiques"
    }
   ],
   "verdict": "true",
@@ -9239,8 +9208,8 @@
   "theme": "Défense & numérique",
   "votona_topics": [
    {
-    "slug": "maintenir-un-soutien-militaire-et-financier-fort-a-lukraine",
-    "label": "Maintenir le soutien militaire et financier de la France à l'Ukraine"
+    "slug": "continuer-laide-militaire-a-lukraine",
+    "label": "Continuer l'aide militaire à l'Ukraine"
    }
   ],
   "verdict": "mostly_false",
@@ -9313,13 +9282,8 @@
   "date_is_fallback": true,
   "country": "FR",
   "attribution_status": "auto_sure",
-  "theme": "Europe & institutions",
-  "votona_topics": [
-   {
-    "slug": "sopposer-a-la-ratification-de-laccord-de-libre-echange",
-    "label": "S'opposer à la ratification de l'accord de libre-échange entre l'Union européenne et le Mercosur"
-   }
-  ],
+  "theme": null,
+  "votona_topics": [],
   "verdict": "mostly_true",
   "reviews": [
    {
@@ -9357,12 +9321,8 @@
   "theme": "Défense & numérique",
   "votona_topics": [
    {
-    "slug": "maintenir-un-soutien-militaire-et-financier-fort-a-lukraine",
-    "label": "Maintenir le soutien militaire et financier de la France à l'Ukraine"
-   },
-   {
-    "slug": "reserver-le-jugement-de-tous-les-crimes-sexuels-aux-cours",
-    "label": "Réserver le jugement de tous les crimes sexuels aux cours d'assises avec jury populaire, en les excluant des cours criminelles départementales"
+    "slug": "continuer-laide-militaire-a-lukraine",
+    "label": "Continuer l'aide militaire à l'Ukraine"
    }
   ],
   "verdict": "mostly_true",
@@ -9510,8 +9470,8 @@
   "theme": "Défense & numérique",
   "votona_topics": [
    {
-    "slug": "maintenir-un-soutien-militaire-et-financier-fort-a-lukraine",
-    "label": "Maintenir le soutien militaire et financier de la France à l'Ukraine"
+    "slug": "continuer-laide-militaire-a-lukraine",
+    "label": "Continuer l'aide militaire à l'Ukraine"
    }
   ],
   "verdict": "mostly_true",
@@ -9728,13 +9688,8 @@
   "date_is_fallback": true,
   "country": "FR",
   "attribution_status": "validated",
-  "theme": "Économie & travail",
-  "votona_topics": [
-   {
-    "slug": "geler-le-point-dindice-des-fonctionnaires-en-2027-pour",
-    "label": "Geler le point d'indice des fonctionnaires en 2027"
-   }
-  ],
+  "theme": "Europe & institutions",
+  "votona_topics": [],
   "verdict": "false",
   "reviews": [
    {
@@ -9841,13 +9796,8 @@
   "date_is_fallback": false,
   "country": "FR",
   "attribution_status": "validated",
-  "theme": "Sécurité & immigration",
-  "votona_topics": [
-   {
-    "slug": "reserver-le-jugement-de-tous-les-crimes-sexuels-aux-cours",
-    "label": "Réserver le jugement de tous les crimes sexuels aux cours d'assises avec jury populaire, en les excluant des cours criminelles départementales"
-   }
-  ],
+  "theme": "Défense & numérique",
+  "votona_topics": [],
   "verdict": "mostly_true",
   "reviews": [
    {
@@ -10029,8 +9979,8 @@
   "theme": "Économie & travail",
   "votona_topics": [
    {
-    "slug": "reduire-la-dette-publique-en-priorite-par-la-baisse-des",
-    "label": "Réduire la dette publique en priorité par la baisse des dépenses de l'État"
+    "slug": "baisser-les-depenses-publiques",
+    "label": "Baisser les dépenses publiques"
    }
   ],
   "verdict": "true",
@@ -10142,8 +10092,8 @@
   "theme": "Économie & travail",
   "votona_topics": [
    {
-    "slug": "reduire-la-dette-publique-en-priorite-par-la-baisse-des",
-    "label": "Réduire la dette publique en priorité par la baisse des dépenses de l'État"
+    "slug": "baisser-les-depenses-publiques",
+    "label": "Baisser les dépenses publiques"
    }
   ],
   "verdict": "mostly_true",
@@ -10219,8 +10169,8 @@
   "theme": "Sécurité & immigration",
   "votona_topics": [
    {
-    "slug": "reduire-drastiquement-limmigration-par-des-quotas-stricts",
-    "label": "Réduire l'immigration en instaurant des quotas annuels"
+    "slug": "reduire-limmigration",
+    "label": "Réduire l'immigration"
    }
   ],
   "verdict": "half_true",
@@ -10260,8 +10210,8 @@
   "theme": "Sécurité & immigration",
   "votona_topics": [
    {
-    "slug": "reduire-drastiquement-limmigration-par-des-quotas-stricts",
-    "label": "Réduire l'immigration en instaurant des quotas annuels"
+    "slug": "reduire-limmigration",
+    "label": "Réduire l'immigration"
    }
   ],
   "verdict": "mostly_false",
@@ -10337,8 +10287,8 @@
   "theme": "Sécurité & immigration",
   "votona_topics": [
    {
-    "slug": "reduire-drastiquement-limmigration-par-des-quotas-stricts",
-    "label": "Réduire l'immigration en instaurant des quotas annuels"
+    "slug": "reduire-limmigration",
+    "label": "Réduire l'immigration"
    }
   ],
   "verdict": "half_true",
@@ -10459,8 +10409,8 @@
   "theme": "Sécurité & immigration",
   "votona_topics": [
    {
-    "slug": "reduire-drastiquement-limmigration-par-des-quotas-stricts",
-    "label": "Réduire l'immigration en instaurant des quotas annuels"
+    "slug": "reduire-limmigration",
+    "label": "Réduire l'immigration"
    }
   ],
   "verdict": "half_true",
@@ -10487,7 +10437,7 @@
    "id": null,
    "name": null,
    "short_name": null,
-   "status": "none",
+   "status": "no_party",
    "name_at_date": null,
    "short_name_at_date": null
   },
@@ -10608,8 +10558,8 @@
   "theme": "Europe & institutions",
   "votona_topics": [
    {
-    "slug": "instaurer-une-dose-de-proportionnelle-aux-elections",
-    "label": "Instaurer une dose de proportionnelle aux élections législatives"
+    "slug": "elire-les-deputes-a-la-proportionnelle",
+    "label": "Élire les députés à la proportionnelle"
    }
   ],
   "verdict": "true",
@@ -10721,8 +10671,8 @@
   "theme": "Protection sociale",
   "votona_topics": [
    {
-    "slug": "augmenter-significativement-le-smic",
-    "label": "Augmenter le SMIC au-delà de sa revalorisation automatique"
+    "slug": "augmenter-le-smic",
+    "label": "Augmenter le SMIC"
    }
   ],
   "verdict": "half_true",
@@ -10759,8 +10709,13 @@
   "date_is_fallback": false,
   "country": "FR",
   "attribution_status": "validated",
-  "theme": "Économie & travail",
-  "votona_topics": [],
+  "theme": "Europe & institutions",
+  "votona_topics": [
+   {
+    "slug": "instaurer-le-referendum-dinitiative-citoyenne-ric",
+    "label": "Instaurer le référendum d'initiative citoyenne (RIC)"
+   }
+  ],
   "verdict": "half_true",
   "reviews": [
    {
@@ -10795,8 +10750,13 @@
   "date_is_fallback": true,
   "country": "FR",
   "attribution_status": "auto_sure",
-  "theme": null,
-  "votona_topics": [],
+  "theme": "Société",
+  "votona_topics": [
+   {
+    "slug": "legaliser-le-cannabis",
+    "label": "Légaliser le cannabis"
+   }
+  ],
   "verdict": "true",
   "reviews": [
    {
@@ -10834,8 +10794,8 @@
   "theme": "Sécurité & immigration",
   "votona_topics": [
    {
-    "slug": "reduire-drastiquement-limmigration-par-des-quotas-stricts",
-    "label": "Réduire l'immigration en instaurant des quotas annuels"
+    "slug": "reduire-limmigration",
+    "label": "Réduire l'immigration"
    }
   ],
   "verdict": "true",
@@ -11025,13 +10985,8 @@
   "date_is_fallback": false,
   "country": "FR",
   "attribution_status": "validated",
-  "theme": "Sécurité & immigration",
-  "votona_topics": [
-   {
-    "slug": "reserver-le-jugement-de-tous-les-crimes-sexuels-aux-cours",
-    "label": "Réserver le jugement de tous les crimes sexuels aux cours d'assises avec jury populaire, en les excluant des cours criminelles départementales"
-   }
-  ],
+  "theme": "Europe & institutions",
+  "votona_topics": [],
   "verdict": "true",
   "reviews": [
    {
@@ -11066,13 +11021,8 @@
   "date_is_fallback": false,
   "country": "FR",
   "attribution_status": "validated",
-  "theme": "Société",
-  "votona_topics": [
-   {
-    "slug": "plafonner-les-effectifs-a-19-eleves-par-classe-en-recrutant",
-    "label": "Plafonner les effectifs à 19 élèves par classe en recrutant davantage d'enseignants"
-   }
-  ],
+  "theme": "Europe & institutions",
+  "votona_topics": [],
   "verdict": "mostly_true",
   "reviews": [
    {
@@ -11107,11 +11057,11 @@
   "date_is_fallback": false,
   "country": "FR",
   "attribution_status": "validated",
-  "theme": "Économie & travail",
+  "theme": "Protection sociale",
   "votona_topics": [
    {
-    "slug": "ramener-lage-legal-de-depart-a-la-retraite-a-60-ans",
-    "label": "Ramener l'âge légal de départ à la retraite à 60 ans"
+    "slug": "abaisser-lage-legal-de-depart-a-la-retraite",
+    "label": "Abaisser l'âge légal de départ à la retraite"
    }
   ],
   "verdict": "half_true",
@@ -11148,11 +11098,11 @@
   "date_is_fallback": false,
   "country": "FR",
   "attribution_status": "auto_sure",
-  "theme": "Économie & travail",
+  "theme": "Protection sociale",
   "votona_topics": [
    {
-    "slug": "ramener-lage-legal-de-depart-a-la-retraite-a-60-ans",
-    "label": "Ramener l'âge légal de départ à la retraite à 60 ans"
+    "slug": "abaisser-lage-legal-de-depart-a-la-retraite",
+    "label": "Abaisser l'âge légal de départ à la retraite"
    }
   ],
   "verdict": "mostly_false",
@@ -11273,8 +11223,8 @@
   "theme": "Économie & travail",
   "votona_topics": [
    {
-    "slug": "baisser-la-tva-et-la-ticpe-sur-les-carburants-pour-redonner",
-    "label": "Baisser la TVA et la TICPE sur les carburants"
+    "slug": "baisser-les-taxes-sur-lessence-et-le-gazole",
+    "label": "Baisser les taxes sur l'essence et le gazole"
    }
   ],
   "verdict": "half_true",
@@ -11458,8 +11408,8 @@
   "theme": "Sécurité & immigration",
   "votona_topics": [
    {
-    "slug": "renforcer-les-moyens-de-la-police-et-allonger-les-peines-de",
-    "label": "Augmenter les effectifs et les moyens de la police et de la gendarmerie"
+    "slug": "augmenter-les-effectifs-de-police-et-de-gendarmerie",
+    "label": "Augmenter les effectifs de police et de gendarmerie"
    }
   ],
   "verdict": "false",
@@ -11607,8 +11557,8 @@
   "theme": "Défense & numérique",
   "votona_topics": [
    {
-    "slug": "maintenir-un-soutien-militaire-et-financier-fort-a-lukraine",
-    "label": "Maintenir le soutien militaire et financier de la France à l'Ukraine"
+    "slug": "continuer-laide-militaire-a-lukraine",
+    "label": "Continuer l'aide militaire à l'Ukraine"
    }
   ],
   "verdict": "half_true",
@@ -11657,8 +11607,8 @@
   "theme": "Protection sociale",
   "votona_topics": [
    {
-    "slug": "augmenter-significativement-le-smic",
-    "label": "Augmenter le SMIC au-delà de sa revalorisation automatique"
+    "slug": "augmenter-le-smic",
+    "label": "Augmenter le SMIC"
    }
   ],
   "verdict": "false",
@@ -11698,8 +11648,8 @@
   "theme": "Sécurité & immigration",
   "votona_topics": [
    {
-    "slug": "retablir-des-peines-minimales-peines-planchers-pour-les",
-    "label": "Rétablir des peines minimales (peines planchers) pour les récidivistes"
+    "slug": "instaurer-des-peines-minimales-pour-les-recidivistes",
+    "label": "Instaurer des peines minimales pour les récidivistes"
    }
   ],
   "verdict": "half_true",
@@ -11737,7 +11687,12 @@
   "country": "FR",
   "attribution_status": "auto_sure",
   "theme": "Écologie",
-  "votona_topics": [],
+  "votona_topics": [
+   {
+    "slug": "arreter-de-construire-de-nouvelles-eoliennes",
+    "label": "Arrêter de construire de nouvelles éoliennes"
+   }
+  ],
   "verdict": "false",
   "reviews": [
    {
@@ -11820,8 +11775,8 @@
   "theme": "Protection sociale",
   "votona_topics": [
    {
-    "slug": "durcir-les-conditions-dindemnisation-du-chomage",
-    "label": "Restreindre les conditions d'indemnisation du chômage"
+    "slug": "reduire-la-duree-dindemnisation-du-chomage",
+    "label": "Réduire la durée d'indemnisation du chômage"
    }
   ],
   "verdict": "mostly_false",
@@ -11861,7 +11816,7 @@
   "theme": "Écologie",
   "votona_topics": [
    {
-    "slug": "relancer-massivement-la-filiere-nucleaire",
+    "slug": "construire-de-nouveaux-reacteurs-nucleaires",
     "label": "Construire de nouveaux réacteurs nucléaires"
    }
   ],
@@ -11983,8 +11938,8 @@
   "theme": "Sécurité & immigration",
   "votona_topics": [
    {
-    "slug": "reduire-drastiquement-limmigration-par-des-quotas-stricts",
-    "label": "Réduire l'immigration en instaurant des quotas annuels"
+    "slug": "reduire-limmigration",
+    "label": "Réduire l'immigration"
    }
   ],
   "verdict": "true",
@@ -12276,8 +12231,8 @@
   "theme": "Sécurité & immigration",
   "votona_topics": [
    {
-    "slug": "renforcer-les-moyens-de-la-police-et-allonger-les-peines-de",
-    "label": "Augmenter les effectifs et les moyens de la police et de la gendarmerie"
+    "slug": "augmenter-les-effectifs-de-police-et-de-gendarmerie",
+    "label": "Augmenter les effectifs de police et de gendarmerie"
    }
   ],
   "verdict": "false",
@@ -12314,8 +12269,13 @@
   "date_is_fallback": true,
   "country": "FR",
   "attribution_status": "validated",
-  "theme": null,
-  "votona_topics": [],
+  "theme": "Écologie",
+  "votona_topics": [
+   {
+    "slug": "interdire-la-vente-de-voitures-neuves-essence-et-diesel-a",
+    "label": "Interdire la vente de voitures neuves essence et diesel à partir de 2035"
+   }
+  ],
   "verdict": "false",
   "reviews": [
    {
@@ -12353,8 +12313,8 @@
   "theme": "Défense & numérique",
   "votona_topics": [
    {
-    "slug": "maintenir-un-soutien-militaire-et-financier-fort-a-lukraine",
-    "label": "Maintenir le soutien militaire et financier de la France à l'Ukraine"
+    "slug": "continuer-laide-militaire-a-lukraine",
+    "label": "Continuer l'aide militaire à l'Ukraine"
    }
   ],
   "verdict": "true",
@@ -12394,8 +12354,8 @@
   "theme": "Sécurité & immigration",
   "votona_topics": [
    {
-    "slug": "reduire-drastiquement-limmigration-par-des-quotas-stricts",
-    "label": "Réduire l'immigration en instaurant des quotas annuels"
+    "slug": "reduire-limmigration",
+    "label": "Réduire l'immigration"
    }
   ],
   "verdict": "half_true",
@@ -12432,13 +12392,8 @@
   "date_is_fallback": false,
   "country": "FR",
   "attribution_status": "validated",
-  "theme": "Sécurité & immigration",
-  "votona_topics": [
-   {
-    "slug": "reserver-le-jugement-de-tous-les-crimes-sexuels-aux-cours",
-    "label": "Réserver le jugement de tous les crimes sexuels aux cours d'assises avec jury populaire, en les excluant des cours criminelles départementales"
-   }
-  ],
+  "theme": null,
+  "votona_topics": [],
   "verdict": "true",
   "reviews": [
    {
@@ -12548,8 +12503,8 @@
   "theme": "Défense & numérique",
   "votona_topics": [
    {
-    "slug": "maintenir-un-soutien-militaire-et-financier-fort-a-lukraine",
-    "label": "Maintenir le soutien militaire et financier de la France à l'Ukraine"
+    "slug": "continuer-laide-militaire-a-lukraine",
+    "label": "Continuer l'aide militaire à l'Ukraine"
    }
   ],
   "verdict": "false",
@@ -13057,8 +13012,8 @@
   "theme": "Sécurité & immigration",
   "votona_topics": [
    {
-    "slug": "reduire-drastiquement-limmigration-par-des-quotas-stricts",
-    "label": "Réduire l'immigration en instaurant des quotas annuels"
+    "slug": "reduire-limmigration",
+    "label": "Réduire l'immigration"
    }
   ],
   "verdict": "false",
@@ -13275,8 +13230,13 @@
   "date_is_fallback": false,
   "country": "FR",
   "attribution_status": "validated",
-  "theme": "Europe & institutions",
-  "votona_topics": [],
+  "theme": "Sécurité & immigration",
+  "votona_topics": [
+   {
+    "slug": "supprimer-le-droit-du-sol",
+    "label": "Supprimer le droit du sol"
+   }
+  ],
   "verdict": "false",
   "reviews": [
    {
@@ -13350,8 +13310,8 @@
   "theme": "Économie & travail",
   "votona_topics": [
    {
-    "slug": "reduire-la-dette-publique-en-priorite-par-la-baisse-des",
-    "label": "Réduire la dette publique en priorité par la baisse des dépenses de l'État"
+    "slug": "baisser-les-depenses-publiques",
+    "label": "Baisser les dépenses publiques"
    }
   ],
   "verdict": "true",
@@ -13391,8 +13351,8 @@
   "theme": "Société",
   "votona_topics": [
    {
-    "slug": "encadrer-plus-strictement-les-loyers-dans-les-zones-tendues",
-    "label": "Encadrer plus strictement les loyers dans les zones tendues"
+    "slug": "encadrer-les-loyers-dans-les-grandes-villes",
+    "label": "Encadrer les loyers dans les grandes villes"
    }
   ],
   "verdict": "mostly_true",
@@ -13432,12 +13392,12 @@
   "theme": "Sécurité & immigration",
   "votona_topics": [
    {
-    "slug": "reduire-drastiquement-limmigration-par-des-quotas-stricts",
-    "label": "Réduire l'immigration en instaurant des quotas annuels"
+    "slug": "augmenter-les-effectifs-de-police-et-de-gendarmerie",
+    "label": "Augmenter les effectifs de police et de gendarmerie"
    },
    {
-    "slug": "renforcer-les-moyens-de-la-police-et-allonger-les-peines-de",
-    "label": "Augmenter les effectifs et les moyens de la police et de la gendarmerie"
+    "slug": "reduire-limmigration",
+    "label": "Réduire l'immigration"
    }
   ],
   "verdict": "unrated",
@@ -13547,12 +13507,7 @@
   "country": "FR",
   "attribution_status": "auto_sure",
   "theme": "Sécurité & immigration",
-  "votona_topics": [
-   {
-    "slug": "reserver-le-jugement-de-tous-les-crimes-sexuels-aux-cours",
-    "label": "Réserver le jugement de tous les crimes sexuels aux cours d'assises avec jury populaire, en les excluant des cours criminelles départementales"
-   }
-  ],
+  "votona_topics": [],
   "verdict": "false",
   "reviews": [
    {
@@ -13590,8 +13545,8 @@
   "theme": "Sécurité & immigration",
   "votona_topics": [
    {
-    "slug": "renforcer-les-moyens-de-la-police-et-allonger-les-peines-de",
-    "label": "Augmenter les effectifs et les moyens de la police et de la gendarmerie"
+    "slug": "augmenter-les-effectifs-de-police-et-de-gendarmerie",
+    "label": "Augmenter les effectifs de police et de gendarmerie"
    }
   ],
   "verdict": "mostly_false",
@@ -13775,8 +13730,8 @@
   "theme": "Sécurité & immigration",
   "votona_topics": [
    {
-    "slug": "retablir-des-peines-minimales-peines-planchers-pour-les",
-    "label": "Rétablir des peines minimales (peines planchers) pour les récidivistes"
+    "slug": "instaurer-des-peines-minimales-pour-les-recidivistes",
+    "label": "Instaurer des peines minimales pour les récidivistes"
    }
   ],
   "verdict": "mostly_false",
@@ -13816,12 +13771,12 @@
   "theme": "Société",
   "votona_topics": [
    {
-    "slug": "encadrer-plus-strictement-les-loyers-dans-les-zones-tendues",
-    "label": "Encadrer plus strictement les loyers dans les zones tendues"
+    "slug": "encadrer-les-loyers-dans-les-grandes-villes",
+    "label": "Encadrer les loyers dans les grandes villes"
    },
    {
-    "slug": "reduire-drastiquement-limmigration-par-des-quotas-stricts",
-    "label": "Réduire l'immigration en instaurant des quotas annuels"
+    "slug": "reduire-limmigration",
+    "label": "Réduire l'immigration"
    }
   ],
   "verdict": "half_true",
@@ -13897,8 +13852,8 @@
   "theme": "Société",
   "votona_topics": [
    {
-    "slug": "encadrer-plus-strictement-les-loyers-dans-les-zones-tendues",
-    "label": "Encadrer plus strictement les loyers dans les zones tendues"
+    "slug": "encadrer-les-loyers-dans-les-grandes-villes",
+    "label": "Encadrer les loyers dans les grandes villes"
    }
   ],
   "verdict": "true",
@@ -14008,12 +13963,7 @@
   "country": "FR",
   "attribution_status": "validated",
   "theme": "Économie & travail",
-  "votona_topics": [
-   {
-    "slug": "geler-le-point-dindice-des-fonctionnaires-en-2027-pour",
-    "label": "Geler le point d'indice des fonctionnaires en 2027"
-   }
-  ],
+  "votona_topics": [],
   "verdict": "mostly_true",
   "reviews": [
    {
@@ -14132,8 +14082,8 @@
   "theme": "Défense & numérique",
   "votona_topics": [
    {
-    "slug": "maintenir-un-soutien-militaire-et-financier-fort-a-lukraine",
-    "label": "Maintenir le soutien militaire et financier de la France à l'Ukraine"
+    "slug": "continuer-laide-militaire-a-lukraine",
+    "label": "Continuer l'aide militaire à l'Ukraine"
    }
   ],
   "verdict": "false",
@@ -14173,8 +14123,8 @@
   "theme": "Économie & travail",
   "votona_topics": [
    {
-    "slug": "reduire-la-dette-publique-en-priorite-par-la-baisse-des",
-    "label": "Réduire la dette publique en priorité par la baisse des dépenses de l'État"
+    "slug": "baisser-les-depenses-publiques",
+    "label": "Baisser les dépenses publiques"
    }
   ],
   "verdict": "false",
@@ -14211,13 +14161,8 @@
   "date_is_fallback": false,
   "country": "FR",
   "attribution_status": "auto_sure",
-  "theme": "Sécurité & immigration",
-  "votona_topics": [
-   {
-    "slug": "reserver-le-jugement-de-tous-les-crimes-sexuels-aux-cours",
-    "label": "Réserver le jugement de tous les crimes sexuels aux cours d'assises avec jury populaire, en les excluant des cours criminelles départementales"
-   }
-  ],
+  "theme": "Société",
+  "votona_topics": [],
   "verdict": "half_true",
   "reviews": [
    {
@@ -14327,12 +14272,12 @@
   "theme": "Protection sociale",
   "votona_topics": [
    {
-    "slug": "augmenter-significativement-le-smic",
-    "label": "Augmenter le SMIC au-delà de sa revalorisation automatique"
+    "slug": "augmenter-le-smic",
+    "label": "Augmenter le SMIC"
    },
    {
-    "slug": "maintenir-un-soutien-militaire-et-financier-fort-a-lukraine",
-    "label": "Maintenir le soutien militaire et financier de la France à l'Ukraine"
+    "slug": "continuer-laide-militaire-a-lukraine",
+    "label": "Continuer l'aide militaire à l'Ukraine"
    }
   ],
   "verdict": "true",
@@ -14585,8 +14530,13 @@
   "date_is_fallback": false,
   "country": "FR",
   "attribution_status": "validated",
-  "theme": null,
-  "votona_topics": [],
+  "theme": "Société",
+  "votona_topics": [
+   {
+    "slug": "legaliser-le-cannabis",
+    "label": "Légaliser le cannabis"
+   }
+  ],
   "verdict": "mostly_true",
   "reviews": [
    {
@@ -14696,8 +14646,8 @@
   "theme": "Économie & travail",
   "votona_topics": [
    {
-    "slug": "reduire-la-dette-publique-en-priorite-par-la-baisse-des",
-    "label": "Réduire la dette publique en priorité par la baisse des dépenses de l'État"
+    "slug": "baisser-les-depenses-publiques",
+    "label": "Baisser les dépenses publiques"
    }
   ],
   "verdict": "mostly_true",
@@ -14746,8 +14696,8 @@
   "theme": "Sécurité & immigration",
   "votona_topics": [
    {
-    "slug": "reduire-drastiquement-limmigration-par-des-quotas-stricts",
-    "label": "Réduire l'immigration en instaurant des quotas annuels"
+    "slug": "reduire-limmigration",
+    "label": "Réduire l'immigration"
    }
   ],
   "verdict": "mostly_false",
@@ -14787,8 +14737,8 @@
   "theme": "Économie & travail",
   "votona_topics": [
    {
-    "slug": "reduire-la-dette-publique-en-priorite-par-la-baisse-des",
-    "label": "Réduire la dette publique en priorité par la baisse des dépenses de l'État"
+    "slug": "baisser-les-depenses-publiques",
+    "label": "Baisser les dépenses publiques"
    }
   ],
   "verdict": "true",
@@ -15008,8 +14958,8 @@
   "theme": "Défense & numérique",
   "votona_topics": [
    {
-    "slug": "maintenir-un-soutien-militaire-et-financier-fort-a-lukraine",
-    "label": "Maintenir le soutien militaire et financier de la France à l'Ukraine"
+    "slug": "continuer-laide-militaire-a-lukraine",
+    "label": "Continuer l'aide militaire à l'Ukraine"
    }
   ],
   "verdict": "false",
@@ -15121,8 +15071,8 @@
   "theme": "Protection sociale",
   "votona_topics": [
    {
-    "slug": "conditionner-le-rsa-a-15-heures-dactivite-hebdomadaire",
-    "label": "Conditionner le RSA à 15 heures d'activité hebdomadaire"
+    "slug": "exiger-des-heures-dactivite-en-echange-du-rsa",
+    "label": "Exiger des heures d'activité en échange du RSA"
    }
   ],
   "verdict": "mostly_true",
@@ -15459,8 +15409,8 @@
   "theme": "Sécurité & immigration",
   "votona_topics": [
    {
-    "slug": "reduire-drastiquement-limmigration-par-des-quotas-stricts",
-    "label": "Réduire l'immigration en instaurant des quotas annuels"
+    "slug": "reduire-limmigration",
+    "label": "Réduire l'immigration"
    }
   ],
   "verdict": "mostly_true",
@@ -15500,8 +15450,8 @@
   "theme": "Économie & travail",
   "votona_topics": [
    {
-    "slug": "reduire-la-dette-publique-en-priorite-par-la-baisse-des",
-    "label": "Réduire la dette publique en priorité par la baisse des dépenses de l'État"
+    "slug": "baisser-les-depenses-publiques",
+    "label": "Baisser les dépenses publiques"
    }
   ],
   "verdict": "true",
@@ -15550,8 +15500,8 @@
   "theme": "Défense & numérique",
   "votona_topics": [
    {
-    "slug": "maintenir-un-soutien-militaire-et-financier-fort-a-lukraine",
-    "label": "Maintenir le soutien militaire et financier de la France à l'Ukraine"
+    "slug": "continuer-laide-militaire-a-lukraine",
+    "label": "Continuer l'aide militaire à l'Ukraine"
    }
   ],
   "verdict": "mostly_false",
@@ -15672,8 +15622,8 @@
   "theme": "Sécurité & immigration",
   "votona_topics": [
    {
-    "slug": "retablir-des-peines-minimales-peines-planchers-pour-les",
-    "label": "Rétablir des peines minimales (peines planchers) pour les récidivistes"
+    "slug": "instaurer-des-peines-minimales-pour-les-recidivistes",
+    "label": "Instaurer des peines minimales pour les récidivistes"
    }
   ],
   "verdict": "false",
@@ -15713,8 +15663,8 @@
   "theme": "Sécurité & immigration",
   "votona_topics": [
    {
-    "slug": "renforcer-les-moyens-de-la-police-et-allonger-les-peines-de",
-    "label": "Augmenter les effectifs et les moyens de la police et de la gendarmerie"
+    "slug": "augmenter-les-effectifs-de-police-et-de-gendarmerie",
+    "label": "Augmenter les effectifs de police et de gendarmerie"
    }
   ],
   "verdict": "false",
@@ -15932,12 +15882,7 @@
   "country": "FR",
   "attribution_status": "auto_sure",
   "theme": "Société",
-  "votona_topics": [
-   {
-    "slug": "redonner-davantage-dautonomie-et-de-selection-aux",
-    "label": "Donner plus d'autonomie aux établissements scolaires, y compris pour choisir leurs élèves"
-   }
-  ],
+  "votona_topics": [],
   "verdict": "mostly_true",
   "reviews": [
    {
@@ -15973,12 +15918,7 @@
   "country": "FR",
   "attribution_status": "validated",
   "theme": "Sécurité & immigration",
-  "votona_topics": [
-   {
-    "slug": "reserver-le-jugement-de-tous-les-crimes-sexuels-aux-cours",
-    "label": "Réserver le jugement de tous les crimes sexuels aux cours d'assises avec jury populaire, en les excluant des cours criminelles départementales"
-   }
-  ],
+  "votona_topics": [],
   "verdict": "mostly_false",
   "reviews": [
    {
@@ -16088,8 +16028,8 @@
   "theme": "Écologie",
   "votona_topics": [
    {
-    "slug": "interdire-rapidement-les-pesticides-de-synthese-en",
-    "label": "Fixer une date de sortie des pesticides de synthèse en agriculture"
+    "slug": "sortir-des-pesticides-de-synthese-dans-lagriculture",
+    "label": "Sortir des pesticides de synthèse dans l'agriculture"
    }
   ],
   "verdict": "mostly_true",
@@ -16165,8 +16105,8 @@
   "theme": "Sécurité & immigration",
   "votona_topics": [
    {
-    "slug": "reduire-drastiquement-limmigration-par-des-quotas-stricts",
-    "label": "Réduire l'immigration en instaurant des quotas annuels"
+    "slug": "reduire-limmigration",
+    "label": "Réduire l'immigration"
    }
   ],
   "verdict": "mostly_true",
@@ -16458,8 +16398,8 @@
   "theme": "Économie & travail",
   "votona_topics": [
    {
-    "slug": "reduire-la-dette-publique-en-priorite-par-la-baisse-des",
-    "label": "Réduire la dette publique en priorité par la baisse des dépenses de l'État"
+    "slug": "baisser-les-depenses-publiques",
+    "label": "Baisser les dépenses publiques"
    }
   ],
   "verdict": "false",
@@ -16499,8 +16439,8 @@
   "theme": "Défense & numérique",
   "votona_topics": [
    {
-    "slug": "maintenir-un-soutien-militaire-et-financier-fort-a-lukraine",
-    "label": "Maintenir le soutien militaire et financier de la France à l'Ukraine"
+    "slug": "continuer-laide-militaire-a-lukraine",
+    "label": "Continuer l'aide militaire à l'Ukraine"
    }
   ],
   "verdict": "false",
@@ -16645,13 +16585,8 @@
   "date_is_fallback": false,
   "country": "FR",
   "attribution_status": "auto_sure",
-  "theme": "Société",
-  "votona_topics": [
-   {
-    "slug": "plafonner-les-effectifs-a-19-eleves-par-classe-en-recrutant",
-    "label": "Plafonner les effectifs à 19 élèves par classe en recrutant davantage d'enseignants"
-   }
-  ],
+  "theme": null,
+  "votona_topics": [],
   "verdict": "half_true",
   "reviews": [
    {
@@ -17010,8 +16945,13 @@
   "date_is_fallback": false,
   "country": "FR",
   "attribution_status": "validated",
-  "theme": "Sécurité & immigration",
-  "votona_topics": [],
+  "theme": "Société",
+  "votona_topics": [
+   {
+    "slug": "legaliser-le-cannabis",
+    "label": "Légaliser le cannabis"
+   }
+  ],
   "verdict": "half_true",
   "reviews": [
    {
@@ -17085,8 +17025,8 @@
   "theme": "Sécurité & immigration",
   "votona_topics": [
    {
-    "slug": "reduire-drastiquement-limmigration-par-des-quotas-stricts",
-    "label": "Réduire l'immigration en instaurant des quotas annuels"
+    "slug": "reduire-limmigration",
+    "label": "Réduire l'immigration"
    }
   ],
   "verdict": "false",
@@ -17126,8 +17066,8 @@
   "theme": "Sécurité & immigration",
   "votona_topics": [
    {
-    "slug": "reduire-drastiquement-limmigration-par-des-quotas-stricts",
-    "label": "Réduire l'immigration en instaurant des quotas annuels"
+    "slug": "reduire-limmigration",
+    "label": "Réduire l'immigration"
    }
   ],
   "verdict": "mostly_false",
@@ -17239,8 +17179,8 @@
   "theme": "Société",
   "votona_topics": [
    {
-    "slug": "reconnaitre-un-droit-a-laide-active-a-mourir-comme-la-loi",
-    "label": "Autoriser l'aide active à mourir, sous conditions, pour les personnes atteintes d'une maladie grave et incurable"
+    "slug": "maintenir-le-droit-a-laide-a-mourir-pour-les-malades",
+    "label": "Maintenir le droit à l'aide à mourir pour les malades incurables"
    }
   ],
   "verdict": "true",
@@ -17350,7 +17290,12 @@
   "country": "FR",
   "attribution_status": "validated",
   "theme": "Écologie",
-  "votona_topics": [],
+  "votona_topics": [
+   {
+    "slug": "arreter-de-construire-de-nouvelles-eoliennes",
+    "label": "Arrêter de construire de nouvelles éoliennes"
+   }
+  ],
   "verdict": "false",
   "reviews": [
    {
@@ -17385,13 +17330,8 @@
   "date_is_fallback": false,
   "country": "FR",
   "attribution_status": "validated",
-  "theme": "Sécurité & immigration",
-  "votona_topics": [
-   {
-    "slug": "reserver-le-jugement-de-tous-les-crimes-sexuels-aux-cours",
-    "label": "Réserver le jugement de tous les crimes sexuels aux cours d'assises avec jury populaire, en les excluant des cours criminelles départementales"
-   }
-  ],
+  "theme": null,
+  "votona_topics": [],
   "verdict": "mostly_true",
   "reviews": [
    {
@@ -17427,7 +17367,12 @@
   "country": "FR",
   "attribution_status": "validated",
   "theme": "Écologie",
-  "votona_topics": [],
+  "votona_topics": [
+   {
+    "slug": "arreter-de-construire-de-nouvelles-eoliennes",
+    "label": "Arrêter de construire de nouvelles éoliennes"
+   }
+  ],
   "verdict": "false",
   "reviews": [
    {
@@ -17463,12 +17408,7 @@
   "country": "FR",
   "attribution_status": "validated",
   "theme": "Société",
-  "votona_topics": [
-   {
-    "slug": "instaurer-un-depistage-obligatoire-de-laddiction-aux-ecrans",
-    "label": "Instaurer un dépistage obligatoire de l'addiction aux écrans à l'entrée en sixième et en seconde"
-   }
-  ],
+  "votona_topics": [],
   "verdict": "half_true",
   "reviews": [
    {
@@ -17722,12 +17662,8 @@
   "theme": "Sécurité & immigration",
   "votona_topics": [
    {
-    "slug": "renforcer-les-moyens-de-la-police-et-allonger-les-peines-de",
-    "label": "Augmenter les effectifs et les moyens de la police et de la gendarmerie"
-   },
-   {
-    "slug": "reserver-le-jugement-de-tous-les-crimes-sexuels-aux-cours",
-    "label": "Réserver le jugement de tous les crimes sexuels aux cours d'assises avec jury populaire, en les excluant des cours criminelles départementales"
+    "slug": "augmenter-les-effectifs-de-police-et-de-gendarmerie",
+    "label": "Augmenter les effectifs de police et de gendarmerie"
    }
   ],
   "verdict": "mostly_false",
@@ -17767,8 +17703,8 @@
   "theme": "Sécurité & immigration",
   "votona_topics": [
    {
-    "slug": "reduire-drastiquement-limmigration-par-des-quotas-stricts",
-    "label": "Réduire l'immigration en instaurant des quotas annuels"
+    "slug": "reduire-limmigration",
+    "label": "Réduire l'immigration"
    }
   ],
   "verdict": "mostly_true",
@@ -17841,13 +17777,8 @@
   "date_is_fallback": true,
   "country": "FR",
   "attribution_status": "auto_sure",
-  "theme": "Société",
-  "votona_topics": [
-   {
-    "slug": "creer-un-droit-opposable-a-un-mode-de-garde-pour-la-petite",
-    "label": "Créer un droit opposable à un mode de garde pour la petite enfance"
-   }
-  ],
+  "theme": null,
+  "votona_topics": [],
   "verdict": "mostly_true",
   "reviews": [
    {
@@ -17883,12 +17814,7 @@
   "country": "FR",
   "attribution_status": "validated",
   "theme": "Sécurité & immigration",
-  "votona_topics": [
-   {
-    "slug": "reserver-le-jugement-de-tous-les-crimes-sexuels-aux-cours",
-    "label": "Réserver le jugement de tous les crimes sexuels aux cours d'assises avec jury populaire, en les excluant des cours criminelles départementales"
-   }
-  ],
+  "votona_topics": [],
   "verdict": "half_true",
   "reviews": [
    {
@@ -18106,8 +18032,8 @@
   "theme": "Défense & numérique",
   "votona_topics": [
    {
-    "slug": "maintenir-un-soutien-militaire-et-financier-fort-a-lukraine",
-    "label": "Maintenir le soutien militaire et financier de la France à l'Ukraine"
+    "slug": "continuer-laide-militaire-a-lukraine",
+    "label": "Continuer l'aide militaire à l'Ukraine"
    }
   ],
   "verdict": "false",
@@ -18147,8 +18073,8 @@
   "theme": "Sécurité & immigration",
   "votona_topics": [
    {
-    "slug": "reduire-drastiquement-limmigration-par-des-quotas-stricts",
-    "label": "Réduire l'immigration en instaurant des quotas annuels"
+    "slug": "regulariser-les-sans-papiers-qui-travaillent-dans-les",
+    "label": "Régulariser les sans-papiers qui travaillent dans les métiers qui recrutent"
    }
   ],
   "verdict": "true",
@@ -18224,8 +18150,8 @@
   "theme": "Économie & travail",
   "votona_topics": [
    {
-    "slug": "baisser-la-tva-et-la-ticpe-sur-les-carburants-pour-redonner",
-    "label": "Baisser la TVA et la TICPE sur les carburants"
+    "slug": "baisser-les-taxes-sur-lessence-et-le-gazole",
+    "label": "Baisser les taxes sur l'essence et le gazole"
    }
   ],
   "verdict": "mostly_true",
@@ -18418,8 +18344,8 @@
   "theme": "Sécurité & immigration",
   "votona_topics": [
    {
-    "slug": "reduire-drastiquement-limmigration-par-des-quotas-stricts",
-    "label": "Réduire l'immigration en instaurant des quotas annuels"
+    "slug": "reduire-limmigration",
+    "label": "Réduire l'immigration"
    }
   ],
   "verdict": "false",
@@ -18528,13 +18454,8 @@
   "date_is_fallback": false,
   "country": "FR",
   "attribution_status": "auto_sure",
-  "theme": "Sécurité & immigration",
-  "votona_topics": [
-   {
-    "slug": "reserver-le-jugement-de-tous-les-crimes-sexuels-aux-cours",
-    "label": "Réserver le jugement de tous les crimes sexuels aux cours d'assises avec jury populaire, en les excluant des cours criminelles départementales"
-   }
-  ],
+  "theme": null,
+  "votona_topics": [],
   "verdict": "half_true",
   "reviews": [
    {
@@ -18893,13 +18814,8 @@
   "date_is_fallback": false,
   "country": "FR",
   "attribution_status": "auto_sure",
-  "theme": "Société",
-  "votona_topics": [
-   {
-    "slug": "plafonner-les-effectifs-a-19-eleves-par-classe-en-recrutant",
-    "label": "Plafonner les effectifs à 19 élèves par classe en recrutant davantage d'enseignants"
-   }
-  ],
+  "theme": null,
+  "votona_topics": [],
   "verdict": "half_true",
   "reviews": [
    {
@@ -18971,12 +18887,7 @@
   "country": "FR",
   "attribution_status": "auto_sure",
   "theme": "Protection sociale",
-  "votona_topics": [
-   {
-    "slug": "geler-la-revalorisation-des-pensions-de-retraite-depassant",
-    "label": "Geler en 2027 la revalorisation des pensions de retraite supérieures à 2 034 euros par mois"
-   }
-  ],
+  "votona_topics": [],
   "verdict": "mostly_true",
   "reviews": [
    {
@@ -19264,12 +19175,7 @@
   "country": "FR",
   "attribution_status": "auto_sure",
   "theme": "Sécurité & immigration",
-  "votona_topics": [
-   {
-    "slug": "reserver-le-jugement-de-tous-les-crimes-sexuels-aux-cours",
-    "label": "Réserver le jugement de tous les crimes sexuels aux cours d'assises avec jury populaire, en les excluant des cours criminelles départementales"
-   }
-  ],
+  "votona_topics": [],
   "verdict": "false",
   "reviews": [
    {
@@ -19307,8 +19213,8 @@
   "theme": "Sécurité & immigration",
   "votona_topics": [
    {
-    "slug": "reduire-drastiquement-limmigration-par-des-quotas-stricts",
-    "label": "Réduire l'immigration en instaurant des quotas annuels"
+    "slug": "reduire-limmigration",
+    "label": "Réduire l'immigration"
    }
   ],
   "verdict": "mostly_true",
@@ -19456,8 +19362,8 @@
   "theme": "Sécurité & immigration",
   "votona_topics": [
    {
-    "slug": "reduire-drastiquement-limmigration-par-des-quotas-stricts",
-    "label": "Réduire l'immigration en instaurant des quotas annuels"
+    "slug": "reduire-limmigration",
+    "label": "Réduire l'immigration"
    }
   ],
   "verdict": "mostly_false",
@@ -19497,8 +19403,8 @@
   "theme": "Économie & travail",
   "votona_topics": [
    {
-    "slug": "baisser-la-tva-et-la-ticpe-sur-les-carburants-pour-redonner",
-    "label": "Baisser la TVA et la TICPE sur les carburants"
+    "slug": "baisser-les-taxes-sur-lessence-et-le-gazole",
+    "label": "Baisser les taxes sur l'essence et le gazole"
    }
   ],
   "verdict": "false",
@@ -19871,8 +19777,8 @@
   "theme": "Économie & travail",
   "votona_topics": [
    {
-    "slug": "reduire-la-dette-publique-en-priorite-par-la-baisse-des",
-    "label": "Réduire la dette publique en priorité par la baisse des dépenses de l'État"
+    "slug": "baisser-les-depenses-publiques",
+    "label": "Baisser les dépenses publiques"
    }
   ],
   "verdict": "half_true",
@@ -20056,8 +19962,8 @@
   "theme": "Sécurité & immigration",
   "votona_topics": [
    {
-    "slug": "reduire-drastiquement-limmigration-par-des-quotas-stricts",
-    "label": "Réduire l'immigration en instaurant des quotas annuels"
+    "slug": "reduire-limmigration",
+    "label": "Réduire l'immigration"
    }
   ],
   "verdict": "true",
@@ -20133,8 +20039,8 @@
   "theme": "Sécurité & immigration",
   "votona_topics": [
    {
-    "slug": "reduire-drastiquement-limmigration-par-des-quotas-stricts",
-    "label": "Réduire l'immigration en instaurant des quotas annuels"
+    "slug": "reduire-limmigration",
+    "label": "Réduire l'immigration"
    }
   ],
   "verdict": "false",
@@ -20174,8 +20080,8 @@
   "theme": "Sécurité & immigration",
   "votona_topics": [
    {
-    "slug": "reduire-drastiquement-limmigration-par-des-quotas-stricts",
-    "label": "Réduire l'immigration en instaurant des quotas annuels"
+    "slug": "reduire-limmigration",
+    "label": "Réduire l'immigration"
    }
   ],
   "verdict": "false",
@@ -20248,13 +20154,8 @@
   "date_is_fallback": false,
   "country": "FR",
   "attribution_status": "validated",
-  "theme": "Écologie",
-  "votona_topics": [
-   {
-    "slug": "renforcer-la-taxe-carbone-sur-les-entreprises-polluantes",
-    "label": "Renforcer la taxe carbone sur les entreprises les plus émettrices de CO2"
-   }
-  ],
+  "theme": null,
+  "votona_topics": [],
   "verdict": "half_true",
   "reviews": [
    {
@@ -20370,13 +20271,8 @@
   "date_is_fallback": false,
   "country": "FR",
   "attribution_status": "auto_sure",
-  "theme": "Société",
-  "votona_topics": [
-   {
-    "slug": "plafonner-les-effectifs-a-19-eleves-par-classe-en-recrutant",
-    "label": "Plafonner les effectifs à 19 élèves par classe en recrutant davantage d'enseignants"
-   }
-  ],
+  "theme": null,
+  "votona_topics": [],
   "verdict": "mostly_false",
   "reviews": [
    {
@@ -20555,13 +20451,8 @@
   "date_is_fallback": false,
   "country": "FR",
   "attribution_status": "auto_sure",
-  "theme": "Écologie",
-  "votona_topics": [
-   {
-    "slug": "renforcer-la-taxe-carbone-sur-les-entreprises-polluantes",
-    "label": "Renforcer la taxe carbone sur les entreprises les plus émettrices de CO2"
-   }
-  ],
+  "theme": null,
+  "votona_topics": [],
   "verdict": "true",
   "reviews": [
    {
@@ -20932,8 +20823,8 @@
   "theme": "Sécurité & immigration",
   "votona_topics": [
    {
-    "slug": "retablir-des-peines-minimales-peines-planchers-pour-les",
-    "label": "Rétablir des peines minimales (peines planchers) pour les récidivistes"
+    "slug": "instaurer-des-peines-minimales-pour-les-recidivistes",
+    "label": "Instaurer des peines minimales pour les récidivistes"
    }
   ],
   "verdict": "true",
@@ -21081,12 +20972,8 @@
   "theme": "Défense & numérique",
   "votona_topics": [
    {
-    "slug": "maintenir-un-soutien-militaire-et-financier-fort-a-lukraine",
-    "label": "Maintenir le soutien militaire et financier de la France à l'Ukraine"
-   },
-   {
-    "slug": "reserver-le-jugement-de-tous-les-crimes-sexuels-aux-cours",
-    "label": "Réserver le jugement de tous les crimes sexuels aux cours d'assises avec jury populaire, en les excluant des cours criminelles départementales"
+    "slug": "continuer-laide-militaire-a-lukraine",
+    "label": "Continuer l'aide militaire à l'Ukraine"
    }
   ],
   "verdict": "mostly_false",
@@ -21414,8 +21301,8 @@
   "theme": "Sécurité & immigration",
   "votona_topics": [
    {
-    "slug": "retablir-des-peines-minimales-peines-planchers-pour-les",
-    "label": "Rétablir des peines minimales (peines planchers) pour les récidivistes"
+    "slug": "instaurer-des-peines-minimales-pour-les-recidivistes",
+    "label": "Instaurer des peines minimales pour les récidivistes"
    }
   ],
   "verdict": "half_true",
@@ -21527,8 +21414,8 @@
   "theme": "Sécurité & immigration",
   "votona_topics": [
    {
-    "slug": "renforcer-les-moyens-de-la-police-et-allonger-les-peines-de",
-    "label": "Augmenter les effectifs et les moyens de la police et de la gendarmerie"
+    "slug": "augmenter-les-effectifs-de-police-et-de-gendarmerie",
+    "label": "Augmenter les effectifs de police et de gendarmerie"
    }
   ],
   "verdict": "false",
@@ -21791,7 +21678,12 @@
   "country": "FR",
   "attribution_status": "validated",
   "theme": "Europe & institutions",
-  "votona_topics": [],
+  "votona_topics": [
+   {
+    "slug": "instaurer-le-referendum-dinitiative-citoyenne-ric",
+    "label": "Instaurer le référendum d'initiative citoyenne (RIC)"
+   }
+  ],
   "verdict": "mostly_false",
   "reviews": [
    {
@@ -21937,8 +21829,8 @@
   "theme": "Sécurité & immigration",
   "votona_topics": [
    {
-    "slug": "reduire-drastiquement-limmigration-par-des-quotas-stricts",
-    "label": "Réduire l'immigration en instaurant des quotas annuels"
+    "slug": "reduire-limmigration",
+    "label": "Réduire l'immigration"
    }
   ],
   "verdict": "half_true",
@@ -21978,8 +21870,8 @@
   "theme": "Sécurité & immigration",
   "votona_topics": [
    {
-    "slug": "reduire-drastiquement-limmigration-par-des-quotas-stricts",
-    "label": "Réduire l'immigration en instaurant des quotas annuels"
+    "slug": "reduire-limmigration",
+    "label": "Réduire l'immigration"
    }
   ],
   "verdict": "false",
@@ -22019,8 +21911,8 @@
   "theme": "Sécurité & immigration",
   "votona_topics": [
    {
-    "slug": "reduire-drastiquement-limmigration-par-des-quotas-stricts",
-    "label": "Réduire l'immigration en instaurant des quotas annuels"
+    "slug": "reduire-limmigration",
+    "label": "Réduire l'immigration"
    }
   ],
   "verdict": "mostly_true",
@@ -22060,8 +21952,8 @@
   "theme": "Sécurité & immigration",
   "votona_topics": [
    {
-    "slug": "reduire-drastiquement-limmigration-par-des-quotas-stricts",
-    "label": "Réduire l'immigration en instaurant des quotas annuels"
+    "slug": "reduire-limmigration",
+    "label": "Réduire l'immigration"
    }
   ],
   "verdict": "true",
@@ -22173,7 +22065,7 @@
   "theme": "Écologie",
   "votona_topics": [
    {
-    "slug": "relancer-massivement-la-filiere-nucleaire",
+    "slug": "construire-de-nouveaux-reacteurs-nucleaires",
     "label": "Construire de nouveaux réacteurs nucléaires"
    }
   ],
@@ -22247,13 +22139,8 @@
   "date_is_fallback": true,
   "country": "FR",
   "attribution_status": "auto_sure",
-  "theme": "Écologie",
-  "votona_topics": [
-   {
-    "slug": "renforcer-la-taxe-carbone-sur-les-entreprises-polluantes",
-    "label": "Renforcer la taxe carbone sur les entreprises les plus émettrices de CO2"
-   }
-  ],
+  "theme": "Europe & institutions",
+  "votona_topics": [],
   "verdict": "mostly_true",
   "reviews": [
    {
@@ -22579,8 +22466,8 @@
   "theme": "Sécurité & immigration",
   "votona_topics": [
    {
-    "slug": "reduire-drastiquement-limmigration-par-des-quotas-stricts",
-    "label": "Réduire l'immigration en instaurant des quotas annuels"
+    "slug": "reduire-limmigration",
+    "label": "Réduire l'immigration"
    }
   ],
   "verdict": "mostly_true",
@@ -22692,8 +22579,8 @@
   "theme": "Écologie",
   "votona_topics": [
    {
-    "slug": "interdire-rapidement-les-pesticides-de-synthese-en",
-    "label": "Fixer une date de sortie des pesticides de synthèse en agriculture"
+    "slug": "sortir-des-pesticides-de-synthese-dans-lagriculture",
+    "label": "Sortir des pesticides de synthèse dans l'agriculture"
    }
   ],
   "verdict": "half_true",
@@ -22730,11 +22617,11 @@
   "date_is_fallback": false,
   "country": "FR",
   "attribution_status": "auto_sure",
-  "theme": "Économie & travail",
+  "theme": "Protection sociale",
   "votona_topics": [
    {
-    "slug": "ramener-lage-legal-de-depart-a-la-retraite-a-60-ans",
-    "label": "Ramener l'âge légal de départ à la retraite à 60 ans"
+    "slug": "abaisser-lage-legal-de-depart-a-la-retraite",
+    "label": "Abaisser l'âge légal de départ à la retraite"
    }
   ],
   "verdict": "mostly_true",
@@ -22774,8 +22661,8 @@
   "theme": "Sécurité & immigration",
   "votona_topics": [
    {
-    "slug": "reduire-drastiquement-limmigration-par-des-quotas-stricts",
-    "label": "Réduire l'immigration en instaurant des quotas annuels"
+    "slug": "reduire-limmigration",
+    "label": "Réduire l'immigration"
    }
   ],
   "verdict": "false",
@@ -22812,13 +22699,8 @@
   "date_is_fallback": false,
   "country": "FR",
   "attribution_status": "auto_sure",
-  "theme": "Écologie",
-  "votona_topics": [
-   {
-    "slug": "renforcer-la-taxe-carbone-sur-les-entreprises-polluantes",
-    "label": "Renforcer la taxe carbone sur les entreprises les plus émettrices de CO2"
-   }
-  ],
+  "theme": "Europe & institutions",
+  "votona_topics": [],
   "verdict": "mostly_true",
   "reviews": [
    {
@@ -23105,8 +22987,13 @@
   "date_is_fallback": false,
   "country": "FR",
   "attribution_status": "auto_sure",
-  "theme": "Europe & institutions",
-  "votona_topics": [],
+  "theme": "Société",
+  "votona_topics": [
+   {
+    "slug": "legaliser-le-cannabis",
+    "label": "Légaliser le cannabis"
+   }
+  ],
   "verdict": "mostly_false",
   "reviews": [
    {
@@ -23756,8 +23643,8 @@
   "theme": "Sécurité & immigration",
   "votona_topics": [
    {
-    "slug": "renforcer-les-moyens-de-la-police-et-allonger-les-peines-de",
-    "label": "Augmenter les effectifs et les moyens de la police et de la gendarmerie"
+    "slug": "augmenter-les-effectifs-de-police-et-de-gendarmerie",
+    "label": "Augmenter les effectifs de police et de gendarmerie"
    }
   ],
   "verdict": "false",
@@ -23794,15 +23681,11 @@
   "date_is_fallback": true,
   "country": "FR",
   "attribution_status": "auto_sure",
-  "theme": "Économie & travail",
+  "theme": "Sécurité & immigration",
   "votona_topics": [
    {
-    "slug": "geler-le-point-dindice-des-fonctionnaires-en-2027-pour",
-    "label": "Geler le point d'indice des fonctionnaires en 2027"
-   },
-   {
-    "slug": "renforcer-les-moyens-de-la-police-et-allonger-les-peines-de",
-    "label": "Augmenter les effectifs et les moyens de la police et de la gendarmerie"
+    "slug": "augmenter-les-effectifs-de-police-et-de-gendarmerie",
+    "label": "Augmenter les effectifs de police et de gendarmerie"
    }
   ],
   "verdict": "true",
@@ -24049,7 +23932,7 @@
   "theme": "Écologie",
   "votona_topics": [
    {
-    "slug": "relancer-massivement-la-filiere-nucleaire",
+    "slug": "construire-de-nouveaux-reacteurs-nucleaires",
     "label": "Construire de nouveaux réacteurs nucléaires"
    }
   ],
@@ -24198,8 +24081,8 @@
   "theme": "Économie & travail",
   "votona_topics": [
    {
-    "slug": "reduire-la-dette-publique-en-priorite-par-la-baisse-des",
-    "label": "Réduire la dette publique en priorité par la baisse des dépenses de l'État"
+    "slug": "baisser-les-depenses-publiques",
+    "label": "Baisser les dépenses publiques"
    }
   ],
   "verdict": "mostly_false",
@@ -24236,11 +24119,11 @@
   "date_is_fallback": false,
   "country": "FR",
   "attribution_status": "auto_sure",
-  "theme": "Économie & travail",
+  "theme": "Protection sociale",
   "votona_topics": [
    {
-    "slug": "ramener-lage-legal-de-depart-a-la-retraite-a-60-ans",
-    "label": "Ramener l'âge légal de départ à la retraite à 60 ans"
+    "slug": "abaisser-lage-legal-de-depart-a-la-retraite",
+    "label": "Abaisser l'âge légal de départ à la retraite"
    }
   ],
   "verdict": "mostly_false",
@@ -24313,11 +24196,11 @@
   "date_is_fallback": true,
   "country": "FR",
   "attribution_status": "auto_sure",
-  "theme": "Économie & travail",
+  "theme": "Protection sociale",
   "votona_topics": [
    {
-    "slug": "ramener-lage-legal-de-depart-a-la-retraite-a-60-ans",
-    "label": "Ramener l'âge légal de départ à la retraite à 60 ans"
+    "slug": "abaisser-lage-legal-de-depart-a-la-retraite",
+    "label": "Abaisser l'âge légal de départ à la retraite"
    }
   ],
   "verdict": "mostly_true",
@@ -24462,11 +24345,11 @@
   "date_is_fallback": true,
   "country": "FR",
   "attribution_status": "auto_sure",
-  "theme": "Économie & travail",
+  "theme": "Protection sociale",
   "votona_topics": [
    {
-    "slug": "ramener-lage-legal-de-depart-a-la-retraite-a-60-ans",
-    "label": "Ramener l'âge légal de départ à la retraite à 60 ans"
+    "slug": "abaisser-lage-legal-de-depart-a-la-retraite",
+    "label": "Abaisser l'âge légal de départ à la retraite"
    }
   ],
   "verdict": "mostly_false",
@@ -24620,11 +24503,11 @@
   "date_is_fallback": true,
   "country": "FR",
   "attribution_status": "auto_sure",
-  "theme": "Économie & travail",
+  "theme": "Protection sociale",
   "votona_topics": [
    {
-    "slug": "ramener-lage-legal-de-depart-a-la-retraite-a-60-ans",
-    "label": "Ramener l'âge légal de départ à la retraite à 60 ans"
+    "slug": "abaisser-lage-legal-de-depart-a-la-retraite",
+    "label": "Abaisser l'âge légal de départ à la retraite"
    }
   ],
   "verdict": "mostly_true",
@@ -24850,11 +24733,11 @@
   "date_is_fallback": true,
   "country": "FR",
   "attribution_status": "auto_sure",
-  "theme": "Économie & travail",
+  "theme": "Protection sociale",
   "votona_topics": [
    {
-    "slug": "ramener-lage-legal-de-depart-a-la-retraite-a-60-ans",
-    "label": "Ramener l'âge légal de départ à la retraite à 60 ans"
+    "slug": "abaisser-lage-legal-de-depart-a-la-retraite",
+    "label": "Abaisser l'âge légal de départ à la retraite"
    }
   ],
   "verdict": "mostly_false",
@@ -24927,11 +24810,11 @@
   "date_is_fallback": true,
   "country": "FR",
   "attribution_status": "auto_sure",
-  "theme": "Économie & travail",
+  "theme": "Protection sociale",
   "votona_topics": [
    {
-    "slug": "ramener-lage-legal-de-depart-a-la-retraite-a-60-ans",
-    "label": "Ramener l'âge légal de départ à la retraite à 60 ans"
+    "slug": "abaisser-lage-legal-de-depart-a-la-retraite",
+    "label": "Abaisser l'âge légal de départ à la retraite"
    }
   ],
   "verdict": "mostly_false",
@@ -25004,11 +24887,11 @@
   "date_is_fallback": true,
   "country": "FR",
   "attribution_status": "auto_sure",
-  "theme": "Économie & travail",
+  "theme": "Protection sociale",
   "votona_topics": [
    {
-    "slug": "ramener-lage-legal-de-depart-a-la-retraite-a-60-ans",
-    "label": "Ramener l'âge légal de départ à la retraite à 60 ans"
+    "slug": "abaisser-lage-legal-de-depart-a-la-retraite",
+    "label": "Abaisser l'âge légal de départ à la retraite"
    }
   ],
   "verdict": "false",
@@ -25084,8 +24967,8 @@
   "theme": "Économie & travail",
   "votona_topics": [
    {
-    "slug": "reduire-la-dette-publique-en-priorite-par-la-baisse-des",
-    "label": "Réduire la dette publique en priorité par la baisse des dépenses de l'État"
+    "slug": "baisser-les-depenses-publiques",
+    "label": "Baisser les dépenses publiques"
    }
   ],
   "verdict": "false",
@@ -25161,8 +25044,8 @@
   "theme": "Défense & numérique",
   "votona_topics": [
    {
-    "slug": "maintenir-un-soutien-militaire-et-financier-fort-a-lukraine",
-    "label": "Maintenir le soutien militaire et financier de la France à l'Ukraine"
+    "slug": "continuer-laide-militaire-a-lukraine",
+    "label": "Continuer l'aide militaire à l'Ukraine"
    }
   ],
   "verdict": "false",
@@ -25202,8 +25085,8 @@
   "theme": "Protection sociale",
   "votona_topics": [
    {
-    "slug": "durcir-les-conditions-dindemnisation-du-chomage",
-    "label": "Restreindre les conditions d'indemnisation du chômage"
+    "slug": "reduire-la-duree-dindemnisation-du-chomage",
+    "label": "Réduire la durée d'indemnisation du chômage"
    }
   ],
   "verdict": "mostly_true",
@@ -25492,11 +25375,11 @@
   "date_is_fallback": false,
   "country": "FR",
   "attribution_status": "auto_sure",
-  "theme": "Économie & travail",
+  "theme": "Protection sociale",
   "votona_topics": [
    {
-    "slug": "ramener-lage-legal-de-depart-a-la-retraite-a-60-ans",
-    "label": "Ramener l'âge légal de départ à la retraite à 60 ans"
+    "slug": "abaisser-lage-legal-de-depart-a-la-retraite",
+    "label": "Abaisser l'âge légal de départ à la retraite"
    }
   ],
   "verdict": "unrated",
@@ -25605,13 +25488,8 @@
   "date_is_fallback": false,
   "country": "FR",
   "attribution_status": "validated",
-  "theme": "Société",
-  "votona_topics": [
-   {
-    "slug": "recruter-massivement-du-personnel-soignant-et-revaloriser",
-    "label": "Recruter davantage de soignants et augmenter leurs salaires à l'hôpital public"
-   }
-  ],
+  "theme": null,
+  "votona_topics": [],
   "verdict": "false",
   "reviews": [
    {
@@ -25865,8 +25743,8 @@
   "theme": "Sécurité & immigration",
   "votona_topics": [
    {
-    "slug": "reduire-drastiquement-limmigration-par-des-quotas-stricts",
-    "label": "Réduire l'immigration en instaurant des quotas annuels"
+    "slug": "reduire-limmigration",
+    "label": "Réduire l'immigration"
    }
   ],
   "verdict": "mostly_false",
@@ -25942,12 +25820,12 @@
   "theme": "Protection sociale",
   "votona_topics": [
    {
-    "slug": "durcir-les-conditions-dindemnisation-du-chomage",
-    "label": "Restreindre les conditions d'indemnisation du chômage"
+    "slug": "reduire-la-duree-dindemnisation-du-chomage",
+    "label": "Réduire la durée d'indemnisation du chômage"
    },
    {
-    "slug": "reduire-drastiquement-limmigration-par-des-quotas-stricts",
-    "label": "Réduire l'immigration en instaurant des quotas annuels"
+    "slug": "reduire-limmigration",
+    "label": "Réduire l'immigration"
    }
   ],
   "verdict": "half_true",
@@ -26056,8 +25934,13 @@
   "date_is_fallback": true,
   "country": "FR",
   "attribution_status": "auto_sure",
-  "theme": null,
-  "votona_topics": [],
+  "theme": "Société",
+  "votona_topics": [
+   {
+    "slug": "legaliser-le-cannabis",
+    "label": "Légaliser le cannabis"
+   }
+  ],
   "verdict": "mostly_true",
   "reviews": [
    {
@@ -26164,13 +26047,8 @@
   "date_is_fallback": true,
   "country": "FR",
   "attribution_status": "auto_sure",
-  "theme": "Économie & travail",
-  "votona_topics": [
-   {
-    "slug": "geler-le-point-dindice-des-fonctionnaires-en-2027-pour",
-    "label": "Geler le point d'indice des fonctionnaires en 2027"
-   }
-  ],
+  "theme": "Europe & institutions",
+  "votona_topics": [],
   "verdict": "mostly_false",
   "reviews": [
    {
@@ -26511,13 +26389,8 @@
   "date_is_fallback": false,
   "country": "FR",
   "attribution_status": "auto_sure",
-  "theme": "Société",
-  "votona_topics": [
-   {
-    "slug": "recruter-massivement-du-personnel-soignant-et-revaloriser",
-    "label": "Recruter davantage de soignants et augmenter leurs salaires à l'hôpital public"
-   }
-  ],
+  "theme": null,
+  "votona_topics": [],
   "verdict": "false",
   "reviews": [
    {
@@ -26552,13 +26425,8 @@
   "date_is_fallback": false,
   "country": "FR",
   "attribution_status": "auto_sure",
-  "theme": "Société",
-  "votona_topics": [
-   {
-    "slug": "recruter-massivement-du-personnel-soignant-et-revaloriser",
-    "label": "Recruter davantage de soignants et augmenter leurs salaires à l'hôpital public"
-   }
-  ],
+  "theme": null,
+  "votona_topics": [],
   "verdict": "false",
   "reviews": [
    {
@@ -26845,11 +26713,15 @@
   "date_is_fallback": false,
   "country": "FR",
   "attribution_status": "validated",
-  "theme": "Économie & travail",
+  "theme": "Europe & institutions",
   "votona_topics": [
    {
-    "slug": "retablir-un-impot-renforce-sur-les-grandes-fortunes",
-    "label": "Rétablir un impôt sur la fortune (ISF)"
+    "slug": "instaurer-le-referendum-dinitiative-citoyenne-ric",
+    "label": "Instaurer le référendum d'initiative citoyenne (RIC)"
+   },
+   {
+    "slug": "retablir-limpot-sur-la-fortune-isf",
+    "label": "Rétablir l'impôt sur la fortune (ISF)"
    }
   ],
   "verdict": "mostly_false",
@@ -26886,15 +26758,15 @@
   "date_is_fallback": false,
   "country": "FR",
   "attribution_status": "auto_sure",
-  "theme": "Protection sociale",
+  "theme": "Économie & travail",
   "votona_topics": [
    {
-    "slug": "durcir-les-conditions-dindemnisation-du-chomage",
-    "label": "Restreindre les conditions d'indemnisation du chômage"
+    "slug": "baisser-les-depenses-publiques",
+    "label": "Baisser les dépenses publiques"
    },
    {
-    "slug": "reduire-la-dette-publique-en-priorite-par-la-baisse-des",
-    "label": "Réduire la dette publique en priorité par la baisse des dépenses de l'État"
+    "slug": "reduire-la-duree-dindemnisation-du-chomage",
+    "label": "Réduire la durée d'indemnisation du chômage"
    }
   ],
   "verdict": "true",
@@ -27015,8 +26887,8 @@
   "theme": "Sécurité & immigration",
   "votona_topics": [
    {
-    "slug": "reduire-drastiquement-limmigration-par-des-quotas-stricts",
-    "label": "Réduire l'immigration en instaurant des quotas annuels"
+    "slug": "reduire-limmigration",
+    "label": "Réduire l'immigration"
    }
   ],
   "verdict": "true",
@@ -27101,8 +26973,8 @@
   "theme": "Défense & numérique",
   "votona_topics": [
    {
-    "slug": "maintenir-un-soutien-militaire-et-financier-fort-a-lukraine",
-    "label": "Maintenir le soutien militaire et financier de la France à l'Ukraine"
+    "slug": "continuer-laide-militaire-a-lukraine",
+    "label": "Continuer l'aide militaire à l'Ukraine"
    }
   ],
   "verdict": "false",
@@ -27142,12 +27014,8 @@
   "theme": "Sécurité & immigration",
   "votona_topics": [
    {
-    "slug": "reduire-drastiquement-limmigration-par-des-quotas-stricts",
-    "label": "Réduire l'immigration en instaurant des quotas annuels"
-   },
-   {
-    "slug": "reserver-le-jugement-de-tous-les-crimes-sexuels-aux-cours",
-    "label": "Réserver le jugement de tous les crimes sexuels aux cours d'assises avec jury populaire, en les excluant des cours criminelles départementales"
+    "slug": "reduire-limmigration",
+    "label": "Réduire l'immigration"
    }
   ],
   "verdict": "false",
@@ -27196,7 +27064,7 @@
   "theme": "Écologie",
   "votona_topics": [
    {
-    "slug": "relancer-massivement-la-filiere-nucleaire",
+    "slug": "construire-de-nouveaux-reacteurs-nucleaires",
     "label": "Construire de nouveaux réacteurs nucléaires"
    }
   ],
@@ -27237,12 +27105,8 @@
   "theme": "Défense & numérique",
   "votona_topics": [
    {
-    "slug": "maintenir-un-soutien-militaire-et-financier-fort-a-lukraine",
-    "label": "Maintenir le soutien militaire et financier de la France à l'Ukraine"
-   },
-   {
-    "slug": "reserver-le-jugement-de-tous-les-crimes-sexuels-aux-cours",
-    "label": "Réserver le jugement de tous les crimes sexuels aux cours d'assises avec jury populaire, en les excluant des cours criminelles départementales"
+    "slug": "continuer-laide-militaire-a-lukraine",
+    "label": "Continuer l'aide militaire à l'Ukraine"
    }
   ],
   "verdict": "mostly_false",
@@ -27316,7 +27180,12 @@
   "country": "FR",
   "attribution_status": "auto_sure",
   "theme": "Europe & institutions",
-  "votona_topics": [],
+  "votona_topics": [
+   {
+    "slug": "instaurer-le-referendum-dinitiative-citoyenne-ric",
+    "label": "Instaurer le référendum d'initiative citoyenne (RIC)"
+   }
+  ],
   "verdict": "unrated",
   "reviews": [
    {
@@ -27795,8 +27664,8 @@
   "theme": "Sécurité & immigration",
   "votona_topics": [
    {
-    "slug": "reduire-drastiquement-limmigration-par-des-quotas-stricts",
-    "label": "Réduire l'immigration en instaurant des quotas annuels"
+    "slug": "reduire-limmigration",
+    "label": "Réduire l'immigration"
    }
   ],
   "verdict": "false",
@@ -27836,7 +27705,7 @@
   "theme": "Écologie",
   "votona_topics": [
    {
-    "slug": "relancer-massivement-la-filiere-nucleaire",
+    "slug": "construire-de-nouveaux-reacteurs-nucleaires",
     "label": "Construire de nouveaux réacteurs nucléaires"
    }
   ],
@@ -27958,8 +27827,8 @@
   "theme": "Sécurité & immigration",
   "votona_topics": [
    {
-    "slug": "reduire-drastiquement-limmigration-par-des-quotas-stricts",
-    "label": "Réduire l'immigration en instaurant des quotas annuels"
+    "slug": "reduire-limmigration",
+    "label": "Réduire l'immigration"
    }
   ],
   "verdict": "false",
@@ -28393,7 +28262,12 @@
   "country": "FR",
   "attribution_status": "validated",
   "theme": "Écologie",
-  "votona_topics": [],
+  "votona_topics": [
+   {
+    "slug": "arreter-de-construire-de-nouvelles-eoliennes",
+    "label": "Arrêter de construire de nouvelles éoliennes"
+   }
+  ],
   "verdict": "true",
   "reviews": [
    {
@@ -28431,12 +28305,8 @@
   "theme": "Sécurité & immigration",
   "votona_topics": [
    {
-    "slug": "renforcer-les-moyens-de-la-police-et-allonger-les-peines-de",
-    "label": "Augmenter les effectifs et les moyens de la police et de la gendarmerie"
-   },
-   {
-    "slug": "reserver-le-jugement-de-tous-les-crimes-sexuels-aux-cours",
-    "label": "Réserver le jugement de tous les crimes sexuels aux cours d'assises avec jury populaire, en les excluant des cours criminelles départementales"
+    "slug": "augmenter-les-effectifs-de-police-et-de-gendarmerie",
+    "label": "Augmenter les effectifs de police et de gendarmerie"
    }
   ],
   "verdict": "mostly_true",
@@ -28941,11 +28811,11 @@
   "date_is_fallback": false,
   "country": "FR",
   "attribution_status": "auto_sure",
-  "theme": "Économie & travail",
+  "theme": "Protection sociale",
   "votona_topics": [
    {
-    "slug": "ramener-lage-legal-de-depart-a-la-retraite-a-60-ans",
-    "label": "Ramener l'âge légal de départ à la retraite à 60 ans"
+    "slug": "abaisser-lage-legal-de-depart-a-la-retraite",
+    "label": "Abaisser l'âge légal de départ à la retraite"
    }
   ],
   "verdict": "false",
@@ -28985,12 +28855,8 @@
   "theme": "Sécurité & immigration",
   "votona_topics": [
    {
-    "slug": "reduire-drastiquement-limmigration-par-des-quotas-stricts",
-    "label": "Réduire l'immigration en instaurant des quotas annuels"
-   },
-   {
-    "slug": "reserver-le-jugement-de-tous-les-crimes-sexuels-aux-cours",
-    "label": "Réserver le jugement de tous les crimes sexuels aux cours d'assises avec jury populaire, en les excluant des cours criminelles départementales"
+    "slug": "reduire-limmigration",
+    "label": "Réduire l'immigration"
    }
   ],
   "verdict": "false",
@@ -29045,8 +28911,13 @@
   "date_is_fallback": false,
   "country": "FR",
   "attribution_status": "auto_sure",
-  "theme": "Sécurité & immigration",
-  "votona_topics": [],
+  "theme": "Société",
+  "votona_topics": [
+   {
+    "slug": "interdire-le-port-du-voile-dans-lespace-public",
+    "label": "Interdire le port du voile dans l'espace public"
+   }
+  ],
   "verdict": "half_true",
   "reviews": [
    {
@@ -29084,8 +28955,8 @@
   "theme": "Sécurité & immigration",
   "votona_topics": [
    {
-    "slug": "reduire-drastiquement-limmigration-par-des-quotas-stricts",
-    "label": "Réduire l'immigration en instaurant des quotas annuels"
+    "slug": "reduire-limmigration",
+    "label": "Réduire l'immigration"
    }
   ],
   "verdict": "mostly_false",
@@ -29197,8 +29068,8 @@
   "theme": "Écologie",
   "votona_topics": [
    {
-    "slug": "interdire-rapidement-les-pesticides-de-synthese-en",
-    "label": "Fixer une date de sortie des pesticides de synthèse en agriculture"
+    "slug": "sortir-des-pesticides-de-synthese-dans-lagriculture",
+    "label": "Sortir des pesticides de synthèse dans l'agriculture"
    }
   ],
   "verdict": "unrated",
@@ -29380,7 +29251,12 @@
   "country": "FR",
   "attribution_status": "auto_sure",
   "theme": "Écologie",
-  "votona_topics": [],
+  "votona_topics": [
+   {
+    "slug": "arreter-de-construire-de-nouvelles-eoliennes",
+    "label": "Arrêter de construire de nouvelles éoliennes"
+   }
+  ],
   "verdict": "false",
   "reviews": [
    {
@@ -29604,11 +29480,15 @@
   "date_is_fallback": true,
   "country": "FR",
   "attribution_status": "auto_sure",
-  "theme": "Économie & travail",
+  "theme": "Europe & institutions",
   "votona_topics": [
    {
-    "slug": "retablir-un-impot-renforce-sur-les-grandes-fortunes",
-    "label": "Rétablir un impôt sur la fortune (ISF)"
+    "slug": "instaurer-le-referendum-dinitiative-citoyenne-ric",
+    "label": "Instaurer le référendum d'initiative citoyenne (RIC)"
+   },
+   {
+    "slug": "retablir-limpot-sur-la-fortune-isf",
+    "label": "Rétablir l'impôt sur la fortune (ISF)"
    }
   ],
   "verdict": "mostly_false",
@@ -29918,8 +29798,8 @@
   "theme": "Économie & travail",
   "votona_topics": [
    {
-    "slug": "retablir-un-impot-renforce-sur-les-grandes-fortunes",
-    "label": "Rétablir un impôt sur la fortune (ISF)"
+    "slug": "retablir-limpot-sur-la-fortune-isf",
+    "label": "Rétablir l'impôt sur la fortune (ISF)"
    }
   ],
   "verdict": "false",
@@ -30067,8 +29947,8 @@
   "theme": "Sécurité & immigration",
   "votona_topics": [
    {
-    "slug": "reduire-drastiquement-limmigration-par-des-quotas-stricts",
-    "label": "Réduire l'immigration en instaurant des quotas annuels"
+    "slug": "reduire-limmigration",
+    "label": "Réduire l'immigration"
    }
   ],
   "verdict": "false",
@@ -30105,15 +29985,15 @@
   "date_is_fallback": false,
   "country": "FR",
   "attribution_status": "validated",
-  "theme": "Protection sociale",
+  "theme": "Société",
   "votona_topics": [
    {
-    "slug": "durcir-les-conditions-dindemnisation-du-chomage",
-    "label": "Restreindre les conditions d'indemnisation du chômage"
+    "slug": "encadrer-les-loyers-dans-les-grandes-villes",
+    "label": "Encadrer les loyers dans les grandes villes"
    },
    {
-    "slug": "encadrer-plus-strictement-les-loyers-dans-les-zones-tendues",
-    "label": "Encadrer plus strictement les loyers dans les zones tendues"
+    "slug": "reduire-la-duree-dindemnisation-du-chomage",
+    "label": "Réduire la durée d'indemnisation du chômage"
    }
   ],
   "verdict": "half_true",
@@ -30195,11 +30075,15 @@
   "date_is_fallback": false,
   "country": "FR",
   "attribution_status": "auto_sure",
-  "theme": "Économie & travail",
+  "theme": "Europe & institutions",
   "votona_topics": [
    {
-    "slug": "retablir-un-impot-renforce-sur-les-grandes-fortunes",
-    "label": "Rétablir un impôt sur la fortune (ISF)"
+    "slug": "instaurer-le-referendum-dinitiative-citoyenne-ric",
+    "label": "Instaurer le référendum d'initiative citoyenne (RIC)"
+   },
+   {
+    "slug": "retablir-limpot-sur-la-fortune-isf",
+    "label": "Rétablir l'impôt sur la fortune (ISF)"
    }
   ],
   "verdict": "mostly_true",
@@ -30284,8 +30168,8 @@
   "theme": "Protection sociale",
   "votona_topics": [
    {
-    "slug": "durcir-les-conditions-dindemnisation-du-chomage",
-    "label": "Restreindre les conditions d'indemnisation du chômage"
+    "slug": "reduire-la-duree-dindemnisation-du-chomage",
+    "label": "Réduire la durée d'indemnisation du chômage"
    }
   ],
   "verdict": "half_true",

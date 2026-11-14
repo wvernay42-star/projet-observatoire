@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-13T05:00:20+00:00",
+ "generated_at": "2026-11-14T05:02:06+00:00",
  "scope": "Sur les déclarations vérifiées, pas sur l'ensemble des propos tenus.",
  "candidats": {
   "bardella": {
@@ -232,15 +232,15 @@
  },
  "sujets": {
   "economie": {
-   "n": 107,
+   "n": 82,
    "url": "https://observatoire.votona.fr/sujets/economie/"
   },
   "social": {
-   "n": 50,
+   "n": 61,
    "url": "https://observatoire.votona.fr/sujets/social/"
   },
   "securite": {
-   "n": 107,
+   "n": 97,
    "url": "https://observatoire.votona.fr/sujets/securite/"
   },
   "ecologie": {
@@ -248,15 +248,15 @@
    "url": "https://observatoire.votona.fr/sujets/ecologie/"
   },
   "europe": {
-   "n": 86,
+   "n": 101,
    "url": "https://observatoire.votona.fr/sujets/europe/"
   },
   "societe": {
-   "n": 65,
+   "n": 60,
    "url": "https://observatoire.votona.fr/sujets/societe/"
   },
   "defense": {
-   "n": 50,
+   "n": 52,
    "url": "https://observatoire.votona.fr/sujets/defense/"
   }
  }

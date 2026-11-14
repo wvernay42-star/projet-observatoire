@@ -21,6 +21,19 @@ Les décisions durables sont aussi consignées dans [decisions.md](decisions.md)
 | — | Hébergement préprod (`preprod`) / prod (`main`) | ✅ en ligne (26/10) — projet Vercel `votona-observatoire` ; production indexable depuis le 28/10 |
 | — | Liens Votona → Observatoire | ⏳ actifs sur `draft` (test, 26/10) ; `main` sur demande du porteur |
 
+## 2026-11-14 — Routine quotidienne
+
+- Candidats : synchronisation depuis https://votona.fr/ (pas de clone Votona) : 0 ajouté, 0 modifié, 0 absent ; 3 à confirmer (Selma Labib, Antoine Mikolajczak, Teddy Riner).
+- Décisions de l'admin (Supabase) : 2 décisions appliquées (partis, affiliations_manual.csv : Q288477 Éric Zemmour → Q109932430 au 10/11 ; Teddy Riner → sans étiquette au 18/09/2024), 0 ignorée. `rating_map.csv` non modifié.
+- Collecte : google_factcheck 14 récupérées, 0 nouvelle ; datacommons_feed 4 récupérées, 0 nouvelle. Base : 7 629 vérifications (rechargée depuis data/store : 7 629).
+- Claims : auto_sure 460, validated 326, to_review 0, rejected 6 757. Exportées : 786 (inchangé), dont 245 de candidats 2027 (244 la veille : la déclaration d'Éric Zemmour du 10/11 a désormais un parti). L'export reclasse les déclarations sur les 32 nouveaux sujets de Votona (refonte du 13/11), d'où de nombreuses pages du site régénérées.
+- Files déposées dans Supabase : libellés 0, attributions 0, partis 0, sources 7.
+- Part de verdicts positifs (toutes / attribuées) : TF1 Info 20,2 % / 40,3 % ; franceinfo 29,1 % / 37,8 % ; AFP Factuel 0,4 % / 2,7 % ; Poligraph 22,0 % / 26,0 % ; Les Décodeurs 1,6 % / 4,2 % ; 20 Minutes 11,0 % / 31,8 % ; Libération CheckNews 0 % / —.
+- Alertes : aucun résultat nouveau depuis 3 jours pour datacommons_feed ; aucune nouvelle vérification ce jour pour google_factcheck. Aucune erreur de connecteur.
+- Images de partage : rien à créer.
+- Portraits : 210 personnes, 129 traitées (38 ok), 81 restantes ; 0 traité ce jour, lot interrompu car Wikimedia limite l'accès (aucun portrait traité depuis le 06/11 au moins).
+- Beta : build_beta exécuté (786 déclarations), artefact republié (version 27). 96 tests passent.
+
 ## 2026-11-13 — Sujets de Votona : nouvelle liste (refonte du questionnaire)
 
 - Votona a refondu son questionnaire le 13/11/2026 : 32 sujets simples (15 retirés, 18 reformulés, 7 nouveaux : 35 heures, régularisation des travailleurs sans papiers, voitures thermiques en 2035, sortie de l'UE, cannabis, voile dans l'espace public, service national obligatoire), avec de nouvelles adresses `votona.fr/sujets/<slug>/` (les anciennes redirigent en 301).

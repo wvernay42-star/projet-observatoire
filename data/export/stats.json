@@ -3059,17 +3059,17 @@
    "last_review_date": "2026-08-27"
   },
   "Q109932430": {
-   "n_claims": 27,
+   "n_claims": 28,
    "verdicts": {
     "true": 2,
     "mostly_true": 1,
     "half_true": 2,
-    "mostly_false": 5,
+    "mostly_false": 6,
     "false": 16,
     "unrated": 1
    },
    "n_sources": 5,
-   "last_review_date": "2026-09-07"
+   "last_review_date": "2026-11-11"
   },
   "Q1230558": {
    "n_claims": 2,
