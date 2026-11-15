@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <rss version="2.0"><channel><title>Votona Observatoire - dernières vérifications</title><link>https://observatoire.votona.fr/</link>
 <description>Les dernières déclarations politiques vérifiées par les rédactions françaises de fact-checking, avec le verdict d'origine.</description>
-<language>fr</language><lastBuildDate>Sat, 14 Nov 2026 05:02:06 +0000</lastBuildDate>
+<language>fr</language><lastBuildDate>Sun, 15 Nov 2026 05:00:25 +0000</lastBuildDate>
+<item><title>Sébastien Chenu : « La TVA à 0% sur les produits de première nécessité a "fait baisser l'ensemble des prix" chez nos voisins européens. »</title>
+<link>https://www.franceinfo.fr/vrai-ou-fake/vrai-ou-faux-la-tva-a-0-sur-les-produits-de-premiere-necessite-a-t-elle-fait-baisser-l-ensemble-des-prix-en-espagne-et-en-pologne-comme-l-affirme-sebastien-chenu_8276051.html</link><guid isPermaLink="false">c_c8e750c9c74974c8</guid><pubDate>Thu, 12 Nov 2026 12:00:00 +0000</pubDate>
+<description>« Plutôt Faux » selon franceinfo Vrai ou Fake</description></item>
 <item><title>Éric Zemmour : « Les États-Unis et la Suisse expulsent les étrangers après six mois passés au chômage »</title>
 <link>https://www.tf1info.fr/international/verif-les-etats-unis-et-la-suisse-expulsent-ils-les-etrangers-depuis-plus-de-six-mois-au-chomage-comme-l-affirme-eric-zemmour-2475294.html</link><guid isPermaLink="false">c_5f4efa81909220ef</guid><pubDate>Wed, 11 Nov 2026 12:00:00 +0000</pubDate>
 <description>« Plutôt faux » selon TF1 Info – Les Vérificateurs</description></item>
@@ -149,7 +152,4 @@
 <item><title>François Ruffin : « Les travaux d'intérêt général sont une peine aujourd'hui "largement délaissée" par les magistrats »</title>
 <link>https://www.tf1info.fr/justice-faits-divers/verif-les-travaux-d-interet-general-une-peine-qui-est-aujourd-hui-largement-delaissee-par-les-magistrats-2444998.html</link><guid isPermaLink="false">c_185a00d1ea380b09</guid><pubDate>Thu, 04 Jun 2026 12:00:00 +0000</pubDate>
 <description>« En partie vrai » selon TF1 Info – Les Vérificateurs</description></item>
-<item><title>Marine Le Pen : « Il n'y a qu'en France où la victoire d'un club de foot provoque des émeutes. »</title>
-<link>https://www.franceinfo.fr/vrai-ou-fake/vrai-ou-faux-violences-apres-le-sacre-europeen-du-psg-la-france-est-elle-le-seul-pays-ou-la-victoire-d-un-club-de-foot-provoque-des-emeutes-comme-l-affirme-marine-le-pen_8039525.html</link><guid isPermaLink="false">c_ef51da92ed700c16</guid><pubDate>Tue, 02 Jun 2026 12:00:00 +0000</pubDate>
-<description>« Faux » selon franceinfo Vrai ou Fake</description></item>
 </channel></rss>

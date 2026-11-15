@@ -1081,17 +1081,17 @@
    "last_review_date": "2025-08-22"
   },
   "Q21294609": {
-   "n_claims": 7,
+   "n_claims": 8,
    "verdicts": {
     "true": 0,
     "mostly_true": 2,
     "half_true": 0,
-    "mostly_false": 3,
+    "mostly_false": 4,
     "false": 2,
     "unrated": 0
    },
    "n_sources": 4,
-   "last_review_date": "2025-11-04"
+   "last_review_date": "2026-11-12"
   },
   "Q21498744": {
    "n_claims": 1,
@@ -3477,17 +3477,17 @@
  },
  "country": {
   "FR": {
-   "n_claims": 786,
+   "n_claims": 787,
    "verdicts": {
     "true": 132,
     "mostly_true": 128,
     "half_true": 125,
-    "mostly_false": 170,
+    "mostly_false": 171,
     "false": 206,
     "unrated": 25
    },
    "n_sources": 6,
-   "last_review_date": "2026-11-11"
+   "last_review_date": "2026-11-12"
   }
  },
  "month": {
@@ -4701,17 +4701,17 @@
    "last_review_date": "2026-10-31"
   },
   "2026-11": {
-   "n_claims": 5,
+   "n_claims": 6,
    "verdicts": {
     "true": 1,
     "mostly_true": 2,
     "half_true": 0,
-    "mostly_false": 1,
+    "mostly_false": 2,
     "false": 1,
     "unrated": 0
    },
    "n_sources": 4,
-   "last_review_date": "2026-11-11"
+   "last_review_date": "2026-11-12"
   }
  }
 }

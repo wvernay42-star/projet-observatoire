@@ -149,6 +149,42 @@
   ]
  },
  {
+  "id": "c_c8e750c9c74974c8",
+  "person": {
+   "id": "Q21294609",
+   "name": "Sébastien Chenu",
+   "votona_id": null
+  },
+  "party": {
+   "id": null,
+   "name": null,
+   "short_name": null,
+   "status": "ambiguous",
+   "name_at_date": null,
+   "short_name_at_date": null
+  },
+  "claim_text": "La TVA à 0% sur les produits de première nécessité a \"fait baisser l'ensemble des prix\" chez nos voisins européens.",
+  "claim_date": "2026-11-09",
+  "date_precision": "day",
+  "date_is_fallback": false,
+  "country": "FR",
+  "attribution_status": "auto_sure",
+  "theme": "Économie & travail",
+  "votona_topics": [],
+  "verdict": "mostly_false",
+  "reviews": [
+   {
+    "source_id": "franceinfo_vraioufake",
+    "source_name": "franceinfo Vrai ou Fake",
+    "url": "https://www.franceinfo.fr/vrai-ou-fake/vrai-ou-faux-la-tva-a-0-sur-les-produits-de-premiere-necessite-a-t-elle-fait-baisser-l-ensemble-des-prix-en-espagne-et-en-pologne-comme-l-affirme-sebastien-chenu_8276051.html",
+    "title": "VRAI OU FAUX. La TVA à 0% sur les produits de première nécessité a-t-elle \"fait baisser l'ensemble des prix\" en Espagne et en Pologne, comme l'affirme Sébastien Chenu ?",
+    "rating_original": "Plutôt Faux",
+    "rating_normalized": "mostly_false",
+    "review_date": "2026-11-12"
+   }
+  ]
+ },
+ {
   "id": "c_2e2764bdbdc88f40",
   "person": {
    "id": "Q3085763",
