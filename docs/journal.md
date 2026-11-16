@@ -21,6 +21,16 @@ Les décisions durables sont aussi consignées dans [decisions.md](decisions.md)
 | — | Hébergement préprod (`preprod`) / prod (`main`) | ✅ en ligne (26/10) — projet Vercel `votona-observatoire` ; production indexable depuis le 28/10 |
 | — | Liens Votona → Observatoire | ⏳ actifs sur `draft` (test, 26/10) ; `main` sur demande du porteur |
 
+## 2026-11-17 — Charte graphique alignée sur la nouvelle identité de Votona
+
+- Couleur principale : l'indigo du nouveau logo de Votona (`#463BB1`, mode sombre `#9A93EC`) à la place du violet `#7C3AED` ; texte bleu nuit `#1E1946` ; logo loupe, favicon et images de partage recolorés.
+- Titres en Montserrat (plus de Baloo 2), comme votona.fr.
+- Couleurs des 7 familles plus sombres, identiques à celles des insignes de Votona (`#C98A00`, `#2F6FD6`, `#D9534F`, `#13A27A`, `#5B4BD1`, `#D9488A`, `#1196B8`).
+- Accessoires des oursons (`web/beta/props/*.webp`) remplacés par les emblèmes vectoriels de Votona (`web/beta/props/*.svg`, copiés depuis `votona/assets/insignes/`) ; personnages (`web/beta/characters`) et `logo-head.webp` (tête d'ourson) supprimés, `SHOW_CHARACTERS` reste à False.
+- En-têtes sans personnage : plus d'espace réservé vide sous le titre (classe `solo`).
+- Nouveau `scripts/favicons.js` : icônes PNG et `favicon.ico` refaites depuis `web/beta/favicon.svg`.
+- Images de partage refaites (`node scripts/og-images.js --force`), titres réduits pour Montserrat. `pytest` : 96 réussis.
+
 ## 2026-11-16 — Routine quotidienne
 
 - Candidats : synchronisation depuis https://votona.fr/ (pas de clone Votona) : 0 ajouté, 0 modifié, 0 absent ; 3 à confirmer (Selma Labib, Antoine Mikolajczak, Teddy Riner).

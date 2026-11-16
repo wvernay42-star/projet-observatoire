@@ -48,10 +48,10 @@ FAMILIES = [("economie", "Économie & travail"), ("social", "Protection sociale"
             ("europe", "Europe & institutions"), ("societe", "Société"), ("defense", "Défense & numérique")]
 FAMILY_ID = {label: fid for fid, label in FAMILIES}
 FAMILY_LABEL = dict(FAMILIES)
-# Couleur et accessoire de chaque famille : mêmes que Votona (CATEGORY_META.pop, assets/props).
-THEME = {"economie": ("#FFB703", "economie"), "social": ("#3A86FF", "protection-sociale"),
-         "securite": ("#FF6B6B", "securite"), "ecologie": ("#06D6A0", "ecologie"),
-         "europe": ("#6C5CE7", "europe"), "societe": ("#FF5DA2", "societe"), "defense": ("#00B4D8", "defense")}
+# Couleur et emblème de chaque famille : mêmes que Votona (CATEGORY_META.pop, assets/insignes/<famille>.svg copiés dans web/beta/props).
+THEME = {"economie": ("#C98A00", "economie"), "social": ("#2F6FD6", "protection-sociale"),
+         "securite": ("#D9534F", "securite"), "ecologie": ("#13A27A", "ecologie"),
+         "europe": ("#5B4BD1", "europe"), "societe": ("#D9488A", "societe"), "defense": ("#1196B8", "defense")}
 MONTHS = ["janvier", "février", "mars", "avril", "mai", "juin", "juillet", "août", "septembre", "octobre",
           "novembre", "décembre"]
 MONTHS_SHORT = ["janv.", "févr.", "mars", "avr.", "mai", "juin", "juil.", "août", "sept.", "oct.", "nov.", "déc."]
@@ -289,7 +289,7 @@ def fact_list(site: Site, facts: list[dict[str, Any]], with_person: bool = True,
 
 
 def prop_img(fid: str, cls: str = "prop") -> str:
-    return f'<img class="{cls}" src="/assets/props/{THEME[fid][1]}.webp" alt="" width="44" height="44" loading="lazy">'
+    return f'<img class="{cls}" src="/assets/props/{THEME[fid][1]}.svg" alt="" width="44" height="44" loading="lazy">'
 
 
 def family_tiles(facts: list[dict[str, Any]], only: list[str] | None = None) -> str:
@@ -341,14 +341,15 @@ def intro(title: str, text: str = "", stats: list[tuple[Any, str]] | None = None
     style = f' style="--hc:{color}"' if color else ""
     pills = ('<div class="stats">' + "".join(f"<span><b>{v}</b> {escape(t)}</span>" for v, t in stats) + "</div>") if stats else ""
     imgs = "".join(char_img(fid, f"crew c{i + 1}") for i, fid in enumerate(crew))
-    return (f'<section class="vhero{"" if crew else " solo"}"{style}>{f"<span class=\"pill-k\">{escape(kicker)}</span>" if kicker else ""}'
+    return (f'<section class="vhero{"" if imgs else " solo"}"{style}>{f"<span class=\"pill-k\">{escape(kicker)}</span>" if kicker else ""}'
             f'<h1>{escape(title)}</h1>{f"<p>{escape(text)}</p>" if text else ""}{pills}{imgs}</section>')
 
 
 def theme_hero(fid: str, title: str, text: str, kicker: str) -> str:
     """En-tête d'une famille de sujets : couleur et personnage de la famille, comme les pages sujets de votona.fr."""
-    return (f'<section class="vhero th one" style="--th:{THEME[fid][0]}"><span class="pill-k">{escape(kicker)}</span>'
-            f'<h1>{escape(title)}</h1><p>{escape(text)}</p>{char_img(fid, "hero-char")}</section>')
+    char = char_img(fid, "hero-char")
+    return (f'<section class="vhero th {"one" if char else "solo"}" style="--th:{THEME[fid][0]}"><span class="pill-k">{escape(kicker)}</span>'
+            f'<h1>{escape(title)}</h1><p>{escape(text)}</p>{char}</section>')
 
 
 def crumbs(left: tuple[str, str], right: tuple[str, str] | None = None) -> str:
@@ -436,7 +437,7 @@ def page(site: Site, path: str, title: str, description: str, tab: str, body: st
 <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png?v=2">
 <link rel="alternate" type="application/rss+xml" title="Votona Observatoire - dernières vérifications" href="/flux.xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Work+Sans:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Work+Sans:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/assets/observatoire.css">
 <script defer src="/_vercel/insights/script.js"></script>
 {ld_html}</head>
@@ -533,12 +534,12 @@ def person_page(site: Site, pid: str) -> tuple[str, str, bool]:
     party_line = ("Partis sur la période : " + ", ".join(party_names) if party_names
                   else f'{cand["votona_party"]} (selon Votona)' if cand else "Parti non renseigné sur la période")
     wiki = f' · {ext("https://www.wikidata.org/wiki/" + pid, "fiche Wikidata")}' if pid.startswith("Q") else ""
-    color = escape((cand or {}).get("color") or "#7C3AED")
+    color = escape((cand or {}).get("color") or "#463BB1")
     party = (cand["votona_party"] if cand else party_names[-1] if party_names else "Parti non renseigné")
     if cand and cand["status"] == "retiré":
         party += " · candidature retirée"
     fams = sorted(((fid, sum(f["family"] == fid for f in facts)) for fid, _ in FAMILIES), key=lambda x: -x[1])
-    props = "".join(f'<img class="hp hp{i + 1}" src="/assets/props/{THEME[fid][1]}.webp" alt="" width="{size}" height="{size}">'
+    props = "".join(f'<img class="hp hp{i + 1}" src="/assets/props/{THEME[fid][1]}.svg" alt="" width="{size}" height="{size}">'
                     for i, ((fid, n), size) in enumerate(zip(fams, (58, 46, 40, 34))) if n)
     stat = plural(len(facts), "déclaration vérifiée", "déclarations vérifiées") if facts else "Aucune vérification à ce jour"
     parts = [crumbs(("/candidats/", "Candidats 2027") if cand else ("/personnalites/", "Personnalités"), ("/sujets/", "Sujets")),
@@ -668,7 +669,7 @@ def index_pages(site: Site) -> dict[str, str]:
         meta = (f'{mini_bar(facts)}<span class="meta">{plural(len(facts), "déclaration vérifiée", "déclarations vérifiées")}</span>'
                 if facts else '<span class="meta">Aucune vérification à ce jour</span>')
         (items if facts else items_none).append(f'<li data-search="{escape(c["name"] + " " + party)}"{" class=\"out\"" if c["status"] == "retiré" else ""} '
-                     f'style="--cc:{escape(c.get("color") or "#7C3AED")}"><a href="{site.person_url[c["pid"]]}">'
+                     f'style="--cc:{escape(c.get("color") or "#463BB1")}"><a href="{site.person_url[c["pid"]]}">'
                      f'<span class="av" aria-hidden="true">{avatar_inner(site, c["pid"], c["name"])}</span><span class="who">'
                      f'<span class="nm">{escape(c["name"])}</span><span class="party">{escape(party)}</span>{meta}</span></a></li>')
     pages["/candidats/"] = page(site, "/candidats/", "Candidats à la présidentielle 2027 : déclarations vérifiées - Votona Observatoire",
@@ -743,7 +744,7 @@ def index_pages(site: Site) -> dict[str, str]:
                                        f"Les déclarations vérifiées classées selon les 7 familles et les {len(site.topics)} sujets du test Votona. "
                                        "Le thème est attribué automatiquement à partir de la déclaration et du titre de l'article : il est indicatif et ne qualifie jamais le propos.",
                                        [(len(site.topics), "sujets suivis"), (7, "thèmes"), (len(site.facts), "déclarations vérifiées")],
-                                       ("ecologie", "defense", "economie"), color="#06D6A0"),
+                                       ("ecologie", "defense", "economie"), color="#13A27A"),
                                  f'<a class="btn btn-accent" href="{VOTONA}/">{MASCOT}Et toi ? Réponds aux questions et découvre quel candidat te correspond</a>',
                                  family_tiles(site.facts),
                                  '<section class="sect"><h2>Angles morts</h2>'

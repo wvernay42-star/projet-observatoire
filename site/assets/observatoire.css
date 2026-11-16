@@ -1,28 +1,28 @@
 
-/* Charte Votona (fond crème, violet, Baloo 2 / Work Sans / IBM Plex Mono, largeur 880 px) ;
+/* Charte Votona (fond crème, indigo #463BB1, Montserrat / Work Sans / IBM Plex Mono, largeur 880 px) ;
    échelle des verdicts propre à l'Observatoire (bleu → orange), distincte du vert/rouge « pour/contre » de Votona. */
 :root {
-  --bg: #fbfaf7; --surface: #ffffff; --soft: #f1ece0; --fg: #191d2b; --muted: #4d5468; --faint: #6b7284; --line: #e4dfd0;
-  --link: #6d28d9; --accent: #7C3AED; --accent-ink: #ffffff;
-  --accent-soft: #efe4fd; --off: #e9e4d6; --warn-bg: #fbecd1; --warn-fg: #6b4206;
+  --bg: #fbfaf7; --surface: #ffffff; --soft: #f1ece0; --fg: #1E1946; --muted: #4d5468; --faint: #6b7284; --line: #e4dfd0;
+  --link: #6d28d9; --accent: #463BB1; --accent-ink: #ffffff;
+  --accent-soft: #E7E5F7; --off: #e9e4d6; --warn-bg: #fbecd1; --warn-fg: #6b4206;
   --v-true: #1f5fa8; --v-mostly_true: #9dc0e6; --v-half_true: #cfc8ba; --v-mostly_false: #f2b57e; --v-false: #b4500a;
   --hatch: #c9c2b2; --unrated-line: #8a8170;
-  --display: "Baloo 2", ui-rounded, system-ui, sans-serif;
+  --display: "Montserrat", system-ui, sans-serif;
   --sans: "Work Sans", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
   --mono: "IBM Plex Mono", ui-monospace, monospace;
   --radius: 20px; --gutter: clamp(20px, 4vw, 40px);
-  --masthead-bg: #F6F2FE; --masthead-ink: #191d2b; --masthead-line: rgba(25,29,43,.14); --masthead-accent: #7C3AED;
+  --masthead-bg: #F2F1FA; --masthead-ink: #1E1946; --masthead-line: rgba(25,29,43,.14); --masthead-accent: #463BB1;
 }
 @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
   --bg: #14171c; --surface: #1c2028; --soft: #252a36; --fg: #f1ede4; --muted: #aab0c0; --faint: #8f96a8; --line: #2d323f;
-  --link: #b9a2fb; --accent: #A78BFA; --accent-ink: #1c1230;
-  --accent-soft: #2f2350; --off: #2d323f; --warn-bg: #3a2a12; --warn-fg: #f0c27a;
+  --link: #B5AFF2; --accent: #9A93EC; --accent-ink: #15123A;
+  --accent-soft: #24224D; --off: #2d323f; --warn-bg: #3a2a12; --warn-fg: #f0c27a;
   --v-true: #4f8fd6; --v-mostly_true: #9dc0e6; --v-half_true: #b9b2a4; --v-mostly_false: #f2b57e; --v-false: #e07a32;
   --hatch: #4a525c; --unrated-line: #8d96a1; color-scheme: dark } }
 :root[data-theme="dark"] {
   --bg: #14171c; --surface: #1c2028; --soft: #252a36; --fg: #f1ede4; --muted: #aab0c0; --faint: #8f96a8; --line: #2d323f;
-  --link: #b9a2fb; --accent: #A78BFA; --accent-ink: #1c1230;
-  --accent-soft: #2f2350; --off: #2d323f; --warn-bg: #3a2a12; --warn-fg: #f0c27a;
+  --link: #B5AFF2; --accent: #9A93EC; --accent-ink: #15123A;
+  --accent-soft: #24224D; --off: #2d323f; --warn-bg: #3a2a12; --warn-fg: #f0c27a;
   --v-true: #4f8fd6; --v-mostly_true: #9dc0e6; --v-half_true: #b9b2a4; --v-mostly_false: #f2b57e; --v-false: #e07a32;
   --hatch: #4a525c; --unrated-line: #8d96a1; color-scheme: dark }
 
@@ -216,7 +216,7 @@ a.tile { text-decoration: none; }
 .mtabs a { padding: 8px 16px; border-radius: 999px; font-size: 14px; font-weight: 700; color: var(--muted); text-decoration: none; white-space: nowrap; }
 .mtabs a[aria-current="page"] { background: var(--accent); color: var(--accent-ink); }
 .mtabs a:not([aria-current]):hover { color: var(--accent); }
-.mhero { display: flex; align-items: center; gap: 22px; padding: 26px 28px; border-radius: 26px; background: linear-gradient(135deg, color-mix(in srgb, #7C3AED 16%, var(--surface)), var(--surface) 70%); border: 1px solid color-mix(in srgb, #7C3AED 24%, var(--surface)); }
+.mhero { display: flex; align-items: center; gap: 22px; padding: 26px 28px; border-radius: 26px; background: linear-gradient(135deg, color-mix(in srgb, #463BB1 16%, var(--surface)), var(--surface) 70%); border: 1px solid color-mix(in srgb, #463BB1 24%, var(--surface)); }
 .mhero img { width: 104px; height: auto; flex: none; filter: drop-shadow(0 6px 12px rgba(0,0,0,.18)); }
 .mhero h1 { margin: 0 0 8px; }
 .mhero p { color: var(--muted); margin: 0; }
@@ -261,7 +261,7 @@ button:focus-visible, select:focus-visible, input:focus-visible, a:focus-visible
 .theme-hero .prop { position:absolute; right:18px; top:50%; transform:translateY(-50%); width:84px; height:84px; object-fit:contain; }
 .theme-pill { display:inline-flex; align-items:center; gap:6px; font-family:var(--mono); font-size:11px; letter-spacing:.06em; text-transform:uppercase; color:var(--muted); margin-bottom:6px; }
 @media (max-width:520px) { .theme-hero { padding-right:22px; } .theme-hero .prop { position:static; transform:none; width:56px; height:56px; margin-bottom:8px; } }
-.cta-band { display:flex; flex-direction:column; gap:10px; align-items:center; text-align:center; padding:26px 20px; border-radius:26px; background:linear-gradient(135deg, color-mix(in srgb, #7C3AED 16%, var(--surface)), var(--surface) 70%); border:1px solid color-mix(in srgb, #7C3AED 24%, var(--surface)); }
+.cta-band { display:flex; flex-direction:column; gap:10px; align-items:center; text-align:center; padding:26px 20px; border-radius:26px; background:linear-gradient(135deg, color-mix(in srgb, #463BB1 16%, var(--surface)), var(--surface) 70%); border:1px solid color-mix(in srgb, #463BB1 24%, var(--surface)); }
 .cta-band h2 { font-size:22px; }
 .cta-band p { margin:0; color:var(--muted); max-width:52ch; }
 .tile .t { font-family:var(--display); font-weight:700; font-size:18px; line-height:1.2; }
@@ -291,7 +291,7 @@ button:focus-visible, select:focus-visible, input:focus-visible, a:focus-visible
 .pos strong { display:block; font-family:var(--display); font-size:17px; }
 .notice { border:1px solid var(--line); border-radius:var(--radius); padding:14px 18px; background:var(--surface); font-size:14px; }
 /* Composants de votona.fr (generate-candidate-pages.js), repris à l'identique. */
-.vhero { position: relative; overflow: hidden; padding: 28px 300px 28px 28px; border-radius: 26px; background: linear-gradient(135deg, color-mix(in srgb, var(--hc, #7C3AED) 16%, var(--surface)), var(--surface) 70%); border: 1px solid color-mix(in srgb, var(--hc, #7C3AED) 24%, var(--surface)); }
+.vhero { position: relative; overflow: hidden; padding: 28px 300px 28px 28px; border-radius: 26px; background: linear-gradient(135deg, color-mix(in srgb, var(--hc, #463BB1) 16%, var(--surface)), var(--surface) 70%); border: 1px solid color-mix(in srgb, var(--hc, #463BB1) 24%, var(--surface)); }
 .vhero.solo { padding-right: 28px; }
 .vhero.one { padding-right: 190px; }
 .vhero h1 { margin: 0 0 10px; }

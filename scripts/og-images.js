@@ -22,10 +22,10 @@ const img = (rel, type = "webp") => `data:image/${type};base64,` + fs.readFileSy
 
 // Familles : mêmes couleurs et fichiers que THEME de pipeline/build_pages.py.
 const FAMILIES = [
-  ["economie", "Économie & travail", "#FFB703", "economie"], ["social", "Protection sociale", "#3A86FF", "protection-sociale"],
-  ["securite", "Sécurité & immigration", "#FF6B6B", "securite"], ["ecologie", "Écologie", "#06D6A0", "ecologie"],
-  ["europe", "Europe & institutions", "#6C5CE7", "europe"], ["societe", "Société", "#FF5DA2", "societe"],
-  ["defense", "Défense & numérique", "#00B4D8", "defense"],
+  ["economie", "Économie & travail", "#C98A00", "economie"], ["social", "Protection sociale", "#2F6FD6", "protection-sociale"],
+  ["securite", "Sécurité & immigration", "#D9534F", "securite"], ["ecologie", "Écologie", "#13A27A", "ecologie"],
+  ["europe", "Europe & institutions", "#5B4BD1", "europe"], ["societe", "Société", "#D9488A", "societe"],
+  ["defense", "Défense & numérique", "#1196B8", "defense"],
 ];
 
 function readCsv(file) {
@@ -49,13 +49,13 @@ function readCsv(file) {
 }
 
 const LOGO = img("logo-mark.svg", "svg+xml");
-const FONTS = `<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@700;800&family=Work+Sans:wght@600;700&family=IBM+Plex+Mono:wght@600&display=block" rel="stylesheet">`;
+const FONTS = `<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Work+Sans:wght@600;700&family=IBM+Plex+Mono:wght@600&display=block" rel="stylesheet">`;
 const BASE_CSS = `
 *{margin:0;box-sizing:border-box}
 body{width:1200px;height:630px;overflow:hidden;position:relative;font-family:'Work Sans',sans-serif;color:#fff;}
 .head{position:absolute;left:70px;top:56px;display:flex;align-items:center;gap:14px}
 .head img{width:58px;height:auto;filter:drop-shadow(0 4px 10px rgba(0,0,0,.25))}
-.brand{font-family:'Baloo 2',sans-serif;font-weight:800;font-size:32px;line-height:1}
+.brand{font-family:'Montserrat',sans-serif;font-weight:800;font-size:32px;line-height:1}
 .sub{font-family:'IBM Plex Mono',monospace;font-weight:600;font-size:15px;color:rgba(255,255,255,.75);letter-spacing:.1em;margin-top:4px}
 .foot{position:absolute;left:70px;top:548px;font-weight:700;font-size:20px;color:rgba(255,255,255,.75)}
 .art{position:absolute;filter:drop-shadow(0 12px 22px rgba(0,0,0,.35))}
@@ -67,7 +67,7 @@ const LENS = `<svg class="lens" viewBox="0 0 24 24" fill="none" stroke="rgba(255
 const initials = (name) => String(name || "").split(/[\s-]+/).filter(Boolean).map((w) => w[0]).slice(0, 2).join("").toUpperCase();
 
 function candidateHtml(c) {
-  const color = hex(c.color, "#7C3AED");
+  const color = hex(c.color, "#463BB1");
   // Portrait libre (web/beta/portraits/<id>.webp) à la place des initiales quand il existe.
   const has = fs.existsSync(path.join(BETA, "portraits", c.votona_id + ".webp"));
   const face = has ? `<img src="${img("portraits/" + c.votona_id + ".webp")}" alt="" style="width:100%;height:100%;object-fit:cover;display:block">` : esc(initials(c.name));
@@ -75,10 +75,10 @@ function candidateHtml(c) {
 <style>${BASE_CSS}
 body{background:linear-gradient(115deg, ${color} 0%, #14121F 100%);}
 .who{position:absolute;left:70px;top:200px;width:700px;height:270px;display:flex;align-items:center;gap:28px}
-.av{flex:none;width:132px;height:132px;border-radius:50%;overflow:hidden;border:4px solid #fff;background:#fff;color:${color};display:flex;align-items:center;justify-content:center;font-family:'Baloo 2',sans-serif;font-weight:800;font-size:44px;box-shadow:0 6px 24px rgba(0,0,0,.2)}
-.name{font-family:'Baloo 2',sans-serif;font-weight:800;font-size:62px;line-height:1.02}
+.av{flex:none;width:132px;height:132px;border-radius:50%;overflow:hidden;border:4px solid #fff;background:#fff;color:${color};display:flex;align-items:center;justify-content:center;font-family:'Montserrat',sans-serif;font-weight:800;font-size:44px;box-shadow:0 6px 24px rgba(0,0,0,.2)}
+.name{font-family:'Montserrat',sans-serif;font-weight:800;font-size:62px;line-height:1.02}
 .party{margin-top:10px;font-weight:700;font-size:24px;color:rgba(255,255,255,.85)}
-.kick{margin-top:16px;display:inline-block;padding:7px 16px;border-radius:99px;background:#fff;color:#191d2b;font-weight:700;font-size:18px}
+.kick{margin-top:16px;display:inline-block;padding:7px 16px;border-radius:99px;background:#fff;color:#1E1946;font-weight:700;font-size:18px}
 </style></head><body>${HEAD}${LENS}
 <div class="who"><div class="av">${face}</div><div><div class="name">${esc(c.name)}</div><div class="party">${esc(c.votona_party)}</div><div class="kick">Ses déclarations vérifiées</div></div></div>
 <div class="foot">Le verdict des fact-checkers, avec le lien vers chaque article - observatoire.votona.fr</div></body></html>`;
@@ -88,13 +88,13 @@ function familyHtml([, label, color, file]) {
   return `<!DOCTYPE html><html><head><meta charset="utf-8">${FONTS}
 <style>${BASE_CSS}
 body{background:linear-gradient(115deg, color-mix(in srgb, ${color} 72%, #14121F) 0%, #14121F 100%);}
-.cat{position:absolute;left:70px;top:186px;display:flex;align-items:center;gap:12px;padding:9px 20px 9px 16px;border-radius:99px;background:#fff;color:#191d2b;font-weight:700;font-size:19px;letter-spacing:.06em;text-transform:uppercase}
+.cat{position:absolute;left:70px;top:186px;display:flex;align-items:center;gap:12px;padding:9px 20px 9px 16px;border-radius:99px;background:#fff;color:#1E1946;font-weight:700;font-size:19px;letter-spacing:.06em;text-transform:uppercase}
 .dot{width:14px;height:14px;border-radius:50%;background:${color}}
-.t{position:absolute;left:70px;width:720px;top:256px;font-family:'Baloo 2',sans-serif;font-weight:800;font-size:72px;line-height:1.05}
+.t{position:absolute;left:70px;width:720px;top:256px;font-family:'Montserrat',sans-serif;font-weight:800;font-size:60px;line-height:1.08}
 .s{position:absolute;left:70px;width:700px;top:430px;font-weight:700;font-size:26px;color:rgba(255,255,255,.88)}
 </style></head><body>${HEAD}
 ${LENS}
-<img class="art" src="${img("props/" + file + ".webp")}" style="left:1030px;top:380px;width:120px;transform:rotate(12deg)" alt="">
+<img class="art" src="${img("props/" + file + ".svg", "svg+xml")}" style="left:1030px;top:380px;width:120px;transform:rotate(12deg)" alt="">
 <div class="cat"><span class="dot"></span>Sujet</div>
 <div class="t">${esc(label)}</div>
 <div class="s">Les déclarations politiques vérifiées par les fact-\u2060checkers</div>
@@ -104,9 +104,9 @@ ${LENS}
 function hubHtml(kicker, title, sub) {
   return `<!DOCTYPE html><html><head><meta charset="utf-8">${FONTS}
 <style>${BASE_CSS}
-body{background:linear-gradient(115deg, #7C3AED 0%, #14121F 100%);}
-.cat{position:absolute;left:70px;top:186px;padding:9px 20px;border-radius:99px;background:#fff;color:#191d2b;font-weight:700;font-size:19px}
-.t{position:absolute;left:70px;width:720px;top:256px;font-family:'Baloo 2',sans-serif;font-weight:800;font-size:68px;line-height:1.05}
+body{background:linear-gradient(115deg, #463BB1 0%, #14121F 100%);}
+.cat{position:absolute;left:70px;top:186px;padding:9px 20px;border-radius:99px;background:#fff;color:#1E1946;font-weight:700;font-size:19px}
+.t{position:absolute;left:70px;width:720px;top:256px;font-family:'Montserrat',sans-serif;font-weight:800;font-size:54px;line-height:1.08}
 .s{position:absolute;left:70px;width:700px;top:440px;font-weight:700;font-size:26px;color:rgba(255,255,255,.88)}
 </style></head><body>${HEAD}${LENS}
 <div class="cat">${esc(kicker)}</div><div class="t">${esc(title)}</div><div class="s">${esc(sub)}</div>

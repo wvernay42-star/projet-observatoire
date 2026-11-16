@@ -69,12 +69,12 @@ def build(export_dir: Path = EXPORT_DIR, template: Path = TEMPLATE, output: Path
         payload = json.dumps({**data, "site": site, **({"urls": urls} if site else {})}, ensure_ascii=False,
                              separators=(",", ":")).replace("</", "<\\/")
         if site:
-            props = {f.stem: f"/assets/props/{f.name}" for f in sorted(PROPS_DIR.glob("*.webp"))}
+            props = {f.stem: f"/assets/props/{f.name}" for f in sorted(PROPS_DIR.glob("*.svg"))}
             chars = {f.stem: f"/assets/characters/{f.name}" for f in sorted(CHARS_DIR.glob("*.webp"))} if SHOW_CHARACTERS else {}
             portraits = {k: f"/assets/portraits/{k}.webp" for k in sorted(pages.portraits)}
         else:
-            props = {f.stem: "data:image/webp;base64," + base64.b64encode(f.read_bytes()).decode()
-                     for f in sorted(PROPS_DIR.glob("*.webp"))}
+            props = {f.stem: "data:image/svg+xml;base64," + base64.b64encode(f.read_bytes()).decode()
+                     for f in sorted(PROPS_DIR.glob("*.svg"))}
             chars = {}  # artefact : pas de personnages (poids), l'en-tête s'affiche sans
             portraits = {}  # ni de portraits : les initiales
         return (html.replace(PLACEHOLDER, payload).replace(LOGO_PLACEHOLDER, logo)
@@ -164,16 +164,17 @@ def build_site(page: str, pages: "build_pages.Site | None" = None, site_dir: Pat
     if build_pages.OG_DIR.exists():
         shutil.copytree(build_pages.OG_DIR, site_dir / "assets" / "og")
     (site_dir / "assets" / "props").mkdir(exist_ok=True)
-    for f in PROPS_DIR.glob("*.webp"):
+    for f in PROPS_DIR.glob("*.svg"):
         shutil.copyfile(f, site_dir / "assets" / "props" / f.name)
     if (site_dir / "assets" / "portraits").exists():
         shutil.rmtree(site_dir / "assets" / "portraits")
     (site_dir / "assets" / "portraits").mkdir(parents=True)  # portraits libres, seulement ceux qui sont affichés
     for key in sorted(build_pages.displayed_portraits()):
         shutil.copyfile(PORTRAITS_DIR / f"{key}.webp", site_dir / "assets" / "portraits" / f"{key}.webp")
-    (site_dir / "assets" / "characters").mkdir(exist_ok=True)  # personnages de Votona (en-têtes)
-    for f in CHARS_DIR.glob("*.webp"):
-        shutil.copyfile(f, site_dir / "assets" / "characters" / f.name)
+    if SHOW_CHARACTERS:  # personnages de Votona (en-têtes) ; masqués depuis l'identité sobre
+        (site_dir / "assets" / "characters").mkdir(exist_ok=True)
+        for f in CHARS_DIR.glob("*.webp"):
+            shutil.copyfile(f, site_dir / "assets" / "characters" / f.name)
     for name in ("favicon-48.png", "favicon-96.png", "favicon-192.png", "apple-touch-icon.png"):  # vignette des résultats de recherche
         if LOGO.with_name(name).exists():
             shutil.copyfile(LOGO.with_name(name), site_dir / "assets" / name)
