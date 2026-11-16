@@ -21,6 +21,19 @@ Les décisions durables sont aussi consignées dans [decisions.md](decisions.md)
 | — | Hébergement préprod (`preprod`) / prod (`main`) | ✅ en ligne (26/10) — projet Vercel `votona-observatoire` ; production indexable depuis le 28/10 |
 | — | Liens Votona → Observatoire | ⏳ actifs sur `draft` (test, 26/10) ; `main` sur demande du porteur |
 
+## 2026-11-16 — Routine quotidienne
+
+- Candidats : synchronisation depuis https://votona.fr/ (pas de clone Votona) : 0 ajouté, 0 modifié, 0 absent ; 3 à confirmer (Selma Labib, Antoine Mikolajczak, Teddy Riner).
+- Décisions de l'admin (Supabase) : 0 décision appliquée, 0 ignorée. `rating_map.csv` non modifié.
+- Collecte : google_factcheck 24 récupérées, 7 nouvelles ; datacommons_feed 4 récupérées, 0 nouvelle. Base : 7 643 vérifications (rechargée depuis data/store : 7 636).
+- Claims : auto_sure 461, validated 326, to_review 0, rejected 6 767. Exportées : 787 (inchangé), dont 245 de candidats 2027 ; de nouvelles vérifications Poligraph s'ajoutent à des déclarations déjà exportées (Éric Zemmour, Marine Le Pen, Sébastien Chenu).
+- Files déposées dans Supabase : libellés 0, attributions 0, partis 1 (Sébastien Chenu, déclaration du 09/11 : RN ou Rassemblement Bleu Marine, toujours en attente), sources 7.
+- Part de verdicts positifs (toutes / attribuées) : TF1 Info 20,2 % / 40,3 % ; franceinfo 29,2 % / 37,7 % ; AFP Factuel 0,4 % / 2,7 % ; Poligraph 21,2 % / 25,0 % ; Les Décodeurs 1,6 % / 4,2 % ; 20 Minutes 11,0 % / 31,8 % ; Libération CheckNews 0 % / —.
+- Alertes : aucun résultat nouveau depuis 3 jours pour datacommons_feed. Aucune erreur de connecteur.
+- Images de partage : rien à créer.
+- Portraits : 20 personnes traitées ce jour (14 portraits ajoutés) ; 210 personnes, 149 traitées (52 ok), 61 restantes. Wikimedia n'a pas limité l'accès.
+- Beta : build_beta exécuté (787 déclarations), artefact republié (version 29). 96 tests passent.
+
 ## 2026-11-15 — Routine quotidienne
 
 - Candidats : synchronisation depuis https://votona.fr/ (pas de clone Votona) : 0 ajouté, 0 modifié, 0 absent ; 3 à confirmer (Selma Labib, Antoine Mikolajczak, Teddy Riner).

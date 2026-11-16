@@ -1,6 +1,6 @@
 [
  {
-  "id": "c_5f4efa81909220ef",
+  "id": "c_15d9263a94f2e1a8",
   "person": {
    "id": "Q288477",
    "name": "Éric Zemmour",
@@ -33,6 +33,15 @@
   ],
   "verdict": "mostly_false",
   "reviews": [
+   {
+    "source_id": "poligraph_fr",
+    "source_name": "Poligraph",
+    "url": "https://poligraph.fr/factchecks/2026-11-11-verif-les-etats-unis-et-la-suisse-expulsent-ils-les-etrangers-au-chom",
+    "title": "Plutôt faux — VÉRIF' - Les États-Unis et la Suisse expulsent-ils les étrangers au chômage depuis plus de six mois, comme l'affirme Éric Zemmour ?",
+    "rating_original": "Plutôt faux",
+    "rating_normalized": "mostly_false",
+    "review_date": "2026-11-11"
+   },
    {
     "source_id": "tf1info_verificateurs",
     "source_name": "TF1 Info – Les Vérificateurs",
@@ -92,6 +101,15 @@
     "source_name": "AFP Factuel",
     "url": "https://factuel.afp.com/doc.afp.com.D6ZJ3ZQ",
     "title": "\"Pas de discriminations\" à l'emploi en France ? Ce que disent les études",
+    "rating_original": "Faux",
+    "rating_normalized": "false",
+    "review_date": "2026-11-10"
+   },
+   {
+    "source_id": "poligraph_fr",
+    "source_name": "Poligraph",
+    "url": "https://poligraph.fr/factchecks/2026-11-10-pas-de-discriminations-a-l-emploi-en-france-ce-que-disent-les-etudes",
+    "title": "Faux — \"Pas de discriminations\" à l'emploi en France ? Ce que disent les études",
     "rating_original": "Faux",
     "rating_normalized": "false",
     "review_date": "2026-11-10"
@@ -173,6 +191,15 @@
   "votona_topics": [],
   "verdict": "mostly_false",
   "reviews": [
+   {
+    "source_id": "poligraph_fr",
+    "source_name": "Poligraph",
+    "url": "https://poligraph.fr/factchecks/2026-11-12-vrai-ou-faux-la-tva-a-0-sur-les-produits-de-premiere-necessite-a-t-el",
+    "title": "Plutôt faux — VRAI OU FAUX. La TVA à 0% sur les produits de première nécessité a-t-elle \"fait baisser l'ensemble des prix\" en Espagne et en Pologne, comme l'affirme Sébastien Chenu ?",
+    "rating_original": "Plutôt Faux",
+    "rating_normalized": "mostly_false",
+    "review_date": "2026-11-12"
+   },
    {
     "source_id": "franceinfo_vraioufake",
     "source_name": "franceinfo Vrai ou Fake",
