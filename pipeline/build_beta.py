@@ -96,7 +96,10 @@ SITE_HEAD = """<!doctype html>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 __ROBOTS__<meta name="description" content="Votona Observatoire : les vérifications des fact-checkers français sur les candidats à la présidentielle 2027 et la vie politique, avec le verdict d'origine et un lien vers chaque article.">
-<link rel="icon" href="/assets/favicon-48.png">
+<link rel="icon" type="image/png" sizes="48x48" href="/assets/favicon-48.png?v=2">
+<link rel="icon" type="image/png" sizes="192x192" href="/assets/favicon-192.png?v=2">
+<link rel="icon" href="/favicon.ico?v=2" sizes="32x32 48x48">
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png?v=2">
 <link rel="canonical" href="https://observatoire.votona.fr/">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Votona Observatoire">
@@ -171,9 +174,11 @@ def build_site(page: str, pages: "build_pages.Site | None" = None, site_dir: Pat
     (site_dir / "assets" / "characters").mkdir(exist_ok=True)  # personnages de Votona (en-têtes)
     for f in CHARS_DIR.glob("*.webp"):
         shutil.copyfile(f, site_dir / "assets" / "characters" / f.name)
-    favicon = LOGO.with_name("favicon-48.png")
-    if favicon.exists():
-        shutil.copyfile(favicon, site_dir / "assets" / "favicon-48.png")
+    for name in ("favicon-48.png", "favicon-96.png", "favicon-192.png", "apple-touch-icon.png"):  # vignette des résultats de recherche
+        if LOGO.with_name(name).exists():
+            shutil.copyfile(LOGO.with_name(name), site_dir / "assets" / name)
+    if LOGO.with_name("favicon.ico").exists():
+        shutil.copyfile(LOGO.with_name("favicon.ico"), site_dir / "favicon.ico")
     # Ouvert selon build_pages.INDEXABLE ; la préproduction reste
     # en noindex de toute façon (en-tête X-Robots-Tag hors du domaine de production, vercel.json).
     (site_dir / "robots.txt").write_text(

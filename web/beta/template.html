@@ -116,6 +116,41 @@ main.wrap { display: flex; flex-direction: column; gap: 20px; padding-block: 28p
 .report { background: var(--accent-soft); border-radius: 14px; padding: 10px 12px; font-size: 13px; display: flex; flex-wrap: wrap; align-items: center; gap: 8px; }
 .report code { font-size: 12px; }
 /* Pages fixes : « Signaler une erreur » sans script. */
+.home-hero { padding-right: 28px; }
+.home-hero p { max-width: 60ch; }
+.hero-actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 18px; }
+.hero-actions .btn { width: auto; min-width: 200px; }
+.strip { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; border: 1px solid var(--line); border-radius: var(--radius); background: var(--surface); }
+.strip > div { padding: 14px 16px; display: flex; flex-direction: column; gap: 2px; border-left: 1px solid var(--line); }
+.strip > div:first-child { border-left: 0; }
+.strip b { font-family: var(--mono); font-size: 24px; font-weight: 600; font-variant-numeric: tabular-nums; }
+.strip span { font-size: 13px; color: var(--muted); }
+@media (max-width: 640px) { .strip { grid-template-columns: repeat(2, 1fr); } .strip > div:nth-child(3) { border-left: 0; } .strip > div:nth-child(n+3) { border-top: 1px solid var(--line); } .hero-actions .btn { width: 100%; } }
+.latest { list-style: none; margin: 0; padding: 0; border: 1px solid var(--line); border-radius: var(--radius); background: var(--surface); }
+.lt { display: flex; gap: 14px; align-items: flex-start; justify-content: space-between; padding: 14px 18px; border-top: 1px solid var(--line); }
+.lt:first-child { border-top: 0; }
+.lt-main { min-width: 0; display: flex; flex-direction: column; gap: 4px; }
+.lt-who { font-size: 13px; }
+.lt-claim { margin: 0; font-size: 16px; line-height: 1.45; }
+.lt-meta { font-size: 13px; color: var(--muted); }
+.vpill { flex: none; padding: 5px 12px; border-radius: 99px; font-size: 13px; font-weight: 700; white-space: nowrap; background: var(--off); color: var(--fg); }
+.vpill.v-true { background: var(--v-true); color: #fff; } .vpill.v-mostly_true { background: var(--v-mostly_true); color: #10203a; }
+.vpill.v-half_true { background: var(--v-half_true); color: #2b2a25; } .vpill.v-mostly_false { background: var(--v-mostly_false); color: #4a2a08; }
+.vpill.v-false { background: var(--v-false); color: #fff; } .vpill.v-unrated { background: transparent; border: 1px dashed var(--unrated-line); color: var(--muted); }
+@media (max-width: 560px) { .lt { flex-direction: column-reverse; gap: 8px; } }
+.entries { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; }
+@media (max-width: 860px) { .entries { grid-template-columns: repeat(2, 1fr); } }
+.entry { position: relative; display: flex; flex-direction: column; gap: 4px; padding: 16px 40px 16px 18px; border: 1px solid var(--line); border-radius: 18px; background: var(--surface); color: var(--fg); text-align: left; font: inherit; cursor: pointer; text-decoration: none; }
+.entry:hover { border-color: var(--accent); }
+.entry strong { font-family: var(--display); font-size: 18px; }
+.entry span { font-size: 13px; color: var(--muted); }
+.entry i { position: absolute; right: 16px; top: 50%; transform: translateY(-50%); font-style: normal; color: var(--accent); font-weight: 700; }
+.how3 { list-style: none; margin: 8px 0 12px; padding: 0; display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; counter-reset: how; }
+@media (max-width: 760px) { .how3 { grid-template-columns: 1fr; } }
+.how3 li { counter-increment: how; position: relative; padding: 16px 18px 16px 58px; border: 1px solid var(--line); border-radius: 18px; background: var(--surface); display: flex; flex-direction: column; gap: 4px; }
+.how3 li::before { content: counter(how); position: absolute; left: 16px; top: 16px; width: 30px; height: 30px; border-radius: 50%; background: var(--accent); color: var(--accent-ink); display: flex; align-items: center; justify-content: center; font-family: var(--display); font-weight: 800; }
+.how3 strong { font-family: var(--display); font-size: 17px; line-height: 1.25; }
+.how3 span { font-size: 14px; color: var(--muted); line-height: 1.5; }
 .read-help { padding-left: 20px; margin: 8px 0 12px; display: flex; flex-direction: column; gap: 6px; color: var(--muted); line-height: 1.55; }
 .read-help strong { color: var(--fg); }
 .fact-filter-bar { display: flex; align-items: center; gap: 10px; margin: 8px 0 4px; font-size: 14px; color: var(--muted); }
@@ -641,39 +676,57 @@ function familyTiles(list, onPick) {
   }));
 }
 
+const VERDICT_CLASS = { true: "v-true", mostly_true: "v-mostly_true", half_true: "v-half_true", mostly_false: "v-mostly_false", false: "v-false", unrated: "v-unrated" };
+function latestRow(f) {
+  return el("li", { class: "lt" },
+    el("div", { class: "lt-main" },
+      el("div", { class: "lt-who" }, el("button", { type: "button", class: "linkish", on: { click: () => go("personne", f.person.id) } }, f.person.name), el("span", { class: "muted", text: " · " + partyText(f) })),
+      el("p", { class: "lt-claim", text: "« " + (f.claim_text || "") + " »" }),
+      el("div", { class: "lt-meta" }, frDate(f.reviewDate), " · selon ", f.reviews.map((r, i) => [i ? ", " : "", ext(r.url, r.source_name)]))),
+    el("span", { class: "vpill " + (VERDICT_CLASS[f.verdict] || "v-unrated"), text: LEVEL[f.verdict].label }));
+}
+
 /* ---------- vues ---------- */
 const views = {
   accueil() {
     const scoped = facts.filter(inScope2027);
     const covered = candidates.filter((c) => c.status !== "retiré");
     const withFacts = covered.filter((c) => facts.some((f) => f.person.id === c.pid)).length;
-    const multi = facts.filter((f) => f.nSources > 1).length;
     const week = facts.filter((f) => (f.reviewDate || "") >= shift(7)).length;
+    const nPersons = new Set(facts.map((f) => f.person.id)).size, nParties = new Set(facts.map((f) => f.party.id).filter(Boolean)).size;
+    const latest = [...facts].sort((a, b) => (b.reviewDate || "").localeCompare(a.reviewDate || "") || byDate(a, b)).slice(0, 5);
+    const link = (view, text, cls) => (staticUrl(view) ? el("a", { class: cls, href: staticUrl(view) }, text)
+      : el("button", { type: "button", class: cls, on: { click: () => go(view) } }, text));
+    const entry = (view, title, sub, who) => el(staticUrl(view) ? "a" : "button", { class: "entry", ...(staticUrl(view) ? { href: staticUrl(view) } : { type: "button", on: { click: () => { if (who) state.who = who; go(view); } } }) },
+      el("strong", { text: title }), el("span", { text: sub }), el("i", { "aria-hidden": "true", text: "→" }));
     return [
-      intro("Ce que les fact-\u2060checkers ont vérifié", "Votona Observatoire rassemble les vérifications publiées par les rédactions françaises de fact-checking et les rattache aux candidats à la présidentielle 2027, à leurs partis et à toute la vie politique. Il ne juge jamais : chaque verdict est celui de la rédaction, avec son libellé d'origine et le lien vers l'article.", { crew: ["securite", "economie", "societe"] }),
-      el("section", { class: "kpis", "aria-label": "Chiffres clés" },
-        el("div", { class: "kpi" }, el("span", { class: "v", text: String(facts.length) }), el("span", { class: "k", text: "déclarations vérifiées, dont " + scoped.length + " de candidats 2027 ou de leurs partis" })),
-        el("div", { class: "kpi" }, el("span", { class: "v", text: withFacts + "/" + covered.length }), el("span", { class: "k", text: "candidats 2027 avec au moins une vérification" }), el("div", { class: "cov" }, el("div", { style: "width:" + (covered.length ? withFacts / covered.length * 100 : 0) + "%" }))),
-        el("div", { class: "kpi" }, el("span", { class: "v", text: String(usedSources.length) }), el("span", { class: "k", text: "rédactions, " + multi + " déclarations recoupées par plusieurs" })),
-        el("div", { class: "kpi" }, el("span", { class: "v", text: String(week) }), el("span", { class: "k", text: "vérifications publiées ces 7 derniers jours" }))),
+      el("section", { class: "vhero solo home-hero" }, el("h1", { text: "Ce que les fact-\u2060checkers ont vérifié" }),
+        el("p", {}, "Les vérifications des rédactions françaises, rattachées aux candidats 2027 et à leurs partis. Chaque verdict est celui de la rédaction, jamais le nôtre."),
+        el("div", { class: "hero-actions" },
+          el("button", { type: "button", class: "btn btn-accent", on: { click: () => go("faits") } }, "Voir les faits vérifiés"),
+          link("personnalites", "Candidats 2027", "btn btn-ghost"))),
+      el("section", { class: "strip", "aria-label": "Chiffres clés" },
+        el("div", {}, el("b", { text: String(facts.length) }), el("span", { text: "déclarations vérifiées" })),
+        el("div", {}, el("b", { text: withFacts + "/" + covered.length }), el("span", { text: "candidats 2027 vérifiés" })),
+        el("div", {}, el("b", { text: String(usedSources.length) }), el("span", { text: "rédactions suivies" })),
+        el("div", {}, el("b", { text: String(week) }), el("span", { text: "cette semaine" }))),
       el("section", { class: "sect" }, sectHead("Dernières vérifications", el("button", { type: "button", class: "linkish", "data-go": "faits" }, "Tous les faits →")),
-        el("div", { class: "cards" }, [...facts].sort((a, b) => (b.reviewDate || "").localeCompare(a.reviewDate || "") || byDate(a, b)).slice(0, 6).map(card))),
-      el("section", { class: "sect" }, sectHead("Par sujet", el("button", { type: "button", class: "linkish", "data-go": "sujets" }, "Sujets et angles morts →")),
-        el("p", { class: "muted small", style: "margin:0", text: "Les 7 familles de sujets de Votona. Répartition des verdicts des rédactions, jamais une note." }),
-        familyTiles(facts, (id) => go("sujet", id))),
-      el("section", { class: "pos", "aria-label": "Ce que fait l'Observatoire" },
-        el("div", {}, el("strong", { text: "Toutes les rédactions" }), el("span", { class: "small muted", text: "AFP Factuel, Les Décodeurs, CheckNews, franceinfo, Les Surligneurs, TF1 Info, 20 Minutes, Poligraph : réunis au même endroit, recoupés quand ils vérifient la même déclaration." })),
-        el("div", {}, el("strong", { text: "Le parti à la date" }), el("span", { class: "small muted", text: "Chaque déclaration est rattachée au parti de la personne le jour où elle l'a faite, d'après des affiliations datées." })),
-        el("div", {}, el("strong", { text: "Relié au programme" }), el("span", { class: "small muted", text: "Depuis un fait, retrouvez les positions des candidats sur le même sujet dans le test Votona." }))),
-      el("section", { class: "sect", id: "lire" }, el("h2", { text: "Comment lire une vérification" }),
-        el("ul", { class: "read-help" },
-          el("li", {}, el("strong", { text: "Le verdict est celui de la rédaction" }), ", avec son libellé d'origine : l'Observatoire ne juge jamais."),
-          el("li", {}, el("strong", { text: "Une vérification ne résume pas une personne" }), " : les rédactions choisissent ce qu'elles vérifient."),
-          el("li", {}, el("strong", { text: "Plusieurs rédactions, plusieurs avis" }), " : quand elles vérifient la même déclaration, tous les verdicts sont affichés.")),
-        el("p", { class: "intro-p" }, el("a", { href: DATA.site ? "/methode/" : "#", ...(DATA.site ? {} : { "data-go": "methodologie" }) }, "La méthode complète"),
-          DATA.site ? [" · ", el("a", { href: "https://votona.fr/guide/verifier-une-information-politique/" }, "Guide : comment vérifier une information politique"), " · ", el("a", { href: "/flux.xml" }, "S'abonner au flux RSS")] : null)),
+        el("ul", { class: "latest" }, latest.map(latestRow))),
+      el("section", { class: "sect" }, sectHead("Explorer"),
+        el("div", { class: "entries" },
+          entry("personnalites", "Candidats 2027", withFacts + " sur " + covered.length + " vérifiés", "candidats"),
+          entry("partis", "Partis", nParties + " partis, au jour de la déclaration"),
+          entry("personnalites", "Personnalités", nPersons + " personnes vérifiées", "toutes"),
+          entry("sujets", "Sujets", "7 thèmes et leurs angles morts"))),
+      el("section", { class: "sect", id: "lire" }, sectHead("Comment lire une vérification"),
+        el("ol", { class: "how3" },
+          el("li", {}, el("strong", { text: "Le verdict est celui de la rédaction" }), el("span", { text: "Avec son libellé d'origine et le lien vers l'article. L'Observatoire ne juge jamais." })),
+          el("li", {}, el("strong", { text: "Une vérification ne résume pas une personne" }), el("span", { text: "Les rédactions choisissent ce qu'elles vérifient." })),
+          el("li", {}, el("strong", { text: "Plusieurs rédactions, plusieurs avis" }), el("span", { text: "Si elles vérifient la même déclaration, tous les verdicts sont affichés." }))),
+        el("p", { class: "intro-p" }, link("methodologie", "La méthode complète", ""),
+          DATA.site ? [" · ", el("a", { href: "https://votona.fr/guide/verifier-une-information-politique/" }, "Guide : vérifier une information politique"), " · ", el("a", { href: "/flux.xml" }, "Flux RSS")] : null)),
       el("section", { class: "cta-band" }, el("h2", { text: "Et toi, de quel candidat es-tu le plus proche ?" }),
-        el("p", { text: "Le test Votona compare tes réponses aux positions des candidats, sujet par sujet. Les vérifications de l'Observatoire n'entrent jamais dans ce classement." }),
+        el("p", { text: "Le test Votona compare tes réponses aux positions des candidats. Les vérifications n'entrent jamais dans son classement." }),
         el("a", { class: "btn btn-accent btn-row", href: VOTONA + "/" }, mascot(), "Faire le test présidentielle 2027")),
     ];
   },

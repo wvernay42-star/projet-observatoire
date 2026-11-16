@@ -430,7 +430,10 @@ def page(site: Site, path: str, title: str, description: str, tab: str, body: st
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="{SITE_URL}{og}">
-<link rel="icon" href="/assets/favicon-48.png">
+<link rel="icon" type="image/png" sizes="48x48" href="/assets/favicon-48.png?v=2">
+<link rel="icon" type="image/png" sizes="192x192" href="/assets/favicon-192.png?v=2">
+<link rel="icon" href="/favicon.ico?v=2" sizes="32x32 48x48">
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png?v=2">
 <link rel="alternate" type="application/rss+xml" title="Votona Observatoire - dernières vérifications" href="/flux.xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Work+Sans:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
@@ -462,45 +465,50 @@ def page(site: Site, path: str, title: str, description: str, tab: str, body: st
 """
 
 
-READ_HELP = ('<section class="sect" id="lire"><h2>Comment lire une vérification</h2><ul class="read-help">'
-             "<li><strong>Le verdict est celui de la rédaction</strong>, avec son libellé d'origine : l'Observatoire ne juge jamais.</li>"
-             "<li><strong>Une vérification ne résume pas une personne</strong> : les rédactions choisissent ce qu'elles vérifient.</li>"
-             "<li><strong>Plusieurs rédactions, plusieurs avis</strong> : quand elles vérifient la même déclaration, tous les verdicts sont affichés.</li></ul>"
-             '<p class="intro-p"><a href="/methode/">La méthode complète</a> · '
-             '<a href="https://votona.fr/guide/verifier-une-information-politique/">Guide : comment vérifier une information politique</a> · '
-             '<a href="/flux.xml">S\'abonner au flux RSS</a></p></section>')
+def latest_row(site: Site, f: dict[str, Any]) -> str:
+    reads = ", ".join(ext(r["url"], r["source_name"]) for r in f["reviews"])
+    return (f'<li class="lt"><div class="lt-main"><div class="lt-who"><a class="linkish" href="{site.person_url[f["person"]["id"]]}">{escape(f["person"]["name"])}</a>'
+            f'<span class="muted"> · {escape(party_text(f))}</span></div><p class="lt-claim">« {escape(f["claim_text"] or "")} »</p>'
+            f'<div class="lt-meta">{fr_date(f["review_date"])} · selon {reads}</div></div>'
+            f'<span class="vpill v-{f["verdict"]}">{LEVEL[f["verdict"]][0]}</span></li>')
 
 
 def home_prerender(site: Site) -> str:
-    """Contenu de l'accueil rendu côté serveur : lisible sans JavaScript (moteurs, aperçus), puis remplacé par l'app."""
-    scoped = [f for f in site.facts if site.in_scope_2027(f)]
+    """Contenu de l'accueil rendu côté serveur : lisible sans JavaScript (moteurs, aperçus), puis remplacé par l'app.
+    Même structure que la vue « accueil » du gabarit (web/beta/template.html) : si l'un change, modifier l'autre."""
     covered = [c for c in site.candidates if c.get("status") != "retiré"]
     with_facts = sum(1 for c in covered if site.of_person(c["pid"]))
     sources = {r["source_id"] for f in site.facts for r in f["reviews"]}
-    multi = sum(f["n_sources"] > 1 for f in site.facts)
     since = (datetime.fromisoformat(site.generated_at[:10]) - timedelta(days=7)).date().isoformat()
     week = sum((f["review_date"] or "") >= since for f in site.facts)
-    kpis = ('<section class="kpis" aria-label="Chiffres clés">'
-            f'<div class="kpi"><span class="v">{len(site.facts)}</span><span class="k">déclarations vérifiées, dont {len(scoped)} de candidats 2027 ou de leurs partis</span></div>'
-            f'<div class="kpi"><span class="v">{with_facts}/{len(covered)}</span><span class="k">candidats 2027 avec au moins une vérification</span></div>'
-            f'<div class="kpi"><span class="v">{len(sources)}</span><span class="k">rédactions, {multi} déclarations recoupées par plusieurs</span></div>'
-            f'<div class="kpi"><span class="v">{week}</span><span class="k">vérifications publiées ces 7 derniers jours</span></div></section>')
-    latest = sorted(site.facts, key=lambda f: f["review_date"] or "", reverse=True)[:6]
-    return (intro("Ce que les fact-\u2060checkers ont vérifié",
-                  "Votona Observatoire rassemble les vérifications publiées par les rédactions françaises de fact-checking et les rattache "
-                  "aux candidats à la présidentielle 2027, à leurs partis et à toute la vie politique. Il ne juge jamais : chaque verdict est "
-                  "celui de la rédaction, avec son libellé d'origine et le lien vers l'article.")
-            + kpis
+    n_persons = len({f["person"]["id"] for f in site.facts})
+    n_parties = len({f["party"]["id"] for f in site.facts if f["party"]["id"]})
+    latest = sorted(site.facts, key=lambda f: f["review_date"] or "", reverse=True)[:5]
+    strip = ('<section class="strip" aria-label="Chiffres clés">'
+             f'<div><b>{len(site.facts)}</b><span>déclarations vérifiées</span></div>'
+             f'<div><b>{with_facts}/{len(covered)}</b><span>candidats 2027 vérifiés</span></div>'
+             f'<div><b>{len(sources)}</b><span>rédactions suivies</span></div>'
+             f'<div><b>{week}</b><span>cette semaine</span></div></section>')
+    entries = ('<div class="entries">'
+               f'<a class="entry" href="/candidats/"><strong>Candidats 2027</strong><span>{with_facts} sur {len(covered)} vérifiés</span><i aria-hidden="true">→</i></a>'
+               f'<a class="entry" href="/partis/"><strong>Partis</strong><span>{n_parties} partis, au jour de la déclaration</span><i aria-hidden="true">→</i></a>'
+               f'<a class="entry" href="/personnalites/"><strong>Personnalités</strong><span>{n_persons} personnes vérifiées</span><i aria-hidden="true">→</i></a>'
+               '<a class="entry" href="/sujets/"><strong>Sujets</strong><span>7 thèmes et leurs angles morts</span><i aria-hidden="true">→</i></a></div>')
+    how = ('<ol class="how3">'
+           "<li><strong>Le verdict est celui de la rédaction</strong><span>Avec son libellé d'origine et le lien vers l'article. L'Observatoire ne juge jamais.</span></li>"
+           "<li><strong>Une vérification ne résume pas une personne</strong><span>Les rédactions choisissent ce qu'elles vérifient.</span></li>"
+           "<li><strong>Plusieurs rédactions, plusieurs avis</strong><span>Si elles vérifient la même déclaration, tous les verdicts sont affichés.</span></li></ol>")
+    return ('<section class="vhero solo home-hero"><h1>Ce que les fact-\u2060checkers ont vérifié</h1>'
+            "<p>Les vérifications des rédactions françaises, rattachées aux candidats 2027 et à leurs partis. Chaque verdict est celui de la rédaction, jamais le nôtre.</p>"
+            '<div class="hero-actions"><a class="btn btn-accent" href="/#faits">Voir les faits vérifiés</a><a class="btn btn-ghost" href="/candidats/">Candidats 2027</a></div></section>'
+            + strip
             + '<section class="sect"><div class="sect-head"><h2>Dernières vérifications</h2><a class="linkish" href="/#faits">Tous les faits →</a></div>'
-            + fact_list(site, latest) + "</section>"
-            + '<section class="sect"><div class="sect-head"><h2>Par sujet</h2><a class="linkish" href="/sujets/">Sujets et angles morts →</a></div>'
-            + '<p class="muted small" style="margin:0">Les 7 familles de sujets de Votona. Répartition des verdicts des rédactions, jamais une note.</p>'
-            + family_tiles(site.facts) + "</section>"
-            + READ_HELP
-            + '<section class="sect"><h2>Explorer</h2><p class="intro-p"><a href="/candidats/">Les candidats 2027</a> · <a href="/partis/">Les partis</a> · '
-              '<a href="/personnalites/">Toutes les personnalités</a> · <a href="/methode/">La méthode</a></p></section>'
+            + '<ul class="latest">' + "".join(latest_row(site, f) for f in latest) + "</ul></section>"
+            + '<section class="sect"><div class="sect-head"><h2>Explorer</h2></div>' + entries + "</section>"
+            + '<section class="sect" id="lire"><div class="sect-head"><h2>Comment lire une vérification</h2></div>' + how
+            + '<p class="intro-p"><a href="/methode/">La méthode complète</a> · <a href="https://votona.fr/guide/verifier-une-information-politique/">Guide : vérifier une information politique</a> · <a href="/flux.xml">Flux RSS</a></p></section>'
             + '<section class="cta-band"><h2>Et toi, de quel candidat es-tu le plus proche ?</h2>'
-              "<p>Le test Votona compare tes réponses aux positions des candidats, sujet par sujet. Les vérifications de l'Observatoire n'entrent jamais dans ce classement.</p>"
+              "<p>Le test Votona compare tes réponses aux positions des candidats. Les vérifications n'entrent jamais dans son classement.</p>"
               f'<a class="btn btn-accent btn-row" href="{VOTONA}/">Faire le test présidentielle 2027</a></section>')
 
 

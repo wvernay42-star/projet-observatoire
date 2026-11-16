@@ -145,6 +145,11 @@ Les décisions durables sont aussi consignées dans [decisions.md](decisions.md)
 - Portraits : 209 personnes, 129 traitées (38 ok), 80 restantes ; lot interrompu car Wikimedia limite l'accès (normal).
 - Beta : build_beta exécuté, artefact republié (version 21). 96 tests passent.
 
+## 2026-11-16 — Accueil simplifié et nouvelle vignette (favicon)
+
+- Accueil (HTML et app, même structure) : héros court avec deux boutons (« Voir les faits vérifiés », « Candidats 2027 »), bandeau de 4 chiffres, 5 dernières vérifications en liste (verdict en pastille), « Explorer » (4 entrées : candidats, partis, personnalités, sujets), « Comment lire une vérification » en 3 étapes numérotées, appel au test. Retirés : les 7 tuiles de familles (redondantes avec l'onglet Sujets), les trois encadrés « Toutes les rédactions / Le parti à la date / Relié au programme », la liste à puces en double.
+- Vignette des résultats de recherche : nouveau favicon plein cadre (loupe cochée blanche épaisse sur fond violet, adaptée au recadrage rond de Google), déclaré en 48 et 192 px, `favicon.ico` à la racine et icône tactile 180 px (l'Observatoire n'en déclarait qu'une de 48 px). `rating_map.csv` non modifié.
+
 ## 2026-11-05 (nuit, fin) — Lot 7 de la veille UX : libellés, sitemap, filtre, méthode
 
 - Libellés harmonisés : retours en fil d'Ariane « ‹ Candidats 2027 / Partis / Sujets / Personnalités » (plus de « Tous les … »), « Tous les faits » (sans « avec filtres »), « Les faits par sujet », « Personnalités vérifiées (n) ».
