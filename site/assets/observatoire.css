@@ -3,7 +3,7 @@
    échelle des verdicts propre à l'Observatoire (bleu → orange), distincte du vert/rouge « pour/contre » de Votona. */
 :root {
   --bg: #fbfaf7; --surface: #ffffff; --soft: #f1ece0; --fg: #1E1946; --muted: #4d5468; --faint: #6b7284; --line: #e4dfd0;
-  --link: #6d28d9; --accent: #463BB1; --accent-ink: #ffffff;
+  --link: #463BB1; --accent: #463BB1; --accent-ink: #ffffff;
   --accent-soft: #E7E5F7; --off: #e9e4d6; --warn-bg: #fbecd1; --warn-fg: #6b4206;
   --v-true: #1f5fa8; --v-mostly_true: #9dc0e6; --v-half_true: #cfc8ba; --v-mostly_false: #f2b57e; --v-false: #b4500a;
   --hatch: #c9c2b2; --unrated-line: #8a8170;
@@ -291,6 +291,11 @@ button:focus-visible, select:focus-visible, input:focus-visible, a:focus-visible
 .pos strong { display:block; font-family:var(--display); font-size:17px; }
 .notice { border:1px solid var(--line); border-radius:var(--radius); padding:14px 18px; background:var(--surface); font-size:14px; }
 /* Composants de votona.fr (generate-candidate-pages.js), repris à l'identique. */
+.home-logo { display: flex; align-items: center; justify-content: center; gap: 14px; margin: 4px 0 18px; }
+.home-logo img { width: clamp(48px, 6vw + 26px, 64px); height: auto; flex: none; }
+.home-logo span { font-family: var(--display); font-weight: 800; text-transform: uppercase; letter-spacing: .04em; color: var(--fg); font-size: clamp(24px, 3vw + 14px, 36px); line-height: 1; display: flex; flex-direction: column; }
+.home-logo small { font-size: .62em; letter-spacing: .06em; margin-top: 4px; }
+@media (prefers-color-scheme: dark) { .home-logo img { filter: brightness(0) invert(1); } }
 .vhero { position: relative; overflow: hidden; padding: 28px 300px 28px 28px; border-radius: 26px; background: linear-gradient(135deg, color-mix(in srgb, var(--hc, #463BB1) 16%, var(--surface)), var(--surface) 70%); border: 1px solid color-mix(in srgb, var(--hc, #463BB1) 24%, var(--surface)); }
 .vhero.solo { padding-right: 28px; }
 .vhero.one { padding-right: 190px; }

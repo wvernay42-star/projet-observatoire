@@ -21,6 +21,14 @@ Les décisions durables sont aussi consignées dans [decisions.md](decisions.md)
 | — | Hébergement préprod (`preprod`) / prod (`main`) | ✅ en ligne (26/10) — projet Vercel `votona-observatoire` ; production indexable depuis le 28/10 |
 | — | Liens Votona → Observatoire | ⏳ actifs sur `draft` (test, 26/10) ; `main` sur demande du porteur |
 
+## 2026-11-17 — Nouveau logo de l'Observatoire
+
+- Logo choisi par le porteur (dessin Gemini), redessiné en vectoriel par `scripts/logo.js` : cercle indigo ouvert (même famille que le logo de Votona), œil, loupe dont le manche sort du cercle, courbe et étincelles. Fichiers : `web/beta/logo-mark.svg`, `logo-mark-white.svg` (fonds sombres), `favicon.svg` puis icônes PNG et `favicon.ico` (`scripts/favicons.js`).
+- Accueil : le logo et « VOTONA OBSERVATOIRE » au-dessus du titre, comme l'accueil de votona.fr (logo + « VOTONA »).
+- Images de partage : logo blanc dans l'en-tête et en grand à droite (à la place de l'ancienne loupe cochée).
+- Lien « Le test 2027 » : le logo de Votona à la place du pictogramme de liste ; votona.fr montre en retour le logo de l'Observatoire sur son lien « Observatoire ».
+- Couleur des liens alignée sur l'indigo (`--link`). `pytest` : 96 réussis.
+
 ## 2026-11-17 — Routine quotidienne
 
 - Candidats : synchronisation depuis https://votona.fr/ (pas de clone Votona) : 0 ajouté, 0 modifié, 0 absent ; 3 à confirmer (Selma Labib, Antoine Mikolajczak, Teddy Riner).

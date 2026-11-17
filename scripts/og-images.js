@@ -48,21 +48,21 @@ function readCsv(file) {
   return body.map((r) => Object.fromEntries(head.map((h, i) => [h, r[i] || ""])));
 }
 
-const LOGO = img("logo-mark.svg", "svg+xml");
+const LOGO = img("logo-mark-white.svg", "svg+xml");
 const FONTS = `<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Work+Sans:wght@600;700&family=IBM+Plex+Mono:wght@600&display=block" rel="stylesheet">`;
 const BASE_CSS = `
 *{margin:0;box-sizing:border-box}
 body{width:1200px;height:630px;overflow:hidden;position:relative;font-family:'Work Sans',sans-serif;color:#fff;}
 .head{position:absolute;left:70px;top:56px;display:flex;align-items:center;gap:14px}
-.head img{width:58px;height:auto;filter:drop-shadow(0 4px 10px rgba(0,0,0,.25))}
+.head img{width:58px;height:auto}
 .brand{font-family:'Montserrat',sans-serif;font-weight:800;font-size:32px;line-height:1}
 .sub{font-family:'IBM Plex Mono',monospace;font-weight:600;font-size:15px;color:rgba(255,255,255,.75);letter-spacing:.1em;margin-top:4px}
 .foot{position:absolute;left:70px;top:548px;font-weight:700;font-size:20px;color:rgba(255,255,255,.75)}
 .art{position:absolute;filter:drop-shadow(0 12px 22px rgba(0,0,0,.35))}
-.lens{position:absolute;left:820px;top:120px;width:330px;height:330px}`;
+.lens{position:absolute;left:830px;top:110px;width:320px;height:320px;opacity:.95}`;
 const HEAD = `<div class="head"><img src="${LOGO}" alt=""><div><div class="brand">Votona</div><div class="sub">OBSERVATOIRE</div></div></div>`;
-// Loupe avec coche : le même pictogramme que le lien « Observatoire » de votona.fr, en grand.
-const LENS = `<svg class="lens" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,.92)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7" fill="rgba(255,255,255,.10)"/><path d="M8.2 11l2 2 3.6-3.8"/><line x1="16.2" y1="16.2" x2="21" y2="21" stroke-width="2.4"/></svg>`;
+// Grand logo de l'Observatoire (version blanche) à droite, comme le pictogramme des liens « Observatoire ».
+const LENS = `<img class="lens" src="${LOGO}" alt="">`;
 
 const initials = (name) => String(name || "").split(/[\s-]+/).filter(Boolean).map((w) => w[0]).slice(0, 2).join("").toUpperCase();
 

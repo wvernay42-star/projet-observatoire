@@ -7,7 +7,7 @@
    échelle des verdicts propre à l'Observatoire (bleu → orange), distincte du vert/rouge « pour/contre » de Votona. */
 :root {
   --bg: #fbfaf7; --surface: #ffffff; --soft: #f1ece0; --fg: #1E1946; --muted: #4d5468; --faint: #6b7284; --line: #e4dfd0;
-  --link: #6d28d9; --accent: #463BB1; --accent-ink: #ffffff;
+  --link: #463BB1; --accent: #463BB1; --accent-ink: #ffffff;
   --accent-soft: #E7E5F7; --off: #e9e4d6; --warn-bg: #fbecd1; --warn-fg: #6b4206;
   --v-true: #1f5fa8; --v-mostly_true: #9dc0e6; --v-half_true: #cfc8ba; --v-mostly_false: #f2b57e; --v-false: #b4500a;
   --hatch: #c9c2b2; --unrated-line: #8a8170;
@@ -295,6 +295,11 @@ button:focus-visible, select:focus-visible, input:focus-visible, a:focus-visible
 .pos strong { display:block; font-family:var(--display); font-size:17px; }
 .notice { border:1px solid var(--line); border-radius:var(--radius); padding:14px 18px; background:var(--surface); font-size:14px; }
 /* Composants de votona.fr (generate-candidate-pages.js), repris à l'identique. */
+.home-logo { display: flex; align-items: center; justify-content: center; gap: 14px; margin: 4px 0 18px; }
+.home-logo img { width: clamp(48px, 6vw + 26px, 64px); height: auto; flex: none; }
+.home-logo span { font-family: var(--display); font-weight: 800; text-transform: uppercase; letter-spacing: .04em; color: var(--fg); font-size: clamp(24px, 3vw + 14px, 36px); line-height: 1; display: flex; flex-direction: column; }
+.home-logo small { font-size: .62em; letter-spacing: .06em; margin-top: 4px; }
+@media (prefers-color-scheme: dark) { .home-logo img { filter: brightness(0) invert(1); } }
 .vhero { position: relative; overflow: hidden; padding: 28px 300px 28px 28px; border-radius: 26px; background: linear-gradient(135deg, color-mix(in srgb, var(--hc, #463BB1) 16%, var(--surface)), var(--surface) 70%); border: 1px solid color-mix(in srgb, var(--hc, #463BB1) 24%, var(--surface)); }
 .vhero.solo { padding-right: 28px; }
 .vhero.one { padding-right: 190px; }
@@ -356,7 +361,7 @@ input.q:focus { outline: 2px solid var(--accent); outline-offset: 1px; }
 <header class="topbar">
   <button class="brand" type="button" data-go="accueil" title="Accueil de l'Observatoire"><span class="mark"><img src="/*__LOGO__*/" alt="" width="32" height="32"></span><span class="name">Votona</span><span class="year">OBSERVATOIRE</span><span class="beta-tag" title="Version bêta : mise à jour chaque jour, rattachements partisans encore incomplets">BÊTA</span></button>
   <div class="topbar-actions">
-    <a class="sister-link" href="https://votona.fr/" title="Votona : le test présidentielle 2027, quel candidat te correspond ?"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="3" width="14" height="18" rx="2"/><path d="M9 8h6M9 12h6M9 16h3"/></svg><span>Le test 2027</span></a>
+    <a class="sister-link" href="https://votona.fr/" title="Votona : le test présidentielle 2027, quel candidat te correspond ?"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="20" height="20" aria-hidden="true"><defs><mask id="vt"><rect x="-10" y="-10" width="120" height="120" fill="#fff"/><path d="M21 50.7L38.6 71.5L81.4 17.7" fill="none" stroke="#000" stroke-width="13" stroke-linecap="round" stroke-linejoin="round"/></mask><clipPath id="vtc"><circle cx="50" cy="50" r="38.5"/></clipPath></defs><g mask="url(#vt)"><circle cx="50" cy="50" r="45" fill="none" stroke="#463BB1" stroke-width="5.2"/><g clip-path="url(#vtc)" fill="#2A1D62"><rect x="34.3" y="35.3" width="6.4" height="40" rx="3.2"/><rect x="54" y="21" width="6.8" height="80" rx="3.4"/><rect x="68.6" y="35" width="7" height="60" rx="3.5"/></g></g><path d="M21 50.7L38.6 71.5L81.4 17.7" fill="none" stroke="#463BB1" stroke-width="5.6" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Le test 2027</span></a>
     <a class="icon-btn" href="https://votona.fr/?screen=account" title="Mon compte (Votona)" aria-label="Mon compte (Votona)"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 4-6 8-6s8 2 8 6"/></svg></a>
     <button class="icon-btn" type="button" data-go="methodologie" id="btn-faq" title="Méthode et FAQ" aria-label="Méthode et FAQ"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M9.3 9.2a2.7 2.7 0 1 1 3.9 2.4c-1 .5-1.7 1.1-1.7 2.4"/><line x1="12" y1="17.2" x2="12" y2="17.21"/></svg></button>
   </div>
@@ -700,6 +705,8 @@ const views = {
     const entry = (view, title, sub, who) => el(staticUrl(view) ? "a" : "button", { class: "entry", ...(staticUrl(view) ? { href: staticUrl(view) } : { type: "button", on: { click: () => { if (who) state.who = who; go(view); } } }) },
       el("strong", { text: title }), el("span", { text: sub }), el("i", { "aria-hidden": "true", text: "→" }));
     return [
+      el("div", { class: "home-logo" }, el("img", { src: (document.querySelector(".brand .mark img") || {}).src || "", alt: "", width: "64", height: "64" }),
+        el("span", {}, "Votona", el("small", { text: "Observatoire" }))),
       el("section", { class: "vhero solo home-hero" }, el("h1", { text: "Ce que les fact-\u2060checkers ont vérifié" }),
         el("p", {}, "Les vérifications des rédactions françaises, rattachées aux candidats 2027 et à leurs partis. Chaque verdict est celui de la rédaction, jamais le nôtre."),
         el("div", { class: "hero-actions" },

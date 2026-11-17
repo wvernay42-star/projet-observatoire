@@ -383,9 +383,7 @@ def search_box(placeholder: str, empty: str) -> str:
 
 # ---------- pages ----------
 
-ICON_TEST = ('<svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" '
-             'stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="3" width="14" height="18" rx="2"/>'
-             '<path d="M9 8h6M9 12h6M9 16h3"/></svg>')
+ICON_TEST = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="20" height="20" aria-hidden="true"><defs><mask id="vt"><rect x="-10" y="-10" width="120" height="120" fill="#fff"/><path d="M21 50.7L38.6 71.5L81.4 17.7" fill="none" stroke="#000" stroke-width="13" stroke-linecap="round" stroke-linejoin="round"/></mask><clipPath id="vtc"><circle cx="50" cy="50" r="38.5"/></clipPath></defs><g mask="url(#vt)"><circle cx="50" cy="50" r="45" fill="none" stroke="#463BB1" stroke-width="5.2"/><g clip-path="url(#vtc)" fill="#2A1D62"><rect x="34.3" y="35.3" width="6.4" height="40" rx="3.2"/><rect x="54" y="21" width="6.8" height="80" rx="3.4"/><rect x="68.6" y="35" width="7" height="60" rx="3.5"/></g></g><path d="M21 50.7L38.6 71.5L81.4 17.7" fill="none" stroke="#463BB1" stroke-width="5.6" stroke-linecap="round" stroke-linejoin="round"/></svg>'  # logo de Votona (même famille que celui de l'Observatoire)
 ICON_FAQ = ('<svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" '
             'stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/>'
             '<path d="M9.3 9.2a2.7 2.7 0 1 1 3.9 2.4c-1 .5-1.7 1.1-1.7 2.4"/><line x1="12" y1="17.2" x2="12" y2="17.21"/></svg>')
@@ -499,7 +497,8 @@ def home_prerender(site: Site) -> str:
            "<li><strong>Le verdict est celui de la rédaction</strong><span>Avec son libellé d'origine et le lien vers l'article. L'Observatoire ne juge jamais.</span></li>"
            "<li><strong>Une vérification ne résume pas une personne</strong><span>Les rédactions choisissent ce qu'elles vérifient.</span></li>"
            "<li><strong>Plusieurs rédactions, plusieurs avis</strong><span>Si elles vérifient la même déclaration, tous les verdicts sont affichés.</span></li></ol>")
-    return ('<section class="vhero solo home-hero"><h1>Ce que les fact-\u2060checkers ont vérifié</h1>'
+    return ('<div class="home-logo"><img src="/assets/logo-mark.svg" alt="" width="64" height="64"><span>Votona<small>Observatoire</small></span></div>'
+            '<section class="vhero solo home-hero"><h1>Ce que les fact-\u2060checkers ont vérifié</h1>'
             "<p>Les vérifications des rédactions françaises, rattachées aux candidats 2027 et à leurs partis. Chaque verdict est celui de la rédaction, jamais le nôtre.</p>"
             '<div class="hero-actions"><a class="btn btn-accent" href="/#faits">Voir les faits vérifiés</a><a class="btn btn-ghost" href="/candidats/">Candidats 2027</a></div></section>'
             + strip
