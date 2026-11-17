@@ -3189,17 +3189,17 @@
    "last_review_date": "2026-10-08"
   },
   "Q205150": {
-   "n_claims": 115,
+   "n_claims": 116,
    "verdicts": {
     "true": 11,
     "mostly_true": 11,
     "half_true": 13,
-    "mostly_false": 30,
+    "mostly_false": 31,
     "false": 46,
     "unrated": 4
    },
    "n_sources": 6,
-   "last_review_date": "2026-11-10"
+   "last_review_date": "2026-11-12"
   },
   "Q23731823": {
    "n_claims": 142,

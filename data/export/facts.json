@@ -71,7 +71,7 @@
   "claim_text": "Il n'y a pas de discriminations en France",
   "claim_date": "2026-11-09",
   "date_precision": "day",
-  "date_is_fallback": false,
+  "date_is_fallback": true,
   "country": "FR",
   "attribution_status": "auto_sure",
   "theme": "Économie & travail",
@@ -174,12 +174,12 @@
    "votona_id": null
   },
   "party": {
-   "id": null,
-   "name": null,
-   "short_name": null,
-   "status": "ambiguous",
-   "name_at_date": null,
-   "short_name_at_date": null
+   "id": "Q205150",
+   "name": "Rassemblement national",
+   "short_name": "RN",
+   "status": "ok",
+   "name_at_date": "Rassemblement national",
+   "short_name_at_date": "RN"
   },
   "claim_text": "La TVA à 0% sur les produits de première nécessité a \"fait baisser l'ensemble des prix\" chez nos voisins européens.",
   "claim_date": "2026-11-09",
