@@ -71,7 +71,7 @@
   "claim_text": "Il n'y a pas de discriminations en France",
   "claim_date": "2026-11-09",
   "date_precision": "day",
-  "date_is_fallback": true,
+  "date_is_fallback": false,
   "country": "FR",
   "attribution_status": "auto_sure",
   "theme": "Économie & travail",
