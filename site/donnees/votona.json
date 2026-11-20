@@ -1,9 +1,9 @@
 {
- "generated_at": "2026-11-19T05:00:52+00:00",
+ "generated_at": "2026-11-20T05:00:28+00:00",
  "scope": "Sur les déclarations vérifiées, pas sur l'ensemble des propos tenus.",
  "candidats": {
   "bardella": {
-   "n": 29,
+   "n": 30,
    "url": "https://observatoire.votona.fr/candidats/bardella/",
    "sources": [
     "20 Minutes – Fake Off",
@@ -12,7 +12,7 @@
     "TF1 Info – Les Vérificateurs",
     "franceinfo Vrai ou Fake"
    ],
-   "last_review": "2026-09-01"
+   "last_review": "2026-11-16"
   },
   "philippe": {
    "n": 1,
@@ -68,14 +68,14 @@
    "last_review": "2026-08-24"
   },
   "tondelier": {
-   "n": 15,
+   "n": 16,
    "url": "https://observatoire.votona.fr/candidats/tondelier/",
    "sources": [
     "AFP Factuel",
     "TF1 Info – Les Vérificateurs",
     "franceinfo Vrai ou Fake"
    ],
-   "last_review": "2026-09-02"
+   "last_review": "2026-11-16"
   },
   "bertrand": {
    "n": 2,
@@ -232,7 +232,7 @@
  },
  "sujets": {
   "economie": {
-   "n": 83,
+   "n": 84,
    "url": "https://observatoire.votona.fr/sujets/economie/"
   },
   "social": {
@@ -240,7 +240,7 @@
    "url": "https://observatoire.votona.fr/sujets/social/"
   },
   "securite": {
-   "n": 97,
+   "n": 99,
    "url": "https://observatoire.votona.fr/sujets/securite/"
   },
   "ecologie": {

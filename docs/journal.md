@@ -21,6 +21,19 @@ Les décisions durables sont aussi consignées dans [decisions.md](decisions.md)
 | — | Hébergement préprod (`preprod`) / prod (`main`) | ✅ en ligne (26/10) — projet Vercel `votona-observatoire` ; production indexable depuis le 28/10 |
 | — | Liens Votona → Observatoire | ⏳ actifs sur `draft` (test, 26/10) ; `main` sur demande du porteur |
 
+## 2026-11-20 — Routine quotidienne
+
+- Candidats : synchronisation depuis https://votona.fr/ (pas de clone Votona) : 0 ajouté, 0 modifié, 0 absent ; 3 à confirmer (Selma Labib, Antoine Mikolajczak, Teddy Riner).
+- Décisions de l'admin (Supabase) : 0 décision appliquée, 0 ignorée. `rating_map.csv` non modifié.
+- Collecte : google_factcheck 31 récupérées, 18 nouvelles (surtout TF1 Info, puis AFP Factuel, 20 Minutes, Poligraph, franceinfo) ; datacommons_feed 4 récupérées, 0 nouvelle. Base : 7 662 vérifications (rechargée depuis data/store : 7 644).
+- Claims : auto_sure 466, validated 326, to_review 0, rejected 6 781. Exportées : 792 (+5), dont 247 de candidats 2027 (+2 : Marine Tondelier, Jordan Bardella) ; autres nouvelles : Yannick Jadot, Manuel Bompard, Sébastien Lecornu.
+- Files déposées dans Supabase : libellés 0, attributions 0, partis 2 (Yannick Jadot, Manuel Bompard), sources 7.
+- Part de verdicts positifs (toutes / attribuées) : TF1 Info 20,2 % / 40,5 % ; franceinfo 29,1 % / 37,5 % ; AFP Factuel 0,4 % / 2,7 % ; Poligraph 21,2 % / 25,0 % ; Les Décodeurs 1,6 % / 4,2 % ; 20 Minutes 11,0 % / 31,8 % ; Libération CheckNews 0 % / —.
+- Alertes : aucun résultat nouveau depuis 3 jours pour datacommons_feed. Aucune erreur de connecteur.
+- Images de partage : rien à créer.
+- Portraits : 0 traité ce jour, lot interrompu car Wikimedia limite l'accès (3e jour de suite, reprise au prochain passage) ; 210 personnes, 169 traitées (70 ok), 41 restantes.
+- Beta : build_beta exécuté (792 déclarations), artefact republié (version 33). 96 tests passent.
+
 ## 2026-11-19 — Routine quotidienne
 
 - Candidats : synchronisation depuis https://votona.fr/ (pas de clone Votona) : 0 ajouté, 0 modifié, 0 absent ; 3 à confirmer (Selma Labib, Antoine Mikolajczak, Teddy Riner).

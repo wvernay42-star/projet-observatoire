@@ -1,5 +1,154 @@
 [
  {
+  "id": "c_bc04c2562f5153cc",
+  "person": {
+   "id": "Q441791",
+   "name": "Yannick Jadot",
+   "votona_id": null
+  },
+  "party": {
+   "id": null,
+   "name": null,
+   "short_name": null,
+   "status": "undated",
+   "name_at_date": null,
+   "short_name_at_date": null
+  },
+  "claim_text": "Jean-Luc Mélenchon veut rouvrir les gazoducs russes",
+  "claim_date": "2026-11-18",
+  "date_precision": "day",
+  "date_is_fallback": true,
+  "country": "FR",
+  "attribution_status": "auto_sure",
+  "theme": null,
+  "votona_topics": [],
+  "verdict": "half_true",
+  "reviews": [
+   {
+    "source_id": "tf1info_verificateurs",
+    "source_name": "TF1 Info – Les Vérificateurs",
+    "url": "https://www.tf1info.fr/politique/verif-jean-luc-melenchon-veut-il-rouvrir-les-gazoducs-russes-comme-l-avance-yannick-jadot-2476271.html",
+    "title": "VÉRIF' - Jean-Luc Mélenchon veut-il \"rouvrir les gazoducs russes\", comme l'avance Yannick Jadot ?",
+    "rating_original": "En partie vrai",
+    "rating_normalized": "half_true",
+    "review_date": "2026-11-18"
+   }
+  ]
+ },
+ {
+  "id": "c_e70b42a41fa0de57",
+  "person": {
+   "id": "Q29575749",
+   "name": "Manuel Bompard",
+   "votona_id": null
+  },
+  "party": {
+   "id": null,
+   "name": null,
+   "short_name": null,
+   "status": "ambiguous",
+   "name_at_date": null,
+   "short_name_at_date": null
+  },
+  "claim_text": "La suppression de l'ISF, a eu un impact marginal sur le retour des grandes fortunes qui étaient parties de France",
+  "claim_date": "2026-11-17",
+  "date_precision": "day",
+  "date_is_fallback": false,
+  "country": "FR",
+  "attribution_status": "auto_sure",
+  "theme": "Économie & travail",
+  "votona_topics": [
+   {
+    "slug": "retablir-limpot-sur-la-fortune-isf",
+    "label": "Rétablir l'impôt sur la fortune (ISF)"
+   }
+  ],
+  "verdict": "mostly_true",
+  "reviews": [
+   {
+    "source_id": "tf1info_verificateurs",
+    "source_name": "TF1 Info – Les Vérificateurs",
+    "url": "https://www.tf1info.fr/economie/verif-un-impact-marginal-la-suppression-de-l-isf-a-t-elle-echoue-a-faire-revenir-en-france-de-grandes-fortunes-exilees-2476714.html",
+    "title": "VÉRIF' - Un impact \"marginal\" : la suppression de l'ISF a-t-elle échoué à faire revenir en France de grandes fortunes exilées ?",
+    "rating_original": "Plutôt vrai",
+    "rating_normalized": "mostly_true",
+    "review_date": "2026-11-18"
+   }
+  ]
+ },
+ {
+  "id": "c_c78f2f94ed2d20a2",
+  "person": {
+   "id": "Q29917987",
+   "name": "Marine Tondelier",
+   "votona_id": "tondelier"
+  },
+  "party": {
+   "id": "Q613786",
+   "name": "Les Écologistes – Europe Écologie Les Verts",
+   "short_name": "EELV",
+   "status": "ok",
+   "name_at_date": "Les Écologistes – Europe Écologie Les Verts",
+   "short_name_at_date": "EELV"
+  },
+  "claim_text": "La consommation de cocaïne en France a été \"multipliée par 10 en 30 ans\"",
+  "claim_date": "2026-11-16",
+  "date_precision": "day",
+  "date_is_fallback": false,
+  "country": "FR",
+  "attribution_status": "auto_sure",
+  "theme": null,
+  "votona_topics": [],
+  "verdict": "true",
+  "reviews": [
+   {
+    "source_id": "tf1info_verificateurs",
+    "source_name": "TF1 Info – Les Vérificateurs",
+    "url": "https://www.tf1info.fr/politique/elections/presidentielle/verif-drogue-la-consommation-de-cocaine-en-france-a-t-elle-ete-multipliee-par-10-en-30-ans-2476169.html",
+    "title": "VÉRIF' - Drogue : la consommation de cocaïne en France a-t-elle été \"multipliée par 10 en 30 ans\" ?",
+    "rating_original": "Vrai",
+    "rating_normalized": "true",
+    "review_date": "2026-11-16"
+   }
+  ]
+ },
+ {
+  "id": "c_b28d6da7df7d369c",
+  "person": {
+   "id": "Q20089181",
+   "name": "Sébastien Lecornu",
+   "votona_id": null
+  },
+  "party": {
+   "id": "Q23731823",
+   "name": "Renaissance",
+   "short_name": "RE",
+   "status": "ok",
+   "name_at_date": "Renaissance",
+   "short_name_at_date": "RE"
+  },
+  "claim_text": "Des membres du personnel de l’éducation nationale se sont rendus \"complices\" de violences commises en marge des mobilisations lycéennes",
+  "claim_date": "2026-11-12",
+  "date_precision": "day",
+  "date_is_fallback": false,
+  "country": "FR",
+  "attribution_status": "auto_sure",
+  "theme": "Sécurité & immigration",
+  "votona_topics": [],
+  "verdict": "half_true",
+  "reviews": [
+   {
+    "source_id": "franceinfo_vraioufake",
+    "source_name": "franceinfo Vrai ou Fake",
+    "url": "https://www.franceinfo.fr/vrai-ou-fake/vrai-ou-faux-des-membres-du-personnel-de-l-education-nationale-sont-ils-complices-des-violences-commises-en-marge-des-mobilisations-lyceennes-comme-l-affirme-le-gouvernement_8286719.html",
+    "title": "VRAI OU FAUX. Des membres du personnel de l'Education nationale sont-ils complices des violences commises en marge des mobilisations lycéennes, comme l'affirme le gouvernement ?",
+    "rating_original": "C’est plus compliqué",
+    "rating_normalized": "half_true",
+    "review_date": "2026-11-19"
+   }
+  ]
+ },
+ {
   "id": "c_15d9263a94f2e1a8",
   "person": {
    "id": "Q288477",
@@ -50,6 +199,47 @@
     "rating_original": "Plutôt faux",
     "rating_normalized": "mostly_false",
     "review_date": "2026-11-11"
+   }
+  ]
+ },
+ {
+  "id": "c_99fb14f265f23fbd",
+  "person": {
+   "id": "Q40655898",
+   "name": "Jordan Bardella",
+   "votona_id": "bardella"
+  },
+  "party": {
+   "id": "Q205150",
+   "name": "Rassemblement national",
+   "short_name": "RN",
+   "status": "ok",
+   "name_at_date": "Rassemblement national",
+   "short_name_at_date": "RN"
+  },
+  "claim_text": "Un calcul montre que 500.000 immigrés entrent chaque année en France",
+  "claim_date": "2026-11-10",
+  "date_precision": "day",
+  "date_is_fallback": false,
+  "country": "FR",
+  "attribution_status": "auto_sure",
+  "theme": "Sécurité & immigration",
+  "votona_topics": [
+   {
+    "slug": "reduire-limmigration",
+    "label": "Réduire l'immigration"
+   }
+  ],
+  "verdict": "mostly_false",
+  "reviews": [
+   {
+    "source_id": "afp_factuel",
+    "source_name": "AFP Factuel",
+    "url": "https://factuel.afp.com/doc.afp.com.D7DG3KE",
+    "title": "500.000 nouveaux immigrés par an en France ? Attention à ce chiffre issu d'un calcul biaisé",
+    "rating_original": "Trompeur",
+    "rating_normalized": "mostly_false",
+    "review_date": "2026-11-16"
    }
   ]
  },

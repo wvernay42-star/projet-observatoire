@@ -1,7 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <rss version="2.0"><channel><title>Votona Observatoire - dernières vérifications</title><link>https://observatoire.votona.fr/</link>
 <description>Les dernières déclarations politiques vérifiées par les rédactions françaises de fact-checking, avec le verdict d'origine.</description>
-<language>fr</language><lastBuildDate>Thu, 19 Nov 2026 05:00:52 +0000</lastBuildDate>
+<language>fr</language><lastBuildDate>Fri, 20 Nov 2026 05:00:28 +0000</lastBuildDate>
+<item><title>Sébastien Lecornu : « Des membres du personnel de l’éducation nationale se sont rendus "complices" de violences commises en marge des mobilisations lycéennes »</title>
+<link>https://www.franceinfo.fr/vrai-ou-fake/vrai-ou-faux-des-membres-du-personnel-de-l-education-nationale-sont-ils-complices-des-violences-commises-en-marge-des-mobilisations-lyceennes-comme-l-affirme-le-gouvernement_8286719.html</link><guid isPermaLink="false">c_b28d6da7df7d369c</guid><pubDate>Thu, 19 Nov 2026 12:00:00 +0000</pubDate>
+<description>« C’est plus compliqué » selon franceinfo Vrai ou Fake</description></item>
+<item><title>Yannick Jadot : « Jean-Luc Mélenchon veut rouvrir les gazoducs russes »</title>
+<link>https://www.tf1info.fr/politique/verif-jean-luc-melenchon-veut-il-rouvrir-les-gazoducs-russes-comme-l-avance-yannick-jadot-2476271.html</link><guid isPermaLink="false">c_bc04c2562f5153cc</guid><pubDate>Wed, 18 Nov 2026 12:00:00 +0000</pubDate>
+<description>« En partie vrai » selon TF1 Info – Les Vérificateurs</description></item>
+<item><title>Manuel Bompard : « La suppression de l'ISF, a eu un impact marginal sur le retour des grandes fortunes qui étaient parties de France »</title>
+<link>https://www.tf1info.fr/economie/verif-un-impact-marginal-la-suppression-de-l-isf-a-t-elle-echoue-a-faire-revenir-en-france-de-grandes-fortunes-exilees-2476714.html</link><guid isPermaLink="false">c_e70b42a41fa0de57</guid><pubDate>Wed, 18 Nov 2026 12:00:00 +0000</pubDate>
+<description>« Plutôt vrai » selon TF1 Info – Les Vérificateurs</description></item>
+<item><title>Marine Tondelier : « La consommation de cocaïne en France a été "multipliée par 10 en 30 ans" »</title>
+<link>https://www.tf1info.fr/politique/elections/presidentielle/verif-drogue-la-consommation-de-cocaine-en-france-a-t-elle-ete-multipliee-par-10-en-30-ans-2476169.html</link><guid isPermaLink="false">c_c78f2f94ed2d20a2</guid><pubDate>Mon, 16 Nov 2026 12:00:00 +0000</pubDate>
+<description>« Vrai » selon TF1 Info – Les Vérificateurs</description></item>
+<item><title>Jordan Bardella : « Un calcul montre que 500.000 immigrés entrent chaque année en France »</title>
+<link>https://factuel.afp.com/doc.afp.com.D7DG3KE</link><guid isPermaLink="false">c_99fb14f265f23fbd</guid><pubDate>Mon, 16 Nov 2026 12:00:00 +0000</pubDate>
+<description>« Trompeur » selon AFP Factuel</description></item>
 <item><title>Sébastien Chenu : « La TVA à 0% sur les produits de première nécessité a "fait baisser l'ensemble des prix" chez nos voisins européens. »</title>
 <link>https://poligraph.fr/factchecks/2026-11-12-vrai-ou-faux-la-tva-a-0-sur-les-produits-de-premiere-necessite-a-t-el</link><guid isPermaLink="false">c_c8e750c9c74974c8</guid><pubDate>Thu, 12 Nov 2026 12:00:00 +0000</pubDate>
 <description>« Plutôt Faux » selon Poligraph ; « Plutôt Faux » selon franceinfo Vrai ou Fake</description></item>
@@ -137,19 +152,4 @@
 <item><title>Jean-Philippe Tanguy : « Jean-Luc Mélenchon a déclaré "'Le seul parti qui réhabilite la politique, c'est le Front national" »</title>
 <link>https://www.franceinfo.fr/vrai-ou-fake/vrai-ou-faux-jean-luc-melenchon-a-t-il-declare-que-le-seul-parti-qui-rehabilite-la-politique-c-est-le-front-national-comme-le-pretend-une-interview-relayee-par-jean-philippe-tanguy_8108606.html</link><guid isPermaLink="false">c_12c9d9104eac8f59</guid><pubDate>Fri, 17 Jul 2026 12:00:00 +0000</pubDate>
 <description>« Plutôt faux » selon TF1 Info – Les Vérificateurs ; « C’est plus compliqué » selon franceinfo Vrai ou Fake</description></item>
-<item><title>Sarah Knafo : « Les droits de succession frappent d'abord les plus modestes »</title>
-<link>https://www.tf1info.fr/conso-argent/verif-droits-de-succession-cet-impot-sur-l-heritage-frappe-t-il-d-abord-les-plus-modestes-2452008.html</link><guid isPermaLink="false">c_ed8c9ee066117044</guid><pubDate>Wed, 08 Jul 2026 12:00:00 +0000</pubDate>
-<description>« Faux » selon TF1 Info – Les Vérificateurs</description></item>
-<item><title>Virginie Joron : « Bruxelles va interdire les emballages des packs d'eau »</title>
-<link>https://www.tf1info.fr/economie/verif-bruxelles-va-vous-obliger-a-porter-vos-bouteilles-d-eau-une-par-une-les-packs-d-eau-vont-ils-etre-interdits-par-l-ue-2450966.html</link><guid isPermaLink="false">c_3d8d6b1f6acd3f1f</guid><pubDate>Fri, 03 Jul 2026 12:00:00 +0000</pubDate>
-<description>« Plutôt faux » selon TF1 Info – Les Vérificateurs</description></item>
-<item><title>Gérald Darmanin : « Tous les pédocriminels sont incurables »</title>
-<link>https://poligraph.fr/factchecks/2026-06-13-vrai-ou-faux-mort-de-lyhanna-nbsp-tous-les-p-eacute-docriminels-sont-ils-quot-incurables-quot-comme-l-039</link><guid isPermaLink="false">c_0b1da9655104bfbb</guid><pubDate>Sat, 13 Jun 2026 12:00:00 +0000</pubDate>
-<description>« Plutôt Faux » selon Poligraph ; « Plutôt Faux » selon franceinfo Vrai ou Fake</description></item>
-<item><title>Maud Bregeon : « Jamais le budget de la justice n'a été aussi haut en France »</title>
-<link>https://www.tf1info.fr/justice-faits-divers/verif-affaire-fillette-adolescente-mort-lyhanna-est-il-vrai-que-jamais-le-budget-de-la-justice-n-a-ete-aussi-haut-comme-le-dit-le-gouvernement-2446822.html</link><guid isPermaLink="false">c_511bac9f266f7cf3</guid><pubDate>Thu, 11 Jun 2026 12:00:00 +0000</pubDate>
-<description>« Vrai » selon TF1 Info – Les Vérificateurs</description></item>
-<item><title>François Ruffin : « Les travaux d'intérêt général sont une peine aujourd'hui "largement délaissée" par les magistrats »</title>
-<link>https://www.tf1info.fr/justice-faits-divers/verif-les-travaux-d-interet-general-une-peine-qui-est-aujourd-hui-largement-delaissee-par-les-magistrats-2444998.html</link><guid isPermaLink="false">c_185a00d1ea380b09</guid><pubDate>Thu, 04 Jun 2026 12:00:00 +0000</pubDate>
-<description>« En partie vrai » selon TF1 Info – Les Vérificateurs</description></item>
 </channel></rss>
