@@ -1,13 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <rss version="2.0"><channel><title>Votona Observatoire - dernières vérifications</title><link>https://observatoire.votona.fr/</link>
 <description>Les dernières déclarations politiques vérifiées par les rédactions françaises de fact-checking, avec le verdict d'origine.</description>
-<language>fr</language><lastBuildDate>Fri, 20 Nov 2026 05:00:28 +0000</lastBuildDate>
+<language>fr</language><lastBuildDate>Sun, 22 Nov 2026 05:00:16 +0000</lastBuildDate>
+<item><title>Raphaël Glucksmann : « Selon les enquêtes, le soutien des Français à l'Ukraine n'a pas faibli »</title>
+<link>https://www.tf1info.fr/international/verif-le-soutien-de-la-societe-francaise-a-l-ukraine-est-il-le-meme-qu-au-debut-de-l-invasion-russe-en-fevrier-2022-comme-le-dit-le-candidat-raphael-glucksmann-2477131.html</link><guid isPermaLink="false">c_a6fce9e8b91e14e9</guid><pubDate>Fri, 20 Nov 2026 12:00:00 +0000</pubDate>
+<description>« Plutôt faux » selon TF1 Info – Les Vérificateurs</description></item>
+<item><title>Bruno Retailleau : « La France a le taux de chômage des jeunes le plus élevé d'Europe »</title>
+<link>https://factuel.afp.com/doc.afp.com.D8642KE</link><guid isPermaLink="false">c_a3ecb60752575b3b</guid><pubDate>Fri, 20 Nov 2026 12:00:00 +0000</pubDate>
+<description>« Partiellement faux » selon AFP Factuel</description></item>
+<item><title>Clémentine Autain : « Depuis l'année 2000, les agents de la fonction publique ont perdu 33% de pouvoir d'achat. »</title>
+<link>https://www.tf1info.fr/societe/verif-salaires-le-pouvoir-d-achat-des-fonctionnaires-a-t-il-vraiment-chute-de-33-depuis-l-an-2000-2476935.html</link><guid isPermaLink="false">c_9b2af494956a6bd0</guid><pubDate>Thu, 19 Nov 2026 12:00:00 +0000</pubDate>
+<description>« Plutôt faux » selon TF1 Info – Les Vérificateurs</description></item>
+<item><title>Raphaël Glucksmann : « La bureaucratie représente 50% du temps des policiers »</title>
+<link>https://www.tf1info.fr/societe/verif-est-il-vrai-que-la-bureaucratie-represente-50-du-temps-des-policiers-comme-l-explique-raphael-glucksmann-2476980.html</link><guid isPermaLink="false">c_937ce890b98bbcbd</guid><pubDate>Thu, 19 Nov 2026 12:00:00 +0000</pubDate>
+<description>« Plutôt faux » selon TF1 Info – Les Vérificateurs</description></item>
 <item><title>Sébastien Lecornu : « Des membres du personnel de l’éducation nationale se sont rendus "complices" de violences commises en marge des mobilisations lycéennes »</title>
 <link>https://www.franceinfo.fr/vrai-ou-fake/vrai-ou-faux-des-membres-du-personnel-de-l-education-nationale-sont-ils-complices-des-violences-commises-en-marge-des-mobilisations-lyceennes-comme-l-affirme-le-gouvernement_8286719.html</link><guid isPermaLink="false">c_b28d6da7df7d369c</guid><pubDate>Thu, 19 Nov 2026 12:00:00 +0000</pubDate>
 <description>« C’est plus compliqué » selon franceinfo Vrai ou Fake</description></item>
 <item><title>Yannick Jadot : « Jean-Luc Mélenchon veut rouvrir les gazoducs russes »</title>
-<link>https://www.tf1info.fr/politique/verif-jean-luc-melenchon-veut-il-rouvrir-les-gazoducs-russes-comme-l-avance-yannick-jadot-2476271.html</link><guid isPermaLink="false">c_bc04c2562f5153cc</guid><pubDate>Wed, 18 Nov 2026 12:00:00 +0000</pubDate>
-<description>« En partie vrai » selon TF1 Info – Les Vérificateurs</description></item>
+<link>https://poligraph.fr/factchecks/2026-11-18-verif-jean-luc-melenchon-veut-il-rouvrir-les-gazoducs-russes-comme-l</link><guid isPermaLink="false">c_bc04c2562f5153cc</guid><pubDate>Wed, 18 Nov 2026 12:00:00 +0000</pubDate>
+<description>« En partie vrai » selon Poligraph ; « En partie vrai » selon TF1 Info – Les Vérificateurs</description></item>
 <item><title>Manuel Bompard : « La suppression de l'ISF, a eu un impact marginal sur le retour des grandes fortunes qui étaient parties de France »</title>
 <link>https://www.tf1info.fr/economie/verif-un-impact-marginal-la-suppression-de-l-isf-a-t-elle-echoue-a-faire-revenir-en-france-de-grandes-fortunes-exilees-2476714.html</link><guid isPermaLink="false">c_e70b42a41fa0de57</guid><pubDate>Wed, 18 Nov 2026 12:00:00 +0000</pubDate>
 <description>« Plutôt vrai » selon TF1 Info – Les Vérificateurs</description></item>
@@ -140,16 +152,4 @@
 <item><title>Florian Philippot : « La France refuse d'acheter des Canadair français »</title>
 <link>https://www.tf1info.fr/politique/verif-pour-lutter-contre-les-feux-de-foret-la-france-refuse-t-elle-d-acheter-des-canadair-francais-2456957.html</link><guid isPermaLink="false">c_7d175f62dc5f0a41</guid><pubDate>Fri, 07 Aug 2026 12:00:00 +0000</pubDate>
 <description>« Plutôt faux » selon TF1 Info – Les Vérificateurs</description></item>
-<item><title>Julien Odoul : « Les éoliennes sont en réalité très polluantes à cause de leur moteur thermique »</title>
-<link>https://www.tf1info.fr/environnement-ecologie/verif-pollution-les-eoliennes-eolien-fonctionnent-elles-vraiment-grace-a-un-moteur-thermique-2454858.html</link><guid isPermaLink="false">c_a57446c5d4ef54fd</guid><pubDate>Fri, 24 Jul 2026 12:00:00 +0000</pubDate>
-<description>« Faux » selon TF1 Info – Les Vérificateurs</description></item>
-<item><title>François-Xavier Bellamy : « Un seul médecin rencontrera le patient avant la validation d'une demande d'aide à mourir »</title>
-<link>https://www.franceinfo.fr/vrai-ou-fake/vrai-ou-faux-aide-a-mourir-le-patient-ne-rencontrera-t-il-qu-un-seul-medecin-avant-la-validation-de-sa-demande-comme-le-denonce-francois-xavier-bellamy_8110238.html</link><guid isPermaLink="false">c_1545375921ee6831</guid><pubDate>Sat, 18 Jul 2026 12:00:00 +0000</pubDate>
-<description>« Plutôt Faux » selon franceinfo Vrai ou Fake</description></item>
-<item><title>Hélène Laporte : « Une vingtaine de départements sont encore dépourvus d'unités de soins palliatifs en France »</title>
-<link>https://www.tf1info.fr/sante/verif-une-vingtaine-de-departements-sont-ils-encore-depourvus-d-unites-de-soins-palliatifs-en-france-2453503.html</link><guid isPermaLink="false">c_4f1c068d4da69278</guid><pubDate>Fri, 17 Jul 2026 12:00:00 +0000</pubDate>
-<description>« Vrai » selon TF1 Info – Les Vérificateurs</description></item>
-<item><title>Jean-Philippe Tanguy : « Jean-Luc Mélenchon a déclaré "'Le seul parti qui réhabilite la politique, c'est le Front national" »</title>
-<link>https://www.franceinfo.fr/vrai-ou-fake/vrai-ou-faux-jean-luc-melenchon-a-t-il-declare-que-le-seul-parti-qui-rehabilite-la-politique-c-est-le-front-national-comme-le-pretend-une-interview-relayee-par-jean-philippe-tanguy_8108606.html</link><guid isPermaLink="false">c_12c9d9104eac8f59</guid><pubDate>Fri, 17 Jul 2026 12:00:00 +0000</pubDate>
-<description>« Plutôt faux » selon TF1 Info – Les Vérificateurs ; « C’est plus compliqué » selon franceinfo Vrai ou Fake</description></item>
 </channel></rss>

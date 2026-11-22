@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-20T05:00:28+00:00",
+ "generated_at": "2026-11-22T05:00:16+00:00",
  "scope": "Sur les déclarations vérifiées, pas sur l'ensemble des propos tenus.",
  "candidats": {
   "bardella": {
@@ -36,7 +36,7 @@
    "last_review": "2026-04-09"
   },
   "retailleau": {
-   "n": 13,
+   "n": 14,
    "url": "https://observatoire.votona.fr/candidats/retailleau/",
    "sources": [
     "AFP Factuel",
@@ -44,7 +44,7 @@
     "TF1 Info – Les Vérificateurs",
     "franceinfo Vrai ou Fake"
    ],
-   "last_review": "2026-10-08"
+   "last_review": "2026-11-20"
   },
   "melenchon": {
    "n": 26,
@@ -60,12 +60,12 @@
    "last_review": "2026-10-13"
   },
   "glucksmann": {
-   "n": 3,
+   "n": 5,
    "url": "https://observatoire.votona.fr/candidats/glucksmann/",
    "sources": [
     "TF1 Info – Les Vérificateurs"
    ],
-   "last_review": "2026-08-24"
+   "last_review": "2026-11-20"
   },
   "tondelier": {
    "n": 16,
@@ -232,15 +232,15 @@
  },
  "sujets": {
   "economie": {
-   "n": 84,
+   "n": 85,
    "url": "https://observatoire.votona.fr/sujets/economie/"
   },
   "social": {
-   "n": 61,
+   "n": 62,
    "url": "https://observatoire.votona.fr/sujets/social/"
   },
   "securite": {
-   "n": 99,
+   "n": 100,
    "url": "https://observatoire.votona.fr/sujets/securite/"
   },
   "ecologie": {
@@ -256,7 +256,7 @@
    "url": "https://observatoire.votona.fr/sujets/societe/"
   },
   "defense": {
-   "n": 52,
+   "n": 53,
    "url": "https://observatoire.votona.fr/sujets/defense/"
   }
  }

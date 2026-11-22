@@ -1,5 +1,123 @@
 [
  {
+  "id": "c_a6fce9e8b91e14e9",
+  "person": {
+   "id": "Q556149",
+   "name": "Raphaël Glucksmann",
+   "votona_id": "glucksmann"
+  },
+  "party": {
+   "id": "Q58366009",
+   "name": "Place publique",
+   "short_name": "PP",
+   "status": "ok",
+   "name_at_date": "Place publique",
+   "short_name_at_date": "PP"
+  },
+  "claim_text": "Selon les enquêtes, le soutien des Français à l'Ukraine n'a pas faibli",
+  "claim_date": "2026-11-20",
+  "date_precision": "day",
+  "date_is_fallback": true,
+  "country": "FR",
+  "attribution_status": "auto_sure",
+  "theme": "Défense & numérique",
+  "votona_topics": [
+   {
+    "slug": "continuer-laide-militaire-a-lukraine",
+    "label": "Continuer l'aide militaire à l'Ukraine"
+   }
+  ],
+  "verdict": "mostly_false",
+  "reviews": [
+   {
+    "source_id": "tf1info_verificateurs",
+    "source_name": "TF1 Info – Les Vérificateurs",
+    "url": "https://www.tf1info.fr/international/verif-le-soutien-de-la-societe-francaise-a-l-ukraine-est-il-le-meme-qu-au-debut-de-l-invasion-russe-en-fevrier-2022-comme-le-dit-le-candidat-raphael-glucksmann-2477131.html",
+    "title": "VÉRIF' - Le soutien de la population française à l'Ukraine est-il vraiment au même niveau qu'au début de l'invasion russe ?",
+    "rating_original": "Plutôt faux",
+    "rating_normalized": "mostly_false",
+    "review_date": "2026-11-20"
+   }
+  ]
+ },
+ {
+  "id": "c_a3ecb60752575b3b",
+  "person": {
+   "id": "Q2926942",
+   "name": "Bruno Retailleau",
+   "votona_id": "retailleau"
+  },
+  "party": {
+   "id": "Q20012759",
+   "name": "Les Républicains",
+   "short_name": "LR",
+   "status": "ok",
+   "name_at_date": "Les Républicains",
+   "short_name_at_date": "LR"
+  },
+  "claim_text": "La France a le taux de chômage des jeunes le plus élevé d'Europe",
+  "claim_date": "2026-11-19",
+  "date_precision": "day",
+  "date_is_fallback": false,
+  "country": "FR",
+  "attribution_status": "auto_sure",
+  "theme": "Protection sociale",
+  "votona_topics": [
+   {
+    "slug": "reduire-la-duree-dindemnisation-du-chomage",
+    "label": "Réduire la durée d'indemnisation du chômage"
+   }
+  ],
+  "verdict": "mostly_false",
+  "reviews": [
+   {
+    "source_id": "afp_factuel",
+    "source_name": "AFP Factuel",
+    "url": "https://factuel.afp.com/doc.afp.com.D8642KE",
+    "title": "Non, la France n'a pas le plus fort taux de chômage des jeunes en Europe",
+    "rating_original": "Partiellement faux",
+    "rating_normalized": "mostly_false",
+    "review_date": "2026-11-20"
+   }
+  ]
+ },
+ {
+  "id": "c_9b2af494956a6bd0",
+  "person": {
+   "id": "Q2980738",
+   "name": "Clémentine Autain",
+   "votona_id": null
+  },
+  "party": {
+   "id": null,
+   "name": null,
+   "short_name": null,
+   "status": "ambiguous",
+   "name_at_date": null,
+   "short_name_at_date": null
+  },
+  "claim_text": "Depuis l'année 2000, les agents de la fonction publique ont perdu 33% de pouvoir d'achat.",
+  "claim_date": "2026-11-18",
+  "date_precision": "day",
+  "date_is_fallback": false,
+  "country": "FR",
+  "attribution_status": "auto_sure",
+  "theme": "Économie & travail",
+  "votona_topics": [],
+  "verdict": "mostly_false",
+  "reviews": [
+   {
+    "source_id": "tf1info_verificateurs",
+    "source_name": "TF1 Info – Les Vérificateurs",
+    "url": "https://www.tf1info.fr/societe/verif-salaires-le-pouvoir-d-achat-des-fonctionnaires-a-t-il-vraiment-chute-de-33-depuis-l-an-2000-2476935.html",
+    "title": "VÉRIF' - Le pouvoir d'achat des fonctionnaires a-t-il vraiment chuté de 33% depuis l'an 2000 ?",
+    "rating_original": "Plutôt faux",
+    "rating_normalized": "mostly_false",
+    "review_date": "2026-11-19"
+   }
+  ]
+ },
+ {
   "id": "c_bc04c2562f5153cc",
   "person": {
    "id": "Q441791",
@@ -24,6 +142,15 @@
   "votona_topics": [],
   "verdict": "half_true",
   "reviews": [
+   {
+    "source_id": "poligraph_fr",
+    "source_name": "Poligraph",
+    "url": "https://poligraph.fr/factchecks/2026-11-18-verif-jean-luc-melenchon-veut-il-rouvrir-les-gazoducs-russes-comme-l",
+    "title": "Partiellement vrai — VÉRIF' - Jean-Luc Mélenchon veut-il \"rouvrir les gazoducs russes\", comme l'avance Yannick Jadot ?",
+    "rating_original": "En partie vrai",
+    "rating_normalized": "half_true",
+    "review_date": "2026-11-18"
+   },
    {
     "source_id": "tf1info_verificateurs",
     "source_name": "TF1 Info – Les Vérificateurs",
@@ -109,6 +236,47 @@
     "rating_original": "Vrai",
     "rating_normalized": "true",
     "review_date": "2026-11-16"
+   }
+  ]
+ },
+ {
+  "id": "c_937ce890b98bbcbd",
+  "person": {
+   "id": "Q556149",
+   "name": "Raphaël Glucksmann",
+   "votona_id": "glucksmann"
+  },
+  "party": {
+   "id": "Q58366009",
+   "name": "Place publique",
+   "short_name": "PP",
+   "status": "ok",
+   "name_at_date": "Place publique",
+   "short_name_at_date": "PP"
+  },
+  "claim_text": "La bureaucratie représente 50% du temps des policiers",
+  "claim_date": "2026-11-12",
+  "date_precision": "day",
+  "date_is_fallback": false,
+  "country": "FR",
+  "attribution_status": "auto_sure",
+  "theme": "Sécurité & immigration",
+  "votona_topics": [
+   {
+    "slug": "augmenter-les-effectifs-de-police-et-de-gendarmerie",
+    "label": "Augmenter les effectifs de police et de gendarmerie"
+   }
+  ],
+  "verdict": "mostly_false",
+  "reviews": [
+   {
+    "source_id": "tf1info_verificateurs",
+    "source_name": "TF1 Info – Les Vérificateurs",
+    "url": "https://www.tf1info.fr/societe/verif-est-il-vrai-que-la-bureaucratie-represente-50-du-temps-des-policiers-comme-l-explique-raphael-glucksmann-2476980.html",
+    "title": "VÉRIF' - Est-il vrai que \"la bureaucratie représente 50% du temps des policiers\", comme l'explique Raphaël Glucksmann ?",
+    "rating_original": "Plutôt faux",
+    "rating_normalized": "mostly_false",
+    "review_date": "2026-11-19"
    }
   ]
  },
