@@ -21,6 +21,19 @@ Les décisions durables sont aussi consignées dans [decisions.md](decisions.md)
 | — | Hébergement préprod (`preprod`) / prod (`main`) | ✅ en ligne (26/10) — projet Vercel `votona-observatoire` ; production indexable depuis le 28/10 |
 | — | Liens Votona → Observatoire | ⏳ actifs sur `draft` (test, 26/10) ; `main` sur demande du porteur |
 
+## 2026-11-23 — Routine quotidienne
+
+- Candidats : synchronisation depuis https://votona.fr/ (pas de clone Votona) : 1 ajouté (Dominique de Villepin, La France humaniste), 2 modifiés (François Ruffin et Lydie Massard passent à « retiré »), 0 absent ; 3 à confirmer (Selma Labib, Antoine Mikolajczak, Teddy Riner).
+- Décisions de l'admin (Supabase) : 3 décisions appliquées (partis : Clémentine Autain, déclaration du 18/11 → L'Après ; Yannick Jadot, déclaration du 18/11 → Les Écologistes ; Manuel Bompard, déclaration du 17/11 → La France insoumise), 0 ignorée. `rating_map.csv` non modifié.
+- Collecte : google_factcheck 37 récupérées, 0 nouvelle ; datacommons_feed 4 récupérées, 0 nouvelle. Base : 7 680 vérifications (rechargée depuis data/store : 7 680).
+- Claims : auto_sure 470, validated 326, to_review 0, rejected 6 794. Exportées : 796 (inchangé), dont 249 de candidats 2027 d'après la liste mise à jour.
+- Files déposées dans Supabase : libellés 0, attributions 0, partis 0, sources 7.
+- Part de verdicts positifs (toutes / attribuées) : TF1 Info 20,2 % / 40,2 % ; franceinfo 29,1 % / 37,5 % ; AFP Factuel 0,4 % / 2,7 % ; Poligraph 21,0 % / 24,7 % ; Les Décodeurs 1,6 % / 4,2 % ; 20 Minutes 10,9 % / 31,8 % ; Libération CheckNews 0 % / —.
+- Alertes : aucun résultat nouveau depuis 3 jours pour datacommons_feed. Aucune erreur de connecteur.
+- Images de partage : 1 créée (`web/beta/og/candidats/villepin.jpg`).
+- Portraits : 20 personnes traitées ce jour (19 portraits ajoutés), Wikimedia n'a plus limité l'accès ; 211 personnes, 189 traitées (89 ok), 22 restantes.
+- Beta : build_beta exécuté (796 déclarations), artefact republié (version 35). 96 tests passent.
+
 ## 2026-11-22 — Routine quotidienne
 
 - Candidats : synchronisation depuis https://votona.fr/ (pas de clone Votona) : 0 ajouté, 0 modifié, 0 absent ; 3 à confirmer (Selma Labib, Antoine Mikolajczak, Teddy Riner).

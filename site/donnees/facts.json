@@ -89,12 +89,12 @@
    "votona_id": null
   },
   "party": {
-   "id": null,
-   "name": null,
-   "short_name": null,
-   "status": "ambiguous",
-   "name_at_date": null,
-   "short_name_at_date": null
+   "id": "Q127413320",
+   "name": "L'Après",
+   "short_name": "L'APRÈS",
+   "status": "ok",
+   "name_at_date": "L'Après",
+   "short_name_at_date": "L'APRÈS"
   },
   "claim_text": "Depuis l'année 2000, les agents de la fonction publique ont perdu 33% de pouvoir d'achat.",
   "claim_date": "2026-11-18",
@@ -125,12 +125,12 @@
    "votona_id": null
   },
   "party": {
-   "id": null,
-   "name": null,
-   "short_name": null,
-   "status": "undated",
-   "name_at_date": null,
-   "short_name_at_date": null
+   "id": "Q613786",
+   "name": "Les Écologistes – Europe Écologie Les Verts",
+   "short_name": "EELV",
+   "status": "ok",
+   "name_at_date": "Les Écologistes – Europe Écologie Les Verts",
+   "short_name_at_date": "EELV"
   },
   "claim_text": "Jean-Luc Mélenchon veut rouvrir les gazoducs russes",
   "claim_date": "2026-11-18",
@@ -170,12 +170,12 @@
    "votona_id": null
   },
   "party": {
-   "id": null,
-   "name": null,
-   "short_name": null,
-   "status": "ambiguous",
-   "name_at_date": null,
-   "short_name_at_date": null
+   "id": "Q27978402",
+   "name": "La France insoumise",
+   "short_name": "LFI",
+   "status": "ok",
+   "name_at_date": "La France insoumise",
+   "short_name_at_date": "LFI"
   },
   "claim_text": "La suppression de l'ISF, a eu un impact marginal sur le retour des grandes fortunes qui étaient parties de France",
   "claim_date": "2026-11-17",
