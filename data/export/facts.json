@@ -1,5 +1,290 @@
 [
  {
+  "id": "c_3027bdab41a5ca97",
+  "person": {
+   "id": "Q59601214",
+   "name": "Manon Aubry",
+   "votona_id": null
+  },
+  "party": {
+   "id": "Q27978402",
+   "name": "La France insoumise",
+   "short_name": "LFI",
+   "status": "ok",
+   "name_at_date": "La France insoumise",
+   "short_name_at_date": "LFI"
+  },
+  "claim_text": "Entre 2014 et 2024, les violences sexistes et sexuelles ont augmenté de 94 % en Europe.",
+  "claim_date": "2026-11-24",
+  "date_precision": "day",
+  "date_is_fallback": false,
+  "country": "FR",
+  "attribution_status": "auto_sure",
+  "theme": "Sécurité & immigration",
+  "votona_topics": [],
+  "verdict": "half_true",
+  "reviews": [
+   {
+    "source_id": "tf1info_verificateurs",
+    "source_name": "TF1 Info – Les Vérificateurs",
+    "url": "https://www.tf1info.fr/societe/verif-en-dix-ans-les-violences-sexuelles-et-sexistes-ont-elles-presque-double-en-europe-2478150.html",
+    "title": "VÉRIF' - En dix ans, les violences sexuelles et sexistes ont-elles presque doublé en Europe ?",
+    "rating_original": "En partie vrai",
+    "rating_normalized": "half_true",
+    "review_date": "2026-11-25"
+   }
+  ]
+ },
+ {
+  "id": "c_aeba22f4797f3148",
+  "person": {
+   "id": "Q941949",
+   "name": "Natacha Polony",
+   "votona_id": "polony"
+  },
+  "party": {
+   "id": null,
+   "name": null,
+   "short_name": null,
+   "status": "none",
+   "name_at_date": null,
+   "short_name_at_date": null
+  },
+  "claim_text": "La moitié de l'immigration légale observée chaque année est liée à \"des processus sur lesquels nous n’avons pas la main\"",
+  "claim_date": "2026-11-24",
+  "date_precision": "day",
+  "date_is_fallback": false,
+  "country": "FR",
+  "attribution_status": "auto_sure",
+  "theme": "Sécurité & immigration",
+  "votona_topics": [
+   {
+    "slug": "reduire-limmigration",
+    "label": "Réduire l'immigration"
+   }
+  ],
+  "verdict": "half_true",
+  "reviews": [
+   {
+    "source_id": "tf1info_verificateurs",
+    "source_name": "TF1 Info – Les Vérificateurs",
+    "url": "https://www.tf1info.fr/politique/elections/presidentielle/verif-la-moitie-de-l-immigration-legale-observee-chaque-annee-est-elle-liee-a-des-processus-sur-lesquels-nous-n-avons-pas-la-main-2478132.html",
+    "title": "VÉRIF' - La moitié de l'immigration légale observée chaque année est-elle liée à \"des processus sur lesquels nous n'avons pas la main\" ?",
+    "rating_original": "En partie vrai",
+    "rating_normalized": "half_true",
+    "review_date": "2026-11-25"
+   }
+  ]
+ },
+ {
+  "id": "c_f836fe46d534e52e",
+  "person": {
+   "id": "Q131660",
+   "name": "Dominique de Villepin",
+   "votona_id": "villepin"
+  },
+  "party": {
+   "id": "Q135035384",
+   "name": "La France humaniste",
+   "short_name": "LFH",
+   "status": "ok",
+   "name_at_date": "La France humaniste",
+   "short_name_at_date": "LFH"
+  },
+  "claim_text": "Dans les années 60-70, 35% de la richesse des Français provenait de l'héritage. Aujourd'hui, c'est 60%.",
+  "claim_date": "2026-11-24",
+  "date_precision": "day",
+  "date_is_fallback": true,
+  "country": "FR",
+  "attribution_status": "auto_sure",
+  "theme": "Économie & travail",
+  "votona_topics": [
+   {
+    "slug": "augmenter-les-impots-sur-les-gros-heritages",
+    "label": "Augmenter les impôts sur les gros héritages"
+   },
+   {
+    "slug": "instaurer-le-referendum-dinitiative-citoyenne-ric",
+    "label": "Instaurer le référendum d'initiative citoyenne (RIC)"
+   }
+  ],
+  "verdict": "true",
+  "reviews": [
+   {
+    "source_id": "tf1info_verificateurs",
+    "source_name": "TF1 Info – Les Vérificateurs",
+    "url": "https://www.tf1info.fr/economie/verif-60-de-la-richesse-des-francais-provient-elle-desormais-de-l-heritage-pres-du-double-que-dans-les-annees-70-comme-le-dit-dominique-de-villepin-2477834.html",
+    "title": "VÉRIF' - 60% de la richesse des Français provient-elle désormais de l'héritage, comme le dit Dominique de Villepin ?",
+    "rating_original": "Vrai",
+    "rating_normalized": "true",
+    "review_date": "2026-11-24"
+   }
+  ]
+ },
+ {
+  "id": "c_4d04cdfdb1b85d18",
+  "person": {
+   "id": "Q30339422",
+   "name": "Yaël Braun-Pivet",
+   "votona_id": null
+  },
+  "party": {
+   "id": "Q23731823",
+   "name": "Renaissance",
+   "short_name": "RE",
+   "status": "ok",
+   "name_at_date": "Renaissance",
+   "short_name_at_date": "RE"
+  },
+  "claim_text": "Aucun visiteur n’a le droit de s’approprier l’hémicycle pour y tourner une vidéo et en faire une tribune politique",
+  "claim_date": "2026-11-23",
+  "date_precision": "day",
+  "date_is_fallback": false,
+  "country": "FR",
+  "attribution_status": "auto_sure",
+  "theme": "Europe & institutions",
+  "votona_topics": [],
+  "verdict": "unrated",
+  "reviews": [
+   {
+    "source_id": "franceinfo_vraioufake",
+    "source_name": "franceinfo Vrai ou Fake",
+    "url": "https://www.franceinfo.fr/vrai-ou-fake/vrai-ou-faux-les-visiteurs-de-l-assemblee-nationale-peuvent-ils-tourner-une-video-a-connotation-politique-dans-l-hemicycle_8297472.html",
+    "title": "VRAI OU FAUX. Les visiteurs de l'Assemblée nationale peuvent-ils tourner une vidéo à connotation politique dans l'hémicycle ?",
+    "rating_original": "C’est plus compliqué",
+    "rating_normalized": "half_true",
+    "review_date": "2026-11-24"
+   },
+   {
+    "source_id": "tf1info_verificateurs",
+    "source_name": "TF1 Info – Les Vérificateurs",
+    "url": "https://www.tf1info.fr/politique/verif-est-il-vrai-qu-aucun-visiteur-n-a-le-droit-de-tourner-une-video-dans-l-hemicycle-de-l-assemblee-nationale-comme-le-dit-yael-braun-pivet-2477839.html",
+    "title": "VÉRIF' - Est-il vrai qu'\"aucun visiteur n'a le droit\" de tourner une vidéo dans l'hémicycle de l'Assemblée ?",
+    "rating_original": "Plutôt faux",
+    "rating_normalized": "mostly_false",
+    "review_date": "2026-11-24"
+   }
+  ]
+ },
+ {
+  "id": "c_27af9e05fd62de02",
+  "person": {
+   "id": "Q12927",
+   "name": "Marine Le Pen",
+   "votona_id": "lepen"
+  },
+  "party": {
+   "id": "Q205150",
+   "name": "Rassemblement national",
+   "short_name": "RN",
+   "status": "ok",
+   "name_at_date": "Rassemblement national",
+   "short_name_at_date": "RN"
+  },
+  "claim_text": "Dès le premier enfant et dans les dix années qui suivent, une femme perd 39 % de ses revenus",
+  "claim_date": "2026-11-22",
+  "date_precision": "day",
+  "date_is_fallback": false,
+  "country": "FR",
+  "attribution_status": "auto_sure",
+  "theme": null,
+  "votona_topics": [],
+  "verdict": "true",
+  "reviews": [
+   {
+    "source_id": "tf1info_verificateurs",
+    "source_name": "TF1 Info – Les Vérificateurs",
+    "url": "https://www.tf1info.fr/politique/elections/presidentielle/verif-dix-ans-apres-un-premier-enfant-les-meres-gagnent-elles-39-de-moins-que-si-elles-n-en-avaient-pas-eu-2477659.html",
+    "title": "VÉRIF' - Dix ans après un premier enfant, les mères gagnent-elles 39% de moins que si elles n'en avaient pas eu ?",
+    "rating_original": "Vrai",
+    "rating_normalized": "true",
+    "review_date": "2026-11-23"
+   }
+  ]
+ },
+ {
+  "id": "c_efebe3f6c9a1ba49",
+  "person": {
+   "id": "Q556149",
+   "name": "Raphaël Glucksmann",
+   "votona_id": "glucksmann"
+  },
+  "party": {
+   "id": "Q58366009",
+   "name": "Place publique",
+   "short_name": "PP",
+   "status": "ok",
+   "name_at_date": "Place publique",
+   "short_name_at_date": "PP"
+  },
+  "claim_text": "Jamais un président n’avait autant creusé le déficit qu’Emmanuel Macron.",
+  "claim_date": "2026-11-22",
+  "date_precision": "day",
+  "date_is_fallback": false,
+  "country": "FR",
+  "attribution_status": "auto_sure",
+  "theme": "Économie & travail",
+  "votona_topics": [
+   {
+    "slug": "baisser-les-depenses-publiques",
+    "label": "Baisser les dépenses publiques"
+   }
+  ],
+  "verdict": "half_true",
+  "reviews": [
+   {
+    "source_id": "tf1info_verificateurs",
+    "source_name": "TF1 Info – Les Vérificateurs",
+    "url": "https://www.tf1info.fr/politique/elections/presidentielle/verif-emmanuel-macron-a-t-il-creuse-le-deficit-comme-aucun-autre-president-avant-lui-2477689.html",
+    "title": "VÉRIF' - Emmanuel Macron a-t-il \"creusé le déficit comme aucun autre\" président avant lui ?",
+    "rating_original": "En partie vrai",
+    "rating_normalized": "half_true",
+    "review_date": "2026-11-23"
+   }
+  ]
+ },
+ {
+  "id": "c_fbd3543316042bfa",
+  "person": {
+   "id": "Q3052772",
+   "name": "Emmanuel Macron",
+   "votona_id": null
+  },
+  "party": {
+   "id": "Q23731823",
+   "name": "Renaissance",
+   "short_name": "RE",
+   "status": "ok",
+   "name_at_date": "Renaissance",
+   "short_name_at_date": "RE"
+  },
+  "claim_text": "Emplois, ouvertures d'usines, investissements étrangers… On a vérifié trois affirmations d'Emmanuel Macron sur son bilan industriel",
+  "claim_date": "2026-11-21",
+  "date_precision": "day",
+  "date_is_fallback": false,
+  "country": "FR",
+  "attribution_status": "auto_sure",
+  "theme": "Sécurité & immigration",
+  "votona_topics": [
+   {
+    "slug": "reduire-limmigration",
+    "label": "Réduire l'immigration"
+   }
+  ],
+  "verdict": "half_true",
+  "reviews": [
+   {
+    "source_id": "franceinfo_vraioufake",
+    "source_name": "franceinfo Vrai ou Fake",
+    "url": "https://www.franceinfo.fr/vrai-ou-fake/vrai-ou-faux-emplois-ouvertures-d-usines-investissements-etrangers-on-a-verifie-trois-affirmations-d-emmanuel-macron-sur-son-bilan-industriel_8295941.html",
+    "title": "VRAI OU FAUX. Emplois, ouvertures d'usines, investissements étrangers… On a vérifié trois affirmations d'Emmanuel Macron sur son bilan industriel",
+    "rating_original": "C’est plus compliqué",
+    "rating_normalized": "half_true",
+    "review_date": "2026-11-24"
+   }
+  ]
+ },
+ {
   "id": "c_a6fce9e8b91e14e9",
   "person": {
    "id": "Q556149",
@@ -41,6 +326,51 @@
   ]
  },
  {
+  "id": "c_446b86af1ee45a13",
+  "person": {
+   "id": "Q2980738",
+   "name": "Clémentine Autain",
+   "votona_id": null
+  },
+  "party": {
+   "id": null,
+   "name": null,
+   "short_name": null,
+   "status": "ambiguous",
+   "name_at_date": null,
+   "short_name_at_date": null
+  },
+  "claim_text": "Depuis l'année 2000, les agents de la fonction publique ont perdu 33% de pouvoir d'achat.",
+  "claim_date": "2026-11-19",
+  "date_precision": "day",
+  "date_is_fallback": true,
+  "country": "FR",
+  "attribution_status": "auto_sure",
+  "theme": "Économie & travail",
+  "votona_topics": [],
+  "verdict": "mostly_false",
+  "reviews": [
+   {
+    "source_id": "poligraph_fr",
+    "source_name": "Poligraph",
+    "url": "https://poligraph.fr/factchecks/2026-11-19-verif-le-pouvoir-d-achat-des-fonctionnaires-a-t-il-vraiment-chute-de",
+    "title": "Plutôt faux : VÉRIF' - Le pouvoir d'achat des fonctionnaires a-t-il vraiment chuté de 33% depuis l'an 2000 ?",
+    "rating_original": "Plutôt faux",
+    "rating_normalized": "mostly_false",
+    "review_date": "2026-11-19"
+   },
+   {
+    "source_id": "tf1info_verificateurs",
+    "source_name": "TF1 Info – Les Vérificateurs",
+    "url": "https://www.tf1info.fr/societe/verif-salaires-le-pouvoir-d-achat-des-fonctionnaires-a-t-il-vraiment-chute-de-33-depuis-l-an-2000-2476935.html",
+    "title": "VÉRIF' - Le pouvoir d'achat des fonctionnaires a-t-il vraiment chuté de 33% depuis l'an 2000 ?",
+    "rating_original": "Plutôt faux",
+    "rating_normalized": "mostly_false",
+    "review_date": "2026-11-19"
+   }
+  ]
+ },
+ {
   "id": "c_a3ecb60752575b3b",
   "person": {
    "id": "Q2926942",
@@ -78,42 +408,6 @@
     "rating_original": "Partiellement faux",
     "rating_normalized": "mostly_false",
     "review_date": "2026-11-20"
-   }
-  ]
- },
- {
-  "id": "c_9b2af494956a6bd0",
-  "person": {
-   "id": "Q2980738",
-   "name": "Clémentine Autain",
-   "votona_id": null
-  },
-  "party": {
-   "id": "Q127413320",
-   "name": "L'Après",
-   "short_name": "L'APRÈS",
-   "status": "ok",
-   "name_at_date": "L'Après",
-   "short_name_at_date": "L'APRÈS"
-  },
-  "claim_text": "Depuis l'année 2000, les agents de la fonction publique ont perdu 33% de pouvoir d'achat.",
-  "claim_date": "2026-11-18",
-  "date_precision": "day",
-  "date_is_fallback": false,
-  "country": "FR",
-  "attribution_status": "auto_sure",
-  "theme": "Économie & travail",
-  "votona_topics": [],
-  "verdict": "mostly_false",
-  "reviews": [
-   {
-    "source_id": "tf1info_verificateurs",
-    "source_name": "TF1 Info – Les Vérificateurs",
-    "url": "https://www.tf1info.fr/societe/verif-salaires-le-pouvoir-d-achat-des-fonctionnaires-a-t-il-vraiment-chute-de-33-depuis-l-an-2000-2476935.html",
-    "title": "VÉRIF' - Le pouvoir d'achat des fonctionnaires a-t-il vraiment chuté de 33% depuis l'an 2000 ?",
-    "rating_original": "Plutôt faux",
-    "rating_normalized": "mostly_false",
-    "review_date": "2026-11-19"
    }
   ]
  },

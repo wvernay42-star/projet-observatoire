@@ -21,6 +21,19 @@ Les décisions durables sont aussi consignées dans [decisions.md](decisions.md)
 | — | Hébergement préprod (`preprod`) / prod (`main`) | ✅ en ligne (26/10) — projet Vercel `votona-observatoire` ; production indexable depuis le 28/10 |
 | — | Liens Votona → Observatoire | ⏳ actifs sur `draft` (test, 26/10) ; `main` sur demande du porteur |
 
+## 2026-11-27 — Routine quotidienne
+
+- Candidats : synchronisation depuis https://votona.fr/ (pas de clone Votona) : 0 ajouté, 0 modifié, 0 absent ; 3 à confirmer (Selma Labib, Antoine Mikolajczak, Teddy Riner).
+- Décisions de l'admin (Supabase) : 0 décision appliquée, 0 ignorée. `rating_map.csv` non modifié.
+- Collecte : google_factcheck 40 récupérées, 21 nouvelles (surtout TF1 Info, puis franceinfo, AFP Factuel, Poligraph, 20 Minutes) ; datacommons_feed 4 récupérées, 0 nouvelle. Base : 7 701 vérifications (rechargée depuis data/store : 7 680).
+- Claims : auto_sure 477, validated 326, to_review 0, rejected 6 806. Exportées : 803 (+7), dont 254 de personnes liées à un candidat Votona (comptage sur `votona_id` dans data/export/facts.json).
+- Files déposées dans Supabase : libellés 0, attributions 0, partis 2 (Natacha Polony, déclaration du 24/11, aucun parti connu ; Clémentine Autain, déclaration du 19/11, rattachement ambigu), sources 7.
+- Part de verdicts positifs (toutes / attribuées) : TF1 Info 20,3 % / 40,1 % ; franceinfo 29,0 % / 37,2 % ; AFP Factuel 0,4 % / 2,7 % ; Poligraph 20,8 % / 24,4 % ; Les Décodeurs 1,6 % / 4,2 % ; 20 Minutes 10,9 % / 31,8 % ; Libération CheckNews 0 % / —.
+- Alertes : aucun résultat nouveau depuis 3 jours pour datacommons_feed. Aucune erreur de connecteur. La collecte google_factcheck a repris après 4 passages sans nouveauté.
+- Images de partage : rien à créer.
+- Portraits : 0 traité ce jour, lot interrompu car Wikimedia limite l'accès (3e passage de suite, reprise au prochain passage) ; 211 personnes, 204 traitées (100 ok), 7 restantes.
+- Beta : build_beta exécuté (803 déclarations), artefact republié (version 39). 96 tests passent.
+
 ## 2026-11-26 — Routine quotidienne
 
 - Candidats : synchronisation depuis https://votona.fr/ (pas de clone Votona) : 0 ajouté, 0 modifié, 0 absent ; 3 à confirmer (Selma Labib, Antoine Mikolajczak, Teddy Riner).

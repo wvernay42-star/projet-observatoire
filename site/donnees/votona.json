@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-26T05:00:28+00:00",
+ "generated_at": "2026-11-27T05:00:45+00:00",
  "scope": "Sur les déclarations vérifiées, pas sur l'ensemble des propos tenus.",
  "candidats": {
   "bardella": {
@@ -60,12 +60,12 @@
    "last_review": "2026-10-13"
   },
   "glucksmann": {
-   "n": 5,
+   "n": 6,
    "url": "https://observatoire.votona.fr/candidats/glucksmann/",
    "sources": [
     "TF1 Info – Les Vérificateurs"
    ],
-   "last_review": "2026-11-20"
+   "last_review": "2026-11-23"
   },
   "tondelier": {
    "n": 16,
@@ -87,7 +87,7 @@
    "last_review": "2023-09-27"
   },
   "lepen": {
-   "n": 42,
+   "n": 43,
    "url": "https://observatoire.votona.fr/candidats/lepen/",
    "sources": [
     "20 Minutes – Fake Off",
@@ -97,7 +97,7 @@
     "TF1 Info – Les Vérificateurs",
     "franceinfo Vrai ou Fake"
    ],
-   "last_review": "2026-11-10"
+   "last_review": "2026-11-23"
   },
   "lisnard": {
    "n": 6,
@@ -221,6 +221,14 @@
    ],
    "last_review": "2026-11-11"
   },
+  "polony": {
+   "n": 1,
+   "url": "https://observatoire.votona.fr/candidats/polony/",
+   "sources": [
+    "TF1 Info – Les Vérificateurs"
+   ],
+   "last_review": "2026-11-25"
+  },
   "riner": {
    "n": 1,
    "url": "https://observatoire.votona.fr/candidats/riner/",
@@ -228,11 +236,19 @@
     "TF1 Info – Les Vérificateurs"
    ],
    "last_review": "2024-09-18"
+  },
+  "villepin": {
+   "n": 1,
+   "url": "https://observatoire.votona.fr/candidats/villepin/",
+   "sources": [
+    "TF1 Info – Les Vérificateurs"
+   ],
+   "last_review": "2026-11-24"
   }
  },
  "sujets": {
   "economie": {
-   "n": 85,
+   "n": 87,
    "url": "https://observatoire.votona.fr/sujets/economie/"
   },
   "social": {
@@ -240,7 +256,7 @@
    "url": "https://observatoire.votona.fr/sujets/social/"
   },
   "securite": {
-   "n": 100,
+   "n": 103,
    "url": "https://observatoire.votona.fr/sujets/securite/"
   },
   "ecologie": {
@@ -248,7 +264,7 @@
    "url": "https://observatoire.votona.fr/sujets/ecologie/"
   },
   "europe": {
-   "n": 101,
+   "n": 102,
    "url": "https://observatoire.votona.fr/sujets/europe/"
   },
   "societe": {
