@@ -46,7 +46,7 @@
    "id": null,
    "name": null,
    "short_name": null,
-   "status": "none",
+   "status": "no_party",
    "name_at_date": null,
    "short_name_at_date": null
   },
@@ -333,12 +333,12 @@
    "votona_id": null
   },
   "party": {
-   "id": null,
-   "name": null,
-   "short_name": null,
-   "status": "ambiguous",
-   "name_at_date": null,
-   "short_name_at_date": null
+   "id": "Q27978402",
+   "name": "La France insoumise",
+   "short_name": "LFI",
+   "status": "ok",
+   "name_at_date": "La France insoumise",
+   "short_name_at_date": "LFI"
   },
   "claim_text": "Depuis l'année 2000, les agents de la fonction publique ont perdu 33% de pouvoir d'achat.",
   "claim_date": "2026-11-19",

@@ -3267,12 +3267,12 @@
    "last_review_date": "2026-11-24"
   },
   "Q27978402": {
-   "n_claims": 112,
+   "n_claims": 113,
    "verdicts": {
     "true": 29,
     "mostly_true": 24,
     "half_true": 17,
-    "mostly_false": 17,
+    "mostly_false": 18,
     "false": 22,
     "unrated": 3
    },

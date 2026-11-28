@@ -1,1 +1,24 @@
-[]
+[
+ {
+  "claim_id": "c_7d07a705a49a00b5",
+  "claim_text": "Les maires sont victimes de \"250 agressions physiques\" chaque année en France",
+  "claim_date": "2026-11-24",
+  "reviews": [
+   {
+    "url": "https://www.tf1info.fr/societe/verif-les-maires-sont-ils-victimes-de-250-agressions-physiques-chaque-annee-en-france-2478397.html",
+    "source_id": "tf1info_verificateurs",
+    "claimant": "Le maire d'Avignon, Olivier Galzi",
+    "rating_original": "Plutôt vrai",
+    "rating_normalized": "mostly_true",
+    "review_date": "2026-11-26"
+   }
+  ],
+  "reason": "nom retrouvé à la fin du libellé",
+  "candidates": [
+   {
+    "id": "Q3351059",
+    "name": "Olivier Galzi"
+   }
+  ]
+ }
+]
